@@ -1,35 +1,42 @@
 <html>
   <head>
     <title>Cards</title>
+    <link rel="stylesheet/less" href="https://cdn.lineicons.com/2.0/LineIcons.css" />
+    <link rel="stylesheet/less" href="styles.less" />
+    <link rel="stylesheet/less" href="base.less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.1.1/less.min.js" integrity="sha512-mE4RWRhILuNDWPx8sl5Q739XNbibSUZP9dEjdepzpYVw1kDco9ZZ5l/+KHAMffzXNHnmSWexMSN+OX137tNL5A==" crossorigin="anonymous"></script>
   </head>
   <body>
-    <canvas id="main" width="1000" height="1000" style="border:1px solid #000000;">
-    </canvas>
-    <script type="text/javascript" language="javascript" src="card.js"></script>
+    <div id="game">
+    </div>
 
-    <script>
-      var canvas = document.getElementById("main");
-      var ctx = canvas.getContext("2d");
-      var d = new Deck();
-      var p = new Pos(ctx, 1, 1, 50);
-      d.get('Base4A').draw(p);
-      d.get('Base5C').draw(p.move(0, 1));
-      d.get('Ship2A').draw(p.move(1, 3));
-      d.get('Ship2A').draw(p.move(2, 3));
-      d.get('Hero2A').draw(p.move(8, 8));
-      d.get('Colony6P').draw(p.move(8, 0));
+    <template id="card-template">
+      <div class="card">
+        <div class="image">
+          <div class="race lni"></div>
+          <div class="type lni"></div>
+        </div>
+        <div class="part utilization">
+          <div class="lni lni-archive"></div>
+          <div class="value">U</div>
+        </div>
+        <div class="part Defense"><div class="lni lni-shield"></div><div class="value">D</div></div>
+        <div class="part Attack"><div class="lni lni-pointer"></div><div class="value">A</div></div>
+        <div class="part Colonization"><div class="lni lni-basketball"></div><div class="value">C</div></div>
+        <div class="part Science"><div class="lni lni-star"></div><div class="value">S</div></div>
+        <div class="part Production"><div class="lni lni-package"></div><div class="value">P</div></div>
+        <div class="Level Klass"><div class="value">L</div></div>
+      </div>
+    </template>
 
+    <template id="star-template">
+      <div class="star">&#x2B22;</span>
+    </template>
 
-      // var t = new Table(ctx);
-      // var s = Table.star(1, 1);
-      // s.add('Base4A');
-      // s.add('Base4A',   1);
-      // s.add('Base5C',   2);
-      // s.add('Ship2A',   1);
-      // s.add('Ship2A',   2);
-      // s.add('Colony6P', 1);
-      // s.add('Hero2A',   1);
-      // t.draw(ctx);
+    <script type="module">
+      import Game from "./Game.js";
+
+      (new Game()).start(document.getElementById('game'));
     </script>
   </body>
 </html>
