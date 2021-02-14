@@ -8,10 +8,16 @@ class Game {
     var s2 = b.star(1,0);
     var s3 = b.star(0,1);
     var s4 = b.star(1,1);
-    this.star1(s1);
-    this.star2(s2);
-    this.star3(s3);
-    this.star4(s4);
+    var s5 = b.star(2,1);
+    var s6 = b.star(0,2);
+    var s7 = b.star(1,2);
+    this.star2(s1);
+    this.star3(s2);
+    this.star4(s3);
+    this.star1(s4);
+    this.star3(s5);
+    this.star4(s6);
+    this.star2(s7);
 
     var d = new DivDrawer(div);
     d.draw(b);
@@ -34,7 +40,7 @@ class Game {
 
   star2(s) {
     s.add('Base6C',   2);
-    s.add('Ship2A',   1);
+    s.add('Ship2A',   0);
     s.add('Colony4P', 0);
     s.add('Hero2A',   1);
   }
@@ -45,8 +51,8 @@ class Game {
   }
 
   star4(s) {
-    s.add('Ship2A',   1);
-    s.add('Hero2A',   1);
+    s.add('Ship2A',   0);
+    s.add('Hero2A',   0);
   }
 }
 

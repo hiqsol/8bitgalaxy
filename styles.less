@@ -9,7 +9,7 @@ BODY {
 
     width: 100%;
     height: 100%;
-    background: #333;
+    background: #787;
 
     z-index: -100;
 }
@@ -26,6 +26,7 @@ BODY {
     padding:0;
     margin:0;
     box-shadow: 0 0 10px black;
+    z-index: 3;
 }
 
 .image .lni {
@@ -71,34 +72,22 @@ BODY {
 
 .Level {
     .part;
-    color: white;
+    color: black !important;
     font-size: 40px;
     line-height: 46px;
     font-weight: bold;
     /*-webkit-text-stroke: 1px black;*/
 }
-.Klass.Attack {
-    color: black !important;
-    background-color: rgba(255, 0, 0, 0.3);
-}
-.Klass.Colonization {
-    color: black !important;
-    background-color: rgba(0, 255, 0, 0.3);
-}
-.Klass.Science {
-    color: black !important;
-    background-color: rgba(0, 0, 255, 0.3);
-}
-.Klass.Production {
-    color: black !important;
-    background-color: rgba(255, 255, 0, 0.3);
-}
+.Klass.Attack               { background-color: rgba(255, 0, 0, 0.3); }
+.Klass.Colonization         { background-color: rgba(0, 255, 0, 0.3); }
+.Klass.Science              { background-color: rgba(0, 0, 255, 0.3); }
+.Klass.Production           { background-color: rgba(255, 255, 0, 0.3); }
 
-.Defense        { color: white; }
-.Attack         { color: red; }
-.Colonization   { color: green; }
-.Science        { color: darkblue; }
-.Production     { color: orange; }
+.Defense                    { color: white; }
+.Attack                     { color: red; }
+.Colonization               { color: green; }
+.Science                    { color: darkblue; }
+.Production                 { color: orange; }
 
 .Base                       { width: 350; height: 200; }
 .Base .Klass                { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
@@ -144,11 +133,43 @@ BODY {
 .Colony .part.Defense       { display:none; }
 .Colony .part.Utilization   { display:none; }
 
-
 .star {
     position:   absolute;
     color:      #556;
     font-size:  999px;
+    z-index: 300;
 }
 
-
+.hexagon {
+  position: relative;
+  width: 700px;
+  height: 404.15px;
+  background-color: #334;
+  margin: 202.07px 0;
+  box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+.hexagon:before, .hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 494.97px;
+  height: 494.97px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 102.5126px;
+  box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+.hexagon:before { top: -247.4874px; }
+.hexagon:after { bottom: -247.4874px; }
+.hexagon span {
+  display: block;
+  position: absolute;
+  top:0px;
+  left: 0;
+  width:700px;
+  height:404.1452px;
+  z-index: 2;
+  background: inherit;
+}

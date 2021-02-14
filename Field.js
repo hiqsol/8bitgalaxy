@@ -10,7 +10,6 @@ class Field {
     if (! this.stars[x][y]) {
       this.stars[x][y] = new Star(this, x, y);
     }
-    
     return this.stars[x][y];
   }
 }

@@ -23,6 +23,9 @@ class DivDrawer {
     this.drawStar(board.star(1, 0));
     this.drawStar(board.star(0, 1));
     this.drawStar(board.star(1, 1));
+    this.drawStar(board.star(2, 1));
+    this.drawStar(board.star(0, 2));
+    this.drawStar(board.star(1, 2));
   }
 
   drawStar(star) {
@@ -30,9 +33,11 @@ class DivDrawer {
     let n = document.importNode(t, true);
     let e = n.querySelector('.star');
     this.root.appendChild(n);
-    console.log(star.x+','+star.y);
-    e.style.left  = (star.x*this.m*15 - 50) + 'px';
-    e.style.top   = (star.y*this.m*15 - 300) + 'px';
+    let indent = this.m * (star.y % 2 ? 1 : 8.4);
+    console.log(star.x+','+star.y+': '+(star.y % 2));
+    e.style.left  = (star.x*this.m*14.6 + indent) + 'px';
+    e.style.top   = (star.y*this.m*12.6 + this.m) + 'px';
+    let i = n.querySelector('.star .inner');
     this.drawCards(e, star);
   }
 
@@ -63,8 +68,8 @@ class DivDrawer {
     let n = document.importNode(t, true);
     let e = n.querySelector('.card');
     star.appendChild(n);
-    e.style.left  = (110 + x*this.m) + 'px';
-    e.style.top   = (480 + y*this.m) + 'px';
+    e.style.left  = (25 + x*this.m) + 'px';
+    e.style.top   = (160 + y*this.m) + 'px';
     let type = card.spec.type;
     e.classList.add(type);
     e.classList.add(card.spec.race);
@@ -104,7 +109,7 @@ class DivDrawer {
 const TypeImages = Object.freeze({
   'Hero':     'user',
   'Ship':     'rocket',
-  'Base':     'bricks',
+  'Base':     'helmet',
   'Colony':   'world',
 })
 
