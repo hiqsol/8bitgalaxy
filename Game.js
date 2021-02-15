@@ -4,20 +4,13 @@ import DivDrawer from "./DivDrawer.js";
 class Game {
   start(div) {
     var b = new Board();
-    var s1 = b.star(0,0);
-    var s2 = b.star(1,0);
-    var s3 = b.star(0,1);
-    var s4 = b.star(1,1);
-    var s5 = b.star(2,1);
-    var s6 = b.star(0,2);
-    var s7 = b.star(1,2);
-    this.star2(s1);
-    this.star3(s2);
-    this.star4(s3);
-    this.star1(s4);
-    this.star3(s5);
-    this.star4(s6);
-    //this.star2(s7);
+    this.star2(b.star(0, 0));
+    this.star3(b.star(1, 0));
+    this.star4(b.star(0, 1));
+    //this.star1(b.star(1, 1));
+    this.star2(b.star(2, 1));
+    this.star3(b.star(0, 2));
+    this.star1(b.star(1, 2));
 
     var d = new DivDrawer(div);
     d.draw(b);
