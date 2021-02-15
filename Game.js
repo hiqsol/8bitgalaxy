@@ -17,7 +17,7 @@ class Game {
     this.star1(s4);
     this.star3(s5);
     this.star4(s6);
-    this.star2(s7);
+    //this.star2(s7);
 
     var d = new DivDrawer(div);
     d.draw(b);

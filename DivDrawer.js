@@ -109,7 +109,7 @@ class DivDrawer {
 const TypeImages = Object.freeze({
   'Hero':     'user',
   'Ship':     'rocket',
-  'Base':     'helmet',
+  'Base':     'flower',
   'Colony':   'world',
 })
 
