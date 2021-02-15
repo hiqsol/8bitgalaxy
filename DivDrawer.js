@@ -57,6 +57,8 @@ class DivDrawer {
 
     this.drawCard(s, star.hero(0), 6, 4);
     this.drawCard(s, star.hero(1), 6, 5);
+    this.drawCard(s, star.hero(2), 6, 6);
+    this.drawCard(s, star.hero(3), 6, 7);
   }
 
   drawCard(star, card, x, y) {

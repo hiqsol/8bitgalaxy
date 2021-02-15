@@ -3,10 +3,10 @@ class Star {
     this.field = field;
     this.x = x;
     this.y = y;
-    this.ships = [];
-    this.bases = [];
-    this.heroes = [];
-    this.colonies = [];
+    this.ships = [null, null, null, null];
+    this.bases = [null, null, null];
+    this.heroes = [null, null, null, null];
+    this.colonies = [null, null, null];
   }
 
   get pos() {
@@ -16,7 +16,7 @@ class Star {
   add(card, slot) {
     var card = this.field.board.card(card);
     if (! card) {
-      return;
+      return this;
     }
     if (card.isBase) {
       this.bases[slot] = card;
@@ -30,6 +30,7 @@ class Star {
     if (card.isHero) {
       this.heroes[slot] = card;
     }
+    return this;
   }
 
   base(slot) {
