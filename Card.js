@@ -7,6 +7,18 @@ class Card {
     return this.specs;
   }
 
+  get defense() {
+    return this.specs.defense ?? this.specs.level;
+  }
+
+  get klass() {
+    return this.specs.klass ?? 'Neutral';
+  }
+
+  get level() {
+    return this.specs.level ?? 0;
+  }
+
   get isHero() {
     return this.isType(Types.Hero);
   }
@@ -36,13 +48,6 @@ const Colors = Object.freeze({
   'Colonization':   'green',
   'Science':        'blue',
   'Production':     'yellow',
-})
-
-const Resources = Object.freeze({
-  'Attack':         'Attack',
-  'Colonization':   'Colonization',
-  'Science':        'Science',
-  'Production':     'Colony',
 })
 
 class Specs {

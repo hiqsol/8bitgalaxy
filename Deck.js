@@ -3,170 +3,119 @@ import Card from "./Card.js";
 class Deck {
   get(name) {
     let all = this.all();
-    let specs = all[name];
-    return specs ? new Card(this.parseSpecs(specs)) : null;
+    let specs = all[name.toLowerCase()];
+    return new Card(this.parseCard(name, specs));
   }
 
-  parseSpecs(s) {
-    let type = typeof(s);
+  parseCard(name, specs) {
+    let type = typeof(specs);
     if (type === 'object') {
-      return s;
+      return specs;
     }
     if (type === 'string') {
-      return {};
+      let res = Object.assign(this.parseName(name), this.parseSpecs(specs))
+      console.log(res);
+      return res;
     }
     
-    throw new Error('wrong specs');
+    return this.parseName(name);
+  }
+
+  parseName(name) {
+    let ps = name.split('-');
+    let [klass, level] = this.parseSimpleAction(ps[2]);
+    return {
+      race:     ps[0],
+      type:     ps[1],
+      klass:    klass,
+      level:    level,
+      [klass]:  level,
+    };
+  }
+
+  parseSpecs(specs) {
+    let ps = specs.split(',');
+    let res = {};
+    ps.forEach(value => Object.assign(res, this.parseAction(value)));
+    return res;
+  }
+
+  parseAction(action) {
+    if (action.length === 2) {
+      let [type, value] = this.parseSimpleAction(action);
+      return {[type]: value};
+    }
+    let f = action.charAt(0).toLowerCase();
+    if (f === 'u') {
+      let [type, value] = this.parseSimpleAction(action.substring(1,3));
+      return {
+        'utilizationValue': value,
+        'utilizationType': type,
+      };
+    }
+    if (f === 'c') {
+      return {
+        'cooperation': Number(action.charAt(2)),
+      }
+    }
+    return {};
+  }
+
+  parseSimpleAction(action) {
+    let t = action.charAt(0).toLowerCase();
+    let n = action.charAt(1).toLowerCase();
+    if (isNaN(n)) {
+      [t, n] = [n, t];
+    }
+    console.log('action: ' + action + ' t: ' + t);
+    return [
+      (Resources[t] ?? '').toLowerCase(),
+      Number(n),
+    ];
   }
 
   all() {
+    let src = this.allAnyCase();
+    return Object.keys(src).reduce(function (dst, key) {
+      dst[key.toLowerCase()] = src[key];
+      return dst;
+    }, {});
+  }
+
+  allAnyCase() {
     return {
-      'HumanBase7A': 'D7,A7,UP5',
-      'Base7C': {
-        race: 'Human',
-        type: 'Base',
-        level: 7,
-        klass: 'Colonization',
+      'AI-Hero-1s':         '',
+      'AI-Hero-2s':         'a1p',
+      'AI-Hero-2a':         'a1p',
+      'AI-Ship-2a':         'u2s',
+      'AI-Base-7a':         'u5p',
+      'AI-Base-7c':         'u5p,co2',
+      'AI-Base-6c':         'a5p',
+      'AI-Colony-4p':       'a3s',
 
-        defense: 7,
-        attack: 0,
-        colonization: 7,
-        production: 0,
-        science: 0,
-        cooperation: 2,
-
-        utilizationType: 'Production',
-        utilizationValue: 5,
-      },
-
-      'HumanBase6A': '',
-      'Base6C': {
-        race: 'AI',
-        type: 'Base',
-        level: 6,
-        klass: 'Colonization',
-        defense: 5,
-        attack: 0,
-        colonization: 6,
-        production: 0,
-        science: 0,
-      },
-
-      'Base5S': {
-        race: 'Human',
-        type: 'Base',
-        level: 5,
-        klass: 'Science',
-        defense: 4,
-        attack: 0,
-        colonization: 0,
-        production: 0,
-        science: 5,
-
-        utilizationType:  'Production',
-        utilizationValue: 3,
-      },
-
-      'Colony4P': {
-        race: 'Human',
-        type: 'Colony',
-        level: 4,
-        klass: 'Production',
-        defense: 8,
-        attack: 0,
-        colonization: 0,
-        production: 6,
-        science: 0,
-      },
-      'Colony5S': {
-        race: 'Human',
-        type: 'Colony',
-        level: 5,
-        klass: 'Science',
-        defense: 5,
-        science: 5,
-      },
-      'Colony6P': {
-        race: 'Human',
-        type: 'Colony',
-        level: 6,
-        klass: 'Production',
-        defense: 8,
-        attack: 0,
-        colonization: 0,
-        production: 5,
-        science: 1,
-      },
-
-      'Ship1C': {
-        race: 'Human',
-        type: 'Ship',
-        level: 2,
-        klass: 'Colonization',
-        defense: 1,
-        attack: 0,
-        colonization: 1,
-        production: 0,
-        science: 0,
-
-        alternativeType: 'Science',
-        alternativeValue: 1,
-      },
-
-      'Ship2A': {
-        race: 'Human',
-        type: 'Ship',
-        level: 2,
-        klass: 'Attack',
-        defense: 2,
-        attack: 2,
-        colonization: 0,
-        production: 0,
-        science: 0,
-
-        alternativeType: 'Science',
-        alternativeValue: 1,
-      },
-
-      'Ship3S': {
-        race: 'Human',
-        type: 'Ship',
-        level: 3,
-        klass: 'Science',
-        defense: 2,
-        science: 3,
-
-        alternativeType: 'Production',
-        alternativeValue: 1,
-      },
-      'Ship4S': {
-        race: 'Human',
-        type: 'Ship',
-        level: 4,
-        klass: 'Science',
-        defense: 2,
-        science: 4,
-
-        alternativeType: 'Production',
-        alternativeValue: 1,
-      },
-
-      'Hero2A': {
-        race: 'Human',
-        type: 'Hero',
-        level: 2,
-        klass: 'Attack',
-        defense: 2,
-        attack: 2,
-        colonization: 0,
-        production: 0,
-        science: 0,
-
-        alternativeType: 'Science',
-        alternativeValue: 1,
-      }
+      'Human-Hero-1s':      '',
+      'Human-Hero-2a':      'a1s',
+      'Human-Base-6c':      'a5a',
+      'Human-Base-7a':      'u5p',
+      'Human-Base-7c':      'u5p,co2',
+      'Human-Base-5s':      'u3p',
+      'Human-Colony-4p':    'a3c',
+      'Human-Colony-5s':    'a4p',
+      'Human-Colony-6P':    '1s',
+      'Human-Ship-1c':      'u2s',
+      'Human-Ship-2a':      'a1s',
+      'Human-Ship-3S':      'a2p',
+      'Human-Ship-4S':      'a3a',
     }
   }
 }
+
+const Resources = Object.freeze({
+  'd':  'Defense',
+  'a':  'Attack',
+  'c':  'Colonization',
+  's':  'Science',
+  'p':  'Production',
+})
 
 export default Deck;

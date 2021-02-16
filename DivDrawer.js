@@ -79,7 +79,7 @@ class DivDrawer {
     let i = e.querySelector('.image .type.lni');
     i.classList.add('lni-'+this.type2image(type));
 
-    this.setCardPart(e, 'Level',        card.spec.level, card.spec.klass);
+    this.setCardPart(e, 'Level',        card.level, card.klass);
     this.setCardPart(e, 'Defense',      null);
     this.setCardPart(e, 'Attack',       card.spec.attack);
     this.setCardPart(e, 'Colonization', card.spec.colonization);
