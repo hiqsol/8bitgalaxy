@@ -8,10 +8,6 @@ class DivDrawer {
     this.m    = 50;
   }
 
-  get pos() {
-    return new Pos(board.ctx, 5, 5, board.m);
-  }
-
   draw(obj) {
     if (obj instanceof(Board)) {
       this.drawBoard(obj);
@@ -19,13 +15,21 @@ class DivDrawer {
   }
 
   drawBoard(board) {
-    this.drawStar(board.star(0, 0));
-    this.drawStar(board.star(1, 0));
-    this.drawStar(board.star(0, 1));
-    this.drawStar(board.star(1, 1));
-    this.drawStar(board.star(2, 1));
-    this.drawStar(board.star(0, 2));
-    this.drawStar(board.star(1, 2));
+    this.drawHomes(board);
+    this.drawField(board.field);
+  }
+
+  drawHomes(board) {
+  }
+
+  drawField(field) {
+    this.drawStar(field.star(0, 0));
+    this.drawStar(field.star(1, 0));
+    this.drawStar(field.star(0, 1));
+    this.drawStar(field.star(1, 1));
+    this.drawStar(field.star(2, 1));
+    this.drawStar(field.star(0, 2));
+    this.drawStar(field.star(1, 2));
   }
 
   drawStar(star) {
@@ -34,7 +38,6 @@ class DivDrawer {
     let e = n.querySelector('.star');
     this.root.appendChild(n);
     let indent = this.m * (star.y % 2 ? 1 : 8.4);
-    console.log(star.x+','+star.y+': '+(star.y % 2));
     e.style.left  = (star.x*this.m*14.6 + indent) + 'px';
     e.style.top   = (star.y*this.m*12.6 + this.m) + 'px';
     let i = n.querySelector('.star .inner');
@@ -76,7 +79,7 @@ class DivDrawer {
     e.classList.add(type);
     e.classList.add(card.spec.race);
 
-    let i = e.querySelector('.image .type.lni');
+    let i = e.querySelector('.Image .Klass.lni');
     i.classList.add('lni-'+this.type2image(type));
 
     this.setCardPart(e, 'Level',        card.level, card.klass);

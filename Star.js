@@ -9,10 +9,6 @@ class Star {
     this.colonies = [null, null, null];
   }
 
-  get pos() {
-    return new Pos(board.ctx, 5, 5, board.m);
-  }
-
   add(card, slot) {
     var card = this.field.board.card(card);
     if (! card) {

@@ -4,12 +4,16 @@ import Field from "./Field.js";
 
 class Board {
   constructor() {
-    this.field = new Field(this);
-    this.deck = new Deck(this);
+    this._field = new Field(this);
+    this._deck = new Deck(this);
   }
 
-  get pos() {
-    return new Pos(table.ctx, 1, 1, 50)
+  get deck() {
+    return this._deck;
+  }
+
+  get field() {
+    return this._field;
   }
 
   star(x, y) {
@@ -17,12 +21,7 @@ class Board {
   }
 
   card(name) {
-    return this.deck.get(name);
-  }
-
-  draw(ctx) {
-    this.ctx = ctx;
-    this.card.draw();
+    return this._deck.get(name);
   }
 }
 

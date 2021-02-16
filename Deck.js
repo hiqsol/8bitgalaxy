@@ -14,7 +14,6 @@ class Deck {
     }
     if (type === 'string') {
       let res = Object.assign(this.parseName(name), this.parseSpecs(specs))
-      console.log(res);
       return res;
     }
     
@@ -67,7 +66,6 @@ class Deck {
     if (isNaN(n)) {
       [t, n] = [n, t];
     }
-    console.log('action: ' + action + ' t: ' + t);
     return [
       (Resources[t] ?? '').toLowerCase(),
       Number(n),
