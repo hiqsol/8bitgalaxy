@@ -20,6 +20,16 @@ class DivDrawer {
   }
 
   drawHomes(board) {
+    this.drawHome(board);
+  }
+
+  drawHome(board) {
+    let t = document.querySelector('#home-template').content;
+    let n = document.importNode(t, true);
+    let e = n.querySelector('.pile');
+    this.root.appendChild(n);
+    let c = this.drawCard(e, board.card('AI-Base-7a'), 0, 0);
+    c.style.transform = "rotate(-90deg)";
   }
 
   drawField(field) {
@@ -41,10 +51,10 @@ class DivDrawer {
     e.style.left  = (star.x*this.m*14.6 + indent) + 'px';
     e.style.top   = (star.y*this.m*12.6 + this.m) + 'px';
     let i = n.querySelector('.star .inner');
-    this.drawCards(e, star);
+    this.drawStarCards(e, star);
   }
 
-  drawCards(s, star) {
+  drawStarCards(s, star) {
     this.drawCard(s, star.base(0), 0, 0);
     this.drawCard(s, star.base(1), 0, 1);
     this.drawCard(s, star.base(2), 0, 2);
@@ -64,7 +74,7 @@ class DivDrawer {
     this.drawCard(s, star.hero(3), 6, 7);
   }
 
-  drawCard(star, card, x, y) {
+  drawCard(parent, card, x, y) {
     if (! card) {
       return;
     }
@@ -72,7 +82,7 @@ class DivDrawer {
     let t = document.querySelector('#card-template').content;
     let n = document.importNode(t, true);
     let e = n.querySelector('.card');
-    star.appendChild(n);
+    parent.appendChild(n);
     e.style.left  = (25 + x*this.m) + 'px';
     e.style.top   = (160 + y*this.m) + 'px';
     let type = card.spec.type;
@@ -89,6 +99,8 @@ class DivDrawer {
     this.setCardPart(e, 'Science',      card.spec.science);
     this.setCardPart(e, 'Production',   card.spec.production);
     this.setCardPart(e, 'Utilization',  null, card.spec.utilizationValue, card.spec.utilizationType);
+
+    return e;
   }
 
   type2image(type) {
