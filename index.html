@@ -1,44 +1,14 @@
 <html>
   <head>
-    <title>Cards</title>
+    <title>8-bit Galaxy</title>
     <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.1.1/less.min.js" integrity="sha512-mE4RWRhILuNDWPx8sl5Q739XNbibSUZP9dEjdepzpYVw1kDco9ZZ5l/+KHAMffzXNHnmSWexMSN+OX137tNL5A==" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="game">
-    </div>
-
-    <template id="card-template">
-      <div class="card">
-        <div class="image">
-          <div class="klass lni"></div>
-        </div>
-        <div class="part utilization">
-          <div class="lni lni-archive"></div>
-          <div class="value">U</div>
-        </div>
-        <div class="part Defense"><div class="lni lni-shield"></div><div class="value">D</div></div>
-        <div class="part Attack"><div class="lni lni-pointer"></div><div class="value">A</div></div>
-        <div class="part Colonization"><div class="lni lni-basketball"></div><div class="value">C</div></div>
-        <div class="part Science"><div class="lni lni-star"></div><div class="value">S</div></div>
-        <div class="part Production"><div class="lni lni-package"></div><div class="value">P</div></div>
-        <div class="Level Klass"><div class="value">L</div></div>
-      </div>
-    </template>
-
-    <template id="star-template">
-      <div class="star"><div class="hexagon"><span><div class="inner lni lni-sun"></div></span></div></div>
-    </template>
-
-    <template id="home-template">
-      <div class="Pile"></div>
-    </template>
-
     <script type="module">
       import Game from "./Game.js";
 
-      (new Game()).start(document.getElementById('game'));
+      (new Game()).start();
     </script>
   </body>
 </html>

@@ -1,11 +1,13 @@
 import Board from './Board.js';
 import Star from './Star.js';
 import Card from './Card.js';
+import Template from './Template.js';
 
 class DivDrawer {
   constructor(root) {
     this.root = root;
     this.m    = 50;
+    this.tpl  = new Template();
   }
 
   draw(obj) {
@@ -24,8 +26,7 @@ class DivDrawer {
   }
 
   drawHome(board) {
-    let t = document.querySelector('#home-template').content;
-    let n = document.importNode(t, true);
+    let n = document.importNode(this.tpl.home, true);
     let e = n.querySelector('.pile');
     this.root.appendChild(n);
     let c = this.drawCard(e, board.card('AI-Base-7a'), 0, 0);
@@ -43,8 +44,7 @@ class DivDrawer {
   }
 
   drawStar(star) {
-    let t = document.querySelector('#star-template').content;
-    let n = document.importNode(t, true);
+    let n = document.importNode(this.tpl.star, true);
     let e = n.querySelector('.star');
     this.root.appendChild(n);
     let indent = this.m * (star.y % 2 ? 1 : 8.4);
@@ -79,7 +79,7 @@ class DivDrawer {
       return;
     }
 
-    let t = document.querySelector('#card-template').content;
+    let t = this.tpl.card;
     let n = document.importNode(t, true);
     let e = n.querySelector('.card');
     parent.appendChild(n);

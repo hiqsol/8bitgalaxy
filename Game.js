@@ -2,7 +2,10 @@ import Board from "./Board.js";
 import DivDrawer from "./DivDrawer.js";
 
 class Game {
-  start(div) {
+  start(div = null) {
+    if (div === null) {
+      div = document.querySelector('body');
+    }
     var b = new Board();
     b.star(0,0)
       .add('AI-Hero-1s',      1)
