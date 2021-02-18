@@ -106,11 +106,11 @@ class DivDrawer {
   }
 
   type2image(type) {
-    return TypeImages[type] ?? 'question-circle';
+    return TypeImages[type.toLowerCase()] ?? 'question-circle';
   }
 
   race2image(race) {
-    return raceImages[race] ?? 'question-circle';
+    return raceImages[race.toLowerCase()] ?? 'question-circle';
   }
 
   setCardPart(parent, part, value, type = null) {
@@ -126,17 +126,17 @@ class DivDrawer {
 }
 
 const TypeImages = Object.freeze({
-  'Hero':     'user',
-  'Ship':     'rocket',
-  'Base':     'flower',
-  'Colony':   'world',
+  hero:     'user',
+  ship:     'rocket',
+  base:     'flower',
+  colony:   'world',
 })
 
 const raceImages = Object.freeze({
-  'Plasma':   'emoji-smile',
-  'Giant':    'bricks',
-  'Ai':       'rook',
-  'human':    'world',
+  plasma:   'emoji-smile',
+  giant:    'bricks',
+  ai:       'rook',
+  human:    'world',
 })
 
 export default DivDrawer;
