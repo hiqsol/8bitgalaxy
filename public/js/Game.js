@@ -10,8 +10,23 @@ class Game {
   get board() { return this._board; }
   get drawer() { return this._drawer; }
 
-  start(parent = null) {
-    this.demo();
+  static create(options = {}) {
+    let game = new Game();
+    return game.init(options);
+  }
+
+  init(options) {
+    let players = options.players ?? {
+      p1: 'human',
+      p2: 'ai',
+    };
+    for (const [name, race] of Object.entries(players)) {
+      this.board.addPlayer(name, race);
+    }
+    return this;
+  }
+
+  start(options = null, parent = null) {
     this.draw(parent);
   }
 
@@ -20,6 +35,11 @@ class Game {
   }
 
   demo() {
+    this.demoPlay();
+    this.start();
+  }
+
+  demoPlay() {
     let b = this.board;
     b.star(0,0)
       .add('AI-Hero-1s',      1)
@@ -61,7 +81,6 @@ class Game {
       .add('Human-Hero-1s',   1)
     ;
   }
-
 }
 
 export default Game;
