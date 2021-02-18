@@ -4,49 +4,51 @@ import Card from './Card.js';
 import Template from './Template.js';
 
 class DivDrawer {
-  constructor(root) {
-    this.root = root;
+  constructor() {
     this.m    = 50;
     this.tpl  = new Template();
   }
 
-  draw(obj) {
+  draw(parent, obj) {
+    if (parent === null) {
+      parent = document.querySelector('body');
+    }
     if (obj instanceof(Board)) {
-      this.drawBoard(obj);
+      this.drawBoard(parent, obj);
     }
   }
 
-  drawBoard(board) {
-    this.drawHomes(board);
-    this.drawField(board.field);
+  drawBoard(parent, board) {
+    this.drawHomes(parent, board);
+    this.drawField(parent, board.field);
   }
 
-  drawHomes(board) {
-    this.drawHome(board);
+  drawHomes(parent, board) {
+    this.drawHome(parent, board);
   }
 
-  drawHome(board) {
+  drawHome(parent, board) {
     let n = document.importNode(this.tpl.home, true);
     let e = n.querySelector('.pile');
-    this.root.appendChild(n);
+    parent.appendChild(n);
     let c = this.drawCard(e, board.card('AI-Base-7a'), 0, 0);
     c.style.transform = "rotate(-90deg)";
   }
 
-  drawField(field) {
-    this.drawStar(field.star(0, 0));
-    this.drawStar(field.star(1, 0));
-    this.drawStar(field.star(0, 1));
-    this.drawStar(field.star(1, 1));
-    this.drawStar(field.star(2, 1));
-    this.drawStar(field.star(0, 2));
-    this.drawStar(field.star(1, 2));
+  drawField(parent, field) {
+    this.drawStar(parent, field.star(0, 0));
+    this.drawStar(parent, field.star(1, 0));
+    this.drawStar(parent, field.star(0, 1));
+    this.drawStar(parent, field.star(1, 1));
+    this.drawStar(parent, field.star(2, 1));
+    this.drawStar(parent, field.star(0, 2));
+    this.drawStar(parent, field.star(1, 2));
   }
 
-  drawStar(star) {
+  drawStar(parent, star) {
     let n = document.importNode(this.tpl.star, true);
     let e = n.querySelector('.star');
-    this.root.appendChild(n);
+    parent.appendChild(n);
     let indent = this.m * (star.y % 2 ? 1 : 8.4);
     e.style.left  = (star.x*this.m*14.6 + indent) + 'px';
     e.style.top   = (star.y*this.m*12.6 + this.m) + 'px';
@@ -54,24 +56,24 @@ class DivDrawer {
     this.drawStarCards(e, star);
   }
 
-  drawStarCards(s, star) {
-    this.drawCard(s, star.base(0), 0, 0);
-    this.drawCard(s, star.base(1), 0, 1);
-    this.drawCard(s, star.base(2), 0, 2);
+  drawStarCards(parent, star) {
+    this.drawCard(parent, star.base(0), 0, 0);
+    this.drawCard(parent, star.base(1), 0, 1);
+    this.drawCard(parent, star.base(2), 0, 2);
 
-    this.drawCard(s, star.ship(0), 0, 3);
-    this.drawCard(s, star.ship(1), 1, 3);
-    this.drawCard(s, star.ship(2), 2, 3);
-    this.drawCard(s, star.ship(3), 3, 3);
+    this.drawCard(parent, star.ship(0), 0, 3);
+    this.drawCard(parent, star.ship(1), 1, 3);
+    this.drawCard(parent, star.ship(2), 2, 3);
+    this.drawCard(parent, star.ship(3), 3, 3);
 
-    this.drawCard(s, star.colony(0), 8, 0);
-    this.drawCard(s, star.colony(1), 8, 1);
-    this.drawCard(s, star.colony(2), 8, 2);
+    this.drawCard(parent, star.colony(0), 8, 0);
+    this.drawCard(parent, star.colony(1), 8, 1);
+    this.drawCard(parent, star.colony(2), 8, 2);
 
-    this.drawCard(s, star.hero(0), 6, 4);
-    this.drawCard(s, star.hero(1), 6, 5);
-    this.drawCard(s, star.hero(2), 6, 6);
-    this.drawCard(s, star.hero(3), 6, 7);
+    this.drawCard(parent, star.hero(0), 6, 4);
+    this.drawCard(parent, star.hero(1), 6, 5);
+    this.drawCard(parent, star.hero(2), 6, 6);
+    this.drawCard(parent, star.hero(3), 6, 7);
   }
 
   drawCard(parent, card, x, y) {
@@ -111,14 +113,14 @@ class DivDrawer {
     return raceImages[race] ?? 'question-circle';
   }
 
-  setCardPart(e, part, value, type = null) {
+  setCardPart(parent, part, value, type = null) {
     if (value) {
-      e.querySelector('.'+part+' .value').innerHTML = value;
+      parent.querySelector('.'+part+' .value').innerHTML = value;
       if (type) {
-        e.querySelector('.' + part).classList.add(type);
+        parent.querySelector('.' + part).classList.add(type);
       }
     } else {
-      e.querySelector('.'+part).innerHTML = '';
+      parent.querySelector('.'+part).innerHTML = '';
     }
   }
 }

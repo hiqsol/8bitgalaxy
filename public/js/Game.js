@@ -2,11 +2,25 @@ import Board from "./Board.js";
 import DivDrawer from "./DivDrawer.js";
 
 class Game {
-  start(div = null) {
-    if (div === null) {
-      div = document.querySelector('body');
-    }
-    var b = new Board();
+  constructor() {
+    this._board = new Board();
+    this._drawer = new DivDrawer();
+  }
+
+  get board() { return this._board; }
+  get drawer() { return this._drawer; }
+
+  start(parent = null) {
+    this.demo();
+    this.draw(parent);
+  }
+
+  draw(parent = null) {
+    this.drawer.draw(parent, this.board);
+  }
+
+  demo() {
+    let b = this.board;
     b.star(0,0)
       .add('AI-Hero-1s',      1)
       .add('AI-Base-7a',      2)
@@ -46,10 +60,8 @@ class Game {
       .add('Human-Hero-2A',   0)
       .add('Human-Hero-1s',   1)
     ;
-
-    var d = new DivDrawer(div);
-    d.draw(b);
   }
+
 }
 
 export default Game;
