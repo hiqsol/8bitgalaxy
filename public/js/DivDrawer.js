@@ -1,6 +1,7 @@
-import Board from './Board.js';
 import Star from './Star.js';
 import Card from './Card.js';
+import Home from './Home.js';
+import Board from './Board.js';
 import Template from './Template.js';
 
 class DivDrawer {
@@ -16,6 +17,9 @@ class DivDrawer {
     if (obj instanceof(Board)) {
       this.drawBoard(parent, obj);
     }
+    if (obj instanceof(Home)) {
+      this.drawHome(parent, obj);
+    }
   }
 
   drawBoard(parent, board) {
@@ -24,14 +28,22 @@ class DivDrawer {
   }
 
   drawHomes(parent, board) {
-    this.drawHome(parent, board);
+    //this.drawHome(parent, board.home('p1'));
   }
 
-  drawHome(parent, board) {
+  drawHome(parent, home) {
     let n = document.importNode(this.tpl.home, true);
+    let s = n.querySelector('.Discard');
+
+    parent.appendChild(n);
+    this.drawPile(s, home.discard);
+  }
+
+  drawPile(parent, pile) {
+    let n = document.importNode(this.tpl.pile, true);
     let e = n.querySelector('.pile');
     parent.appendChild(n);
-    let c = this.drawCard(e, board.card('AI-Base-7a'), 0, 0);
+    let c = this.drawCard(e, pile.top);
     c.style.transform = "rotate(-90deg)";
   }
 
@@ -81,8 +93,7 @@ class DivDrawer {
       return;
     }
 
-    let t = this.tpl.card;
-    let n = document.importNode(t, true);
+    let n = document.importNode(this.tpl.card, true);
     let e = n.querySelector('.card');
     parent.appendChild(n);
     e.style.left  = (25 + x*this.m) + 'px';

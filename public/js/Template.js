@@ -56,10 +56,16 @@ const Fragments = {
     </template>
   `,
   pile: `
+    <template id="the-template">
+      <div class="Pile">
+      </div>
+    </template>
   `,
   home: `
     <template id="the-template">
-      <div class="Pile"></div>
+      <div class="Home"></div>
+        <div class="Discard"></div>
+      </div>
     </template>
   `,
 }

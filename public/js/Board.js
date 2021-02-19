@@ -9,6 +9,7 @@ class Board {
     this._field = new Field(this);
     this._deck = new Deck(this);
     this._players = {};
+    this._homes = {};
   }
 
   get deck() { return this._deck; }
