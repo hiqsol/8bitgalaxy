@@ -1,86 +1,85 @@
-import Card from "./Card.js";
+import aCard from "./aCard.js";
 
-class Deck {
-  get(name) {
-    let all = this.all();
+class Decks {
+  static get(name) {
+    let all = Decks.all();
     let specs = all[name.toLowerCase()];
-    return new Card(this.parseCard(name, specs));
+    return new aCard(Decks.parseCard(name, specs));
   }
 
-  parseCard(name, specs) {
+  static parseCard(name, specs) {
     let type = typeof(specs);
     if (type === 'object') {
       return specs;
     }
     if (type === 'string') {
-      let res = Object.assign(this.parseName(name), this.parseSpecs(specs))
+      let res = Object.assign(Decks.parseName(name), Decks.parseSpecs(specs))
       return res;
     }
-    
-    return this.parseName(name);
+    return Decks.parseName(name);
   }
 
-  parseName(name) {
+  static parseName(name) {
     let ps = name.split('-');
-    let [klass, level] = this.parseSimpleAction(ps[2]);
+    let [klass, level] = Decks.parseSimpleAction(ps[2]);
     return {
-      race:     ps[0],
-      type:     ps[1],
-      klass:    klass,
-      level:    level,
+      Race:     ps[0],
+      Type:     ps[1],
+      Klass:    klass,
+      Level:    level,
       [klass]:  level,
     };
   }
 
-  parseSpecs(specs) {
+  static parseSpecs(specs) {
     let ps = specs.split(',');
     let res = {};
-    ps.forEach(value => Object.assign(res, this.parseAction(value)));
+    ps.forEach(value => Object.assign(res, Decks.parseAction(value)));
     return res;
   }
 
-  parseAction(action) {
+  static parseAction(action) {
     if (action.length === 2) {
-      let [type, value] = this.parseSimpleAction(action);
+      let [type, value] = Decks.parseSimpleAction(action);
       return {[type]: value};
     }
     let f = action.charAt(0).toLowerCase();
     if (f === 'u') {
-      let [type, value] = this.parseSimpleAction(action.substring(1,3));
+      let [type, value] = Decks.parseSimpleAction(action.substring(1,3));
       return {
-        'utilizationValue': value,
-        'utilizationType': type,
+        'UtilizationValue': value,
+        'UtilizationType': type,
       };
     }
     if (f === 'c') {
       return {
-        'cooperation': Number(action.charAt(2)),
+        'Cooperation': Number(action.charAt(2)),
       }
     }
     return {};
   }
 
-  parseSimpleAction(action) {
+  static parseSimpleAction(action) {
     let t = action.charAt(0).toLowerCase();
     let n = action.charAt(1).toLowerCase();
     if (isNaN(n)) {
       [t, n] = [n, t];
     }
     return [
-      (Resources[t] ?? '').toLowerCase(),
+      Resources[t] ?? '',
       Number(n),
     ];
   }
 
-  all() {
-    let src = this.allAnyCase();
+  static all() {
+    let src = Decks.allAnyCase();
     return Object.keys(src).reduce(function (dst, key) {
       dst[key.toLowerCase()] = src[key];
       return dst;
     }, {});
   }
 
-  allAnyCase() {
+  static allAnyCase() {
     return {
       'AI-Hero-1s':         '',
       'AI-Hero-2s':         'a1p',
@@ -109,11 +108,11 @@ class Deck {
 }
 
 const Resources = Object.freeze({
-  'd':  'Defense',
-  'a':  'Attack',
-  'c':  'Colonization',
-  's':  'Science',
-  'p':  'Production',
+  d:  'Defense',
+  a:  'Attack',
+  c:  'Colonization',
+  s:  'Science',
+  p:  'Production',
 })
 
-export default Deck;
+export default Decks;

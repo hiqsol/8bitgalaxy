@@ -6,11 +6,11 @@ class Field {
     this.stars = [[], [], []];
   }
 
-  star(x, y) {
-    if (! this.stars[x][y]) {
-      this.stars[x][y] = new Star(this, x, y);
+  star(y, x) {
+    if (! this.stars[y][x]) {
+      this.stars[y][x] = new Star(this, y, x);
     }
-    return this.stars[x][y];
+    return this.stars[y][x];
   }
 }
 

@@ -1,4 +1,4 @@
-import Item from "./Item.js";
+import Card from "./Card.js";
 
 class Pile {
   constructor(name) {
@@ -10,9 +10,9 @@ class Pile {
   get size()  { return this._items.length; }
   get top()   { return this._items[this.size-1]; }
 
-  putOnTop(item) {
-    Item.assert(item);
-    this._items.push(item);
+  putOnTop(card) {
+    card.assert(card);
+    this._items.push(card);
   }
 
 }

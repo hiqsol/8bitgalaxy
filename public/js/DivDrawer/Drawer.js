@@ -1,10 +1,6 @@
-import Star from './Star.js';
-import Card from './Card.js';
-import Home from './Home.js';
-import Board from './Board.js';
 import Template from './Template.js';
 
-class DivDrawer {
+class Drawer {
   constructor() {
     this.m    = 50;
     this.tpl  = new Template();
@@ -14,10 +10,14 @@ class DivDrawer {
     if (parent === null) {
       parent = document.querySelector('body');
     }
-    if (obj instanceof(Board)) {
+    if (typeof obj !== 'object') {
+      throw new Error('not an object');
+    }
+    let cname = obj.constructor.name;
+    if (cname === 'Board') {
       this.drawBoard(parent, obj);
     }
-    if (obj instanceof(Home)) {
+    if (cname === 'Home') {
       this.drawHome(parent, obj);
     }
   }
@@ -49,12 +49,12 @@ class DivDrawer {
 
   drawField(parent, field) {
     this.drawStar(parent, field.star(0, 0));
-    this.drawStar(parent, field.star(1, 0));
     this.drawStar(parent, field.star(0, 1));
+    this.drawStar(parent, field.star(1, 0));
     this.drawStar(parent, field.star(1, 1));
-    this.drawStar(parent, field.star(2, 1));
-    this.drawStar(parent, field.star(0, 2));
     this.drawStar(parent, field.star(1, 2));
+    this.drawStar(parent, field.star(2, 0));
+    this.drawStar(parent, field.star(2, 1));
   }
 
   drawStar(parent, star) {
@@ -98,31 +98,25 @@ class DivDrawer {
     parent.appendChild(n);
     e.style.left  = (25 + x*this.m) + 'px';
     e.style.top   = (160 + y*this.m) + 'px';
-    let type = card.spec.type;
-    e.classList.add(type);
-    e.classList.add(card.spec.race);
+    e.classList.add(card.Type);
+    e.classList.add(card.Race);
 
     let i = e.querySelector('.Image .Klass.lni');
-    i.classList.add('lni-'+this.type2image(type));
+    i.classList.add('lni-'+this.type2image(card.Type));
 
-    this.setCardPart(e, 'Level',        card.level, card.klass);
+    this.setCardPart(e, 'Level',        card.Level, card.Klass);
     this.setCardPart(e, 'Defense',      null);
-    this.setCardPart(e, 'Attack',       card.spec.attack);
-    this.setCardPart(e, 'Colonization', card.spec.colonization);
-    this.setCardPart(e, 'Science',      card.spec.science);
-    this.setCardPart(e, 'Production',   card.spec.production);
-    this.setCardPart(e, 'Utilization',  null, card.spec.utilizationValue, card.spec.utilizationType);
+    this.setCardPart(e, 'Attack',       card.Attack);
+    this.setCardPart(e, 'Colonization', card.Colonization);
+    this.setCardPart(e, 'Science',      card.Science);
+    this.setCardPart(e, 'Production',   card.Production);
+    this.setCardPart(e, 'Utilization',  null, card.UtilizationValue, card.UtilizationType);
 
     return e;
   }
 
-  type2image(type) {
-    return TypeImages[type.toLowerCase()] ?? 'question-circle';
-  }
-
-  race2image(race) {
-    return raceImages[race.toLowerCase()] ?? 'question-circle';
-  }
+  type2image(type) { return TypeImages[type.toLowerCase()] ?? 'question-circle'; }
+  race2image(race) { return raceImages[race.toLowerCase()] ?? 'question-circle'; }
 
   setCardPart(parent, part, value, type = null) {
     if (value) {
@@ -150,4 +144,4 @@ const raceImages = Object.freeze({
   human:    'world',
 })
 
-export default DivDrawer;
+export default Drawer;
