@@ -1,147 +1,53 @@
 import Template from './Template.js';
+import CardDrawer from './CardDrawer.js';
+import HomeDrawer from './HomeDrawer.js';
+import StarDrawer from './StarDrawer.js';
+import BoardDrawer from './BoardDrawer.js';
+import FieldDrawer from './FieldDrawer.js';
 
 class Drawer {
   constructor() {
-    this.m    = 50;
-    this.tpl  = new Template();
+    this._m       = 50;
+    this._tpl     = new Template();
+    this._drawers = {};
   }
+
+  get m()   { return this._m; }
+  get tpl() { return this._tpl; }
 
   draw(parent, obj) {
     if (parent === null) {
       parent = document.querySelector('body');
     }
     if (typeof obj !== 'object') {
-      throw new Error('not an object');
+      throw new Error('not an object: ' + typeof(obj));
     }
     let cname = obj.constructor.name;
-    if (cname === 'Board') {
-      this.drawBoard(parent, obj);
+    return this.getDrawer(cname).draw(parent, obj);
+  }
+
+  getDrawer(name) {
+    if (this._drawers[name] === undefined) {
+      this._drawers[name] = this.buildDrawer(name);
     }
-    if (cname === 'Home') {
-      this.drawHome(parent, obj);
+    return this._drawers[name];
+  }
+
+  buildDrawer(name) {
+    let drawer = Drawers[name] ?? null;
+    if (! drawer) {
+      throw new Error('no drawer for: ' + name);
     }
-  }
-
-  drawBoard(parent, board) {
-    this.drawHomes(parent, board);
-    this.drawField(parent, board.field);
-  }
-
-  drawHomes(parent, board) {
-    //this.drawHome(parent, board.home('p1'));
-  }
-
-  drawHome(parent, home) {
-    let n = document.importNode(this.tpl.home, true);
-    let s = n.querySelector('.Discard');
-
-    parent.appendChild(n);
-    this.drawPile(s, home.discard);
-  }
-
-  drawPile(parent, pile) {
-    let n = document.importNode(this.tpl.pile, true);
-    let e = n.querySelector('.pile');
-    parent.appendChild(n);
-    let c = this.drawCard(e, pile.top);
-    c.style.transform = "rotate(-90deg)";
-  }
-
-  drawField(parent, field) {
-    this.drawStar(parent, field.star(0, 0));
-    this.drawStar(parent, field.star(0, 1));
-    this.drawStar(parent, field.star(1, 0));
-    this.drawStar(parent, field.star(1, 1));
-    this.drawStar(parent, field.star(1, 2));
-    this.drawStar(parent, field.star(2, 0));
-    this.drawStar(parent, field.star(2, 1));
-  }
-
-  drawStar(parent, star) {
-    let n = document.importNode(this.tpl.star, true);
-    let e = n.querySelector('.star');
-    parent.appendChild(n);
-    let indent = this.m * (star.y % 2 ? 1 : 8.4);
-    e.style.left  = (star.x*this.m*14.6 + indent) + 'px';
-    e.style.top   = (star.y*this.m*12.6 + this.m) + 'px';
-    let i = n.querySelector('.star .inner');
-    this.drawStarCards(e, star);
-  }
-
-  drawStarCards(parent, star) {
-    this.drawCard(parent, star.base(0), 0, 0);
-    this.drawCard(parent, star.base(1), 0, 1);
-    this.drawCard(parent, star.base(2), 0, 2);
-
-    this.drawCard(parent, star.ship(0), 0, 3);
-    this.drawCard(parent, star.ship(1), 1, 3);
-    this.drawCard(parent, star.ship(2), 2, 3);
-    this.drawCard(parent, star.ship(3), 3, 3);
-
-    this.drawCard(parent, star.colony(0), 8, 0);
-    this.drawCard(parent, star.colony(1), 8, 1);
-    this.drawCard(parent, star.colony(2), 8, 2);
-
-    this.drawCard(parent, star.hero(0), 6, 4);
-    this.drawCard(parent, star.hero(1), 6, 5);
-    this.drawCard(parent, star.hero(2), 6, 6);
-    this.drawCard(parent, star.hero(3), 6, 7);
-  }
-
-  drawCard(parent, card, x, y) {
-    if (! card) {
-      return;
-    }
-
-    let n = document.importNode(this.tpl.card, true);
-    let e = n.querySelector('.card');
-    parent.appendChild(n);
-    e.style.left  = (25 + x*this.m) + 'px';
-    e.style.top   = (160 + y*this.m) + 'px';
-    e.classList.add(card.Type);
-    e.classList.add(card.Race);
-
-    let i = e.querySelector('.Image .Klass.lni');
-    i.classList.add('lni-'+this.type2image(card.Type));
-
-    this.setCardPart(e, 'Level',        card.Level, card.Klass);
-    this.setCardPart(e, 'Defense',      null);
-    this.setCardPart(e, 'Attack',       card.Attack);
-    this.setCardPart(e, 'Colonization', card.Colonization);
-    this.setCardPart(e, 'Science',      card.Science);
-    this.setCardPart(e, 'Production',   card.Production);
-    this.setCardPart(e, 'Utilization',  null, card.UtilizationValue, card.UtilizationType);
-
-    return e;
-  }
-
-  type2image(type) { return TypeImages[type.toLowerCase()] ?? 'question-circle'; }
-  race2image(race) { return raceImages[race.toLowerCase()] ?? 'question-circle'; }
-
-  setCardPart(parent, part, value, type = null) {
-    if (value) {
-      parent.querySelector('.'+part+' .value').innerHTML = value;
-      if (type) {
-        parent.querySelector('.' + part).classList.add(type);
-      }
-    } else {
-      parent.querySelector('.'+part).innerHTML = '';
-    }
+    return new drawer(this);
   }
 }
 
-const TypeImages = Object.freeze({
-  hero:     'user',
-  ship:     'rocket',
-  base:     'flower',
-  colony:   'world',
-})
-
-const raceImages = Object.freeze({
-  plasma:   'emoji-smile',
-  giant:    'bricks',
-  ai:       'rook',
-  human:    'world',
+const Drawers = Object.freeze({
+  Card:     CardDrawer,
+  Home:     HomeDrawer,
+  Star:     StarDrawer,
+  Board:    BoardDrawer,
+  Field:    FieldDrawer,
 })
 
 export default Drawer;

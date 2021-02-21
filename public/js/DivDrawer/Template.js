@@ -30,7 +30,7 @@ class Template {
   }
 }
 
-const Fragments = {
+const Fragments = Object.freeze({
   card: `
     <template id="the-template">
       <div class="card">
@@ -68,6 +68,6 @@ const Fragments = {
       </div>
     </template>
   `,
-}
+})
 
 export default Template;
