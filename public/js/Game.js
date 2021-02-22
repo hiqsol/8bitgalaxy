@@ -1,37 +1,33 @@
 import Board from "./Model/Board.js";
 import Drawer from "./DivDrawer/Drawer.js";
+import Options from "./Model/Options.js";
 
 class Game {
-  constructor() {
-    this._board = new Board();
-    this._drawer = new Drawer();
+  constructor(options = {}) {
+    this._options = Options.assert(options);
+    this._drawer = options.drawer ?? new Drawer();
+    this._board = options.board ?? new Board();
+    this.init();
   }
 
+  get name() { return this._options.name; }
   get board() { return this._board; }
   get drawer() { return this._drawer; }
+  get options() { return this._options; }
 
-  static create(options = {}) {
-    let game = new Game();
-    return game.init(options);
-  }
-
-  init(options) {
-    let players = options.players ?? {
-      p1: 'human',
-      p2: 'ai',
-    };
-    for (const [name, race] of Object.entries(players)) {
+  init() {
+    for (const [name, race] of Object.entries(this.options.players)) {
       this.board.addPlayer(name, race);
     }
     return this;
   }
 
   start(options = null, parent = null) {
-    this.draw(parent);
+    this.draw(parent, this);
   }
 
-  draw(parent = null) {
-    this.drawer.draw(parent, this.board);
+  draw(parent, obj) {
+    this.drawer.draw(parent, obj);
   }
 
   demo() {
@@ -80,6 +76,13 @@ class Game {
       .put('Human-Hero-2A',   0)
       .put('Human-Hero-1s',   1)
     ;
+  }
+
+  static assert(sample) {
+    if (sample instanceof(Game)) {
+      return sample;
+    }
+    throw new Error('not a Game:' + typeof(sample));
   }
 }
 
