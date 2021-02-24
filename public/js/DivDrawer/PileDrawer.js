@@ -1,14 +1,14 @@
 import Drawer from './Drawer.js';
 
-class HomeDrawer {
+class PileDrawer {
   constructor(drawer) {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, home) {
-    let e = this.importNode(parent, '.Home');
-    e.classList.add(home.align);
-    this._drawer.draw(e, home.discard);
+  draw(parent, pile) {
+    let e = this.importNode(parent, '.Pile');
+    e.classList.add(pile.align);
+    this._drawer.drawCard(e, pile.top, 0, 0);
   }
 
   importNode(parent, selector) {
@@ -19,7 +19,7 @@ class HomeDrawer {
 }
 
 const HTML = `
-    <div class="Home"></div>
+    <div class="Pile"></div>
 `;
 
-export default HomeDrawer;
+export default PileDrawer;

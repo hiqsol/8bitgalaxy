@@ -1,18 +1,25 @@
-import Template from './Template.js';
+import Drawer from './Drawer.js';
 
 class BoardDrawer {
   constructor(drawer) {
-    this._drawer  = drawer;
+    this._drawer = Drawer.assert(drawer);
   }
 
   draw(parent, board) {
-    this.drawHomes(parent, board);
-    this._drawer.draw(parent, board.field);
+    let e = this._drawer.importNode(parent, this.fragment, '.Board');
+    this.drawHomes(e, board);
+    this._drawer.draw(e, board.field);
   }
 
   drawHomes(parent, board) {
-    //this.drawHome(parent, board.home('p1'));
+    this._drawer.draw(parent, board.home('p1'));
   }
+
+  get fragment() { return this._drawer.getFragment(HTML); }
 }
+
+const HTML = `
+    <div class="Board"></div>
+`;
 
 export default BoardDrawer;

@@ -1,8 +1,8 @@
-import Template from './Template.js';
+import Drawer from './Drawer.js';
 
 class CardDrawer {
   constructor(drawer) {
-    this._drawer = drawer;
+    this._drawer = Drawer.assert(drawer);
   }
 
   draw(parent, card, y, x) {
@@ -11,9 +11,7 @@ class CardDrawer {
       //throw new Error('no card given');
     }
 
-    let n = document.importNode(this._drawer.tpl.card, true);
-    let e = n.querySelector('.card');
-    parent.appendChild(n);
+    let e = this.importNode(parent, '.Card');
     e.style.left  = (25 + x*this.m) + 'px';
     e.style.top   = (160 + y*this.m) + 'px';
     e.classList.add(card.Type);
@@ -48,6 +46,14 @@ class CardDrawer {
   }
 
   get m() { return this._drawer.m; }
+
+  importNode(parent, selector) {
+    return this._drawer.importNode(parent, this.fragment, selector);
+  }
+
+  get fragment() {
+    return this._drawer.getFragment(HTML);
+  }
 }
 
 const TypeImages = Object.freeze({
@@ -63,5 +69,23 @@ const raceImages = Object.freeze({
   ai:       'rook',
   human:    'world',
 })
+
+const HTML = `
+  <div class="Card">
+    <div class="image">
+      <div class="klass lni"></div>
+    </div>
+    <div class="part utilization">
+      <div class="lni lni-archive"></div>
+      <div class="value">U</div>
+    </div>
+    <div class="part Defense"><div class="lni lni-shield"></div><div class="value">D</div></div>
+    <div class="part Attack"><div class="lni lni-pointer"></div><div class="value">A</div></div>
+    <div class="part Colonization"><div class="lni lni-basketball"></div><div class="value">C</div></div>
+    <div class="part Science"><div class="lni lni-star"></div><div class="value">S</div></div>
+    <div class="part Production"><div class="lni lni-package"></div><div class="value">P</div></div>
+    <div class="Level Klass"><div class="value">L</div></div>
+  </div>
+`;
 
 export default CardDrawer;
