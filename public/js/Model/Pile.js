@@ -11,9 +11,10 @@ class Pile {
   get size()  { return this._items.length; }
   get top()   { return this._items[this.size-1]; }
 
-  put(card) {
-    this._items.push(Card.assert(card));
-  }
+  get(i) { return this._items[i] ?? null; }
+
+  putUnder(card)  { this._items.unshift(Card.assert(card)); }
+  put(card)       { this._items.push(Card.assert(card)); }
 }
 
 export default Pile;

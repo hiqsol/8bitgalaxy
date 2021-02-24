@@ -25,10 +25,10 @@ class StarDrawer {
     this._drawer.drawCard(parent, star.colony(1), 1, 8);
     this._drawer.drawCard(parent, star.colony(2), 2, 8);
 
-    this._drawer.drawCard(parent, star.hero(0), 4, 6);
-    this._drawer.drawCard(parent, star.hero(1), 5, 6);
-    this._drawer.drawCard(parent, star.hero(2), 6, 6);
-    this._drawer.drawCard(parent, star.hero(3), 7, 6);
+    this._drawer.drawCard(parent, star.hero(0), 4, 7);
+    this._drawer.drawCard(parent, star.hero(1), 5, 7);
+    this._drawer.drawCard(parent, star.hero(2), 6, 7);
+    this._drawer.drawCard(parent, star.hero(3), 7, 7);
   }
 
   get m() { return this._drawer.m; }

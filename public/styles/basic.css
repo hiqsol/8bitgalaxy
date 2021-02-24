@@ -91,7 +91,12 @@ BODY {
 .Base .Klass.Level          { left:300; top:0; height: 60; }
 
 .Pile .Base                 { width: 350; height: 250; }
+.Pile .Hero                 { width: 350; height: 250; }
+.Pile .Ship                 { width: 250; height: 350; }
+.Pile .Colony               { width: 250; height: 350; }
+
 .Pile.TopToBottom .Base     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
+.Pile.TopToBottom .Hero     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
 
 .Hero                       { width:350; height: 200; }
 .Hero .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
@@ -104,14 +109,14 @@ BODY {
 .Hero .part.Production      { left:250; top:0; }
 .Hero .Klass.Level          { left:300; top:0; height: 60; }
 
-.Colony                     { width:250; height: 350; }
-.Colony .Level.Klass        { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
-.Colony .Image .Klass       { left:60;  top:90; }
-.Colony .part.Attack        { left:0;   top:0; }
-.Colony .part.Colonization  { left:50;  top:0; }
-.Colony .part.Science       { left:100; top:0; }
-.Colony .part.Production    { left:150; top:0; }
-.Colony .Klass.Level        { left:200; top:0; height: 60; }
+.Colony                     { width:250; height: 300; }
+.Colony .Level.Klass        { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
+.Colony .Image .Klass       { left:60;  top:70; }
+.Colony .Klass.Level        { left:0;   top:0; height: 60; }
+.Colony .part.Attack        { left:50;  top:0; }
+.Colony .part.Colonization  { left:100; top:0; }
+.Colony .part.Science       { left:150; top:0; }
+.Colony .part.Production    { left:200; top:0; }
 .Colony .part.Defense       { display:none; }
 .Colony .part.Utilization   { display:none; }
 
@@ -129,8 +134,6 @@ BODY {
 .star {
     position:   absolute;
     color:      #556;
-    font-size:  999px;
-    z-index: 300;
 }
 .star .inner.lni {
     position:   absolute; left:100; top:-60;
