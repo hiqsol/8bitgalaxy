@@ -1,20 +1,19 @@
 import Card from "./Card.js";
+import Direction from "./Direction.js";
 
 class Pile {
-  constructor(name) {
-    this._name = name;
+  constructor(align) {
+    this._align = Direction.assert(align);
     this._items = [];
   }
 
-  get name()  { return this._name; }
+  get align() { return this._align.name; }
   get size()  { return this._items.length; }
   get top()   { return this._items[this.size-1]; }
 
-  putOnTop(card) {
-    card.assert(card);
-    this._items.push(card);
+  put(card) {
+    this._items.push(Card.assert(card));
   }
-
 }
 
 export default Pile;

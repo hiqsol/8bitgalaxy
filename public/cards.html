@@ -9,11 +9,11 @@
     <script type="module">
       import Game from "./js/Game.js";
 
-      let g = Game.create();
+      let g = new Game();
       let b = g.board;
       let h = b.home('p1');
-      h.scrap.putOnTop(Item.visible('AI-Base-7a'));
-      g.draw(h);
+      h.discard.put('AI-Base-7a');
+      g.draw(null, h.discard);
     </script>
   </body>
 </html>

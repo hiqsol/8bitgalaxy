@@ -12,9 +12,7 @@ class Board {
 
   get field() { return this._field; }
 
-  star(x, y) {
-    return this.field.star(x, y);
-  }
+  star(y, x) { return this.field.star(y, x); }
 
   home(name) {
     let player = this.player(name);

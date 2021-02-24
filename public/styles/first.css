@@ -88,7 +88,8 @@ BODY {
 .Base .part.Production      { left:250; top:0; }
 .Base .Klass.Level          { left:300; top:0; height: 60; }
 
-.Pile .Base                 { width:350; height: 250; }
+.Pile .Base                 { width: 350; height: 250; }
+.Pile.TopToBottom .Base     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
 
 .Hero                       { width:350; height: 200; }
 .Hero .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }

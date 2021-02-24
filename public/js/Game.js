@@ -15,6 +15,8 @@ class Game {
   get drawer() { return this._drawer; }
   get options() { return this._options; }
 
+  static create(options = {}) { return new Game(options); }
+
   init() {
     for (const [name, race] of Object.entries(this.options.players)) {
       this.board.addPlayer(name, race);
