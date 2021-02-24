@@ -38,7 +38,6 @@ class aCard {
     if (typeof(sample) === 'string') {
       return aCard.fromString(sample);
     }
-    console.log(sample);
     throw new Error('not a aCard:' + sample.constructor.name)
   }
 

@@ -10,11 +10,14 @@
       let g = new Game();
       let b = g.board;
       let h = b.home('p1');
-      h.discard.put('AI-Base-7a');
       h.discard.put('AI-Hero-1s');
       h.discard.put('AI-Ship-2a');
       h.discard.put('AI-Colony-4p');
-      g.draw(null, h.discard);
+      h.discard.put('AI-Base-7a');
+      let div = g.draw(null, h.discard);
+      g.drawer.drawCard(div, g.card('Human-Hero-1c'), 0, 6);
+      g.drawer.drawCard(div, g.card('Human-Ship-4s'), 0, 12);
+      g.drawer.drawCard(div, g.card('Human-Colony-4p'), 0, 18);
     </script>
   </body>
 </html>

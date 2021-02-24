@@ -25,8 +25,6 @@ class Drawer {
       throw new Error('not an object: ' + typeof(obj));
     }
     let cname = obj.constructor.name;
-    console.log(obj);
-    console.log(cname);
     return this.getDrawer(cname).draw(parent, obj);
   }
 

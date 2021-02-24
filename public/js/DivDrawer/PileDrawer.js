@@ -9,6 +9,7 @@ class PileDrawer {
     let e = this.importNode(parent, '.Pile');
     e.classList.add(pile.align);
     this.drawCards(e, pile);
+    return e;
   }
 
   drawCards(parent, pile) {

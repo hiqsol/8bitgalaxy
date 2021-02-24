@@ -91,6 +91,7 @@ class Decks {
       'AI-Colony-4p':       'a3s',
 
       'Human-Hero-1s':      '',
+      'Human-Hero-1c':      '',
       'Human-Hero-2a':      'a1s',
       'Human-Base-6c':      'a5a',
       'Human-Base-7a':      'u5p',

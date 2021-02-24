@@ -26,7 +26,6 @@ class Spec {
     if (typeof(sample) === 'string') {
       return Spec.fromString(sample);
     }
-    console.log(sample);
     throw new Error('not a Spec:' + sample.constructor.name)
   }
 
