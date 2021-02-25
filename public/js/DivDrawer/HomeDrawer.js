@@ -7,7 +7,7 @@ class HomeDrawer {
 
   draw(parent, home) {
     let e = this.importNode(parent, '.Home');
-    e.classList.add(home.align);
+    e.classList.add(home.direction.name);
     this._drawer.draw(e, home.discard);
   }
 

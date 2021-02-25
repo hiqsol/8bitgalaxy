@@ -2,19 +2,19 @@ import Card from "./Card.js";
 import Direction from "./Direction.js";
 
 class Pile {
-  constructor(align) {
-    this._align = Direction.assert(align);
-    this._items = [];
+  constructor(direction) {
+    this._direction = Direction.assert(direction);
+    this._cards = [];
   }
 
-  get align() { return this._align.name; }
-  get size()  { return this._items.length; }
-  get top()   { return this._items[this.size-1]; }
+  get direction() { return this._direction; }
+  get size()      { return this._cards.length; }
+  get top()       { return this._cards[this.size-1]; }
 
-  get(i) { return this._items[i] ?? null; }
+  get(i)          { return this._cards[i] ?? null; }
 
-  putUnder(card)  { this._items.unshift(Card.assert(card)); }
-  put(card)       { this._items.push(Card.assert(card)); }
+  putUnder(card)  { this._cards.unshift(Card.assert(card)); }
+  put(card)       { this._cards.push(Card.assert(card)); }
 }
 
 export default Pile;

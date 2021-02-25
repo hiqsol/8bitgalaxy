@@ -12,7 +12,7 @@ class BoardDrawer {
   }
 
   drawHomes(parent, board) {
-    this._drawer.draw(parent, board.home('p1'));
+    this._drawer.draw(parent, board.home(1));
   }
 
   get fragment() { return this._drawer.getFragment(HTML); }

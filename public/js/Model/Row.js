@@ -1,24 +1,32 @@
 import Pile from "./Pile.js";
+import Direction from "./Direction.js";
 
 class Row {
-  constructor(name, total, inlets) {
-    this._name = name;
-    this._total = total;
-    this.initPiles(total);
+  constructor(direction, size) {
+    this._direction = Direction.assert(direction);
+    this._size = size;
+    this._piles = [];
+    this.initPiles();
   }
 
-  initPiles(total) {
-    for (let i=0;i<total;i++) {
-      this._piles.push(new Pile(this.name+i));
+  initPiles() {
+    for (let i=0;i<this.size;i++) {
+      this._piles.push(new Pile(this.direction.counterpart));
     }
   }
 
-  get name()  { return this._name; }
-  get total() { return this._total; }
-  get piles() { return this._piles; }
-  get inlet() { return this._piles[0]; }
+  get direction() { return this._direction; }
+  get size()      { return this._size; }
+  get piles()     { return this._piles; }
 
-  pile(no) { return this.piles[no]; }
+  pile(no) { return this.piles[this.assertNo(no)]; }
+
+  assertNo(no) {
+    if (no<0 || no>=this.size) {
+      throw new Error('wrong pile no: ' + no);
+    }
+    return no;
+  }
 }
 
-export default Pile;
+export default Row;

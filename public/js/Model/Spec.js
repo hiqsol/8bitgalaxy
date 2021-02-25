@@ -44,6 +44,7 @@ class Spec {
 }
 
 const Names = Object.freeze({
+  Name:               'Name',
   Type:               'Type',
   Race:               'Race',
   Level:              'Level',

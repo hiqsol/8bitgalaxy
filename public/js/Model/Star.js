@@ -11,10 +11,10 @@ class Star {
     this.colonies = [null, null, null];
   }
 
-  base(slot)    { return this.bases[slot]; }
-  hero(slot)    { return this.heroes[slot]; }
-  ship(slot)    { return this.ships[slot]; }
-  colony(slot)  { return this.colonies[slot]; }
+  base(slot)    { return this.bases[slot]     ?? Card.AbsentBase; }
+  hero(slot)    { return this.heroes[slot]    ?? Card.AbsentHero; }
+  ship(slot)    { return this.ships[slot]     ?? Card.AbsentShip; }
+  colony(slot)  { return this.colonies[slot]  ?? Card.AbsentColony; }
 
   put(card, slot) {
     card = Card.assert(card);

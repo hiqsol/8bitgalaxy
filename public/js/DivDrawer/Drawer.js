@@ -1,4 +1,5 @@
 import Template from './Template.js';
+import RowDrawer from './RowDrawer.js';
 import CardDrawer from './CardDrawer.js';
 import GameDrawer from './GameDrawer.js';
 import HomeDrawer from './HomeDrawer.js';
@@ -17,7 +18,7 @@ class Drawer {
   get m()   { return this._m; }
   get tpl() { return this._tpl; }
 
-  draw(parent, obj) {
+  draw(parent, obj, y, x) {
     if (parent === null) {
       parent = document.querySelector('body');
     }
@@ -25,11 +26,7 @@ class Drawer {
       throw new Error('not an object: ' + typeof(obj));
     }
     let cname = obj.constructor.name;
-    return this.getDrawer(cname).draw(parent, obj);
-  }
-
-  drawCard(parent, card, y, x) {
-    return this.getDrawer('Card').draw(parent, card, y, x);
+    return this.getDrawer(cname).draw(parent, obj, y, x);
   }
 
   getDrawer(name) {
@@ -71,6 +68,7 @@ const Drawers = Object.freeze({
   Game:     GameDrawer,
   Home:     HomeDrawer,
   Pile:     PileDrawer,
+  Row:      RowDrawer,
   Star:     StarDrawer,
   Board:    BoardDrawer,
   Field:    FieldDrawer,

@@ -4,8 +4,13 @@ class State {
   }
 
   get name()            { return this._name; }
-  get isVisible()       { return this._name !== Names.Hidden; }
+  get visibility()      { return this.isVisible ? 'Visible' : this.name;  }
+  get isAbsent()        { return this.is(Names.Absent); }
+  get isHidden()        { return this.is(Names.Hidden); }
+  get isNormal()        { return this.is(Names.Normal); }
+  get isVisible()       { return this.is(Names.Normal, Names.Alternative); }
   get isAlternative()   { return this._name === Names.Alternative; }
+  is(name, n2 = null)   { return this._name === name || this._name === n2; }
 
   static assert(sample) {
     if (sample instanceof(State)) {
@@ -30,7 +35,7 @@ class State {
 
   static normalizeName(name) {
     if (name === '') {
-      return Names.Visible;
+      return Names.Normal;
     }
     name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     if (Names[name] === undefined) {
@@ -41,8 +46,9 @@ class State {
 }
 
 const Names = Object.freeze({
+  Absent:       'Absent',
   Hidden:       'Hidden',
-  Visible:      'Visible',
+  Normal:       'Normal',
   Alternative:  'Alternative',
 })
 

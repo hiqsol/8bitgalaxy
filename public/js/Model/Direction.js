@@ -3,7 +3,10 @@ class Direction {
     this._name = Direction.assertName(name);
   }
 
-  get name() { return this._name; }
+  get name()        { return this._name; }
+  get xStep()       { return xSteps[this.name]; }
+  get yStep()       { return ySteps[this.name]; }
+  get counterpart() { return Direction.getOne(Counterparts[this.name]); }
 
   static _values = {};
 
@@ -58,6 +61,27 @@ const Names = Object.freeze({
   BottomToTop:      'BottomToTop',
   LeftToRight:      'LeftToRight',
   RightToLeft:      'RightToLeft'
+})
+
+const xSteps = Object.freeze({
+  TopToBottom:      0,
+  BottomToTop:      0,
+  LeftToRight:      1,
+  RightToLeft:      -1
+})
+
+const ySteps = Object.freeze({
+  TopToBottom:      1,
+  BottomToTop:      -1,
+  LeftToRight:      0,
+  RightToLeft:      0
+})
+
+const Counterparts = Object.freeze({
+  TopToBottom:      'LeftToRight',
+  BottomToTop:      'RightToLeft',
+  LeftToRight:      'TopToBottom',
+  RightToLeft:      'BottomToTop'
 })
 
 export default Direction;

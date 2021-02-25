@@ -10,7 +10,10 @@ class Card {
 
   get aCard()             { return this._acard; }
   get State()             { return this._state; }
-  get isVisible()         { return this._state.isHidden; }
+  get visibility()        { return this._state.visibility; }
+  get isAbsent()          { return this._state.isAbsent; }
+  get isHidden()          { return this._state.isHidden; }
+  get isVisible()         { return this._state.isVisible; }
   get isAlternative()     { return this._state.isAlternative; }
 
   get Type()              { return this.aCard.Type; }
@@ -30,6 +33,11 @@ class Card {
   get isShip()            { return this.aCard.isShip; }
   get isBase()            { return this.aCard.isBase; }
 
+  static AbsentBase   = Card.assert('absent Base');
+  static AbsentHero   = Card.assert('absent Hero');
+  static AbsentShip   = Card.assert('absent Ship');
+  static AbsentColony = Card.assert('absent Colony');
+
   statedValue(spec)       {
     if (this.isHidden) {
       return null;
@@ -39,10 +47,6 @@ class Card {
     }
     return this.aCard.getValue(spec);
   }
-
-  static hidden(acard)      { return new Card(acard, States.Hidden); }
-  static visible(acard)     { return new Card(acard, States.Visible); }
-  static alternative(acard) { return new Card(acard, States.Alternative); }
 
   static assert(sample) {
     if (sample instanceof(Card)) {

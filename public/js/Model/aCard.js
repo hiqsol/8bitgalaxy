@@ -7,6 +7,7 @@ class aCard {
   }
 
   get Specs()             { return this._specs; }
+  get Name()              { return this.getValue(Spec.Name); }
   get Type()              { return this.getValue(Spec.Type); }
   get Race()              { return this.getValue(Spec.Race); }
   get Level()             { return this.getValue(Spec.Level, 0); }

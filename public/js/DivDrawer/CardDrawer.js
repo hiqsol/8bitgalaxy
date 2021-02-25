@@ -7,16 +7,24 @@ class CardDrawer {
 
   draw(parent, card, y, x) {
     if (! card) {
-      return;
-      //throw new Error('no card given');
+      throw new Error('no card given');
     }
 
-    let e = this.importNode(parent, '.Card');
+    let e = this.importNode(parent, card.visibility, '.Card');
     e.style.left  = (25 + x*this.m) + 'px';
     e.style.top   = (160 + y*this.m) + 'px';
-    e.classList.add(card.Type);
-    e.classList.add(card.Race);
+    e.classList.add(card.Type ?? 'Ship');
+    e.classList.add(card.Race ?? 'Neutral');
+    e.classList.add(card.visibility);
 
+    if (card.isVisible) {
+      this.setParts(e, card);
+    }
+
+    return e;
+  }
+
+  setParts(e, card) {
     let i = e.querySelector('.Image .Klass.lni');
     i.classList.add('lni-'+this.type2image(card.Type));
 
@@ -27,8 +35,6 @@ class CardDrawer {
     this.setCardPart(e, 'Science',      card.Science);
     this.setCardPart(e, 'Production',   card.Production);
     this.setCardPart(e, 'Utilization',  null, card.UtilizationValue, card.UtilizationType);
-
-    return e;
   }
 
   type2image(type) { return TypeImages[type.toLowerCase()] ?? 'question-circle'; }
@@ -47,12 +53,15 @@ class CardDrawer {
 
   get m() { return this._drawer.m; }
 
-  importNode(parent, selector) {
-    return this._drawer.importNode(parent, this.fragment, selector);
+  importNode(parent, name, selector) {
+    return this._drawer.importNode(parent, this.fragment(name), selector);
   }
 
-  get fragment() {
-    return this._drawer.getFragment(HTML);
+  fragment(name) {
+    if (! HTMLs[name]) {
+      throw new Error('no fragment named ' + name);
+    }
+    return this._drawer.getFragment(HTMLs[name]);
   }
 }
 
@@ -70,22 +79,32 @@ const raceImages = Object.freeze({
   human:    'world',
 })
 
-const HTML = `
-  <div class="Card">
-    <div class="image">
-      <div class="klass lni"></div>
+const HTMLs = Object.freeze({
+  Visible: `
+    <div class="Card">
+      <div class="image">
+        <div class="klass lni"></div>
+      </div>
+      <div class="part utilization">
+        <div class="lni lni-archive"></div>
+        <div class="value">U</div>
+      </div>
+      <div class="part Defense"><div class="lni lni-shield"></div><div class="value">D</div></div>
+      <div class="part Attack"><div class="lni lni-pointer"></div><div class="value">A</div></div>
+      <div class="part Colonization"><div class="lni lni-basketball"></div><div class="value">C</div></div>
+      <div class="part Science"><div class="lni lni-star"></div><div class="value">S</div></div>
+      <div class="part Production"><div class="lni lni-package"></div><div class="value">P</div></div>
+      <div class="Level Klass"><div class="value">L</div></div>
     </div>
-    <div class="part utilization">
-      <div class="lni lni-archive"></div>
-      <div class="value">U</div>
+  `,
+  Hidden: `
+    <div class="Card Hidden">
     </div>
-    <div class="part Defense"><div class="lni lni-shield"></div><div class="value">D</div></div>
-    <div class="part Attack"><div class="lni lni-pointer"></div><div class="value">A</div></div>
-    <div class="part Colonization"><div class="lni lni-basketball"></div><div class="value">C</div></div>
-    <div class="part Science"><div class="lni lni-star"></div><div class="value">S</div></div>
-    <div class="part Production"><div class="lni lni-package"></div><div class="value">P</div></div>
-    <div class="Level Klass"><div class="value">L</div></div>
-  </div>
-`;
+  `,
+  Absent: `
+    <div class="Card Absent">
+    </div>
+  `,
+});
 
 export default CardDrawer;

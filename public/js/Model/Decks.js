@@ -104,6 +104,14 @@ class Decks {
       'Human-Ship-2a':      'a1s',
       'Human-Ship-3S':      'a2p',
       'Human-Ship-4S':      'a3a',
+
+      'Base':               { Name: 'Base', Type: 'Base', },
+      'Hero':               { Name: 'Hero', Type: 'Hero', },
+      'Ship':               { Name: 'Ship', Type: 'Ship', },
+      'Colony':             { Name: 'Colony', Type: 'Colony', },
+
+      'Missions':           { Name: 'Missions' },
+      'Hand':               { Name: 'Hand' },
     }
   }
 }
