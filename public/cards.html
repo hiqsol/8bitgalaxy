@@ -5,23 +5,10 @@
   </head>
   <body>
     <script type="module">
-      import Game from "./js/Game.js";
+      import Demo from "./js/Demo.js";
 
-      let g = new Game();
-      let b = g.board;
-      let h = b.home(1);
-
-      h.discard.put('Human-Hero-1s');
-      h.discard.put('Human-Ship-2a');
-      h.discard.put('Human-Base-7a');
-      h.reserve.put('hidden Human-Hero-1s');
-      h.reserve.put('hidden Human-Ship-2a');
-      h.reserve.put('hidden Human-Colony-4p');
-      h.reserve.put('hidden Human-Base-7a');
-      h.hand.put('hidden Human-Hero-1c');
-      h.techs.put('Human-Tech-4p');
-
-      g.draw(null, h);
+      let g = (new Demo()).game;
+      g.draw(null, g.board.home(1));
     </script>
   </body>
 </html>
