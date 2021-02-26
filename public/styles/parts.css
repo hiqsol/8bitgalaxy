@@ -1,0 +1,114 @@
+.image .lni {
+    position: absolute;
+    color: gray;
+    font-size: 130px;
+    font-weight: 100;
+}
+
+.value {
+    position: absolute;
+    width:50;
+    height:50;
+}
+
+.part {
+    position:absolute;
+    width:50;
+    height:50;
+    font-weight:700;
+    font-size:62px;
+    line-height:45px;
+    /*-webkit-text-stroke: 1px black;*/
+}
+
+.part .lni {
+    display:none;
+    position: absolute; top:0; left:0;
+    color:gray;
+    font-size:40px;
+    line-height:40px;
+    -webkit-text-stroke: 1px gray;
+}
+
+.Level {
+    position: absolute; top:0; left:0;
+    width:50; height:50;
+    margin:0;padding:0;
+    text-align: center;
+    vertical-align: middle;
+
+    color: black !important;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: bold;
+    /*-webkit-text-stroke: 1px black;*/
+}
+.Klass.Attack               { background-color: rgba(255, 0, 0, 0.3); }
+.Klass.Colonization         { background-color: rgba(0, 255, 0, 0.3); }
+.Klass.Science              { background-color: rgba(0, 0, 255, 0.3); }
+.Klass.Production           { background-color: rgba(255, 255, 0, 0.6); }
+
+.Defense                    { color: white; }
+.Attack                     { color: red; }
+.Colonization               { color: green; }
+.Science                    { color: darkblue; }
+.Production                 { color: orange; }
+
+.Base .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
+.Base .Image .Klass         { left:20;  top:50; }
+.Base .part.Utilization     { left:0;   top:0; }
+.Base .part.Defense         { left:50;  top:0; }
+.Base .part.Attack          { left:100; top:0; }
+.Base .part.Colonization    { left:150; top:0; }
+.Base .part.Science         { left:200; top:0; }
+.Base .part.Production      { left:250; top:0; }
+.Base .Klass.Level          { left:300; top:0; height: 60; }
+
+.Hero .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
+.Hero .Image .Klass         { left:20;  top:50; }
+.Hero .part.Utilization     { left:0;   top:0; }
+.Hero .part.Defense         { left:50;  top:0; }
+.Hero .part.Attack          { left:100; top:0; }
+.Hero .part.Colonization    { left:150; top:0; }
+.Hero .part.Science         { left:200; top:0; }
+.Hero .part.Production      { left:250; top:0; }
+.Hero .Klass.Level          { left:300; top:0; height: 60; }
+
+.Colony .Level.Klass        { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
+.Colony .Image .Klass       { left:60;  top:70; }
+.Colony .Klass.Level        { left:0;   top:0; height: 60; }
+.Colony .part.Attack        { left:50;  top:0; }
+.Colony .part.Colonization  { left:100; top:0; }
+.Colony .part.Science       { left:150; top:0; }
+.Colony .part.Production    { left:200; top:0; }
+.Colony .part.Defense       { display:none; }
+.Colony .part.Utilization   { display:none; }
+
+.Ship .Level.Klass          { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
+.Ship .Image .Klass         { left:60;  top:130; }
+.Ship .Klass.Level          { left:0;   top:0;   width: 60; }
+.Ship .part.Production      { left:0;   top:50;  }
+.Ship .part.Science         { left:0;   top:100; }
+.Ship .part.Colonization    { left:0;   top:150; }
+.Ship .part.Attack          { left:0;   top:200; }
+.Ship .part.Defense         { left:0;   top:250; }
+.Ship .part.Utilization     { left:0;   top:300; }
+
+.Tech .Level.Klass          { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
+.Tech .Image .Klass         { left:60;  top:90; }
+.Tech .Klass.Level          { left:0;   top:0; height: 60; }
+.Tech .part.Attack          { left:50;  top:0; }
+.Tech .part.Colonization    { left:100; top:0; }
+.Tech .part.Science         { left:150; top:0; }
+.Tech .part.Production      { left:200; top:0; }
+
+.Absent .Name .Value {
+    position:       absolute;
+    width:          250px;
+    height:         350px;
+    line-height:    350px;
+    text-align:     center;
+    vertical-align: middle;
+    font-size:      30px;
+    font-weight:    100;
+}

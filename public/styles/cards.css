@@ -1,0 +1,24 @@
+
+.Card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius:20px;
+    padding:0;
+    margin:0;
+    box-shadow: 0 0 10px black;
+    z-index: 3;
+}
+
+.Card.Absent {
+    border: 0px;
+}
+
+.Card.Hidden {
+    filter: brightness(55%);
+}
+
+.Base                       { width: 350; height: 200; }
+.Hero                       { width:350; height: 200; }
+.Colony                     { width:250; height: 300; }
+.Ship                       { width:200; height: 350; }
+.Tech                       { width:250; height: 350; }

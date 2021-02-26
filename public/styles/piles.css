@@ -1,0 +1,21 @@
+.Pile                       { position: absolute; }
+.Pile .Base                 { width: 350; height: 250; }
+.Pile .Hero                 { width: 350; height: 250; }
+.Pile .Ship                 { width: 250; height: 350; }
+.Pile .Colony               { width: 250; height: 350; }
+.Pile .Other                { width: 250; height: 350; }
+
+.Pile.TopToBottom .Base,
+.Pile.TopToBottom .Hero     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
+
+.Pile.LeftToRight .Ship,
+.Pile.LeftToRight .Colony,
+.Pile.LeftToRight .Tech,
+.Pile.LeftToRight .Other    { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
+
+.Row                        { position: absolute; }
+.Field                      { position: absolute; }
+
+.Home                       { position: absolute; }
+.Home.TopToBottom           { transform-origin: center; transform: rotate(180deg) translate(100%, 100%); }
+
