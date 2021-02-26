@@ -97,22 +97,47 @@ class Decks {
       'AI-Base-6c':         'a5p',
       'AI-Colony-4p':       'a3s',
 
-      'Human-Hero-1s':      '',
-      'Human-Hero-1c':      '',
-      'Human-Hero-2a':      'a1s',
-      'Human-Base-6c':      'a5a',
-      'Human-Base-7a':      'u5p',
-      'Human-Base-7c':      'u5p,co2',
-      'Human-Base-5s':      'u3p',
-      'Human-Colony-4p':    'a3c',
-      'Human-Colony-5s':    'a4p',
-      'Human-Colony-6P':    '1s',
+      'Human-Ship-1a':      '',
       'Human-Ship-1c':      'u2s',
+      'Human-Ship-1s':      '',
+      'Human-Ship-1p':      '',
+
       'Human-Ship-2a':      'a1s',
       'Human-Ship-3S':      'a2p',
       'Human-Ship-4S':      'a3a',
 
-      'Human-Tech-4p':      '',
+      'Human-Hero-1a':      '',
+      'Human-Hero-1c':      '',
+      'Human-Hero-1s':      '',
+      'Human-Hero-1p':      '',
+
+      'Human-Hero-2a':      'a1s',
+      'Human-Hero-2c':      '',
+      'Human-Hero-2s':      '',
+      'Human-Hero-2p':      '',
+
+      'Human-Base-3a':      '',
+      'Human-Base-3c':      '',
+      'Human-Base-3s':      '',
+      'Human-Base-3p':      '',
+
+      'Human-Base-6c':      'a5a',
+      'Human-Base-7a':      'u5p',
+      'Human-Base-7c':      'u5p,co2',
+      'Human-Base-5s':      'u3p',
+
+      'Human-Colony-4a':    'a3c',
+      'Human-Colony-4c':    'u3s',
+      'Human-Colony-4s':    'u3p',
+      'Human-Colony-4p':    'a3a',
+
+      'Human-Colony-5s':    'a4p',
+      'Human-Colony-6P':    '1s',
+
+      'Human-Tech-4a':      '1a',
+      'Human-Tech-4c':      '1c',
+      'Human-Tech-4s':      '1s',
+      'Human-Tech-4p':      '1p',
 
       'Base':               { Type: 'Base', },
       'Hero':               { Type: 'Hero', },

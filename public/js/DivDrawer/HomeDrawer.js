@@ -6,7 +6,6 @@ class HomeDrawer {
   }
 
   draw(parent, home, y, x) {
-    console.log(y);
     let e = this.importNode(parent, '.Home');
     let m = this._drawer.m;
     e.style.left  = (0 + x*m) + 'px';

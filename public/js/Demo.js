@@ -24,6 +24,37 @@ class Demo {
     h.reserve.put('hidden Human-Base-7a');
     h.hand.put('hidden Human-Hero-1c');
     h.techs.put('Human-Tech-4p');
+    this.initFactory(h);
+    this.initResearch(h);
+  }
+
+  initFactory(home) {
+    let f = home.factory;
+    f.pile(0).put('Human-Colony-4a');
+    f.pile(0).put('Human-Colony-4c');
+    f.pile(0).put('Human-Colony-4s');
+    f.pile(0).put('Human-Colony-4p');
+    f.pile(1).put('Human-Ship-1a');
+    f.pile(1).put('Human-Ship-1c');
+    f.pile(1).put('Human-Ship-1s');
+    f.pile(2).put('Human-Hero-1s');
+    f.pile(2).put('Human-Hero-1a');
+    f.pile(2).put('Human-Hero-1c');
+    f.pile(3).put('Human-Base-3c');
+    f.pile(3).put('Human-Base-3s');
+    f.pile(3).put('Human-Base-3a');
+  }
+
+  initResearch(home) {
+    let r = home.research;
+    r.pile(0).put('hidden Human-Colony-4c');
+    r.pile(0).put('hidden Human-Colony-4s');
+    r.pile(0).put('hidden Human-Colony-4p');
+    r.pile(0).put('Human-Tech-4a');
+    r.pile(1).put('Human-Ship-1p');
+    r.pile(2).put('Human-Hero-1s');
+    r.pile(3).put('Human-Base-3c');
+    r.pile(4).put('Human-Colony-3a');
   }
 
   initField() {

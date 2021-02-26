@@ -204,8 +204,9 @@ BODY {
 .Pile.TopToBottom .Base     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
 .Pile.TopToBottom .Hero     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
 
-.Pile.LeftToRight .Ship     { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
-.Pile.LeftToRight .Colony   { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
+.Pile.LeftToRight .Ship,
+.Pile.LeftToRight .Colony,
+.Pile.LeftToRight .Tech,
 .Pile.LeftToRight .Other    { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
 
 .Row                        { position: absolute; }
