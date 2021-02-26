@@ -6,9 +6,9 @@ class StarDrawer {
   draw(parent, star) {
     let e = this._drawer.importNode(parent, this.fragment, '.Star');
     let m = this._drawer.m;
-    let indent = star.y % 2 ? 0 : 7.4*m;
-    e.style.left  = (star.x*m*14.6 + indent) + 'px';
-    e.style.top   = (star.y*m*12.6 + m) + 'px';
+    let indent = star.y % 2 ? 0 : 7.75*m;
+    e.style.left  = (star.x*m*15.5 + indent) + 'px';
+    e.style.top   = (star.y*m*13.4 + m) + 'px';
     //Inner.create(this._drawer, e, true).drawCards(star);
     Inner.create(this._drawer, e, false).drawCards(star);
   }

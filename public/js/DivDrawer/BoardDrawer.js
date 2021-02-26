@@ -12,7 +12,7 @@ class BoardDrawer {
   }
 
   drawHomes(parent, board) {
-    this._drawer.draw(parent, board.home(1), 29, 28);
+    this._drawer.draw(parent, board.home(1), 31, 29);
     this._drawer.draw(parent, board.home(2), 30, 46);
   }
 

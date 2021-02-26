@@ -75,7 +75,7 @@
 .Hero .Klass.Level          { left:300; top:0; height: 60; }
 
 .Colony .Level.Klass        { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
-.Colony .Image .Klass       { left:60;  top:70; }
+.Colony .Image .Klass       { left:60;  top:90; }
 .Colony .Klass.Level        { left:0;   top:0; height: 60; }
 .Colony .part.Attack        { left:50;  top:0; }
 .Colony .part.Colonization  { left:100; top:0; }
@@ -95,7 +95,7 @@
 .Ship .part.Utilization     { left:0;   top:300; }
 
 .Tech .Level.Klass          { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
-.Tech .Image .Klass         { left:60;  top:90; }
+.Tech .Image .Klass         { left:60;  top:100; }
 .Tech .Klass.Level          { left:0;   top:0; height: 60; }
 .Tech .part.Attack          { left:50;  top:0; }
 .Tech .part.Colonization    { left:100; top:0; }
