@@ -10,16 +10,23 @@ class Decks {
   static parseCard(name, specs) {
     let type = typeof(specs);
     if (type === 'object') {
-      return specs;
+      return Object.assign(Decks.parseName(name), specs);
     }
     if (type === 'string') {
-      let res = Object.assign(Decks.parseName(name), Decks.parseSpecs(specs))
-      return res;
+      return Object.assign(Decks.parseName(name), Decks.parseSpecs(specs));
     }
     return Decks.parseName(name);
   }
 
   static parseName(name) {
+    let res = { Name: name };
+    if (name.includes('-')) {
+      res = Object.assign(res, Decks.parseNameParts(name));
+    }
+    return res;
+  }
+
+  static parseNameParts(name) {
     let ps = name.split('-');
     let [klass, level] = Decks.parseSimpleAction(ps[2]);
     return {
@@ -105,13 +112,23 @@ class Decks {
       'Human-Ship-3S':      'a2p',
       'Human-Ship-4S':      'a3a',
 
-      'Base':               { Name: 'Base', Type: 'Base', },
-      'Hero':               { Name: 'Hero', Type: 'Hero', },
-      'Ship':               { Name: 'Ship', Type: 'Ship', },
-      'Colony':             { Name: 'Colony', Type: 'Colony', },
+      'Human-Tech-4p':      '',
 
-      'Missions':           { Name: 'Missions' },
-      'Hand':               { Name: 'Hand' },
+      'Base':               { Type: 'Base', },
+      'Hero':               { Type: 'Hero', },
+      'Ship':               { Type: 'Ship', },
+      'Colony':             { Type: 'Colony', },
+
+      'Missions':           { Type: 'Other' },
+      'Assets':             { Type: 'Other' },
+      'Techs':              { Type: 'Other' },
+      'Hand':               { Type: 'Other' },
+      'Reserve':            { Type: 'Other' },
+      'Discard':            { Type: 'Other' },
+      'Scrap':              { Type: 'Other' },
+      'Factory':            { Type: 'Other' },
+      'Research':           { Type: 'Other', Name: 'R & D' },
+      'Ideas':              { Type: 'Other' },
     }
   }
 }

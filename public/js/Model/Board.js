@@ -15,11 +15,7 @@ class Board {
   player(no)    { return this._players[this.assertPlayerNo(no)-1]; }
   home(no)      { return this.player(no).home; }
 
-  addPlayer(name, race) {
-    let player = new Player(name, race)
-    this._players.push(player);
-    return player;
-  }
+  addPlayer(player) { this._players.push(Player.assert(player)); }
 
   assertPlayerNo(no) {
     if (typeof(no) !== 'number' || no<1 || no>this._players.length) {

@@ -11,30 +11,30 @@ class CardDrawer {
     }
 
     let e = this.importNode(parent, card.visibility, '.Card');
-    e.style.left  = (25 + x*this.m) + 'px';
-    e.style.top   = (160 + y*this.m) + 'px';
+    e.style.left  = (20 + x*this.m) + 'px';
+    e.style.top   = (10 + y*this.m) + 'px';
     e.classList.add(card.Type ?? 'Ship');
     e.classList.add(card.Race ?? 'Neutral');
     e.classList.add(card.visibility);
-
-    if (card.isVisible) {
-      this.setParts(e, card);
-    }
+    this.setParts(e, card);
 
     return e;
   }
 
   setParts(e, card) {
     let i = e.querySelector('.Image .Klass.lni');
-    i.classList.add('lni-'+this.type2image(card.Type));
+    if (i) {
+      i.classList.add('lni-'+this.type2image(card.Type));
+    }
 
+    this.setCardPart(e, 'Name',         card.Name);
     this.setCardPart(e, 'Level',        card.Level, card.Klass);
     this.setCardPart(e, 'Defense',      null);
     this.setCardPart(e, 'Attack',       card.Attack);
     this.setCardPart(e, 'Colonization', card.Colonization);
     this.setCardPart(e, 'Science',      card.Science);
     this.setCardPart(e, 'Production',   card.Production);
-    this.setCardPart(e, 'Utilization',  null, card.UtilizationValue, card.UtilizationType);
+    this.setCardPart(e, 'Utilization',  null, card.UtilizationValue, card.UtilizationKlass);
   }
 
   type2image(type) { return TypeImages[type.toLowerCase()] ?? 'question-circle'; }
@@ -42,12 +42,19 @@ class CardDrawer {
 
   setCardPart(parent, part, value, type = null) {
     if (value) {
-      parent.querySelector('.'+part+' .value').innerHTML = value;
+      this.setInnerHtml(parent, '.'+part+' .value', value);
       if (type) {
         parent.querySelector('.' + part).classList.add(type);
       }
     } else {
-      parent.querySelector('.'+part).innerHTML = '';
+      this.setInnerHtml(parent, '.'+part, '');
+    }
+  }
+
+  setInnerHtml(parent, selector, value) {
+    let e = parent.querySelector(selector);
+    if (e) {
+      e.innerHTML = value;
     }
   }
 
@@ -70,6 +77,7 @@ const TypeImages = Object.freeze({
   ship:     'rocket',
   base:     'flower',
   colony:   'world',
+  tech:     'react',
 })
 
 const raceImages = Object.freeze({
@@ -103,6 +111,7 @@ const HTMLs = Object.freeze({
   `,
   Absent: `
     <div class="Card Absent">
+      <div class="Name"><div class="value">Name</div></div>
     </div>
   `,
 });

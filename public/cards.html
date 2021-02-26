@@ -10,15 +10,18 @@
       let g = new Game();
       let b = g.board;
       let h = b.home(1);
-      h.reserve.put('AI-Hero-1s');
-      h.reserve.put('AI-Ship-2a');
-      h.reserve.put('AI-Colony-4p');
-      h.reserve.put('AI-Base-7a');
-      h.missions.put('hidden Human-Hero-1c');
-      h.assets.put('Human-Ship-4s');
-      h.techs.put('Human-Colony-4p');
-      h.hand.put('absent Hand')
-      g.draw(null, h.main);
+
+      h.discard.put('Human-Hero-1s');
+      h.discard.put('Human-Ship-2a');
+      h.discard.put('Human-Base-7a');
+      h.reserve.put('hidden Human-Hero-1s');
+      h.reserve.put('hidden Human-Ship-2a');
+      h.reserve.put('hidden Human-Colony-4p');
+      h.reserve.put('hidden Human-Base-7a');
+      h.hand.put('hidden Human-Hero-1c');
+      h.techs.put('Human-Tech-4p');
+
+      g.draw(null, h);
     </script>
   </body>
 </html>

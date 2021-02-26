@@ -131,6 +131,26 @@ BODY {
 .Ship .part.Defense         { left:0;   top:250; }
 .Ship .part.Utilization     { left:0;   top:300; }
 
+.Tech                       { width:250; height: 350; }
+.Tech .Level.Klass          { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
+.Tech .Image .Klass         { left:60;  top:90; }
+.Tech .Klass.Level          { left:0;   top:0; height: 60; }
+.Tech .part.Attack          { left:50;  top:0; }
+.Tech .part.Colonization    { left:100; top:0; }
+.Tech .part.Science         { left:150; top:0; }
+.Tech .part.Production      { left:200; top:0; }
+
+.Absent .Name .Value {
+    position:       absolute;
+    width:          250px;
+    height:         350px;
+    line-height:    350px;
+    text-align:     center;
+    vertical-align: middle;
+    font-size:      30px;
+    font-weight:    100;
+}
+
 .star {
     position:   absolute;
     color:      #556;
@@ -179,11 +199,17 @@ BODY {
 .Pile .Hero                 { width: 350; height: 250; }
 .Pile .Ship                 { width: 250; height: 350; }
 .Pile .Colony               { width: 250; height: 350; }
+.Pile .Other                { width: 250; height: 350; }
 
 .Pile.TopToBottom .Base     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
 .Pile.TopToBottom .Hero     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
 
 .Pile.LeftToRight .Ship     { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
 .Pile.LeftToRight .Colony   { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
+.Pile.LeftToRight .Other    { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
 
-/*.Row.TopToBottom            { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }*/
+.Row                        { position: absolute; }
+.Field                      { position: absolute; }
+
+.Home                       { position: absolute; }
+.Home.TopToBottom           { transform-origin: center; transform: rotate(180deg) translate(100%, 100%); }

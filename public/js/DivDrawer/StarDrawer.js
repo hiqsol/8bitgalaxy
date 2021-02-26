@@ -5,14 +5,14 @@ class StarDrawer {
 
   draw(parent, star) {
     let e = this._drawer.importNode(parent, this.fragment, '.Star');
-    let indent = this.m * (star.y % 2 ? 1 : 8.4);
-    e.style.left  = (star.x*this.m*14.6 + indent) + 'px';
-    e.style.top   = (star.y*this.m*12.6 + this.m) + 'px';
+    let m = this._drawer.m;
+    let indent = star.y % 2 ? 0 : 7.4*m;
+    e.style.left  = (star.x*m*14.6 + indent) + 'px';
+    e.style.top   = (star.y*m*12.6 + m) + 'px';
     //Inner.create(this._drawer, e, true).drawCards(star);
     Inner.create(this._drawer, e, false).drawCards(star);
   }
 
-  get m() { return this._drawer.m; }
   get fragment() { return this._drawer.getFragment(HTML); }
 }
 
@@ -28,23 +28,23 @@ class Inner {
   }
 
   drawCards(star) {
-    this.drawCard(star.base(0), 0, 0);
-    this.drawCard(star.base(1), 1, 0);
-    this.drawCard(star.base(2), 2, 0);
+    this.drawCard(star.base(0), 3, 0);
+    this.drawCard(star.base(1), 4, 0);
+    this.drawCard(star.base(2), 5, 0);
 
-    this.drawCard(star.ship(0), 3, 0);
-    this.drawCard(star.ship(1), 3, 1);
-    this.drawCard(star.ship(2), 3, 2);
-    this.drawCard(star.ship(3), 3, 3);
+    this.drawCard(star.ship(0), 6, 0);
+    this.drawCard(star.ship(1), 6, 1);
+    this.drawCard(star.ship(2), 6, 2);
+    this.drawCard(star.ship(3), 6, 3);
 
-    this.drawCard(star.colony(0), 0, 8);
-    this.drawCard(star.colony(1), 1, 8);
-    this.drawCard(star.colony(2), 2, 8);
+    this.drawCard(star.colony(0), 3, 8);
+    this.drawCard(star.colony(1), 4, 8);
+    this.drawCard(star.colony(2), 5, 8);
 
-    this.drawCard(star.hero(0), 4, 7);
-    this.drawCard(star.hero(1), 5, 7);
-    this.drawCard(star.hero(2), 6, 7);
-    this.drawCard(star.hero(3), 7, 7);
+    this.drawCard(star.hero(0), 7, 7);
+    this.drawCard(star.hero(1), 8, 7);
+    this.drawCard(star.hero(2), 9, 7);
+    this.drawCard(star.hero(3), 10, 7);
   }
 
   drawCard(card, y, x) {

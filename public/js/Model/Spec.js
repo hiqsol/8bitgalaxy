@@ -6,6 +6,7 @@ class Spec {
   get name() { return this._name; }
 
   static get Names()            { return Names; }
+  static get Name()             { return Names.Name; }
   static get Type()             { return Names.Type; }
   static get Race()             { return Names.Race; }
   static get Level()            { return Names.Level; }

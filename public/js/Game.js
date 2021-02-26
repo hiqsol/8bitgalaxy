@@ -1,5 +1,7 @@
 import Card from "./Model/Card.js";
 import Board from "./Model/Board.js";
+import Player from "./Model/Player.js";
+import Direction from "./Model/Direction.js";
 import Drawer from "./DivDrawer/Drawer.js";
 import Options from "./Model/Options.js";
 
@@ -20,8 +22,10 @@ class Game {
   static create(options = {}) { return new Game(options); }
 
   init() {
+    let direction = Direction.BottomToTop;
     for (const [name, race] of Object.entries(this.options.players)) {
-      this.board.addPlayer(name, race);
+      this.board.addPlayer(new Player(name, race, direction));
+      direction = direction.reversed;
     }
     return this;
   }

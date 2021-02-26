@@ -5,8 +5,11 @@ class FieldDrawer {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, field) {
+  draw(parent, field, y, x) {
     let e = this._drawer.importNode(parent, this.fragment, '.Field');
+    let m = this._drawer.m;
+    e.style.left  = (0 + x*m) + 'px';
+    e.style.top   = (0 + y*m) + 'px';
     this.drawStars(e, field);
   }
 

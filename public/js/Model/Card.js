@@ -16,6 +16,7 @@ class Card {
   get isVisible()         { return this._state.isVisible; }
   get isAlternative()     { return this._state.isAlternative; }
 
+  get Name()              { return this.aCard.Name; }
   get Type()              { return this.aCard.Type; }
   get Race()              { return this.aCard.Race; }
   get Level()             { return this.statedValue(Spec.Level); }

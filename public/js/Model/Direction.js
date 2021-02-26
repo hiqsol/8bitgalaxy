@@ -6,6 +6,7 @@ class Direction {
   get name()        { return this._name; }
   get xStep()       { return xSteps[this.name]; }
   get yStep()       { return ySteps[this.name]; }
+  get reversed()    { return Direction.getOne(Reverseds[this.name]); }
   get counterpart() { return Direction.getOne(Counterparts[this.name]); }
 
   static _values = {};
@@ -60,7 +61,7 @@ const Names = Object.freeze({
   TopToBottom:      'TopToBottom',
   BottomToTop:      'BottomToTop',
   LeftToRight:      'LeftToRight',
-  RightToLeft:      'RightToLeft'
+  RightToLeft:      'RightToLeft',
 })
 
 const xSteps = Object.freeze({
@@ -75,6 +76,13 @@ const ySteps = Object.freeze({
   BottomToTop:      -1,
   LeftToRight:      0,
   RightToLeft:      0
+})
+
+const Reverseds = Object.freeze({
+  TopToBottom:      'BottomToTop',
+  BottomToTop:      'TopToBottom',
+  LeftToRight:      'RightToLeft',
+  RightToLeft:      'LeftToRight',
 })
 
 const Counterparts = Object.freeze({

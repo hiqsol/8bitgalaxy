@@ -6,16 +6,18 @@ class PileDrawer {
   }
 
   draw(parent, pile, y, x) {
+    let m = this._drawer.m;
     let e = this.importNode(parent, '.Pile');
-    e.style.left  = (0 + x*this.m*6) + 'px';
-    e.style.top   = (0 + y*this.m*6) + 'px';
+    e.style.left  = (0 + x*m) + 'px';
+    e.style.top   = (0 + y*m) + 'px';
     e.classList.add(pile.direction.name);
     this.drawCards(e, pile);
     return e;
   }
 
   drawCards(parent, pile) {
-    for (let i=0;i<pile.size;i++) {
+    let size = pile.size ? pile.size : 1;
+    for (let i=0;i<size;i++) {
       this._drawer.draw(parent, pile.get(i), i*0.1, i*0.1);
     }
   }
@@ -25,7 +27,6 @@ class PileDrawer {
   }
 
   get fragment()  { return this._drawer.getFragment(HTML); }
-  get m()         { return this._drawer.m; }
 }
 
 const HTML = `
