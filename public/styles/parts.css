@@ -52,16 +52,6 @@
 .Science                    { color: darkblue; }
 .Production                 { color: orange; }
 
-.Base .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
-.Base .Level.Klass          { left:300; height: 60; }
-.Base .Image .Klass         { left:20;  top:50; }
-.Base .part.Utilization     { left:0;   }
-.Base .part.Defense         { left:50;  }
-.Base .part.Attack          { left:100; }
-.Base .part.Colonization    { left:150; }
-.Base .part.Science         { left:200; }
-.Base .part.Production      { left:250; }
-
 .Hero .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
 .Hero .Level.Klass          { left:300; height: 60; }
 .Hero .Image .Klass         { left:20;  top:50; }
@@ -72,15 +62,15 @@
 .Hero .part.Science         { left:200; }
 .Hero .part.Production      { left:250; }
 
-.Colony .Level.Klass        { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
-.Colony .Level.Klass        { left:0;   height: 60; }
-.Colony .Image .Klass       { left:60;  top:90; }
-.Colony .part.Attack        { left:50;  }
-.Colony .part.Colonization  { left:100; }
-.Colony .part.Science       { left:150; }
-.Colony .part.Production    { left:200; }
-.Colony .part.Defense       { display:none; }
-.Colony .part.Utilization   { display:none; }
+.Base .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
+.Base .Level.Klass          { left:300; height: 60; }
+.Base .Image .Klass         { left:50;  top:50; }
+.Base .part.Utilization     { left:0;   }
+.Base .part.Defense         { left:50;  }
+.Base .part.Attack          { left:100; }
+.Base .part.Colonization    { left:150; }
+.Base .part.Science         { left:200; }
+.Base .part.Production      { left:250; }
 
 .Ship .Level.Klass          { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
 .Ship .Level.Klass          { top:0;   width: 60; }
@@ -92,6 +82,16 @@
 .Ship .part.Defense         { top:250; }
 .Ship .part.Utilization     { top:300; }
 
+.Colony .Level.Klass        { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
+.Colony .Level.Klass        { left:0;   height: 60; }
+.Colony .Image .Klass       { left:60;  top:90; }
+.Colony .part.Attack        { left:50;  }
+.Colony .part.Colonization  { left:100; }
+.Colony .part.Science       { left:150; }
+.Colony .part.Production    { left:200; }
+.Colony .part.Defense       { display:none; }
+.Colony .part.Utilization   { display:none; }
+
 .Tech .Level.Klass          { border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
 .Tech .Level.Klass          { left:0;   height: 60; }
 .Tech .Image .Klass         { left:60;  top:100; }
@@ -100,7 +100,12 @@
 .Tech .part.Science         { left:150; }
 .Tech .part.Production      { left:200; }
 
+.Visible .Name, .Hidden .Name {
+    display: none;
+}
+
 .Absent .Name .Value {
+    display:        block;
     width:          250px;
     height:         350px;
     line-height:    350px;

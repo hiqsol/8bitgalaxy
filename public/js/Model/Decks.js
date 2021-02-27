@@ -1,11 +1,12 @@
 import Spec from "./Spec.js";
-import aCard from "./aCard.js";
+import Specs from "./Specs.js";
 
 class Decks {
   static get(name) {
     let all = Decks.all();
     let specs = all[name.toLowerCase()];
-    return new aCard(Decks.parseCard(name, specs));
+    let ps = Decks.parseCard(name, specs);
+    return new Specs(Decks.parseCard(name, specs));
   }
 
   static parseCard(name, specs) {

@@ -8,13 +8,15 @@ class Card {
     this._acard = aCard.assert(acard);
   }
 
-  get aCard()             { return this._acard; }
   get State()             { return this._state; }
   get visibility()        { return this._state.visibility; }
   get isAbsent()          { return this._state.isAbsent; }
   get isHidden()          { return this._state.isHidden; }
   get isVisible()         { return this._state.isVisible; }
   get isAlternative()     { return this._state.isAlternative; }
+
+  get aCard()             { return this._acard; }
+  get Specs()             { return this._acard.Specs; }
 
   get Name()              { return this.aCard.Name; }
   get Type()              { return this.aCard.Type; }
