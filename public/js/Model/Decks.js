@@ -1,3 +1,4 @@
+import Spec from "./Spec.js";
 import aCard from "./aCard.js";
 
 class Decks {
@@ -47,21 +48,23 @@ class Decks {
 
   static parseAction(action) {
     if (action.length === 2) {
-      let [type, value] = Decks.parseSimpleAction(action);
-      return {[type]: value};
+      let [klass, value] = Decks.parseSimpleAction(action);
+      return {[klass]: value};
     }
     let f = action.charAt(0).toLowerCase();
+    let subaction = action.substring(1, 3);
     if (f === 'u') {
-      let [type, value] = Decks.parseSimpleAction(action.substring(1,3));
+      let [klass, value] = Decks.parseSimpleAction(subaction);
       return {
+        'UtilizationKlass': klass,
         'UtilizationValue': value,
-        'UtilizationType': type,
       };
     }
     if (f === 'c') {
-      return {
-        'Cooperation': Number(action.charAt(2)),
-      }
+      return { [Spec.Cooperation]: Number(action.charAt(2)) };
+    }
+    if (f === 'a') {
+      return { [Spec.Alternative]: subaction };
     }
     return {};
   }
@@ -103,18 +106,18 @@ class Decks {
       'Human-Ship-1p':      '',
 
       'Human-Ship-2a':      'a1s',
-      'Human-Ship-3S':      'a2p',
-      'Human-Ship-4S':      'a3a',
+      'Human-Ship-3s':      'a2p',
+      'Human-Ship-4s':      'a3a',
 
-      'Human-Hero-1a':      '',
-      'Human-Hero-1c':      '',
-      'Human-Hero-1s':      '',
-      'Human-Hero-1p':      '',
+      'Human-Hero-1a':      'a2a',
+      'Human-Hero-1c':      'a2c',
+      'Human-Hero-1s':      'a2s',
+      'Human-Hero-1p':      'a2p',
 
-      'Human-Hero-2a':      'a1s',
-      'Human-Hero-2c':      '',
-      'Human-Hero-2s':      '',
-      'Human-Hero-2p':      '',
+      'Human-Hero-3a':      'a4s',
+      'Human-Hero-3c':      'a4c',
+      'Human-Hero-3s':      'a4s',
+      'Human-Hero-3p':      'a4p',
 
       'Human-Base-3a':      '',
       'Human-Base-3c':      '',

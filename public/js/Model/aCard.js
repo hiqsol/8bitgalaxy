@@ -13,14 +13,14 @@ class aCard {
   get Level()             { return this.getValue(Spec.Level, 0); }
   get Klass()             { return this.getValue(Spec.Klass, 'Neutral'); }
   get Defense()           { return this.getValue(Spec.Defense, this.getValue(Spec.Level)); }
-  get Race()              { return this.getValue(Spec.Race, null); }
   get Attack()            { return this.getValue(Spec.Attack, 0); }
   get Colonization()      { return this.getValue(Spec.Colonization, 0); }
   get Science()           { return this.getValue(Spec.Science, 0); }
   get Production()        { return this.getValue(Spec.Production, 0); }
   get Cooperation()       { return this.getValue(Spec.Cooperation, 0); }
-  get UtilizationKlass()  { return this.getValue(Spec.UtilizationKlass, null); }
+  get UtilizationKlass()  { return this.getValue(Spec.UtilizationKlass); }
   get UtilizationValue()  { return this.getValue(Spec.UtilizationValue, 0); }
+  get Alternative()       { return this.getValue(Spec.Alternative); }
 
   getValue(spec, def = null) {
     return this.Specs[Spec.assert(spec).name] ?? def;
