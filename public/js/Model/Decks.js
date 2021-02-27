@@ -162,11 +162,11 @@ class Decks {
 }
 
 const Resources = Object.freeze({
-  d:  'Defense',
-  a:  'Attack',
-  c:  'Colonization',
-  s:  'Science',
-  p:  'Production',
+  d:  Spec.Defense,
+  a:  Spec.Attack,
+  c:  Spec.Colonization,
+  s:  Spec.Science,
+  p:  Spec.Production,
 })
 
 export default Decks;

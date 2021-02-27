@@ -4,6 +4,7 @@ import Decks from "./Decks.js";
 class aCard {
   constructor(specs) {
     this._specs = specs ?? {};
+    this.initAlternative();
   }
 
   get Specs()             { return this._specs; }
@@ -44,6 +45,17 @@ class aCard {
 
   static fromString(name) {
     return Decks.get(name);
+  }
+
+  initAlternative() {
+    let alt = this.Alternative;
+    if (! alt) {
+      return;
+    }
+    if (typeof(alt) !== 'string') {
+      throw new Error('wrong alternative ' + typeof(alternative));
+    }
+    this._specs.Alternative = Decks.get([this.Race, this.Type, this.Alternative].join('-'));
   }
 }
 

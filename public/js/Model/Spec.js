@@ -17,6 +17,7 @@ class Spec {
   static get Production()       { return Names.Production; }
   static get Science()          { return Names.Science; }
   static get Cooperation()      { return Names.Cooperation; }
+  static get Alternative()      { return Names.Alternative; }
   static get UtilizationKlass() { return Names.UtilizationKlass; }
   static get UtilizationValue() { return Names.UtilizationValue; }
 
@@ -27,7 +28,7 @@ class Spec {
     if (typeof(sample) === 'string') {
       return Spec.fromString(sample);
     }
-    throw new Error('not a Spec:' + sample.constructor.name)
+    throw new Error('not a Spec:' + typeof(sample));
   }
 
   static fromString(name) { return new Spec(name); }
@@ -56,6 +57,7 @@ const Names = Object.freeze({
   Science:            'Science',
   Production:         'Production',
   Cooperation:        'Cooperation',
+  Alternative:        'Alternative',
   Utilizationklass:   'UtilizationKlass',
   UtilizationKlass:   'UtilizationKlass',
   Utilizationvalue:   'UtilizationValue',
