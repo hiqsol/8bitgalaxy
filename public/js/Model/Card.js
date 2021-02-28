@@ -17,6 +17,7 @@ class Card {
 
   get aCard()             { return this._acard; }
   get Specs()             { return this._acard.Specs; }
+  get Alternative()       { return this._acard.Alternative; }
 
   get Name()              { return this.aCard.Name; }
   get Type()              { return this.aCard.Type; }

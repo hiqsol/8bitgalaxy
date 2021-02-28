@@ -17,6 +17,9 @@ class CardDrawer {
     if (card.isVisible) {
       this.drawImage(e, card.Specs);
       this._drawer.draw(e, card.Specs);
+      if (! card.isInserted && card.Alternative) {
+        this._drawer.draw(e, card.Alternative, true);
+      }
     }
     e.querySelector('.Name .Value').innerHTML = card.Name;
     return e;
@@ -24,8 +27,6 @@ class CardDrawer {
 
   drawImage(e, specs) {
     let i = e.querySelector('.Image .Klass.lni');
-    console.log(e);
-    console.log(i);
     if (i) {
       i.classList.add('lni-'+this.type2image(specs.Type));
     }

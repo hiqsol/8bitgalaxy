@@ -106,22 +106,37 @@ class Decks {
       'Human-Ship-1s':      '',
       'Human-Ship-1p':      '',
 
+      'Human-Ship-3a':      'a2p',
+      'Human-Ship-3c':      'a2a',
+      'Human-Ship-3s':      'a2c',
+      'Human-Ship-3p':      'a2s',
+
       'Human-Ship-2a':      'a1s',
       'Human-Ship-3s':      'a2p',
       'Human-Ship-4s':      'a3a',
+
+      'Human-Hero-2a':      'a1a',
+      'Human-Hero-2c':      'a1c',
+      'Human-Hero-2s':      'a1s',
+      'Human-Hero-2p':      'a1p',
 
       'Human-Hero-1a':      'a2a',
       'Human-Hero-1c':      'a2c',
       'Human-Hero-1s':      'a2s',
       'Human-Hero-1p':      'a2p',
 
-      'Human-Hero-3a':      'a4s',
+      'Human-Hero-4a':      'a3a',
+      'Human-Hero-4c':      'a3c',
+      'Human-Hero-4s':      'a3s',
+      'Human-Hero-4p':      'a3p',
+
+      'Human-Hero-3a':      'a4a',
       'Human-Hero-3c':      'a4c',
       'Human-Hero-3s':      'a4s',
       'Human-Hero-3p':      'a4p',
 
       'Human-Base-3a':      '',
-      'Human-Base-3c':      '',
+      'Human-Base-3c':      'a2p',
       'Human-Base-3s':      '',
       'Human-Base-3p':      '',
 

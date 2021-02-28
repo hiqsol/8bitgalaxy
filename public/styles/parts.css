@@ -54,7 +54,7 @@
 
 .Hero .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
 .Hero .Level.Klass          { left:300; height: 60; }
-.Hero .Image .Klass         { left:20;  top:50; }
+.Hero .Image .Klass         { left:20;  top:60; }
 .Hero .part.Utilization     { left:0;   }
 .Hero .part.Defense         { left:50;  }
 .Hero .part.Attack          { left:100; }
@@ -64,7 +64,7 @@
 
 .Base .Level.Klass          { border-top-right-radius: 20px; border-bottom-left-radius: 20px; }
 .Base .Level.Klass          { left:300; height: 60; }
-.Base .Image .Klass         { left:50;  top:50; }
+.Base .Image .Klass         { left:50;  top:60; }
 .Base .part.Utilization     { left:0;   }
 .Base .part.Defense         { left:50;  }
 .Base .part.Attack          { left:100; }

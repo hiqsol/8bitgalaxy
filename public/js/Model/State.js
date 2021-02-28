@@ -1,28 +1,61 @@
 class State {
   constructor(name) {
-    this._name = State.assertName(name);
+    this._name        = name;
+    this._absent      = false;
+    this._hidden      = false;
+    this._inserted    = false;
+    this._alternative = false;
+    this.parseName(name);
+  }
+
+  parseName(name) {
+    name.split('-').forEach(part => this.applyName(part));
+  }
+
+  applyName(input) {
+    input = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+    name = Names[input];
+    if (input && !name) {
+      throw new Error('wrong state: ' + input);
+    }
+    if (name === Names.Absent) {
+      this._absent = true;
+    } else if (name === Names.Hidden) {
+      this._hidden = true;
+    } else if (name === Names.Inserted) {
+      this._inserted = true;
+    } else if (name === Names.Alternative) {
+      this._alternative = true;
+    }
   }
 
   get name()            { return this._name; }
-  get visibility()      { return this.isVisible ? 'Visible' : this.name;  }
-  get isAbsent()        { return this.is(Names.Absent); }
-  get isHidden()        { return this.is(Names.Hidden); }
-  get isNormal()        { return this.is(Names.Normal); }
-  get isVisible()       { return this.is(Names.Normal, Names.Alternative); }
-  get isAlternative()   { return this._name === Names.Alternative; }
-  is(name, n2 = null)   { return this._name === name || this._name === n2; }
+  get isAbsent()        { return this._absent; }
+  get isHidden()        { return this._hidden; }
+  get isInserted()      { return this._inserted; }
+  get isAlternative()   { return this._alternative; }
+  get isVisible()       { return !this._absent && !this._hidden; }
+
+  get visibility()      {
+    if (this.isAbsent) {
+      return Names.Absent;
+    }
+    if (this.isHidden) {
+      return Names.Hidden;
+    }
+    return Names.Visible;
+  }
 
   static assert(sample) {
     if (sample instanceof(State)) {
       return sample;
     }
     if (typeof(sample) === 'string') {
-      return State.fromString(sample);
+      return new State(sample);
     }
     throw new Error('not a State:' + sample.constructor.name)
   }
 
-  static fromString(name) { return new State(name); }
   static isName(name)     { return State.normalizeName(name) !== null; }
 
   static assertName(name) {
@@ -48,7 +81,10 @@ class State {
 const Names = Object.freeze({
   Absent:       'Absent',
   Hidden:       'Hidden',
-  Normal:       'Normal',
+  Visible:      'Visible',
+  Ins:          'Inserted',
+  Inserted:     'Inserted',
+  Alt:          'Alternative',
   Alternative:  'Alternative',
 })
 

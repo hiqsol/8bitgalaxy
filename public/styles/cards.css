@@ -17,8 +17,14 @@
     filter: brightness(55%);
 }
 
-.Base                       { width: 350; height: 200; }
+.Base                       { width:350; height: 200; }
 .Hero                       { width:350; height: 200; }
 .Colony                     { width:250; height: 300; }
 .Ship                       { width:200; height: 350; }
 .Tech                       { width:250; height: 350; }
+
+.Specs                      { position:absolute; width:100%; height:100%; }
+
+.Specs.Alternative          { transform-origin: top left; transform: rotate(180deg) translate(-100%, -100%); }
+
+.Star .Card.Visible .Specs.Alternative { display:none; }

@@ -34,15 +34,15 @@ class Demo {
     f.pile(0).put('Human-Colony-4c');
     f.pile(0).put('Human-Colony-4s');
     f.pile(0).put('Human-Colony-4p');
-    f.pile(1).put('Human-Ship-1a');
-    f.pile(1).put('Human-Ship-1c');
-    f.pile(1).put('Human-Ship-1s');
+    f.pile(1).put('Human-Ship-3a');
+    f.pile(1).put('Human-Ship-3c');
+    f.pile(1).put('Human-Ship-3s');
     f.pile(2).put('Human-Base-3s');
     f.pile(2).put('Human-Base-3a');
     f.pile(2).put('Human-Base-3c');
-    f.pile(3).put('Human-Hero-1s');
-    f.pile(3).put('Human-Hero-1c');
-    f.pile(3).put('Human-Hero-1a');
+    f.pile(3).put('Human-Hero-3s');
+    f.pile(3).put('Human-Hero-3c');
+    f.pile(3).put('Human-Hero-3a');
   }
 
   initResearch(home) {
