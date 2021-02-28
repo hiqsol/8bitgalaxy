@@ -1,4 +1,3 @@
-
 .Card {
     position: absolute;
     border: 1px solid black;
@@ -25,6 +24,6 @@
 
 .Specs                      { position:absolute; width:100%; height:100%; }
 
-.Specs.Alternative          { transform-origin: top left; transform: rotate(180deg) translate(-100%, -100%); }
+.Specs.Alternative          { transform-origin: center; transform: rotate(180deg); }
 
 .Star .Card.Visible .Specs.Alternative { display:none; }

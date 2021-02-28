@@ -22,7 +22,7 @@ class Game {
   static create(options = {}) { return new Game(options); }
 
   init() {
-    let direction = Direction.BottomToTop;
+    let direction = Direction.TopToBottom;
     for (const [name, race] of Object.entries(this.options.players)) {
       this.board.addPlayer(new Player(name, race, direction));
       direction = direction.reversed;

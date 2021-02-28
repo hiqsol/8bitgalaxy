@@ -114,3 +114,8 @@
     font-size:      30px;
     font-weight:    100;
 }
+
+.BottomToTop .Absent .Name .Value {
+    transform-origin: center;
+    transform: rotate(180deg);
+}
