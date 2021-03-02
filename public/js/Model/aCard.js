@@ -1,6 +1,7 @@
 import Spec from "./Spec.js";
 import Specs from "./Specs.js";
 import Decks from "./Decks.js";
+import Action from "./Action.js";
 
 class aCard {
   constructor(specs) {
@@ -44,10 +45,13 @@ class aCard {
     if (! alt) {
       return null;
     }
-    if (typeof(alt) !== 'string') {
-      throw new Error('wrong alternative ' + typeof(alternative));
+    if (typeof(alt) === 'string') {
+      alt = Action.assert(alt);
     }
-    return Decks.get([this.Race, this.Type, alt].join('-'));
+    if (alt instanceof Action) {
+      return Decks.get([this.Race, this.Type, alt.short].join('-'));
+    }
+    throw new Error('wrong alternative ' + typeof(alt));
   }
 }
 

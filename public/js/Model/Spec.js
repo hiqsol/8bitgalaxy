@@ -51,6 +51,7 @@ const Names = Object.freeze({
   Race:               'Race',
   Level:              'Level',
   Klass:              'Klass',
+  Requires:           'Requires',
   Defense:            'Defense',
   Attack:             'Attack',
   Colonization:       'Colonization',
@@ -58,10 +59,7 @@ const Names = Object.freeze({
   Production:         'Production',
   Cooperation:        'Cooperation',
   Alternative:        'Alternative',
-  Utilizationklass:   'UtilizationKlass',
-  UtilizationKlass:   'UtilizationKlass',
-  Utilizationvalue:   'UtilizationValue',
-  UtilizationValue:   'UtilizationValue',
+  Utilization:        'Utilization',
 })
 
 export default Spec;

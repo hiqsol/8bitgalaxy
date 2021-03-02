@@ -16,10 +16,9 @@ class Specs {
   get Colonization()      { return this.getValue(Spec.Colonization, 0); }
   get Science()           { return this.getValue(Spec.Science, 0); }
   get Production()        { return this.getValue(Spec.Production, 0); }
-  get Cooperation()       { return this.getValue(Spec.Cooperation, 0); }
+  get Cooperation()       { return this.getValue(Spec.Cooperation); }
   get Alternative()       { return this.getValue(Spec.Alternative); }
-  get UtilizationKlass()  { return this.getValue(Spec.UtilizationKlass); }
-  get UtilizationValue()  { return this.getValue(Spec.UtilizationValue, 0); }
+  get Utilization()       { return this.getValue(Spec.Utilization); }
 
   getValue(spec, def = null) {
     return this._specs[Spec.assert(spec).name] ?? def;

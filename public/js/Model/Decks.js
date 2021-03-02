@@ -1,5 +1,6 @@
 import Spec from "./Spec.js";
 import Specs from "./Specs.js";
+import Action from "./Action.js";
 
 class Decks {
   static get(name) {
@@ -11,13 +12,16 @@ class Decks {
 
   static parseCard(name, specs) {
     let type = typeof(specs);
+    if (!specs) {
+      return Decks.parseName(name);
+    }
     if (type === 'object') {
       return Object.assign(Decks.parseName(name), specs);
     }
     if (type === 'string') {
       return Object.assign(Decks.parseName(name), Decks.parseSpecs(specs));
     }
-    return Decks.parseName(name);
+    throw new Error('wrong card specs: ' + typeof(specs));
   }
 
   static parseName(name) {
@@ -30,56 +34,44 @@ class Decks {
 
   static parseNameParts(name) {
     let ps = name.split('-');
-    let [klass, level] = Decks.parseSimpleAction(ps[2]);
+    let action = Action.assert(ps[2]);
+    let klass = action.Klass.name;
     return {
       Race:     ps[0],
       Type:     ps[1],
       Klass:    klass,
-      Level:    level,
-      [klass]:  level,
+      Level:    action.Value,
+      [klass]:  action.Value,
     };
   }
 
   static parseSpecs(specs) {
     let ps = specs.split(',');
     let res = {};
-    ps.forEach(value => Object.assign(res, Decks.parseAction(value)));
+    ps.forEach(value => Object.assign(res, Decks.parseSpec(value)));
     return res;
   }
 
-  static parseAction(action) {
-    if (action.length === 2) {
-      let [klass, value] = Decks.parseSimpleAction(action);
-      return {[klass]: value};
-    }
-    let f = action.charAt(0).toLowerCase();
-    let subaction = action.substring(1, 3);
+  static parseSpec(spec) {
+    let f = spec.charAt(0).toLowerCase();
+    let action = Action.assert(spec.substring(1, 3));
     if (f === 'u') {
-      let [klass, value] = Decks.parseSimpleAction(subaction);
-      return {
-        'UtilizationKlass': klass,
-        'UtilizationValue': value,
-      };
+      return { [Spec.Utilization]: action };
     }
     if (f === 'c') {
-      return { [Spec.Cooperation]: Number(action.charAt(2)) };
+      return { [Spec.Cooperation]: action };
     }
     if (f === 'a') {
-      return { [Spec.Alternative]: subaction };
+      return { [Spec.Alternative]: action };
     }
-    return {};
-  }
-
-  static parseSimpleAction(action) {
-    let t = action.charAt(0).toLowerCase();
-    let n = action.charAt(1).toLowerCase();
-    if (isNaN(n)) {
-      [t, n] = [n, t];
+    if (f === 'r') {
+      return { [Spec.Requires]: [action] };
     }
-    return [
-      Resources[t] ?? '',
-      Number(n),
-    ];
+    if (spec.length === 2) {
+      action = Action.assert(spec);
+      return {[action.Klass.name]: action.Value};
+    }
+    throw new Error('wrong spec: ' + spec);
   }
 
   static all() {
@@ -97,7 +89,7 @@ class Decks {
       'AI-Hero-2a':         'a1p',
       'AI-Ship-2a':         'u2s',
       'AI-Base-7a':         'u5p',
-      'AI-Base-7c':         'u5p,co2',
+      'AI-Base-7c':         'u5p,c2c',
       'AI-Base-6c':         'a5p',
       'AI-Colony-4p':       'a3s',
 
@@ -125,10 +117,10 @@ class Decks {
       'Human-Hero-1s':      'a2s',
       'Human-Hero-1p':      'a2p',
 
-      'Human-Hero-4a':      'a3a',
-      'Human-Hero-4c':      'a3c',
-      'Human-Hero-4s':      'a3s',
-      'Human-Hero-4p':      'a3p',
+      'Human-Hero-4a':      'a3a,r3a,r3c',
+      'Human-Hero-4c':      'a3c,r3c,r3s',
+      'Human-Hero-4s':      'a3s,r3s,r3p',
+      'Human-Hero-4p':      'a3p,r3p,r3a',
 
       'Human-Hero-3a':      'a4a',
       'Human-Hero-3c':      'a4c',
@@ -142,7 +134,7 @@ class Decks {
 
       'Human-Base-6c':      'a5a',
       'Human-Base-7a':      'u5p',
-      'Human-Base-7c':      'u5p,co2',
+      'Human-Base-7c':      'u5p,c2c',
       'Human-Base-5s':      'u3p',
 
       'Human-Colony-4a':    'a3c',
@@ -176,13 +168,5 @@ class Decks {
     }
   }
 }
-
-const Resources = Object.freeze({
-  d:  Spec.Defense,
-  a:  Spec.Attack,
-  c:  Spec.Colonization,
-  s:  Spec.Science,
-  p:  Spec.Production,
-})
 
 export default Decks;
