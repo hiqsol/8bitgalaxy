@@ -9,7 +9,7 @@
     width:50; height:50;
     font-weight:    700;
     font-size:      62px;
-    line-height:    45px;
+    line-height:    40px;
     /*-webkit-text-stroke: 1px black;*/
 }
 
@@ -102,20 +102,4 @@
 
 .Visible .Name, .Hidden .Name {
     display: none;
-}
-
-.Absent .Name .Value {
-    display:        block;
-    width:          250px;
-    height:         350px;
-    line-height:    350px;
-    text-align:     center;
-    vertical-align: middle;
-    font-size:      30px;
-    font-weight:    100;
-}
-
-.BottomToTop .Absent .Name .Value {
-    transform-origin: center;
-    transform: rotate(180deg);
 }
