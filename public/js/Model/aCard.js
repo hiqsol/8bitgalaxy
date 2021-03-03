@@ -1,4 +1,3 @@
-import Spec from "./Spec.js";
 import Specs from "./Specs.js";
 import Decks from "./Decks.js";
 import Action from "./Action.js";
@@ -6,7 +5,7 @@ import Action from "./Action.js";
 class aCard {
   constructor(specs) {
     this._specs = Specs.assert(specs);
-    this._alternative = this.findAlternative(this._specs.Alternative);
+    this._alternative = this.findAlternative(specs.Alternative);
   }
 
   get Specs()             { return this._specs; }
@@ -16,20 +15,22 @@ class aCard {
   get Race()              { return this.Specs.Race; }
   get Level()             { return this.Specs.Level; }
   get Klass()             { return this.Specs.Klass; }
+  get Requires()          { return this.Specs.Requires; }
   get Defense()           { return this.Specs.Defense; }
   get Attack()            { return this.Specs.Attack; }
   get Colonization()      { return this.Specs.Colonization; }
   get Science()           { return this.Specs.Science; }
   get Production()        { return this.Specs.Production; }
   get Cooperation()       { return this.Specs.Cooperation; }
-  get UtilizationKlass()  { return this.Specs.UtilizationKlass; }
-  get UtilizationValue()  { return this.Specs.UtilizationValue; }
+  get Utilization()       { return this.Specs.Utilization; }
 
   get isHero()            { return this.isType(Types.Hero); }
   get isColony()          { return this.isType(Types.Colony); }
   get isShip()            { return this.isType(Types.Ship); }
   get isBase()            { return this.isType(Types.Base); }
   isType(type)            { return this.Type === type; }
+
+  getValue(prop)          { return this.Specs.getValue(prop); }
 
   static assert(sample) {
     if (sample instanceof(aCard)) {

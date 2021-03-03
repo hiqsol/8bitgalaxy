@@ -1,7 +1,6 @@
-import Spec from "./Spec.js";
 import Specs from "./Specs.js";
-import Decks from "./Decks.js";
 import Klass from "./Klass.js";
+import Assert from "./Assert.js";
 
 class Action {
   constructor(klass, value) {
@@ -13,11 +12,13 @@ class Action {
   get Value()             { return this._value; }
   get short()             { return String(this.Value) + this.Klass.short; }
 
+  static text(text) {
+    return new Action(Klass.Attack, text);
+  }
+
   static assertValue(value) {
-    if (value>0 || value<9) {
-      return Number(value);
-    }
-    throw new Error('wrong Action value: ' + value);
+    /// TODO validation ??
+    return value;
   }
 
   static assert(sample) {
@@ -31,6 +32,10 @@ class Action {
   }
 
   static fromString(name) {
+    Assert.string(name);
+    if (name.length !== 2) {
+      return Action.text(name);
+    }
     let value = name.charAt(0).toLowerCase();
     let klass = name.charAt(1).toLowerCase();
     if (isNaN(value)) {

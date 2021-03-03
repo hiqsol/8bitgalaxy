@@ -1,4 +1,4 @@
-import Spec from "./Spec.js";
+import Prop from "./Prop.js";
 import aCard from "./aCard.js";
 import State from "./State.js";
 
@@ -22,15 +22,16 @@ class Card {
   get Name()              { return this.aCard.Name; }
   get Type()              { return this.aCard.Type; }
   get Race()              { return this.aCard.Race; }
-  get Level()             { return this.statedValue(Spec.Level); }
-  get Klass()             { return this.statedValue(Spec.Klass); }
-  get Defense()           { return this.statedValue(Spec.Defense); }
-  get Attack()            { return this.statedValue(Spec.Attack); }
-  get Colonization()      { return this.statedValue(Spec.Colonization); }
-  get Science()           { return this.statedValue(Spec.Science); }
-  get Production()        { return this.statedValue(Spec.Production); }
-  get UtilizationKlass()  { return this.statedValue(Spec.UtilizationKlass); }
-  get UtilizationValue()  { return this.statedValue(Spec.UtilizationValue); }
+  get Level()             { return this.statedValue(Prop.Level); }
+  get Klass()             { return this.statedValue(Prop.Klass); }
+  get Defense()           { return this.statedValue(Prop.Defense); }
+  get Attack()            { return this.statedValue(Prop.Attack); }
+  get Colonization()      { return this.statedValue(Prop.Colonization); }
+  get Science()           { return this.statedValue(Prop.Science); }
+  get Production()        { return this.statedValue(Prop.Production); }
+  get Requires()          { return this.statedValue(Prop.Requires); }
+  get Cooperation()       { return this.statedValue(Prop.Cooperation); }
+  get Utilization()       { return this.statedValue(Prop.Utilization); }
 
   get isHero()            { return this.aCard.isHero; }
   get isColony()          { return this.aCard.isColony; }
@@ -42,14 +43,14 @@ class Card {
   static AbsentShip   = Card.assert('absent Ship');
   static AbsentColony = Card.assert('absent Colony');
 
-  statedValue(spec)       {
+  statedValue(prop)       {
     if (this.isHidden) {
       return null;
     }
     if (this.isAlternative) {
       throw new Error('TODO implement!')
     }
-    return this.aCard.getValue(spec);
+    return this.aCard.getValue(prop);
   }
 
   static assert(sample) {

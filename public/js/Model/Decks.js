@@ -1,6 +1,8 @@
+import Prop from "./Prop.js";
 import Spec from "./Spec.js";
 import Specs from "./Specs.js";
 import Action from "./Action.js";
+import Assert from "./Assert.js";
 
 class Decks {
   static get(name) {
@@ -12,66 +14,61 @@ class Decks {
 
   static parseCard(name, specs) {
     let type = typeof(specs);
+    let res = Decks.parseName(name);
     if (!specs) {
-      return Decks.parseName(name);
+      return res;
     }
     if (type === 'object') {
-      return Object.assign(Decks.parseName(name), specs);
+      return res.setSpecs(specs);
     }
     if (type === 'string') {
-      return Object.assign(Decks.parseName(name), Decks.parseSpecs(specs));
+      return res.setSpecs(Decks.parseSpecs(specs));
     }
-    throw new Error('wrong card specs: ' + typeof(specs));
+    Assert.error('wrong card specs', specs);
   }
 
   static parseName(name) {
-    let res = { Name: name };
-    if (name.includes('-')) {
-      res = Object.assign(res, Decks.parseNameParts(name));
+    if (!name.includes('-')) {
+      return new Specs(Spec.text(Prop.Name, name));
     }
-    return res;
-  }
-
-  static parseNameParts(name) {
     let ps = name.split('-');
     let action = Action.assert(ps[2]);
-    let klass = action.Klass.name;
-    return {
-      Race:     ps[0],
-      Type:     ps[1],
-      Klass:    klass,
-      Level:    action.Value,
-      [klass]:  action.Value,
-    };
+    return new Specs({
+      [Prop.Race]:          Action.text(ps[0]),
+      [Prop.Type]:          Action.text(ps[1]),
+      [Prop.Level]:         action,
+      [action.Klass.name]:  action,
+    });
   }
 
   static parseSpecs(specs) {
     let ps = specs.split(',');
-    let res = {};
-    ps.forEach(value => Object.assign(res, Decks.parseSpec(value)));
+    let res = new Specs();
+    ps.forEach(value => res.setSpec(Decks.parseSpec(value)));
     return res;
   }
 
   static parseSpec(spec) {
-    let f = spec.charAt(0).toLowerCase();
+    Assert.string(spec);
+    let prefix = spec.charAt(0).toLowerCase();
     let action = Action.assert(spec.substring(1, 3));
-    if (f === 'u') {
-      return { [Spec.Utilization]: action };
-    }
-    if (f === 'c') {
-      return { [Spec.Cooperation]: action };
-    }
-    if (f === 'a') {
-      return { [Spec.Alternative]: action };
-    }
-    if (f === 'r') {
-      return { [Spec.Requires]: [action] };
-    }
     if (spec.length === 2) {
       action = Action.assert(spec);
-      return {[action.Klass.name]: action.Value};
+      return new Spec(action.Klass, action);
     }
-    throw new Error('wrong spec: ' + spec);
+    if (prefix === 'u') {
+      return new Spec(Prop.Utilization, action);
+    }
+    if (prefix === 'c') {
+      return new Spec(Prop.Cooperation, action);
+    }
+    if (prefix === 'a') {
+      return new Spec(Prop.Alternative, action);
+    }
+    if (prefix === 'r') {
+      return new Spec(Prop.Requires, action);
+    }
+    Assert.error('wrong spec', spec);
   }
 
   static all() {
@@ -117,10 +114,10 @@ class Decks {
       'Human-Hero-1s':      'a2s',
       'Human-Hero-1p':      'a2p',
 
-      'Human-Hero-4a':      'a3a,r3a,r3c',
-      'Human-Hero-4c':      'a3c,r3c,r3s',
-      'Human-Hero-4s':      'a3s,r3s,r3p',
-      'Human-Hero-4p':      'a3p,r3p,r3a',
+      'Human-Hero-4a':      'a3a,r3a3c',
+      'Human-Hero-4c':      'a3c,r3c3s',
+      'Human-Hero-4s':      'a3s,r3s3p',
+      'Human-Hero-4p':      'a3p,r3p3a',
 
       'Human-Hero-3a':      'a4a',
       'Human-Hero-3c':      'a4c',

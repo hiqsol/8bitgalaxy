@@ -1,4 +1,5 @@
 import Card from "./Card.js";
+import Assert from "./Assert.js";
 
 class Star {
   constructor(field, y, x) {
@@ -27,7 +28,7 @@ class Star {
     } else if (card.isColony) {
       return this.putToSlot(card, slot, this.colonies);
     }
-    throw new Error('wrong card type: ' + card.Type);
+    Assert.error('wrong card type', card);
   }
 
   putToSlot(card, slot, slots) {

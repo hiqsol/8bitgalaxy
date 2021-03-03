@@ -17,7 +17,7 @@ class Options {
       return sample;
     }
     if (typeof(sample) === 'string') {
-      return Spec.fromString(sample);
+      return Options.fromString(sample);
     }
     throw new Error('not an Options:' + sample.constructor.name);
   }

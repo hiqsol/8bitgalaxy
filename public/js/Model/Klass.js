@@ -1,4 +1,5 @@
-import Spec from "./Spec.js";
+import Prop from "./Prop.js";
+import Assert from "./Assert.js";
 
 class Klass {
   constructor(name) {
@@ -22,7 +23,7 @@ class Klass {
     if (typeof(sample) === 'string') {
       return Klass.fromString(sample);
     }
-    throw new Error('not a Klass:' + typeof(sample));
+    Assert.error('not a Klass', sample);
   }
 
   static fromString(name) { return new Klass(name); }
@@ -40,23 +41,23 @@ class Klass {
     if (Names[name]) {
       return Names[name];
     }
-    throw new Error('wrong Klass name: ' + name);
+    Assert.error('wrong Klass name', name);
   }
 }
 
 const Names = Object.freeze({
-  [Spec.Attack]:        Spec.Attack,
-  [Spec.Colonization]:  Spec.Colonization,
-  [Spec.Science]:       Spec.Science,
-  [Spec.Production]:    Spec.Production,
+  [Prop.Attack]:        Prop.Attack,
+  [Prop.Colonization]:  Prop.Colonization,
+  [Prop.Science]:       Prop.Science,
+  [Prop.Production]:    Prop.Production,
 })
 
 // TODO convert automatically
 const Letters = Object.freeze({
-  A:                    Spec.Attack,
-  C:                    Spec.Colonization,
-  S:                    Spec.Science,
-  P:                    Spec.Production,
+  A:                    Prop.Attack,
+  C:                    Prop.Colonization,
+  S:                    Prop.Science,
+  P:                    Prop.Production,
 })
 
 export default Klass;

@@ -40,9 +40,9 @@ class Demo {
     f.pile(2).put('Human-Base-3s');
     f.pile(2).put('Human-Base-3a');
     f.pile(2).put('Human-Base-3c');
-    f.pile(3).put('Human-Hero-3s');
-    f.pile(3).put('Human-Hero-3c');
-    f.pile(3).put('Human-Hero-3a');
+    f.pile(3).put('Human-Hero-4s');
+    f.pile(3).put('Human-Hero-4c');
+    f.pile(3).put('Human-Hero-4a');
   }
 
   initResearch(home) {
@@ -54,7 +54,7 @@ class Demo {
     r.pile(1).put('Human-Colony-3a');
     r.pile(2).put('Human-Ship-1c');
     r.pile(3).put('Human-Base-3s');
-    r.pile(4).put('Human-Hero-1p');
+    r.pile(4).put('Human-Hero-4p');
   }
 
   initField() {

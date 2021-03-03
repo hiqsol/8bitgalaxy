@@ -22,11 +22,11 @@ class SpecsDrawer {
     this.drawPart(e, 'Utilization',  null, specs.UtilizationValue, specs.UtilizationKlass);
   }
 
-  drawPart(parent, part, value, type = null) {
+  drawPart(parent, part, value, klass = null) {
     if (value) {
       this.setInnerHtml(parent, '.'+part+' .value', value);
-      if (type) {
-        parent.querySelector('.' + part).classList.add(type);
+      if (klass) {
+        parent.querySelector('.' + part).classList.add(klass);
       }
     } else {
       this.setInnerHtml(parent, '.'+part, '');

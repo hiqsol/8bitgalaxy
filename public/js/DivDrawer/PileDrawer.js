@@ -18,7 +18,7 @@ class PileDrawer {
   drawCards(parent, pile) {
     let size = pile.size ? pile.size : 1;
     for (let i=0;i<size;i++) {
-      this._drawer.draw(parent, pile.get(i), i*0.1, i*0.1);
+      this._drawer.draw(parent, pile.get(i), i*0.14, i*0.16);
     }
   }
 
