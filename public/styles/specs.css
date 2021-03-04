@@ -27,7 +27,7 @@
 
 .Image .lni {
     position: absolute;
-    color: gray;
+    color: rgba(100, 100, 100, 0.5);
     font-size: 130px;
     font-weight: 100;
 }
@@ -68,7 +68,7 @@
 }
 
 .Defense                        { color: white; }
-.Attack                         { color: red; }
+.Attack                         { color: rgba(230, 0, 0, 0.8); }
 .Colonization                   { color: green; }
 .Science                        { color: darkblue; }
 .Production                     { color: orange; }
@@ -78,9 +78,22 @@
 .Spec.Race                      { display:none; }
 .Spec.Requires                  { display:none; }
 .Spec.Alternative               { display:none; }
-.Spec.Cooperation               { display:none; }
 
-.Spec.Utilization .Value        { font-size:20; margin-left:-2px;margin-top:4px; }
+.Spec.Utilization .Value        { font-size:20px; margin-left:-2px;margin-top:4px; }
+
+.Spec.Cooperation .Value {
+    margin-left:-2px;
+    margin-top:4px;
+    text-align:center;
+    line-height: 50px;
+    font-size:30px;
+    font-weight:900;
+    -webkit-text-stroke: 2px white;
+    filter: brightness(70%);
+}
+.Spec.Cooperation .Value::before {
+    content: '+';
+}
 
 .Hero .Spec.Level .Value        { left:300; height:60; border-top-right-radius:20px; border-bottom-left-radius:20px; }
 .Hero .Image .Klass             { left:10;  top:60; }
@@ -104,6 +117,11 @@
 .Base .Spec.Require1 .Value     { left:310; top:80;   border-top-left-radius:12px; }
 .Base .Spec.Require2 .Value     { left:310; top:130;  border-bottom-left-radius:12px; }
 
+.Base .Spec.Cooperation .Value.Attack       { left:90;  top:50; }
+.Base .Spec.Cooperation .Value.Colonization { left:140; top:50; }
+.Base .Spec.Cooperation .Value.Science      { left:190; top:50; }
+.Base .Spec.Cooperation .Value.Production   { left:240; top:50; }
+
 .Ship .Spec.Level .Value        { width:60; border-top-left-radius:20px; border-bottom-right-radius:20px; }
 .Ship .Image .Klass             { top:110; left:60; }
 .Ship .Spec.Production          { top:50;  }
@@ -116,6 +134,11 @@
 .Ship .Spec.Require1 .Value     { left:80;   width:50; height:40; line-height: 40px; border-bottom-left-radius:12px; }
 .Ship .Spec.Require2 .Value     { left:130;  width:50; height:40; line-height: 40px; border-bottom-right-radius:12px; }
 
+.Ship .Spec.Cooperation .Value.Production   { top:50;  left:50; }
+.Ship .Spec.Cooperation .Value.Science      { top:100; left:50; }
+.Ship .Spec.Cooperation .Value.Colonization { top:150; left:50; }
+.Ship .Spec.Cooperation .Value.Attack       { top:200; left:50; }
+
 .Colony .Spec.Level .Value      { height:60; border-top-left-radius:20px; border-bottom-right-radius:20px; }
 .Colony .Image .Klass           { left:60;  top:90; }
 .Colony .Spec.Attack            { left:50;  }
@@ -126,6 +149,11 @@
 .Colony .Spec.Utilization       { display:none; }
 .Colony .Spec.Require1 .Value   { top:110;  border-top-right-radius:12px; }
 .Colony .Spec.Require2 .Value   { top:160;  border-bottom-right-radius:12px; }
+
+.Colony .Spec.Cooperation .Value.Attack       { left:40;  top:50; }
+.Colony .Spec.Cooperation .Value.Colonization { left:90;  top:50; }
+.Colony .Spec.Cooperation .Value.Science      { left:140; top:50; }
+.Colony .Spec.Cooperation .Value.Production   { left:190; top:50; }
 
 .Tech .Spec.Level .Value        { height:60; border-top-left-radius:20px; border-bottom-right-radius:20px; }
 .Tech .Image .Klass             { left:60;  top:100; }
