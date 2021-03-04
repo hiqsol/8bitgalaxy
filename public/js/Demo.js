@@ -34,9 +34,9 @@ class Demo {
     f.pile(0).put('Human-Colony-4c');
     f.pile(0).put('Human-Colony-4s');
     f.pile(0).put('Human-Colony-4p');
-    f.pile(1).put('Human-Ship-3a');
-    f.pile(1).put('Human-Ship-3c');
-    f.pile(1).put('Human-Ship-3s');
+    f.pile(1).put('Human-Ship-4a');
+    f.pile(1).put('Human-Ship-4c');
+    f.pile(1).put('Human-Ship-4s');
     f.pile(2).put('Human-Base-3s');
     f.pile(2).put('Human-Base-3a');
     f.pile(2).put('Human-Base-3c');
