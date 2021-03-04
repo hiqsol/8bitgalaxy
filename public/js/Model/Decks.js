@@ -126,7 +126,7 @@ class Decks {
 
       'Human-Base-3a':      '',
       'Human-Base-3c':      'a2p',
-      'Human-Base-3s':      '',
+      'Human-Base-3s':      'u4c',
       'Human-Base-3p':      '',
 
       'Human-Base-6c':      'a5a',

@@ -10,16 +10,18 @@
     font-weight:    700;
     font-size:      60px;
     line-height:    40px;
+    text-align:     center;
     /*-webkit-text-stroke: 1px black;*/
 }
 
 .Spec .lni {
-    display:none;
     position: absolute; top:0; left:0;
     color:gray;
-    font-size:40px;
-    line-height:40px;
-    -webkit-text-stroke: 1px gray;
+    font-size:52;
+    line-height:48px;
+    margin-left:-3px;
+    margin-top:4px;
+    /*-webkit-text-stroke: 1px gray;*/
 }
 
 .Image .lni {
@@ -57,9 +59,10 @@
 .Spec.Type                  { display:none; }
 .Spec.Race                  { display:none; }
 .Spec.Requires              { display:none; }
-.Spec.Utilization           { display:none; }
 .Spec.Alternative           { display:none; }
 .Spec.Cooperation           { display:none; }
+
+.Spec.Utilization           { font-size:22; margin-left:-2px;margin-top:2px; }
 
 .Hero .Spec.Level .Value    { height:60; border-top-left-radius:20px; border-bottom-right-radius:20px; }
 .Hero .Image .Klass         { left:50;  top:60; }
@@ -72,7 +75,7 @@
 
 .Base .Spec.Level .Value    { height:60; border-top-left-radius:20px; border-bottom-right-radius:20px; }
 .Base .Image .Klass         { left:70;  top:60; }
-.Base .Spec.Utilization     { left:0;   }
+.Base .Spec.Utilization     { left:300; }
 .Base .Spec.Defense         { left:50;  }
 .Base .Spec.Attack          { left:100; }
 .Base .Spec.Colonization    { left:150; }
@@ -86,7 +89,8 @@
 .Ship .Spec.Colonization    { top:150; }
 .Ship .Spec.Attack          { top:200; }
 .Ship .Spec.Defense         { top:250; }
-.Ship .Spec.Utilization     { top:300; }
+.Ship .Spec.Utilization     { top:291; left: 8px; }
+.Ship .Spec.Utilization .lni { transform: rotate(180deg); }
 
 .Colony .Spec.Level .Value  { height:60; border-top-left-radius:20px; border-bottom-right-radius:20px; }
 .Colony .Image .Klass       { left:60;  top:90; }
