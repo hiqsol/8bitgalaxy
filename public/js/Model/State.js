@@ -2,7 +2,7 @@ class State {
   constructor(name) {
     this._name        = name;
     this._absent      = false;
-    this._hidden      = false;
+    this._turned      = false;
     this._inserted    = false;
     this._alternative = false;
     this.parseName(name);
@@ -20,8 +20,8 @@ class State {
     }
     if (name === Names.Absent) {
       this._absent = true;
-    } else if (name === Names.Hidden) {
-      this._hidden = true;
+    } else if (name === Names.Turned) {
+      this._turned = true;
     } else if (name === Names.Inserted) {
       this._inserted = true;
     } else if (name === Names.Alternative) {
@@ -31,17 +31,17 @@ class State {
 
   get name()            { return this._name; }
   get isAbsent()        { return this._absent; }
-  get isHidden()        { return this._hidden; }
+  get isTurned()        { return this._turned; }
   get isInserted()      { return this._inserted; }
   get isAlternative()   { return this._alternative; }
-  get isVisible()       { return !this._absent && !this._hidden; }
+  get isVisible()       { return !this._absent && !this._turned; }
 
   get visibility()      {
     if (this.isAbsent) {
       return Names.Absent;
     }
-    if (this.isHidden) {
-      return Names.Hidden;
+    if (this.isTurned) {
+      return Names.Turned;
     }
     return Names.Visible;
   }
@@ -80,7 +80,7 @@ class State {
 
 const Names = Object.freeze({
   Absent:       'Absent',
-  Hidden:       'Hidden',
+  Turned:       'Turned',
   Visible:      'Visible',
   Ins:          'Inserted',
   Inserted:     'Inserted',

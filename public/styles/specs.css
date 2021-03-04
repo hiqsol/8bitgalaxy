@@ -104,6 +104,6 @@
 .Tech .Spec.Science         { left:150; }
 .Tech .Spec.Production      { left:200; }
 
-.Visible .Name, .Hidden .Name {
+.Visible .Name, .Turned .Name {
     display: none;
 }

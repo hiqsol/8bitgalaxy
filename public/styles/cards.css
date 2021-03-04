@@ -12,7 +12,7 @@
     border: 0px;
 }
 
-.Card.Hidden {
+.Card.Turned {
     filter: brightness(55%);
 }
 

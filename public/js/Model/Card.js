@@ -11,7 +11,7 @@ class Card {
   get State()             { return this._state; }
   get visibility()        { return this._state.visibility; }
   get isAbsent()          { return this._state.isAbsent; }
-  get isHidden()          { return this._state.isHidden; }
+  get isTurned()          { return this._state.isTurned; }
   get isVisible()         { return this._state.isVisible; }
   get isAlternative()     { return this._state.isAlternative; }
 
@@ -44,7 +44,7 @@ class Card {
   static AbsentColony = Card.assert('absent Colony');
 
   statedValue(prop)       {
-    if (this.isHidden) {
+    if (this.isTurned) {
       return null;
     }
     if (this.isAlternative) {

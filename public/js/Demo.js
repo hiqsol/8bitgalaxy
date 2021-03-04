@@ -18,11 +18,11 @@ class Demo {
     h.discard.put('Human-Hero-1s');
     h.discard.put('Human-Ship-2a');
     h.discard.put('Human-Base-7a');
-    h.reserve.put('hidden Human-Hero-1s');
-    h.reserve.put('hidden Human-Ship-2a');
-    h.reserve.put('hidden Human-Colony-4p');
-    h.reserve.put('hidden Human-Base-7a');
-    h.hand.put('hidden Human-Hero-1c');
+    h.reserve.put('turned Human-Hero-1s');
+    h.reserve.put('turned Human-Ship-2a');
+    h.reserve.put('turned Human-Colony-4p');
+    h.reserve.put('turned Human-Base-7a');
+    h.hand.put('turned Human-Hero-1c');
     h.techs.put('Human-Tech-4p');
     this.initFactory(h);
     this.initResearch(h);
@@ -47,9 +47,9 @@ class Demo {
 
   initResearch(home) {
     let r = home.research;
-    r.pile(0).put('hidden Human-Colony-4c');
-    r.pile(0).put('hidden Human-Colony-4s');
-    r.pile(0).put('hidden Human-Colony-4p');
+    r.pile(0).put('turned Human-Colony-4c');
+    r.pile(0).put('turned Human-Colony-4s');
+    r.pile(0).put('turned Human-Colony-4p');
     r.pile(0).put('Human-Tech-4p');
     r.pile(1).put('Human-Colony-3a');
     r.pile(2).put('Human-Ship-1c');
@@ -61,7 +61,7 @@ class Demo {
     let b = this.game.board;
     b.star(0, 0)
       .put('AI-Hero-1s',      1)
-      .put('hidden AI-Base-7a',      2)
+      .put('turned AI-Base-7a',      2)
       .put('AI-Ship-2a',      3)
       .put('AI-Colony-4p',    0)
     ;
