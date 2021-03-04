@@ -52,8 +52,8 @@ class Demo {
     r.pile(0).put('turned Human-Colony-4p');
     r.pile(0).put('Human-Tech-4p');
     r.pile(1).put('Human-Colony-3a');
-    r.pile(2).put('Human-Ship-1c');
-    r.pile(3).put('Human-Base-3s');
+    r.pile(2).put('Human-Ship-4c');
+    r.pile(3).put('Human-Base-6c');
     r.pile(4).put('Human-Hero-4p');
   }
 

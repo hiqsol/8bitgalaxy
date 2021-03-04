@@ -91,18 +91,24 @@ class Decks {
       'AI-Colony-4p':       'a3s',
 
       'Human-Ship-1a':      '',
-      'Human-Ship-1c':      'u2s',
+      'Human-Ship-1c':      '',
       'Human-Ship-1s':      '',
       'Human-Ship-1p':      '',
 
-      'Human-Ship-3a':      'a2p',
-      'Human-Ship-3c':      'a2a',
-      'Human-Ship-3s':      'a2c',
-      'Human-Ship-3p':      'a2s',
+      'Human-Ship-2a':      'c1a',
+      'Human-Ship-2c':      'c1c',
+      'Human-Ship-2s':      'c1s',
+      'Human-Ship-2p':      'c1p',
 
-      'Human-Ship-2a':      'a1s',
-      'Human-Ship-3s':      'a2p',
-      'Human-Ship-4s':      'a3a',
+      'Human-Ship-3a':      'a4p',
+      'Human-Ship-3c':      'a4a',
+      'Human-Ship-3s':      'a4c',
+      'Human-Ship-3p':      'a4s',
+
+      'Human-Ship-4a':      'a3c,r3c,r4a',
+      'Human-Ship-4c':      'a3s,r3s,r4c',
+      'Human-Ship-4s':      'a3p,r3p,r4s',
+      'Human-Ship-4p':      'a3a,r3a,r4p',
 
       'Human-Hero-2a':      'a1a',
       'Human-Hero-2c':      'a1c',
@@ -114,10 +120,10 @@ class Decks {
       'Human-Hero-1s':      'a2s',
       'Human-Hero-1p':      'a2p',
 
-      'Human-Hero-4a':      'a3a,r3a3c',
-      'Human-Hero-4c':      'a3c,r3c3s',
-      'Human-Hero-4s':      'a3s,r3s3p',
-      'Human-Hero-4p':      'a3p,r3p3a',
+      'Human-Hero-4a':      'a3a,r3c,r3a',
+      'Human-Hero-4c':      'a3c,r3s,r3c',
+      'Human-Hero-4s':      'a3s,r3p,r3s',
+      'Human-Hero-4p':      'a3p,r3a,r3p',
 
       'Human-Hero-3a':      'a4a',
       'Human-Hero-3c':      'a4c',
@@ -129,23 +135,32 @@ class Decks {
       'Human-Base-3s':      'u4c',
       'Human-Base-3p':      '',
 
-      'Human-Base-6c':      'a5a',
-      'Human-Base-7a':      'u5p',
-      'Human-Base-7c':      'u5p,c2c',
       'Human-Base-5s':      'u3p',
+
+      'Human-Base-6a':      'a5p,r5p,r6a',
+      'Human-Base-6c':      'a5a,r5a,r6c',
+      'Human-Base-6s':      'a5c,r5c,r6s',
+      'Human-Base-6p':      'a5s,r5s,r6p',
+
+      'Human-Base-7a':      'u5p,r6p,r7a',
+      'Human-Base-7c':      'u5p,c2c',
 
       'Human-Colony-4a':    'a3c',
       'Human-Colony-4c':    'u3s',
       'Human-Colony-4s':    'u3p',
-      'Human-Colony-4p':    'a3a',
+      'Human-Colony-4p':    'a3a,r3a,r4p',
 
       'Human-Colony-5s':    'a4p',
-      'Human-Colony-6P':    '1s',
 
-      'Human-Tech-4a':      '1a',
-      'Human-Tech-4c':      '1c',
-      'Human-Tech-4s':      '1s',
-      'Human-Tech-4p':      '1p',
+      'Human-Colony-6a':    '5s,r5s,r6a',
+      'Human-Colony-6c':    '5p,r5p,r6c',
+      'Human-Colony-6s':    '5a,r5a,r6s',
+      'Human-Colony-6p':    '5c,r5c,r6p',
+
+      'Human-Tech-4a':      '4a,r3s,r3a',
+      'Human-Tech-4c':      '4c,r3p,r3c',
+      'Human-Tech-4s':      '4s,r3a,r3s',
+      'Human-Tech-4p':      '4p,r3c,r3p',
 
       'Base':               { Type: 'Base', },
       'Hero':               { Type: 'Hero', },

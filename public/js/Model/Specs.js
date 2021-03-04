@@ -55,6 +55,10 @@ class Specs {
     if (spec.name === Prop.Level) {
       this._specs[Prop.Klass] = new Action(spec.Action.Klass, spec.Action.Klass.name);
     }
+    if (spec.name === Prop.Requires) {
+      let name = this._specs[Prop.Require1] ? Prop.Require2 : Prop.Require1;
+      this._specs[name] = spec.Action;
+    }
     return this;
   }
 
