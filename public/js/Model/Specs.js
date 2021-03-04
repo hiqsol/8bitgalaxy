@@ -28,7 +28,7 @@ class Specs {
   get Utilization()       { return this.getValue(Prop.Utilization); }
 
   getValue(prop, def = null) {
-    let action = this.getSpec(prop);
+    let action = this.getAction(prop);
     if (action === undefined) {
       return def;
     }
@@ -36,15 +36,13 @@ class Specs {
     return action.Value;
   }
 
-  getSpec(prop) {
+  getAction(prop) {
     return this._specs[Prop.assert(prop).name];
   }
 
-  setValue(spec, value) {
-    if (! (spec instanceof Spec)) {
-      spec = new Spec(spec, new Action(spec, value));
-    }
-    return this.setSpec(spec);
+  getSpec(prop) {
+    let action = this.getAction(prop);
+    return action ? new Spec(prop, action) : null;
   }
 
   setSpec(spec) {
@@ -74,6 +72,14 @@ class Specs {
       return this;
     }
     Assert.error('wrong Specs', specs);
+  }
+
+  getSpecs() {
+    let specs = {};
+    for (const [prop, action] of Object.entries(this._specs)) {
+      specs[prop] = new Spec(prop, action);
+    }
+    return specs;
   }
 
   static assert(sample) {

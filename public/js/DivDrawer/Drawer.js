@@ -5,6 +5,7 @@ import GameDrawer from './GameDrawer.js';
 import HomeDrawer from './HomeDrawer.js';
 import PileDrawer from './PileDrawer.js';
 import StarDrawer from './StarDrawer.js';
+import SpecDrawer from './SpecDrawer.js';
 import BoardDrawer from './BoardDrawer.js';
 import SpecsDrawer from './SpecsDrawer.js';
 import FieldDrawer from './FieldDrawer.js';
@@ -71,6 +72,7 @@ const Drawers = Object.freeze({
   Pile:     PileDrawer,
   Row:      RowDrawer,
   Star:     StarDrawer,
+  Spec:     SpecDrawer,
   Board:    BoardDrawer,
   Specs:    SpecsDrawer,
   Field:    FieldDrawer,
