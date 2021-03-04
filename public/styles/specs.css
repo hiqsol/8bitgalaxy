@@ -20,7 +20,7 @@
     font-size:52;
     line-height:48px;
     margin-left:-3px;
-    margin-top:4px;
+    margin-top:5px;
     /*-webkit-text-stroke: 1px gray;*/
 }
 
@@ -62,7 +62,7 @@
 .Spec.Alternative           { display:none; }
 .Spec.Cooperation           { display:none; }
 
-.Spec.Utilization           { font-size:22; margin-left:-2px;margin-top:2px; }
+.Spec.Utilization .Value    { font-size:22; margin-left:-2px;margin-top:4px; }
 
 .Hero .Spec.Level .Value    { height:60; border-top-left-radius:20px; border-bottom-right-radius:20px; }
 .Hero .Image .Klass         { left:50;  top:60; }
