@@ -34,8 +34,8 @@ class Game {
     this.draw(parent, this);
   }
 
-  draw(parent = null, obj = null) {
-    return this.drawer.draw(parent, obj ?? this);
+  draw(parent = null, obj = null, y, x) {
+    return this.drawer.draw(parent, obj ?? this, y, x);
   }
 
   static assert(sample) {
