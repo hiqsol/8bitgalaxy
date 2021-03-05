@@ -1,3 +1,4 @@
+import Assert from "../Model/Assert.js";
 import Template from './Template.js';
 import RowDrawer from './RowDrawer.js';
 import CardDrawer from './CardDrawer.js';
@@ -25,7 +26,7 @@ class Drawer {
       parent = document.querySelector('body');
     }
     if (typeof obj !== 'object') {
-      throw new Error('not an object: ' + typeof(obj));
+      Assert.error('not an object', obj);
     }
     let cname = obj.constructor.name;
     return this.getDrawer(cname).draw(parent, obj, y, x);
@@ -41,7 +42,7 @@ class Drawer {
   buildDrawer(name) {
     let drawer = Drawers[name] ?? null;
     if (! drawer) {
-      throw new Error('no drawer for: ' + name);
+      Assert.error('no drawer for ' + name);
     }
     return new drawer(this);
   }
@@ -61,7 +62,7 @@ class Drawer {
     if (sample instanceof(Drawer)) {
       return sample;
     }
-    throw new Error('not a Drawer:' + typeof(sample));
+    Assert.error('not a Drawer', sample);
   }
 }
 

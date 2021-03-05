@@ -181,7 +181,7 @@ class Decks {
       'Scrap':              { Type: 'Other' },
       'Factory':            { Type: 'Other' },
       'Research':           { Type: 'Other', Name: 'R & D' },
-      'Ideas':              { Type: 'Other' },
+      'Ideas':              { Type: 'Other', Name: 'Deck' },
     }
   }
 }

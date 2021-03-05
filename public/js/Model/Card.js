@@ -1,6 +1,7 @@
 import Prop from "./Prop.js";
 import aCard from "./aCard.js";
 import State from "./State.js";
+import Assert from "./Assert.js";
 
 class Card {
   constructor(state, acard) {
@@ -48,7 +49,7 @@ class Card {
       return null;
     }
     if (this.isAlternative) {
-      throw new Error('TODO implement!')
+      Assert.error('TODO implement!')
     }
     return this.aCard.getValue(prop);
   }
@@ -60,7 +61,7 @@ class Card {
     if (typeof(sample) === 'string') {
       return Card.fromString(sample);
     }
-    throw new Error('not a Card:' + sample.constructor.name)
+    Assert.error('not a Card', sample);
   }
 
   static fromString(name) {

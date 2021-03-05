@@ -1,6 +1,7 @@
 import Specs from "./Specs.js";
 import Decks from "./Decks.js";
 import Action from "./Action.js";
+import Assert from "./Assert.js";
 
 class aCard {
   constructor(specs) {
@@ -39,7 +40,7 @@ class aCard {
     if (typeof(sample) === 'string') {
       return new aCard(Decks.get(sample));
     }
-    throw new Error('not a aCard:' + sample.constructor.name)
+    Assert.error('not a aCard', sample);
   }
 
   findAlternative(alt) {
@@ -52,7 +53,7 @@ class aCard {
     if (alt instanceof Action) {
       return Decks.get([this.Race, this.Type, alt.short].join('-'));
     }
-    throw new Error('wrong alternative ' + typeof(alt));
+    Assert.error('wrong alternative', alt);
   }
 }
 

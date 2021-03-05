@@ -33,10 +33,10 @@ class Star {
 
   putToSlot(card, slot, slots) {
     if (slots[slot] === undefined) {
-      throw new Error('non-existent slot: ' + slot);
+      Assert.error('non-existent slot', slot);
     }
     if (slots[slot] !== null) {
-      throw new Error('slot already taken: ' + slot);
+      Assert.error('slot already taken', slot);
     }
     slots[slot] = card;
     return this;

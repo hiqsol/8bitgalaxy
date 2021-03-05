@@ -1,3 +1,5 @@
+import Assert from "./Assert.js";
+
 class State {
   constructor(name) {
     this._name        = name;
@@ -16,7 +18,7 @@ class State {
     input = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
     name = Names[input];
     if (input && !name) {
-      throw new Error('wrong state: ' + input);
+      Assert.error('wrong state: ' + input);
     }
     if (name === Names.Absent) {
       this._absent = true;
@@ -53,7 +55,7 @@ class State {
     if (typeof(sample) === 'string') {
       return new State(sample);
     }
-    throw new Error('not a State:' + sample.constructor.name)
+    Assert.error('not a State', sample);
   }
 
   static isName(name)     { return State.normalizeName(name) !== null; }
@@ -61,7 +63,7 @@ class State {
   static assertName(name) {
     let norm = State.normalizeName(name);
     if (name === null) {
-      throw new Error('wrong State name: ' + name)
+      Assert.error('wrong State name', name);
     }
     return norm;
   }

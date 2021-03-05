@@ -32,7 +32,7 @@ class Klass {
 
   static assertName(name) {
     if (typeof(name) !== 'string') {
-      throw new Error('wrong Klass given: ' + typeof(name));
+      Assert.error('wrong Klass given', name);
     }
     name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     if (Letters[name]) {

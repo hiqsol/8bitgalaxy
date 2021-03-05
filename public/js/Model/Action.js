@@ -8,9 +8,9 @@ class Action {
     this._value = Action.assertValue(value);
   }
 
-  get Klass()             { return this._klass; }
-  get Value()             { return this._value; }
-  get short()             { return String(this.Value) + this.Klass.short; }
+  get Klass() { return this._klass; }
+  get Value() { return this._value; }
+  get short() { return String(this.Value) + this.Klass.short; }
 
   static text(text) {
     return new Action(Klass.Attack, text);
@@ -28,7 +28,7 @@ class Action {
     if (typeof(sample) === 'string') {
       return Action.fromString(sample);
     }
-    throw new Error('not an Action:' + typeof(sample));
+    Assert.error('not an Action', sample);
   }
 
   static fromString(name) {

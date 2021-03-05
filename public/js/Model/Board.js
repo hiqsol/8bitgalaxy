@@ -2,6 +2,7 @@ import Star from "./Star.js";
 import Home from "./Home.js";
 import Field from "./Field.js";
 import Player from "./Player.js";
+import Assert from "./Assert.js";
 
 class Board {
   constructor() {
@@ -19,7 +20,7 @@ class Board {
 
   assertPlayerNo(no) {
     if (typeof(no) !== 'number' || no<1 || no>this._players.length) {
-      throw new Error('wrong player no: ' + no);
+      Assert.error('wrong player no', no);
     }
     return no;
   }

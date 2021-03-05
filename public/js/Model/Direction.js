@@ -1,3 +1,5 @@
+import Assert from "./Assert.js";
+
 class Direction {
   constructor(name) {
     this._name = Direction.assertName(name);
@@ -37,13 +39,13 @@ class Direction {
     if (typeof(sample) === 'string') {
       return Direction.fromString(sample);
     }
-    throw new Error('not a Direction:' + sample.constructor.name)
+    Assert.error('not a Direction', sample);
   }
 
   static assertName(name) {
     let norm = Direction.normalizeName(name);
     if (name === null) {
-      throw new Error('wrong Direction name: ' + name)
+      Assert.error('wrong Direction name', name);
     }
     return norm;
   }

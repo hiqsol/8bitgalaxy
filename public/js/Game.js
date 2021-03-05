@@ -2,6 +2,7 @@ import Card from "./Model/Card.js";
 import Board from "./Model/Board.js";
 import Player from "./Model/Player.js";
 import Direction from "./Model/Direction.js";
+import Assert from "./Model/Assert.js";
 import Drawer from "./DivDrawer/Drawer.js";
 import Options from "./Model/Options.js";
 
@@ -42,7 +43,7 @@ class Game {
     if (sample instanceof(Game)) {
       return sample;
     }
-    throw new Error('not a Game:' + typeof(sample));
+    Assert.error('not a Game', sample);
   }
 }
 

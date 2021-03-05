@@ -41,7 +41,7 @@ class CardDrawer {
 const TypeImages = Object.freeze({
   hero:     'user',
   ship:     'rocket',
-  base:     'burger',
+  base:     'codepen',
   colony:   'world',
   tech:     'react',
 })

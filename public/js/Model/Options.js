@@ -1,3 +1,5 @@
+import Assert from "./Assert.js";
+
 class Options {
   constructor(options) {
     this.init(options);
@@ -19,11 +21,11 @@ class Options {
     if (typeof(sample) === 'string') {
       return Options.fromString(sample);
     }
-    throw new Error('not an Options:' + sample.constructor.name);
+    Assert.error('not an Options', sample);
   }
 
   static fromString(name) {
-    throw new Error('TODO implement');
+    Assert.error('TODO implement');
   }
 
   init(options) {

@@ -44,11 +44,11 @@ class Prop {
 
   static assertName(name) {
     if (typeof(name) !== 'string') {
-      throw new Error('wrong Prop given: ' + typeof(name));
+      Assert.error('wrong Prop given', name);
     }
     name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     if (Names[name] === undefined) {
-      throw new Error('wrong Prop name: ' + name)
+      Assert.error('wrong Prop name', name);
     }
     return Names[name];
   }

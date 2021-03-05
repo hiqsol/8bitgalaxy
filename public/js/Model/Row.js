@@ -1,4 +1,5 @@
 import Pile from "./Pile.js";
+import Assert from "./Assert.js";
 import Direction from "./Direction.js";
 
 class Row {
@@ -28,14 +29,14 @@ class Row {
 
   assertNo(no) {
     if (no<0 || no>=this.size) {
-      throw new Error('wrong pile no: ' + no);
+      Assert.error('wrong pile no', no);
     }
     return no;
   }
 
   static assertType(type) {
     if (Types[type] === undefined) {
-      throw new Error('wrong Row type: ' + type);
+      Assert.error('wrong Row type',  type);
     }
     return type;
   }

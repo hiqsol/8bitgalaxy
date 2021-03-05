@@ -1,4 +1,5 @@
 import Home from './Home.js';
+import Assert from "./Assert.js";
 import Direction from './Direction.js';
 
 class Player {
@@ -20,7 +21,7 @@ class Player {
     if (sample instanceof(Player)) {
       return sample;
     }
-    throw new Error('not a player:' + typeof(sample));
+    Assert.error('not a Player', sample);
   }
 }
 
