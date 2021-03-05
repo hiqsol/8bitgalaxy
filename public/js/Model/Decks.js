@@ -37,7 +37,7 @@ class Decks {
       [Prop.Race]:          Action.text(ps[0]),
       [Prop.Type]:          Action.text(ps[1]),
       [Prop.Level]:         action,
-      [action.Klass.name]:  action,
+      [action.Klass.name]:  action.dec(),
     });
   }
 
@@ -82,13 +82,13 @@ class Decks {
   static allAnyCase() {
     return {
       'AI-Hero-1s':         '',
-      'AI-Hero-2s':         'a1p',
-      'AI-Hero-2a':         'a1p',
-      'AI-Ship-2a':         'u2s',
+      'AI-Hero-2s':         '1s,a1p',
+      'AI-Hero-2a':         '2a,a1p',
+      'AI-Ship-2a':         'c1a,u2s',
       'AI-Base-7a':         'u5p,r6c,r7a',
       'AI-Base-7c':         'u5p,c2c,r6p,r7c',
       'AI-Base-6c':         'a5p,r5a,r6c',
-      'AI-Colony-4p':       'a3s,r3c,r4p',
+      'AI-Colony-4p':       'c2p,a3s,r3c,r4p',
 
       'Human-Ship-1a':      '',
       'Human-Ship-1c':      '',
@@ -120,20 +120,20 @@ class Decks {
       'Human-Hero-1s':      'a2s',
       'Human-Hero-1p':      'a2p',
 
-      'Human-Hero-4a':      'a3a,r3c,r3a',
-      'Human-Hero-4c':      'a3c,r3s,r3c',
-      'Human-Hero-4s':      'a3s,r3p,r3s',
-      'Human-Hero-4p':      'a3p,r3a,r3p',
+      'Human-Hero-4a':      '4a,a3a,r3c,r3a',
+      'Human-Hero-4c':      '4c,a3c,r3s,r3c',
+      'Human-Hero-4s':      '4s,a3s,r3p,r3s',
+      'Human-Hero-4p':      '4p,a3p,r3a,r3p',
 
-      'Human-Hero-3a':      'a4a',
-      'Human-Hero-3c':      'a4c',
-      'Human-Hero-3s':      'a4s',
-      'Human-Hero-3p':      'a4p',
+      'Human-Hero-3a':      '3a,a4a',
+      'Human-Hero-3c':      '3c,a4c',
+      'Human-Hero-3s':      '3s,a4s',
+      'Human-Hero-3p':      '3p,a4p',
 
-      'Human-Base-3a':      '',
-      'Human-Base-3c':      'a2p',
-      'Human-Base-3s':      'u4c',
-      'Human-Base-3p':      '',
+      'Human-Base-3a':      'c1a',
+      'Human-Base-3c':      'c1c,a2p',
+      'Human-Base-3s':      'c1s,u4c',
+      'Human-Base-3p':      'c1p',
 
       'Human-Base-5s':      'u3p',
 

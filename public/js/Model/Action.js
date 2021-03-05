@@ -12,6 +12,10 @@ class Action {
   get Value() { return this._value; }
   get short() { return String(this.Value) + this.Klass.short; }
 
+  dec(num = 1) {
+    return new Action(this.Klass, this.Value>1 ? (this.Value - num) : 1);
+  }
+
   static text(text) {
     return new Action(Klass.Attack, text);
   }
