@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Cards: 8-bit Galaxy</title>
+    <link rel="stylesheet" href="styles/8bitfont.css">
+  </head>
+  <body>
+    <script type="module">
+      import Demo from "./js/Demo.js";
+      import Card from "./js/Model/Card.js";
+      import Pile from "./js/Model/Pile.js";
+
+      let game = (new Demo()).game;
+      let vert = new Pile('Discard');
+      vert.put('Human-Hero-1a');
+      let v = game.draw(null, vert, 1, 1);
+      game.draw(v, Card.assert('Human-Hero-2c'),    0, 1);
+      game.draw(v, Card.assert('Human-Ship-3s'),    0, 2);
+      game.draw(v, Card.assert('Human-Ship-4p'),    0, 3);
+      game.draw(v, Card.assert('Human-Base-5a'),    0, 4);
+      game.draw(v, Card.assert('Human-Base-6c'),    0, 5);
+      game.draw(v, Card.assert('Human-Colony-7s'),  0, 6);
+      game.draw(v, Card.assert('Human-Colony-8p'),  0, 7);
+
+    </script>
+  </body>
+</html>
