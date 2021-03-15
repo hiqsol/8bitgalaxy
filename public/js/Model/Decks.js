@@ -135,7 +135,10 @@ class Decks {
       'Human-Base-3s':      'c1s,u4c',
       'Human-Base-3p':      'c1p',
 
-      'Human-Base-5s':      'u3p',
+      'Human-Base-5a':      'c3a,a6c,r4p,r5a',
+      'Human-Base-5c':      'c3c,a6s,r4a,r5c',
+      'Human-Base-5s':      'c3s,a6p,r4c,r5s',
+      'Human-Base-5p':      'c3p,a6a,r4s,r5p',
 
       'Human-Base-6a':      'c3a,a5p,r5p,r6a',
       'Human-Base-6c':      'c3c,a5a,r5a,r6c',
@@ -156,6 +159,16 @@ class Decks {
       'Human-Colony-6c':    '5p,c3c,r5p,r6c',
       'Human-Colony-6s':    '5a,c3s,r5a,r6s',
       'Human-Colony-6p':    '5c,c3p,r5c,r6p',
+
+      'Human-Colony-7a':    '5a,3s,c3a,r6s,r7a',
+      'Human-Colony-7c':    '5c,3p,c3c,r6p,r7c',
+      'Human-Colony-7s':    '5s,3a,c3s,r6a,r7s',
+      'Human-Colony-7p':    '5p,3c,c3p,r6c,r7p',
+
+      'Human-Colony-8a':    '6a,4s,c4a,r7s,r8a',
+      'Human-Colony-8c':    '6c,4p,c4c,r7p,r8c',
+      'Human-Colony-8s':    '6s,4a,c4s,r7a,r8s',
+      'Human-Colony-8p':    '6p,4c,c4p,r7c,r8p',
 
       'Human-Tech-4a':      'r3s,r3a',
       'Human-Tech-4c':      'r3p,r3c',
