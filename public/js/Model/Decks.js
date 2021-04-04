@@ -135,10 +135,10 @@ class Decks {
       'Human-Base-3s':      'c1s,u4c',
       'Human-Base-3p':      'c1p',
 
-      'Human-Base-5a':      'c3a,a6c,r4p,r5a',
-      'Human-Base-5c':      'c3c,a6s,r4a,r5c',
-      'Human-Base-5s':      'c3s,a6p,r4c,r5s',
-      'Human-Base-5p':      'c3p,a6a,r4s,r5p',
+      'Human-Base-5a':      'c3a,a6c',
+      'Human-Base-5c':      'c3c,a6s',
+      'Human-Base-5s':      'c3s,a6p',
+      'Human-Base-5p':      'c3p,a6a',
 
       'Human-Base-6a':      'c3a,a5p,r5p,r6a',
       'Human-Base-6c':      'c3c,a5a,r5a,r6c',
