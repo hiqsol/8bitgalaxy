@@ -1,8 +1,10 @@
 import Prop from "./Prop.js";
 import Spec from "./Spec.js";
+import aCard from "./aCard.js";
 import Specs from "./Specs.js";
 import Action from "./Action.js";
 import Assert from "./Assert.js";
+import Generator from "./Generator.js";
 
 class Decks {
   static get(name) {
@@ -10,6 +12,18 @@ class Decks {
     let specs = all[name.toLowerCase()];
     let ps = Decks.parseCard(name, specs);
     return new Specs(Decks.parseCard(name, specs));
+  }
+
+  static getCard(name) {
+    return new aCard(Decks.get(name));
+  }
+
+  static _all = undefined;
+  static all() {
+    if (Decks._all === undefined) {
+      Decks._all = (new Generator().all());
+    }
+    return Decks._all;
   }
 
   static parseCard(name, specs) {
@@ -34,6 +48,7 @@ class Decks {
     let ps = name.split('-');
     let action = Action.assert(ps[2]);
     return new Specs({
+      [Prop.Name]:          name,
       [Prop.Race]:          Action.text(ps[0]),
       [Prop.Type]:          Action.text(ps[1]),
       [Prop.Level]:         action,
@@ -71,7 +86,7 @@ class Decks {
     Assert.error('wrong spec', spec);
   }
 
-  static all() {
+  static old_all() {
     let src = Decks.allAnyCase();
     return Object.keys(src).reduce(function (dst, key) {
       dst[key.toLowerCase()] = src[key];
