@@ -1,0 +1,36 @@
+.Pile                       { position: absolute; }
+.Pile .Base                 { width: 350px; height: 250px; }
+.Pile .Hero                 { width: 350px; height: 250px; }
+.Pile .Ship                 { width: 250px; height: 350px; }
+.Pile .Colony               { width: 250px; height: 350px; }
+.Pile .Other                { width: 250px; height: 350px; }
+
+.Pile.TopToBottom .Base,
+.Pile.TopToBottom .Hero     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
+
+.Pile.LeftToRight .Ship,
+.Pile.LeftToRight .Colony,
+.Pile.LeftToRight .Tech,
+.Pile.LeftToRight .Other    { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
+
+.Row                        { position: absolute; }
+.Field                      { position: absolute; }
+
+.Home                       { position: absolute; width:100%; height:100%; }
+.Home.BottomToTop           { transform-origin: center; transform: rotate(180deg) translate(100%, 100%); }
+
+.Absent .Name .Value {
+    display:        block;
+    width:          250px;
+    height:         350px;
+    line-height:    350px;
+    text-align:     center;
+    vertical-align: middle;
+    font-size:      30px;
+    font-weight:    100;
+}
+
+.BottomToTop .Absent .Name .Value {
+    transform-origin: center;
+    transform: rotate(180deg);
+}

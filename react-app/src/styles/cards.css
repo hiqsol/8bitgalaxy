@@ -1,0 +1,29 @@
+.Card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius:20px;
+    padding:0;
+    margin:0;
+    box-shadow: 0 0 10px black;
+    z-index: 3;
+}
+
+.Card.Absent {
+    border: 0;
+}
+
+.Card.Turned {
+    filter: brightness(55%);
+}
+
+.Base                       { width:350px; height: 200px; }
+.Hero                       { width:350px; height: 200px; }
+.Colony                     { width:250px; height: 300px; }
+.Ship                       { width:200px; height: 350px; }
+.Tech                       { width:250px; height: 350px; }
+
+.Specs                      { position:absolute; width:100%; height:100%; }
+
+.Specs.Alternative          { transform-origin: center; transform: rotate(180deg); }
+
+.Star .Card.Visible .Specs.Alternative { display:none; }
