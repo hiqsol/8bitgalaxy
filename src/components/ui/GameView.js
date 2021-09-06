@@ -2,10 +2,10 @@ import React from "react";
 import { observer } from "mobx-react-lite"
 import BoardView from "./BoardView";
 
-const GameView = ({store, y, x}) => {
+const GameView = ({game}) => {
   return (
     <div className="Game">
-      <BoardView store={store.board}/>
+      <BoardView board={game.board}/>
     </div>
   );
 };

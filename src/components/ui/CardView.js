@@ -1,15 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import {observer} from "mobx-react-lite";
 import cn from "classnames";
-import {getParent, getType, hasParent} from "mobx-state-tree";
 import {useDrag} from "react-dnd";
 import SpecsView from "./SpecsView";
 import usePosition from "../../state/hooks/usePosition";
 
-const CardView = ({store, y, x}) => {
-  const card = store;
+const CardView = ({card, y, x}) => {
   const [p] = usePosition(y, x);
-  const [isTurned, turnOver] = useState(card.isTurned);
   const [{isDragging}, dragRef] = useDrag(() => ({
     type: "CARD",
     item: {
@@ -34,12 +31,8 @@ const CardView = ({store, y, x}) => {
       isDragging: !!monitor.isDragging(),
     }),
   }));
-  const handleClick = () => {
-    turnOver(prev => {
-      card.turnOver();
-
-      return !prev;
-    });
+  const handleTurnOver = () => {
+    card.turnOver();
   };
   const cardClasses = cn(
     "Card",
@@ -50,7 +43,7 @@ const CardView = ({store, y, x}) => {
   const imageClasses = cn(
     "Klass",
     "lni",
-    // "lni-" + type2image(card.Specs.Type),
+    !card.isAbsent && !card.isTurned ? "lni-" + type2image(card.Specs.Type) : null,
   );
   if (card.isAbsent) {
     return (
@@ -63,8 +56,11 @@ const CardView = ({store, y, x}) => {
   }
 
   return (
-    <div ref={dragRef} className={cardClasses} onClick={handleClick.bind(this)}
-         style={{left: 20 + p.x + "px", top: 10 + p.y + "px", border: isDragging ? "2px solid red" : "none"}}
+    <div
+      ref={dragRef}
+      className={cardClasses}
+      onClick={handleTurnOver.bind(this)}
+      style={{left: 20 + p.x + "px", top: 10 + p.y + "px", border: isDragging ? "2px solid red" : "none"}}
     >
       <div className="Image">
         <div className={imageClasses}/>
@@ -90,9 +86,9 @@ function type2image(type) {
   return TypeImages[type.toLowerCase()];
 }
 
-// function race2image(race) {
-//   return RaceImages[race.toLowerCase()];
-// }
+function race2image(race) {
+  return RaceImages[race.toLowerCase()];
+}
 
 const TypeImages = Object.freeze({
   hero: "user",

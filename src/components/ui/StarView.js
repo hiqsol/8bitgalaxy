@@ -22,9 +22,8 @@ const OverView = styled.div`
   }
 `;
 
-const StarView = ({store}) => {
+const StarView = ({star}) => {
   const [, m] = usePosition();
-  const star = store;
   const indent = star.y % 2 ? 0 : 7.75 * m;
   const [{isOver}, dropRef] = useDrop(() => ({
     accept: "CARD",
@@ -77,7 +76,7 @@ const CardViewer = ({card, y, x}) => {
   }
 
   return (
-    <CardView store={card} y={y} x={x}/>
+    <CardView card={card} y={y} x={x}/>
   );
 };
 
