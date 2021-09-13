@@ -2,7 +2,6 @@ import React from "react";
 import cn from "classnames";
 import {useDrop} from "react-dnd";
 import {observer} from "mobx-react-lite";
-import {getParent} from "mobx-state-tree";
 import CardView from "./CardView";
 import usePosition from "../../state/hooks/usePosition";
 import useHover from "../../state/hooks/useHover";
