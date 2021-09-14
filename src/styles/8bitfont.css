@@ -1,0 +1,19 @@
+@import 'basic.css';
+@import url('https://fonts.googleapis.com/css?family=Press%20Start%202P');
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background: #787;
+}
+
+.Spec {
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 58px;
+}
+
+.Level {
+    font-size: 28px;
+    line-height: 52px;
+    font-weight: 100;
+}
