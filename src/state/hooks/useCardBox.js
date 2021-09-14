@@ -4,8 +4,6 @@ function useCardBox() {
   const [isFocusedCard, setFocusCard] = useState(false);
   let timeout = useRef();
 
-  console.log("render useCardBox");
-
   const mouseOverCard = (e) => {
     clearTimeout(timeout.current);
     setFocusCard(false);
@@ -28,7 +26,7 @@ function useCardBox() {
       if (e.target.parentNode.classList.value.includes("Card")) {
         e.target.parentNode.classList.add("ActiveCard");
       }
-    }, 1000);
+    }, 2000);
   };
 
   const mouseLeaveCard = (e) => {
@@ -37,8 +35,16 @@ function useCardBox() {
     if (e.target.parentNode.classList.value.includes("Card")) {
       e.target.parentNode.classList.remove("ActiveCard");
     }
+   };
+   
+  const mouseDownCard = (e) => {
+    clearTimeout(timeout.current);
+    setFocusCard(false);
+    if (e.target.parentNode.classList.value.includes("Card")) {
+      e.target.parentNode.classList.remove("ActiveCard");
+    }
   };
 
-  return { mouseOverCard, mouseLeaveCard, isFocusedCard };
+  return { mouseOverCard, mouseLeaveCard,mouseDownCard, isFocusedCard };
 }
 export default useCardBox;

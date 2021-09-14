@@ -64,6 +64,7 @@ const CardView = ({ card, y, x }) => {
     <div
       onMouseOver={addCardBox.mouseOverCard}
       onMouseLeave={addCardBox.mouseLeaveCard}
+      onMouseDown={addCardBox.mouseDownCard}
       ref={dragRef}
       className={cardClasses}
       onClick={handleTurnOver.bind(this)}
