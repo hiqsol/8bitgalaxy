@@ -17,3 +17,8 @@ body {
     line-height: 52px;
     font-weight: 100;
 }
+
+.Board{
+   width: 198%;
+   height: 3050px;
+}
