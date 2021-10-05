@@ -63,6 +63,7 @@ class Specs {
   }
 
   setSpecs(specs) {
+    console.log(specs);
     if (specs instanceof Spec) {
       return this.setSpec(specs);
     }

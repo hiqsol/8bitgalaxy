@@ -10,18 +10,25 @@ class Decks {
   static get(name) {
     let all = Decks.all();
     let specs = all[name.toLowerCase()];
-    let ps = Decks.parseCard(name, specs);
     return new Specs(Decks.parseCard(name, specs));
   }
 
   static getCard(name) {
+    let res = Decks.get(name);
+    console.log(name);
+    console.log(res);throw new Error('die');
     return new aCard(Decks.get(name));
   }
 
   static _all = undefined;
   static all() {
     if (Decks._all === undefined) {
-      Decks._all = (new Generator().all());
+      let src = (new Generator().all());
+      //let src = Decks.allAnyCase();
+      Decks._all = Object.keys(src).reduce(function (dst, key) {
+        dst[key.toLowerCase()] = src[key];
+        return dst;
+      }, {});
     }
     return Decks._all;
   }
@@ -29,6 +36,7 @@ class Decks {
   static parseCard(name, specs) {
     let type = typeof(specs);
     let res = Decks.parseName(name);
+    console.log(res);throw new Error('die');
     if (!specs) {
       return res;
     }
@@ -67,6 +75,7 @@ class Decks {
     Assert.string(spec);
     let prefix = spec.charAt(0).toLowerCase();
     let action = Action.assert(spec.substring(1, 3));
+    console.log(action);
     if (spec.length === 2) {
       action = Action.assert(spec);
       return new Spec(action.Klass, action);
