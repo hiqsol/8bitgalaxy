@@ -17,8 +17,36 @@ class Star {
   ship(slot)    { return this.ships[slot]     ?? Card.AbsentShip; }
   colony(slot)  { return this.colonies[slot]  ?? Card.AbsentColony; }
 
+  removeCard(card) {
+    if (card.isBase) {
+      this.bases.reduce((acc, base, index) => {
+        if(card===base) {acc[index] = null};
+        return acc;
+      }, this.bases);
+    }
+    else if (card.isShip) {
+      this.ships.reduce((acc, ship, index) => {
+        if(card===ship) {acc[index] = null};
+        return acc;
+      }, this.ships);
+    }
+    else if (card.isHero) {
+      this.heroes.reduce((acc, hero, index) => {
+        if(card===hero) {acc[index] = null};
+        return acc;
+      }, this.heroes);
+    }
+    else if (card.isColony) {
+      this.colonies.reduce((acc, colony, index) => {
+        if(card===colony) {acc[index] = null};
+        return acc;
+      }, this.colonies);
+    }
+  }
+
   put(card, slot) {
     card = Card.assert(card);
+    card.setDestination(this);
     if (card.isBase) {
       return this.putToSlot(card, slot, this.bases);
     } else if (card.isShip) {

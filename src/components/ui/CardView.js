@@ -60,7 +60,7 @@ const CardView = ({card, y, x}) => {
       ref={dragRef}
       className={cardClasses}
       onClick={handleTurnOver.bind(this)}
-      style={{left: 20 + p.x + "px", top: 10 + p.y + "px", border: isDragging ? "2px solid red" : "none"}}
+      style={{left: -10 + p.x + "px", top: -10 + p.y + "px", border: isDragging ? "2px solid red" : "none"}}
     >
       <div className="Image">
         <div className={imageClasses}/>
