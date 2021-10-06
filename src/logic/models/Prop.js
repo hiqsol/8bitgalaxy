@@ -24,7 +24,9 @@ class Prop {
   static get Science()          { return Names.Science; }
   static get Cooperation()      { return Names.Cooperation; }
   static get Alternative()      { return Names.Alternative; }
-  static get Utilization()      { return Names.Utilization; }
+   static get Utilization() { return Names.Utilization; }
+   ////
+  static get Parent()      { return Names.Parent; }
 
   static assert(sample) {
     if (sample instanceof(Prop)) {
@@ -71,7 +73,8 @@ const Names = Object.freeze({
   Production:         'Production',
   Cooperation:        'Cooperation',
   Alternative:        'Alternative',
-  Utilization:        'Utilization',
+   Utilization: 'Utilization',
+  Parent:           'Parent',
 })
 
 export default Prop;

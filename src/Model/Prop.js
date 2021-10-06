@@ -24,7 +24,10 @@ class Prop {
   static get Science()          { return Names.Science; }
   static get Cooperation()      { return Names.Cooperation; }
   static get Alternative()      { return Names.Alternative; }
-  static get Utilization()      { return Names.Utilization; }
+   static get Utilization() { return Names.Utilization; }
+   /////
+     static get Parent()      { return Names.Parent; }
+
 
   static assert(sample) {
     if (sample instanceof(Prop)) {
@@ -55,23 +58,25 @@ class Prop {
 }
 
 const Names = Object.freeze({
-  Name:               'Name',
-  Type:               'Type',
-  Race:               'Race',
-  Level:              'Level',
-  Klass:              'Klass',
-  Requires:           'Requires',
-  Require1:           'Require1',
-  Require2:           'Require2',
-  Require3:           'Require3',
-  Defense:            'Defense',
-  Attack:             'Attack',
-  Colonization:       'Colonization',
-  Science:            'Science',
-  Production:         'Production',
-  Cooperation:        'Cooperation',
-  Alternative:        'Alternative',
-  Utilization:        'Utilization',
-})
+  Name: "Name",
+  Type: "Type",
+  Race: "Race",
+  Level: "Level",
+  Klass: "Klass",
+  Requires: "Requires",
+  Require1: "Require1",
+  Require2: "Require2",
+  Require3: "Require3",
+  Defense: "Defense",
+  Attack: "Attack",
+  Colonization: "Colonization",
+  Science: "Science",
+  Production: "Production",
+  Cooperation: "Cooperation",
+  Alternative: "Alternative",
+   Utilization: "Utilization",
+  //////
+  Parent: "Parent",
+});
 
 export default Prop;

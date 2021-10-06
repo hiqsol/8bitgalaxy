@@ -14,7 +14,9 @@ class Card {
   get isAbsent()          { return this._state.isAbsent; }
   get isTurned()          { return this._state.isTurned; }
   get isVisible()         { return this._state.isVisible; }
-  get isAlternative()     { return this._state.isAlternative; }
+  get isAlternative() { return this._state.isAlternative; }
+   ///////
+  get parent() { return this._state.parent;}
 
   get aCard()             { return this._acard; }
   get Specs()             { return this._acard.Specs; }
@@ -44,6 +46,8 @@ class Card {
   static AbsentShip   = Card.assert('absent Ship');
   static AbsentColony = Card.assert('absent Colony');
 
+   
+   
   statedValue(prop)       {
     if (this.isTurned) {
       return null;

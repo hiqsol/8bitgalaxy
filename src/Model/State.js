@@ -9,7 +9,10 @@ class State {
     this._inserted    = false;
     this._alternative = false;
     this.parseName(name);
-    makeAutoObservable(this);
+     makeAutoObservable(this);
+     //////
+   this._parent = null;
+
   }
 
   parseName(name) {
@@ -50,6 +53,10 @@ class State {
     return Names.Visible;
   }
 
+   ///////
+   get parent() { return this._parent;}
+
+   
   turnOver() {
     this._turned = !this._turned;
   }
@@ -87,13 +94,15 @@ class State {
 }
 
 const Names = Object.freeze({
-  Absent:       'Absent',
-  Turned:       'Turned',
-  Visible:      'Visible',
-  Ins:          'Inserted',
-  Inserted:     'Inserted',
-  Alt:          'Alternative',
-  Alternative:  'Alternative',
-})
+  Absent: "Absent",
+  Turned: "Turned",
+  Visible: "Visible",
+  Ins: "Inserted",
+  Inserted: "Inserted",
+  Alt: "Alternative",
+   Alternative: "Alternative",
+  /////
+  Parent: "Parent",
+});
 
 export default State;
