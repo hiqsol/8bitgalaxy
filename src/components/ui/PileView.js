@@ -14,10 +14,6 @@ function PileView({pile, y, x}) {
     drop: (item, monitor) => {
       // const parent = getParent(item.card, 2);
       // parent.remove(item.card);
-
-      // if(item.card.destination.cards.length===1) {
-      //    item.card.destination.removeCard(item.card);
-      // }
       item.card.destination.removeCard(item.card);
       pile.put(item.card);
 
