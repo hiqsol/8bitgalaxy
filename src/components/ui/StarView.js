@@ -94,9 +94,6 @@ const Slot = observer(({ name, star, y, x, card, slot, isActive }) => {
       accept: "CARD",
       drop: (item, monitor) => {
         let a = monitor.getItem();
-        // const parent = getParent(item.card, 2);
-        // parent.remove(item.card);
-
         if (item.card.Type === card.Name) {
           item.card.destination.removeCard(item.card);
           star.put(item.card, slot);

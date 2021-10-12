@@ -12,8 +12,6 @@ function PileView({pile, y, x}) {
   const [{isOver}, dropRef] = useDrop(() => ({
     accept: "CARD",
     drop: (item, monitor) => {
-      // const parent = getParent(item.card, 2);
-      // parent.remove(item.card);
       item.card.destination.removeCard(item.card);
       pile.put(item.card);
 
@@ -25,7 +23,6 @@ function PileView({pile, y, x}) {
       isOver: !!monitor.isOver(),
     }),
   }), [x, y]);
-  const turnedCards = pile.cards.filter(card => !card.isTurned);
 
   return (
     <div

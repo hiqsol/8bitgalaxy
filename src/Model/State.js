@@ -9,10 +9,7 @@ class State {
     this._inserted    = false;
     this._alternative = false;
     this.parseName(name);
-     makeAutoObservable(this);
-     //////
-   this._parent = null;
-
+    makeAutoObservable(this);
   }
 
   parseName(name) {
@@ -52,10 +49,6 @@ class State {
     }
     return Names.Visible;
   }
-
-   ///////
-   get parent() { return this._parent;}
-
    
   turnOver() {
     this._turned = !this._turned;
@@ -100,9 +93,7 @@ const Names = Object.freeze({
   Ins: "Inserted",
   Inserted: "Inserted",
   Alt: "Alternative",
-   Alternative: "Alternative",
-  /////
-  Parent: "Parent",
+  Alternative: "Alternative",
 });
 
 export default State;

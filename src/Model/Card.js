@@ -12,94 +12,38 @@ class Card {
     makeAutoObservable(this);
   }
 
-  get State() {
-    return this._state;
-  }
-  get visibility() {
-    return this._state.visibility;
-  }
-  get isAbsent() {
-    return this._state.isAbsent;
-  }
-  get isTurned() {
-    return this._state.isTurned;
-  }
-  get isVisible() {
-    return this._state.isVisible;
-  }
-  get isAlternative() {
-    return this._state.isAlternative;
-  }
+  get State()             { return this._state; }
+  get visibility()        { return this._state.visibility; }
+  get isAbsent()          { return this._state.isAbsent; }
+  get isTurned()          { return this._state.isTurned; }
+  get isVisible()         { return this._state.isVisible; }
+  get isAlternative()     { return this._state.isAlternative; }
 
-  get aCard() {
-    return this._acard;
-  }
-  get Specs() {
-    return this._acard.Specs;
-  }
-  get Alternative() {
-    return this._acard.Alternative;
-  }
+  get aCard()             { return this._acard; }
+  get Specs()             { return this._acard.Specs; }
+  get Alternative()       { return this._acard.Alternative; }
 
-  get Name() {
-    return this.aCard.Name;
-  }
-  get Type() {
-    return this.aCard.Type;
-  }
-  get Race() {
-    return this.aCard.Race;
-  }
-  get Level() {
-    return this.statedValue(Prop.Level);
-  }
-  get Klass() {
-    return this.statedValue(Prop.Klass);
-  }
-  get Defense() {
-    return this.statedValue(Prop.Defense);
-  }
-  get Attack() {
-    return this.statedValue(Prop.Attack);
-  }
-  get Colonization() {
-    return this.statedValue(Prop.Colonization);
-  }
-  get Science() {
-    return this.statedValue(Prop.Science);
-  }
-  get Production() {
-    return this.statedValue(Prop.Production);
-  }
-  get Requires() {
-    return this.statedValue(Prop.Requires);
-  }
-  get Cooperation() {
-    return this.statedValue(Prop.Cooperation);
-  }
-  get Utilization() {
-    return this.statedValue(Prop.Utilization);
-  }
+  get Name()              { return this.aCard.Name; }
+  get Type()              { return this.aCard.Type; }
+  get Race()              { return this.aCard.Race; }
+  get Level()             { return this.statedValue(Prop.Level); }
+  get Klass()             { return this.statedValue(Prop.Klass); }
+  get Defense()           { return this.statedValue(Prop.Defense); }
+  get Attack()            { return this.statedValue(Prop.Attack); }
+  get Colonization()      { return this.statedValue(Prop.Colonization); }
+  get Science()           { return this.statedValue(Prop.Science); }
+  get Production()        { return this.statedValue(Prop.Production); }
+  get Requires()          { return this.statedValue(Prop.Requires); }
+  get Cooperation()       { return this.statedValue(Prop.Cooperation); }
+  get Utilization()       { return this.statedValue(Prop.Utilization); }
 
-  get isHero() {
-    return this.aCard.isHero;
-  }
-  get isColony() {
-    return this.aCard.isColony;
-  }
-  get isShip() {
-    return this.aCard.isShip;
-  }
-  get isBase() {
-    return this.aCard.isBase;
-  }
+  get isHero()            { return this.aCard.isHero; }
+  get isColony()          { return this.aCard.isColony; }
+  get isShip()            { return this.aCard.isShip; }
+  get isBase()            { return this.aCard.isBase; }
 
-  get destination() {
-    return this._destination;
-  }
-  get hasDestination() {
-    return this._destination !== null;
-  }
+  get destination()       { return this._destination; }
+  get hasDestination()    { return this._destination !== null; }
 
   static AbsentBase = Card.assert("absent Base");
   static AbsentHero = Card.assert("absent Hero");
@@ -130,12 +74,12 @@ class Card {
     if (sample instanceof Card) {
       sample.setDestination(destination);
       return sample;
-    };
+    }
     if (typeof sample === "string") {
       const card = Card.fromString(sample);
       card.setDestination(destination);
       return card;
-    };
+    }
     Assert.error("not a Card", sample);
   }
 
