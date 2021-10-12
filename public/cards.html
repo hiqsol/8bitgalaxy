@@ -8,15 +8,32 @@
       import Demo from "./js/Demo.js";
       import Card from "./js/Model/Card.js";
       import Pile from "./js/Model/Pile.js";
+      import Generator from "./js/Model/Generator.js";
 
       let game = (new Demo()).game;
       let vert = new Pile('Discard');
-      vert.put('AI-Hero-1a');
+      let res = (new Generator()).all();
+
+      function pickRandomCard(res) {
+        let result;
+        let count = 0;
+        for (let prop in res)
+        if (Math.random() < 1 / ++count)
+          result = prop;
+          return result;
+      }
+      
+      vert.put(pickRandomCard(res));
+      // vert.put('AI-Hero-1a');
       let v = game.draw(null, vert, 1, 1);
-      game.draw(v, Card.assert('Human-Ship-2c'),    0, 8*1);
-      game.draw(v, Card.assert('Human-Base-3s'),    0, 8*2);
-      game.draw(v, Card.assert('Human-Colony-4p'),  0, 8*3);
-      game.draw(v, Card.assert('Human-Tech-5c'),    0, 8*4);
+      game.draw(v, Card.assert(pickRandomCard(res)),    0, 8*1);
+      game.draw(v, Card.assert(pickRandomCard(res)),    0, 8*2);
+      game.draw(v, Card.assert(pickRandomCard(res)),    0, 8*3);
+      game.draw(v, Card.assert(pickRandomCard(res)),    0, 8*4);
+      // game.draw(v, Card.assert('Human-Ship-2c'),    0, 8*1);
+      // game.draw(v, Card.assert('Human-Base-3s'),    0, 8*2);
+      // game.draw(v, Card.assert('Human-Colony-4p'),  0, 8*3);
+      // game.draw(v, Card.assert('Human-Tech-5c'),    0, 8*4);
 
       let horz = new Pile('Discard', 'LeftToRight');
       horz.put('AI-Hero-1a');
