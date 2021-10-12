@@ -55,23 +55,23 @@ class Prop {
 }
 
 const Names = Object.freeze({
-  Name: "Name",
-  Type: "Type",
-  Race: "Race",
-  Level: "Level",
-  Klass: "Klass",
-  Requires: "Requires",
-  Require1: "Require1",
-  Require2: "Require2",
-  Require3: "Require3",
-  Defense: "Defense",
-  Attack: "Attack",
-  Colonization: "Colonization",
-  Science: "Science",
-  Production: "Production",
-  Cooperation: "Cooperation",
-  Alternative: "Alternative",
-  Utilization: "Utilization",
-});
+  Name:              'Name',
+  Type:              'Type',
+  Race:              'Race',
+  Level:             'Level',
+  Klass:             'Klass',
+  Requires:          'Requires',
+  Require1:          'Require1',
+  Require2:          'Require2',
+  Require3:          'Require3',
+  Defense:           'Defense',
+  Attack:            'Attack',
+  Colonization:      'Colonization',
+  Science:           'Science',
+  Production:        'Production',
+  Cooperation:       'Cooperation',
+  Alternative:       'Alternative',
+  Utilization:       'Utilization',
+})
 
 export default Prop;

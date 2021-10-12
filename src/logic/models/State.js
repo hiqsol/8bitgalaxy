@@ -87,7 +87,7 @@ const Names = Object.freeze({
   Ins:          'Inserted',
   Inserted:     'Inserted',
   Alt:          'Alternative',
-  Alternative: 'Alternative',
+  Alternative:  'Alternative',
 })
 
 export default State;

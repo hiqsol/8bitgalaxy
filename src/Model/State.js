@@ -87,13 +87,13 @@ class State {
 }
 
 const Names = Object.freeze({
-  Absent: "Absent",
-  Turned: "Turned",
-  Visible: "Visible",
-  Ins: "Inserted",
-  Inserted: "Inserted",
-  Alt: "Alternative",
-  Alternative: "Alternative",
-});
+  Absent:       'Absent',
+  Turned:       'Turned',
+  Visible:      'Visible',
+  Ins:          'Inserted',
+  Inserted:     'Inserted',
+  Alt:          'Alternative',
+  Alternative:  'Alternative',
+})
 
 export default State;

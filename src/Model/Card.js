@@ -55,7 +55,7 @@ class Card {
       return null;
     }
     if (this.isAlternative) {
-      Assert.error("TODO implement!");
+      Assert.error('TODO implement!');
     }
     return this.aCard.getValue(prop);
   }
@@ -75,19 +75,19 @@ class Card {
       sample.setDestination(destination);
       return sample;
     }
-    if (typeof sample === "string") {
+    if (typeof sample === 'string') {
       const card = Card.fromString(sample);
       card.setDestination(destination);
       return card;
     }
-    Assert.error("not a Card", sample);
+    Assert.error('not a Card', sample);
   }
 
   static fromString(name) {
-    let [state, acard] = name.split(" " , 2);
+    let [state, acard] = name.split(' ' , 2);
     if (! State.isName(state)) {
       acard = state;
-      state = "";
+      state = '';
     }
     return new Card(state, acard);
   }

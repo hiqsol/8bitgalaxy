@@ -31,7 +31,7 @@ const CardView = ({card, y, x}) => {
       isDragging: !!monitor.isDragging(),
     }),
   }));
-  const handleTurnOver = (e) => {
+  const handleTurnOver = () => {
     card.turnOver();
   };
   const cardClasses = cn(
