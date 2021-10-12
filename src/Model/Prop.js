@@ -24,7 +24,7 @@ class Prop {
   static get Science()          { return Names.Science; }
   static get Cooperation()      { return Names.Cooperation; }
   static get Alternative()      { return Names.Alternative; }
-  static get Utilization() { return Names.Utilization; }
+  static get Utilization()      { return Names.Utilization; }
 
   static assert(sample) {
     if (sample instanceof(Prop)) {
