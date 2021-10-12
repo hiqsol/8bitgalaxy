@@ -7,9 +7,7 @@ class State {
     this._turned      = false;
     this._inserted    = false;
     this._alternative = false;
-     this.parseName(name);
-     /////////
-     this._parent = null;
+    this.parseName(name);
   }
 
   parseName(name) {
@@ -48,10 +46,7 @@ class State {
       return Names.Turned;
     }
     return Names.Visible;
-   }
-
-   ////////
-   get parent() { return this._parent;}
+  }
 
   static assert(sample) {
     if (sample instanceof(State)) {
@@ -92,9 +87,7 @@ const Names = Object.freeze({
   Ins:          'Inserted',
   Inserted:     'Inserted',
   Alt:          'Alternative',
-   Alternative: 'Alternative',
-   ///////
-   Parent: 'Parent',
+  Alternative: 'Alternative',
 })
 
 export default State;

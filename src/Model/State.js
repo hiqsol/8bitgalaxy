@@ -49,7 +49,7 @@ class State {
     }
     return Names.Visible;
   }
-   
+
   turnOver() {
     this._turned = !this._turned;
   }
