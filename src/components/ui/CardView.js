@@ -1,13 +1,16 @@
-import React from "react";
-import {observer} from "mobx-react-lite";
+import React, { useState } from "react";
+import { observer } from "mobx-react-lite";
 import cn from "classnames";
-import {useDrag} from "react-dnd";
+import { useDrag } from "react-dnd";
 import SpecsView from "./SpecsView";
 import usePosition from "../../state/hooks/usePosition";
+import CardBoxView from "../CardBox/CardBoxView";
+import useCardBox from "../../state/hooks/useCardBox";
 
-const CardView = ({card, y, x}) => {
+const CardView = ({ card, y, x }) => {
+  const addCardBox = useCardBox();
   const [p] = usePosition(y, x);
-  const [{isDragging}, dragRef] = useDrag(() => ({
+  const [{ isDragging }, dragRef] = useDrag(() => ({
     type: "CARD",
     item: {
       card: card,
@@ -27,7 +30,7 @@ const CardView = ({card, y, x}) => {
       //   parent.remove(item.card);
       // }
     },
-    collect: monitor => ({
+    collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
   }));
@@ -38,12 +41,14 @@ const CardView = ({card, y, x}) => {
     "Card",
     card.visibility,
     card.Type ?? "Ship",
-    card.Race ?? "Neutral",
+    card.Race ?? "Neutral"
   );
   const imageClasses = cn(
     "Klass",
     "lni",
-    !card.isAbsent && !card.isTurned ? "lni-" + type2image(card.Specs.Type) : null,
+    !card.isAbsent && !card.isTurned
+      ? "lni-" + type2image(card.Specs.Type)
+      : null
   );
   if (card.isAbsent) {
     return (
@@ -57,27 +62,36 @@ const CardView = ({card, y, x}) => {
 
   return (
     <div
+      onMouseOver={addCardBox.mouseOverCard}
+      onMouseLeave={addCardBox.mouseLeaveCard}
+      onMouseDown={addCardBox.mouseDownCard}
       ref={dragRef}
       className={cardClasses}
       onClick={handleTurnOver.bind(this)}
       style={{left: -10 + p.x + "px", top: -10 + p.y + "px", border: isDragging ? "2px solid red" : "none"}}
     >
+      {addCardBox.isFocusedCard && <CardBoxView card={card} />}
+
       <div className="Image">
-        <div className={imageClasses}/>
+        <div className={imageClasses} />
       </div>
       <div className="Name">
         <div className="Value">{card.Name}</div>
       </div>
-      {card.isVisible ? <Specs card={card}/> : ""}
+      {card.isVisible ? <Specs card={card} /> : ""}
     </div>
   );
 };
 
-function Specs({card}) {
+function Specs({ card }) {
   return (
     <>
-      <SpecsView specs={card.Specs}/>
-      {(!card.isInserted && card.Alternative) ? <SpecsView specs={card.Alternative} isAlternative={true}/> : ""}
+      <SpecsView specs={card.Specs} />
+      {!card.isInserted && card.Alternative ? (
+        <SpecsView specs={card.Alternative} isAlternative={true} />
+      ) : (
+        ""
+      )}
     </>
   );
 }
