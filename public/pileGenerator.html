@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>Cards: 8-bit Galaxy</title>
+    <link rel="stylesheet" href="styles/8bitfont.css">
+  </head>
+  <body>
+    <script type="module">
+      import Demo from "./js/Demo.js";
+      import Card from "./js/Model/Card.js";
+      import Pile from "./js/Model/Pile.js";
+      import Generator from "./js/Model/Generator.js";
+      
+      let res = (new Generator()).all();
+      
+      let resFilterRaceHuman = (new Generator()).filterAllRace('Human');
+      // let resFilterRaceAI = (new Generator()).filterAllRace('AI');
+      console.log('Filter Race Human',resFilterRaceHuman)
+      // console.log('Filter Race AI',resFilterRaceAI)
+      
+      let collection = [];
+
+      function pickRandomCardType(resFilterRace, type) {
+        let result;
+        let count = 0;
+        let arrType = resFilterRace.filter(g => g[0].includes(type)).sort().reverse();
+        for (let item of arrType) {
+          if (collection.includes(item[0])) continue;
+            result = item[0];
+          }
+        if(result !== undefined) collection.push(result);
+        return result;
+      }
+    
+      let game = (new Demo()).game;
+      let vert2 = new Pile('Discard');
+      vert2.put(pickRandomCardType(resFilterRaceHuman, 'Hero'));
+      let v2 = game.draw(null, vert2, 1, 0);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 5);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 10);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 15);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 20);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 25);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 30);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 35);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 40);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 45);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 50);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Hero')),    0, 55);
+
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 0);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 5);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 10);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 15);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 20);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 25);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 30);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 35);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 40);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 45);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 50);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Base')),    8, 55);
+      
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 0);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 5);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 10);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 15);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 20);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 25);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 30);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 35);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 40);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 45);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 50);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Colony')),  16, 55);
+      
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 0);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 5);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 10);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 15);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 20);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 25);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 30);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 35);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 40);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 45);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 50);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 55);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 60);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 65);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 70);
+      game.draw(v2, Card.assert(pickRandomCardType(resFilterRaceHuman, 'Ship')),    24, 75);
+    </script>
+  </body>
+</html>
