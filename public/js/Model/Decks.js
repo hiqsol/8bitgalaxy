@@ -15,8 +15,8 @@ class Decks {
 
   static getCard(name) {
     let res = Decks.get(name);
-    console.log(name);
-    console.log(res);
+   //  console.log(name);
+   //  console.log(res);
     // throw new Error('die');
     return new aCard(Decks.get(name));
   }
