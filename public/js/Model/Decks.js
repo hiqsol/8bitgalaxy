@@ -16,7 +16,8 @@ class Decks {
   static getCard(name) {
     let res = Decks.get(name);
     console.log(name);
-    console.log(res);throw new Error('die');
+    console.log(res);
+   //  throw new Error('die');
     return new aCard(Decks.get(name));
   }
 
@@ -36,7 +37,8 @@ class Decks {
   static parseCard(name, specs) {
     let type = typeof(specs);
     let res = Decks.parseName(name);
-    console.log(res);throw new Error('die');
+    console.log(res);
+   //  throw new Error('die');
     if (!specs) {
       return res;
     }
