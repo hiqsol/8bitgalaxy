@@ -103,7 +103,6 @@ class GenDeck {
     Object.assign(res, this.bases());
     Object.assign(res, this.ships());    
     Object.assign(res, this.heroes());
-    // console.log('GeneratorALL',res)
     return res;
   }
 
@@ -117,12 +116,6 @@ class GenDeck {
       res[this.colony(7, klass)] = 'a8' + klass;
       res[this.colony(8, klass)] = 'a7' + klass;
     }
-    // for (const klass of [this._p1, this._p2]) {
-    //   res[this.colony(5, klass)] = 'a6' + klass;
-    //   res[this.colony(6, klass)] = 'a5' + klass;
-    //   res[this.colony(7, klass)] = 'a8' + klass;
-    //   res[this.colony(8, klass)] = 'a7' + klass;
-    // }
     return res;
   }
 
@@ -131,18 +124,11 @@ class GenDeck {
     for (const klass in Klass.Letters) {
       res[this.base(3, klass)] = '';
       res[this.base(4, klass)] = '';
-
       res[this.base(5, klass)] = 'a6' + klass;
       res[this.base(6, klass)] = 'a5' + klass;
       res[this.base(7, klass)] = 'a8' + klass;
       res[this.base(8, klass)] = 'a7' + klass;
     }
-    // for (const klass of [this._p1, this._p2]) {
-    //   res[this.base(5, klass)] = 'a6' + klass;
-    //   res[this.base(6, klass)] = 'a5' + klass;
-    //   res[this.base(7, klass)] = 'a8' + klass;
-    //   res[this.base(8, klass)] = 'a7' + klass;
-    // }
     return res;
   }
 
@@ -153,12 +139,10 @@ class GenDeck {
       res[this.ship(2, klass)] = '';
       res[this.ship(3, klass)] = 'a4' + klass;
       res[this.ship(4, klass)] = 'a3' + klass;
-
       res[this.ship(5, klass)] = 'a6' + klass;
       res[this.ship(6, klass)] = 'a5' + klass;
       res[this.ship(7, klass)] = 'a8' + klass;
       res[this.ship(8, klass)] = 'a7' + klass;
-      // res[this.ship(1, klass)] = '' + klass;
     }
     // for (const klass of [this._p1, this._p2]) {
     //   res[this.ship(5, klass)] = 'a6' + klass;
@@ -176,7 +160,6 @@ class GenDeck {
       res[this.hero(2, klass)] = 'a1' + klass;
       res[this.hero(3, klass)] = 'a4' + klass;
       res[this.hero(4, klass)] = 'a3' + klass;
-
       res[this.hero(5, klass)] = 'a6' + klass;
       res[this.hero(6, klass)] = 'a5' + klass;
       res[this.hero(7, klass)] = 'a8' + klass;
