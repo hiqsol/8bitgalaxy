@@ -43,7 +43,7 @@ class Card {
   static AbsentHero   = Card.assert('absent Hero');
   static AbsentShip   = Card.assert('absent Ship');
   static AbsentColony = Card.assert('absent Colony');
-
+   
   statedValue(prop)       {
     if (this.isTurned) {
       return null;
