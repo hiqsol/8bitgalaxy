@@ -15,9 +15,6 @@ class Decks {
 
   static getCard(name) {
     let res = Decks.get(name);
-    console.log(name);
-    console.log(res);
-   //  throw new Error('die');
     return new aCard(Decks.get(name));
   }
 
@@ -37,8 +34,6 @@ class Decks {
   static parseCard(name, specs) {
     let type = typeof(specs);
     let res = Decks.parseName(name);
-    console.log(res);
-   //  throw new Error('die');
     if (!specs) {
       return res;
     }
@@ -77,7 +72,7 @@ class Decks {
     Assert.string(spec);
     let prefix = spec.charAt(0).toLowerCase();
     let action = Action.assert(spec.substring(1, 3));
-    console.log(action);
+    // console.log(action);
     if (spec.length === 2) {
       action = Action.assert(spec);
       return new Spec(action.Klass, action);

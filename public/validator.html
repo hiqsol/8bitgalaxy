@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Cards: 8-bit Galaxy</title>
+    <link rel="stylesheet" href="styles/8bitfont.css">
+  </head>
+  <body>
+    <script type="module">
+      import Decks from "./js/Model/Decks.js";
+      import Validator from "./js/Model/Validator.js";
+      import Generator from "./js/Model/Generator.js";
+
+
+      let resFilterRaceHuman = (new Generator()).filterAllRace('Human');
+      let resFilterRaceAI = (new Generator()).filterAllRace('AI');
+      let allRaces = Object.fromEntries([...resFilterRaceHuman, ...resFilterRaceAI]);
+      console.log(allRaces);
+
+      let val = new Validator();
+      val.stats(allRaces);
+      console.log(val._stats['Human']);
+      console.log(val._stats['AI']);
+      // throw new Error('die');
+
+    </script>
+    <h1>heello</h1>
+  </body>
+</html>
