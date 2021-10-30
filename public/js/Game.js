@@ -10,7 +10,7 @@ class Game {
   constructor(options = {}) {
     this._options = Options.assert(options);
     this._drawer = options.drawer ?? new Drawer();
-    this._board = options.board ?? new Board();
+    this._board = options.board ?? new Board(this);
     this.init();
   }
 
