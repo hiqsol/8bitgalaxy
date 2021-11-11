@@ -1,25 +1,61 @@
 import "./styles/8bitfont.css";
 import React from "react";
-import {HTML5Backend} from "react-dnd-html5-backend";
-import {DndProvider} from "react-dnd";
-import {observer} from "mobx-react-lite";
+import { Switch , Route, useHistory } from 'react-router';
+import { Client } from 'boardgame.io/react';
+import { Local } from 'boardgame.io/multiplayer';
+import { Debug } from 'boardgame.io/debug';
+import Lobby from './components/ui/Lobby.js';
+import HomePage from './components/ui/HomePage.js';
+import JoinPage from './components/ui/JoinPage.js';
+import RematchLobby from './components/ui/RematchLobby.js';
+import { Game } from './logic/game/gameLogic.js';
+import GameViewFull from "./components/ui/GameViewFull";
 
-import Demo from "./Demo";
-import GameView from "./components/ui/GameView";
 
-const App = () => {
-  const game = (new Demo()).game;
+function App() {
+  const history = useHistory();
 
+  const GameClient = Client({
+    game: Game,
+    board: GameViewFull,
+    multiplayer: Local(),
+    debug: { impl: Debug },
+  });
+  
+  const renderGameClient = () => {
+    return <GameClient playerID="0" demo="true"></GameClient>;
+  };
   return (
-    <div className="App">
-      <DndProvider debugMode={true} backend={HTML5Backend}>
-        <GameView game={game}/>
-      </DndProvider>
-    </div>
+    <Switch>
+      <Route
+        path="/home"
+        exact
+        render={(props) => <HomePage {...props} history={history} />}
+      />
+      <Route
+        path="/join"
+        exact
+        render={(props) => <JoinPage {...props} history={history} />}
+      />
+      <Route path="/demo" exact render={() => renderGameClient()} />
+      <Route
+        path="/rematch"
+        render={(props) => <RematchLobby {...props} key={props.location.key} />}
+      />
+      <Route path="/lobby/:id" component={Lobby} />
+      <Route
+        path="/public_lobby/:id"
+        render={(props) => <Lobby {...props} isPublic={true} />}
+      />
+      <Route
+        path="*"
+        render={(props) => <HomePage {...props} history={history} />}
+      />
+    </Switch>
   );
-};
+}
 
-export default observer(App);
+export default App;
 
 // import PileView from "./components/ui/PileView";
 // import CardView from "./components/ui/CardView";

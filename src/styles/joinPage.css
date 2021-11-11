@@ -1,0 +1,20 @@
+.game-code-window {
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    height: 84px;
+    padding: 24px;
+    font-size: 28px;
+    border-radius: 8px;
+    margin-top: 150px;
+    background-color: #ffffff;
+    outline: none;
+    position: relative;
+}
+
+.game-code-window:focus::placeholder {
+    color: transparent;
+}
+
+.small {
+    width: 128px;
+  }  
