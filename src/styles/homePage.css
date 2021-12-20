@@ -55,3 +55,68 @@
   transform: scale(1, 0.1);
   opacity: 0;
 }
+
+#chat {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 20px;
+  left: 20px;
+  width: 25%;
+  height: 35%;
+}
+
+#chat-bottom {
+  margin-top: auto;
+  display: flex;
+  min-height: 35px;
+}
+
+#chat-top {
+  position: fixed;
+  bottom: 60px;
+  left: 25px;
+  width: 25%;
+}
+
+#enter-message {
+  width: 85%;
+  outline: none;
+  background: rgba(0, 0, 0, 0);
+  color: #e0ffff;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+#enter-message::placeholder {
+  color: #e0ffff;
+}
+
+#enter-message:focus::placeholder {
+  color: transparent;
+}
+
+.message-wrapper {
+  display: flex;
+}
+
+.sender, .message-content {
+  margin: 0;
+}
+
+.sender {
+  font-weight: 900;
+}
+
+.message-content {
+  padding-left: 5px;
+  font-weight: 500;
+}
+
+.hero-message {
+  color: #e0ffff;
+}
+
+.villain-message {
+  color: #ffdead;
+}

@@ -5,7 +5,7 @@ import {map} from "lodash";
 import PileView from "./PileView";
 import {observer} from "mobx-react-lite";
 
-const RowView = ({row, y, x}) => {
+const RowView = ({row, y, x, props}) => {
     const [p] = usePosition(y, x);
 
     return (
@@ -15,6 +15,7 @@ const RowView = ({row, y, x}) => {
           pile={row.pile(row.size - i - 1)}
           y={i * row.direction.yStep * 6}
           x={i * row.direction.xStep * 6}
+          props={props}
         />)}
       </div>
     );

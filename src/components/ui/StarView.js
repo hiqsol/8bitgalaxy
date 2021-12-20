@@ -20,7 +20,7 @@ const OverView = styled.div`
   }
 `;
 
-const StarView = ({star}) => {
+const StarView = ({star, props}) => {
   const [, m] = usePosition();
   const indent = star.y % 2 ? 0 : 7.75 * m;
   const [{ isOver, canDrop}, drop] = useDrop(() =>({
@@ -43,28 +43,28 @@ const StarView = ({star}) => {
         <span><div className="inner lni lni-sun"/></span>
       </OverView>
 
-      <CardViewer card={star.base(0)} y={3} x={0} slot={0} isActive={isActive} star={star}/>
-      <CardViewer card={star.base(1)} y={4} x={0} slot={1} isActive={isActive} star={star}/>
-      <CardViewer card={star.base(2)} y={5} x={0} slot={2} isActive={isActive} star={star}/>
+      <CardViewer card={star.base(0)} y={3} x={0} slot={0} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.base(1)} y={4} x={0} slot={1} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.base(2)} y={5} x={0} slot={2} isActive={isActive} star={star} props={props}/>
 
-      <CardViewer card={star.ship(0)} y={6} x={0} slot={0} isActive={isActive} star={star}/>
-      <CardViewer card={star.ship(1)} y={6} x={1} slot={1} isActive={isActive} star={star}/>
-      <CardViewer card={star.ship(2)} y={6} x={2} slot={2} isActive={isActive} star={star}/>
-      <CardViewer card={star.ship(3)} y={6} x={3} slot={3} isActive={isActive} star={star}/>
+      <CardViewer card={star.ship(0)} y={6} x={0} slot={0} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.ship(1)} y={6} x={1} slot={1} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.ship(2)} y={6} x={2} slot={2} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.ship(3)} y={6} x={3} slot={3} isActive={isActive} star={star} props={props}/>
 
-      <CardViewer card={star.colony(0)} y={3} x={8} slot={0} isActive={isActive} star={star}/>
-      <CardViewer card={star.colony(1)} y={4} x={8} slot={1} isActive={isActive} star={star}/>
-      <CardViewer card={star.colony(2)} y={5} x={8} slot={2} isActive={isActive} star={star}/>
+      <CardViewer card={star.colony(0)} y={3} x={8} slot={0} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.colony(1)} y={4} x={8} slot={1} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.colony(2)} y={5} x={8} slot={2} isActive={isActive} star={star} props={props}/>
 
-      <CardViewer card={star.hero(0)} y={7} x={7} slot={0} isActive={isActive} star={star}/>
-      <CardViewer card={star.hero(1)} y={8} x={7} slot={1} isActive={isActive} star={star}/>
-      <CardViewer card={star.hero(2)} y={9} x={7} slot={2} isActive={isActive} star={star}/>
-      <CardViewer card={star.hero(3)} y={10} x={7} slot={3} isActive={isActive} star={star}/>
+      <CardViewer card={star.hero(0)} y={7} x={7} slot={0} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.hero(1)} y={8} x={7} slot={1} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.hero(2)} y={9} x={7} slot={2} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.hero(3)} y={10} x={7} slot={3} isActive={isActive} star={star} props={props}/>
     </View>
   );
 };
 
-const CardViewer = observer(({card, y, x, slot, isActive, star}) => {
+const CardViewer = observer(({card, y, x, slot, isActive, star, props}) => {
   if (card.isAbsent) {
     return(
       <Slot y={y} x={x} card={card} slot={slot} isActive={isActive} star={star}/>
@@ -72,7 +72,7 @@ const CardViewer = observer(({card, y, x, slot, isActive, star}) => {
   };
 
   return (
-    <CardView card={card} y={y+0.8} x={x+0.8}/>
+    <CardView card={card} y={y+0.8} x={x+0.8} props={props}/>
   );
 });
 

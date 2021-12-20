@@ -7,7 +7,7 @@ import usePosition from "../../state/hooks/usePosition";
 import CardBoxView from "../CardBox/CardBoxView";
 import useCardBox from "../../state/hooks/useCardBox";
 
-const CardView = ({ card, y, x }) => {
+const CardView = ({ card, y, x, props}) => {
   const addCardBox = useCardBox();
   const [p] = usePosition(y, x);
   const [{ isDragging }, dragRef] = useDrag(() => ({
@@ -40,13 +40,17 @@ const CardView = ({ card, y, x }) => {
   const cardClasses = cn(
     "Card",
     card.visibility,
+    // card.Type || "Ship",
+    // card.Race || "Neutral"
     card.Type ?? "Ship",
     card.Race ?? "Neutral"
   );
   const imageClasses = cn(
     "Klass",
     "lni",
+    // !card._state._absent && !card._state._turned
     !card.isAbsent && !card.isTurned
+      // ? "lni-" + type2image(card._acard._specs._specs.Type)
       ? "lni-" + type2image(card.Specs.Type)
       : null
   );
@@ -59,7 +63,6 @@ const CardView = ({ card, y, x }) => {
       </div>
     );
   }
-
   return (
     <div
       onMouseOver={addCardBox.mouseOverCard}
@@ -67,7 +70,8 @@ const CardView = ({ card, y, x }) => {
       onMouseDown={addCardBox.mouseDownCard}
       ref={dragRef}
       className={cardClasses}
-      onClick={handleTurnOver.bind(this)}
+      onClick={() => {props.moves.handleTurnOver2()}}
+      // onClick={handleTurnOver.bind(this)}
       style={{left: -10 + p.x + "px", top: -10 + p.y + "px", border: isDragging ? "2px solid red" : "none"}}
     >
       {addCardBox.isFocusedCard && <CardBoxView card={card} />}

@@ -10,7 +10,8 @@ class Game {
   constructor(options = {}) {
     this._options = Options.assert(options);
     // this._drawer = options.drawer ?? new Drawer();
-    this._board = options.board ?? new Board();
+    this._board = options.board || new Board();
+    // this._board = options.board ?? new Board();
     this.init();
   }
 
@@ -36,7 +37,8 @@ class Game {
   }
 
   draw(parent = null, obj = null, y, x) {
-    return this.drawer.draw(parent, obj ?? this, y, x);
+    return this.drawer.draw(parent, obj || this, y, x);
+    // return this.drawer.draw(parent, obj ?? this, y, x);
   }
 
   static assert(sample) {
