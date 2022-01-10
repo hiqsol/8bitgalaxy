@@ -2,9 +2,10 @@ import "../../styles/8bitfont.css";
 import React from "react";
 import {HTML5Backend} from "react-dnd-html5-backend";
 import {DndProvider} from "react-dnd";
-import {observer} from "mobx-react-lite";
 import GameView from "./GameView";
 import StateConverter from '../../Model/StateConverter';
+import GameContext from "../../logic/game/gameContext";
+
 
 const GameViewFull = ({ playerID, demo, ...props }) => {
   const stateConverter = new StateConverter();
@@ -12,11 +13,17 @@ const GameViewFull = ({ playerID, demo, ...props }) => {
 
   return (
     <div className="App">
-      <DndProvider debugMode={true} backend={HTML5Backend}>
-        <GameView game={stateFromString} props={props} demo={demo} handID={playerID} />
-      </DndProvider>
+      <GameContext.Provider value={{stateFromString: stateFromString, props: props}}>
+          <GameContext.Consumer>
+            {(context) => (
+              <DndProvider debugMode={true} backend={HTML5Backend}>
+                <GameView game={context.stateFromString} demo={demo} handID={playerID} />
+              </DndProvider>
+            )}
+          </GameContext.Consumer>
+      </GameContext.Provider>
     </div>
   );
 };
 
-export default observer(GameViewFull);
+export default GameViewFull;

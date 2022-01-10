@@ -1,9 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import {useDrop} from "react-dnd";
 import styled from "styled-components";
 import usePosition from "../../state/hooks/usePosition";
 import CardView from "./CardView";
-import {observer} from "mobx-react-lite";
+import StateConverter from "../../Model/StateConverter";
+import GameContext from "../../logic/game/gameContext";
+
+const stateConverter = new StateConverter();
 
 const View = styled.div`
   left: ${({left}) => left + "px"};
@@ -20,7 +23,7 @@ const OverView = styled.div`
   }
 `;
 
-const StarView = ({star, props}) => {
+const StarView = ({star}) => {
   const [, m] = usePosition();
   const indent = star.y % 2 ? 0 : 7.75 * m;
   const [{ isOver, canDrop}, drop] = useDrop(() =>({
@@ -43,38 +46,46 @@ const StarView = ({star, props}) => {
         <span><div className="inner lni lni-sun"/></span>
       </OverView>
 
-      <CardViewer card={star.base(0)} y={3} x={0} slot={0} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.base(1)} y={4} x={0} slot={1} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.base(2)} y={5} x={0} slot={2} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.base(0)} y={3} x={0} slot={0} isActive={isActive} star={star}/>
+      <CardViewer card={star.base(1)} y={4} x={0} slot={1} isActive={isActive} star={star}/>
+      <CardViewer card={star.base(2)} y={5} x={0} slot={2} isActive={isActive} star={star}/>
 
-      <CardViewer card={star.ship(0)} y={6} x={0} slot={0} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.ship(1)} y={6} x={1} slot={1} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.ship(2)} y={6} x={2} slot={2} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.ship(3)} y={6} x={3} slot={3} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.ship(0)} y={6} x={0} slot={0} isActive={isActive} star={star}/>
+      <CardViewer card={star.ship(1)} y={6} x={1} slot={1} isActive={isActive} star={star}/>
+      <CardViewer card={star.ship(2)} y={6} x={2} slot={2} isActive={isActive} star={star}/>
+      <CardViewer card={star.ship(3)} y={6} x={3} slot={3} isActive={isActive} star={star}/>
 
-      <CardViewer card={star.colony(0)} y={3} x={8} slot={0} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.colony(1)} y={4} x={8} slot={1} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.colony(2)} y={5} x={8} slot={2} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.colony(0)} y={3} x={8} slot={0} isActive={isActive} star={star}/>
+      <CardViewer card={star.colony(1)} y={4} x={8} slot={1} isActive={isActive} star={star}/>
+      <CardViewer card={star.colony(2)} y={5} x={8} slot={2} isActive={isActive} star={star}/>
 
-      <CardViewer card={star.hero(0)} y={7} x={7} slot={0} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.hero(1)} y={8} x={7} slot={1} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.hero(2)} y={9} x={7} slot={2} isActive={isActive} star={star} props={props}/>
-      <CardViewer card={star.hero(3)} y={10} x={7} slot={3} isActive={isActive} star={star} props={props}/>
+      <CardViewer card={star.hero(0)} y={7} x={7} slot={0} isActive={isActive} star={star}/>
+      <CardViewer card={star.hero(1)} y={8} x={7} slot={1} isActive={isActive} star={star}/>
+      <CardViewer card={star.hero(2)} y={9} x={7} slot={2} isActive={isActive} star={star}/>
+      <CardViewer card={star.hero(3)} y={10} x={7} slot={3} isActive={isActive} star={star}/>
     </View>
   );
 };
 
-const CardViewer = observer(({card, y, x, slot, isActive, star, props}) => {
+const CardViewer = ({card, y, x, slot, isActive, star}) => {
   if (card.isAbsent) {
     return(
-      <Slot y={y} x={x} card={card} slot={slot} isActive={isActive} star={star}/>
+      <GameContext.Consumer>  
+        {(context) => (
+          <Slot y={y} x={x} card={card} slot={slot} isActive={isActive} star={star} props={context.props} context={context.stateFromString}/>      
+        )}
+      </GameContext.Consumer>
     );
   };
 
   return (
-    <CardView card={card} y={y+0.8} x={x+0.8} props={props}/>
+    <GameContext.Consumer>
+      {(context) => (
+        <CardView card={card} y={y+0.8} x={x+0.8} props={context.props} game={context.stateFromString}/>
+      )}
+    </GameContext.Consumer>
   );
-});
+};
 
 const SlotView = styled.div`
   position: absolute;
@@ -88,7 +99,7 @@ const SlotView = styled.div`
   height: 200px;
 `;
 
-const Slot = observer(({ name, star, y, x, card, slot, isActive }) => {
+const Slot = ({ name, star, y, x, card, slot, isActive, props, context}) => {
   const [p] = usePosition(y, x);
   const [{ isOver, canDrop }, dropRef] = useDrop(() => ({
       accept: "CARD",
@@ -97,6 +108,9 @@ const Slot = observer(({ name, star, y, x, card, slot, isActive }) => {
         if (item.card.Type === card.Name) {
           item.card.destination.removeCard(item.card);
           star.put(item.card, slot);
+
+          let ctxToState = JSON.parse(stateConverter.toState(context));
+          props.moves.handleDrag(ctxToState);
         }
 
         return {
@@ -122,6 +136,6 @@ const Slot = observer(({ name, star, y, x, card, slot, isActive }) => {
   return (
     <SlotView ref={dropRef} className={card.Name} y={p.y - 0} x={18 + p.x} isOver={isOver} style={{ borderColor: borderColor }}/>
   );
-});
+};
 
-export default observer(StarView);
+export default StarView;

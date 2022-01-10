@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-import { observer } from "mobx-react-lite";
+import React from "react";
 import cn from "classnames";
 import { useDrag } from "react-dnd";
 import SpecsView from "./SpecsView";
 import usePosition from "../../state/hooks/usePosition";
 import CardBoxView from "../CardBox/CardBoxView";
 import useCardBox from "../../state/hooks/useCardBox";
+import StateConverter from "../../Model/StateConverter";
 
-const CardView = ({ card, y, x, props}) => {
+
+const CardView = ({ card, y, x, props, game}) => {
+  const stateConverter = new StateConverter();
   const addCardBox = useCardBox();
   const [p] = usePosition(y, x);
   const [{ isDragging }, dragRef] = useDrag(() => ({
@@ -36,21 +38,19 @@ const CardView = ({ card, y, x, props}) => {
   }));
   const handleTurnOver = () => {
     card.turnOver();
+    let gameToState = stateConverter.toState(game);
+    props.moves.handleTurnOver(gameToState);
   };
   const cardClasses = cn(
     "Card",
     card.visibility,
-    // card.Type || "Ship",
-    // card.Race || "Neutral"
     card.Type ?? "Ship",
     card.Race ?? "Neutral"
   );
   const imageClasses = cn(
     "Klass",
     "lni",
-    // !card._state._absent && !card._state._turned
     !card.isAbsent && !card.isTurned
-      // ? "lni-" + type2image(card._acard._specs._specs.Type)
       ? "lni-" + type2image(card.Specs.Type)
       : null
   );
@@ -70,8 +70,7 @@ const CardView = ({ card, y, x, props}) => {
       onMouseDown={addCardBox.mouseDownCard}
       ref={dragRef}
       className={cardClasses}
-      onClick={() => {props.moves.handleTurnOver2()}}
-      // onClick={handleTurnOver.bind(this)}
+      onClick={handleTurnOver.bind(this)}
       style={{left: -10 + p.x + "px", top: -10 + p.y + "px", border: isDragging ? "2px solid red" : "none"}}
     >
       {addCardBox.isFocusedCard && <CardBoxView card={card} />}
@@ -123,4 +122,4 @@ const RaceImages = Object.freeze({
   human: "world",
 });
 
-export default observer(CardView);
+export default CardView;

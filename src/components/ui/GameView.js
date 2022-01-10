@@ -1,13 +1,12 @@
 import React from "react";
-import { observer } from "mobx-react-lite"
 import BoardView from "./BoardView";
 
-const GameView = ({game, props, demo, handID}) => {
+const GameView = ({game, demo, handID}) => {
   return (
     <div className="Game">
-      <BoardView board={game.board} demo={demo} handID={handID} props={props}/>
+      <BoardView board={game.board} demo={demo} handID={handID}/>
     </div>
   );
 };
 
-export default observer(GameView);
+export default GameView;

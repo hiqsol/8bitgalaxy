@@ -1,6 +1,5 @@
 import React from "react";
 import c from "classnames";
-import {observer} from "mobx-react-lite";
 
 const SpecView = ({spec}) => {
   const specClasses = c("Spec", spec.name);
@@ -30,4 +29,4 @@ function Value() {
 
 }
 
-export default observer(SpecView);
+export default SpecView;

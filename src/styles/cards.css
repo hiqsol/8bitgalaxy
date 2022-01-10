@@ -26,4 +26,4 @@
 
 .Specs.Alternative          { transform-origin: center; transform: rotate(180deg); }
 
-.Star .Card.Visible .Specs.Alternative { display:none; }
+/* .Star .Card.Visible .Specs.Alternative { display:none; } */

@@ -2,7 +2,6 @@ import React from "react";
 import c from "classnames";
 import {map} from "lodash";
 import SpecView from "./SpecView";
-import {observer} from "mobx-react-lite";
 
 const SpecsView = ({specs, isAlternative}) => {
   const classes = c("Specs", {"Normal": !isAlternative, "Alternative": isAlternative});
@@ -14,4 +13,4 @@ const SpecsView = ({specs, isAlternative}) => {
   );
 };
 
-export default observer(SpecsView);
+export default SpecsView;

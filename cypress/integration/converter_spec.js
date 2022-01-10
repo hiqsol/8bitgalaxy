@@ -13,9 +13,28 @@ const toStringDemo = stateConverter.toState(demo);
 const stateFromStringGame = stateConverter.createGame(JSON.parse(toStringGame));
 const stateFromStringDemo = stateConverter.createGame(JSON.parse(toStringDemo));
 
+const rStr = stateConverter.toState(stateFromStringDemo);
+const rGame = stateConverter.createGame(JSON.parse(rStr));
+
 describe("Obj should be equal", function () {
+  it("Game Pl should be equal State Pl", function () {
+    const d = demo._board._players[0]._home._research;
+    const s = stateFromStringDemo._board._players[0]._home._research;
+    const r = rGame._board._players[0]._home._research;
+
+    expect(d).to.eql(r);
+    expect(d).to.eql(s);
+    expect(s).to.eql(r);
+  });
   it("Game should be equal stateFromStringGame", function () {
     expect(game).to.eql(stateFromStringGame);
+  });
+  it("DemoStrg should be equal stateFromStringDemoStr", function () {
+    let _g = stateConverter.toState(game);
+    let _d = stateConverter.toState(stateFromStringDemo);
+
+    // expect(_g).to.equal(_d);
+    // expect(_g).to.deep.equal(_d);
   });
   it("Demo Options should be equal StateFromStringDemo Options", function () {
     const demoOptions = demo._options;

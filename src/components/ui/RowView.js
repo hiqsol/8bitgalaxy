@@ -3,9 +3,8 @@ import usePosition from "../../state/hooks/usePosition";
 import cn from "classnames";
 import {map} from "lodash";
 import PileView from "./PileView";
-import {observer} from "mobx-react-lite";
 
-const RowView = ({row, y, x, props}) => {
+const RowView = ({row, y, x, props, game}) => {
     const [p] = usePosition(y, x);
 
     return (
@@ -16,10 +15,11 @@ const RowView = ({row, y, x, props}) => {
           y={i * row.direction.yStep * 6}
           x={i * row.direction.xStep * 6}
           props={props}
+          game={game}
         />)}
       </div>
     );
   }
 ;
 
-export default observer(RowView);
+export default RowView;

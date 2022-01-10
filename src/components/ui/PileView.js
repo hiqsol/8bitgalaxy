@@ -1,12 +1,13 @@
 import React from "react";
 import cn from "classnames";
 import {useDrop} from "react-dnd";
-import {observer} from "mobx-react-lite";
 import CardView from "./CardView";
 import usePosition from "../../state/hooks/usePosition";
 import useHover from "../../state/hooks/useHover";
+import StateConverter from "../../Model/StateConverter";
 
-function PileView({pile, y, x, props}) {
+function PileView({pile, y, x, props, game}) {
+  const stateConverter = new StateConverter();
   const [p] = usePosition(y, x);
   const [hoverRef, isHover] = useHover();
   const [{isOver}, dropRef] = useDrop(() => ({
@@ -14,6 +15,9 @@ function PileView({pile, y, x, props}) {
     drop: (item, monitor) => {
       item.card.destination.removeCard(item.card);
       pile.put(item.card);
+
+      let gameToState = JSON.parse(stateConverter.toState(game));
+      props.moves.handleDrag(gameToState);
 
       return {
         place: pile,
@@ -56,7 +60,7 @@ function PileView({pile, y, x, props}) {
             }
           }
           return (
-            <CardView key={idx} card={card} y={idx * indentY} x={idx * indentX} props={props}/>
+            <CardView key={idx} card={card} y={idx * indentY} x={idx * indentX} props={props} game={game}/>
           );
         })}
         {isOver && (
@@ -75,4 +79,4 @@ function PileView({pile, y, x, props}) {
   );
 }
 
-export default observer(PileView);
+export default PileView;

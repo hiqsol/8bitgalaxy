@@ -2,14 +2,12 @@ import Prop from "./Prop.js";
 import aCard from "./aCard.js";
 import State from "./State.js";
 import Assert from "./Assert.js";
-import {makeAutoObservable} from "mobx";
 
 class Card {
   constructor(state, acard) {
     this._state = State.assert(state);
     this._acard = aCard.assert(acard);
     this._destination = null;
-    makeAutoObservable(this);
   }
 
   get State()             { return this._state; }
