@@ -10,7 +10,6 @@ class Decks {
   static get(name) {
     let all = Decks.all();
     let specs = all[name.toLowerCase()];
-    let ps = Decks.parseCard(name, specs);
     return new Specs(Decks.parseCard(name, specs));
   }
 
@@ -21,7 +20,11 @@ class Decks {
   static _all = undefined;
   static all() {
     if (Decks._all === undefined) {
-      Decks._all = (new Generator().all());
+      let src = (new Generator().all());
+      Decks._all = Object.keys(src).reduce(function (dst, key) {
+        dst[key.toLowerCase()] = src[key];
+        return dst;
+      }, {});
     }
     return Decks._all;
   }

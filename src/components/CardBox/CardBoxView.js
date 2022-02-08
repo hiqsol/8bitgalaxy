@@ -9,11 +9,11 @@ const CardBoxView = ({ card, children }) => {
   useEffect(() => {
     let divContainer = document.querySelector(".ActiveCard");
     divContainer.appendChild(el);
-
     return () => {
       divContainer.removeChild(el);
     };
-  }, []);
+  }, [card]);
+  // }, []);
 
   return ReactDOM.createPortal(
     <div className="modal">

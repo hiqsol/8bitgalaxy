@@ -1,5 +1,4 @@
 import Assert from "./Assert.js";
-import {makeAutoObservable} from "mobx";
 
 class State {
   constructor(name) {
@@ -9,7 +8,6 @@ class State {
     this._inserted    = false;
     this._alternative = false;
     this.parseName(name);
-    makeAutoObservable(this);
   }
 
   parseName(name) {
@@ -18,7 +16,7 @@ class State {
 
   applyName(input) {
     input = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
-    name = Names[input];
+    let name = Names[input];
     if (input && !name) {
       Assert.error('wrong state: ' + input);
     }

@@ -12,10 +12,10 @@ class Star {
     this.colonies = [null, null, null];
   }
 
-  base(slot)    { return this.bases[slot]     ?? Card.AbsentBase; }
-  hero(slot)    { return this.heroes[slot]    ?? Card.AbsentHero; }
-  ship(slot)    { return this.ships[slot]     ?? Card.AbsentShip; }
-  colony(slot)  { return this.colonies[slot]  ?? Card.AbsentColony; }
+  base(slot)    { return this.bases[slot]     || Card.AbsentBase; }
+  hero(slot)    { return this.heroes[slot]    || Card.AbsentHero; }
+  ship(slot)    { return this.ships[slot]     || Card.AbsentShip; }
+  colony(slot)  { return this.colonies[slot]  || Card.AbsentColony; }
 
   removeCard(card) {
     if (card.isBase) {
@@ -58,8 +58,8 @@ class Star {
     }
     Assert.error('wrong card type', card);
   }
-
-  putToSlot(card, slot, slots) {
+  
+    putToSlot(card, slot, slots) {
     if (slots[slot] === undefined) {
       Assert.error('non-existent slot', slot);
     }

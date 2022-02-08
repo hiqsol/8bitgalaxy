@@ -29,11 +29,13 @@ class Options {
   }
 
   init(options) {
-    this._players = options.players ?? {
+    this._players = options.players || {
+    // this._players = options.players ?? {
       p1: 'human',
       p2: 'ai',
     };
-    this._name = options.name ?? this.generateName();
+    this._name = options.name || this.generateName();
+    // this._name = options.name ?? this.generateName();
   }
 
   generateName() {

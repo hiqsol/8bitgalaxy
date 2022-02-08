@@ -55,7 +55,8 @@ class Direction {
       return Names.TopToBottom;
     }
     let lc = name.toLowerCase();
-    return Names[name] ?? Names[lc] ?? null;
+    return Names[name] || Names[lc] || null;
+    // return Names[name] ?? Names[lc] ?? null;
   }
 }
 

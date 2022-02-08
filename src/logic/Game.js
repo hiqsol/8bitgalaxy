@@ -10,8 +10,10 @@ import Options from "./models/Options.js";
 class Game {
   constructor(options = {}) {
     this._options = Options.assert(options);
-    this._drawer = options.drawer ?? new Drawer();
-    this._board = options.board ?? new Board();
+    this._drawer = options.drawer || new Drawer();
+    // this._drawer = options.drawer ?? new Drawer();
+    this._board = options.board || new Board();
+    // this._board = options.board ?? new Board();
     this.init();
   }
 

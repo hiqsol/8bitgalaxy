@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-import { observer } from "mobx-react-lite";
+import React from "react";
 import cn from "classnames";
 import { useDrag } from "react-dnd";
 import SpecsView from "./SpecsView";
 import usePosition from "../../state/hooks/usePosition";
 import CardBoxView from "../CardBox/CardBoxView";
 import useCardBox from "../../state/hooks/useCardBox";
+import StateConverter from "../../Model/StateConverter";
 
-const CardView = ({ card, y, x }) => {
+
+const CardView = ({ card, y, x, props, game}) => {
+  const stateConverter = new StateConverter();
   const addCardBox = useCardBox();
   const [p] = usePosition(y, x);
   const [{ isDragging }, dragRef] = useDrag(() => ({
@@ -36,6 +38,8 @@ const CardView = ({ card, y, x }) => {
   }));
   const handleTurnOver = () => {
     card.turnOver();
+    let gameToState = stateConverter.toState(game);
+    props.moves.handleTurnOver(gameToState);
   };
   const cardClasses = cn(
     "Card",
@@ -59,7 +63,6 @@ const CardView = ({ card, y, x }) => {
       </div>
     );
   }
-
   return (
     <div
       onMouseOver={addCardBox.mouseOverCard}
@@ -119,4 +122,4 @@ const RaceImages = Object.freeze({
   human: "world",
 });
 
-export default observer(CardView);
+export default CardView;

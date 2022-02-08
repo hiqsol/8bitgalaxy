@@ -16,7 +16,7 @@ class Pile {
   get size()      { return this._cards.length; }
   get top()       { return this._cards[this.size-1]; }
 
-  get(i)          { return this._cards[i] ?? (i===0 ? this.top : null); }
+  get(i)          { return this._cards[i] || (i===0 ? this.top : null); }
 
   removeCard(card) { 
     return this._cards.reduce((acc, c) => {

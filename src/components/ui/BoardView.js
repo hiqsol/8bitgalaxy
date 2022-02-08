@@ -1,9 +1,11 @@
 import React from "react";
-import { observer } from "mobx-react-lite";
 import HomeView from "./HomeView";
 import FieldView from "./FieldView";
+import Chat from "../ui/Chat";
+import GameContext from "../../logic/game/gameContext";
 
-const BoardView = ({ board }) => {
+
+const BoardView = ({ board, handID, demo}) => {
   let curYPos, curXPos, curDown;
 
   const mouseMove = function (e) {
@@ -44,8 +46,13 @@ const BoardView = ({ board }) => {
       <HomeView home={board.home(1)} y={31} x={29} />
       <HomeView home={board.home(2)} y={30} x={46} />
       <FieldView field={board.field} y={8} x={15} />
+      <GameContext.Consumer>
+        {(context) => (
+          <Chat props={context.props} handID={handID} demo={demo} />
+        )}
+      </GameContext.Consumer>
     </div>
   );
 };
 
-export default observer(BoardView);
+export default BoardView;

@@ -6,16 +6,24 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "boardgame.io": "^0.43.2",
     "classnames": "^2.3.1",
+    "esm": "^3.2.25",
+    "koa-static": "^5.0.0",
+    "ky": "^0.24.0",
     "lodash": "^4.17.21",
     "mobx": "^6.3.0",
     "mobx-react-lite": "^3.2.0",
+    "nodemon": "^2.0.15",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
     "react-dnd": "^14.0.2",
     "react-dnd-html5-backend": "^14.0.0",
     "react-dom": "^17.0.2",
+    "react-router": "5.2.0",
+    "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
+    "safe-stable-stringify": "^2.2.0",
     "styled-components": "^5.3.0",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
@@ -24,7 +32,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon -r esm ./src/server/server.js",
+    "cypress:open": "cypress open",
+    "cypress": "cypress run"
   },
   "browserslist": {
     "production": [
@@ -37,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^9.1.1"
   }
 }

@@ -1,9 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import {useDrop} from "react-dnd";
 import styled from "styled-components";
 import usePosition from "../../state/hooks/usePosition";
 import CardView from "./CardView";
-import {observer} from "mobx-react-lite";
+import StateConverter from "../../Model/StateConverter";
+import GameContext from "../../logic/game/gameContext";
+
+const stateConverter = new StateConverter();
 
 const View = styled.div`
   left: ${({left}) => left + "px"};
@@ -64,17 +67,25 @@ const StarView = ({star}) => {
   );
 };
 
-const CardViewer = observer(({card, y, x, slot, isActive, star}) => {
+const CardViewer = ({card, y, x, slot, isActive, star}) => {
   if (card.isAbsent) {
     return(
-      <Slot y={y} x={x} card={card} slot={slot} isActive={isActive} star={star}/>
+      <GameContext.Consumer>  
+        {(context) => (
+          <Slot y={y} x={x} card={card} slot={slot} isActive={isActive} star={star} props={context.props} context={context.stateFromString}/>      
+        )}
+      </GameContext.Consumer>
     );
   };
 
   return (
-    <CardView card={card} y={y+0.8} x={x+0.8}/>
+    <GameContext.Consumer>
+      {(context) => (
+        <CardView card={card} y={y+0.8} x={x+0.8} props={context.props} game={context.stateFromString}/>
+      )}
+    </GameContext.Consumer>
   );
-});
+};
 
 const SlotView = styled.div`
   position: absolute;
@@ -88,7 +99,7 @@ const SlotView = styled.div`
   height: 200px;
 `;
 
-const Slot = observer(({ name, star, y, x, card, slot, isActive }) => {
+const Slot = ({ name, star, y, x, card, slot, isActive, props, context}) => {
   const [p] = usePosition(y, x);
   const [{ isOver, canDrop }, dropRef] = useDrop(() => ({
       accept: "CARD",
@@ -97,6 +108,9 @@ const Slot = observer(({ name, star, y, x, card, slot, isActive }) => {
         if (item.card.Type === card.Name) {
           item.card.destination.removeCard(item.card);
           star.put(item.card, slot);
+
+          let ctxToState = JSON.parse(stateConverter.toState(context));
+          props.moves.handleDrag(ctxToState);
         }
 
         return {
@@ -122,6 +136,6 @@ const Slot = observer(({ name, star, y, x, card, slot, isActive }) => {
   return (
     <SlotView ref={dropRef} className={card.Name} y={p.y - 0} x={18 + p.x} isOver={isOver} style={{ borderColor: borderColor }}/>
   );
-});
+};
 
-export default observer(StarView);
+export default StarView;

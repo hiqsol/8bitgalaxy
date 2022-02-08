@@ -7,10 +7,12 @@ class aCard {
   constructor(specs) {
     this._specs = Specs.assert(specs);
     this._alternative = this.findAlternative(specs.Alternative);
+    this._uniq = undefined;
   }
 
   get Specs()             { return this._specs; }
   get Alternative()       { return this._alternative; }
+  get Uniq()              { return this.getUniq(); }
   get Name()              { return this.Specs.Name; }
   get Type()              { return this.Specs.Type; }
   get Race()              { return this.Specs.Race; }
@@ -33,6 +35,23 @@ class aCard {
 
   getValue(prop)          { return this.Specs.getValue(prop); }
 
+  getUniq() {
+    if (this._uniq === undefined) {
+      this._uniq = this.buildUniq();
+    }
+    return this._uniq;
+  }
+
+  buildUniq() {
+    if (this.Alternative === undefined) {
+      return this.Name;
+    }
+    return this.Name > this.Alternative.Name
+      ? this.Name + '/' + this.Alternative.Name
+      : this.Alternative.Name + '/' + this.Name
+    ;
+  }
+
   static assert(sample) {
     if (sample instanceof(aCard)) {
       return sample;
@@ -51,9 +70,13 @@ class aCard {
       alt = Action.assert(alt);
     }
     if (alt instanceof Action) {
-      return Decks.get([this.Race, this.Type, alt.short].join('-'));
+      return Decks.get(aCard.buildName(this.Race, this.Type, alt.short));
     }
     Assert.error('wrong alternative', alt);
+  }
+
+  static buildName(race, type, action) {
+    return race + '-' + type + '-' + action;
   }
 }
 

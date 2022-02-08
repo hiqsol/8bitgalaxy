@@ -11,6 +11,7 @@ class Klass {
   get [Symbol.toStringTag]() { return this._name; }
 
   static get Names()            { return Names; }
+  static get Letters()          { return Letters; }
   static get Attack()           { return Names.Attack; }
   static get Colonization()     { return Names.Colonization; }
   static get Production()       { return Names.Production; }

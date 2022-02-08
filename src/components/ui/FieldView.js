@@ -1,7 +1,6 @@
 import React from "react";
 import StarView from "./StarView";
 import usePosition from "../../state/hooks/usePosition";
-import {observer} from "mobx-react-lite";
 
 const FieldView = ({field, y, x}) => {
   const [p] = usePosition(y, x);
@@ -19,4 +18,4 @@ const FieldView = ({field, y, x}) => {
   );
 };
 
-export default observer(FieldView);
+export default FieldView;
