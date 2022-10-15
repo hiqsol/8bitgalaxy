@@ -23,9 +23,9 @@ class Specs {
   get Colonization()      { return this.getValue(Prop.Colonization, 0); }
   get Science()           { return this.getValue(Prop.Science, 0); }
   get Production()        { return this.getValue(Prop.Production, 0); }
-  get Cooperation()       { return this.getValue(Prop.Cooperation); }
-  get Alternative()       { return this.getValue(Prop.Alternative); }
-  get Utilization()       { return this.getValue(Prop.Utilization); }
+  get Cooperation()       { return this.getAction(Prop.Cooperation); }
+  get Alternative()       { return this.getAction(Prop.Alternative); }
+  get Utilization()       { return this.getAction(Prop.Utilization); }
 
   getValue(prop, def = null) {
     let action = this.getAction(prop);
@@ -63,7 +63,7 @@ class Specs {
   }
 
   setSpecs(specs) {
-    console.log(specs);
+    //console.log(specs);
     if (specs instanceof Spec) {
       return this.setSpec(specs);
     }
