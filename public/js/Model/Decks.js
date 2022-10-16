@@ -15,16 +15,16 @@ class Decks {
 
   static getCard(name) {
     let res = Decks.get(name);
-    console.log(name);
-    console.log(res);throw new Error('die');
+    //console.log(name);
+    //console.log(res);throw new Error('die');
     return new aCard(Decks.get(name));
   }
 
   static _all = undefined;
   static all() {
     if (Decks._all === undefined) {
-      let src = (new Generator().all());
-      //let src = Decks.allAnyCase();
+      //let src = (new Generator().all());
+      let src = Decks.allAnyCase();
       Decks._all = Object.keys(src).reduce(function (dst, key) {
         dst[key.toLowerCase()] = src[key];
         return dst;
@@ -36,7 +36,6 @@ class Decks {
   static parseCard(name, specs) {
     let type = typeof(specs);
     let res = Decks.parseName(name);
-    console.log(res);throw new Error('die');
     if (!specs) {
       return res;
     }
@@ -65,6 +64,7 @@ class Decks {
   }
 
   static parseSpecs(specs) {
+    Assert.string(specs);
     let ps = specs.split(',');
     let res = new Specs();
     ps.forEach(value => res.setSpec(Decks.parseSpec(value)));
@@ -75,7 +75,6 @@ class Decks {
     Assert.string(spec);
     let prefix = spec.charAt(0).toLowerCase();
     let action = Action.assert(spec.substring(1, 3));
-    console.log(action);
     if (spec.length === 2) {
       action = Action.assert(spec);
       return new Spec(action.Klass, action);
@@ -105,54 +104,55 @@ class Decks {
 
   static allAnyCase() {
     return {
-      'AI-Hero-1s':         '',
-      'AI-Hero-2s':         '1s,a1p',
-      'AI-Hero-2a':         '2a,a1p',
-      'AI-Ship-2a':         'c1a,u2s',
-      'AI-Base-7a':         'u5p,r6c,r7a',
-      'AI-Base-7c':         'u5p,c2c,r6p,r7c',
-      'AI-Base-6c':         'a5p,r5a,r6c',
-      'AI-Colony-4p':       'c2p,a3s,r3c,r4p',
-
       'Human-Ship-1a':      '',
       'Human-Ship-1c':      '',
-      'Human-Ship-1s':      '',
       'Human-Ship-1p':      '',
+      'Human-Ship-1s':      '',
 
       'Human-Ship-2a':      '1a,c1a',
       'Human-Ship-2c':      '1c,c1c',
-      'Human-Ship-2s':      '1s,c1s',
       'Human-Ship-2p':      '1p,c1p',
+      'Human-Ship-2s':      '1s,c1s',
 
-      'Human-Ship-3a':      'a4p',
-      'Human-Ship-3c':      'a4a',
-      'Human-Ship-3s':      'a4c',
-      'Human-Ship-3p':      'a4s',
+      'Human-Ship-3a':      '3a,a4p,r3a,r4p',
+      'Human-Ship-3c':      '3c,a4a,r3c,r4a',
+      'Human-Ship-3p':      '3p,a4s,r3p,r4s',
+      'Human-Ship-3s':      '3s,a4c,r3s,r4c',
 
-      'Human-Ship-4a':      'c2a,a3c,r3c,r4a',
-      'Human-Ship-4c':      'c2c,a3s,r3s,r4c',
-      'Human-Ship-4s':      'c2s,a3p,r3p,r4s',
-      'Human-Ship-4p':      'c2p,a3a,r3a,r4p',
+      'Human-Ship-4a':      '3a,c2a,a3c',
+      'Human-Ship-4c':      '3c,c2c,a3s',
+      'Human-Ship-4p':      '3p,c2p,a3a',
+      'Human-Ship-4s':      '3s,c2s,a3p',
+
+      'Human-Ship-5a':      '4a,a6c,r5a,r6c',
+      'Human-Ship-5c':      '4c,a6s,r5c,r6s',
+      'Human-Ship-5p':      '4p,a6a,r5p,r6a',
+      'Human-Ship-5s':      '4s,a6p,r5s,r6p',
+
+      'Human-Ship-6a':      '4a,c2a,a5c',
+      'Human-Ship-6c':      '4c,c2c,a5s',
+      'Human-Ship-6p':      '4p,c2p,a5a',
+      'Human-Ship-6s':      '4s,c2s,a5p',
 
       'Human-Hero-1a':      'a2a',
       'Human-Hero-1c':      'a2c',
-      'Human-Hero-1s':      'a2s',
       'Human-Hero-1p':      'a2p',
+      'Human-Hero-1s':      'a2s',
 
       'Human-Hero-2a':      'a1a',
       'Human-Hero-2c':      'a1c',
-      'Human-Hero-2s':      'a1s',
       'Human-Hero-2p':      'a1p',
+      'Human-Hero-2s':      'a1s',
 
-      'Human-Hero-3a':      '3a,a4a',
-      'Human-Hero-3c':      '3c,a4c',
-      'Human-Hero-3s':      '3s,a4s',
-      'Human-Hero-3p':      '3p,a4p',
+      'Human-Hero-3a':      '3a,a4a,r3a,r3c',
+      'Human-Hero-3c':      '3c,a4c,r3c,r3s',
+      'Human-Hero-3p':      '3p,a4p,r3p,r3p',
+      'Human-Hero-3s':      '3s,a4s,r3s,r3a',
 
-      'Human-Hero-4a':      '4a,a3a,r3c,r3a',
-      'Human-Hero-4c':      '4c,a3c,r3s,r3c',
-      'Human-Hero-4s':      '4s,a3s,r3p,r3s',
-      'Human-Hero-4p':      '4p,a3p,r3a,r3p',
+      'Human-Hero-4a':      '4a,a3a',
+      'Human-Hero-4c':      '4c,a3c',
+      'Human-Hero-4s':      '4s,a3s',
+      'Human-Hero-4p':      '4p,a3p',
 
       'Human-Base-3a':      'c1a',
       'Human-Base-3c':      'c1c,a2p',
@@ -208,6 +208,15 @@ class Decks {
       'Human-Tech-5c':      'r4p,r4c',
       'Human-Tech-5s':      'r4a,r4s',
       'Human-Tech-5p':      'r4c,r4p',
+
+      'AI-Hero-1s':         '',
+      'AI-Hero-2s':         '1s,a1p',
+      'AI-Hero-2a':         '2a,a1p',
+      'AI-Ship-2a':         'c1a,u2s',
+      'AI-Base-7a':         'u5p,r6c,r7a',
+      'AI-Base-7c':         'u5p,c2c,r6p,r7c',
+      'AI-Base-6c':         'a5p,r5a,r6c',
+      'AI-Colony-4p':       'c2p,a3s,r3c,r4p',
 
       'Base':               { Type: 'Base', },
       'Hero':               { Type: 'Hero', },
