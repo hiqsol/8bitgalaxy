@@ -42,9 +42,14 @@ class Type {
 }
 
 const Names = Object.freeze({
+  H:      'Hero',
+  B:      'Base',
+  S:      'Ship',
+  C:      'Colony',
   Hero:   'Hero',
   Base:   'Base',
   Ship:   'Ship',
+  Colo:   'Colony',
   Colony: 'Colony',
 })
 

@@ -1,4 +1,5 @@
 import Prop from "./Prop.js";
+import Type from "./Type.js";
 import Spec from "./Spec.js";
 import aCard from "./aCard.js";
 import Specs from "./Specs.js";
@@ -8,6 +9,7 @@ import Generator from "./Generator.js";
 
 class Decks {
   static get(name) {
+    name = Decks.normalizeName(name);
     let all = Decks.all();
     let specs = all[name.toLowerCase()];
     return new Specs(Decks.parseCard(name, specs));
@@ -52,7 +54,7 @@ class Decks {
     if (!name.includes('-')) {
       return new Specs(Spec.text(Prop.Name, name));
     }
-    let ps = name.split('-');
+    let ps = Decks.splitName(name);
     let action = Action.assert(ps[2]);
     return new Specs({
       [Prop.Name]:          name,
@@ -61,6 +63,23 @@ class Decks {
       [Prop.Level]:         action,
       [action.Klass.name]:  action.dec(),
     });
+  }
+
+  static normalizeName(name) {
+    let ps = Decks.splitName(name);
+    return ps.join('-');
+  }
+
+  static splitName(name) {
+    let ps = name.split('-');
+    let os = [...ps];
+    if (ps.length == 2) {
+      let str = ps[1];
+      let type = Type.assert(str.charAt(0));
+      ps[1] = type.name;
+      ps[2] = str.substring(1);
+    }
+    return ps;
   }
 
   static parseSpecs(specs) {
