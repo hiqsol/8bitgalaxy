@@ -1,15 +1,17 @@
 .Pile                       { position: absolute; }
-.Pile .Base                 { width: 350; height: 250; }
-.Pile .Hero                 { width: 350; height: 250; }
 .Pile .Ship                 { width: 250; height: 350; }
-.Pile .Colony               { width: 250; height: 350; }
+.Pile .Hero                 { width: 250; height: 350; }
+.Pile .Base                 { width: 350; height: 250; }
+.Pile .Colony               { width: 350; height: 250; }
 .Pile .Other                { width: 250; height: 350; }
 
 .Pile.TopToBottom .Base,
-.Pile.TopToBottom .Hero     { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
+.Pile.TopToBottom .Colony   { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
+.Pile.BottomToTop .Base,
+.Pile.BottomToTop .Colony   { transform-origin: top left; transform: rotate(+90deg) translate(0, -100%); }
 
 .Pile.LeftToRight .Ship,
-.Pile.LeftToRight .Colony,
+.Pile.LeftToRight .Hero,
 .Pile.LeftToRight .Tech,
 .Pile.LeftToRight .Other    { transform-origin: top left; transform: rotate(90deg) translate(0, -100%); }
 
@@ -34,3 +36,4 @@
     transform-origin: center;
     transform: rotate(180deg);
 }
+

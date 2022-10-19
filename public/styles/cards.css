@@ -16,10 +16,10 @@
     filter: brightness(55%);
 }
 
-.Base                       { width:350; height: 200; }
-.Hero                       { width:350; height: 200; }
-.Colony                     { width:250; height: 300; }
 .Ship                       { width:200; height: 350; }
+.Hero                       { width:200; height: 350; }
+.Base                       { width:350; height: 200; }
+.Colony                     { width:350; height: 200; }
 .Tech                       { width:250; height: 350; }
 
 .Specs                      { position:absolute; width:100%; height:100%; }
