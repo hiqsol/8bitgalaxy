@@ -49,8 +49,7 @@ class Demo {
     let r = home.research;
     r.pile(0).put('turned Human-Colony-4c');
     r.pile(0).put('turned Human-Colony-4s');
-    r.pile(0).put('turned Human-Colony-4p');
-    r.pile(0).put('Human-Tech-4p');
+    r.pile(0).put('Human-Colony-4a');
     r.pile(1).put('Human-Colony-3a');
     r.pile(2).put('Human-Ship-4c');
     r.pile(3).put('Human-Base-6c');
@@ -66,37 +65,40 @@ class Demo {
       .put('AI-Colony-4p',    0)
     ;
     b.star(0, 1)
-      .put('AI-Base-6C',      2)
-      .put('AI-Colony-4P',    0)
+      .put('AI-B6C',          2)
+      .put('AI-C4P',          0)
     ;
     b.star(1, 0)
-      .put('AI-Ship-2A',      0)
-      .put('AI-Hero-1A',      0)
-      .put('AI-Hero-2A',      1)
+      .put('AI-S2A',          0)
+      .put('AI-H1A',          0)
+      .put('AI-H2A',          1)
     ;
     b.star(1, 2)
-      .put('Human-Base-6C',   2)
-      .put('Human-Ship-2A',   0)
-      .put('Human-Colony-4P', 0)
-      .put('Human-Hero-2A',   1)
+      .put('Human-B6c',       0)
+      .put('Human-C4p',       4)
+      .put('Human-S2a',       0)
+      .put('Human-H2a',       1)
     ;
     b.star(2, 0)
-      .put('Human-Base-7C',   0)
-      .put('Human-Base-6C',   1)
-      .put('Human-Base-5S',   2)
-      .put('Human-Ship-1C',   0)
-      .put('Human-Ship-2A',   1)
-      .put('Human-Ship-3S',   2)
-      .put('Human-Ship-4S',   3)
-      .put('Human-Colony-4P', 0)
-      .put('Human-Colony-3S', 1)
-      .put('Human-Colony-6P', 2)
-      .put('Human-Hero-2A',   0)
-      .put('Human-Hero-1s',   1)
+      .put('Human-B3c',       0)
+      .put('Human-B4c',       1)
+      .put('Human-B5s',       2)
+      .put('Human-B6s',       3)
+      .put('Human-C3p',       4)
+      .put('Human-C5s',       5)
+      .put('Human-C4a',       6)
+
+      .put('Human-S1c',       0)
+      .put('Human-S2a',       1)
+      .put('Human-S3p',       2)
+      .put('Human-S4s',       3)
+      .put('Human-S4a',       4)
+      .put('Human-H2a',       0)
+      .put('Human-H1s',       1)
     ;
     b.star(2, 1)
-      .put('Human-Base-6c',   2)
-      .put('Human-Colony-4p', 0)
+      .put('Human-B5c',       0)
+      .put('Human-C4p',       2)
     ;
   }
 }

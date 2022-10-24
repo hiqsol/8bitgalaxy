@@ -28,23 +28,22 @@ class Inner {
   }
 
   drawCards(star) {
-    this.drawCard(star.base(0), 3, 0);
-    this.drawCard(star.base(1), 4, 0);
-    this.drawCard(star.base(2), 5, 0);
+    this.drawCard(star.estate(0), 3, 0);
+    this.drawCard(star.estate(1), 4, 0);
+    this.drawCard(star.estate(2), 5, 0);
+    this.drawCard(star.estate(3), 6, 0);
+    this.drawCard(star.estate(4), 7, 0);
+    this.drawCard(star.estate(5), 8, 0);
+    this.drawCard(star.estate(6), 9, 0);
 
-    this.drawCard(star.ship(0), 6, 0);
-    this.drawCard(star.ship(1), 6, 1);
-    this.drawCard(star.ship(2), 6, 2);
-    this.drawCard(star.ship(3), 6, 3);
+    this.drawCard(star.ship(0), 2, 8);
+    this.drawCard(star.ship(1), 3, 8);
+    this.drawCard(star.ship(2), 4, 8);
+    this.drawCard(star.ship(3), 5, 8);
+    this.drawCard(star.ship(4), 6, 8);
 
-    this.drawCard(star.colony(0), 3, 8);
-    this.drawCard(star.colony(1), 4, 8);
-    this.drawCard(star.colony(2), 5, 8);
-
-    this.drawCard(star.hero(0), 7, 7);
-    this.drawCard(star.hero(1), 8, 7);
-    this.drawCard(star.hero(2), 9, 7);
-    this.drawCard(star.hero(3), 10, 7);
+    this.drawCard(star.hero(0), 8, 9);
+    this.drawCard(star.hero(1), 9, 9);
   }
 
   drawCard(card, y, x) {
