@@ -43,7 +43,9 @@ class Row {
 }
 
 const Types = Object.freeze({
-  Estate:     ['Reserve', 'Hand', 'Techs', 'Assets', 'Missions'],
+  Deck:       ['Discard', 'Reserve'],
+  Progress:   ['Science', 'Production', 'Colonization', 'Attack'],
+  Property:   ['Reserve', 'Hand', 'Techs', 'Assets', 'Missions'],
   Factory:    ['Scrap', 'Factory', 'Factory', 'Factory'],
   Research:   ['Ideas', 'Research', 'Research', 'Research', 'Research'],
 })

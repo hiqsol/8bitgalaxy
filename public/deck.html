@@ -16,10 +16,8 @@
 
       let game = (new Demo()).game;
       let vert = new Pile('', Direction.TopToBottom);
-      let upsd = new Pile('', Direction.BottomToTop);
 
       let v = game.draw(null, vert, 1, 1);
-      let u = game.draw(null, upsd, 1, 1);
 
       let y = {
         '1.0':  (1.0-1)*8,
@@ -122,20 +120,20 @@
       game.draw(v, Card.assert('Human-B7s'),  y['7.5'], x['3.4']);
 
 
-      game.draw(u, Card.assert('Human-C2a'),  y['2.5'], x['4.1']);
-      game.draw(u, Card.assert('Human-C2c'),  y['2.5'], x['4.2']);
-      game.draw(u, Card.assert('Human-C2p'),  y['2.5'], x['4.3']);
-      game.draw(u, Card.assert('Human-C2s'),  y['2.5'], x['4.4']);
+      game.draw(v, Card.assert('Human-C2a'),  y['2.5'], x['4.1']);
+      game.draw(v, Card.assert('Human-C2c'),  y['2.5'], x['4.2']);
+      game.draw(v, Card.assert('Human-C2p'),  y['2.5'], x['4.3']);
+      game.draw(v, Card.assert('Human-C2s'),  y['2.5'], x['4.4']);
 
-      game.draw(u, Card.assert('Human-C4a'),  y['4.5'], x['4.1']);
-      game.draw(u, Card.assert('Human-C4c'),  y['4.5'], x['4.2']);
-      game.draw(u, Card.assert('Human-C4p'),  y['4.5'], x['4.3']);
-      game.draw(u, Card.assert('Human-C4s'),  y['4.5'], x['4.4']);
+      game.draw(v, Card.assert('Human-C4a'),  y['4.5'], x['4.1']);
+      game.draw(v, Card.assert('Human-C4c'),  y['4.5'], x['4.2']);
+      game.draw(v, Card.assert('Human-C4p'),  y['4.5'], x['4.3']);
+      game.draw(v, Card.assert('Human-C4s'),  y['4.5'], x['4.4']);
 
-      game.draw(u, Card.assert('Human-C6a'),  y['6.5'], x['4.1']);
-      game.draw(u, Card.assert('Human-C6c'),  y['6.5'], x['4.2']);
-      game.draw(u, Card.assert('Human-C6p'),  y['6.5'], x['4.3']);
-      game.draw(u, Card.assert('Human-C6s'),  y['6.5'], x['4.4']);
+      game.draw(v, Card.assert('Human-C6a'),  y['6.5'], x['4.1']);
+      game.draw(v, Card.assert('Human-C6c'),  y['6.5'], x['4.2']);
+      game.draw(v, Card.assert('Human-C6p'),  y['6.5'], x['4.3']);
+      game.draw(v, Card.assert('Human-C6s'),  y['6.5'], x['4.4']);
 
 
       for (let i = 1;i<9;i++) {

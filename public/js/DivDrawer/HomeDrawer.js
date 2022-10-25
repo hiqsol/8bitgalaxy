@@ -11,8 +11,10 @@ class HomeDrawer {
     e.style.left  = (0 + x*m) + 'px';
     e.style.top   = (0 + y*m) + 'px';
     e.classList.add(home.direction.name);
+    this._drawer.draw(e, home.progress, 22, -8);
+    this._drawer.draw(e, home.hand,     22, 18);
     this._drawer.draw(e, home.discard,  14, 24);
-    this._drawer.draw(e, home.estate,   22, 0);
+    this._drawer.draw(e, home.reserve,  22, 24);
     this._drawer.draw(e, home.factory,  6, 30);
     this._drawer.draw(e, home.research, 0, 38);
   }

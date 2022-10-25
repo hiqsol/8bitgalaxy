@@ -371,9 +371,10 @@ class Decks {
       'Ship':               { Type: 'Ship', },
       'Colony':             { Type: 'Colony', },
 
-      'Missions':           { Type: 'Other' },
-      'Assets':             { Type: 'Other' },
-      'Techs':              { Type: 'Other' },
+      'Attack':             { Type: 'Other' },
+      'Colonization':       { Type: 'Other', Name: 'Colony' },
+      'Production':         { Type: 'Other', Name: 'Prod' },
+      'Science':            { Type: 'Other' },
       'Hand':               { Type: 'Other' },
       'Reserve':            { Type: 'Other' },
       'Discard':            { Type: 'Other' },

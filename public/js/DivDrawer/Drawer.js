@@ -67,16 +67,19 @@ class Drawer {
 }
 
 const Drawers = Object.freeze({
-  Card:     CardDrawer,
   Game:     GameDrawer,
-  Home:     HomeDrawer,
-  Pile:     PileDrawer,
-  Row:      RowDrawer,
-  Star:     StarDrawer,
-  Spec:     SpecDrawer,
   Board:    BoardDrawer,
-  Specs:    SpecsDrawer,
+  Home:     HomeDrawer,
+
   Field:    FieldDrawer,
+  Star:     StarDrawer,
+
+  Row:      RowDrawer,
+  Pile:     PileDrawer,
+
+  Card:     CardDrawer,
+  Specs:    SpecsDrawer,
+  Spec:     SpecDrawer,
 })
 
 export default Drawer;

@@ -23,7 +23,8 @@ class Demo {
     h.reserve.put('turned Human-Colony-4p');
     h.reserve.put('turned Human-Base-7a');
     h.hand.put('turned Human-Hero-1c');
-    h.techs.put('Human-Tech-4p');
+    h.science.put('Human-C4s');
+    h.colonization.put('Human-C4c');
     this.initFactory(h);
     this.initResearch(h);
   }

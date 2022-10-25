@@ -6,9 +6,9 @@
 .Pile .Other                { width: 250; height: 350; }
 
 .Pile.TopToBottom .Base,
-.Pile.TopToBottom .Colony   { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
+.Pile.BottomToTop .Colony   { transform-origin: top left; transform: rotate(-90deg) translate(-100%); }
 .Pile.BottomToTop .Base,
-.Pile.BottomToTop .Colony   { transform-origin: top left; transform: rotate(+90deg) translate(0, -100%); }
+.Pile.TopToBottom .Colony   { transform-origin: top left; transform: rotate(+90deg) translate(0, -100%); }
 
 .Pile.LeftToRight .Ship,
 .Pile.LeftToRight .Hero,
