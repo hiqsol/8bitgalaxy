@@ -31,25 +31,28 @@ class Demo {
 
   initFactory(home) {
     let f = home.factory;
+    f.pile(0).put('Human-Colony-3s');
     f.pile(0).put('Human-Colony-4a');
     f.pile(0).put('Human-Colony-4c');
-    f.pile(0).put('Human-Colony-4s');
     f.pile(0).put('Human-Colony-4p');
+    f.pile(0).put('Human-Colony-4s');
     f.pile(1).put('Human-Ship-4a');
     f.pile(1).put('Human-Ship-4c');
+    f.pile(1).put('Human-Ship-4s');
     f.pile(1).put('Human-Ship-4s');
     f.pile(2).put('Human-Base-3s');
     f.pile(2).put('Human-Base-3a');
     f.pile(2).put('Human-Base-3c');
     f.pile(3).put('Human-Hero-4s');
     f.pile(3).put('Human-Hero-4c');
-    f.pile(3).put('Human-Hero-4a');
   }
 
   initResearch(home) {
     let r = home.research;
-    r.pile(0).put('turned Human-Colony-4c');
-    r.pile(0).put('turned Human-Colony-4s');
+    for (let i=0;i<20;i++) {
+      r.pile(0).put('turned Human-Base-4c');
+      r.pile(0).put('turned Human-Ship-4s');
+    }
     r.pile(0).put('Human-Colony-4a');
     r.pile(1).put('Human-Colony-3a');
     r.pile(2).put('Human-Ship-4c');
