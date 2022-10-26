@@ -7,17 +7,13 @@ class Star {
     this.y = y;
     this.x = x;
     this.ships = [null, null, null, null, null];
-    this.bases = [null, null, null];
     this.heroes = [null, null, null, null];
-    this.estates = [null, null, null, null, null, null, null];
-    this.colonies = [null, null, null];
+    this.estates = [null, null, null, null, null];
   }
 
-  base(slot)    { return this.bases[slot]     ?? Card.AbsentBase; }
-  hero(slot)    { return this.heroes[slot]    ?? Card.AbsentHero; }
   ship(slot)    { return this.ships[slot]     ?? Card.AbsentShip; }
-  estate(slot)  { return this.estates[slot]   ?? Card.AbsentColony; }
-  colony(slot)  { return this.colonies[slot]  ?? Card.AbsentColony; }
+  hero(slot)    { return this.heroes[slot]    ?? Card.AbsentHero; }
+  estate(slot)  { return this.estates[slot]   ?? Card.AbsentBase; }
 
   put(card, slot) {
     card = Card.assert(card);

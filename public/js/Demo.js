@@ -82,12 +82,10 @@ class Demo {
     ;
     b.star(2, 0)
       .put('Human-B3c',       0)
-      .put('Human-B4c',       1)
+      .put('Human-C3p',       1)
       .put('Human-B5s',       2)
-      .put('Human-B6s',       3)
-      .put('Human-C3p',       4)
-      .put('Human-C5s',       5)
-      .put('Human-C4a',       6)
+      .put('Human-C5s',       3)
+      .put('Human-C4a',       4)
 
       .put('Human-S1c',       0)
       .put('Human-S2a',       1)
