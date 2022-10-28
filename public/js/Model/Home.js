@@ -10,7 +10,7 @@ class Home {
     this._hand      = new Pile('Hand', Direction.TopToBottom);
     this._discard   = new Pile('Discard', Direction.TopToBottom);
     this._reserve   = new Pile('Reserve', Direction.TopToBottom);
-    this._factory   = new Row('Factory',  Direction.TopToBottom, 4);
+    this._factory   = new Row('Production',  Direction.TopToBottom, 4);
     this._research  = new Row('Research', Direction.TopToBottom, 5);
   }
 

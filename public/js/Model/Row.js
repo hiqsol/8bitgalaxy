@@ -46,7 +46,7 @@ const Types = Object.freeze({
   Deck:       ['Discard', 'Reserve'],
   Progress:   ['Science', 'Production', 'Colonization', 'Attack'],
   Property:   ['Reserve', 'Hand', 'Techs', 'Assets', 'Missions'],
-  Factory:    ['Scrap', 'Factory', 'Factory', 'Factory'],
+  Production: ['Scrap', 'Production', 'Production', 'Production'],
   Research:   ['Ideas', 'Research', 'Research', 'Research', 'Research'],
 })
 

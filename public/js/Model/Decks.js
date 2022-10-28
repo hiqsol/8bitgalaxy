@@ -371,6 +371,11 @@ class Decks {
       'Ship':               { Type: 'Ship', },
       'Colony':             { Type: 'Colony', },
 
+      'Home':               { Type: 'Colony' },
+      'Tech':               { Type: 'Other' },
+      'Event':              { Type: 'Other' },
+      'Mission':            { Type: 'Other' },
+
       'Attack':             { Type: 'Other' },
       'Colonization':       { Type: 'Other', Name: 'Colony' },
       'Production':         { Type: 'Other', Name: 'Prod' },
@@ -379,9 +384,8 @@ class Decks {
       'Reserve':            { Type: 'Other' },
       'Discard':            { Type: 'Other' },
       'Scrap':              { Type: 'Other' },
-      'Factory':            { Type: 'Other' },
       'Research':           { Type: 'Other', Name: 'Research' },
-      'Ideas':              { Type: 'Other', Name: 'Deck' },
+      'Ideas':              { Type: 'Other', Name: 'Ideas' },
     }
   }
 }

@@ -25,11 +25,11 @@ class Demo {
     h.hand.put('turned Human-Hero-1c');
     h.science.put('Human-C4s');
     h.colonization.put('Human-C4c');
-    this.initFactory(h);
+    this.initProduction(h);
     this.initResearch(h);
   }
 
-  initFactory(home) {
+  initProduction(home) {
     let f = home.factory;
     f.pile(0).put('Human-Colony-3s');
     f.pile(0).put('Human-Colony-4a');
