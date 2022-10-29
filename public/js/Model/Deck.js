@@ -7,6 +7,10 @@ class Deck {
     this._all = undefined;
     this._lower = undefined;
     this._upper = undefined;
+    this._ships = undefined;
+    this._bases = undefined;
+    this._heroes = undefined;
+    this._colonies = undefined;
   }
 
   get all() {
@@ -20,22 +24,48 @@ class Deck {
         if (!this.isThatRace(card.Race)) continue;
         this._all[name] = card;
         let alt = card.Alternative;
-        if (alt && card.Level < alt.Level) {
-          this._lower[name] = card;
-        } else {
-          this._upper[name] = card;
+        let upper = card;
+        let lower = card;
+        if (alt) {
+          if (card.Level > alt.Level) {
+            lower = alt;
+          } else {
+            upper = alt;
+          }
         }
-
+        this._upper[upper.Name] = upper;
+        this._lower[lower.Name] = lower;
       }
-
     }
     return this._all;
+  }
+
+  get ships() { return this.getOfType('ship', '_ships'); }
+  get bases() { return this.getOfType('base', '_bases'); }
+  get heroes() { return this.getOfType('hero', '_heroes'); }
+  get colonies() { return this.getOfType('colony', '_colonies'); }
+
+  getOfType(type, name) {
+    if (this[name] === undefined) {
+      this[name] = this.findOfType(type);
+    }
+    return this[name]
+  }
+
+  findOfType(type) {
+    let res = {};
+    for (var name in this.lower) {
+      let card = Card.assert(name);
+      if (card.Type != type) continue;
+      res[name] = card;
+    }
+    return res;
   }
 
   get lower() { this.all;return this._lower; }
   get upper() { this.all;return this._upper; }
 
-  get size() { return Object.keys(this.upper).length; }
+  get size() { return Object.keys(this.lower).length; }
 
   isThatRace(race) {
     if (typeof race != 'string') return false;

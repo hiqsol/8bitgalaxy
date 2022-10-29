@@ -6,45 +6,39 @@
   <body>
     <script type="module">
       import Demo from "./js/Demo.js";
+      import Deck from "./js/Model/Deck.js";
       import Card from "./js/Model/Card.js";
       import Pile from "./js/Model/Pile.js";
+      import Direction from "./js/Model/Direction.js";
 
       let game = (new Demo()).game;
+      let deck = new Deck('Human');
 
-      let vert = new Pile('Discard');
-      vert.put('Human-Hero-1a');
-      let v = game.draw(null, vert, 1, 2);
-      game.draw(v, Card.assert('Human-Hero-2c'),    0, 1);
-      game.draw(v, Card.assert('Human-Ship-3s'),    0, 2);
-      game.draw(v, Card.assert('Human-Ship-4p'),    0, 3);
-      game.draw(v, Card.assert('Human-Base-5a'),    0, 4);
-      game.draw(v, Card.assert('Human-Base-6c'),    0, 5);
-      game.draw(v, Card.assert('Human-Colony-7s'),  0, 6);
-      game.draw(v, Card.assert('Human-Colony-8p'),  0, 7);
+      let ships     = new Pile('Ships');
+      let heroes    = new Pile('Heroes');
+      let bases     = new Pile('Bases', Direction.LeftToRight);
+      let colonies  = new Pile('Colonies', Direction.LeftToRight);
 
-      game.draw(v, Card.assert('Human-Hero-1a'),    0, 15);
-      game.draw(v, Card.assert('Human-Ship-2a'),    0, 16);
-      game.draw(v, Card.assert('Human-Base-3a'),    0, 17);
-      game.draw(v, Card.assert('Human-Hero-2c'),    0, 18);
-      game.draw(v, Card.assert('Human-Ship-3c'),    0, 19);
-      game.draw(v, Card.assert('Human-Base-4c'),    0, 20);
-      game.draw(v, Card.assert('Human-Hero-5s'),    0, 21);
-      game.draw(v, Card.assert('Human-Ship-4s'),    0, 22);
-      game.draw(v, Card.assert('Human-Base-3s'),    0, 23);
-      game.draw(v, Card.assert('Human-Hero-2p'),    0, 24);
-      game.draw(v, Card.assert('Human-Ship-3p'),    0, 25);
-      game.draw(v, Card.assert('Human-Base-4p'),    0, 26);
+      ships.put(deck.ships); ships.unfold();
+      heroes.put(deck.heroes); heroes.unfold();
+      bases.put(deck.bases); bases.unfold();
+      colonies.put(deck.colonies); colonies.unfold();
 
-      let horz = new Pile('Discard', 'LeftToRight');
-      horz.put('Human-Hero-1a');
-      let h = game.draw(null, horz, 10, 8);
-      game.draw(h, Card.assert('Human-Hero-2c'),    1, -1);
-      game.draw(h, Card.assert('Human-Ship-3s'),    2, -2);
-      game.draw(h, Card.assert('Human-Ship-4p'),    3, -3);
-      game.draw(h, Card.assert('Human-Base-5a'),    4, -4);
-      game.draw(h, Card.assert('Human-Base-6c'),    5, -5);
-      game.draw(h, Card.assert('Human-Colony-7s'),  6, -6);
-      game.draw(h, Card.assert('Human-Colony-8p'),  7, -7);
+      game.draw(null, ships,    1,  1);
+      game.draw(null, heroes,   1,  23);
+      game.draw(null, bases,    18, 1);
+      game.draw(null, colonies, 18, 23);
+
+      ships.shuffle();
+      heroes.shuffle();
+      bases.shuffle();
+      colonies.shuffle();
+
+      game.draw(null, ships,    1,  50+1);
+      game.draw(null, heroes,   1,  50+23);
+      game.draw(null, bases,    18, 50+1);
+      game.draw(null, colonies, 18, 50+23);
+
     </script>
   </body>
 </html>
