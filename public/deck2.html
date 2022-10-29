@@ -11,10 +11,15 @@
       import Demo from "./js/Demo.js";
       import Card from "./js/Model/Card.js";
       import Pile from "./js/Model/Pile.js";
+      import Deck from "./js/Model/Deck.js";
       import Decks from "./js/Model/Decks.js";
       import Direction from "./js/Model/Direction.js";
 
       let game = (new Demo()).game;
+      let deck = new Deck('Human');
+      console.log(deck.size);
+      console.log(Object.keys(deck.lower).length);
+      console.log(deck.lower);
       let vert = new Pile('', Direction.TopToBottom);
       let upsd = new Pile('', Direction.BottomToTop);
 

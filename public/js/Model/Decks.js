@@ -158,10 +158,10 @@ class Decks {
       'Human-Ship-7p':      '3p,c3p,a6c',
       'Human-Ship-7s':      '3s,c3s,a6a',
 
-      'Human-Ship-8a':      '4a,c4a,r7a,r7c',
-      'Human-Ship-8c':      '4c,c4c,r7c,r7s',
-      'Human-Ship-8p':      '4p,c4p,r7p,r7a',
-      'Human-Ship-8s':      '4s,c4s,r7s,r7p',
+      //'Human-Ship-8a':      '4a,c4a,r7a,r7c',
+      //'Human-Ship-8c':      '4c,c4c,r7c,r7s',
+      //'Human-Ship-8p':      '4p,c4p,r7p,r7a',
+      //'Human-Ship-8s':      '4s,c4s,r7s,r7p',
 
 
       'Human-Hero-1a':      '0a,a2a',
@@ -204,6 +204,11 @@ class Decks {
       'Human-Hero-8p':      '7p,a7p',
       'Human-Hero-8s':      '7s,a7s',
 
+
+      'Human-Base-2a':      '1a',
+      'Human-Base-2c':      '1c',
+      'Human-Base-2p':      '1p',
+      'Human-Base-2s':      '1s',
 
       'Human-Base-3a':      '2a,c1a,a4c,r2a,r2c',
       'Human-Base-3c':      '2c,c1c,a4p,r2c,r2p',
@@ -266,21 +271,21 @@ class Decks {
       'Human-Colony-7p':    '3p,c2p,a6s',
       'Human-Colony-7s':    '3s,c2s,a6c',
 
-      'Human-Colony-8a':    '4a,c3a,r7a,r7s',
-      'Human-Colony-8c':    '4c,c3c,r7c,r7p',
-      'Human-Colony-8p':    '4p,c3p,r7p,r7c',
-      'Human-Colony-8s':    '4s,c3s,r7s,r7a',
+      //'Human-Colony-8a':    '4a,c3a,r7a,r7s',
+      //'Human-Colony-8c':    '4c,c3c,r7c,r7p',
+      //'Human-Colony-8p':    '4p,c3p,r7p,r7c',
+      //'Human-Colony-8s':    '4s,c3s,r7s,r7a',
 
 
-      'Human-Tech-4a':      'r3s,r3a',
-      'Human-Tech-4c':      'r3p,r3c',
-      'Human-Tech-4s':      'r3a,r3s',
-      'Human-Tech-4p':      'r3c,r3p',
+      'Alien-Tech-4a':      'r3s,r3a',
+      'Alien-Tech-4c':      'r3p,r3c',
+      'Alien-Tech-4s':      'r3a,r3s',
+      'Alien-Tech-4p':      'r3c,r3p',
 
-      'Human-Tech-5a':      'r4s,r4a',
-      'Human-Tech-5c':      'r4p,r4c',
-      'Human-Tech-5s':      'r4a,r4s',
-      'Human-Tech-5p':      'r4c,r4p',
+      'Alien-Tech-5a':      'r4s,r4a',
+      'Alien-Tech-5c':      'r4p,r4c',
+      'Alien-Tech-5s':      'r4a,r4s',
+      'Alien-Tech-5p':      'r4c,r4p',
 
       'AI-Ship-1a':         '1a',
       'AI-Ship-1c':         '1c',
