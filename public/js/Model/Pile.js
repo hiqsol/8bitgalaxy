@@ -17,6 +17,7 @@ class Pile {
   get top()       { return this._cards[this.size-1] ?? Card.assert('absent '+this.type); }
 
   get(i)          { return this._cards[i] ?? (i===0 ? this.top : null); }
+  pop()           { return this._cards.pop(); }
   unfold()        { this._folded = false; }
   fold()          { this._folded = true; }
   shuffle()       { this.shuffleArray(this._cards); }
@@ -41,6 +42,11 @@ class Pile {
         this.putUnder(c)
       }
     }
+  }
+
+  remove(name) {
+    let i = this._cards.findIndex(item => item.isAnyName(name));
+    this._cards.splice(i, 1);
   }
 
   shuffleArray(array) {
