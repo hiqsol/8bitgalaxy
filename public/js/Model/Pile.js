@@ -33,7 +33,8 @@ class Pile {
   }
 
   putUnder(card) {
-    if (card instanceof String || card instanceof Card) {
+    let type = typeof(card)
+    if (type === 'string' || type === 'Card') {
       this._cards.unshift(Card.assert(card));
     } else {
       for (var c in card) {
