@@ -15,7 +15,7 @@ class Specs {
   get Name()              { return this.getValue(Prop.Name); }
   get Type()              { return this.getValue(Prop.Type); }
   get Race()              { return this.getValue(Prop.Race); }
-  get Level()             { return this.getValue(Prop.Level, 0); }
+  get Level()             { return this.getIntValue(Prop.Level, 0); }
   get Klass()             { return this.getValue(Prop.Klass); }
   get Requires()          { return this.getValue(Prop.Requires); }
   get Defense()           { return this.getValue(Prop.Defense, this.getValue(Prop.Level)); }
@@ -27,6 +27,9 @@ class Specs {
   get Alternative()       { return this.getAction(Prop.Alternative); }
   get Utilization()       { return this.getAction(Prop.Utilization); }
 
+  getIntValue(prop, def = 0) {
+    return Math.floor(this.getValue(prop, def));
+  }
   getValue(prop, def = null) {
     let action = this.getAction(prop);
     if (action === undefined) {

@@ -27,6 +27,8 @@ class Row {
   pile(no)        { return this.piles[this.assertNo(no)]; }
   isType(type)    { return this._type === type; }
 
+  put(card, no)   { this.pile(no).put(card); }
+
   assertNo(no) {
     if (no<0 || no>=this.size) {
       Assert.error('wrong pile no', no);

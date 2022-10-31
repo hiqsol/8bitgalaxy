@@ -32,7 +32,7 @@ class aCard {
   get isColony()          { return this.isType(Type.Colony); }
   get isShip()            { return this.isType(Type.Ship); }
   get isBase()            { return this.isType(Type.Base); }
-  isType(type)            { return this.Type === type; }
+  isType(type)            { return this.Type.toLowerCase() === type.toLowerCase(); }
 
   getValue(prop)          { return this.Specs.getValue(prop); }
 

@@ -24,7 +24,8 @@ class Card {
   get AltName()           { return this.Alternative ? this.Alternative.Name : null; }
   get Type()              { return this.aCard.Type; }
   get Race()              { return this.aCard.Race; }
-  get Level()             { return this.statedValue(Prop.Level); }
+  get Level()             { return this.aCard.Level; }
+  get AltLevel()          { return this.Alternative ? this.Alternative.Level : null; }
   get Klass()             { return this.statedValue(Prop.Klass); }
   get Defense()           { return this.statedValue(Prop.Defense); }
   get Attack()            { return this.statedValue(Prop.Attack); }
@@ -42,6 +43,9 @@ class Card {
 
   isName(name)            { return name.toLowerCase() === this.Name.toLowerCase(); }
   isAnyName(name)         { return [this.Name, this.AltName].includes(name.toLowerCase()); }
+
+  isLevel(no)             { return this.Level === no; }
+  isAnyLevel(no)          { return this.Level === no || this.AltLevel === no; }
 
   static AbsentBase   = Card.assert('absent Base');
   static AbsentHero   = Card.assert('absent Hero');
