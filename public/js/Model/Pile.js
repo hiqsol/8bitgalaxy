@@ -12,6 +12,7 @@ class Pile {
 
   get direction() { return this._direction; }
   get folded()    { return this._folded; }
+  get cards()     { return this._cards; }
   get type()      { return this._type; }
   get size()      { return this._cards.length; }
   get top()       { return this._cards[this.size-1] ?? Card.assert('absent '+this.type); }
@@ -23,23 +24,33 @@ class Pile {
   shuffle()       { this.shuffleArray(this._cards); }
 
   put(card) {
-    let type = typeof(card)
-    if (type === 'string' || type === 'Card') {
+    if (card instanceof Card) {
+      this._cards.push(card);
+    } else if (typeof(card) === 'string') {
       this._cards.push(Card.assert(card));
+    } else if (typeof(card) === 'array') {
+      card.forEach(function (c, index) {
+        this.put(c);
+      });
     } else {
-      for (var c in card) {
-        this.put(c)
+      for (var k in card) {
+        this.put(card[k]);
       }
     }
   }
 
   putUnder(card) {
-    let type = typeof(card)
-    if (type === 'string' || type === 'Card') {
-      this._cards.unshift(Card.assert(card));
+    if (card instanceof Card) {
+      this._cards.push(card);
+    } else if (typeof(card) === 'string') {
+      this._cards.push(Card.assert(card));
+    } else if (typeof(card) === 'array') {
+      card.forEach(function (c, index) {
+        this.putUnder(c);
+      });
     } else {
-      for (var c in card) {
-        this.putUnder(c)
+      for (var k in card) {
+        this.putUnder(card[k]);
       }
     }
   }
