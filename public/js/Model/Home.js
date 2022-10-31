@@ -1,4 +1,5 @@
 import Row from "./Row.js";
+import Deck from "./Deck.js";
 import Pile from "./Pile.js";
 import Player from "./Player.js";
 import Direction from "./Direction.js";
@@ -6,7 +7,8 @@ import Direction from "./Direction.js";
 class Home {
   constructor(player) {
     this._player    = Player.assert(player);
-    this._progress  = new Row('Progress',   Direction.LeftToRight, 4);
+    this._deck      = new Deck(this._player.race);
+    this._progress  = new Row('Progress', Direction.LeftToRight, 4);
     this._hand      = new Pile('Hand', Direction.TopToBottom);
     this._discard   = new Pile('Discard', Direction.TopToBottom);
     this._reserve   = new Pile('Reserve', Direction.TopToBottom);
@@ -15,6 +17,7 @@ class Home {
   }
 
   get player()        { return this._player; }
+  get deck()          { return this._deck; }
   get direction()     { return this._player.direction; }
   get hand()          { return this._hand; }
   get discard()       { return this._discard; }
@@ -28,6 +31,13 @@ class Home {
   get research()      { return this._research; }
   get scrap()         { return this._factory.pile(0); }
   get ideas()         { return this._research.pile(0); }
+
+  static assert(sample) {
+    if (sample instanceof(Home)) {
+      return sample;
+    }
+    Assert.error('not a Home', sample);
+  }
 }
 
 export default Home;
