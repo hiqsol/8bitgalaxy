@@ -55,7 +55,26 @@ class Pile {
     }
   }
 
-  remove(name) {
+  remove(card) {
+    if (card instanceof Card) {
+      this.removeOne(card.Name);
+    } else if (typeof(card) === 'string') {
+      this.removeOne(card);
+    } else if (typeof(card) === 'array') {
+      card.forEach(function (c, index) {
+        this.removeOne(c);
+      });
+    } else {
+      for (var k in card) {
+        this.removeOne(card[k]);
+      }
+    }
+  }
+
+  removeOne(name) {
+    if (name instanceof Card) {
+      name = name.Name;
+    }
     let i = this._cards.findIndex(item => item.isAnyName(name));
     this._cards.splice(i, 1);
   }
