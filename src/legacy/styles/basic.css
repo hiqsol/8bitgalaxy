@@ -1,0 +1,26 @@
+@import url('https://cdn.lineicons.com/2.0/LineIcons.css');
+@import 'cards.css';
+@import 'stars.css';
+@import 'specs.css';
+@import 'piles.css';
+
+body {
+    font-family: "Open Sans", serif;
+    background: #787;
+}
+
+.Human {
+    background-color: #ffb;
+}
+
+.AI {
+    background-color: #bff;
+}
+
+.Plasma {
+    background-color: #fbf;
+}
+
+.Giant {
+    background-color: #bfb;
+}
