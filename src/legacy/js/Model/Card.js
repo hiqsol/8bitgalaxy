@@ -41,6 +41,7 @@ class Card {
   get isShip()            { return this.aCard.isShip; }
   get isBase()            { return this.aCard.isBase; }
 
+  isType(type)            { return this.aCard.isType(type); }
   isName(name)            { return name.toLowerCase() === this.Name.toLowerCase(); }
   isAnyName(name)         { return [this.Name, this.AltName].includes(name.toLowerCase()); }
 

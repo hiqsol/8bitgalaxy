@@ -72,6 +72,7 @@ class Decks {
 
   static splitName(name) {
     let ps = name.split('-');
+    ps = ps.map(s => Decks.capitalize(s));
     let os = [...ps];
     if (ps.length == 2) {
       let str = ps[1];
@@ -80,6 +81,11 @@ class Decks {
       ps[2] = str.substring(1);
     }
     return ps;
+  }
+
+  static capitalize(str) {
+    if (str.length == 0) return str;
+    return str[0].toUpperCase() + str.substr(1);
   }
 
   static parseSpecs(specs) {

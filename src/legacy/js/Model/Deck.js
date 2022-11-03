@@ -56,7 +56,7 @@ class Deck {
     let res = {};
     for (var name in this.lower) {
       let card = Card.assert(name);
-      if (card.Type != type) continue;
+      if (!card.isType(type)) continue;
       res[name] = card;
     }
     return res;
