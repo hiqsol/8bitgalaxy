@@ -1,0 +1,46 @@
+<template>
+
+</template>
+
+<script setup>
+import Demo from "./js/Demo.js";
+import Deck from "./js/Model/Deck.js";
+import Pile from "./js/Model/Pile.js";
+import Direction from "./js/Model/Direction.js";
+
+let game = (new Demo()).game;
+let deck = new Deck("Human");
+
+let ships = new Pile("Ships");
+let heroes = new Pile("Heroes");
+let bases = new Pile("Bases", Direction.LeftToRight);
+let colonies = new Pile("Colonies", Direction.LeftToRight);
+
+ships.put(deck.ships);
+ships.unfold();
+heroes.put(deck.heroes);
+heroes.unfold();
+bases.put(deck.bases);
+bases.unfold();
+colonies.put(deck.colonies);
+colonies.unfold();
+
+game.draw(null, ships, 1, 1);
+game.draw(null, heroes, 1, 23);
+game.draw(null, bases, 18, 1);
+game.draw(null, colonies, 18, 23);
+
+ships.shuffle();
+heroes.shuffle();
+bases.shuffle();
+colonies.shuffle();
+
+game.draw(null, ships, 1, 50 + 1);
+game.draw(null, heroes, 1, 50 + 23);
+game.draw(null, bases, 18, 50 + 1);
+game.draw(null, colonies, 18, 50 + 23);
+</script>
+
+<style scoped>
+
+</style>
