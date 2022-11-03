@@ -9,13 +9,13 @@ class CardDrawer {
   draw(parent, card, y, x) {
     let e = this._drawer.importNode(parent, this.fragment, ".Card");
     let m = this._drawer.m;
+    e.id = uuidv4();
     e.style.left = (20 + x * m) + "px";
     e.style.top = (10 + y * m) + "px";
     e.classList.add(card.visibility);
     e.classList.add(card.Type ?? "Ship");
     e.classList.add(card.Race ?? "Neutral");
     e.classList.add(card.visibility);
-    e.id = uuidv4();
     e.ondragstart = (event) => {
       event.currentTarget.classList.add("dragging");
       event.dataTransfer.setData("text/plain", event.currentTarget.id);

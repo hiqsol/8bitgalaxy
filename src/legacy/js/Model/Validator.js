@@ -1,8 +1,7 @@
 import Decks from "./Decks.js";
-import Assert from "./Assert.js";
 
 class Validator {
-  constructor(){
+  constructor() {
     this._stats = {};
   }
 
@@ -26,7 +25,7 @@ class Validator {
 }
 
 class Stat {
-  constructor(race){
+  constructor(race) {
     this._race = race;
     this._names = {};
     this._uniqs = {};
