@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
     box-shadow: 0 0 10px black;
-    z-index: 3;
+    z-index: 4;
 }
 
 .Card.Turned {

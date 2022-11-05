@@ -1,4 +1,6 @@
 import Card from "./Card.js";
+import Slot from "./Slot.js";
+import Direction from "./Direction.js";
 import Assert from "./Assert.js";
 
 class Star {
@@ -38,6 +40,25 @@ class Star {
     }
     slots[slot] = card;
     return this;
+  }
+
+  slots() {
+    return [
+      new Slot(this.estate(0), Direction.LeftToRight, 0, 4),
+      new Slot(this.estate(1), Direction.LeftToRight, 0, 5),
+      new Slot(this.estate(2), Direction.LeftToRight, 0, 6),
+      new Slot(this.estate(3), Direction.LeftToRight, 0, 7),
+      new Slot(this.estate(4), Direction.LeftToRight, 0, 8),
+
+      new Slot(this.ship(0), Direction.TopToBottom, 8, 2),
+      new Slot(this.ship(1), Direction.TopToBottom, 8, 3),
+      new Slot(this.ship(2), Direction.TopToBottom, 8, 4),
+      new Slot(this.ship(3), Direction.TopToBottom, 8, 5),
+      new Slot(this.ship(4), Direction.TopToBottom, 8, 6),
+
+      new Slot(this.hero(0), Direction.TopToBottom, 9, 8),
+      new Slot(this.hero(1), Direction.TopToBottom, 9, 9),
+    ];
   }
 }
 

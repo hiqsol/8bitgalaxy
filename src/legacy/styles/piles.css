@@ -1,3 +1,28 @@
+.Slot {
+    position: absolute;
+    border-radius: 20px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.Slot:hover {
+    border: 1px solid #333;
+}
+
+.Slot .Name .Value {
+    display: block;
+    width: 350px;
+    height: 150px;
+}
+
+.Slot.TopToBottom {
+    width: 250px;
+    height: 250px;
+}
+
 .Pile {
     position: absolute;
     border-radius: 20px;
@@ -5,6 +30,10 @@
     margin: 0;
     box-shadow: 0 0 9px #222;
     z-index: 3;
+}
+
+.Pile:hover {
+    border: 1px solid #333;
 }
 
 .Pile .Name .Value {

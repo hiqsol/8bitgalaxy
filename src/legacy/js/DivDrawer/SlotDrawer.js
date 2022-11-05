@@ -1,16 +1,16 @@
 import Drawer from "./Drawer.js";
 
-class PileDrawer {
+class SlotDrawer {
   constructor(drawer) {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, pile, y, x) {
+  draw(parent, slot) {
     let m = this._drawer.m;
-    let e = this.importNode(parent, ".Pile");
-    e.style.left = (0 + x * m) + "px";
-    e.style.top = (0 + y * m) + "px";
-    e.classList.add(pile.direction.name);
+    let e = this.importNode(parent, ".Slot");
+    e.style.left = (20 + slot.x * m) + "px";
+    e.style.top = (10 + slot.y * m) + "px";
+    e.classList.add(slot.direction.name);
     e.addEventListener("dragover", (event) => {
       console.log("dragOver");
       event.preventDefault();
@@ -23,17 +23,14 @@ class PileDrawer {
       const card = document.getElementById(id);
       e.appendChild(card);
     });
-    this.drawCards(e, pile);
-    e.querySelector(".Name .Value").innerHTML = pile.name;
+    this.drawCard(e, slot);
 
     return e;
   }
 
-  drawCards(parent, pile) {
-    if (!pile.size) return;
-    let shift = pile.folded ? 1 / pile.size : 1;
-    for (let i = 0; i < pile.size; i++) {
-      this._drawer.draw(parent, pile.get(i), i * shift, i * shift);
+  drawCard(parent, slot) {
+    if (slot.card) {
+      this._drawer.draw(parent, slot.card, 0, 0);
     }
   }
 
@@ -47,9 +44,9 @@ class PileDrawer {
 }
 
 const HTML = `
-  <div class="Pile droppable">
-    <div class="Name"><div class="Value">Name</div></div>
+  <div class="Slot droppable">
+    <div class="Name"><div class="Value"></div></div>
   </div>
 `;
 
-export default PileDrawer;
+export default SlotDrawer;
