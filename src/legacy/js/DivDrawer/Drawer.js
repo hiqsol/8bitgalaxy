@@ -5,6 +5,7 @@ import CardDrawer from "./CardDrawer.js";
 import GameDrawer from "./GameDrawer.js";
 import HomeDrawer from "./HomeDrawer.js";
 import PileDrawer from "./PileDrawer.js";
+import SlotDrawer from "./SlotDrawer.js";
 import StarDrawer from "./StarDrawer.js";
 import SpecDrawer from "./SpecDrawer.js";
 import BoardDrawer from "./BoardDrawer.js";
@@ -84,6 +85,7 @@ const Drawers = Object.freeze({
 
   Row: RowDrawer,
   Pile: PileDrawer,
+  Slot: SlotDrawer,
 
   Card: CardDrawer,
   Specs: SpecsDrawer,
