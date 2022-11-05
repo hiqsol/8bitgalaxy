@@ -5,7 +5,7 @@ class Pile {
   constructor(type, direction) {
     this._type = type;
     this._direction = Direction.assert(direction);
-    this._card = Card.assert(type);
+    this._card = type ? Card.assert(type) : Card.assert('None');
     this._folded = true;
     this._cards = [];
   }

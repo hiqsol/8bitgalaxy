@@ -382,11 +382,12 @@ class Decks {
       'Ship':               { Type: 'Ship', },
       'Colony':             { Type: 'Colony', },
 
-      'Home':               { Type: 'Colony' },
+      'Home':               { Type: 'Other' },
       'Tech':               { Type: 'Other' },
       'Event':              { Type: 'Other' },
       'Mission':            { Type: 'Other' },
 
+      'None':               { Type: 'Other', Name: '' },
       'Attack':             { Type: 'Other' },
       'Colonization':       { Type: 'Other', Name: 'Colony' },
       'Production':         { Type: 'Other', Name: 'Prod' },
