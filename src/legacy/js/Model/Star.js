@@ -11,9 +11,9 @@ class Star {
     this.estates = [null, null, null, null, null];
   }
 
-  ship(slot)    { return this.ships[slot]     ?? Card.AbsentShip; }
-  hero(slot)    { return this.heroes[slot]    ?? Card.AbsentHero; }
-  estate(slot)  { return this.estates[slot]   ?? Card.AbsentBase; }
+  ship(slot)    { return this.ships[slot]     ?? null; }
+  hero(slot)    { return this.heroes[slot]    ?? null; }
+  estate(slot)  { return this.estates[slot]   ?? null; }
 
   put(card, slot) {
     card = Card.assert(card);

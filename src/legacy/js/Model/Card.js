@@ -11,7 +11,6 @@ class Card {
 
   get State()             { return this._state; }
   get visibility()        { return this._state.visibility; }
-  get isAbsent()          { return this._state.isAbsent; }
   get isTurned()          { return this._state.isTurned; }
   get isVisible()         { return this._state.isVisible; }
   get isAlternative()     { return this._state.isAlternative; }
@@ -47,11 +46,6 @@ class Card {
 
   isLevel(no)             { return this.Level === no; }
   isAnyLevel(no)          { return this.Level === no || this.AltLevel === no; }
-
-  static AbsentBase   = Card.assert('absent Base');
-  static AbsentHero   = Card.assert('absent Hero');
-  static AbsentShip   = Card.assert('absent Ship');
-  static AbsentColony = Card.assert('absent Colony');
 
   statedValue(prop)       {
     if (this.isTurned) {

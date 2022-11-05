@@ -3,7 +3,6 @@ import Assert from "./Assert.js";
 class State {
   constructor(name) {
     this._name        = name;
-    this._absent      = false;
     this._turned      = false;
     this._inserted    = false;
     this._alternative = false;
@@ -20,9 +19,7 @@ class State {
     if (input && !name) {
       Assert.error('wrong state: ' + input);
     }
-    if (name === Names.Absent) {
-      this._absent = true;
-    } else if (name === Names.Turned) {
+    if (name === Names.Turned) {
       this._turned = true;
     } else if (name === Names.Inserted) {
       this._inserted = true;
@@ -32,16 +29,12 @@ class State {
   }
 
   get name()            { return this._name; }
-  get isAbsent()        { return this._absent; }
   get isTurned()        { return this._turned; }
   get isInserted()      { return this._inserted; }
   get isAlternative()   { return this._alternative; }
-  get isVisible()       { return !this._absent && !this._turned; }
+  get isVisible()       { return !this._turned; }
 
   get visibility()      {
-    if (this.isAbsent) {
-      return Names.Absent;
-    }
     if (this.isTurned) {
       return Names.Turned;
     }
@@ -81,7 +74,6 @@ class State {
 }
 
 const Names = Object.freeze({
-  Absent:       'Absent',
   Turned:       'Turned',
   Visible:      'Visible',
   Ins:          'Inserted',

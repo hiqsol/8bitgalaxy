@@ -17,14 +17,13 @@ class StarDrawer {
 }
 
 class Inner {
-  constructor(drawer, parent, absent) {
+  constructor(drawer, parent) {
     this.drawer = drawer;
     this.parent = parent;
-    this.absent = absent;
   }
 
-  static create(drawer, parent, absent) {
-    return new Inner(drawer, parent, absent);
+  static create(drawer, parent) {
+    return new Inner(drawer, parent);
   }
 
   drawCards(star) {
@@ -45,7 +44,7 @@ class Inner {
   }
 
   drawCard(card, y, x) {
-    if (this.absent === card.isAbsent) {
+    if (card) {
       this.drawer.draw(this.parent, card, y, x);
     }
   }

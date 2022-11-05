@@ -8,10 +8,6 @@
     z-index: 3;
 }
 
-.Card.Absent {
-    border: 0;
-}
-
 .Card.Turned {
     filter: brightness(55%);
 }
