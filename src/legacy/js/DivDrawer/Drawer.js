@@ -27,6 +27,9 @@ class Drawer {
   }
 
   draw(parent, obj, y, x) {
+    if (obj === null) {
+      return null;
+    }
     if (parent === null) {
       parent = document.querySelector("body");
     }

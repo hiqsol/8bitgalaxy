@@ -1,5 +1,32 @@
 .Pile {
     position: absolute;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 9px black;
+    z-index: 3;
+}
+
+.Pile .Name .Value {
+    display: block;
+    width: 250px;
+    height: 350px;
+    line-height: 350px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.Pile.LeftToRight .Name .Value {
+    width: 350px;
+    height: 250px;
+    line-height: 250px;
+}
+
+.BottomToTop .Pile .Name .Value {
+    transform-origin: center;
+    transform: rotate(180deg);
 }
 
 .Pile .Ship {
@@ -64,21 +91,5 @@
 .Home.BottomToTop {
     transform-origin: center;
     transform: rotate(180deg) translate(100%, 100%);
-}
-
-.Absent .Name .Value {
-    display: block;
-    width: 250px;
-    height: 350px;
-    line-height: 350px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-    font-weight: 100;
-}
-
-.BottomToTop .Absent .Name .Value {
-    transform-origin: center;
-    transform: rotate(180deg);
 }
 

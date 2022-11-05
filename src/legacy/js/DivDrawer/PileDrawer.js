@@ -24,13 +24,16 @@ class PileDrawer {
       e.appendChild(card);
     });
     this.drawCards(e, pile);
+    e.querySelector(".Name .Value").innerHTML = pile.name;
+
     return e;
   }
 
   drawCards(parent, pile) {
-    let size = pile.size ? pile.size : 1;
-    let shift = pile.folded ? 1 / size : 1;
-    for (let i = 0; i < size; i++) {
+    if (!pile.size) return;
+    let shift = pile.folded ? 1 / pile.size : 1;
+    for (let i = 0; i < pile.size; i++) {
+      console.log(pile.get(i).Name, i);
       this._drawer.draw(parent, pile.get(i), i * shift, i * shift);
     }
   }
@@ -45,7 +48,9 @@ class PileDrawer {
 }
 
 const HTML = `
-    <div class="Pile droppable"></div>
+  <div class="Pile droppable">
+    <div class="Name"><div class="Value">Name</div></div>
+  </div>
 `;
 
 export default PileDrawer;
