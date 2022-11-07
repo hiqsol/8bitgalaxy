@@ -4,6 +4,6 @@
   </legacy-wrapper>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import LegacyWrapper from "./components/LegacyWrapper.vue";
 </script>

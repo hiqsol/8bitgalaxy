@@ -2,7 +2,7 @@
 
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 import Demo from "./js/Demo.js";
 
