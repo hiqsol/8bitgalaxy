@@ -12,7 +12,6 @@
     font-size: 60px;
     line-height: 40px;
     text-align: center;
-    /*-webkit-text-stroke: 1px black;*/
 }
 
 .Spec .lni {
@@ -105,7 +104,7 @@
     width: 40px;
     height: 40px;
     font-size: 19px;
-    line-height: 40px;
+    line-height: 45px;
     font-weight: 100;
     color: #000 !important;
 }
@@ -168,6 +167,13 @@
     filter: brightness(70%);
 }
 
+.Spec.Attack .Value,
+.Spec.Colonization .Value,
+.Spec.Production .Value,
+.Spec.Science .Value {
+    -webkit-text-stroke: 1px white;
+}
+
 .Spec.Cooperation .Value::before {
     content: '+';
 }
@@ -180,7 +186,7 @@
 
 .Ship .Image .Klass {
     left: 60px;
-    top: 90px;
+    top: 10px;
 }
 
 .Ship .Spec.Attack {
@@ -249,8 +255,8 @@
 }
 
 .Hero .Image .Klass {
-    left: 60px;
-    top: 90px;
+    left: 100px;
+    top: 10px;
 }
 
 .Hero .Spec.Attack {
@@ -319,8 +325,8 @@
 }
 
 .Base .Image .Klass {
-    left: 70px;
-    top: 60px;
+    left: 170px;
+    top: 10px;
 }
 
 .Base .Spec.Attack {
@@ -390,8 +396,8 @@
 }
 
 .Colony .Image .Klass {
-    left: 70px;
-    top: 60px;
+    left: 50px;
+    top: 10px;
 }
 
 .Colony .Spec.Attack {
