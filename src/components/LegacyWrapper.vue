@@ -5,6 +5,6 @@
   </canvas>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import "./../legacy/styles/8bitfont.css";
 </script>

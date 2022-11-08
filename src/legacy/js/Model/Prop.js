@@ -35,7 +35,7 @@ class Prop {
     }
     if (typeof(sample) === 'object') {
       let c = sample.constructor.name;
-      if (c === 'Klass') {
+      if (c.includes('Klass')) {
         return new Prop(sample.name);
       }
     }

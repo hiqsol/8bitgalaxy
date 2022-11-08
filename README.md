@@ -19,3 +19,10 @@ Build production (distribution) files in your **dist** folder:
 ```bash
 npm run build
 ```
+
+or
+
+```bash
+npm run build:watch
+```
+
