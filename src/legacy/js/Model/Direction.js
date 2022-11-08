@@ -11,6 +11,13 @@ class Direction {
   get reversed()    { return Direction.getOne(Reverseds[this.name]); }
   get counterpart() { return Direction.getOne(Counterparts[this.name]); }
 
+  get isTopToBottom() { return this.isName(Direction.TopToBottom); }
+  get isBottomToTop() { return this.isName(Direction.BottomToTop); }
+  get isLeftToRight() { return this.isName(Direction.LeftToRight); }
+  get isRightToLeft() { return this.isName(Direction.RightToLeft); }
+
+  isName(name)      { return Direction.normalizeName(name) === this._name; }
+
   static _values = {};
 
   static get TopToBottom() { return Direction.getOne(Names.TopToBottom); }
@@ -27,7 +34,6 @@ class Direction {
   }
 
   static fromString(name) { return new Direction(name); }
-  static isName(name)     { return Direction.normalizeName(name) !== null; }
 
   static assert(sample) {
     if (! sample) {
@@ -53,6 +59,9 @@ class Direction {
   static normalizeName(name) {
     if (! name) {
       return Names.TopToBottom;
+    }
+    if (name instanceof(Direction)) {
+      return name.name;
     }
     let lc = name.toLowerCase();
     return Names[name] ?? Names[lc] ?? null;
