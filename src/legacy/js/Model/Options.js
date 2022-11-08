@@ -31,7 +31,7 @@ class Options {
   init(options) {
     this._players = options.players ?? {
       p1: 'human',
-      p2: 'ai',
+      p2: 'martian',
     };
     this._name = options.name ?? this.generateName();
   }

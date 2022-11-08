@@ -21,6 +21,12 @@ class Player {
   get name()      { return this._name; }
   get race()      { return this._race; }
   get direction() { return this._direction; }
+  get star()      {
+    return this._direction.isTopToBottom
+      ? this.board.star(2, 1)
+      : this.board.star(0, 0)
+    ;
+  }
 
   static assert(sample) {
     if (sample instanceof(Player)) {

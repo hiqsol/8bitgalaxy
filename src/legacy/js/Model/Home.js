@@ -17,6 +17,7 @@ class Home {
   }
 
   get player()        { return this._player; }
+  get star()          { return this._player.star; }
   get deck()          { return this._deck; }
   get direction()     { return this._player.direction; }
   get hand()          { return this._hand; }

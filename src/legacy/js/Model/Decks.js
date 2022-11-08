@@ -31,6 +31,11 @@ class Decks {
         dst[key.toLowerCase()] = src[key];
         return dst;
       }, {});
+      for (const key in src) {
+        if (key.startsWith('Human-')) {
+          Decks._all[key.replace('Human-', 'Martian-').toLowerCase()] = src[key];
+        }
+      }
     }
     return Decks._all;
   }

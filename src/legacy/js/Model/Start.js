@@ -1,5 +1,6 @@
 import Home from "./Home.js";
 import Pile from "./Pile.js";
+import Decks from "./Decks.js";
 
 class Start {
   constructor(home) {
@@ -77,7 +78,7 @@ class Start {
     tmp.shuffle();
     this.factory.put(tmp.pop(), 1);
     this.factory.put(tmp.pop(), 0);
-    this.field.star(2, 1)
+    this.home.star
       .put(tmp.pop(), 0)
       .put(tmp.pop(), 1)
     ;
@@ -94,7 +95,7 @@ class Start {
     tmp.shuffle();
     this.factory.put(tmp.pop(), 3);
     this.factory.put(tmp.pop(), 2);
-    this.field.star(2, 1)
+    this.home.star
       .put(tmp.pop(), 3)
       .put(tmp.pop(), 4)
     ;
