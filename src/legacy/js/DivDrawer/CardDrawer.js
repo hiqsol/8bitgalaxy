@@ -23,13 +23,20 @@ class CardDrawer {
     e.addEventListener("dragend", (ev) => {
       ev.target.classList.remove("dragging");
     });
-    if (card.isVisible) {
-      this.drawImage(e, card.Specs);
-      this._drawer.draw(e, card.Specs);
-      if (!card.isInserted && card.Alternative) {
-        this._drawer.draw(e, card.Alternative, true);
-      }
+    e.ondblclick = (event) => {
+      event.currentTarget.classList.toggle('Visible');
+      event.currentTarget.classList.toggle('Turned');
     }
+    e.onclick = (event) => {
+      event.currentTarget.classList.toggle('Selected');
+    }
+
+    this.drawImage(e, card.Specs);
+    this._drawer.draw(e, card.Specs);
+    if (card.Alternative) {
+      this._drawer.draw(e, card.Alternative, true);
+    }
+
     e.querySelector(".Name .Value").innerHTML = card.Name;
 
     return e;

@@ -8,8 +8,16 @@
     z-index: 4;
 }
 
+.Card.Selected {
+    filter: brightness(115%);
+    border: 3px solid red;
+    box-shadow: 0 0 20px red;
+}
 .Card.Turned {
     filter: brightness(55%);
+}
+.Turned div {
+    display: none;
 }
 
 .Ship {
