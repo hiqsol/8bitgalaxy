@@ -20,8 +20,8 @@ class CardDrawer {
       event.currentTarget.classList.add("dragging");
       event.dataTransfer.setData("text/plain", event.currentTarget.id);
     };
-    e.addEventListener("dragend", (ev) => {
-      ev.target.classList.remove("dragging");
+    e.addEventListener("dragend", (event) => {
+      event.target.classList.remove("dragging");
     });
     e.ondblclick = (event) => {
       event.currentTarget.classList.toggle('Visible');
