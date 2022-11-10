@@ -51,12 +51,14 @@
     height: 100%;
 }
 
-.Specs.Alternative {
+.Card.Altered .Specs.Normal,
+.Card:not(.Altered) .Specs.Alternative {
     transform-origin: center;
     transform: rotate(180deg);
 }
 
-.Star .Card.Visible .Specs.Alternative {
+.Star .Card.Visible.Altered .Specs.Normal,
+.Star .Card.Visible:not(.Altered) .Specs.Alternative {
     display: none;
 }
 

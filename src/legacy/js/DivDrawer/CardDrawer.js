@@ -24,9 +24,14 @@ class CardDrawer {
       event.target.classList.remove("dragging");
     });
     e.ondblclick = (event) => {
-      event.currentTarget.classList.toggle('Visible');
-      event.currentTarget.classList.toggle('Turned');
+      if (event.ctrlKey) {
+        event.currentTarget.classList.toggle('Altered');
+      } else {
+        event.currentTarget.classList.toggle('Visible');
+        event.currentTarget.classList.toggle('Turned');
+      }
     }
+
     e.onclick = (event) => {
       event.currentTarget.classList.toggle('Selected');
     }
