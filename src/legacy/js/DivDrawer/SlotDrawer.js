@@ -44,9 +44,7 @@ class SlotDrawer {
 }
 
 const HTML = `
-  <div class="Slot droppable">
-    <div class="Name"><div class="Value"></div></div>
-  </div>
+  <div class="Slot droppable"></div>
 `;
 
 export default SlotDrawer;
