@@ -4,8 +4,8 @@ class State {
   constructor(name) {
     this._name        = name;
     this._turned      = false;
+    this._altered     = false;
     this._inserted    = false;
-    this._alternative = false;
     this.parseName(name);
   }
 
@@ -23,7 +23,7 @@ class State {
       this._turned = true;
     } else if (name === Names.Inserted) {
       this._inserted = true;
-    } else if (name === Names.Alternative) {
+    } else if (name === Names.Altered) {
       this._alternative = true;
     }
   }
@@ -31,7 +31,7 @@ class State {
   get name()            { return this._name; }
   get isTurned()        { return this._turned; }
   get isInserted()      { return this._inserted; }
-  get isAlternative()   { return this._alternative; }
+  get isAltered()       { return this._altered; }
   get isVisible()       { return !this._turned; }
 
   get visibility()      {
@@ -76,10 +76,8 @@ class State {
 const Names = Object.freeze({
   Turned:       'Turned',
   Visible:      'Visible',
-  Ins:          'Inserted',
   Inserted:     'Inserted',
-  Alt:          'Alternative',
-  Alternative:  'Alternative',
+  Altered:      'Altered',
 })
 
 export default State;
