@@ -13,7 +13,7 @@ class Card {
   get visibility()        { return this._state.visibility; }
   get isTurned()          { return this._state.isTurned; }
   get isVisible()         { return this._state.isVisible; }
-  get isAlternative()     { return this._state.isAlternative; }
+  get isAltered()         { return this._state.isAltered; }
 
   get aCard()             { return this._acard; }
   get Specs()             { return this._acard.Specs; }
@@ -25,15 +25,15 @@ class Card {
   get Race()              { return this.aCard.Race; }
   get Level()             { return this.aCard.Level; }
   get AltLevel()          { return this.Alternative ? this.Alternative.Level : null; }
-  get Klass()             { return this.statedValue(Prop.Klass); }
-  get Defense()           { return this.statedValue(Prop.Defense); }
-  get Attack()            { return this.statedValue(Prop.Attack); }
-  get Colonization()      { return this.statedValue(Prop.Colonization); }
-  get Science()           { return this.statedValue(Prop.Science); }
-  get Production()        { return this.statedValue(Prop.Production); }
-  get Requires()          { return this.statedValue(Prop.Requires); }
-  get Cooperation()       { return this.statedValue(Prop.Cooperation); }
-  get Utilization()       { return this.statedValue(Prop.Utilization); }
+  get Klass()             { return this.aCard.Klass; }
+  get Defense()           { return this.aCard.Defense; }
+  get Attack()            { return this.aCard.Attack; }
+  get Colonization()      { return this.aCard.Colonization; }
+  get Science()           { return this.aCard.Science; }
+  get Production()        { return this.aCard.Production; }
+  get Requires()          { return this.aCard.Requires; }
+  get Cooperation()       { return this.aCard.Cooperation; }
+  get Utilization()       { return this.aCard.Utilization; }
 
   get isHero()            { return this.aCard.isHero; }
   get isColony()          { return this.aCard.isColony; }
@@ -46,16 +46,6 @@ class Card {
 
   isLevel(no)             { return this.Level === no; }
   isAnyLevel(no)          { return this.Level === no || this.AltLevel === no; }
-
-  statedValue(prop)       {
-    if (this.isTurned) {
-      return null;
-    }
-    if (this.isAlternative) {
-      Assert.error('TODO implement!')
-    }
-    return this.aCard.getValue(prop);
-  }
 
   static assert(sample) {
     if (sample instanceof(Card)) {
