@@ -107,6 +107,10 @@ class Start {
     for (var i = 4; i > 0; i--) {
       this.research.put(this.ideas.pop(), i);
     }
+    for (var i in this.ideas.cards) {
+      this.ideas.get(i).turn();
+    }
+    this.ideas.top.turn();
   }
 
   filterObject(obj, callback) {

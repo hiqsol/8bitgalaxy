@@ -47,6 +47,10 @@ class Card {
   isLevel(no)             { return this.Level === no; }
   isAnyLevel(no)          { return this.Level === no || this.AltLevel === no; }
 
+  turn()    { this._state.turn();return this; }
+  alter()   { this._state.alter();return this; }
+  insert()  { this._state.insert();return this; }
+
   static assert(sample) {
     if (sample instanceof(Card)) {
       return sample;

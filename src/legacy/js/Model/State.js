@@ -24,9 +24,13 @@ class State {
     } else if (name === Names.Inserted) {
       this._inserted = true;
     } else if (name === Names.Altered) {
-      this._alternative = true;
+      this._altered = true;
     }
   }
+
+  turn()    { this._turned = !this._turned; }
+  alter()   { this._altered = !this._altered; }
+  insert()  { this._inserted = !this._inserted; }
 
   get name()            { return this._name; }
   get isTurned()        { return this._turned; }
