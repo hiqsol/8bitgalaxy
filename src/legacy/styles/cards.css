@@ -19,6 +19,9 @@
 .Turned div {
     display: none;
 }
+.Card.dragging {
+    opacity: 0.01;
+}
 
 .Ship {
     width: 250px;
