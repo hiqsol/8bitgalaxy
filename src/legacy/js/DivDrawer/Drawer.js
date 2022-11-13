@@ -1,4 +1,5 @@
 import Assert from "../Model/Assert.js";
+import Type from "../Model/Type.js";
 import Template from "./Template.js";
 import RowDrawer from "./RowDrawer.js";
 import CardDrawer from "./CardDrawer.js";
@@ -57,21 +58,53 @@ class Drawer {
   }
 
   addDragEvents(e) {
+    e.addEventListener("dragstart", (event) => {
+      const id = event.dataTransfer.getData("text");
+      const card = document.getElementById(id);
+      Drawer.setDraggingCard(card);
+    });
     e.addEventListener("dragover", (event) => {
       event.preventDefault();
-      event.currentTarget.classList.add('hover');
+      if (Drawer.isDroppable(event)) {
+        event.currentTarget.classList.add('hover');
+      }
     });
     e.addEventListener("dragleave", (event) => {
       event.currentTarget.classList.remove('hover');
     });
     e.addEventListener("drop", (event) => {
-      event.preventDefault();
       event.currentTarget.classList.remove('hover');
+      const card = Drawer.isDroppable(event);
+      if (!card) {
+        return false;
+      }
+      event.preventDefault();
       // Get the data, which is the id of the source element
-      const id = event.dataTransfer.getData("text");
-      const card = document.getElementById(id);
       e.appendChild(card);
     });
+  }
+
+  static isDroppable(event) {
+    const cl = event.currentTarget.classList;
+    const isSlot = cl.contains('Slot');
+    const id = event.dataTransfer.getData("text");
+    let card;
+    if (id) {
+      card = document.getElementById(id);
+    } else {
+      card = Drawer.getDraggingCard();
+    }
+    const type = Type.assert(card);
+    if (isSlot && !cl.contains('for-' + type.name)) {
+      return null;
+    }
+    return card;
+  }
+  static setDraggingCard(card) {
+    Drawer._draggingCard = card;
+  }
+  static getDraggingCard(card) {
+    return Drawer._draggingCard;
   }
 
   importNode(parent, fragment, selector) {

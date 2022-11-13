@@ -15,6 +15,8 @@ class Direction {
   get isBottomToTop() { return this.isName(Direction.BottomToTop); }
   get isLeftToRight() { return this.isName(Direction.LeftToRight); }
   get isRightToLeft() { return this.isName(Direction.RightToLeft); }
+  get isHorizontal()  { return this.LeftToRight || this.RightToLeft; }
+  get isVertical()    { return this.TopToBottom || this.BottomToTop; }
 
   isName(name)      { return Direction.normalizeName(name) === this._name; }
 

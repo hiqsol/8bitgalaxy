@@ -1,15 +1,15 @@
-import Direction from "./Direction.js";
+import Type from "./Type.js";
 
 class Slot {
-  constructor(card, direction, x, y) {
+  constructor(card, type, x, y) {
     this._card = card;
-    this._direction = Direction.assert(direction);
+    this._type = Type.assert(type);
     this._x = x;
     this._y = y;
   }
 
   get card()              { return this._card; }
-  get direction()         { return this._direction; }
+  get type()              { return this._type; }
   get x()                 { return this._x; }
   get y()                 { return this._y; }
 }
