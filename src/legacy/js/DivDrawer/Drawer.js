@@ -87,12 +87,7 @@ class Drawer {
   static isDroppable(event) {
     const cl = event.currentTarget.classList;
     const id = event.dataTransfer.getData("text");
-    let card;
-    if (id) {
-      card = document.getElementById(id);
-    } else {
-      card = Drawer.getDraggingCard();
-    }
+    const card = Drawer.getDraggingCard(id);
     const type = Type.assert(card);
     if (cl.contains('Slot')) {
       if (!cl.contains('for-' + type.name)) {
@@ -107,8 +102,12 @@ class Drawer {
   static setDraggingCard(card) {
     Drawer._draggingCard = card;
   }
-  static getDraggingCard(card) {
-    return Drawer._draggingCard;
+  static getDraggingCard(id) {
+    if (id) {
+      return document.getElementById(id);
+    } else {
+      return Drawer._draggingCard;
+    }
   }
 
   importNode(parent, fragment, selector) {
