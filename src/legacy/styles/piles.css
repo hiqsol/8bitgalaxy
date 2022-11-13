@@ -106,6 +106,10 @@
     transform: rotate(90deg) translate(0, -100%);
 }
 
+.Pile.Extended {
+    z-index: 4;
+}
+
 .Row {
     position: absolute;
 }
