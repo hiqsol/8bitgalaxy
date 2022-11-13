@@ -15,7 +15,9 @@ class CardDrawer {
     e.classList.add(card.visibility);
     e.classList.add(card.Type ?? "Ship");
     e.classList.add(card.Race ?? "Neutral");
-    e.classList.add(card.visibility);
+    if (card.Alternative) {
+      e.classList.add('Alterable');
+    }
     e.ondragstart = (event) => {
       event.currentTarget.classList.add("dragging");
       event.dataTransfer.setData("text/plain", event.currentTarget.id);
@@ -25,7 +27,9 @@ class CardDrawer {
     });
     e.ondblclick = (event) => {
       if (event.ctrlKey) {
-        event.currentTarget.classList.toggle('Altered');
+        if (event.currentTarget.classList.contains('Alterable')) {
+          event.currentTarget.classList.toggle('Altered');
+        }
       } else {
         event.currentTarget.classList.toggle('Visible');
         event.currentTarget.classList.toggle('Turned');
