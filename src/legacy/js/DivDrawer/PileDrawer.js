@@ -15,6 +15,17 @@ class PileDrawer {
     this.drawCards(e, pile);
     e.querySelector(".Name .Value").innerHTML = pile.name;
 
+    let timer;
+    e.onmouseover = () => {
+      timer = setTimeout(function(){
+        e.classList.add('Extended');
+      }, 300);
+    }
+    e.onmouseout = () => {
+      e.classList.remove('Extended');
+      clearTimeout(timer);
+    }
+
     return e;
   }
 
