@@ -1,0 +1,17 @@
+@use "variables";
+@use "sass:math";
+
+// Cards shift in a Pile
+$pileSize: 50;
+$shift: 1;
+@for $p from 1 through $pileSize {
+  .Pile:has(.Card:nth-child(#{$p}):last-child) {
+    $shift: math.div(1, $p);
+    @for $c from 1 through $pileSize {
+      & .Card:nth-child(#{$c}) {
+        left: #{$c * $shift * variables.$m}px;
+        top: #{$c * $shift * variables.$m}px;
+      }
+    }
+  }
+}
