@@ -10,11 +10,11 @@ class SlotDrawer {
     let e = this.importNode(parent, ".Slot");
     e.style.left = (20 + slot.x * m) + "px";
     e.style.top = (10 + slot.y * m) + "px";
-    e.classList.add(slot.type.direction.name);
     e.classList.add('for-'+slot.type.name);
     if (slot.type.isBase) {
       e.classList.add('for-Colony');
     }
+    e.classList.add(slot.type.direction.name);
     this._drawer.addDragEvents(e);
     this.drawCard(e, slot);
 
