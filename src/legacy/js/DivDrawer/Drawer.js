@@ -56,6 +56,24 @@ class Drawer {
     return new drawer(this);
   }
 
+  addDragEvents(e) {
+    e.addEventListener("dragover", (event) => {
+      event.preventDefault();
+      event.currentTarget.classList.add('hover');
+    });
+    e.addEventListener("dragleave", (event) => {
+      event.currentTarget.classList.remove('hover');
+    });
+    e.addEventListener("drop", (event) => {
+      event.preventDefault();
+      event.currentTarget.classList.remove('hover');
+      // Get the data, which is the id of the source element
+      const id = event.dataTransfer.getData("text");
+      const card = document.getElementById(id);
+      e.appendChild(card);
+    });
+  }
+
   importNode(parent, fragment, selector) {
     let n = document.importNode(fragment, true);
     let e = n.querySelector(selector);

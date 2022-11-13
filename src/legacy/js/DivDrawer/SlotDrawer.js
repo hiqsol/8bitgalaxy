@@ -11,18 +11,7 @@ class SlotDrawer {
     e.style.left = (20 + slot.x * m) + "px";
     e.style.top = (10 + slot.y * m) + "px";
     e.classList.add(slot.direction.name);
-    e.addEventListener("dragover", (event) => {
-      console.log("dragOver");
-      event.preventDefault();
-    });
-    e.addEventListener("drop", (event) => {
-      console.log("Drop");
-      event.preventDefault();
-      // Get the data, which is the id of the source element
-      const id = event.dataTransfer.getData("text");
-      const card = document.getElementById(id);
-      e.appendChild(card);
-    });
+    this._drawer.addDragEvents(e);
     this.drawCard(e, slot);
 
     return e;

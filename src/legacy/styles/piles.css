@@ -35,6 +35,9 @@
 .droppable:hover {
     border: 1px solid #333;
 }
+.droppable.hover {
+    border: 5px solid black;
+}
 
 .Pile .Name .Value {
     display: block;

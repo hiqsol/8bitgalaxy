@@ -11,18 +11,7 @@ class PileDrawer {
     e.style.left = (0 + x * m) + "px";
     e.style.top = (0 + y * m) + "px";
     e.classList.add(pile.direction.name);
-    e.addEventListener("dragover", (event) => {
-      console.log("dragOver");
-      event.preventDefault();
-    });
-    e.addEventListener("drop", (event) => {
-      console.log("Drop");
-      event.preventDefault();
-      // Get the data, which is the id of the source element
-      const id = event.dataTransfer.getData("text");
-      const card = document.getElementById(id);
-      e.appendChild(card);
-    });
+    this._drawer.addDragEvents(e);
     this.drawCards(e, pile);
     e.querySelector(".Name .Value").innerHTML = pile.name;
 
