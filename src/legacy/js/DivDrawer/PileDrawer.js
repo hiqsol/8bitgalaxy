@@ -20,7 +20,7 @@ class PileDrawer {
 
   drawCards(parent, pile) {
     if (!pile.size) return;
-    let shift = pile.folded ? 1 / pile.size : 1;
+    const shift = pile.folded ? 1 / pile.size : 1;
     for (let i = 0; i < pile.size; i++) {
       this._drawer.draw(parent, pile.get(i), i * shift, i * shift);
     }

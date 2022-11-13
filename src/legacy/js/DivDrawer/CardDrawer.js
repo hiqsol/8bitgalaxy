@@ -10,8 +10,8 @@ class CardDrawer {
     let e = this._drawer.importNode(parent, this.fragment, ".Card");
     let m = this._drawer.m;
     e.id = uuidv4();
-    e.style.left = (x * m) + "px";
-    e.style.top = (y * m) + "px";
+    // e.style.left = (x * m) + "px";
+    // e.style.top = (y * m) + "px";
     e.classList.add(card.visibility);
     e.classList.add(card.Type ?? "Ship");
     e.classList.add(card.Race ?? "Neutral");
