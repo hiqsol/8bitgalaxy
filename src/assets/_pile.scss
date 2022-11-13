@@ -4,7 +4,7 @@
 // Cards shift in a Pile
 $pileSize: 50;
 @for $p from 2 through $pileSize {
-  .Pile:not(.Extended):has(.Card:nth-child(#{$p}):last-child) {
+  .Pile.Folded:has(.Card:nth-child(#{$p}):last-child) {
     $pp: $p - 1;
     $shift: math.div(1, $pp);
     @for $c from 2 through $p {
@@ -17,7 +17,7 @@ $pileSize: 50;
 }
 
 @for $p from 1 through $pileSize {
-  .Pile.Extended .Card:nth-child(#{$p+1}) {
+  .Pile:not(.Folded) .Card:nth-child(#{$p+1}) {
     top: #{($p - 1) * variables.$m}px;
     left: #{($p - 1) * variables.$m}px;
   }

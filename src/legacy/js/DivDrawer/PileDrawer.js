@@ -11,6 +11,9 @@ class PileDrawer {
     e.style.left = (0 + x * m) + "px";
     e.style.top = (0 + y * m) + "px";
     e.classList.add(pile.direction.name);
+    if (pile.folded) {
+      e.classList.add('Folded');
+    }
     this._drawer.addDragEvents(e);
     this.drawCards(e, pile);
     e.querySelector(".Name .Value").innerHTML = pile.name;
@@ -18,11 +21,11 @@ class PileDrawer {
     let timer;
     e.onmouseover = () => {
       timer = setTimeout(function(){
-        e.classList.add('Extended');
+        e.classList.remove('Folded');
       }, 300);
     }
     e.onmouseout = () => {
-      e.classList.remove('Extended');
+      e.classList.add('Folded');
       clearTimeout(timer);
     }
 
@@ -31,9 +34,8 @@ class PileDrawer {
 
   drawCards(parent, pile) {
     if (!pile.size) return;
-    const shift = pile.folded ? 1 / pile.size : 1;
     for (let i = 0; i < pile.size; i++) {
-      this._drawer.draw(parent, pile.get(i), i * shift, i * shift);
+      this._drawer.draw(parent, pile.get(i));
     }
   }
 

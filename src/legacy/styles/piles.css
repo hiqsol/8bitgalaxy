@@ -23,13 +23,17 @@
     height: 250px;
 }
 
+.Pile.Folded {
+    z-index: 3;
+}
+
 .Pile {
     position: absolute;
     border-radius: 20px;
     padding: 0;
     margin: 0;
     box-shadow: 0 0 9px #222;
-    z-index: 3;
+    z-index: 4;
 }
 
 .droppable:hover {
@@ -104,10 +108,6 @@
 .Pile.LeftToRight .Other {
     transform-origin: top left;
     transform: rotate(90deg) translate(0, -100%);
-}
-
-.Pile.Extended {
-    z-index: 4;
 }
 
 .Row {
