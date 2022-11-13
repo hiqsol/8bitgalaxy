@@ -52,83 +52,89 @@
     '5.1':  ((5-1)*4 + 1-1)*6,
   }
 
-  game.draw(v, Card.assert('Human-S1a'),  y['1.0'], x['1.1']);
-  game.draw(v, Card.assert('Human-S1c'),  y['1.0'], x['1.2']);
-  game.draw(v, Card.assert('Human-S1p'),  y['1.0'], x['1.3']);
-  game.draw(v, Card.assert('Human-S1s'),  y['1.0'], x['1.4']);
+function pile(card) {
+    const pile = new Pile('', Direction.TopToBottom);
+    pile.put(Card.assert(card));
+    return pile;
+}
 
-  game.draw(v, Card.assert('Human-S2a'),  y['2.5'], x['1.1']);
-  game.draw(v, Card.assert('Human-S2c'),  y['2.5'], x['1.2']);
-  game.draw(v, Card.assert('Human-S2p'),  y['2.5'], x['1.3']);
-  game.draw(v, Card.assert('Human-S2s'),  y['2.5'], x['1.4']);
+  game.draw(v, pile('Human-S1a'),  y['1.0'], x['1.1']);
+  game.draw(v, pile('Human-S1c'),  y['1.0'], x['1.2']);
+  game.draw(v, pile('Human-S1p'),  y['1.0'], x['1.3']);
+  game.draw(v, pile('Human-S1s'),  y['1.0'], x['1.4']);
 
-  game.draw(v, Card.assert('Human-S4a'),  y['4.5'], x['1.1']);
-  game.draw(v, Card.assert('Human-S4c'),  y['4.5'], x['1.2']);
-  game.draw(v, Card.assert('Human-S4p'),  y['4.5'], x['1.3']);
-  game.draw(v, Card.assert('Human-S4s'),  y['4.5'], x['1.4']);
+  game.draw(v, pile('Human-S2a'),  y['2.5'], x['1.1']);
+  game.draw(v, pile('Human-S2c'),  y['2.5'], x['1.2']);
+  game.draw(v, pile('Human-S2p'),  y['2.5'], x['1.3']);
+  game.draw(v, pile('Human-S2s'),  y['2.5'], x['1.4']);
 
-  game.draw(v, Card.assert('Human-S6a'),  y['6.5'], x['1.1']);
-  game.draw(v, Card.assert('Human-S6c'),  y['6.5'], x['1.2']);
-  game.draw(v, Card.assert('Human-S6p'),  y['6.5'], x['1.3']);
-  game.draw(v, Card.assert('Human-S6s'),  y['6.5'], x['1.4']);
+  game.draw(v, pile('Human-S4a'),  y['4.5'], x['1.1']);
+  game.draw(v, pile('Human-S4c'),  y['4.5'], x['1.2']);
+  game.draw(v, pile('Human-S4p'),  y['4.5'], x['1.3']);
+  game.draw(v, pile('Human-S4s'),  y['4.5'], x['1.4']);
 
-
-  game.draw(v, Card.assert('Human-H1a'),  y['1.5'], x['2.1']);
-  game.draw(v, Card.assert('Human-H1c'),  y['1.5'], x['2.2']);
-  game.draw(v, Card.assert('Human-H1p'),  y['1.5'], x['2.3']);
-  game.draw(v, Card.assert('Human-H1s'),  y['1.5'], x['2.4']);
-
-  game.draw(v, Card.assert('Human-H3a'),  y['3.5'], x['2.1']);
-  game.draw(v, Card.assert('Human-H3c'),  y['3.5'], x['2.2']);
-  game.draw(v, Card.assert('Human-H3p'),  y['3.5'], x['2.3']);
-  game.draw(v, Card.assert('Human-H3s'),  y['3.5'], x['2.4']);
-
-  game.draw(v, Card.assert('Human-H5a'),  y['5.5'], x['2.1']);
-  game.draw(v, Card.assert('Human-H5c'),  y['5.5'], x['2.2']);
-  game.draw(v, Card.assert('Human-H5p'),  y['5.5'], x['2.3']);
-  game.draw(v, Card.assert('Human-H5s'),  y['5.5'], x['2.4']);
-
-  game.draw(v, Card.assert('Human-H7a'),  y['7.5'], x['2.1']);
-  game.draw(v, Card.assert('Human-H7c'),  y['7.5'], x['2.2']);
-  game.draw(v, Card.assert('Human-H7p'),  y['7.5'], x['2.3']);
-  game.draw(v, Card.assert('Human-H7s'),  y['7.5'], x['2.4']);
+  game.draw(v, pile('Human-S6a'),  y['6.5'], x['1.1']);
+  game.draw(v, pile('Human-S6c'),  y['6.5'], x['1.2']);
+  game.draw(v, pile('Human-S6p'),  y['6.5'], x['1.3']);
+  game.draw(v, pile('Human-S6s'),  y['6.5'], x['1.4']);
 
 
-  game.draw(v, Card.assert('Human-B2a'),  y['2.0'], x['3.1']);
-  game.draw(v, Card.assert('Human-B2c'),  y['2.0'], x['3.2']);
-  game.draw(v, Card.assert('Human-B2p'),  y['2.0'], x['3.3']);
-  game.draw(v, Card.assert('Human-B2s'),  y['2.0'], x['3.4']);
+  game.draw(v, pile('Human-H1a'),  y['1.5'], x['2.1']);
+  game.draw(v, pile('Human-H1c'),  y['1.5'], x['2.2']);
+  game.draw(v, pile('Human-H1p'),  y['1.5'], x['2.3']);
+  game.draw(v, pile('Human-H1s'),  y['1.5'], x['2.4']);
 
-  game.draw(v, Card.assert('Human-B3a'),  y['3.5'], x['3.1']);
-  game.draw(v, Card.assert('Human-B3c'),  y['3.5'], x['3.2']);
-  game.draw(v, Card.assert('Human-B3p'),  y['3.5'], x['3.3']);
-  game.draw(v, Card.assert('Human-B3s'),  y['3.5'], x['3.4']);
+  game.draw(v, pile('Human-H3a'),  y['3.5'], x['2.1']);
+  game.draw(v, pile('Human-H3c'),  y['3.5'], x['2.2']);
+  game.draw(v, pile('Human-H3p'),  y['3.5'], x['2.3']);
+  game.draw(v, pile('Human-H3s'),  y['3.5'], x['2.4']);
 
-  game.draw(v, Card.assert('Human-B5a'),  y['5.5'], x['3.1']);
-  game.draw(v, Card.assert('Human-B5c'),  y['5.5'], x['3.2']);
-  game.draw(v, Card.assert('Human-B5p'),  y['5.5'], x['3.3']);
-  game.draw(v, Card.assert('Human-B5s'),  y['5.5'], x['3.4']);
+  game.draw(v, pile('Human-H5a'),  y['5.5'], x['2.1']);
+  game.draw(v, pile('Human-H5c'),  y['5.5'], x['2.2']);
+  game.draw(v, pile('Human-H5p'),  y['5.5'], x['2.3']);
+  game.draw(v, pile('Human-H5s'),  y['5.5'], x['2.4']);
 
-  game.draw(v, Card.assert('Human-B7a'),  y['7.5'], x['3.1']);
-  game.draw(v, Card.assert('Human-B7c'),  y['7.5'], x['3.2']);
-  game.draw(v, Card.assert('Human-B7p'),  y['7.5'], x['3.3']);
-  game.draw(v, Card.assert('Human-B7s'),  y['7.5'], x['3.4']);
+  game.draw(v, pile('Human-H7a'),  y['7.5'], x['2.1']);
+  game.draw(v, pile('Human-H7c'),  y['7.5'], x['2.2']);
+  game.draw(v, pile('Human-H7p'),  y['7.5'], x['2.3']);
+  game.draw(v, pile('Human-H7s'),  y['7.5'], x['2.4']);
 
 
-  game.draw(v, Card.assert('Human-C2a'),  y['2.5'], x['4.1']);
-  game.draw(v, Card.assert('Human-C2c'),  y['2.5'], x['4.2']);
-  game.draw(v, Card.assert('Human-C2p'),  y['2.5'], x['4.3']);
-  game.draw(v, Card.assert('Human-C2s'),  y['2.5'], x['4.4']);
+  game.draw(v, pile('Human-B2a'),  y['2.0'], x['3.1']);
+  game.draw(v, pile('Human-B2c'),  y['2.0'], x['3.2']);
+  game.draw(v, pile('Human-B2p'),  y['2.0'], x['3.3']);
+  game.draw(v, pile('Human-B2s'),  y['2.0'], x['3.4']);
 
-  game.draw(v, Card.assert('Human-C4a'),  y['4.5'], x['4.1']);
-  game.draw(v, Card.assert('Human-C4c'),  y['4.5'], x['4.2']);
-  game.draw(v, Card.assert('Human-C4p'),  y['4.5'], x['4.3']);
-  game.draw(v, Card.assert('Human-C4s'),  y['4.5'], x['4.4']);
+  game.draw(v, pile('Human-B3a'),  y['3.5'], x['3.1']);
+  game.draw(v, pile('Human-B3c'),  y['3.5'], x['3.2']);
+  game.draw(v, pile('Human-B3p'),  y['3.5'], x['3.3']);
+  game.draw(v, pile('Human-B3s'),  y['3.5'], x['3.4']);
 
-  game.draw(v, Card.assert('Human-C6a'),  y['6.5'], x['4.1']);
-  game.draw(v, Card.assert('Human-C6c'),  y['6.5'], x['4.2']);
-  game.draw(v, Card.assert('Human-C6p'),  y['6.5'], x['4.3']);
-  game.draw(v, Card.assert('Human-C6s'),  y['6.5'], x['4.4']);
+  game.draw(v, pile('Human-B5a'),  y['5.5'], x['3.1']);
+  game.draw(v, pile('Human-B5c'),  y['5.5'], x['3.2']);
+  game.draw(v, pile('Human-B5p'),  y['5.5'], x['3.3']);
+  game.draw(v, pile('Human-B5s'),  y['5.5'], x['3.4']);
+
+  game.draw(v, pile('Human-B7a'),  y['7.5'], x['3.1']);
+  game.draw(v, pile('Human-B7c'),  y['7.5'], x['3.2']);
+  game.draw(v, pile('Human-B7p'),  y['7.5'], x['3.3']);
+  game.draw(v, pile('Human-B7s'),  y['7.5'], x['3.4']);
+
+
+  game.draw(v, pile('Human-C2a'),  y['2.5'], x['4.1']);
+  game.draw(v, pile('Human-C2c'),  y['2.5'], x['4.2']);
+  game.draw(v, pile('Human-C2p'),  y['2.5'], x['4.3']);
+  game.draw(v, pile('Human-C2s'),  y['2.5'], x['4.4']);
+
+  game.draw(v, pile('Human-C4a'),  y['4.5'], x['4.1']);
+  game.draw(v, pile('Human-C4c'),  y['4.5'], x['4.2']);
+  game.draw(v, pile('Human-C4p'),  y['4.5'], x['4.3']);
+  game.draw(v, pile('Human-C4s'),  y['4.5'], x['4.4']);
+
+  game.draw(v, pile('Human-C6a'),  y['6.5'], x['4.1']);
+  game.draw(v, pile('Human-C6c'),  y['6.5'], x['4.2']);
+  game.draw(v, pile('Human-C6p'),  y['6.5'], x['4.3']);
+  game.draw(v, pile('Human-C6s'),  y['6.5'], x['4.4']);
 
 
   for (let i = 1;i<9;i++) {
