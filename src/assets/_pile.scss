@@ -4,13 +4,14 @@
 // Cards shift in a Pile
 $pileSize: 50;
 $shift: 1;
-@for $p from 1 through $pileSize {
+@for $p from 2 through $pileSize {
   .Pile:has(.Card:nth-child(#{$p}):last-child) {
-    $shift: math.div(1, $p);
-    @for $c from 1 through $pileSize {
+    $pp: $p - 1;
+    $shift: math.div(1, $pp);
+    @for $c from 2 through $p {
       & .Card:nth-child(#{$c}) {
-        left: #{$c * $shift * variables.$m}px;
-        top: #{$c * $shift * variables.$m}px;
+        left: #{($c - 2) * $shift * variables.$m}px;
+        top: #{($c - 2) * $shift * variables.$m}px;
       }
     }
   }
