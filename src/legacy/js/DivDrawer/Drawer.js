@@ -86,7 +86,6 @@ class Drawer {
 
   static isDroppable(event) {
     const cl = event.currentTarget.classList;
-    const isSlot = cl.contains('Slot');
     const id = event.dataTransfer.getData("text");
     let card;
     if (id) {
@@ -95,8 +94,13 @@ class Drawer {
       card = Drawer.getDraggingCard();
     }
     const type = Type.assert(card);
-    if (isSlot && !cl.contains('for-' + type.name)) {
-      return null;
+    if (cl.contains('Slot')) {
+      if (!cl.contains('for-' + type.name)) {
+        return null;
+      }
+      if (event.currentTarget.childElementCount) {
+        return null;
+      }
     }
     return card;
   }
