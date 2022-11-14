@@ -358,12 +358,22 @@
 }
 
 .Base .Spec.Require1 .Value {
+    left: 0px;
+    top: 70px;
+    border-top-right-radius: 12px;
+}
+.Base .Spec.Require2 .Value {
+    left: 0px;
+    top: 110px;
+    border-bottom-right-radius: 12px;
+}
+
+.Pile.TopToBottom .Base .Spec.Require1 .Value {
     left: 310px;
     top: 70px;
     border-top-left-radius: 12px;
 }
-
-.Base .Spec.Require2 .Value {
+.Pile.TopToBottom .Base .Spec.Require2 .Value {
     left: 310px;
     top: 110px;
     border-bottom-left-radius: 12px;
