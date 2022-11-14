@@ -161,17 +161,17 @@
     margin-top: 4px;
     text-align: center;
     line-height: 50px;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 900;
-    -webkit-text-stroke: 1px white;
-    filter: brightness(70%);
+    /*-webkit-text-stroke: 1px white;*/
+    filter: brightness(80%);
 }
 
 .Spec.Attack .Value,
 .Spec.Colonization .Value,
 .Spec.Production .Value,
 .Spec.Science .Value {
-    -webkit-text-stroke: 1px white;
+    /*-webkit-text-stroke: 1px white;*/
 }
 
 .Spec.Cooperation .Value::before {
