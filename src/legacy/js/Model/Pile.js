@@ -10,6 +10,8 @@ class Pile {
     this._cards = [];
   }
 
+  setDirection(direction) { this._direction = Direction.assert(direction); return this; }
+
   get direction() {
     return this._direction;
   }
