@@ -27,10 +27,11 @@ class Deck {
         let upper = card;
         let lower = card;
         if (alt) {
+          let altCard = Card.assert(alt.Name);
           if (card.Level > alt.Level) {
-            lower = alt;
+            lower = altCard;
           } else {
-            upper = alt;
+            upper = altCard;
           }
         }
         this._upper[upper.Name] = upper;

@@ -37,7 +37,7 @@ class Start {
   }
 
   init() {
-    this.ideas.put(this.deck.upper);
+    this.ideas.put(this.deck.lower);
     this.initShips();
     this.initHeroes();
     this.initBases();
