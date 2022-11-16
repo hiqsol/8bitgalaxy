@@ -59,13 +59,3 @@
     transform-origin: center;
     transform: rotate(180deg);
 }
-
-.Star .Card.Visible.Altered .Specs.Normal,
-.Star .Card.Visible:not(.Altered) .Specs.Alternative {
-    display: none;
-}
-
-.Star .Card {
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-}

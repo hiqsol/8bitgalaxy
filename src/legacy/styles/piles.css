@@ -23,6 +23,16 @@
     height: 250px;
 }
 
+.Slot .Card.Visible.Altered .Specs.Normal,
+.Slot .Card.Visible:not(.Altered) .Specs.Alternative {
+    display: none;
+}
+
+.Slot .Card {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
 .Pile.Folded {
     z-index: 3;
 }
