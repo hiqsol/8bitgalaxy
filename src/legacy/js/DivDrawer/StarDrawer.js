@@ -10,6 +10,7 @@ class StarDrawer {
     e.style.left  = (star.x*m*15.5 + indent) + 'px';
     e.style.top   = (star.y*m*13.4 + m) + 'px';
     this.drawSlots(e, star);
+    this._drawer.draw(e, star.space, 11, 2)
     return e;
   }
 

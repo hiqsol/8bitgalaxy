@@ -1,4 +1,5 @@
 import Card from "./Card.js";
+import Pile from "./Pile.js";
 import Slot from "./Slot.js";
 import Type from "./Type.js";
 import Direction from "./Direction.js";
@@ -9,25 +10,27 @@ class Star {
     this.field = field;
     this.y = y;
     this.x = x;
-    this.ships = [null, null, null, null, null];
-    this.heroes = [null, null, null, null];
-    this.estates = [null, null, null, null, null];
+    this._space = new Pile('', Direction.LeftToRight);
+    this._ships = [null, null, null, null, null];
+    this._heroes = [null, null, null, null];
+    this._estates = [null, null, null, null, null];
   }
 
-  ship(slot)    { return this.ships[slot]     ?? null; }
-  hero(slot)    { return this.heroes[slot]    ?? null; }
-  estate(slot)  { return this.estates[slot]   ?? null; }
+  get space()   { return this._space; }
+  ship(slot)    { return this._ships[slot]     ?? null; }
+  hero(slot)    { return this._heroes[slot]    ?? null; }
+  estate(slot)  { return this._estates[slot]   ?? null; }
 
   put(card, slot) {
     card = Card.assert(card);
     if (card.isShip) {
-      return this.putToSlot(card, slot, this.ships);
+      return this.putToSlot(card, slot, this._ships);
     } else if (card.isHero) {
-      return this.putToSlot(card, slot, this.heroes);
+      return this.putToSlot(card, slot, this._heroes);
     } else if (card.isBase) {
-      return this.putToSlot(card, slot, this.estates);
+      return this.putToSlot(card, slot, this._estates);
     } else if (card.isColony) {
-      return this.putToSlot(card, slot, this.estates);
+      return this.putToSlot(card, slot, this._estates);
     }
     Assert.error('wrong card type', card);
   }
@@ -59,6 +62,8 @@ class Star {
 
       new Slot(this.hero(0), Type.Hero, 9, 8),
       new Slot(this.hero(1), Type.Hero, 9, 9),
+      new Slot(this.hero(2), Type.Hero, 9, 10),
+      new Slot(this.hero(2), Type.Hero, 9, 11),
     ];
   }
 }

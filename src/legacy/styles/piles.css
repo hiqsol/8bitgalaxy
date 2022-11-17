@@ -45,6 +45,9 @@
     box-shadow: 0 0 9px #222;
     z-index: 4;
 }
+.Star .Pile {
+    box-shadow: 0 0 0px;
+}
 
 .droppable:hover {
     border: 1px solid #333;
