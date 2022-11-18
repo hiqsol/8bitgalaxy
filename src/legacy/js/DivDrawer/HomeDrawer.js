@@ -11,6 +11,7 @@ class HomeDrawer {
     e.style.left  = (0 + x*m) + 'px';
     e.style.top   = (0 + y*m) + 'px';
     e.classList.add(home.direction.name);
+    e.setAttribute('race', home.player.race);
     this._drawer.draw(e, home.progress, 22, -8);
     this._drawer.draw(e, home.hand,     22, 18);
     this._drawer.draw(e, home.discard,  14, 24);

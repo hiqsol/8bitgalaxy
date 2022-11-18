@@ -3,6 +3,7 @@ import Drawer from "./Drawer.js";
 class PileDrawer {
   constructor(drawer) {
     this._drawer = Drawer.assert(drawer);
+    this._discards = {};
   }
 
   draw(parent, pile, y, x) {
@@ -29,7 +30,42 @@ class PileDrawer {
       clearTimeout(timer);
     }
 
+    const home = e.closest('.Home');
+    let race = null;
+    if (home) {
+      race = home.getAttribute('race');
+    }
+    if (pile.name === 'Discard') {
+      this._discards[race] = e;
+    }
+    if (pile.name === 'Reserve') {
+      e.ondblclick = (event) => {
+        let discard = this._discards[race];
+        let cards = discard.querySelectorAll(".Card");
+
+        const nums = new Set();
+        while(nums.size !== cards.length) {
+          nums.add(Math.floor(Math.random() * cards.length));
+        }
+
+        for (const i of nums) {
+          cards[i].classList.remove('Visible');
+          cards[i].classList.add('Turned');
+          e.appendChild(cards[i]);
+        }
+      }
+    }
+
     return e;
+  }
+
+  shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
   }
 
   drawCards(parent, pile) {
