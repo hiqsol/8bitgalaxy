@@ -13,6 +13,18 @@ class Player {
     this._home = new Home(this);
   }
 
+  toJSON() {
+    return {
+      '_class':     'Player',
+      'name':       this._name,
+      'race':       this._race,
+      'direction':  this._direction.name,
+      'x':          this._x,
+      'y':          this._y,
+      'home':       this._home,
+    }
+  }
+
   setBoard(board) { this._board = Board.assert(board);return this; }
 
   get board()     { return this._board; }

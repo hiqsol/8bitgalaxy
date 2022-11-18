@@ -9,6 +9,14 @@ class Card {
     this._acard = aCard.assert(acard);
   }
 
+  toJSON() {
+    return {
+      '_class':   'Card',
+      'state':    this._state.name,
+      'name':     this._acard.Name,
+    }
+  }
+
   get State()             { return this._state; }
   get isTurned()          { return this._state.isTurned; }
   get isAltered()         { return this._state.isAltered; }

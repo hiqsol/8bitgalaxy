@@ -6,6 +6,13 @@ class Field {
     this.stars = [[], [], []];
   }
 
+  toJSON() {
+    return {
+      '_class':     'Field',
+      'stars':      this._stars,
+    }
+  }
+
   star(y, x) {
     if (! this.stars[y][x]) {
       this.stars[y][x] = new Star(this, y, x);

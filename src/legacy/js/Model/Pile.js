@@ -10,6 +10,15 @@ class Pile {
     this._cards = [];
   }
 
+  toJSON() {
+    return {
+      '_class':     'Pile',
+      'type':       this._type,
+      'direction':  this._direction.name,
+      'cards':      this._cards,
+    }
+  }
+
   setDirection(direction) { this._direction = Direction.assert(direction); return this; }
 
   get direction() {
@@ -124,7 +133,6 @@ class Pile {
       array[j] = temp;
     }
   }
-
 }
 
 export default Pile;

@@ -13,6 +13,14 @@ class Board {
     this._players = [];
   }
 
+  toJSON() {
+    return {
+      '_class':     'Board',
+      'field':      this._field,
+      'players':    this._players,
+    }
+  }
+
   get game()    { return this._game; }
   get field()   { return this._field; }
 

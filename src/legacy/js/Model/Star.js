@@ -16,6 +16,18 @@ class Star {
     this._estates = [null, null, null, null, null];
   }
 
+  toJSON() {
+    return {
+      '_class':     'Star',
+      'x':          this.x,
+      'y':          this.y,
+      'space':      this._space,
+      'ships':      this._ships,
+      'heroes':     this._heroes,
+      'estates':    this._estates,
+    }
+  }
+
   get space()   { return this._space; }
   ship(slot)    { return this._ships[slot]     ?? null; }
   hero(slot)    { return this._heroes[slot]    ?? null; }

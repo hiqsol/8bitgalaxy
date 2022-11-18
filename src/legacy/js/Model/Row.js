@@ -10,6 +10,15 @@ class Row {
     this.initPiles(size);
   }
 
+  toJSON() {
+    return {
+      '_class':     'Row',
+      'type':       this._type,
+      'direction':  this._direction.name,
+      'piles':      this._piles,
+    }
+  }
+
   initPiles(size) {
     let piles = Types[this.type];
     for (var i = 0, len = piles.length; i < len; i++) {

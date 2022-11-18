@@ -16,6 +16,18 @@ class Home {
     this._research  = new Row('Research', Direction.TopToBottom, 5);
   }
 
+  toJSON() {
+    return {
+      '_class':   'Home',
+      'progress': this._progress,
+      'hand':     this._hand,
+      'discard':  this._discard,
+      'reserve':  this._reserve,
+      'factory':  this._factory,
+      'research': this._research,
+    }
+  }
+
   get player()        { return this._player; }
   get star()          { return this._player.star; }
   get deck()          { return this._deck; }
