@@ -23,8 +23,8 @@
     height: 250px;
 }
 
-.Slot .Card.Visible.Altered .Specs.Normal,
-.Slot .Card.Visible:not(.Altered) .Specs.Alternative {
+.Slot .Card:not(.Turned).Altered .Specs.Normal,
+.Slot .Card:not(.Turned):not(.Altered) .Specs.Alternative {
     display: none;
 }
 

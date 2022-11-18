@@ -49,7 +49,6 @@ class PileDrawer {
         }
 
         for (const i of nums) {
-          cards[i].classList.remove('Visible');
           cards[i].classList.add('Turned');
           e.appendChild(cards[i]);
         }

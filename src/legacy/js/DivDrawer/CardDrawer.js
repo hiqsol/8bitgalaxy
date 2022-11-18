@@ -10,12 +10,12 @@ class CardDrawer {
     let e = this._drawer.importNode(parent, this.fragment, ".Card");
     let m = this._drawer.m;
     e.id = card.Name;
-    e.classList.add(card.visibility);
-    e.classList.add(card.Type ?? "Ship");
-    e.classList.add(card.Race ?? "Neutral");
-    if (card.Alternative) {
-      e.classList.add('Alterable');
-    }
+
+    if (card.State.name) e.classList.add(card.State.name);
+    if (card.Type) e.classList.add(card.Type);
+    if (card.Race) e.classList.add(card.Race);
+    if (card.Alternative) e.classList.add('Alterable');
+
     e.ondragstart = (event) => {
       event.currentTarget.classList.add("dragging");
       event.dataTransfer.setData("text/plain", event.currentTarget.id);
@@ -29,7 +29,6 @@ class CardDrawer {
           event.currentTarget.classList.toggle('Altered');
         }
       } else {
-        event.currentTarget.classList.toggle('Visible');
         event.currentTarget.classList.toggle('Turned');
       }
     }

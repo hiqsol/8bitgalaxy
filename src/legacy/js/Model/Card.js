@@ -10,9 +10,7 @@ class Card {
   }
 
   get State()             { return this._state; }
-  get visibility()        { return this._state.visibility; }
   get isTurned()          { return this._state.isTurned; }
-  get isVisible()         { return this._state.isVisible; }
   get isAltered()         { return this._state.isAltered; }
 
   get aCard()             { return this._acard; }

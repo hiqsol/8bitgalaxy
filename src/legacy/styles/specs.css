@@ -509,6 +509,6 @@
     border-bottom-right-radius: 12px;
 }
 
-.Visible .Name, .Turned .Name {
+.Card .Name {
     display: none;
 }

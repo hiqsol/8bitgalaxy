@@ -2,15 +2,19 @@ import Assert from "./Assert.js";
 
 class State {
   constructor(name) {
-    this._name        = name;
     this._turned      = false;
     this._altered     = false;
-    this._inserted    = false;
     this.parseName(name);
   }
 
   parseName(name) {
     name.split('-').forEach(part => this.applyName(part));
+  }
+  buildName() {
+    let names = [];
+    if (this._turned) names.push('Turned');
+    if (this._altered) names.push('Altered');
+    return names.join(' ');
   }
 
   applyName(input) {
@@ -21,8 +25,6 @@ class State {
     }
     if (name === Names.Turned) {
       this._turned = true;
-    } else if (name === Names.Inserted) {
-      this._inserted = true;
     } else if (name === Names.Altered) {
       this._altered = true;
     }
@@ -30,20 +32,10 @@ class State {
 
   turn()    { this._turned = !this._turned; }
   alter()   { this._altered = !this._altered; }
-  insert()  { this._inserted = !this._inserted; }
 
-  get name()            { return this._name; }
+  get name()            { return this.buildName(); }
   get isTurned()        { return this._turned; }
-  get isInserted()      { return this._inserted; }
   get isAltered()       { return this._altered; }
-  get isVisible()       { return !this._turned; }
-
-  get visibility()      {
-    if (this.isTurned) {
-      return Names.Turned;
-    }
-    return Names.Visible;
-  }
 
   static assert(sample) {
     if (sample instanceof(State)) {
@@ -79,8 +71,6 @@ class State {
 
 const Names = Object.freeze({
   Turned:       'Turned',
-  Visible:      'Visible',
-  Inserted:     'Inserted',
   Altered:      'Altered',
 })
 
