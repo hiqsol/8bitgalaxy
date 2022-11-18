@@ -9,7 +9,7 @@ class CardDrawer {
   draw(parent, card, y, x) {
     let e = this._drawer.importNode(parent, this.fragment, ".Card");
     let m = this._drawer.m;
-    e.id = uuidv4();
+    e.id = card.Name;
     e.classList.add(card.visibility);
     e.classList.add(card.Type ?? "Ship");
     e.classList.add(card.Race ?? "Neutral");
