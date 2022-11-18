@@ -58,6 +58,7 @@
 
 .Pile .Name .Value {
     display: block;
+    user-select: none;
     width: 250px;
     height: 350px;
     line-height: 350px;
