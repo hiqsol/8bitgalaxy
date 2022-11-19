@@ -20,14 +20,16 @@ class PileDrawer {
     e.querySelector(".Name .Value").innerHTML = pile.name;
 
     let timer;
-    e.onmouseover = () => {
-      timer = setTimeout(function(){
-        e.classList.remove('Folded');
-      }, 300);
-    }
-    e.onmouseout = () => {
-      e.classList.add('Folded');
-      clearTimeout(timer);
+    if (pile.name != 'Ideas') {
+      e.onmouseover = () => {
+        timer = setTimeout(function(){
+          e.classList.remove('Folded');
+        }, 300);
+      }
+      e.onmouseout = () => {
+        e.classList.add('Folded');
+        clearTimeout(timer);
+      }
     }
 
     const home = e.closest('.Home');
