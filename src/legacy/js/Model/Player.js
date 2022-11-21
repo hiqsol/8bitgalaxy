@@ -25,6 +25,22 @@ class Player {
     }
   }
 
+  static fromJSON(json) {
+    Assert.assert(json._class == 'Player', "wrong class hydrating Player", json);
+    let player = new Player(json.name, json.race, json.direction, json.y, json.x);
+    player._home = Home.fromJSON(json.home, player);
+    return player;
+  }
+
+  static arrayFromJSON(json) {
+    Assert.assert(Array.isArray(json), "must be array of Players", json);
+    let players = [];
+    for (const k in json) {
+      players[k] = Player.fromJSON(json[k]);
+    }
+    return players;
+  }
+
   setBoard(board) { this._board = Board.assert(board);return this; }
 
   get board()     { return this._board; }

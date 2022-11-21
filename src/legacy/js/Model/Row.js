@@ -3,11 +3,11 @@ import Assert from "./Assert.js";
 import Direction from "./Direction.js";
 
 class Row {
-  constructor(type, direction, size) {
+  constructor(type, direction) {
     this._type = Row.assertType(type);
     this._direction = Direction.assert(direction);
     this._piles = [];
-    this.initPiles(size);
+    this.initPiles();
   }
 
   toJSON() {
@@ -19,7 +19,14 @@ class Row {
     }
   }
 
-  initPiles(size) {
+  static fromJSON(json) {
+    Assert.assert(json._class == 'Row', "wrong class hydrating Row", json);
+    let row = new Row(json.type, json.direction);
+    row._piles = Pile.arrayFromJSON(json.piles);
+    return row;
+  }
+
+  initPiles() {
     let piles = Types[this.type];
     for (var i = 0, len = piles.length; i < len; i++) {
       this._piles.push(new Pile(piles[i], this.direction.counterpart));

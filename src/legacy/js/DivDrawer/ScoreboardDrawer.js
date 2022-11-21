@@ -33,6 +33,7 @@ class ScoreboardDrawer {
 
         let json = event.target.result;
         scoreboard.game.importJson(json);
+        scoreboard.game.redraw();
       };
 
       reader.readAsText(event.target.files[0]);

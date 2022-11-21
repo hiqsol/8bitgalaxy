@@ -7,9 +7,9 @@ import Assert from "./Assert.js";
 
 class Star {
   constructor(field, y, x) {
-    this.field = field;
-    this.y = y;
-    this.x = x;
+    this._field = field;
+    this._y = y;
+    this._x = x;
     this._space = new Pile('', Direction.LeftToRight);
     this._ships = [null, null, null, null, null];
     this._heroes = [null, null, null, null];
@@ -19,8 +19,8 @@ class Star {
   toJSON() {
     return {
       '_class':     'Star',
-      'x':          this.x,
-      'y':          this.y,
+      'x':          this._x,
+      'y':          this._y,
       'space':      this._space,
       'ships':      this._ships,
       'heroes':     this._heroes,
@@ -28,6 +28,37 @@ class Star {
     }
   }
 
+  static matrixFromJSON(json, field) {
+    Assert.assert(Array.isArray(json), "must be matrix of Stars", json);
+    let stars = [];
+    for (const k in json) {
+      stars[k] = Star.arrayFromJSON(json[k], field);
+    }
+    return stars;
+  }
+
+  static arrayFromJSON(json, field) {
+    Assert.assert(Array.isArray(json), "must be array of Stars", json);
+    let stars = [];
+    for (const k in json) {
+      stars[k] = Star.fromJSON(json[k], field);
+    }
+    return stars;
+  }
+
+  static fromJSON(json, field) {
+    Assert.assert(json._class == 'Star', "wrong class hydrating Star", json);
+    let star = new Star(field, json.y, json.x);
+    if (json.space) star._space = Pile.fromJSON(json.space);
+    if (json.ships) star._ships = Card.arrayFromJSON(json.ships);
+    if (json.heroes) star._heroes = Card.arrayFromJSON(json.heroes);
+    if (json.estates) star._estates = Card.arrayFromJSON(json.estates);
+    return star;
+  }
+
+  get x()       { return this._x; }
+  get y()       { return this._y; }
+  get field()   { return this._field; }
   get space()   { return this._space; }
   ship(slot)    { return this._ships[slot]     ?? null; }
   hero(slot)    { return this._heroes[slot]    ?? null; }

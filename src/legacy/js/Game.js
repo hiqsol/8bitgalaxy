@@ -5,13 +5,29 @@ import Direction from "./Model/Direction.js";
 import Assert from "./Model/Assert.js";
 import Drawer from "./DivDrawer/Drawer.js";
 import Options from "./Model/Options.js";
+import Scoreboard from "./Scoreboard.js";
 
 class Game {
   constructor(options = {}) {
     this._options = Options.assert(options);
     this._drawer = options.drawer ?? new Drawer();
-    this._board = options.board ?? new Board(this);
-    this.init();
+    this._board = options.board ?? this.createBoard();
+    this._scoreboard = options.scoreboard ?? new Scoreboard(this);
+    this.populateOptions();
+  }
+
+  toJSON() {
+    return {
+      '_class':     'Game',
+      'board':      this._board,
+    }
+  }
+
+  static fromJSON(json, options) {
+    Assert.assert(json._class == 'Game', "wrong class hydrating Game", json);
+    let game = new Game(options);
+    game._board = Board.fromJSON(json.board, game);
+    return game;
   }
 
   card(name) { return Card.assert(name); }
@@ -19,16 +35,23 @@ class Game {
   get board() { return this._board; }
   get drawer() { return this._drawer; }
   get options() { return this._options; }
+  get scoreboard() { return this._scoreboard; }
 
   static create(options = {}) { return new Game(options); }
 
-  init() {
+  createBoard() {
+    let board = new Board(this);
     let direction = Direction.TopToBottom;
     for (const [name, race] of Object.entries(this.options.players)) {
-      this.board.addPlayer(new Player(name, race, direction));
+      board.addPlayer(new Player(name, race, direction));
       direction = direction.reversed;
     }
-    return this;
+    return board;
+  }
+
+  populateOptions() {
+    this._options.drawer = this._drawer;
+    this._options.scoreboard = this._scoreboard;
   }
 
   start(options = null, parent = null) {
@@ -37,6 +60,20 @@ class Game {
 
   draw(parent = null, obj = null, y, x) {
     return this.drawer.draw(parent, obj ?? this, y, x);
+  }
+
+  redraw() {
+    document.getElementById('Game').remove();
+    return this.draw();
+  }
+
+  exportJson() {
+      return JSON.stringify(this, null, 2);
+  }
+
+  importJson(json) {
+    let game = Game.fromJSON(JSON.parse(json));
+    this._board = game._board;
   }
 
   static assert(sample) {

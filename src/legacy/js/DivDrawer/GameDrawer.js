@@ -8,13 +8,14 @@ class GameDrawer {
   draw(parent, game) {
     let e = this._drawer.importNode(parent, this.fragment, '.Game');
     this._drawer.draw(e, game.board);
+    this._drawer.draw(e, game.scoreboard);
   }
 
   get fragment() { return this._drawer.getFragment(HTML); }
 }
 
 const HTML = `
-    <div class="Game"></div>
+    <div class="Game" id="Game"></div>
 `;
 
 export default GameDrawer;

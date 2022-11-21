@@ -1,5 +1,6 @@
 import Card from "./Card.js";
 import Direction from "./Direction.js";
+import Assert from "./Assert.js";
 
 class Pile {
   constructor(type, direction) {
@@ -17,6 +18,22 @@ class Pile {
       'direction':  this._direction.name,
       'cards':      this._cards,
     }
+  }
+
+  static fromJSON(json) {
+    Assert.assert(json._class == 'Pile', "wrong class hydrating Pile", json);
+    let pile = new Pile(json.type, json.direction);
+    if (json.cards) pile._cards = Card.arrayFromJSON(json.cards);
+    return pile;
+  }
+
+  static arrayFromJSON(json) {
+    Assert.assert(Array.isArray(json), "must be array of Piles", json);
+    let piles = [];
+    for (const k in json) {
+      piles[k] = json[k] ? Pile.fromJSON(json[k]) : null;
+    }
+    return piles;
   }
 
   setDirection(direction) { this._direction = Direction.assert(direction); return this; }

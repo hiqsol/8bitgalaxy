@@ -1,6 +1,6 @@
 <template>
   <slot/>
-  <canvas id="myCanvas" width="5200" height="3300">
+  <canvas id="myCanvas" width="3650" height="3000">
     Your browser does not support the HTML5 canvas tag.
   </canvas>
 </template>

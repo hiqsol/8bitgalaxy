@@ -12,6 +12,7 @@ import SpecDrawer from "./SpecDrawer.js";
 import BoardDrawer from "./BoardDrawer.js";
 import SpecsDrawer from "./SpecsDrawer.js";
 import FieldDrawer from "./FieldDrawer.js";
+import ScoreboardDrawer from "./ScoreboardDrawer.js";
 
 class Drawer {
   constructor() {
@@ -132,6 +133,7 @@ class Drawer {
 const Drawers = Object.freeze({
   Game: GameDrawer,
   Board: BoardDrawer,
+  Scoreboard: ScoreboardDrawer,
   Home: HomeDrawer,
 
   Field: FieldDrawer,

@@ -21,6 +21,14 @@ class Board {
     }
   }
 
+  static fromJSON(json, game) {
+    Assert.assert(json._class == 'Board', "wrong class hydrating Board", json);
+    let board = new Board(game);
+    if (json.field) board._field = Field.fromJSON(json.field, board);
+    if (json.players) board._players = Player.arrayFromJSON(json.players);
+    return board;
+  }
+
   get game()    { return this._game; }
   get field()   { return this._field; }
 

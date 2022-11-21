@@ -3,17 +3,18 @@ import Deck from "./Deck.js";
 import Pile from "./Pile.js";
 import Player from "./Player.js";
 import Direction from "./Direction.js";
+import Assert from "./Assert.js";
 
 class Home {
   constructor(player) {
     this._player    = Player.assert(player);
     this._deck      = new Deck(this._player.race);
-    this._progress  = new Row('Progress', Direction.LeftToRight, 4);
-    this._hand      = new Pile('Hand', Direction.TopToBottom);
-    this._discard   = new Pile('Discard', Direction.TopToBottom);
-    this._reserve   = new Pile('Reserve', Direction.TopToBottom);
-    this._factory   = new Row('Production',  Direction.TopToBottom, 4);
-    this._research  = new Row('Research', Direction.TopToBottom, 5);
+    this._progress  = new Row('Progress',   Direction.LeftToRight);
+    this._hand      = new Pile('Hand',      Direction.TopToBottom);
+    this._discard   = new Pile('Discard',   Direction.TopToBottom);
+    this._reserve   = new Pile('Reserve',   Direction.TopToBottom);
+    this._factory   = new Row('Production', Direction.TopToBottom);
+    this._research  = new Row('Research',   Direction.TopToBottom);
   }
 
   toJSON() {
@@ -26,6 +27,18 @@ class Home {
       'factory':  this._factory,
       'research': this._research,
     }
+  }
+
+  static fromJSON(json, player) {
+    Assert.assert(json._class == 'Home', "wrong class hydrating Home", json);
+    let home = new Home(player);
+    home._progress  = Row.fromJSON(json.progress);
+    home._hand      = Pile.fromJSON(json.hand);
+    home._discard   = Pile.fromJSON(json.discard);
+    home._reserve   = Pile.fromJSON(json.reserve);
+    home._factory   = Row.fromJSON(json.factory);
+    home._research  = Row.fromJSON(json.research);
+    return home;
   }
 
   get player()        { return this._player; }

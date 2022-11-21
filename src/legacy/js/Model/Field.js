@@ -1,9 +1,10 @@
 import Star from "./Star.js";
+import Assert from "./Assert.js";
 
 class Field {
   constructor(board) {
-    this.board = board;
-    this.stars = [[], [], []];
+    this._board = board;
+    this._stars = [[], [], []];
   }
 
   toJSON() {
@@ -13,11 +14,21 @@ class Field {
     }
   }
 
+  static fromJSON(json, board) {
+    Assert.assert(json._class == 'Field', "wrong class hydrating Field", json);
+    let field = new Field(board);
+    if (json.stars) field._stars = Star.matrixFromJSON(json.stars, field);
+    console.log(field);
+    return field;
+  }
+
+  get board() { return this._board; }
+
   star(y, x) {
-    if (! this.stars[y][x]) {
-      this.stars[y][x] = new Star(this, y, x);
+    if (! this._stars[y][x]) {
+      this._stars[y][x] = new Star(this, y, x);
     }
-    return this.stars[y][x];
+    return this._stars[y][x];
   }
 }
 

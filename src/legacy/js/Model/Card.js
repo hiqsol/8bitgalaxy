@@ -17,6 +17,20 @@ class Card {
     }
   }
 
+  static fromJSON(json) {
+    Assert.assert(json._class == 'Card', "wrong class hydrating Card", json);
+    return new Card(json.state, json.name);
+  }
+
+  static arrayFromJSON(json) {
+    Assert.assert(Array.isArray(json), "must be array of Cards", json);
+    let cards = [];
+    for (const k in json) {
+      cards[k] = json[k] ? Card.fromJSON(json[k]) : null;
+    }
+    return cards;
+  }
+
   get State()             { return this._state; }
   get isTurned()          { return this._state.isTurned; }
   get isAltered()         { return this._state.isAltered; }
