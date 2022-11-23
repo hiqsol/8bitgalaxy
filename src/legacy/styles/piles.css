@@ -1,3 +1,6 @@
+.Slots {
+    position: absolute;
+}
 .Slot {
     position: absolute;
     border-radius: 20px;

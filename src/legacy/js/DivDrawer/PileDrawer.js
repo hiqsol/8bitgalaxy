@@ -15,7 +15,7 @@ class PileDrawer {
     if (pile.folded) {
       e.classList.add('Folded');
     }
-    this._drawer.addDragEvents(e);
+    this._drawer.addDragEvents(e, pile);
     this.drawCards(e, pile);
     e.querySelector(".Name .Value").innerHTML = pile.name;
 

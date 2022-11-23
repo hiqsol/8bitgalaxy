@@ -10,6 +10,7 @@ import SlotDrawer from "./SlotDrawer.js";
 import StarDrawer from "./StarDrawer.js";
 import SpecDrawer from "./SpecDrawer.js";
 import BoardDrawer from "./BoardDrawer.js";
+import SlotsDrawer from "./SlotsDrawer.js";
 import SpecsDrawer from "./SpecsDrawer.js";
 import FieldDrawer from "./FieldDrawer.js";
 import ScoreboardDrawer from "./ScoreboardDrawer.js";
@@ -58,11 +59,11 @@ class Drawer {
     return new drawer(this);
   }
 
-  addDragEvents(e) {
+  addDragEvents(e, holder) {
     e.addEventListener("dragstart", (event) => {
       const id = event.dataTransfer.getData("text");
       const card = document.getElementById(id);
-      Drawer.setDraggingCard(card);
+      Drawer.startDragging(card, holder);
     });
     e.addEventListener("dragover", (event) => {
       event.preventDefault();
@@ -80,8 +81,9 @@ class Drawer {
         return false;
       }
       event.preventDefault();
-      // Get the data, which is the id of the source element
       e.appendChild(card);
+      Drawer.getLosingHolder().pop(card.id);
+      holder.put(card.id);
     });
   }
 
@@ -100,8 +102,9 @@ class Drawer {
     }
     return card;
   }
-  static setDraggingCard(card) {
+  static startDragging(card, holder) {
     Drawer._draggingCard = card;
+    Drawer._losingHolder = holder;
   }
   static getDraggingCard(id) {
     if (id) {
@@ -109,6 +112,9 @@ class Drawer {
     } else {
       return Drawer._draggingCard;
     }
+  }
+  static getLosingHolder() {
+    return Drawer._losingHolder;
   }
 
   importNode(parent, fragment, selector) {
@@ -142,6 +148,7 @@ const Drawers = Object.freeze({
   Row: RowDrawer,
   Pile: PileDrawer,
   Slot: SlotDrawer,
+  Slots: SlotsDrawer,
 
   Card: CardDrawer,
   Specs: SpecsDrawer,

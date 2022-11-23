@@ -18,7 +18,6 @@ class Field {
     Assert.assert(json._class == 'Field', "wrong class hydrating Field", json);
     let field = new Field(board);
     if (json.stars) field._stars = Star.matrixFromJSON(json.stars, field);
-    console.log(field);
     return field;
   }
 

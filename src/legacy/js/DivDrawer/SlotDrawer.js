@@ -5,17 +5,17 @@ class SlotDrawer {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, slot) {
+  draw(parent, slot, y, x) {
     let m = this._drawer.m;
     let e = this.importNode(parent, ".Slot");
-    e.style.left = (20 + slot.x * m) + "px";
-    e.style.top = (10 + slot.y * m) + "px";
+    e.style.left  = (x * m) + "px";
+    e.style.top   = (y * m) + "px";
     e.classList.add('for-'+slot.type.name);
     if (slot.type.isBase) {
       e.classList.add('for-Colony');
     }
     e.classList.add(slot.type.direction.name);
-    this._drawer.addDragEvents(e);
+    this._drawer.addDragEvents(e, slot);
     this.drawCard(e, slot);
 
     return e;
