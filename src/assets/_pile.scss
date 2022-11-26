@@ -22,3 +22,10 @@ $pileSize: 50;
     left: #{($p - 1) * variables.$m}px;
   }
 }
+
+@for $p from 0 through $pileSize {
+  .Pile:has(.Card:nth-child(#{$p+1})) .Size:before {
+    $text: if($p>6, $p, '');
+    content: '#{$text}';
+  }
+}

@@ -87,7 +87,10 @@ class PileDrawer {
 
 const HTML = `
   <div class="Pile droppable">
-    <div class="Name"><div class="Value">Name</div></div>
+    <div class="Name">
+      <div class="Value">Name</div>
+      <div class="Size"></div>
+    </div>
   </div>
 `;
 
