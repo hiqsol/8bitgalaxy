@@ -38,6 +38,7 @@ class Start {
 
   init() {
     this.ideas.put(this.deck.lower);
+    this.ideas.shuffle();
     this.initShips();
     this.initHeroes();
     this.initBases();
@@ -46,18 +47,16 @@ class Start {
   }
 
   initShips() {
-    let ships = this.filterObject(
-      this.home.deck.ships,
-      (key, card) => card.isAnyLevel(1),
+    let ships = this.ideas.cards.filter(
+      card => card.isShip && card.isAnyLevel(1)
     );
     this.discard.put(ships);
     this.ideas.remove(ships);
   }
 
   initHeroes() {
-    let heroes = this.filterObject(
-      this.home.deck.heroes,
-      (key, card) => card.isAnyLevel(1),
+    let heroes = this.ideas.cards.filter(
+      card => card.isHero && card.isAnyLevel(1)
     );
     let tmp = new Pile("tmp");
     tmp.put(heroes);
@@ -69,9 +68,8 @@ class Start {
   }
 
   initBases() {
-    let bases = this.filterObject(
-      this.home.deck.bases,
-      (key, card) => card.isAnyLevel(2),
+    let bases = this.ideas.cards.filter(
+      card => card.isBase && card.isAnyLevel(2)
     );
     let tmp = new Pile("tmp");
     tmp.put(bases);
@@ -86,9 +84,8 @@ class Start {
   }
 
   initColonies() {
-    let colonies = this.filterObject(
-      this.home.deck.colonies,
-      (key, card) => card.isAnyLevel(2),
+    let colonies = this.ideas.cards.filter(
+      card => card.isColony && card.isAnyLevel(2)
     );
     let tmp = new Pile("tmp");
     tmp.put(colonies);
@@ -103,7 +100,6 @@ class Start {
   }
 
   initResearch() {
-    this.ideas.shuffle();
     for (var i = 4; i > 0; i--) {
       this.research.put(this.ideas.pop(), i);
     }
@@ -111,14 +107,6 @@ class Start {
       this.ideas.get(i).turn();
     }
     this.ideas.top.turn();
-  }
-
-  filterObject(obj, callback) {
-    let array = Object.entries(obj);
-    let filtered = array.filter(
-      ([key, card]) => callback(key, card),
-    );
-    return Object.fromEntries(filtered);
   }
 }
 
