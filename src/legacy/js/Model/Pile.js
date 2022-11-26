@@ -143,8 +143,7 @@ class Pile {
     if (name instanceof Card) {
       name = name.Name;
     }
-    let i = this._cards.findIndex(item => item.isAnyName(name));
-    this._cards.splice(i, 1);
+    this._cards = this._cards.filter( e => e.Name !== name );
   }
 
   shuffleArray(array) {
