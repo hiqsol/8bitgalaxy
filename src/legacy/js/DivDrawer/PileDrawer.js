@@ -20,7 +20,7 @@ class PileDrawer {
     e.querySelector(".Name .Value").innerHTML = pile.name;
 
     let timer;
-    if (pile.name != 'Ideas') {
+    if (pile.name != 'Ideas' && pile.name != 'Reserve') {
       e.onmouseover = () => {
         timer = setTimeout(function(){
           e.classList.remove('Folded');
