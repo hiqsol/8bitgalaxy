@@ -19,16 +19,19 @@ class PileDrawer {
     this.drawCards(e, pile);
     e.querySelector(".Name .Value").innerHTML = pile.name;
 
-    let timer;
     if (pile.name != 'Ideas' && pile.name != 'Reserve') {
+      let overTimer, outTimer;
       e.onmouseover = () => {
-        timer = setTimeout(function(){
+        clearTimeout(outTimer);
+        overTimer = setTimeout(function(){
           e.classList.remove('Folded');
         }, 300);
       }
       e.onmouseout = () => {
-        e.classList.add('Folded');
-        clearTimeout(timer);
+        clearTimeout(overTimer);
+        outTimer = setTimeout(function(){
+          e.classList.add('Folded');
+        }, 200);
       }
     }
 
