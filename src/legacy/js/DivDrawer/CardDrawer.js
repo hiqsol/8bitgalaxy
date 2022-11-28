@@ -84,7 +84,7 @@ const RaceImages = Object.freeze({
 });
 
 const HTML = `
-  <div class="Card draggable" draggable="true">
+  <div class="Card">
     <div class="Image"><div class="Klass lni"></div></div>
     <div class="Name"><div class="Value">Name</div></div>
   </div>

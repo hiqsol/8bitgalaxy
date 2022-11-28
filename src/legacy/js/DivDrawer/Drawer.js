@@ -63,7 +63,7 @@ class Drawer {
     e.addEventListener("dragstart", (event) => {
       const id = event.dataTransfer.getData("text");
       const card = document.getElementById(id);
-      Drawer.startDragging(card, holder);
+      Drawer.startDragging(card, holder, e);
     });
     e.addEventListener("dragover", (event) => {
       event.preventDefault();
@@ -84,6 +84,7 @@ class Drawer {
       e.appendChild(card);
       Drawer.getLosingHolder().pop(card.id);
       holder.put(card.id);
+      Drawer.resetDraggability(e);
     });
   }
 
@@ -102,9 +103,10 @@ class Drawer {
     }
     return card;
   }
-  static startDragging(card, holder) {
+  static startDragging(card, holder, element) {
     Drawer._draggingCard = card;
     Drawer._losingHolder = holder;
+    Drawer._losingElement = element;
   }
   static getDraggingCard(id) {
     if (id) {
@@ -115,6 +117,23 @@ class Drawer {
   }
   static getLosingHolder() {
     return Drawer._losingHolder;
+  }
+  static getLosingElement() {
+    return Drawer._losingElement;
+  }
+
+  static resetDraggability(pile) {
+    Drawer._resetDraggability(pile);
+    Drawer._resetDraggability(Drawer._losingElement);
+  }
+  static _resetDraggability(pile) {
+    pile.querySelectorAll('.Card').forEach(
+      (card, idx, array) => {
+        card.draggable = (idx === array.length -1);
+        console.log(idx, array.length - 1, card);
+      }
+    );
+    console.log(pile.querySelectorAll('.Card'));
   }
 
   importNode(parent, fragment, selector) {

@@ -75,7 +75,8 @@ class PileDrawer {
   drawCards(parent, pile) {
     if (!pile.size) return;
     for (let i = 0; i < pile.size; i++) {
-      this._drawer.draw(parent, pile.get(i));
+      let card = this._drawer.draw(parent, pile.get(i));
+      card.draggable = (i === pile.size-1);
     }
   }
 
