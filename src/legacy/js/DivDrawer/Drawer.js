@@ -127,13 +127,12 @@ class Drawer {
     Drawer._resetDraggability(Drawer._losingElement);
   }
   static _resetDraggability(pile) {
+    if (!pile) return;
     pile.querySelectorAll('.Card').forEach(
       (card, idx, array) => {
         card.draggable = (idx === array.length -1);
-        console.log(idx, array.length - 1, card);
       }
     );
-    console.log(pile.querySelectorAll('.Card'));
   }
 
   importNode(parent, fragment, selector) {

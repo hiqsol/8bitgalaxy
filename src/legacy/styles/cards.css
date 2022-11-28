@@ -22,6 +22,9 @@
 .Card.dragging {
     opacity: 0.01;
 }
+.Card[draggable=true] {
+    cursor: grab;
+}
 
 .Ship {
     width: 250px;

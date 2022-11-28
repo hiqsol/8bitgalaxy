@@ -23,7 +23,8 @@ class SlotDrawer {
 
   drawCard(parent, slot) {
     if (slot.card) {
-      this._drawer.draw(parent, slot.card, 0, 0);
+      let card = this._drawer.draw(parent, slot.card, 0, 0);
+      card.draggable = true;
     }
   }
 

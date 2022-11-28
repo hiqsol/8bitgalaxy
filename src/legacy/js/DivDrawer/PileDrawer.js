@@ -57,6 +57,7 @@ class PileDrawer {
           cards[i].classList.add('Turned');
           e.appendChild(cards[i]);
         }
+        Drawer.resetDraggability(e);
       }
     }
 
