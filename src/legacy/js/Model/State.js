@@ -33,6 +33,9 @@ class State {
   turn()    { this._turned = !this._turned; }
   alter()   { this._altered = !this._altered; }
 
+  setTurned(value)      { this._turned = value; }
+  setAltered(value)     { this._altered = value; }
+
   get name()            { return this.buildName(); }
   get isTurned()        { return this._turned; }
   get isAltered()       { return this._altered; }

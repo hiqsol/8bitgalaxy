@@ -24,12 +24,15 @@ class CardDrawer {
       event.target.classList.remove("dragging");
     });
     e.ondblclick = (event) => {
+      let cl = event.currentTarget.classList;
       if (event.ctrlKey) {
         if (event.currentTarget.classList.contains('Alterable')) {
-          event.currentTarget.classList.toggle('Altered');
+          cl.toggle('Altered');
+          card.setAltered(cl.contains('Altered'));
         }
       } else {
-        event.currentTarget.classList.toggle('Turned');
+        cl.toggle('Turned');
+        card.setTurned(cl.contains('Turned'));
       }
     }
 

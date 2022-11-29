@@ -71,6 +71,9 @@ class Card {
   alter()   { this._state.alter();return this; }
   insert()  { this._state.insert();return this; }
 
+  setTurned(value)  { this._state.setTurned(value);return this; }
+  setAltered(value) { this._state.setAltered(value);return this; }
+
   static assert(sample) {
     if (sample instanceof(Card)) {
       return sample;
