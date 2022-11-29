@@ -7,8 +7,8 @@ class BoardDrawer {
 
   draw(parent, board) {
     let e = this._drawer.importNode(parent, this.fragment, '.Board');
-    this.drawHomes(e, board);
     this._drawer.draw(e, board.field, 8, 15);
+    this.drawHomes(e, board);
   }
 
   drawHomes(parent, board) {
