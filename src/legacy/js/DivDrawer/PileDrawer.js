@@ -4,6 +4,7 @@ class PileDrawer {
   constructor(drawer) {
     this._drawer = Drawer.assert(drawer);
     this._discards = {};
+    this._discardPiles = {};
   }
 
   draw(parent, pile, y, x) {
@@ -42,11 +43,14 @@ class PileDrawer {
     }
     if (pile.name === 'Discard') {
       this._discards[race] = e;
+      this._discardPiles[race] = pile;
     }
     if (pile.name === 'Reserve') {
       e.ondblclick = (event) => {
         let discard = this._discards[race];
-        let cards = discard.querySelectorAll(".Card");
+        let discardPile = this._discardPiles[race];
+        let cards = discardPile.cards;
+        discardPile.removeAll();
 
         const nums = new Set();
         while(nums.size !== cards.length) {
@@ -54,8 +58,12 @@ class PileDrawer {
         }
 
         for (const i of nums) {
-          cards[i].classList.add('Turned');
-          e.appendChild(cards[i]);
+          let card = cards[i];
+          let elem = document.getElementById(card.Name);
+          elem.classList.add('Turned');
+          console.log(card, elem);
+          pile.put(card);
+          e.appendChild(elem);
         }
         Drawer.resetDraggability(e);
       }

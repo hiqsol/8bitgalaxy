@@ -123,6 +123,10 @@ class Pile {
     }
   }
 
+  removeAll() {
+    this._cards = [];
+  }
+
   remove(card) {
     if (card instanceof Card) {
       this.removeOne(card.Name);
