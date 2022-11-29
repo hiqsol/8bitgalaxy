@@ -124,13 +124,13 @@
 .Pile.LeftToRight .Tech,
 .Pile.LeftToRight .Other {
     transform-origin: top left;
-    transform: rotate(+90deg) translate(0, -100%);
+    transform: rotate(-90deg) translate(-100%);
 }
 
 .Pile.RightToLeft .Ship,
 .Pile.RightToLeft .Hero {
     transform-origin: top left;
-    transform: rotate(-90deg) translate(-100%);
+    transform: rotate(+90deg) translate(0, -100%);
 }
 
 .Pile .Size {
