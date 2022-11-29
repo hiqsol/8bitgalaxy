@@ -54,6 +54,7 @@ class Pile {
     if (card) {
       let res = this._cards.pop();
       Assert.assert(res.Name === card, 'popped card is not '+card, res);
+      return res;
     } else {
       return this._cards.pop();
     }

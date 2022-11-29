@@ -76,14 +76,14 @@ class Drawer {
     });
     e.addEventListener("drop", (event) => {
       event.currentTarget.classList.remove('hover');
-      const card = Drawer.isDroppable(event);
-      if (!card) {
+      const elem = Drawer.isDroppable(event);
+      if (!elem) {
         return false;
       }
       event.preventDefault();
-      e.appendChild(card);
-      Drawer.getLosingHolder().pop(card.id);
-      holder.put(card.id);
+      e.appendChild(elem);
+      let card = Drawer.getLosingHolder().pop(elem.id);
+      holder.put(card);
       Drawer.resetDraggability(e);
     });
   }
@@ -91,8 +91,8 @@ class Drawer {
   static isDroppable(event) {
     const cl = event.currentTarget.classList;
     const id = event.dataTransfer.getData("text");
-    const card = Drawer.getDraggingCard(id);
-    const type = Type.assert(card);
+    const elem = Drawer.getDraggingCard(id);
+    const type = Type.assert(elem);
     if (cl.contains('Slot')) {
       if (!cl.contains('for-' + type.name)) {
         return null;
@@ -101,7 +101,7 @@ class Drawer {
         return null;
       }
     }
-    return card;
+    return elem;
   }
   static startDragging(card, holder, element) {
     Drawer._draggingCard = card;
