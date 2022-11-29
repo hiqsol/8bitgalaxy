@@ -38,33 +38,13 @@ class Pile {
 
   setDirection(direction) { this._direction = Direction.assert(direction); return this; }
 
-  get direction() {
-    return this._direction;
-  }
-
-  get folded() {
-    return this._folded;
-  }
-
-  get cards() {
-    return this._cards;
-  }
-
-  get type() {
-    return this._type;
-  }
-
-  get name() {
-    return this._card.Name;
-  }
-
-  get size() {
-    return this._cards.length;
-  }
-
-  get top() {
-    return this._cards[this.size - 1] ?? null;
-  }
+  get direction() { return this._direction; }
+  get folded()    { return this._folded; }
+  get cards()     { return this._cards; }
+  get type()      { return this._type; }
+  get name()      { return this._card.Name; }
+  get size()      { return this._cards.length; }
+  get top()       { return this._cards[this.size - 1] ?? null; }
 
   get(i) {
     return this._cards[i] ?? (i === 0 ? this.top : null);
@@ -79,17 +59,9 @@ class Pile {
     }
   }
 
-  unfold() {
-    this._folded = false;
-  }
-
-  fold() {
-    this._folded = true;
-  }
-
-  shuffle() {
-    this.shuffleArray(this._cards);
-  }
+  unfold()  { this._folded = false; }
+  fold()    { this._folded = true; }
+  shuffle() { this.shuffleArray(this._cards); }
 
   put(card) {
     if (card instanceof Card) {
