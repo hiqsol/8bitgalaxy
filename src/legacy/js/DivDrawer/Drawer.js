@@ -64,6 +64,7 @@ class Drawer {
       const id = event.dataTransfer.getData("text");
       const card = document.getElementById(id);
       Drawer.startDragging(card, holder, e);
+      this.getDrawer('Game').stopDragging();
     });
     e.addEventListener("dragover", (event) => {
       event.preventDefault();

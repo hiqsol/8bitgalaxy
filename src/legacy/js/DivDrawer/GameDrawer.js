@@ -45,6 +45,7 @@ class GameDrawer {
         document.removeEventListener('mousemove', mouseMoveHandler);
         document.removeEventListener('mouseup', mouseUpHandler);
     };
+    this.stopDragging = mouseUpHandler;
 
     ele.addEventListener('mousedown', mouseDownHandler);
   }
