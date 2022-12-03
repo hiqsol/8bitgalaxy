@@ -8,33 +8,13 @@ class Start {
     this.init();
   }
 
-  get home() {
-    return this._home;
-  }
-
-  get deck() {
-    return this.home.deck;
-  }
-
-  get field() {
-    return this.home.player.game.board.field;
-  }
-
-  get ideas() {
-    return this.home.ideas;
-  }
-
-  get factory() {
-    return this.home.factory;
-  }
-
-  get discard() {
-    return this.home.discard;
-  }
-
-  get research() {
-    return this.home.research;
-  }
+  get home()      { return this._home; }
+  get deck()      { return this._home.deck; }
+  get field()     { return this._home.player.game.board.field; }
+  get ideas()     { return this._home.ideas; }
+  get factory()   { return this._home.factory; }
+  get discard()   { return this._home.discard; }
+  get research()  { return this._home.research; }
 
   init() {
     this.ideas.put(this.deck.lower);
