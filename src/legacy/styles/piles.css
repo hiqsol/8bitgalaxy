@@ -133,8 +133,8 @@
     user-select: none;
     pointer-events: none;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 64px;
+    left: 30px;
     width: 100%;
     height: 100%;
     color: rgba(0, 0, 0, 0.5);
