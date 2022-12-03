@@ -5,16 +5,16 @@ class SlotDrawer {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, slot, y, x) {
+  draw(parent, slot, params) {
     let m = this._drawer.m;
     let e = this.importNode(parent, ".Slot");
-    e.style.left  = (x * m) + "px";
-    e.style.top   = (y * m) + "px";
+    e.style.left  = (0 + params.x*m) + "px";
+    e.style.top   = (0 + params.y*m) + "px";
     e.classList.add('for-'+slot.type.name);
     if (slot.type.isBase) {
       e.classList.add('for-Colony');
     }
-    e.classList.add(slot.type.direction.name);
+    e.classList.add(params.direction.name);
     this._drawer.addDragEvents(e, slot);
     this.drawCard(e, slot);
 
@@ -23,7 +23,7 @@ class SlotDrawer {
 
   drawCard(parent, slot) {
     if (slot.card) {
-      let card = this._drawer.draw(parent, slot.card, 0, 0);
+      let card = this._drawer.draw(parent, slot.card);
       card.draggable = true;
     }
   }

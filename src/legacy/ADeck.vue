@@ -6,12 +6,13 @@
 import Demo from "./js/Demo.js";
 import Card from "./js/Model/Card.js";
 import Pile from "./js/Model/Pile.js";
-import Direction from "./js/Model/Direction.js";
+import Params from "./js/DivDrawer/Params.js";
+import Direction from "./js/DivDrawer/Direction.js";
 
 let game = (new Demo()).game;
-let vert = new Pile("", Direction.TopToBottom);
+let vert = new Pile("");
 
-let v = game.draw(null, vert, 1, 1);
+let v = game.draw(null, vert, new Params(1, 1, Direction.TopToBottom));
 
 let y = {
   "1.0": (1.0 - 1) * 8,

@@ -5,9 +5,9 @@ class SpecsDrawer {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, specs, isAlternative, x) {
+  draw(parent, specs, params) {
     let e = this._drawer.importNode(parent, this.fragment, '.Specs');
-    e.classList.add(isAlternative ? 'Alternative' : 'Normal');
+    e.classList.add(params.x ? 'Alternative' : 'Normal');
     this.drawParts(e, specs);
     return e;
   }

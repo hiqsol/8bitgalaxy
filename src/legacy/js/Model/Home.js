@@ -2,19 +2,18 @@ import Row from "./Row.js";
 import Deck from "./Deck.js";
 import Pile from "./Pile.js";
 import Player from "./Player.js";
-import Direction from "./Direction.js";
 import Assert from "./Assert.js";
 
 class Home {
   constructor(player) {
     this._player    = Player.assert(player);
     this._deck      = new Deck(this._player.race);
-    this._progress  = new Row('Progress',   Direction.LeftToRight);
-    this._hand      = new Pile('Hand',      Direction.TopToBottom);
-    this._discard   = new Pile('Discard',   Direction.TopToBottom);
-    this._reserve   = new Pile('Reserve',   Direction.TopToBottom);
-    this._factory   = new Row('Production', Direction.TopToBottom);
-    this._research  = new Row('Research',   Direction.TopToBottom);
+    this._progress  = new Row('Progress');
+    this._hand      = new Pile('Hand');
+    this._discard   = new Pile('Discard');
+    this._reserve   = new Pile('Reserve');
+    this._factory   = new Row('Production');
+    this._research  = new Row('Research');
   }
 
   toJSON() {

@@ -1,23 +1,30 @@
 import Drawer from './Drawer.js';
+import Params from './Params.js';
+import Direction from './Direction.js';
 
 class HomeDrawer {
   constructor(drawer) {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, home, y, x) {
+  draw(parent, home, params) {
     let e = this.importNode(parent, '.Home');
     let m = this._drawer.m;
-    e.style.left  = (0 + x*m) + 'px';
-    e.style.top   = (0 + y*m) + 'px';
-    e.classList.add(home.direction.name);
+    e.style.left  = (0 + params.x*m) + 'px';
+    e.style.top   = (0 + params.y*m) + 'px';
+    let counterdir = params.direction.counterpart;
+    let xStep = counterdir.xStep;
+    let yStep = params.direction.yStep;
+    let xIndent = params.direction.isTopToBottom ? 0 : +2;
+    let yIndent = params.direction.isTopToBottom ? 0 : -2;
+    let progressIndent = params.direction.isTopToBottom ? 30 : -46;
     e.setAttribute('race', home.player.race);
-    this._drawer.draw(e, home.progress, 22, -8);
-    this._drawer.draw(e, home.hand,     22, 18);
-    this._drawer.draw(e, home.discard,  14, 24);
-    this._drawer.draw(e, home.reserve,  22, 24);
-    this._drawer.draw(e, home.factory,  6, 30);
-    this._drawer.draw(e, home.research, 0, 38);
+    this._drawer.draw(e, home.progress, new Params(  progressIndent, yIndent+yStep*0, Direction.LeftToRight));
+    this._drawer.draw(e, home.hand,     new Params(xIndent+xStep*22, yIndent+yStep*0, params.direction));
+    this._drawer.draw(e, home.discard,  new Params(xIndent+xStep*16, yIndent+yStep*8, params.direction));
+    this._drawer.draw(e, home.reserve,  new Params(xIndent+xStep*16, yIndent+yStep*0, params.direction));
+    this._drawer.draw(e, home.factory,  new Params(        xStep*8,          yStep*0, params.direction));
+    this._drawer.draw(e, home.research, new Params(        xStep*0,          yStep*0, params.direction));
   }
 
   importNode(parent, selector) {

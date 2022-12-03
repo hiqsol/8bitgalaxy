@@ -7,7 +7,7 @@
   import Card from "./js/Model/Card.js";
   import Pile from "./js/Model/Pile.js";
   import Decks from "./js/Model/Decks.js";
-  import Direction from "./js/Model/Direction.js";
+  import Direction from "./js/DivDrawer/Direction.js";
 
   let game = new Game();
   let vert = new Pile('', Direction.TopToBottom);

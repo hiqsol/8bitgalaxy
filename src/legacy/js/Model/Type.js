@@ -1,5 +1,4 @@
 import Assert from "./Assert.js";
-import Direction from "./Direction.js";
 
 class Type {
   constructor(name) {
@@ -12,7 +11,6 @@ class Type {
   get isBase()      { return this._name === Names.Base; }
   get isColony()    { return this._name === Names.Colony; }
   get isEstate()    { return this.isBase || this.isColony; }
-  get direction()   { return this.isEstate ? Direction.LeftToRight : Direction.TopToBottom; }
 
   static get list()             { return List; }
   static get Names()            { return Names; }

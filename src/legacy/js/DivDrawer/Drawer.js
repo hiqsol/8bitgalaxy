@@ -30,7 +30,7 @@ class Drawer {
     return this._tpl;
   }
 
-  draw(parent, obj, y, x) {
+  draw(parent, obj, params = null) {
     if (obj === null) {
       return null;
     }
@@ -41,7 +41,7 @@ class Drawer {
       Assert.error("not an object", obj);
     }
     let cname = obj.constructor.name;
-    return this.getDrawer(cname).draw(parent, obj, y, x);
+    return this.getDrawer(cname).draw(parent, obj, params);
   }
 
   getDrawer(name) {

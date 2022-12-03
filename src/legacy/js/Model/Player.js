@@ -1,15 +1,12 @@
 import Home from './Home.js';
 import Board from "./Board.js";
 import Assert from "./Assert.js";
-import Direction from './Direction.js';
 
 class Player {
-  constructor(name, race, direction, y, x) {
+  constructor(name, race, no) {
     this._name = name;
     this._race = race;
-    this._direction = Direction.assert(direction);
-    this._y = y;
-    this._x = x;
+    this._no = no;
     this._home = new Home(this);
   }
 
@@ -18,16 +15,14 @@ class Player {
       '_class':     'Player',
       'name':       this._name,
       'race':       this._race,
-      'direction':  this._direction.name,
-      'x':          this._x,
-      'y':          this._y,
+      'no':         this._no,
       'home':       this._home,
     }
   }
 
   static fromJSON(json) {
     Assert.assert(json._class == 'Player', "wrong class hydrating Player", json);
-    let player = new Player(json.name, json.race, json.direction, json.y, json.x);
+    let player = new Player(json.name, json.race, json.no);
     player._home = Home.fromJSON(json.home, player);
     return player;
   }
@@ -48,12 +43,12 @@ class Player {
   get home()      { return this._home; }
   get name()      { return this._name; }
   get race()      { return this._race; }
-  get direction() { return this._direction; }
+  get no()        { return this._no; }
   get star()      {
-    return this._direction.isTopToBottom
-      ? this.board.star(2, 1)
-      : this.board.star(0, 0)
-    ;
+    if (this.no == 1) return this.board.star(2, 1)
+    if (this.no == 2) return this.board.star(0, 0)
+    if (this.no == 3) return this.board.star(1, 1)
+    return this.board.star(1, 1)
   }
 
   static assert(sample) {

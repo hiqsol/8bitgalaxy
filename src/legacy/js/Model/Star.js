@@ -3,7 +3,6 @@ import Pile from "./Pile.js";
 import Type from "./Type.js";
 import Slot from "./Slot.js";
 import Slots from "./Slots.js";
-import Direction from "./Direction.js";
 import Assert from "./Assert.js";
 
 class Star {
@@ -11,7 +10,7 @@ class Star {
     this._field = field;
     this._y = y;
     this._x = x;
-    this._space = new Pile('', Direction.LeftToRight);
+    this._space = new Pile('');
     this._ships = new Slots(Type.Ship, 5);
     this._heroes = new Slots(Type.Hero, 4);
     this._estates = new Slots(Type.Base, 5);

@@ -1,4 +1,4 @@
-import Assert from "./Assert.js";
+import Assert from "../Model/Assert.js";
 
 class Direction {
   constructor(name) {

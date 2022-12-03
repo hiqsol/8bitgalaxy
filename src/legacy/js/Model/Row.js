@@ -1,11 +1,9 @@
 import Pile from "./Pile.js";
 import Assert from "./Assert.js";
-import Direction from "./Direction.js";
 
 class Row {
-  constructor(type, direction) {
+  constructor(type) {
     this._type = Row.assertType(type);
-    this._direction = Direction.assert(direction);
     this._piles = [];
     this.initPiles();
   }
@@ -14,14 +12,13 @@ class Row {
     return {
       '_class':     'Row',
       'type':       this._type,
-      'direction':  this._direction.name,
       'piles':      this._piles,
     }
   }
 
   static fromJSON(json) {
     Assert.assert(json._class == 'Row', "wrong class hydrating Row", json);
-    let row = new Row(json.type, json.direction);
+    let row = new Row(json.type);
     row._piles = Pile.arrayFromJSON(json.piles);
     return row;
   }
@@ -29,7 +26,7 @@ class Row {
   initPiles() {
     let piles = Types[this.type];
     for (var i = 0, len = piles.length; i < len; i++) {
-      this._piles.push(new Pile(piles[i], this.direction.counterpart));
+      this._piles.push(new Pile(piles[i]));
     }
   }
 
@@ -62,7 +59,7 @@ class Row {
 
 const Types = Object.freeze({
   Deck:       ['Discard', 'Reserve'],
-  Progress:   ['Science', 'Production', 'Colonization', 'Attack'],
+  Progress:   ['Attack', 'Colonization', 'Production', 'Science'],
   Property:   ['Reserve', 'Hand', 'Techs', 'Assets', 'Missions'],
   Production: ['Scrap', 'Production', 'Production', 'Production'],
   Research:   ['Ideas', 'Research', 'Research', 'Research', 'Research'],

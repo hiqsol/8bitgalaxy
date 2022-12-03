@@ -71,15 +71,11 @@
     font-weight: 100;
 }
 
+.Pile.RightToLeft .Name .Value,
 .Pile.LeftToRight .Name .Value {
     width: 350px;
     height: 250px;
     line-height: 250px;
-}
-
-.BottomToTop .Pile .Name .Value {
-    transform-origin: center;
-    transform: rotate(180deg);
 }
 
 .Pile .Ship {

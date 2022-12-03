@@ -5,7 +5,7 @@ class SpecDrawer {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, spec, y, x) {
+  draw(parent, spec) {
     let e = this._drawer.importNode(parent, this.fragment, '.Spec');
     this.drawValue(e, spec.name, spec.Value, spec.Klass.name);
     this.drawIcon(e, spec.name);

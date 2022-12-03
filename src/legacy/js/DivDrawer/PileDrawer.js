@@ -7,12 +7,12 @@ class PileDrawer {
     this._discardPiles = {};
   }
 
-  draw(parent, pile, y, x) {
+  draw(parent, pile, params) {
     let m = this._drawer.m;
     let e = this.importNode(parent, ".Pile");
-    e.style.left = (0 + x * m) + "px";
-    e.style.top = (0 + y * m) + "px";
-    e.classList.add(pile.direction.name);
+    e.style.left = (0 + params.x*m) + "px";
+    e.style.top  = (0 + params.y*m) + "px";
+    e.classList.add(params.direction.name);
     if (pile.folded) {
       e.classList.add('Folded');
     }

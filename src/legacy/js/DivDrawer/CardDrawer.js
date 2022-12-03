@@ -1,12 +1,12 @@
 import Drawer from "./Drawer.js";
-import {v4 as uuidv4} from "uuid";
+import Params from "./Params.js";
 
 class CardDrawer {
   constructor(drawer) {
     this._drawer = Drawer.assert(drawer);
   }
 
-  draw(parent, card, y, x) {
+  draw(parent, card) {
     let e = this._drawer.importNode(parent, this.fragment, ".Card");
     let m = this._drawer.m;
     e.id = card.Name;
@@ -41,9 +41,9 @@ class CardDrawer {
     }
 
     this.drawImage(e, card.Specs);
-    this._drawer.draw(e, card.Specs);
+    this._drawer.draw(e, card.Specs, new Params(0, 0));;
     if (card.Alternative) {
-      this._drawer.draw(e, card.Alternative, true);
+      this._drawer.draw(e, card.Alternative, new Params(1, 0));
     }
 
     e.querySelector(".Name .Value").innerHTML = card.Name;
