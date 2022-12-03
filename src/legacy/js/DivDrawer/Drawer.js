@@ -22,13 +22,8 @@ class Drawer {
     this._drawers = {};
   }
 
-  get m() {
-    return this._m;
-  }
-
-  get tpl() {
-    return this._tpl;
-  }
+  get m()   { return this._m; }
+  get tpl() { return this._tpl; }
 
   draw(parent, obj, params = null) {
     if (obj === null) {
