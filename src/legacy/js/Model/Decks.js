@@ -40,13 +40,10 @@ class Decks {
   static copyCards(cards, src, dst) {
     src = src+'-';
     dst = dst+'-';
-    let i = 0;
     for (const key in cards) {
       if (key.startsWith(src)) {
         Decks._all[key.replace(src, dst).toLowerCase()] = cards[key];
       }
-      i++;
-      if (dst=='Alien-' && i>90) return;
     }
   }
 
