@@ -1,14 +1,16 @@
 import Drawer from './Drawer.js';
+import aDrawer from './aDrawer.js';
 
-class GameDrawer {
+class GameDrawer extends aDrawer {
   constructor(drawer) {
-    this._drawer = Drawer.assert(drawer);
+    super(drawer);
+    this._HTML = '<div class="Game" id="Game"></div>';
   }
 
-  draw(parent, game) {
-    let e = this._drawer.importNode(parent, this.fragment, '.Game');
-    this._drawer.draw(e, game.board);
-    this._drawer.draw(e, game.scoreboard);
+  draw(parent, game, params) {
+    let e = this.drawNode(parent, params);
+    this.drawer.draw(e, game.board);
+    this.drawer.draw(e, game.scoreboard);
 
     this.addPageGrabber();
   }
@@ -49,12 +51,6 @@ class GameDrawer {
 
     ele.addEventListener('mousedown', mouseDownHandler);
   }
-
-  get fragment() { return this._drawer.getFragment(HTML); }
 }
-
-const HTML = `
-    <div class="Game" id="Game"></div>
-`;
 
 export default GameDrawer;

@@ -1,14 +1,20 @@
 import Drawer from "./Drawer.js";
 import Params from "./Params.js";
+import aDrawer from './aDrawer.js';
 
-class CardDrawer {
+class CardDrawer extends aDrawer {
   constructor(drawer) {
-    this._drawer = Drawer.assert(drawer);
+    super(drawer);
+    this._HTML = `
+      <div class="Card">
+        <div class="Image"><div class="Klass lni"></div></div>
+        <div class="Name"><div class="Value">Name</div></div>
+      </div>
+    `;
   }
 
-  draw(parent, card) {
-    let e = this._drawer.importNode(parent, this.fragment, ".Card");
-    let m = this._drawer.m;
+  draw(parent, card, params) {
+    let e = this.drawNode(parent, params);
     e.id = card.Name;
 
     if (card.State.name) e.classList.add(card.State.name);
@@ -41,9 +47,9 @@ class CardDrawer {
     }
 
     this.drawImage(e, card.Specs);
-    this._drawer.draw(e, card.Specs, new Params(0, 0));;
+    this.drawer.draw(e, card.Specs, Params.empty());
     if (card.Alternative) {
-      this._drawer.draw(e, card.Alternative, new Params(1, 0));
+      this.drawer.draw(e, card.Alternative, Params.isAlternative());
     }
 
     e.querySelector(".Name .Value").innerHTML = card.Name;
@@ -65,10 +71,6 @@ class CardDrawer {
   race2image(race) {
     return RaceImages[race.toLowerCase()];
   }
-
-  get fragment() {
-    return this._drawer.getFragment(HTML);
-  }
 }
 
 const TypeImages = Object.freeze({
@@ -85,12 +87,5 @@ const RaceImages = Object.freeze({
   ai: "rook",
   human: "world",
 });
-
-const HTML = `
-  <div class="Card">
-    <div class="Image"><div class="Klass lni"></div></div>
-    <div class="Name"><div class="Value">Name</div></div>
-  </div>
-`;
 
 export default CardDrawer;

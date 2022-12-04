@@ -59,8 +59,3 @@ div.Scoreboard {
 .Home {
     position: absolute;
 }
-
-.Home.BottomToTop {
-    transform-origin: center;
-    transform: rotate(180deg) translate(100%, 100%);
-}

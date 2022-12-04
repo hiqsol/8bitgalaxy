@@ -1,13 +1,26 @@
 import Game from '../Game.js';
 import Drawer from './Drawer.js';
+import aDrawer from './aDrawer.js';
 
-class ScoreboardDrawer {
+class ScoreboardDrawer extends aDrawer {
   constructor(drawer) {
-    this._drawer = Drawer.assert(drawer);
+    super(drawer);
+    this._HTML = `
+      <div class="Scoreboard">
+        <label>Export
+          <input id="Export" value="Export" type="button" />
+        </label>
+        <form id="ImportForm">
+          <label>Import
+            <input id="Import" name="files[]" multiple="" type="file" />
+          </label>
+        </form>
+      </div>
+    `;
   }
 
-  draw(parent, scoreboard) {
-    let e = this._drawer.importNode(parent, this.fragment, '.Scoreboard');
+  draw(parent, scoreboard, params) {
+    let e = this.drawNode(parent, params);
 
     e.querySelector('#Export').onclick = () => {
       let dataStr = scoreboard.game.exportJson();
@@ -40,21 +53,7 @@ class ScoreboardDrawer {
     };
 
   }
-
-  get fragment() { return this._drawer.getFragment(HTML); }
 }
 
-const HTML = `
-    <div class="Scoreboard">
-      <label>Export
-        <input id="Export" value="Export" type="button" />
-      </label>
-      <form id="ImportForm">
-        <label>Import
-          <input id="Import" name="files[]" multiple="" type="file" />
-        </label>
-      </form>
-    </div>
-`;
 
 export default ScoreboardDrawer;

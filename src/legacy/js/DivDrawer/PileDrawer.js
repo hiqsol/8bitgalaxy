@@ -1,18 +1,23 @@
 import Drawer from "./Drawer.js";
+import aDrawer from "./aDrawer.js";
 
-class PileDrawer {
+class PileDrawer extends aDrawer {
   constructor(drawer) {
-    this._drawer = Drawer.assert(drawer);
+    super(drawer);
+    this._HTML = `
+      <div class="Pile droppable">
+        <div class="Name">
+          <div class="Value">Name</div>
+          <div class="Size"></div>
+        </div>
+      </div>
+    `;
     this._discards = {};
     this._discardPiles = {};
   }
 
   draw(parent, pile, params) {
-    let m = this._drawer.m;
-    let e = this.importNode(parent, ".Pile");
-    e.style.left = (0 + params.x*m) + "px";
-    e.style.top  = (0 + params.y*m) + "px";
-    e.classList.add(params.direction.name);
+    let e = this.drawNode(parent, params);
     if (pile.folded) {
       e.classList.add('Folded');
     }
@@ -89,23 +94,6 @@ class PileDrawer {
       card.draggable = (i === pile.size-1);
     }
   }
-
-  importNode(parent, selector) {
-    return this._drawer.importNode(parent, this.fragment, selector);
-  }
-
-  get fragment() {
-    return this._drawer.getFragment(HTML);
-  }
 }
-
-const HTML = `
-  <div class="Pile droppable">
-    <div class="Name">
-      <div class="Value">Name</div>
-      <div class="Size"></div>
-    </div>
-  </div>
-`;
 
 export default PileDrawer;

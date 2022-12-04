@@ -1,17 +1,15 @@
 import Drawer from './Drawer.js';
 import Params from './Params.js';
+import aDrawer from './aDrawer.js';
 
-class RowDrawer {
+class RowDrawer extends aDrawer {
   constructor(drawer) {
-    this._drawer = Drawer.assert(drawer);
+    super(drawer);
+    this._HTML = `<div class="Row"></div>`;
   }
 
   draw(parent, row, params) {
-    let e = this._drawer.importNode(parent, this.fragment, '.Row');
-    let m = this._drawer.m;
-    e.style.left  = (0 + params.x*m) + 'px';
-    e.style.top   = (0 + params.y*m) + 'px';
-    e.classList.add(params.direction.name);
+    let e = this.drawNode(parent, params);
     this.drawPiles(e, row, params.direction);
     return e;
   }
@@ -24,12 +22,6 @@ class RowDrawer {
       );
     }
   }
-
-  get fragment() { return this._drawer.getFragment(HTML); }
 }
-
-const HTML = `
-    <div class="Row"></div>
-`;
 
 export default RowDrawer;

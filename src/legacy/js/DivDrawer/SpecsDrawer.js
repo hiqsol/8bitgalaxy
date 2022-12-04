@@ -1,28 +1,24 @@
 import Drawer from './Drawer.js';
+import aDrawer from './aDrawer.js';
 
-class SpecsDrawer {
+class SpecsDrawer extends aDrawer {
   constructor(drawer) {
-    this._drawer = Drawer.assert(drawer);
+    super(drawer);
+    this._HTML = '<div class="Specs"></div>';
   }
 
   draw(parent, specs, params) {
-    let e = this._drawer.importNode(parent, this.fragment, '.Specs');
-    e.classList.add(params.x ? 'Alternative' : 'Normal');
+    let e = this.drawNode(parent, params);
+    e.classList.add('isAlternative' in params ? 'Alternative' : 'Normal');
     this.drawParts(e, specs);
     return e;
   }
 
   drawParts(e, specs) {
     for (const [prop, spec] of Object.entries(specs.getSpecs())) {
-      this._drawer.draw(e, spec);
+      this.drawer.draw(e, spec);
     }
   }
-
-  get fragment() { return this._drawer.getFragment(HTML); }
 }
-
-const HTML = `
-  <div class="Specs"></div>
-`;
 
 export default SpecsDrawer;

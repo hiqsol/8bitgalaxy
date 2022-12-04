@@ -131,17 +131,6 @@ class Drawer {
     );
   }
 
-  importNode(parent, fragment, selector) {
-    let n = document.importNode(fragment, true);
-    let e = n.querySelector(selector);
-    parent.appendChild(n);
-    return e;
-  }
-
-  getFragment(name, html) {
-    return this.tpl.getFragment(name, html);
-  }
-
   static assert(sample) {
     if (sample instanceof (Drawer)) {
       return sample;

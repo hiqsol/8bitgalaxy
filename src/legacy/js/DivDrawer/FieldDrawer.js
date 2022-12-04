@@ -1,33 +1,27 @@
 import Drawer from './Drawer.js';
+import aDrawer from './aDrawer.js';
 
-class FieldDrawer {
+class FieldDrawer extends aDrawer {
   constructor(drawer) {
-    this._drawer = Drawer.assert(drawer);
+    super(drawer);
+    this._HTML = '<div class="Field"></div>';
   }
 
   draw(parent, field, params) {
-    let e = this._drawer.importNode(parent, this.fragment, '.Field');
-    let m = this._drawer.m;
-    e.style.left  = (0 + params.x*m) + 'px';
-    e.style.top   = (0 + params.y*m) + 'px';
+    let e = this.drawNode(parent, params);
     this.drawStars(e, field);
+    return e;
   }
 
   drawStars(parent, field) {
-    this._drawer.draw(parent, field.star(0, 0));
-    this._drawer.draw(parent, field.star(0, 1));
-    this._drawer.draw(parent, field.star(1, 0));
-    this._drawer.draw(parent, field.star(1, 1));
-    this._drawer.draw(parent, field.star(1, 2));
-    this._drawer.draw(parent, field.star(2, 0));
-    this._drawer.draw(parent, field.star(2, 1));
+    this.drawer.draw(parent, field.star(0, 0));
+    this.drawer.draw(parent, field.star(0, 1));
+    this.drawer.draw(parent, field.star(1, 0));
+    this.drawer.draw(parent, field.star(1, 1));
+    this.drawer.draw(parent, field.star(1, 2));
+    this.drawer.draw(parent, field.star(2, 0));
+    this.drawer.draw(parent, field.star(2, 1));
   }
-
-  get fragment() { return this._drawer.getFragment(HTML); }
 }
-
-const HTML = `
-    <div class="Field"></div>
-`;
 
 export default FieldDrawer;

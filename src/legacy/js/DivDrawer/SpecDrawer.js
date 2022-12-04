@@ -1,12 +1,16 @@
 import Drawer from './Drawer.js';
+import aDrawer from "./aDrawer.js";
 
-class SpecDrawer {
+class SpecDrawer extends aDrawer {
   constructor(drawer) {
-    this._drawer = Drawer.assert(drawer);
+    super(drawer);
+    this._HTML = `
+      <div class="Spec"><div class="Value"></div></div>
+    `;
   }
 
-  draw(parent, spec) {
-    let e = this._drawer.importNode(parent, this.fragment, '.Spec');
+  draw(parent, spec, params) {
+    let e = this.drawNode(parent, params);
     this.drawValue(e, spec.name, spec.Value, spec.Klass.name);
     this.drawIcon(e, spec.name);
     return e;
@@ -34,32 +38,16 @@ class SpecDrawer {
     if (!icon) {
       return;
     }
-    let f = this._drawer.getFragment(ICON);
-    let e = this._drawer.importNode(parent, f, '.lni');
+    let e = this.importNode(parent, ICON);
     e.classList.add('lni-'+icon);
   }
-
-  get fragment() { return this._drawer.getFragment(HTML); }
 }
 
-const HTML = `
-  <div class="Spec"><div class="Value"></div></div>
-`;
-
-const ICON = `
-  <div class="lni"></div>
-`;
+const ICON = `<div class="lni"></div>`;
 
 const Icons = Object.freeze({
   Utilization:    'spiner-solid',
   Defense:        'shield',
 })
-
-//<div class="Part Utilization"><div class="lni lni-archive"></div><div class="value">U</div></div>
-//<div class="Part Defense"><div class="lni lni-shield"></div><div class="value">D</div></div>
-//<div class="Part Attack"><div class="lni lni-pointer"></div><div class="value">A</div></div>
-//<div class="Part Colonization"><div class="lni lni-basketball"></div><div class="value">C</div></div>
-//<div class="Part Science"><div class="lni lni-star"></div><div class="value">S</div></div>
-//<div class="Part Production"><div class="lni lni-package"></div><div class="value">P</div></div>
 
 export default SpecDrawer;
