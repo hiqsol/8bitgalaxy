@@ -90,6 +90,13 @@ class Drawer {
     const elem = Drawer.getDraggingCard(id);
     const type = Type.assert(elem);
     if (cl.contains('Slot')) {
+      if (elem.classList.contains('Turned')) {
+        if (cl.contains('for-Hero')) {
+          return null;
+        } else {
+          return elem;
+        }
+      }
       if (!cl.contains('for-' + type.name)) {
         return null;
       }

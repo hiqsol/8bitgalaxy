@@ -17,10 +17,12 @@
     height: 150px;
 }
 
+.Slot.LeftToRight .Card.Turned,
 .Slot.LeftToRight {
     width: 350px;
     height: 150px;
 }
+.Slot.TopToBottom .Card.Turned,
 .Slot.TopToBottom {
     width: 250px;
     height: 250px;
