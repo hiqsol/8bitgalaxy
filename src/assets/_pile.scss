@@ -2,7 +2,7 @@
 @use "sass:math";
 
 // Cards shift in a Pile
-$pileSize: 52;
+$pileSize: 70;
 @for $p from 2 through $pileSize {
   .Pile.Folded:has(.Card:nth-child(#{$p}):last-child) {
     $pp: $p - 1;
