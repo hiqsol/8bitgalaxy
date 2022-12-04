@@ -7,12 +7,13 @@
   import Card from "./js/Model/Card.js";
   import Pile from "./js/Model/Pile.js";
   import Decks from "./js/Model/Decks.js";
+  import Params from "./js/DivDrawer/Params.js";
   import Direction from "./js/DivDrawer/Direction.js";
 
   let game = new Game();
-  let vert = new Pile('', Direction.TopToBottom);
+  let vert = new Pile('');
 
-  let v = game.draw(null, vert, 1, 1);
+  let v = game.draw(null, vert, new Params(1, 1, Direction.TopToBottom));
 
   let y = {
     '1.0':  (1.0-1)*8,
@@ -58,88 +59,88 @@ function pile(card) {
     return pile;
 }
 
-  game.draw(v, pile('Human-S1a'),  y['1.0'], x['1.1']);
-  game.draw(v, pile('Human-S1c'),  y['1.0'], x['1.2']);
-  game.draw(v, pile('Human-S1p'),  y['1.0'], x['1.3']);
-  game.draw(v, pile('Human-S1s'),  y['1.0'], x['1.4']);
+  game.draw(v, pile('Human-S1a'), new Params(x['1.1'],  y['1.0']));
+  game.draw(v, pile('Human-S1c'), new Params(x['1.2'],  y['1.0']));
+  game.draw(v, pile('Human-S1p'), new Params(x['1.3'],  y['1.0']));
+  game.draw(v, pile('Human-S1s'), new Params(x['1.4'],  y['1.0']));
 
-  game.draw(v, pile('Human-S2a'),  y['2.5'], x['1.1']);
-  game.draw(v, pile('Human-S2c'),  y['2.5'], x['1.2']);
-  game.draw(v, pile('Human-S2p'),  y['2.5'], x['1.3']);
-  game.draw(v, pile('Human-S2s'),  y['2.5'], x['1.4']);
+  game.draw(v, pile('Human-S2a'), new Params(x['1.1'],  y['2.5']));
+  game.draw(v, pile('Human-S2c'), new Params(x['1.2'],  y['2.5']));
+  game.draw(v, pile('Human-S2p'), new Params(x['1.3'],  y['2.5']));
+  game.draw(v, pile('Human-S2s'), new Params(x['1.4'],  y['2.5']));
 
-  game.draw(v, pile('Human-S4a'),  y['4.5'], x['1.1']);
-  game.draw(v, pile('Human-S4c'),  y['4.5'], x['1.2']);
-  game.draw(v, pile('Human-S4p'),  y['4.5'], x['1.3']);
-  game.draw(v, pile('Human-S4s'),  y['4.5'], x['1.4']);
+  game.draw(v, pile('Human-S4a'), new Params(x['1.1'],  y['4.5']));
+  game.draw(v, pile('Human-S4c'), new Params(x['1.2'],  y['4.5']));
+  game.draw(v, pile('Human-S4p'), new Params(x['1.3'],  y['4.5']));
+  game.draw(v, pile('Human-S4s'), new Params(x['1.4'],  y['4.5']));
 
-  game.draw(v, pile('Human-S6a'),  y['6.5'], x['1.1']);
-  game.draw(v, pile('Human-S6c'),  y['6.5'], x['1.2']);
-  game.draw(v, pile('Human-S6p'),  y['6.5'], x['1.3']);
-  game.draw(v, pile('Human-S6s'),  y['6.5'], x['1.4']);
-
-
-  game.draw(v, pile('Human-H1a'),  y['1.5'], x['2.1']);
-  game.draw(v, pile('Human-H1c'),  y['1.5'], x['2.2']);
-  game.draw(v, pile('Human-H1p'),  y['1.5'], x['2.3']);
-  game.draw(v, pile('Human-H1s'),  y['1.5'], x['2.4']);
-
-  game.draw(v, pile('Human-H3a'),  y['3.5'], x['2.1']);
-  game.draw(v, pile('Human-H3c'),  y['3.5'], x['2.2']);
-  game.draw(v, pile('Human-H3p'),  y['3.5'], x['2.3']);
-  game.draw(v, pile('Human-H3s'),  y['3.5'], x['2.4']);
-
-  game.draw(v, pile('Human-H5a'),  y['5.5'], x['2.1']);
-  game.draw(v, pile('Human-H5c'),  y['5.5'], x['2.2']);
-  game.draw(v, pile('Human-H5p'),  y['5.5'], x['2.3']);
-  game.draw(v, pile('Human-H5s'),  y['5.5'], x['2.4']);
-
-  game.draw(v, pile('Human-H7a'),  y['7.5'], x['2.1']);
-  game.draw(v, pile('Human-H7c'),  y['7.5'], x['2.2']);
-  game.draw(v, pile('Human-H7p'),  y['7.5'], x['2.3']);
-  game.draw(v, pile('Human-H7s'),  y['7.5'], x['2.4']);
+  game.draw(v, pile('Human-S6a'), new Params(x['1.1'],  y['6.5']));
+  game.draw(v, pile('Human-S6c'), new Params(x['1.2'],  y['6.5']));
+  game.draw(v, pile('Human-S6p'), new Params(x['1.3'],  y['6.5']));
+  game.draw(v, pile('Human-S6s'), new Params(x['1.4'],  y['6.5']));
 
 
-  game.draw(v, pile('Human-B2a'),  y['2.0'], x['3.1']);
-  game.draw(v, pile('Human-B2c'),  y['2.0'], x['3.2']);
-  game.draw(v, pile('Human-B2p'),  y['2.0'], x['3.3']);
-  game.draw(v, pile('Human-B2s'),  y['2.0'], x['3.4']);
+  game.draw(v, pile('Human-H1a'), new Params(x['2.1'],  y['1.5']));
+  game.draw(v, pile('Human-H1c'), new Params(x['2.2'],  y['1.5']));
+  game.draw(v, pile('Human-H1p'), new Params(x['2.3'],  y['1.5']));
+  game.draw(v, pile('Human-H1s'), new Params(x['2.4'],  y['1.5']));
 
-  game.draw(v, pile('Human-B3a'),  y['3.5'], x['3.1']);
-  game.draw(v, pile('Human-B3c'),  y['3.5'], x['3.2']);
-  game.draw(v, pile('Human-B3p'),  y['3.5'], x['3.3']);
-  game.draw(v, pile('Human-B3s'),  y['3.5'], x['3.4']);
+  game.draw(v, pile('Human-H3a'), new Params(x['2.1'],  y['3.5']));
+  game.draw(v, pile('Human-H3c'), new Params(x['2.2'],  y['3.5']));
+  game.draw(v, pile('Human-H3p'), new Params(x['2.3'],  y['3.5']));
+  game.draw(v, pile('Human-H3s'), new Params(x['2.4'],  y['3.5']));
 
-  game.draw(v, pile('Human-B5a'),  y['5.5'], x['3.1']);
-  game.draw(v, pile('Human-B5c'),  y['5.5'], x['3.2']);
-  game.draw(v, pile('Human-B5p'),  y['5.5'], x['3.3']);
-  game.draw(v, pile('Human-B5s'),  y['5.5'], x['3.4']);
+  game.draw(v, pile('Human-H5a'), new Params(x['2.1'],  y['5.5']));
+  game.draw(v, pile('Human-H5c'), new Params(x['2.2'],  y['5.5']));
+  game.draw(v, pile('Human-H5p'), new Params(x['2.3'],  y['5.5']));
+  game.draw(v, pile('Human-H5s'), new Params(x['2.4'],  y['5.5']));
 
-  game.draw(v, pile('Human-B7a'),  y['7.5'], x['3.1']);
-  game.draw(v, pile('Human-B7c'),  y['7.5'], x['3.2']);
-  game.draw(v, pile('Human-B7p'),  y['7.5'], x['3.3']);
-  game.draw(v, pile('Human-B7s'),  y['7.5'], x['3.4']);
+  game.draw(v, pile('Human-H7a'), new Params(x['2.1'],  y['7.5']));
+  game.draw(v, pile('Human-H7c'), new Params(x['2.2'],  y['7.5']));
+  game.draw(v, pile('Human-H7p'), new Params(x['2.3'],  y['7.5']));
+  game.draw(v, pile('Human-H7s'), new Params(x['2.4'],  y['7.5']));
 
 
-  game.draw(v, pile('Human-C2a'),  y['2.5'], x['4.1']);
-  game.draw(v, pile('Human-C2c'),  y['2.5'], x['4.2']);
-  game.draw(v, pile('Human-C2p'),  y['2.5'], x['4.3']);
-  game.draw(v, pile('Human-C2s'),  y['2.5'], x['4.4']);
+  game.draw(v, pile('Human-B2a'), new Params(x['3.1'],  y['2.0']));
+  game.draw(v, pile('Human-B2c'), new Params(x['3.2'],  y['2.0']));
+  game.draw(v, pile('Human-B2p'), new Params(x['3.3'],  y['2.0']));
+  game.draw(v, pile('Human-B2s'), new Params(x['3.4'],  y['2.0']));
 
-  game.draw(v, pile('Human-C4a'),  y['4.5'], x['4.1']);
-  game.draw(v, pile('Human-C4c'),  y['4.5'], x['4.2']);
-  game.draw(v, pile('Human-C4p'),  y['4.5'], x['4.3']);
-  game.draw(v, pile('Human-C4s'),  y['4.5'], x['4.4']);
+  game.draw(v, pile('Human-B3a'), new Params(x['3.1'],  y['3.5']));
+  game.draw(v, pile('Human-B3c'), new Params(x['3.2'],  y['3.5']));
+  game.draw(v, pile('Human-B3p'), new Params(x['3.3'],  y['3.5']));
+  game.draw(v, pile('Human-B3s'), new Params(x['3.4'],  y['3.5']));
 
-  game.draw(v, pile('Human-C6a'),  y['6.5'], x['4.1']);
-  game.draw(v, pile('Human-C6c'),  y['6.5'], x['4.2']);
-  game.draw(v, pile('Human-C6p'),  y['6.5'], x['4.3']);
-  game.draw(v, pile('Human-C6s'),  y['6.5'], x['4.4']);
+  game.draw(v, pile('Human-B5a'), new Params(x['3.1'],  y['5.5']));
+  game.draw(v, pile('Human-B5c'), new Params(x['3.2'],  y['5.5']));
+  game.draw(v, pile('Human-B5p'), new Params(x['3.3'],  y['5.5']));
+  game.draw(v, pile('Human-B5s'), new Params(x['3.4'],  y['5.5']));
+
+  game.draw(v, pile('Human-B7a'), new Params(x['3.1'],  y['7.5']));
+  game.draw(v, pile('Human-B7c'), new Params(x['3.2'],  y['7.5']));
+  game.draw(v, pile('Human-B7p'), new Params(x['3.3'],  y['7.5']));
+  game.draw(v, pile('Human-B7s'), new Params(x['3.4'],  y['7.5']));
+
+
+  game.draw(v, pile('Human-C2a'), new Params(x['4.1'],  y['2.5']));
+  game.draw(v, pile('Human-C2c'), new Params(x['4.2'],  y['2.5']));
+  game.draw(v, pile('Human-C2p'), new Params(x['4.3'],  y['2.5']));
+  game.draw(v, pile('Human-C2s'), new Params(x['4.4'],  y['2.5']));
+
+  game.draw(v, pile('Human-C4a'), new Params(x['4.1'],  y['4.5']));
+  game.draw(v, pile('Human-C4c'), new Params(x['4.2'],  y['4.5']));
+  game.draw(v, pile('Human-C4p'), new Params(x['4.3'],  y['4.5']));
+  game.draw(v, pile('Human-C4s'), new Params(x['4.4'],  y['4.5']));
+
+  game.draw(v, pile('Human-C6a'), new Params(x['4.1'],  y['6.5']));
+  game.draw(v, pile('Human-C6c'), new Params(x['4.2'],  y['6.5']));
+  game.draw(v, pile('Human-C6p'), new Params(x['4.3'],  y['6.5']));
+  game.draw(v, pile('Human-C6s'), new Params(x['4.4'],  y['6.5']));
 
 
   for (let i = 1;i<9;i++) {
     let s = i.toString();
-    game.draw(v, new Pile(s), y[s+'.0'], x['5.1']);
+    game.draw(v, new Pile(s), new Params(x['5.1'], y[s+'.0']));
   }
 
   var c = document.getElementById("myCanvas");
@@ -148,25 +149,25 @@ function pile(card) {
 
   ctx.strokeStyle = 'red';
   ctx.beginPath();
-  ctx.moveTo(x['1.1']*50+285, y['2.0']*50 - 25);
-  ctx.lineTo(x['1.2']*50+285, y['3.5']*50 - 25);
-  ctx.lineTo(x['1.3']*50+285, y['5.5']*50 - 25);
-  ctx.lineTo(x['1.3']*50+285, y['7.5']*50 - 25);
+  ctx.moveTo(x['1.1']*50+265, y['2.0']*50 - 25);
+  ctx.lineTo(x['1.2']*50+265, y['3.5']*50 - 25);
+  ctx.lineTo(x['1.3']*50+265, y['5.5']*50 - 25);
+  ctx.lineTo(x['1.3']*50+265, y['7.5']*50 - 25);
   ctx.stroke();
 
   ctx.beginPath();
-  ctx.moveTo(x['2.1']*50+100, y['2.5']*50 - 25);
-  ctx.lineTo(x['2.1']*50+100, y['4.5']*50 - 25);
-  ctx.lineTo(x['2.1']*50+100, y['6.5']*50 - 25);
-  ctx.lineTo(x['2.1']*50+100, y['8.5']*50 - 25);
+  ctx.moveTo(x['2.1']*50+ 70, y['2.5']*50 - 25);
+  ctx.lineTo(x['2.1']*50+ 70, y['4.5']*50 - 25);
+  ctx.lineTo(x['2.1']*50+ 70, y['6.5']*50 - 25);
+  ctx.lineTo(x['2.1']*50+ 70, y['8.5']*50 - 25);
   ctx.stroke();
 
   ctx.strokeStyle = 'green';
   ctx.beginPath();
-  ctx.moveTo(x['1.2']*50+285, y['2.0']*50 - 25);
-  ctx.lineTo(x['1.4']*50+285, y['3.5']*50 - 25);
-  ctx.lineTo(x['1.1']*50+285, y['5.5']*50 - 25);
-  ctx.lineTo(x['1.4']*50+285, y['7.5']*50 - 25);
+  ctx.moveTo(x['1.2']*50+265, y['2.0']*50 - 25);
+  ctx.lineTo(x['1.4']*50+265, y['3.5']*50 - 25);
+  ctx.lineTo(x['1.1']*50+265, y['5.5']*50 - 25);
+  ctx.lineTo(x['1.4']*50+265, y['7.5']*50 - 25);
   ctx.stroke();
 
   ctx.beginPath();
