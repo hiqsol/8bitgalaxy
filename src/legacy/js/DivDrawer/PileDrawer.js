@@ -67,7 +67,6 @@ class PileDrawer extends aDrawer {
           let elem = document.getElementById(card.Name);
           elem.classList.add('Turned');
           card.setTurned(true);
-          console.log(card, elem);
           pile.put(card);
           e.appendChild(elem);
         }

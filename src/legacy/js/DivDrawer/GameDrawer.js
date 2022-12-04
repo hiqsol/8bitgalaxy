@@ -12,10 +12,12 @@ class GameDrawer extends aDrawer {
     this.drawer.draw(e, game.board);
     this.drawer.draw(e, game.scoreboard);
 
-    this.addPageGrabber();
+    if (!this.stopDragging) {
+      this.addGameDragger();
+    }
   }
 
-  addPageGrabber() {
+  addGameDragger() {
     const ele = document.documentElement;
 
     let pos = { top: 0, left: 0, x: 0, y: 0 };
