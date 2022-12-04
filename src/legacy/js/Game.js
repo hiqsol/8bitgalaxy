@@ -1,5 +1,6 @@
 import Card from "./Model/Card.js";
 import Board from "./Model/Board.js";
+import Start from "./Model/Start.js";
 import Player from "./Model/Player.js";
 import Assert from "./Model/Assert.js";
 import Drawer from "./DivDrawer/Drawer.js";
@@ -42,7 +43,8 @@ class Game {
     let board = new Board(this);
     let no = 1;
     for (const [name, race] of Object.entries(this.options.players)) {
-      board.addPlayer(new Player(name, race, no));
+      let player = board.addPlayer(new Player(name, race, no));
+      new Start(player.home);
       no++;
     }
     return board;

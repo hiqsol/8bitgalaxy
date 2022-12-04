@@ -5,7 +5,11 @@ import Decks from "./Decks.js";
 class Start {
   constructor(home) {
     this._home = Home.assert(home);
-    this.init();
+    if (this.home.player.race == 'alien') {
+      this.initAlien();
+    } else {
+      this.initHuman();
+    }
   }
 
   get home()      { return this._home; }
@@ -16,14 +20,25 @@ class Start {
   get discard()   { return this._home.discard; }
   get research()  { return this._home.research; }
 
-  init() {
-    this.ideas.put(this.deck.lower);
-    this.ideas.shuffle();
+  initHuman() {
+    this.initIdeas();
     this.initShips();
     this.initHeroes();
     this.initBases();
     this.initColonies();
     this.initResearch();
+  }
+
+  initAlien() {
+    this.initIdeas();
+    for (var i in this.ideas.cards) {
+      this.ideas.get(i).turn();
+    }
+  }
+
+  initIdeas() {
+    this.ideas.put(this.deck.lower);
+    this.ideas.shuffle();
   }
 
   initShips() {

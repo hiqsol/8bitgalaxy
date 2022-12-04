@@ -31,13 +31,23 @@ class Decks {
         dst[key.toLowerCase()] = src[key];
         return dst;
       }, {});
-      for (const key in src) {
-        if (key.startsWith('Human-')) {
-          Decks._all[key.replace('Human-', 'Martian-').toLowerCase()] = src[key];
-        }
-      }
+      Decks.copyCards(src, 'Human', 'Martian');
+      Decks.copyCards(src, 'Human', 'Alien');
     }
     return Decks._all;
+  }
+
+  static copyCards(cards, src, dst) {
+    src = src+'-';
+    dst = dst+'-';
+    let i = 0;
+    for (const key in cards) {
+      if (key.startsWith(src)) {
+        Decks._all[key.replace(src, dst).toLowerCase()] = cards[key];
+      }
+      i++;
+      if (dst=='Alien-' && i>90) return;
+    }
   }
 
   static parseCard(name, specs) {
@@ -286,17 +296,6 @@ class Decks {
       //'Human-Colony-8c':    '4c,c3c,r7c,r7p',
       //'Human-Colony-8p':    '4p,c3p,r7p,r7c',
       //'Human-Colony-8s':    '4s,c3s,r7s,r7a',
-
-
-      'Alien-Tech-4a':      'r3s,r3a',
-      'Alien-Tech-4c':      'r3p,r3c',
-      'Alien-Tech-4s':      'r3a,r3s',
-      'Alien-Tech-4p':      'r3c,r3p',
-
-      'Alien-Tech-5a':      'r4s,r4a',
-      'Alien-Tech-5c':      'r4p,r4c',
-      'Alien-Tech-5s':      'r4a,r4s',
-      'Alien-Tech-5p':      'r4c,r4p',
 
       'AI-Ship-1a':         '1a',
       'AI-Ship-1c':         '1c',

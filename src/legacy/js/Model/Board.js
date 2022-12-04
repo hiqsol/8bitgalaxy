@@ -36,7 +36,11 @@ class Board {
   player(no)    { return this._players[this.assertPlayerNo(no)-1]; }
   home(no)      { return this.player(no).home; }
 
-  addPlayer(player) { this._players.push(Player.assert(player).setBoard(this)); }
+  addPlayer(player) {
+    player = Player.assert(player).setBoard(this);
+    this._players.push(player);
+    return player;
+  }
 
   assertPlayerNo(no) {
     if (typeof(no) !== 'number' || no<1 || no>this._players.length) {

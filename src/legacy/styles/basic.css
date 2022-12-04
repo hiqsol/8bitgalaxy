@@ -13,10 +13,6 @@ body {
     background-color: #ffb;
 }
 
-.AI {
-    background-color: #bff;
-}
-
 .Martian {
     background-color: #dbb;
 }
@@ -24,6 +20,14 @@ body {
     color: rgba(100, 100, 100, 0.7);
 }
 
+.Alien {
+    background-color: #bff;
+}
+
+
+.AI {
+    background-color: #bff;
+}
 
 .Plasma {
     background-color: #fbf;
