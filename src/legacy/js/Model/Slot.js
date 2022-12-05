@@ -1,17 +1,16 @@
 import Card from "./Card.js";
-import Type from "./Type.js";
 import Assert from "./Assert.js";
 
 class Slot {
-  constructor(type, card = null) {
-    this._type = Type.assert(type);
+  constructor(name, card = null) {
+    this._name = name;
     this._card = card ? Card.assert(card) : null;
   }
 
   toJSON() {
     return {
       '_class':     'Slot',
-      'type':       this._type.name,
+      'name':       this._name,
       'card':       this._card,
     }
   }
@@ -19,7 +18,7 @@ class Slot {
   static fromJSON(json) {
     Assert.assert(json._class == 'Slot', "wrong class hydrating Slot", json);
     let card = json.card ? Card.fromJSON(json.card) : null;
-    return new Slot(json.type, card);
+    return new Slot(json.name, card);
   }
 
   static arrayFromJSON(json) {
@@ -32,7 +31,8 @@ class Slot {
   }
 
   get card()              { return this._card; }
-  get type()              { return this._type; }
+  get name()              { return this._name; }
+  isName(name)            { return this._name === name; }
 
   put(card) {
     Assert.assert(!this._card, 'can not put second card to Slot', this);

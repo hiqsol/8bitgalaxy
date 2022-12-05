@@ -30,22 +30,22 @@
 
 .Ship {
     width: 250px;
-    height: 250px;
+    height: 350px;
 }
 
 .Hero {
     width: 250px;
-    height: 250px;
+    height: 350px;
 }
 
 .Base {
     width: 350px;
-    height: 150px;
+    height: 250px;
 }
 
 .Colony {
     width: 350px;
-    height: 150px;
+    height: 250px;
 }
 
 .Tech {

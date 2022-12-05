@@ -1,0 +1,81 @@
+.Star .Slot .Hero,
+.Star .Slot .Ship {
+    width: 250px;
+    height: 250px;
+}
+
+.Star .Slot .Base,
+.Star .Slot .Colony {
+    width: 350px;
+    height: 150px;
+}
+
+.Slots {
+    position: absolute;
+    border-radius: 20px;
+}
+.Slot {
+    position: absolute;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.Star .Slots .Name .Value {
+    display: none;
+}
+.Star .Slot {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.Slot .Name .Value {
+    display: block;
+    width: 350px;
+    height: 150px;
+}
+
+.Star .Slot.LeftToRight .Card.Turned,
+.Star .Slot.LeftToRight {
+    width: 350px;
+    height: 150px;
+}
+.Star .Slot.TopToBottom .Card.Turned,
+.Star .Slot.TopToBottom {
+    width: 250px;
+    height: 250px;
+}
+
+.Star .Slot .Card:not(.Turned).Altered .Specs.Normal,
+.Star .Slot .Card:not(.Turned):not(.Altered) .Specs.Alternative {
+    display: none;
+}
+
+.Star .Slot .Card {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.Home .Slots {
+    box-shadow: 0 0 9px #222;
+}
+.Home .Slots .Name .Value {
+    display: block;
+    user-select: none;
+    width: 250px;
+    height: 350px;
+    line-height: 350px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: 100;
+}
+.Home .Slot {
+    box-shadow: 4px 4px 5px #222;
+}
+.Home .Slot.TopToBottom {
+    width: 250px;
+    height: 350px;
+}
+
