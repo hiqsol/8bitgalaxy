@@ -10,11 +10,11 @@ class SpecsDrawer extends aDrawer {
   draw(parent, specs, params) {
     let e = this.drawNode(parent, params);
     e.classList.add('isAlternative' in params ? 'Alternative' : 'Normal');
-    this.drawParts(e, specs);
+    this.drawSpecs(e, specs);
     return e;
   }
 
-  drawParts(e, specs) {
+  drawSpecs(e, specs) {
     for (const [prop, spec] of Object.entries(specs.getSpecs())) {
       this.drawer.draw(e, spec);
     }

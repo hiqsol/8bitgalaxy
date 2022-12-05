@@ -21,7 +21,7 @@ class Deck {
 
       for (var name in Decks.all()) {
         let card = Card.assert(name);
-        if (!this.isThatRace(card.Race)) continue;
+        if (!this.isRace(card.Race)) continue;
         this._all[name] = card;
         let alt = card.Alternative;
         let upper = card;
@@ -68,7 +68,7 @@ class Deck {
 
   get size() { return Object.keys(this.lower).length; }
 
-  isThatRace(race) {
+  isRace(race) {
     if (typeof race != 'string') return false;
     return race.toLowerCase() == this._race;
   }

@@ -109,10 +109,6 @@
     color: #000 !important;
 }
 
-.Defense {
-    color: white;
-}
-
 .Attack {
     color: rgba(230, 0, 0, 0.8);
 }
@@ -147,12 +143,6 @@
 
 .Spec.Alternative {
     display: none;
-}
-
-.Spec.Utilization .Value {
-    font-size: 20px;
-    margin-left: -2px;
-    margin-top: 4px;
 }
 
 .Spec.Cooperation .Value {
@@ -203,18 +193,6 @@
 
 .Ship .Spec.Science {
     left: 200px;
-}
-
-.Ship .Spec.Defense {
-    display: none;
-}
-
-.Ship .Spec.Utilization {
-    display: none;
-}
-
-.Ship .Spec.Utilization .lni {
-    transform: rotate(180deg);
 }
 
 .Ship .Spec.Require1 .Value {
@@ -275,18 +253,6 @@
     left: 150px;
 }
 
-.Hero .Spec.Defense {
-    display: none;
-}
-
-.Hero .Spec.Utilization {
-    display: none;
-}
-
-.Hero .Spec.Utilization .lni {
-    transform: rotate(180deg);
-}
-
 .Hero .Spec.Require1 .Value {
     top: 100px;
     border-top-right-radius: 12px;
@@ -343,18 +309,6 @@
 
 .Base .Spec.Science {
     left: 250px;
-}
-
-.Base .Spec.Defense {
-    left: 50px;
-}
-
-.Base .Spec.Utilization {
-    left: 5px;
-}
-
-.Base .Spec.Utilization .lni {
-    transform: rotate(180deg);
 }
 
 .Base .Spec.Require1 .Value {
@@ -424,18 +378,6 @@
 
 .Colony .Spec.Science {
     left: 250px;
-}
-
-.Colony .Spec.Defense {
-    left: 300px;
-}
-
-.Colony .Spec.Utilization {
-    left: 300px;
-}
-
-.Colony .Spec.Utilization .lni {
-    transform: rotate(180deg);
 }
 
 .Colony .Spec.Require1 .Value {

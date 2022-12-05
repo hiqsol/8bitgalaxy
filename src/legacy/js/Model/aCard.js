@@ -1,7 +1,7 @@
 import Type from "./Type.js";
+import Pair from "./Pair.js";
 import Specs from "./Specs.js";
 import Decks from "./Decks.js";
-import Action from "./Action.js";
 import Assert from "./Assert.js";
 
 class aCard {
@@ -20,13 +20,11 @@ class aCard {
   get Level()             { return this.Specs.Level; }
   get Klass()             { return this.Specs.Klass; }
   get Requires()          { return this.Specs.Requires; }
-  get Defense()           { return this.Specs.Defense; }
   get Attack()            { return this.Specs.Attack; }
   get Colonization()      { return this.Specs.Colonization; }
   get Science()           { return this.Specs.Science; }
   get Production()        { return this.Specs.Production; }
   get Cooperation()       { return this.Specs.Cooperation; }
-  get Utilization()       { return this.Specs.Utilization; }
 
   get isHero()            { return this.isType(Type.Hero); }
   get isColony()          { return this.isType(Type.Colony); }
@@ -68,16 +66,16 @@ class aCard {
       return undefined;
     }
     if (typeof(alt) === 'string') {
-      alt = Action.assert(alt);
+      alt = Pair.assert(alt);
     }
-    if (alt instanceof Action) {
+    if (alt instanceof Pair) {
       return Decks.get(aCard.buildName(this.Race, this.Type, alt.short));
     }
     Assert.error('wrong alternative', alt);
   }
 
-  static buildName(race, type, action) {
-    return race + '-' + type + '-' + action;
+  static buildName(race, type, pair) {
+    return race + '-' + type + '-' + pair;
   }
 }
 

@@ -1,9 +1,9 @@
+import Pair from "./Pair.js";
 import Prop from "./Prop.js";
 import Type from "./Type.js";
 import Spec from "./Spec.js";
 import aCard from "./aCard.js";
 import Specs from "./Specs.js";
-import Action from "./Action.js";
 import Assert from "./Assert.js";
 import Generator from "./Generator.js";
 
@@ -67,13 +67,13 @@ class Decks {
       return new Specs(Spec.text(Prop.Name, name));
     }
     let ps = Decks.splitName(name);
-    let action = Action.assert(ps[2]);
+    let pair = Pair.assert(ps[2]);
     return new Specs({
       [Prop.Name]:          name,
-      [Prop.Race]:          Action.text(ps[0]),
-      [Prop.Type]:          Action.text(ps[1]),
-      [Prop.Level]:         action,
-      [action.Klass.name]:  action.dec(),
+      [Prop.Race]:          Pair.text(ps[0]),
+      [Prop.Type]:          Pair.text(ps[1]),
+      [Prop.Level]:         pair,
+      [pair.klass.name]:    pair.dec(),
     });
   }
 
@@ -111,22 +111,19 @@ class Decks {
   static parseSpec(spec) {
     Assert.string(spec);
     let prefix = spec.charAt(0).toLowerCase();
-    let action = Action.assert(spec.substring(1, 3));
+    let pair = Pair.assert(spec.substring(1, 3));
     if (spec.length === 2) {
-      action = Action.assert(spec);
-      return new Spec(action.Klass, action);
-    }
-    if (prefix === 'u') {
-      return new Spec(Prop.Utilization, action);
+      pair = Pair.assert(spec);
+      return new Spec(pair.klass, pair);
     }
     if (prefix === 'c') {
-      return new Spec(Prop.Cooperation, action);
+      return new Spec(Prop.Cooperation, pair);
     }
     if (prefix === 'a') {
-      return new Spec(Prop.Alternative, action);
+      return new Spec(Prop.Alternative, pair);
     }
     if (prefix === 'r') {
-      return new Spec(Prop.Requires, action);
+      return new Spec(Prop.Requires, pair);
     }
     Assert.error('wrong spec', spec);
   }
@@ -374,8 +371,8 @@ class Decks {
       'AI-Hero-1s':         '',
       'AI-Hero-2s':         '1s,a1p',
       'AI-Hero-2a':         '2a,a1p',
-      'AI-Base-7a':         'u5p,r6c,r7a',
-      'AI-Base-7c':         'u5p,c2c,r6p,r7c',
+      'AI-Base-7a':         'r6c,r7a',
+      'AI-Base-7c':         'c2c,r6p,r7c',
       'AI-Base-6c':         'a5p,r5a,r6c',
 
       'Base':               { Type: 'Base', },

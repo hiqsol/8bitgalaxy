@@ -46,14 +46,12 @@ class Card {
   get Level()             { return this.aCard.Level; }
   get AltLevel()          { return this.Alternative ? this.Alternative.Level : null; }
   get Klass()             { return this.aCard.Klass; }
-  get Defense()           { return this.aCard.Defense; }
   get Attack()            { return this.aCard.Attack; }
   get Colonization()      { return this.aCard.Colonization; }
   get Science()           { return this.aCard.Science; }
   get Production()        { return this.aCard.Production; }
   get Requires()          { return this.aCard.Requires; }
   get Cooperation()       { return this.aCard.Cooperation; }
-  get Utilization()       { return this.aCard.Utilization; }
 
   get isHero()            { return this.aCard.isHero; }
   get isColony()          { return this.aCard.isColony; }

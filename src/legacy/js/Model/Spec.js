@@ -1,21 +1,21 @@
+import Pair from "./Pair.js";
 import Prop from "./Prop.js";
-import Action from "./Action.js";
 import Assert from "./Assert.js";
 
 class Spec {
-  constructor(prop, action) {
+  constructor(prop, pair) {
     this._prop = Prop.assert(prop);
-    this._action = Action.assert(action);
+    this._pair = Pair.assert(pair);
   }
 
-  get Prop()              { return this._prop; }
+  get prop()              { return this._prop; }
   get name()              { return this._prop.name; }
-  get Action()            { return this._action; }
-  get Klass()             { return this._action.Klass; }
-  get Value()             { return this._action.Value; }
+  get pair()              { return this._pair; }
+  get klass()             { return this._pair.klass; }
+  get value()             { return this._pair.value; }
 
   static text(prop, text) {
-    return new Spec(prop, Action.text(text));
+    return new Spec(prop, Pair.text(text));
   }
 
   static assert(sample) {

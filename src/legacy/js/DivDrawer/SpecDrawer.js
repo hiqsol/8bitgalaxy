@@ -5,14 +5,15 @@ class SpecDrawer extends aDrawer {
   constructor(drawer) {
     super(drawer);
     this._HTML = `
-      <div class="Spec"><div class="Value"></div></div>
+      <div class="Spec">
+        <div class="Value"></div>
+      </div>
     `;
   }
 
   draw(parent, spec, params) {
     let e = this.drawNode(parent, params);
-    this.drawValue(e, spec.name, spec.Value, spec.Klass.name);
-    this.drawIcon(e, spec.name);
+    this.drawValue(e, spec.name, spec.value, spec.klass.name);
     return e;
   }
 
@@ -32,22 +33,6 @@ class SpecDrawer extends aDrawer {
       e.innerHTML = value;
     }
   }
-
-  drawIcon(parent, name) {
-    let icon = Icons[name] ?? null;
-    if (!icon) {
-      return;
-    }
-    let e = this.importNode(parent, ICON);
-    e.classList.add('lni-'+icon);
-  }
 }
-
-const ICON = `<div class="lni"></div>`;
-
-const Icons = Object.freeze({
-  Utilization:    'spiner-solid',
-  Defense:        'shield',
-})
 
 export default SpecDrawer;

@@ -17,14 +17,12 @@ class Prop {
   static get Require1()         { return Names.Require1; }
   static get Require2()         { return Names.Require2; }
   static get Require3()         { return Names.Require3; }
-  static get Defense()          { return Names.Defense; }
   static get Attack()           { return Names.Attack; }
   static get Colonization()     { return Names.Colonization; }
   static get Production()       { return Names.Production; }
   static get Science()          { return Names.Science; }
   static get Cooperation()      { return Names.Cooperation; }
   static get Alternative()      { return Names.Alternative; }
-  static get Utilization()      { return Names.Utilization; }
 
   static assert(sample) {
     if (sample instanceof(Prop)) {
@@ -64,14 +62,12 @@ const Names = Object.freeze({
   Require1:           'Require1',
   Require2:           'Require2',
   Require3:           'Require3',
-  Defense:            'Defense',
   Attack:             'Attack',
   Colonization:       'Colonization',
   Science:            'Science',
   Production:         'Production',
   Cooperation:        'Cooperation',
   Alternative:        'Alternative',
-  Utilization:        'Utilization',
 })
 
 export default Prop;
