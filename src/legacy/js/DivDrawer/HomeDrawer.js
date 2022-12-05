@@ -16,10 +16,10 @@ class HomeDrawer extends aDrawer {
     let yStep = params.direction.yStep;
     let xIndent = params.direction.isTopToBottom ? 0 : +2;
     let yIndent = params.direction.isTopToBottom ? 0 : -2;
-    let progressIndent = params.direction.isTopToBottom ? 30 : -46;
+    let progressIndent = params.direction.isTopToBottom ? 31 : -46;
     e.setAttribute('race', home.player.race);
     this._drawer.draw(e, home.progress, new Params(  progressIndent, yIndent+yStep*0, Direction.LeftToRight));
-    this._drawer.draw(e, home.hand,     new Params(xIndent+xStep*22, yIndent+yStep*0, params.direction));
+    this._drawer.draw(e, home.hand,     new Params(xIndent+xStep*22, yIndent+yStep*0, Direction.TopToBottom));
     this._drawer.draw(e, home.discard,  new Params(xIndent+xStep*16, yIndent+yStep*8, params.direction));
     this._drawer.draw(e, home.reserve,  new Params(xIndent+xStep*16, yIndent+yStep*0, params.direction));
     this._drawer.draw(e, home.factory,  new Params(        xStep*8,          yStep*0, params.direction));

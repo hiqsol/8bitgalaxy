@@ -9,9 +9,14 @@ class SlotDrawer extends aDrawer {
 
   draw(parent, slot, params) {
     let e = this.drawNode(parent, params);
-    e.classList.add('for-'+slot.type.name);
-    if (slot.type.isBase) {
-      e.classList.add('for-Colony');
+    let types = [slot.name];
+    if (slot.isName('Hand')) {
+      types = ['Hero', 'Ship'];
+    } else if (slot.isName('Base')) {
+      types = ['Base', 'Colony'];
+    }
+    for (let type of types) {
+      e.classList.add('for-' + type);
     }
     this.drawer.addDragEvents(e, slot);
     this.drawCard(e, slot);

@@ -1,6 +1,7 @@
 import Row from "./Row.js";
 import Deck from "./Deck.js";
 import Pile from "./Pile.js";
+import Slots from "./Slots.js";
 import Player from "./Player.js";
 import Assert from "./Assert.js";
 
@@ -9,7 +10,7 @@ class Home {
     this._player    = Player.assert(player);
     this._deck      = new Deck(this._player.race);
     this._progress  = new Row('Progress');
-    this._hand      = new Pile('Hand');
+    this._hand      = new Slots('Hand', 3);
     this._discard   = new Pile('Discard');
     this._reserve   = new Pile('Reserve');
     this._factory   = new Row('Production');
