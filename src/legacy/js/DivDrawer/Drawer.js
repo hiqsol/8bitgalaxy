@@ -89,9 +89,10 @@ class Drawer {
     const id = event.dataTransfer.getData("text");
     const elem = Drawer.getDraggingCard(id);
     const type = Type.assert(elem);
+    if (!cl.contains('droppable')) return null;
     if (cl.contains('Slot')) {
       if (elem.classList.contains('Turned')) {
-        if (cl.contains('for-Hero')) {
+        if (cl.contains('for-Hero') && !cl.contains('for-Ship')) {
           return null;
         } else {
           return elem;

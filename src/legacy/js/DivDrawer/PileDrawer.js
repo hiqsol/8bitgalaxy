@@ -5,7 +5,7 @@ class PileDrawer extends aDrawer {
   constructor(drawer) {
     super(drawer);
     this._HTML = `
-      <div class="Pile droppable">
+      <div class="Pile">
         <div class="Name">
           <div class="Value">Name</div>
           <div class="Size"></div>
@@ -52,6 +52,7 @@ class PileDrawer extends aDrawer {
     }
     if (pile.name === 'Reserve') {
       e.ondblclick = (event) => {
+        if (e.children.length>1) return;
         let discard = this._discards[race];
         let discardPile = this._discardPiles[race];
         let cards = discardPile.cards;
@@ -72,6 +73,8 @@ class PileDrawer extends aDrawer {
         }
         Drawer.resetDraggability(e);
       }
+    } else {
+      e.classList.add('droppable');
     }
 
     return e;
