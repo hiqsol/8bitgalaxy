@@ -175,8 +175,24 @@
 }
 
 .Ship .Image .Klass {
-    left: 11px;
-    top: 9px;
+    left: 60px;
+    top: 10px;
+}
+
+.Ship .Spec.Attack {
+    left: 50px;
+}
+
+.Ship .Spec.Colonization {
+    left: 100px;
+}
+
+.Ship .Spec.Production {
+    left: 150px;
+}
+
+.Ship .Spec.Science {
+    left: 200px;
 }
 
 .Ship .Spec.Require1 .Value {
@@ -189,54 +205,81 @@
     border-bottom-right-radius: 12px;
 }
 
-.Ship .Spec.Attack,
-.Ship .Spec.Colonization,
-.Ship .Spec.Production,
-.Ship .Spec.Science {
-    left: 200px;
+.Ship .Spec.Cooperation .Value.Attack {
+    left: 40px;
+    top: 50px;
 }
 
-.Ship .Spec.Cooperation .Value.Attack,
-.Ship .Spec.Cooperation .Value.Colonization,
-.Ship .Spec.Cooperation .Value.Production,
+.Ship .Spec.Cooperation .Value.Colonization {
+    left: 90px;
+    top: 50px;
+}
+
+.Ship .Spec.Cooperation .Value.Production {
+    left: 140px;
+    top: 50px;
+}
+
 .Ship .Spec.Cooperation .Value.Science {
     left: 190px;
     top: 50px;
 }
 
 .Hero .Spec.Level .Value {
+    left: 200px;
     height: 60px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .Hero .Image .Klass {
-    left: 20px;
-    top: 0px;
+    left: 100px;
+    top: 10px;
 }
 
-.Hero .Spec.Require1 .Value {
-    top: 150px;
-    border-top-right-radius: 12px;
+.Hero .Spec.Attack {
+    left: 0;
 }
 
-.Hero .Spec.Require2 .Value {
-    top: 190px;
-    border-bottom-right-radius: 12px;
+.Hero .Spec.Colonization {
+    left: 50px;
 }
 
-.Hero .Spec.Attack,
-.Hero .Spec.Colonization,
-.Hero .Spec.Production,
+.Hero .Spec.Production {
+    left: 100px;
+}
+
 .Hero .Spec.Science {
     left: 150px;
 }
 
-.Hero .Spec.Cooperation .Value.Attack,
-.Hero .Spec.Cooperation .Value.Colonization,
-.Hero .Spec.Cooperation .Value.Production,
+.Hero .Spec.Require1 .Value {
+    top: 100px;
+    border-top-right-radius: 12px;
+}
+
+.Hero .Spec.Require2 .Value {
+    top: 140px;
+    border-bottom-right-radius: 12px;
+}
+
+.Hero .Spec.Cooperation .Value.Attack {
+    left: 40px;
+    top: 50px;
+}
+
+.Hero .Spec.Cooperation .Value.Colonization {
+    left: 90px;
+    top: 50px;
+}
+
+.Hero .Spec.Cooperation .Value.Production {
+    left: 140px;
+    top: 50px;
+}
+
 .Hero .Spec.Cooperation .Value.Science {
-    left: 155px;
+    left: 190px;
     top: 50px;
 }
 
@@ -248,8 +291,24 @@
 }
 
 .Base .Image .Klass {
-    left: 210px;
+    left: 170px;
     top: 10px;
+}
+
+.Base .Spec.Attack {
+    left: 100px;
+}
+
+.Base .Spec.Colonization {
+    left: 150px;
+}
+
+.Base .Spec.Production {
+    left: 200px;
+}
+
+.Base .Spec.Science {
+    left: 250px;
 }
 
 .Base .Spec.Require1 .Value {
@@ -274,18 +333,23 @@
     border-bottom-left-radius: 12px;
 }
 
-.Base .Spec.Attack,
-.Base .Spec.Colonization,
-.Base .Spec.Production,
-.Base .Spec.Science {
-    left: 150px;
+.Base .Spec.Cooperation .Value.Attack {
+    left: 90px;
+    top: 50px;
 }
 
-.Base .Spec.Cooperation .Value.Attack,
-.Base .Spec.Cooperation .Value.Colonization,
-.Base .Spec.Cooperation .Value.Production,
-.Base .Spec.Cooperation .Value.Science {
+.Base .Spec.Cooperation .Value.Colonization {
     left: 140px;
+    top: 50px;
+}
+
+.Base .Spec.Cooperation .Value.Production {
+    left: 190px;
+    top: 50px;
+}
+
+.Base .Spec.Cooperation .Value.Science {
+    left: 240px;
     top: 50px;
 }
 
@@ -296,8 +360,24 @@
 }
 
 .Colony .Image .Klass {
-    left: 10px;
+    left: 50px;
     top: 10px;
+}
+
+.Colony .Spec.Attack {
+    left: 100px;
+}
+
+.Colony .Spec.Colonization {
+    left: 150px;
+}
+
+.Colony .Spec.Production {
+    left: 200px;
+}
+
+.Colony .Spec.Science {
+    left: 250px;
 }
 
 .Colony .Spec.Require1 .Value {
@@ -314,19 +394,24 @@
     border-bottom-right-radius: 12px;
 }
 
-.Colony .Spec.Attack,
-.Colony .Spec.Colonization,
-.Colony .Spec.Production,
-.Colony .Spec.Science {
-    left: 150px;
+.Colony .Spec.Cooperation .Value.Attack {
+    top: 50px;
+    left: 90px;
 }
 
-.Colony .Spec.Cooperation .Value.Attack,
-.Colony .Spec.Cooperation .Value.Colonization,
-.Colony .Spec.Cooperation .Value.Production,
-.Colony .Spec.Cooperation .Value.Science {
+.Colony .Spec.Cooperation .Value.Colonization {
     top: 50px;
     left: 140px;
+}
+
+.Colony .Spec.Cooperation .Value.Production {
+    top: 50px;
+    left: 190px;
+}
+
+.Colony .Spec.Cooperation .Value.Science {
+    top: 50px;
+    left: 240px;
 }
 
 .Tech .Spec.Level .Value {
