@@ -3,13 +3,13 @@
 </template>
 
 <script setup>
-import Demo from "./js/Demo.js";
+import Game from "./js/Game.js";
 import Deck from "./js/Model/Deck.js";
 import Pile from "./js/Model/Pile.js";
 import Params from "./js/DivDrawer/Params.js";
 import Direction from "./js/DivDrawer/Direction.js";
 
-let game = (new Demo()).game;
+let game = new Game();
 let deck = new Deck("Human");
 
 let ships = new Pile("Ships");
