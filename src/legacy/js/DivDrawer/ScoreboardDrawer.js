@@ -15,6 +15,9 @@ class ScoreboardDrawer extends aDrawer {
             <input id="Import" name="files[]" multiple="" type="file" />
           </label>
         </form>
+        <label>Undo
+          <input id="Undo" value="Undo" type="button" />
+        </label>
       </div>
     `;
   }
@@ -50,8 +53,11 @@ class ScoreboardDrawer extends aDrawer {
       };
 
       reader.readAsText(event.target.files[0]);
-    };
+    }
 
+    e.querySelector('#Undo').onclick = function(event) {
+      scoreboard.game.undo();
+    }
   }
 }
 

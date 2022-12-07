@@ -1,5 +1,6 @@
 import Assert from "../Model/Assert.js";
 import Type from "../Model/Type.js";
+import Game from "../Game.js";
 import Template from "./Template.js";
 import RowDrawer from "./RowDrawer.js";
 import CardDrawer from "./CardDrawer.js";
@@ -16,14 +17,17 @@ import FieldDrawer from "./FieldDrawer.js";
 import ScoreboardDrawer from "./ScoreboardDrawer.js";
 
 class Drawer {
-  constructor() {
-    this._m = 50;
+  constructor(game) {
+    this._game = Game.assert(game);
     this._tpl = new Template();
+    this._m = 50;
     this._drawers = {};
   }
 
-  get m()   { return this._m; }
-  get tpl() { return this._tpl; }
+  get m()       { return this._m; }
+  get tpl()     { return this._tpl; }
+  get game()    { return this._game; }
+  get history() { return this._game.history; }
 
   draw(parent, obj, params = null) {
     if (obj === null) {
@@ -35,23 +39,25 @@ class Drawer {
     if (typeof obj !== "object") {
       Assert.error("not an object", obj);
     }
-    let cname = obj.constructor.name;
-    return this.getDrawer(cname).draw(parent, obj, params);
+    return this.getDrawer(obj).draw(parent, obj, params);
   }
 
-  getDrawer(name) {
-    if (this._drawers[name] === undefined) {
-      this._drawers[name] = this.buildDrawer(name);
-    }
-    return this._drawers[name];
-  }
-
-  buildDrawer(name) {
+  getDrawer(obj) {
+    let name = typeof obj === "string" ? obj : obj.constructor.name;
     let drawer = Drawers[name] ?? null;
     if (!drawer) {
       Assert.error("no drawer for " + name);
     }
-    return new drawer(this);
+    if (this._drawers[drawer] === undefined) {
+      this._drawers[drawer] = new drawer(this);
+    }
+    return this._drawers[drawer];
+  }
+
+  undo(effect) {
+    if (!effect) return;
+    let ef = effect.undo();
+    this.getDrawer(ef).perform(ef);
   }
 
   addDragEvents(e, holder) {
@@ -164,6 +170,9 @@ const Drawers = Object.freeze({
   Card: CardDrawer,
   Specs: SpecsDrawer,
   Spec: SpecDrawer,
+
+  TurnCard:   CardDrawer,
+  AlterCard:  CardDrawer,
 });
 
 export default Drawer;

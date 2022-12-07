@@ -8,6 +8,7 @@ class aDrawer {
   }
 
   get drawer()  { return this._drawer; }
+  get history() { return this._drawer.history; }
   get tpl()     { return this._drawer.tpl; }
   get m()       { return this._drawer.m; }
 
