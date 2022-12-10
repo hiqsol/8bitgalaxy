@@ -8,11 +8,13 @@ class SlotDrawer extends aDrawer {
   }
 
   draw(parent, slot, params) {
+    params.id = slot.id;
     let e = this.drawNode(parent, params);
-    let types = [slot.name];
-    if (slot.isName('Hand')) {
+    let slots = slot.parent;
+    let types = [slots.name];
+    if (slots.isName('Hand')) {
       types = ['Hero', 'Ship'];
-    } else if (slot.isName('Base')) {
+    } else if (slots.isName('Base')) {
       types = ['Base', 'Colony'];
     }
     for (let type of types) {

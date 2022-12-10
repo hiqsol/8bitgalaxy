@@ -2,9 +2,18 @@ import Slot from "./Slot.js";
 import Assert from "./Assert.js";
 
 class Slots {
-  constructor(name, size) {
+  constructor(parent, name, size) {
+    this._parent = parent;
     this._name = name;
+    this._id = parent.id + '.' + name;
     this.initSlots(size);
+  }
+
+  initSlots(size) {
+    this._slots = [];
+    for (var i = 0; i < size; i++) {
+      this._slots.push(new Slot(this, i));
+    }
   }
 
   toJSON() {
@@ -15,20 +24,14 @@ class Slots {
     }
   }
 
-  static fromJSON(json) {
+  static fromJSON(json, parent) {
     Assert.assert(json._class == 'Slots', "wrong class hydrating Slots", json);
-    let slots = new Slots(json.name, 0);
-    slots._slots = Slot.arrayFromJSON(json.slots);
+    let slots = new Slots(parent, json.name, 0);
+    slots._slots = Slot.arrayFromJSON(json.slots, slots);
     return slots;
   }
 
-  initSlots(size) {
-    this._slots = [];
-    for (var i = 0; i < size; i++) {
-      this._slots.push(new Slot(this.name));
-    }
-  }
-
+  get id()        { return this._id; }
   get name()      { return this._name; }
   get size()      { return this._slots.length; }
   get last()      { return this._slots[0]; }

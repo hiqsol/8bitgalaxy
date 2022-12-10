@@ -18,6 +18,9 @@ class aDrawer {
       params = Params.assert(params);
       e.style.left  = (0 + params.x*this.m) + 'px';
       e.style.top   = (0 + params.y*this.m) + 'px';
+      if (params.id) {
+        e.id = params.id;
+      }
       if (params.direction) {
         e.classList.add(params.direction.name);
       }

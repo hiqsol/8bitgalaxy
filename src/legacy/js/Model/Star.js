@@ -8,12 +8,13 @@ import Assert from "./Assert.js";
 class Star {
   constructor(field, y, x) {
     this._field = field;
+    this._id = 'S' + y + x;
     this._y = y;
     this._x = x;
-    this._space = new Pile('');
-    this._ships = new Slots(Type.Ship, 5);
-    this._heroes = new Slots(Type.Hero, 4);
-    this._estates = new Slots(Type.Base, 5);
+    this._space = new Pile(this, '');
+    this._ships = new Slots(this, Type.Ship, 5);
+    this._heroes = new Slots(this, Type.Hero, 4);
+    this._estates = new Slots(this, Type.Base, 5);
   }
 
   toJSON() {
@@ -49,15 +50,16 @@ class Star {
   static fromJSON(json, field) {
     Assert.assert(json._class == 'Star', "wrong class hydrating Star", json);
     let star = new Star(field, json.y, json.x);
-    if (json.space) star._space = Pile.fromJSON(json.space);
-    if (json.ships) star._ships = Slots.fromJSON(json.ships);
-    if (json.heroes) star._heroes = Slots.fromJSON(json.heroes);
-    if (json.estates) star._estates = Slots.fromJSON(json.estates);
+    if (json.space) star._space = Pile.fromJSON(json.space, star);
+    if (json.ships) star._ships = Slots.fromJSON(json.ships, star);
+    if (json.heroes) star._heroes = Slots.fromJSON(json.heroes, star);
+    if (json.estates) star._estates = Slots.fromJSON(json.estates, star);
     return star;
   }
 
   get x()       { return this._x; }
   get y()       { return this._y; }
+  get id()      { return this._id; }
   get field()   { return this._field; }
   get space()   { return this._space; }
   get ships()   { return this._ships; }

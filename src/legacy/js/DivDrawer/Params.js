@@ -5,15 +5,18 @@ class Params {
   constructor(x, y, direction=null) {
     this.x = x;
     this.y = y;
+    this.id = undefined;
     this.direction = direction;
   }
 
   get x()         { return this._x; }
   get y()         { return this._y; }
+  get id()        { return this._id; }
   get direction() { return this._direction; }
 
-  set x(value) { this._x = value+0; }
-  set y(value) { this._y = value+0; }
+  set x(value)    { this._x = value+0; }
+  set y(value)    { this._y = value+0; }
+  set id(value)   { this._id = value; }
   set direction(value) {
     this._direction = value ? Direction.assert(value) : null;
   }

@@ -2,7 +2,9 @@ import Pile from "./Pile.js";
 import Assert from "./Assert.js";
 
 class Row {
-  constructor(type) {
+  constructor(parent, type) {
+    this._parent = parent;
+    this._id = parent.id + '.' + (type || 'row');
     this._type = Row.assertType(type);
     this._piles = [];
     this.initPiles();
@@ -16,21 +18,21 @@ class Row {
     }
   }
 
-  static fromJSON(json) {
+  static fromJSON(json, parent) {
     Assert.assert(json._class == 'Row', "wrong class hydrating Row", json);
-    let row = new Row(json.type);
-    row._piles = Pile.arrayFromJSON(json.piles);
+    let row = new Row(parent, json.type);
+    row._piles = Pile.arrayFromJSON(json.piles, row);
     return row;
   }
 
   initPiles() {
     let piles = Types[this.type];
     for (var i = 0, len = piles.length; i < len; i++) {
-      this._piles.push(new Pile(piles[i]));
+      this._piles.push(new Pile(this, piles[i]));
     }
   }
 
-  get isMain()    { return this.isType(Types.Main); }
+  get id()        { return this._id; }
   get direction() { return this._direction; }
   get type()      { return this._type; }
   get size()      { return this._piles.length; }
@@ -58,11 +60,9 @@ class Row {
 }
 
 const Types = Object.freeze({
-  Deck:       ['Discard', 'Reserve'],
-  Progress:   ['Attack', 'Colonization', 'Production', 'Science'],
-  Property:   ['Reserve', 'Hand', 'Techs', 'Assets', 'Missions'],
-  Production: ['Scrap', 'Production', 'Production', 'Production'],
-  Research:   ['Ideas', 'Research', 'Research', 'Research', 'Research'],
+  Progress:   ['Attack', 'Colo', 'Prod', 'Science'],
+  Production: ['Scrap', 'Production1', 'Production2', 'Production3'],
+  Research:   ['Ideas', 'Research1', 'Research2', 'Research3', 'Research4'],
 })
 
 export default Row;

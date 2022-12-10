@@ -8,13 +8,14 @@ import Assert from "./Assert.js";
 class Home {
   constructor(player) {
     this._player    = Player.assert(player);
-    this._deck      = new Deck(this._player.race);
-    this._progress  = new Row('Progress');
-    this._hand      = new Slots('Hand', 3);
-    this._discard   = new Pile('Discard');
-    this._reserve   = new Pile('Reserve');
-    this._factory   = new Row('Production');
-    this._research  = new Row('Research');
+    this._id        = player.race + '.home';
+    this._deck      = new Deck(this.race);
+    this._progress  = new Row(this, 'Progress');
+    this._hand      = new Slots(this, 'Hand', 3);
+    this._discard   = new Pile(this, 'Discard');
+    this._reserve   = new Pile(this, 'Reserve');
+    this._factory   = new Row(this, 'Production');
+    this._research  = new Row(this, 'Research');
   }
 
   toJSON() {
@@ -32,19 +33,20 @@ class Home {
   static fromJSON(json, player) {
     Assert.assert(json._class == 'Home', "wrong class hydrating Home", json);
     let home = new Home(player);
-    home._progress  = Row.fromJSON(json.progress);
-    home._hand      = Pile.fromJSON(json.hand);
-    home._discard   = Pile.fromJSON(json.discard);
-    home._reserve   = Pile.fromJSON(json.reserve);
-    home._factory   = Row.fromJSON(json.factory);
-    home._research  = Row.fromJSON(json.research);
+    home._progress  = Row.fromJSON(json.progress, home);
+    home._hand      = Slots.fromJSON(json.hand, home);
+    home._discard   = Pile.fromJSON(json.discard, home);
+    home._reserve   = Pile.fromJSON(json.reserve, home);
+    home._factory   = Row.fromJSON(json.factory, home);
+    home._research  = Row.fromJSON(json.research, home);
     return home;
   }
 
+  get id()            { return this._id; }
   get player()        { return this._player; }
   get star()          { return this._player.star; }
+  get race()          { return this._player.race; }
   get deck()          { return this._deck; }
-  get direction()     { return this._player.direction; }
   get hand()          { return this._hand; }
   get discard()       { return this._discard; }
   get reserve()       { return this._reserve; }

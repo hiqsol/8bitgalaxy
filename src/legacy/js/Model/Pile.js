@@ -2,9 +2,10 @@ import Card from "./Card.js";
 import Assert from "./Assert.js";
 
 class Pile {
-  constructor(type) {
-    this._type = type;
-    this._card = type ? Card.assert(type) : Card.assert('None');
+  constructor(parent, name) {
+    this._parent = parent;
+    this._name = name;
+    this._id = parent.id + '.' + (name || 'Pile');
     this._folded = true;
     this._cards = [];
   }
@@ -12,31 +13,31 @@ class Pile {
   toJSON() {
     return {
       '_class':     'Pile',
-      'type':       this._type,
+      'name':       this._name,
       'cards':      this._cards,
     }
   }
 
-  static fromJSON(json) {
+  static fromJSON(json, parent) {
     Assert.assert(json._class == 'Pile', "wrong class hydrating Pile", json);
-    let pile = new Pile(json.type);
+    let pile = new Pile(parent, json.name);
     if (json.cards) pile._cards = Card.arrayFromJSON(json.cards);
     return pile;
   }
 
-  static arrayFromJSON(json) {
+  static arrayFromJSON(json, parent) {
     Assert.assert(Array.isArray(json), "must be array of Piles", json);
     let piles = [];
     for (const k in json) {
-      piles[k] = json[k] ? Pile.fromJSON(json[k]) : null;
+      piles[k] = json[k] ? Pile.fromJSON(json[k], parent) : null;
     }
     return piles;
   }
 
+  get id()        { return this._id; }
   get folded()    { return this._folded; }
   get cards()     { return this._cards; }
-  get type()      { return this._type; }
-  get name()      { return this._card.Name; }
+  get name()      { return this._name; }
   get size()      { return this._cards.length; }
   get top()       { return this._cards[this.size - 1] ?? null; }
 

@@ -17,6 +17,7 @@ class PileDrawer extends aDrawer {
   }
 
   draw(parent, pile, params) {
+    params.id = pile.id;
     let e = this.drawNode(parent, params);
     if (pile.folded) {
       e.classList.add('Folded');
