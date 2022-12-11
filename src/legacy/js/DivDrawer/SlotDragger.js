@@ -13,9 +13,8 @@ class SlotDragger extends aDragger {
 
   addDragEvents(e, holder) {
     e.addEventListener("dragstart", (event) => {
-      const id = event.dataTransfer.getData("text");
-      const card = document.getElementById(id);
-      this.startDragging(card, holder, e);
+      this._draggingId = event.dataTransfer.getData("text");
+      this._srcHolder = holder;
       this._drawer.getDragger('Game').stopDragging();
     });
     e.addEventListener("dragover", (event) => {
@@ -35,14 +34,14 @@ class SlotDragger extends aDragger {
       }
       event.preventDefault();
       let card = Card.assert(elem);
-      this.apply(new DragCard(card, this.getLosingHolder(), holder));
+      this.apply(new DragCard(card, this._srcHolder, holder));
     });
   }
 
   isDroppable(event) {
     const cl = event.currentTarget.classList;
-    const id = event.dataTransfer.getData("text");
-    const elem = this.getDraggingCard(id);
+    const id = this._draggingId;
+    const elem = this.elem(id);
     const type = Type.assert(elem);
     if (!cl.contains('droppable')) return null;
     if (cl.contains('Slot')) {
@@ -61,28 +60,6 @@ class SlotDragger extends aDragger {
       }
     }
     return elem;
-  }
-
-  startDragging(card, holder, element) {
-    this._draggingCard = card;
-    this._losingHolder = holder;
-    this._losingElement = element;
-  }
-
-  getDraggingCard(id) {
-    if (id) {
-      return document.getElementById(id);
-    } else {
-      return this._draggingCard;
-    }
-  }
-
-  getLosingHolder() {
-    return this._losingHolder;
-  }
-
-  getLosingElement() {
-    return this._losingElement;
   }
 
   resetDraggability(elem) {

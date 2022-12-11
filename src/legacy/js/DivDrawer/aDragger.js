@@ -8,6 +8,7 @@ class aDragger {
   get drawer()      { return this._drawer; }
   get performer()   { return this._drawer.performer; }
 
+  elem(id)          { return this.drawer.elem(id); }
   apply(effect)     { return this.performer.apply(effect); }
 
   assert(sample) {

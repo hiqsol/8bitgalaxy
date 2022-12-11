@@ -26,7 +26,6 @@ class Drawer {
     this._tpl = new Template();
     this._performer = new Performer(this);
     this._m = 50;
-    this._elems = {};
     this._drawers = {};
     this._draggers = {};
   }
@@ -87,11 +86,8 @@ class Drawer {
     return this._draggers[dragger];
   }
 
-  setElem(obj, e) {
-    this._elems[this.getId(obj)] = e;
-  }
   elem(obj) {
-    return this._elems[this.getId(obj)];
+    return document.getElementById(this.getId(obj));
   }
   getId(obj) {
     const type = typeof obj;

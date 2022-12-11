@@ -23,7 +23,6 @@ class aDrawer {
       }
       if (params.id) {
         e.id = params.id;
-        this.drawer.setElem(params.id, e);
       }
       if (params.direction) {
         e.classList.add(params.direction.name);
