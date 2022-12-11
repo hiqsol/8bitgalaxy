@@ -1,11 +1,11 @@
-.Star .Slot .Hero,
-.Star .Slot .Ship {
+.Star .Slot .Hero:not(.dragging),
+.Star .Slot .Ship:not(.dragging) {
     width: 250px;
     height: 250px;
 }
 
-.Star .Slot .Base,
-.Star .Slot .Colony {
+.Star .Slot .Base:not(.dragging),
+.Star .Slot .Colony:not(.dragging) {
     width: 350px;
     height: 150px;
 }
@@ -48,11 +48,11 @@
 }
 
 .Star .Slot .Card:not(.Turned).Altered .Specs.Normal,
-.Star .Slot .Card:not(.Turned):not(.Altered) .Specs.Alternative {
+.Star .Slot .Card:not(.Turned):not(.Altered):not(.dragging) .Specs.Alternative {
     display: none;
 }
 
-.Star .Slot .Card {
+.Star .Slot .Card:not(.dragging) {
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
 }
