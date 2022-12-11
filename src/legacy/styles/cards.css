@@ -19,10 +19,8 @@
 .Turned div {
     display: none;
 }
-.Card.Turned.dragging {
-    opacity: 0.01;
-    width: 250px;
-    height: 350px;
+.Card.dragging {
+    opacity: 0.5;
 }
 .Card[draggable=true] {
     cursor: grab;
