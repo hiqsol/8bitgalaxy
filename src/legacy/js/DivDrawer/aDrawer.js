@@ -16,10 +16,13 @@ class aDrawer {
     let e = this.importNode(parent);
     if (params) {
       params = Params.assert(params);
-      e.style.left  = (0 + params.x*this.m) + 'px';
-      e.style.top   = (0 + params.y*this.m) + 'px';
+      if (params.x !== null || params.y !== null) {
+        e.style.left  = (0 + params.x*this.m) + 'px';
+        e.style.top   = (0 + params.y*this.m) + 'px';
+      }
       if (params.id) {
         e.id = params.id;
+        this.drawer.setElem(params.id, e);
       }
       if (params.direction) {
         e.classList.add(params.direction.name);
@@ -39,9 +42,8 @@ class aDrawer {
     return e;
   }
 
-  getDragger(obj) {
-    return this.drawer.getDragger(obj);
-  }
+  getDragger(obj) { return this.drawer.getDragger(obj); }
+  apply(effect)   { return this.performer.apply(effect); }
 }
 
 export default aDrawer;

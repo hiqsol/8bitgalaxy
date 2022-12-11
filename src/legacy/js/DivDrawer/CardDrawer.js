@@ -14,19 +14,11 @@ class CardDrawer extends aDrawer {
         <div class="Name"><div class="Value">Name</div></div>
       </div>
     `;
-    this._elems = {};
-    this._doers = {
-      'TurnCard':   (card) => this.doTurn(card),
-      'AlterCard':  (card) => this.doAlter(card),
-    };
   }
 
-  elem(card) { return this._elems[card.id]; }
-
   draw(parent, card, params) {
+    params.id = card.id;
     let e = this.drawNode(parent, params);
-    e.id = card.id;
-    this._elems[card.Name] = e;
 
     if (card.State.name) e.classList.add(card.State.name);
     if (card.Type) e.classList.add(card.Type);
@@ -57,35 +49,6 @@ class CardDrawer extends aDrawer {
     e.querySelector(".Name .Value").innerHTML = card.Name;
 
     return e;
-  }
-
-  apply(effect) {
-    let ok = this.perform(effect);
-    if (ok) this.history.add(effect);
-  }
-
-  perform(effect) {
-    let cname = effect.constructor.name;
-    if (this._doers[cname] === undefined) {
-      Assert.error('wrong Effect `' +cname+ '` to perform at CardDrawer', effect);
-    }
-    let doer = this._doers[cname];
-    return doer(effect.card);
-  }
-
-  doTurn(card) {
-    let cl = this.elem(card).classList;
-    cl.toggle('Turned');
-    card.setTurned(cl.contains('Turned'));
-    return true;
-  }
-
-  doAlter(card) {
-    let cl = this.elem(card).classList;
-    if (!cl.contains('Alterable')) return false;
-    cl.toggle('Altered');
-    card.setAltered(cl.contains('Altered'));
-    return true;
   }
 
   drawImage(e, specs) {

@@ -47,7 +47,8 @@ class Slot {
     Assert.assert(this._card, 'no card in Slot to pop', this);
     let res = this._card;
     if (card) {
-      Assert.assert(res.Name === card, 'popped card is not '+card, res);
+      card = Card.assert(card);
+      Assert.assert(res.id === card.id, 'popped card is not '+card, res);
     }
     this._card = null;
     return res;

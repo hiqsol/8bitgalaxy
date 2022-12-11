@@ -14,8 +14,8 @@ class Params {
   get id()        { return this._id; }
   get direction() { return this._direction; }
 
-  set x(value)    { this._x = value+0; }
-  set y(value)    { this._y = value+0; }
+  set x(value)    { this._x = value; }
+  set y(value)    { this._y = value; }
   set id(value)   { this._id = value; }
   set direction(value) {
     this._direction = value ? Direction.assert(value) : null;
@@ -27,7 +27,7 @@ class Params {
     return res;
   }
   static empty() {
-    return new Params(0, 0);
+    return new Params(null, null);
   }
 
   static assert(sample) {

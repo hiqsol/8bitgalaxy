@@ -77,6 +77,9 @@ class Card {
     if (sample instanceof(Card)) {
       return sample;
     }
+    if (sample instanceof HTMLElement) {
+      return Card.assert(sample.id);
+    }
     if (typeof(sample) === 'string') {
       return Card.fromString(sample);
     }

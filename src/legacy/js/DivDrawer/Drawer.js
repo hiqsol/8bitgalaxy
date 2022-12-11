@@ -1,7 +1,9 @@
 import Assert from "../Model/Assert.js";
 import Type from "../Model/Type.js";
 import Game from "../Game.js";
+import Params from "./Params.js";
 import Template from "./Template.js";
+import Performer from "./Performer.js";
 import RowDrawer from "./RowDrawer.js";
 import CardDrawer from "./CardDrawer.js";
 import GameDrawer from "./GameDrawer.js";
@@ -22,7 +24,9 @@ class Drawer {
   constructor(game) {
     this._game = Game.assert(game);
     this._tpl = new Template();
+    this._performer = new Performer(this);
     this._m = 50;
+    this._elems = {};
     this._drawers = {};
     this._draggers = {};
   }
@@ -31,6 +35,7 @@ class Drawer {
   get tpl()     { return this._tpl; }
   get game()    { return this._game; }
   get history() { return this._game.history; }
+  get performer() { return this._performer; }
 
   draw(parent, obj, params = null) {
     if (obj === null) {
@@ -41,6 +46,9 @@ class Drawer {
     }
     if (typeof obj !== "object") {
       Assert.error("not an object", obj);
+    }
+    if (params === null) {
+      params = Params.empty();
     }
     return this.getDrawer(obj).draw(parent, obj, params);
   }
@@ -77,6 +85,23 @@ class Drawer {
       this._draggers[dragger] = new dragger(this);
     }
     return this._draggers[dragger];
+  }
+
+  setElem(obj, e) {
+    this._elems[this.getId(obj)] = e;
+  }
+  elem(obj) {
+    return this._elems[this.getId(obj)];
+  }
+  getId(obj) {
+    const type = typeof obj;
+    if (type === "string") {
+      return obj;
+    }
+    if (type === "object") {
+      return obj.id;
+    }
+    Assert.error("no id for " + type, obj);
   }
 
   static assert(sample) {

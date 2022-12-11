@@ -1,9 +1,13 @@
+import Card from "../Model/Card.js";
 import Type from "../Model/Type.js";
 import Assert from "../Model/Assert.js";
+import DragCard from "../Model/History/DragCard.js";
 import Drawer from "./Drawer.js";
+import aDragger from "./aDragger.js";
 
-class SlotDragger {
+class SlotDragger extends aDragger {
   constructor(drawer) {
+    super(drawer);
     this._drawer = Drawer.assert(drawer);
   }
 
@@ -30,10 +34,8 @@ class SlotDragger {
         return false;
       }
       event.preventDefault();
-      e.appendChild(elem);
-      let card = this.getLosingHolder().pop(elem.id);
-      holder.put(card);
-      this.resetDraggability(e);
+      let card = Card.assert(elem);
+      this.apply(new DragCard(card, this.getLosingHolder(), holder));
     });
   }
 
@@ -83,14 +85,9 @@ class SlotDragger {
     return this._losingElement;
   }
 
-  resetDraggability(pile) {
-    this.doResetDraggability(pile);
-    this.doResetDraggability(this._losingElement);
-  }
-
-  doResetDraggability(pile) {
-    if (!pile) return;
-    pile.querySelectorAll('.Card').forEach(
+  resetDraggability(elem) {
+    if (!elem) return;
+    elem.querySelectorAll('.Card').forEach(
       (card, idx, array) => {
         card.draggable = (idx === array.length -1);
       }
