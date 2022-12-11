@@ -61,7 +61,7 @@ class Row {
 
 const Types = Object.freeze({
   Progress:   ['Attack', 'Colo', 'Prod', 'Science'],
-  Production: ['Scrap', 'Production1', 'Production2', 'Production3'],
+  Factory:    ['Factory1', 'Factory2', 'Factory3', 'Factory4'],
   Research:   ['Ideas', 'Research1', 'Research2', 'Research3', 'Research4'],
 })
 

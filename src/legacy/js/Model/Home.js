@@ -14,7 +14,7 @@ class Home {
     this._hand      = new Slots(this, 'Hand', 3);
     this._discard   = new Pile(this, 'Discard');
     this._reserve   = new Pile(this, 'Reserve');
-    this._factory   = new Row(this, 'Production');
+    this._factory   = new Row(this, 'Factory');
     this._research  = new Row(this, 'Research');
   }
 
