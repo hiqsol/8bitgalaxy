@@ -9,6 +9,10 @@ class DragCard extends CardEffect {
 
   get src()         { return this._src; }
   get dst()         { return this._dst; }
+
+  undo() {
+    return new DragCard(this.card, this.dst, this.src);
+  }
 }
 
 export default DragCard;

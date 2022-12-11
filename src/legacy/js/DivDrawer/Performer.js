@@ -44,6 +44,7 @@ class Performer {
     effect.dst.put(card);
     this.getDragger('Slot').resetDraggability(esrc);
     this.getDragger('Slot').resetDraggability(edst);
+    return true;
   }
 
   apply(effect) {

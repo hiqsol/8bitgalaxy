@@ -68,7 +68,7 @@ class Drawer {
   undo(effect) {
     if (!effect) return;
     let ef = effect.undo();
-    this.getDrawer(ef).perform(ef);
+    this.performer.perform(ef);
   }
 
   addDragEvents(e, obj) {
