@@ -15,6 +15,8 @@ import SlotsDrawer from "./SlotsDrawer.js";
 import SpecsDrawer from "./SpecsDrawer.js";
 import FieldDrawer from "./FieldDrawer.js";
 import ScoreboardDrawer from "./ScoreboardDrawer.js";
+import SlotDragger from "./SlotDragger.js";
+import GameDragger from "./GameDragger.js";
 
 class Drawer {
   constructor(game) {
@@ -22,6 +24,7 @@ class Drawer {
     this._tpl = new Template();
     this._m = 50;
     this._drawers = {};
+    this._draggers = {};
   }
 
   get m()       { return this._m; }
@@ -60,89 +63,20 @@ class Drawer {
     this.getDrawer(ef).perform(ef);
   }
 
-  addDragEvents(e, holder) {
-    e.addEventListener("dragstart", (event) => {
-      const id = event.dataTransfer.getData("text");
-      const card = document.getElementById(id);
-      Drawer.startDragging(card, holder, e);
-      this.getDrawer('Game').stopDragging();
-    });
-    e.addEventListener("dragover", (event) => {
-      event.preventDefault();
-      if (Drawer.isDroppable(event)) {
-        event.currentTarget.classList.add('hover');
-      }
-    });
-    e.addEventListener("dragleave", (event) => {
-      event.currentTarget.classList.remove('hover');
-    });
-    e.addEventListener("drop", (event) => {
-      event.currentTarget.classList.remove('hover');
-      const elem = Drawer.isDroppable(event);
-      if (!elem) {
-        return false;
-      }
-      event.preventDefault();
-      e.appendChild(elem);
-      let card = Drawer.getLosingHolder().pop(elem.id);
-      holder.put(card);
-      Drawer.resetDraggability(e);
-    });
+  addDragEvents(e, obj) {
+    this.getDragger(obj).addDragEvents(e, obj);
   }
 
-  static isDroppable(event) {
-    const cl = event.currentTarget.classList;
-    const id = event.dataTransfer.getData("text");
-    const elem = Drawer.getDraggingCard(id);
-    const type = Type.assert(elem);
-    if (!cl.contains('droppable')) return null;
-    if (cl.contains('Slot')) {
-      if (elem.classList.contains('Turned')) {
-        if (cl.contains('for-Hero') && !cl.contains('for-Ship')) {
-          return null;
-        } else {
-          return elem;
-        }
-      }
-      if (!cl.contains('for-' + type.name)) {
-        return null;
-      }
-      if (event.currentTarget.childElementCount) {
-        return null;
-      }
+  getDragger(obj) {
+    let name = typeof obj === "string" ? obj : obj.constructor.name;
+    let dragger = Draggers[name] ?? null;
+    if (!dragger) {
+      Assert.error("no dragger for " + name);
     }
-    return elem;
-  }
-  static startDragging(card, holder, element) {
-    Drawer._draggingCard = card;
-    Drawer._losingHolder = holder;
-    Drawer._losingElement = element;
-  }
-  static getDraggingCard(id) {
-    if (id) {
-      return document.getElementById(id);
-    } else {
-      return Drawer._draggingCard;
+    if (this._draggers[dragger] === undefined) {
+      this._draggers[dragger] = new dragger(this);
     }
-  }
-  static getLosingHolder() {
-    return Drawer._losingHolder;
-  }
-  static getLosingElement() {
-    return Drawer._losingElement;
-  }
-
-  static resetDraggability(pile) {
-    Drawer._resetDraggability(pile);
-    Drawer._resetDraggability(Drawer._losingElement);
-  }
-  static _resetDraggability(pile) {
-    if (!pile) return;
-    pile.querySelectorAll('.Card').forEach(
-      (card, idx, array) => {
-        card.draggable = (idx === array.length -1);
-      }
-    );
+    return this._draggers[dragger];
   }
 
   static assert(sample) {
@@ -152,6 +86,12 @@ class Drawer {
     Assert.error("not a Drawer", sample);
   }
 }
+
+const Draggers = Object.freeze({
+  Game: GameDragger,
+  Slot: SlotDragger,
+  Pile: SlotDragger,
+});
 
 const Drawers = Object.freeze({
   Game: GameDrawer,

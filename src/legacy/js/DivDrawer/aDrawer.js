@@ -38,6 +38,10 @@ class aDrawer {
     parent.appendChild(e);
     return e;
   }
+
+  getDragger(obj) {
+    return this.drawer.getDragger(obj);
+  }
 }
 
 export default aDrawer;

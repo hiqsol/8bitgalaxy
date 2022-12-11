@@ -22,7 +22,7 @@ class PileDrawer extends aDrawer {
     if (pile.folded) {
       e.classList.add('Folded');
     }
-    this._drawer.addDragEvents(e, pile);
+    this.drawer.addDragEvents(e, pile);
     this.drawCards(e, pile);
     e.querySelector(".Name .Value").innerHTML = pile.name;
 
@@ -72,7 +72,7 @@ class PileDrawer extends aDrawer {
           pile.put(card);
           e.appendChild(elem);
         }
-        Drawer.resetDraggability(e);
+        this.getDragger('Pile').resetDraggability(e);
       }
     } else {
       e.classList.add('droppable');
