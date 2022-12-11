@@ -29,13 +29,12 @@ class CardDrawer extends aDrawer {
       event.currentTarget.classList.add("dragging");
       event.dataTransfer.setData("text/plain", event.currentTarget.id);
     };
-    e.addEventListener("dragend", (event) => {
+    e.ondragend = (event) => {
       event.target.classList.remove("dragging");
-    });
+    };
     e.ondblclick = (event) => {
       this.apply(event.ctrlKey ? new AlterCard(card) : new TurnCard(card));
     }
-
     e.onclick = (event) => {
       event.currentTarget.classList.toggle('Selected');
     }
