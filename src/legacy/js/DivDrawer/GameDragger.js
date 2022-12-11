@@ -9,7 +9,17 @@ class GameDragger {
   addDragEvents(e, game) {
     if (!this.stopDragging) {
       this.addGameDragger();
+      this.addGameKeys(game);
     }
+  }
+
+  addGameKeys(game) {
+    const ele = document.documentElement;
+    ele.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.key === 'z') {
+        game.undo();
+      }
+    });
   }
 
   addGameDragger() {
