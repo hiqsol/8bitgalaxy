@@ -1,4 +1,7 @@
-.Star .Slot .Hero:not(.dragging),
+.Star .Slot .Hero:not(.dragging) {
+    width: 250px;
+    height: 150px;
+}
 .Star .Slot .Ship:not(.dragging) {
     width: 250px;
     height: 250px;
@@ -45,6 +48,10 @@
 .Star .Slot.TopToBottom {
     width: 250px;
     height: 250px;
+}
+.Star .Slot.TopToBottom.for-Hero {
+    width: 250px;
+    height: 150px;
 }
 
 .Star .Slot .Card:not(.Turned).Altered .Specs.Normal,
