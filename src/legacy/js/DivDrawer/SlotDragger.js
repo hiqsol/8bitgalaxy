@@ -36,8 +36,7 @@ class SlotDragger extends aDragger {
         return false;
       }
       event.preventDefault();
-      let card = Card.assert(elem);
-      this.apply(new DragCard(card, this._srcHolder, holder));
+      this.apply(new DragCard(this.obj(elem), this._srcHolder, holder));
     });
 
     if (klass === 'Slot' && holder.parent.name === 'Hand') {
