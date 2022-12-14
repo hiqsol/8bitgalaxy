@@ -216,12 +216,12 @@
 }
 
 .Hero .Spec.Require1 .Value {
-    top: 150px;
+    top: 110px;
     border-top-right-radius: 12px;
 }
 
 .Hero .Spec.Require2 .Value {
-    top: 190px;
+    top: 150px;
     border-bottom-right-radius: 12px;
 }
 
