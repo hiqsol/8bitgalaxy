@@ -26,6 +26,7 @@ class Drawer {
     this._tpl = new Template();
     this._performer = new Performer(this);
     this._m = 50;
+    this._objs = {};
     this._drawers = {};
     this._draggers = {};
   }
@@ -48,6 +49,9 @@ class Drawer {
     }
     if (params === null) {
       params = Params.empty();
+    }
+    if (obj.id) {
+      this._objs[obj.id] = obj;
     }
     return this.getDrawer(obj).draw(parent, obj, params);
   }
@@ -86,9 +90,8 @@ class Drawer {
     return this._draggers[dragger];
   }
 
-  elem(obj) {
-    return document.getElementById(this.getId(obj));
-  }
+  obj(elem) { return this._objs[this.getId(elem)]; }
+  elem(obj) { return document.getElementById(this.getId(obj)); }
   getId(obj) {
     const type = typeof obj;
     if (type === "string") {

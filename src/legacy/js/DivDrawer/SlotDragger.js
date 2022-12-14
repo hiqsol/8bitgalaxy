@@ -2,6 +2,7 @@ import Card from "../Model/Card.js";
 import Type from "../Model/Type.js";
 import Assert from "../Model/Assert.js";
 import DragCard from "../Model/History/DragCard.js";
+import TurnCard from "../Model/History/TurnCard.js";
 import Drawer from "./Drawer.js";
 import aDragger from "./aDragger.js";
 
@@ -12,6 +13,7 @@ class SlotDragger extends aDragger {
   }
 
   addDragEvents(e, holder) {
+    let klass = holder.constructor.name;
     e.addEventListener("dragstart", (event) => {
       this._draggingId = event.dataTransfer.getData("text");
       this._srcHolder = holder;
@@ -36,6 +38,18 @@ class SlotDragger extends aDragger {
       let card = Card.assert(elem);
       this.apply(new DragCard(card, this._srcHolder, holder));
     });
+
+    if (klass === 'Slot' && holder.parent.name === 'Hand') {
+      e.ondblclick = (event) => {
+        if (e.childElementCount > 0) return;
+        let resid = e.id.substring(0, e.id.length-6) + 'Reserve';
+        let cards = this.elem(resid).querySelectorAll('.Card');
+        if (cards.length < 1) return;
+        let card = this.obj(cards[cards.length - 1]);
+        this.apply(new DragCard(card, this.obj(resid), holder));
+        if (card.isTurned) this.apply(new TurnCard(card));
+      };
+    }
   }
 
   isDroppable(event) {
