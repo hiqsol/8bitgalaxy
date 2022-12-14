@@ -143,6 +143,7 @@ function pile(card) {
     game.draw(v, new Pile(s), new Params(x['5.1'], y[s+'.0']));
   }
 
+/*
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
   ctx.lineWidth = 30;
@@ -262,4 +263,5 @@ function pile(card) {
   ctx.lineTo(x['4.2']*50+100, y['5.5']*50 - 20);
   ctx.lineTo(x['4.2']*50+100, y['7.5']*50 - 20);
   ctx.stroke();
+*/
 </script>
