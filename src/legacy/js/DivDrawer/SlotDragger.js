@@ -3,6 +3,7 @@ import Type from "../Model/Type.js";
 import Assert from "../Model/Assert.js";
 import DragCard from "../Model/History/DragCard.js";
 import TurnCard from "../Model/History/TurnCard.js";
+import BulkEffect from "../Model/History/BulkEffect.js";
 import Drawer from "./Drawer.js";
 import aDragger from "./aDragger.js";
 
@@ -46,8 +47,10 @@ class SlotDragger extends aDragger {
         let cards = this.elem(resid).querySelectorAll('.Card');
         if (cards.length < 1) return;
         let card = this.obj(cards[cards.length - 1]);
-        this.apply(new DragCard(card, this.obj(resid), holder));
-        if (card.isTurned) this.apply(new TurnCard(card));
+        this.apply(new BulkEffect([
+          new DragCard(card, this.obj(resid), holder),
+          card.isTurned ? new TurnCard(card) : NullEffect(),
+        ]));
       };
     }
   }

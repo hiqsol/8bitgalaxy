@@ -5,6 +5,7 @@ class Performer {
   constructor(drawer) {
     this._drawer = Drawer.assert(drawer);
     this._doers = {
+      'BulkEffect': (ef) => this.doBulkEffect(ef),
       'DragCard':   (ef) => this.doDragCard(ef),
       'TurnCard':   (ef) => this.doTurnCard(ef),
       'AlterCard':  (ef) => this.doAlterCard(ef),
@@ -16,6 +17,13 @@ class Performer {
 
   elem(obj)         { return this.drawer.elem(obj); }
   getDragger(obj)   { return this.drawer.getDragger(obj); }
+
+  doBulkEffect(effect) {
+    for (const ef of effect.effects) {
+      this.perform(ef);
+    }
+    return true;
+  }
 
   doTurnCard(effect) {
     let card = effect.card;
