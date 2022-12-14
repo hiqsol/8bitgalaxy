@@ -163,15 +163,15 @@ class Decks {
       'Human-Ship-5p':      '3p,c2p,a4s',
       'Human-Ship-5s':      '3s,c2s,a4c',
 
-      'Human-Ship-6a':      '4a,c3a,a7s,r5a,r5s',
-      'Human-Ship-6c':      '4c,c3c,a7p,r5c,r5p',
-      'Human-Ship-6p':      '4p,c3p,a7a,r5p,r5a',
-      'Human-Ship-6s':      '4s,c3s,a7c,r5s,r5c',
+      //'Human-Ship-6a':      '4a,c3a,a7s,r5a,r5s',
+      //'Human-Ship-6c':      '4c,c3c,a7p,r5c,r5p',
+      //'Human-Ship-6p':      '4p,c3p,a7a,r5p,r5a',
+      //'Human-Ship-6s':      '4s,c3s,a7c,r5s,r5c',
 
-      'Human-Ship-7a':      '4a,c3a,a6p',
-      'Human-Ship-7c':      '4c,c3c,a6s',
-      'Human-Ship-7p':      '4p,c3p,a6c',
-      'Human-Ship-7s':      '4s,c3s,a6a',
+      //'Human-Ship-7a':      '4a,c3a,a6p',
+      //'Human-Ship-7c':      '4c,c3c,a6s',
+      //'Human-Ship-7p':      '4p,c3p,a6c',
+      //'Human-Ship-7s':      '4s,c3s,a6a',
 
       //'Human-Ship-8a':      '4a,c4a,r7a,r7c',
       //'Human-Ship-8c':      '4c,c4c,r7c,r7s',
@@ -209,15 +209,15 @@ class Decks {
       'Human-Hero-6p':      '6p,a5p',
       'Human-Hero-6s':      '6s,a5s',
 
-      'Human-Hero-7a':      '7a,a8a,r6a',
-      'Human-Hero-7c':      '7c,a8c,r6c',
-      'Human-Hero-7p':      '7p,a8p,r6p',
-      'Human-Hero-7s':      '7s,a8s,r6s',
+      //'Human-Hero-7a':      '7a,a8a,r6a',
+      //'Human-Hero-7c':      '7c,a8c,r6c',
+      //'Human-Hero-7p':      '7p,a8p,r6p',
+      //'Human-Hero-7s':      '7s,a8s,r6s',
 
-      'Human-Hero-8a':      '8a,a7a',
-      'Human-Hero-8c':      '8c,a7c',
-      'Human-Hero-8p':      '8p,a7p',
-      'Human-Hero-8s':      '8s,a7s',
+      //'Human-Hero-8a':      '8a,a7a',
+      //'Human-Hero-8c':      '8c,a7c',
+      //'Human-Hero-8p':      '8p,a7p',
+      //'Human-Hero-8s':      '8s,a7s',
 
 
       'Human-Base-2a':      '2a',
@@ -245,15 +245,15 @@ class Decks {
       'Human-Base-6p':      '4p,c2p,a5s',
       'Human-Base-6s':      '4s,c2s,a5a',
 
-      'Human-Base-7a':      '5a,c2a,a8p,r6a,r6p',
-      'Human-Base-7c':      '5c,c2c,a8a,r6c,r6a',
-      'Human-Base-7p':      '5p,c2p,a8s,r6p,r6s',
-      'Human-Base-7s':      '5s,c2s,a8c,r6s,r6c',
+      //'Human-Base-7a':      '5a,c2a,a8p,r6a,r6p',
+      //'Human-Base-7c':      '5c,c2c,a8a,r6c,r6a',
+      //'Human-Base-7p':      '5p,c2p,a8s,r6p,r6s',
+      //'Human-Base-7s':      '5s,c2s,a8c,r6s,r6c',
 
-      'Human-Base-8a':      '5a,c3a,a7c',
-      'Human-Base-8c':      '5c,c3c,a7s',
-      'Human-Base-8p':      '5p,c3p,a7a',
-      'Human-Base-8s':      '5s,c3s,a7p',
+      //'Human-Base-8a':      '5a,c3a,a7c',
+      //'Human-Base-8c':      '5c,c3c,a7s',
+      //'Human-Base-8p':      '5p,c3p,a7a',
+      //'Human-Base-8s':      '5s,c3s,a7p',
 
 
       'Human-Colony-2a':    '1a,c1a,a3s',

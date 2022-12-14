@@ -11,7 +11,7 @@
   import Direction from "./js/DivDrawer/Direction.js";
 
   let game = new Game();
-  let vert = new Pile('');
+  let vert = new Pile(game, '');
 
   let v = game.draw(null, vert, new Params(1, 1, Direction.TopToBottom));
 
@@ -54,7 +54,7 @@
   }
 
 function pile(card) {
-    const pile = new Pile('', Direction.TopToBottom);
+    const pile = new Pile(game, '');
     pile.put(Card.assert(card));
     return pile;
 }
@@ -74,10 +74,10 @@ function pile(card) {
   game.draw(v, pile('Human-S4p'), new Params(x['1.3'],  y['4.5']));
   game.draw(v, pile('Human-S4s'), new Params(x['1.4'],  y['4.5']));
 
-  game.draw(v, pile('Human-S6a'), new Params(x['1.1'],  y['6.5']));
-  game.draw(v, pile('Human-S6c'), new Params(x['1.2'],  y['6.5']));
-  game.draw(v, pile('Human-S6p'), new Params(x['1.3'],  y['6.5']));
-  game.draw(v, pile('Human-S6s'), new Params(x['1.4'],  y['6.5']));
+  // game.draw(v, pile('Human-S6a'), new Params(x['1.1'],  y['6.5']));
+  // game.draw(v, pile('Human-S6c'), new Params(x['1.2'],  y['6.5']));
+  // game.draw(v, pile('Human-S6p'), new Params(x['1.3'],  y['6.5']));
+  // game.draw(v, pile('Human-S6s'), new Params(x['1.4'],  y['6.5']));
 
 
   game.draw(v, pile('Human-H1a'), new Params(x['2.1'],  y['1.5']));
@@ -95,10 +95,10 @@ function pile(card) {
   game.draw(v, pile('Human-H5p'), new Params(x['2.3'],  y['5.5']));
   game.draw(v, pile('Human-H5s'), new Params(x['2.4'],  y['5.5']));
 
-  game.draw(v, pile('Human-H7a'), new Params(x['2.1'],  y['7.5']));
-  game.draw(v, pile('Human-H7c'), new Params(x['2.2'],  y['7.5']));
-  game.draw(v, pile('Human-H7p'), new Params(x['2.3'],  y['7.5']));
-  game.draw(v, pile('Human-H7s'), new Params(x['2.4'],  y['7.5']));
+  // game.draw(v, pile('Human-H7a'), new Params(x['2.1'],  y['7.5']));
+  // game.draw(v, pile('Human-H7c'), new Params(x['2.2'],  y['7.5']));
+  // game.draw(v, pile('Human-H7p'), new Params(x['2.3'],  y['7.5']));
+  // game.draw(v, pile('Human-H7s'), new Params(x['2.4'],  y['7.5']));
 
 
   game.draw(v, pile('Human-B2a'), new Params(x['3.1'],  y['2.0']));
@@ -116,10 +116,10 @@ function pile(card) {
   game.draw(v, pile('Human-B5p'), new Params(x['3.3'],  y['5.5']));
   game.draw(v, pile('Human-B5s'), new Params(x['3.4'],  y['5.5']));
 
-  game.draw(v, pile('Human-B7a'), new Params(x['3.1'],  y['7.5']));
-  game.draw(v, pile('Human-B7c'), new Params(x['3.2'],  y['7.5']));
-  game.draw(v, pile('Human-B7p'), new Params(x['3.3'],  y['7.5']));
-  game.draw(v, pile('Human-B7s'), new Params(x['3.4'],  y['7.5']));
+  // game.draw(v, pile('Human-B7a'), new Params(x['3.1'],  y['7.5']));
+  // game.draw(v, pile('Human-B7c'), new Params(x['3.2'],  y['7.5']));
+  // game.draw(v, pile('Human-B7p'), new Params(x['3.3'],  y['7.5']));
+  // game.draw(v, pile('Human-B7s'), new Params(x['3.4'],  y['7.5']));
 
 
   game.draw(v, pile('Human-C2a'), new Params(x['4.1'],  y['2.5']));
