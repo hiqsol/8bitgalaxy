@@ -80,7 +80,7 @@ class SlotDragger extends aDragger {
 
   resetDraggability(elem) {
     if (!elem) return;
-    elem.querySelectorAll('.Card').forEach(
+    this.elem(elem).querySelectorAll('.Card').forEach(
       (card, idx, array) => {
         card.draggable = (idx === array.length -1);
       }

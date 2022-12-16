@@ -15,6 +15,7 @@ class Performer {
   get drawer()      { return this._drawer; }
   get history()     { return this._drawer.history; }
 
+  obj(elem)         { return this.drawer.obj(elem); }
   elem(obj)         { return this.drawer.elem(obj); }
   getDragger(obj)   { return this.drawer.getDragger(obj); }
 
@@ -42,16 +43,12 @@ class Performer {
     return true;
   }
 
-  doDragCard(effect) {
-    let card = effect.card;
-    let elem = this.elem(card);
-    let esrc = this.elem(effect.src);
-    let edst = this.elem(effect.dst);
-    edst.appendChild(elem);
-    effect.src.pop(card);
-    effect.dst.put(card);
-    this.getDragger('Slot').resetDraggability(esrc);
-    this.getDragger('Slot').resetDraggability(edst);
+  doDragCard(ef) {
+    this.elem(ef.dst).appendChild(this.elem(ef.card));
+    this.obj(ef.src).pop(ef.card);
+    this.obj(ef.dst).put(ef.card);
+    this.getDragger('Slot').resetDraggability(ef.src);
+    this.getDragger('Slot').resetDraggability(ef.dst);
     return true;
   }
 
