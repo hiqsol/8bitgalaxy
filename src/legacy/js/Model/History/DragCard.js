@@ -1,3 +1,4 @@
+import Assert from "../Assert.js";
 import CardEffect from "./CardEffect.js";
 
 class DragCard extends CardEffect {
@@ -12,6 +13,20 @@ class DragCard extends CardEffect {
 
   undo() {
     return new DragCard(this.card, this.dst, this.src);
+  }
+
+  toJSON() {
+    return {
+      '_class':     'DragCard',
+      'card':       this.card.id,
+      'src':        this.src.id,
+      'dst':        this.dst.id,
+    }
+  }
+
+  static fromJSON(json) {
+    Assert.assert(json._class == 'DragCard', "wrong class hydrating DragCard", json);
+    return new DragCard(json.card, json.src, json.dst);
   }
 }
 

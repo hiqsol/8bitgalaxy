@@ -13,6 +13,7 @@ class BulkEffect extends Effect {
   undo() {
     let list = [];
     for (const ef of this.effects) {
+      if (ef === null) continue;
       list.unshift(ef.undo());
     }
     return new BulkEffect(list);

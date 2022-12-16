@@ -48,7 +48,7 @@ class SlotDragger extends aDragger {
         let card = this.obj(cards[cards.length - 1]);
         this.apply(new BulkEffect([
           new DragCard(card, this.obj(resid), holder),
-          card.isTurned ? new TurnCard(card) : NullEffect(),
+          card.isTurned ? new TurnCard(card) : null,
         ]));
       };
     }

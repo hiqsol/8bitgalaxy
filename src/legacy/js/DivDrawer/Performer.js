@@ -58,6 +58,7 @@ class Performer {
   }
 
   perform(effect) {
+    if (effect === null) return null;
     let cname = effect.constructor.name;
     if (this._doers[cname] === undefined) {
       Assert.error('wrong Effect `' +cname+ '` to perform at Performer', effect);

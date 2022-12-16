@@ -30,6 +30,7 @@ class Game {
     Assert.assert(json._class == 'Game', "wrong class hydrating Game", json);
     let game = new Game(options);
     game._board = Board.fromJSON(json.board, game);
+    game._history = History.fromJSON(json.history);
     return game;
   }
 

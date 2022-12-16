@@ -12,6 +12,13 @@ class CardEffect extends Effect {
 
   undo() { return this; }
 
+  toJSON() {
+    return {
+      '_class':     this.constructor.name,
+      'card':       this.card.id,
+    }
+  }
+
   static assert(sample) {
     if (sample instanceof(CardEffect)) {
       return sample;
