@@ -11,6 +11,14 @@ class HomeDrawer extends aDrawer {
 
   draw(parent, home, params) {
     let e = this.drawNode(parent, params);
+    if (home.player.isAlien) {
+      this.drawAlien(e, home, params);
+    } else {
+      this.drawHuman(e, home, params);
+    }
+  }
+
+  drawHuman(e, home, params) {
     let counterdir = params.direction.counterpart;
     let xStep = counterdir.xStep;
     let yStep = params.direction.yStep;
@@ -32,6 +40,16 @@ class HomeDrawer extends aDrawer {
 
     this._drawer.draw(e, home.factory,    new Params( 8*xStep,  0*yStep, params.direction));
     this._drawer.draw(e, home.research,   new Params( 0*xStep,  0*yStep, params.direction));
+  }
+
+  drawAlien(e, home, params) {
+    let counterdir = params.direction.counterpart;
+    let xStep = counterdir.xStep;
+    let yStep = params.direction.yStep;
+    this._drawer.draw(e, home.ideas,      new Params( 0*xStep,  0*yStep, Direction.TopToBottom));
+    this._drawer.draw(e, home.rnd(1),     new Params( 7*xStep,  0*yStep, Direction.TopToBottom));
+    this._drawer.draw(e, home.rnd(2),     new Params(13*xStep,  0*yStep, Direction.TopToBottom));
+    this._drawer.draw(e, home.discard,    new Params(19*xStep,  0*yStep, Direction.TopToBottom));
   }
 }
 

@@ -61,8 +61,8 @@ class Row {
 
 const Types = Object.freeze({
   Progress:   ['Attack', 'Colo', 'Prod', 'Science'],
-  Factory:    ['Factory1', 'Factory2', 'Factory3', 'Factory4'],
-  Research:   ['Ideas', 'Research1', 'Research2', 'Research3', 'Research4'],
+  Factory:    ['Factory 1', 'Factory 2', 'Factory 3', 'Factory 4'],
+  Research:   ['Ideas', 'RnD 1', 'RnD 2', 'RnD 3', 'RnD 4'],
 })
 
 export default Row;

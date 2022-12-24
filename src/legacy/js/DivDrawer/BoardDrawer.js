@@ -19,7 +19,7 @@ class BoardDrawer extends aDrawer {
   drawHomes(parent, board) {
     this._drawer.draw(parent, board.home(1), new Params(74, 55, Direction.BottomToTop));
     this._drawer.draw(parent, board.home(2), new Params( 1,  1, Direction.TopToBottom));
-    this._drawer.draw(parent, board.home(3).ideas, new Params(58, 13, Direction.TopToBottom));
+    this._drawer.draw(parent, board.home(3), new Params(58, 13, Direction.TopToBottom));
   }
 }
 

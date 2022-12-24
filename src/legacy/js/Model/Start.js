@@ -5,7 +5,7 @@ import Decks from "./Decks.js";
 class Start {
   constructor(home) {
     this._home = Home.assert(home);
-    if (this.home.player.race == 'alien') {
+    if (this.home.player.isAlien) {
       this.initAlien();
     } else {
       this.initHuman();

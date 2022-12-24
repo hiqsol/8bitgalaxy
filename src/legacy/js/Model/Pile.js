@@ -5,7 +5,7 @@ class Pile {
   constructor(parent, name) {
     this._parent = parent;
     this._name = name;
-    this._id = parent.id + '.' + (name || 'Pile');
+    this._id = parent.id + '.' + (name || 'Pile').replace(' ', '-');
     this._folded = true;
     this._cards = [];
   }

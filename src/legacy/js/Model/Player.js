@@ -51,6 +51,8 @@ class Player {
     return this.board.star(1, 1)
   }
 
+  get isAlien()   { return this._race == 'alien'; }
+
   static assert(sample) {
     if (sample instanceof(Player)) {
       return sample;
