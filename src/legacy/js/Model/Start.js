@@ -21,12 +21,66 @@ class Start {
   get research()  { return this._home.research; }
 
   initHuman() {
-    this.initIdeas();
-    this.initShips();
-    this.initHeroes();
-    this.initBases();
-    this.initColonies();
-    this.initResearch();
+    let tmp = new Pile("tmp");
+    tmp.put(this.deck.lower);
+    tmp.shuffle();
+    this._heroNum = 0;
+    this._baseNum = 0;
+    for (const i in tmp.cards) {
+      const card = tmp.get(i);
+      switch (card.Type) {
+        case "Ship":    this.dealShip(card); break;
+        case "Hero":    this.dealHero(card); break;
+        case "Base":    this.dealBase(card); break;
+        case "Colony":  this.dealColony(card); break;
+      }
+    }
+  }
+
+  dealShip(card) {
+    if (card.isAnyLevel(1)) {
+      this.discard.put(card);
+    } else if (card.isAnyLevel(2)) {
+      this.factory.put(card);
+    } else {
+      this.research.put(card);
+    }
+  }
+
+  dealHero(card) {
+    if (card.isAnyLevel(1)) {
+      if (this._heroNum++ < 2) {
+        this.discard.put(card);
+      } else {
+        this.factory.put(card);
+      }
+    } else {
+      this.research.put(card);
+    }
+  }
+
+  dealBase(card) {
+    if (card.isAnyLevel(2)) {
+      if (this._baseNum++ < 2) {
+        this.home.star.put(card);
+      } else {
+        this.factory.put(card);
+      }
+    } else {
+      this.research.put(card);
+    }
+  }
+
+  dealColony(card) {
+    if (card.isAnyLevel(2)) {
+      if (card.Klass == "Colonization") {
+        this.home.star.put(card);
+      } else {
+        this.factory.put(card);
+      }
+    } else {
+      this.research.put(card);
+    }
   }
 
   initAlien() {
@@ -34,74 +88,12 @@ class Start {
     for (var i in this.ideas.cards) {
       this.ideas.get(i).turn();
     }
+    this.ideas._name = 'Source';
   }
 
   initIdeas() {
     this.ideas.put(this.deck.lower);
     this.ideas.shuffle();
-  }
-
-  initShips() {
-    let ships = this.ideas.cards.filter(
-      card => card.isShip && card.isAnyLevel(1)
-    );
-    this.discard.put(ships);
-    this.ideas.remove(ships);
-  }
-
-  initHeroes() {
-    let heroes = this.ideas.cards.filter(
-      card => card.isHero && card.isAnyLevel(1)
-    );
-    let tmp = new Pile("tmp");
-    tmp.put(heroes);
-    tmp.shuffle();
-    this.factory.put(tmp.pop(), 3);
-    this.factory.put(tmp.pop(), 2);
-    this.discard.put(tmp.cards);
-    this.ideas.remove(heroes);
-  }
-
-  initBases() {
-    let bases = this.ideas.cards.filter(
-      card => card.isBase && card.isAnyLevel(2)
-    );
-    let tmp = new Pile("tmp");
-    tmp.put(bases);
-    tmp.shuffle();
-    this.factory.put(tmp.pop(), 1);
-    this.factory.put(tmp.pop(), 0);
-    this.home.star
-      .put(tmp.pop(), 0)
-      .put(tmp.pop(), 1)
-    ;
-    this.ideas.remove(bases);
-  }
-
-  initColonies() {
-    let colonies = this.ideas.cards.filter(
-      card => card.isColony && card.isAnyLevel(2)
-    );
-    let tmp = new Pile("tmp");
-    tmp.put(colonies);
-    tmp.shuffle();
-    this.factory.put(tmp.pop(), 3);
-    this.factory.put(tmp.pop(), 2);
-    this.home.star
-      .put(tmp.pop(), 3)
-      .put(tmp.pop(), 4)
-    ;
-    this.ideas.remove(colonies);
-  }
-
-  initResearch() {
-    for (var i = 4; i > 0; i--) {
-      this.research.put(this.ideas.pop(), i);
-    }
-    for (var i in this.ideas.cards) {
-      this.ideas.get(i).turn();
-    }
-    this.ideas.top.turn();
   }
 }
 

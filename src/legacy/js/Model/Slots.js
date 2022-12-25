@@ -6,6 +6,7 @@ class Slots {
     this._parent = parent;
     this._name = name;
     this._id = parent.id + '.' + name;
+    this._nextSlot = 0;
     this.initSlots(size);
   }
 
@@ -40,7 +41,21 @@ class Slots {
   slot(no)        { return this.slots[this.assertNo(no)]; }
   isName(name)    { return this._name === name; }
 
-  put(card, no)   { this.slot(no).put(card); }
+  put(card, no=null) {
+    if (no === null) {
+      no = this.nextSlot();
+    }
+    this.slot(no).put(card);
+  }
+
+  nextSlot() {
+    let no = this._nextSlot;
+    this._nextSlot += 2;
+    if (this._nextSlot >= this.size) {
+      this._nextSlot = this._nextSlot % this.size;
+    }
+    return no;
+  }
 
   assertNo(no) {
     if (no<0 || no>=this.size) {

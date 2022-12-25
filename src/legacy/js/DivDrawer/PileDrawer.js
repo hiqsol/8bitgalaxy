@@ -26,7 +26,13 @@ class PileDrawer extends aDrawer {
     this.drawCards(e, pile);
     e.querySelector(".Name .Value").innerHTML = pile.name;
 
-    if (pile.name != 'Ideas' && pile.name != 'Reserve') {
+    const home = e.closest('.Home');
+    let race = null;
+    if (home) {
+      race = home.getAttribute('race');
+    }
+
+    if (pile.name != 'Source' && pile.name != 'Reserve') {
       let overTimer, outTimer;
       e.onmouseover = () => {
         clearTimeout(outTimer);
@@ -42,11 +48,6 @@ class PileDrawer extends aDrawer {
       }
     }
 
-    const home = e.closest('.Home');
-    let race = null;
-    if (home) {
-      race = home.getAttribute('race');
-    }
     if (pile.name === 'Discard') {
       this._discards[race] = e;
       this._discardPiles[race] = pile;

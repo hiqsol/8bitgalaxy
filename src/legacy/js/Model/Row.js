@@ -7,6 +7,7 @@ class Row {
     this._id = parent.id + '.' + (type || 'row');
     this._type = Row.assertType(type);
     this._piles = [];
+    this._nextPile = 0;
     this.initPiles();
   }
 
@@ -42,7 +43,20 @@ class Row {
   pile(no)        { return this.piles[this.assertNo(no)]; }
   isType(type)    { return this._type === type; }
 
-  put(card, no)   { this.pile(no).put(card); }
+  put(card, no=null) {
+    if (no === null) {
+      no = this.nextPile();
+    }
+    this.pile(no).put(card);
+  }
+
+  nextPile() {
+    let no = this._nextPile++;
+    if (this._nextPile >= this.size) {
+      this._nextPile = 0;
+    }
+    return no;
+  }
 
   assertNo(no) {
     if (no<0 || no>=this.size) {
@@ -62,7 +76,7 @@ class Row {
 const Types = Object.freeze({
   Progress:   ['Attack', 'Colo', 'Prod', 'Science'],
   Factory:    ['Factory 1', 'Factory 2', 'Factory 3', 'Factory 4'],
-  Research:   ['Ideas', 'RnD 1', 'RnD 2', 'RnD 3', 'RnD 4'],
+  Research:   ['RnD 1', 'RnD 2', 'RnD 3', 'RnD 4', 'RnD 5'],
 })
 
 export default Row;
