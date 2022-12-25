@@ -5,10 +5,10 @@ class Performer {
   constructor(drawer) {
     this._drawer = Drawer.assert(drawer);
     this._doers = {
-      'BulkEffect': (ef) => this.doBulkEffect(ef),
-      'DragCard':   (ef) => this.doDragCard(ef),
-      'TurnCard':   (ef) => this.doTurnCard(ef),
-      'AlterCard':  (ef) => this.doAlterCard(ef),
+      'BulkEffect':     (ef) => this.doBulkEffect(ef),
+      'DragCard':       (ef) => this.doDragCard(ef),
+      'TurnCard':       (ef) => this.doTurnCard(ef),
+      'AlterCard':      (ef) => this.doAlterCard(ef),
     };
   }
 

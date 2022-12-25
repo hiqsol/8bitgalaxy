@@ -7,11 +7,11 @@ class aDrawer {
     this._HTML = undefined;
   }
 
-  get drawer()  { return this._drawer; }
-  get history() { return this._drawer.history; }
-  get performer() { return this._drawer.performer; }
-  get tpl()     { return this._drawer.tpl; }
-  get m()       { return this._drawer.m; }
+  get drawer()      { return this._drawer; }
+  get history()     { return this._drawer.history; }
+  get performer()   { return this._drawer.performer; }
+  get tpl()         { return this._drawer.tpl; }
+  get m()           { return this._drawer.m; }
 
   drawNode(parent, params) {
     let e = this.importNode(parent);
