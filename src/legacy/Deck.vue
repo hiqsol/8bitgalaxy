@@ -106,15 +106,15 @@ function pile(card) {
   game.draw(v, pile('Human-B2p'), new Params(x['3.3'],  y['2.0']));
   game.draw(v, pile('Human-B2s'), new Params(x['3.4'],  y['2.0']));
 
-  game.draw(v, pile('Human-B3a'), new Params(x['3.1'],  y['3.5']));
-  game.draw(v, pile('Human-B3c'), new Params(x['3.2'],  y['3.5']));
-  game.draw(v, pile('Human-B3p'), new Params(x['3.3'],  y['3.5']));
-  game.draw(v, pile('Human-B3s'), new Params(x['3.4'],  y['3.5']));
+  game.draw(v, pile('Human-B3a'), new Params(x['3.1'],  y['4.0']));
+  game.draw(v, pile('Human-B3c'), new Params(x['3.2'],  y['4.0']));
+  game.draw(v, pile('Human-B3p'), new Params(x['3.3'],  y['4.0']));
+  game.draw(v, pile('Human-B3s'), new Params(x['3.4'],  y['4.0']));
 
-  game.draw(v, pile('Human-B5a'), new Params(x['3.1'],  y['5.5']));
-  game.draw(v, pile('Human-B5c'), new Params(x['3.2'],  y['5.5']));
-  game.draw(v, pile('Human-B5p'), new Params(x['3.3'],  y['5.5']));
-  game.draw(v, pile('Human-B5s'), new Params(x['3.4'],  y['5.5']));
+  game.draw(v, pile('Human-B5a'), new Params(x['3.1'],  y['6.0']));
+  game.draw(v, pile('Human-B5c'), new Params(x['3.2'],  y['6.0']));
+  game.draw(v, pile('Human-B5p'), new Params(x['3.3'],  y['6.0']));
+  game.draw(v, pile('Human-B5s'), new Params(x['3.4'],  y['6.0']));
 
   // game.draw(v, pile('Human-B7a'), new Params(x['3.1'],  y['7.5']));
   // game.draw(v, pile('Human-B7c'), new Params(x['3.2'],  y['7.5']));
