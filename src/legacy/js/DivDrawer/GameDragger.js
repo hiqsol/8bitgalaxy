@@ -16,7 +16,7 @@ class GameDragger {
   addGameKeys(game) {
     const ele = document.documentElement;
     ele.addEventListener('keydown', (e) => {
-      if (e.ctrlKey && e.key === 'z') {
+      if (e.ctrlKey && e.code === 'KeyZ') {
         game.undo();
       }
     });
