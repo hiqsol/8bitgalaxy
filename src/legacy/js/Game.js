@@ -50,7 +50,6 @@ class Game {
     let no = 1;
     for (const [name, race] of Object.entries(this.options.players)) {
       let player = board.addPlayer(new Player(name, race, no));
-      new Start(player.home);
       no++;
     }
     return board;
@@ -62,6 +61,9 @@ class Game {
   }
 
   start(options = null, parent = null) {
+    for (const player of this.board.players) {
+      new Start(player.home);
+    }
     this.draw(parent, this);
   }
 

@@ -6,6 +6,6 @@
 import Game from "./js/Game.js";
 
 let g = new Game();
-g.draw();
+g.start();
 
 </script>

@@ -31,6 +31,7 @@ class Board {
 
   get game()    { return this._game; }
   get field()   { return this._field; }
+  get players() { return this._players; }
 
   star(y, x)    { return this.field.star(y, x); }
   player(no)    { return this._players[this.assertPlayerNo(no)-1]; }
