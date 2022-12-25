@@ -28,59 +28,56 @@ class Start {
     this._baseNum = 0;
     for (const i in tmp.cards) {
       const card = tmp.get(i);
-      switch (card.Type) {
-        case "Ship":    this.dealShip(card); break;
-        case "Hero":    this.dealHero(card); break;
-        case "Base":    this.dealBase(card); break;
-        case "Colony":  this.dealColony(card); break;
+      if (!this.dealCard(card)) {
+        if (card.hasRequirements) {
+          this.factory.put(card);
+        } else {
+          this.research.put(card);
+        }
       }
     }
+  }
+
+  dealCard(card) {
+    switch (card.Type) {
+      case "Ship":    return this.dealShip(card);
+      case "Hero":    return this.dealHero(card);
+      case "Base":    return this.dealBase(card);
+      case "Colony":  return this.dealColony(card);
+    }
+    return false;
   }
 
   dealShip(card) {
     if (card.isAnyLevel(1)) {
       this.discard.put(card);
-    } else if (card.isAnyLevel(2)) {
-      this.factory.put(card);
-    } else {
-      this.research.put(card);
+      return true;
     }
+    return false;
   }
 
   dealHero(card) {
-    if (card.isAnyLevel(1)) {
-      if (this._heroNum++ < 2) {
-        this.discard.put(card);
-      } else {
-        this.factory.put(card);
-      }
-    } else {
-      this.research.put(card);
+    if (card.isAnyLevel(1) && this._heroNum++ < 2) {
+      this.discard.put(card);
+      return true;
     }
+    return false;
   }
 
   dealBase(card) {
-    if (card.isAnyLevel(2)) {
-      if (this._baseNum++ < 2) {
-        this.home.star.put(card);
-      } else {
-        this.factory.put(card);
-      }
-    } else {
-      this.research.put(card);
+    if (card.isAnyLevel(2) && this._baseNum++ < 2) {
+      this.home.star.put(card);
+      return true;
     }
+    return false;
   }
 
   dealColony(card) {
-    if (card.isAnyLevel(2)) {
-      if (card.Klass == "Colonization") {
-        this.home.star.put(card);
-      } else {
-        this.factory.put(card);
-      }
-    } else {
-      this.research.put(card);
+    if (card.isAnyLevel(2) && card.Klass == "Colonization") {
+      this.home.star.put(card);
+      return true;
     }
+    return false;
   }
 
   initAlien() {
@@ -89,6 +86,8 @@ class Start {
       this.ideas.get(i).turn();
     }
     this.ideas._name = 'Source';
+    this.research.pile(1)._name = 'Get 1';
+    this.research.pile(2)._name = 'Get 2';
   }
 
   initIdeas() {

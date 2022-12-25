@@ -25,6 +25,7 @@ class aCard {
   get Science()           { return this.Specs.Science; }
   get Production()        { return this.Specs.Production; }
   get Cooperation()       { return this.Specs.Cooperation; }
+  get hasRequirements()   { return this.Specs.Requires == undefined; }
 
   get isHero()            { return this.isType(Type.Hero); }
   get isColony()          { return this.isType(Type.Colony); }

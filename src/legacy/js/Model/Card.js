@@ -53,6 +53,7 @@ class Card {
   get Production()        { return this.aCard.Production; }
   get Requires()          { return this.aCard.Requires; }
   get Cooperation()       { return this.aCard.Cooperation; }
+  get hasRequirements()   { return this.aCard.hasRequirements || this.Alternative.hasRequirements; } 
 
   get isHero()            { return this.aCard.isHero; }
   get isColony()          { return this.aCard.isColony; }
