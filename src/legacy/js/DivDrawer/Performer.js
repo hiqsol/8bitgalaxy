@@ -27,10 +27,18 @@ class Performer {
   }
 
   doTurnCard(effect) {
+    let value = effect.value;
     let card = effect.card;
     let cl = this.elem(card).classList;
-    cl.toggle('Turned');
-    card.setTurned(cl.contains('Turned'));
+    if (value === null) {
+      value = !cl.contains('Turned');
+    }
+    if (value) {
+      cl.add('Turned');
+    } else {
+      cl.remove('Turned');
+    }
+    card.setTurned(value);
     return true;
   }
 
