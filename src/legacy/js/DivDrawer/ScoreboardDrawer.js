@@ -18,6 +18,7 @@ class ScoreboardDrawer extends aDrawer {
         <label>Undo
           <input id="Undo" value="Undo" type="button" />
         </label>
+        <div id="Show" onClick="this.innerHTML=''"></div>
       </div>
     `;
   }
@@ -60,6 +61,5 @@ class ScoreboardDrawer extends aDrawer {
     }
   }
 }
-
 
 export default ScoreboardDrawer;

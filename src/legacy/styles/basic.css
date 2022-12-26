@@ -58,6 +58,21 @@ div.Scoreboard {
     display:none;
 }
 
+#Show {
+    display: block;
+    z-index: 10;
+    position: fixed;
+    left: 100px;
+    bottom: 100px;
+    width: 30%;
+    height: 30%;
+}
+
+#Show .Card {
+    transform: scale(3);
+    transform-origin: bottom left;
+}
+
 .Home {
     position: absolute;
 }

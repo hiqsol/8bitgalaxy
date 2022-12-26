@@ -36,7 +36,21 @@ class CardDrawer extends aDrawer {
       this.apply(event.ctrlKey ? new AlterCard(card) : new TurnCard(card));
     }
     e.onclick = (event) => {
-      event.currentTarget.classList.toggle('Selected');
+      let card = event.currentTarget;
+      let show = document.getElementById('Show');
+
+      show.innerHTML = '';
+      if (!card.classList.contains("Selected")) {
+        let copy = card.cloneNode(true);
+        copy.id = 'CardCopyForShow';
+        copy.style.left = null;
+        copy.style.top = null;
+        copy.style.bottom = '0px';
+        copy.classList.remove('Turned');
+        show.appendChild(copy);
+      }
+
+      card.classList.toggle('Selected');
     }
 
     this.drawImage(e, card.Specs);
