@@ -12,6 +12,7 @@ import PileDrawer from "./PileDrawer.js";
 import SlotDrawer from "./SlotDrawer.js";
 import StarDrawer from "./StarDrawer.js";
 import SpecDrawer from "./SpecDrawer.js";
+import ShowDrawer from "./ShowDrawer.js";
 import BoardDrawer from "./BoardDrawer.js";
 import SlotsDrawer from "./SlotsDrawer.js";
 import SpecsDrawer from "./SpecsDrawer.js";
@@ -122,6 +123,7 @@ const Drawers = Object.freeze({
   Board: BoardDrawer,
   Scoreboard: ScoreboardDrawer,
   Home: HomeDrawer,
+  Show: ShowDrawer,
 
   Field: FieldDrawer,
   Star: StarDrawer,

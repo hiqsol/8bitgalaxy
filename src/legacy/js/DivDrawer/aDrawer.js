@@ -15,6 +15,7 @@ class aDrawer {
 
   obj(id)           { return this.drawer.obj(id); }
   elem(id)          { return this.drawer.elem(id); }
+  getDrawer(obj)    { return this.drawer.getDrawer(obj); }
 
   drawNode(parent, params) {
     let e = this.importNode(parent);

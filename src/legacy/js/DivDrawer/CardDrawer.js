@@ -37,19 +37,7 @@ class CardDrawer extends aDrawer {
     }
     e.onclick = (event) => {
       let card = event.currentTarget;
-      let show = document.getElementById('Show');
-
-      show.innerHTML = '';
-      if (!card.classList.contains("Selected")) {
-        let copy = card.cloneNode(true);
-        copy.id = 'CardCopyForShow';
-        copy.style.left = null;
-        copy.style.top = null;
-        copy.style.bottom = '0px';
-        copy.classList.remove('Turned');
-        show.appendChild(copy);
-      }
-
+      this.getDrawer('Show').show(card);
       card.classList.toggle('Selected');
     }
 
