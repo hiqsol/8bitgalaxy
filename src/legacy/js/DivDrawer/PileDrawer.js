@@ -1,5 +1,8 @@
 import Drawer from "./Drawer.js";
 import aDrawer from "./aDrawer.js";
+import DragCard from "../Model/History/DragCard.js";
+import TurnCard from "../Model/History/TurnCard.js";
+import BulkEffect from "../Model/History/BulkEffect.js";
 
 class PileDrawer extends aDrawer {
   constructor(drawer) {
@@ -13,7 +16,6 @@ class PileDrawer extends aDrawer {
       </div>
     `;
     this._discards = {};
-    this._discardPiles = {};
   }
 
   draw(parent, pile, params) {
@@ -49,31 +51,28 @@ class PileDrawer extends aDrawer {
     }
 
     if (pile.name === 'Discard') {
-      this._discards[race] = e;
-      this._discardPiles[race] = pile;
+      this._discards[race] = pile;
     }
     if (pile.name === 'Reserve') {
       e.ondblclick = (event) => {
         if (e.children.length>1) return;
         let discard = this._discards[race];
-        let discardPile = this._discardPiles[race];
-        let cards = discardPile.cards;
-        discardPile.removeAll();
+        let cards = discard.cards;
 
-        const nums = new Set();
+        let nums = new Set();
         while(nums.size !== cards.length) {
           nums.add(Math.floor(Math.random() * cards.length));
         }
 
-        for (const i of nums) {
-          let card = cards[i];
-          let elem = document.getElementById(card.Name);
-          elem.classList.add('Turned');
-          card.setTurned(true);
-          pile.put(card);
-          e.appendChild(elem);
+        let efs = [];
+        for (const n of nums) {
+          let card = cards[n];
+          efs.push(new BulkEffect([
+            new DragCard(card, discard, pile),
+            new TurnCard(card, true),
+          ]));
         }
-        this.getDragger('Pile').resetDraggability(e);
+        this.apply(new BulkEffect(efs));
       }
     } else {
       e.classList.add('droppable');

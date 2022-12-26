@@ -13,6 +13,9 @@ class aDrawer {
   get tpl()         { return this._drawer.tpl; }
   get m()           { return this._drawer.m; }
 
+  obj(id)           { return this.drawer.obj(id); }
+  elem(id)          { return this.drawer.elem(id); }
+
   drawNode(parent, params) {
     let e = this.importNode(parent);
     if (params) {

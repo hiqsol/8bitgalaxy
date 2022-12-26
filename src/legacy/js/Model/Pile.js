@@ -48,9 +48,10 @@ class Pile {
   pop(card=null) {
     if (card) {
       card = Card.assert(card);
-      let res = this._cards.pop();
-      Assert.assert(res.id === card.id, 'popped card is not '+card.id, res.id);
-      return res;
+      let res = this.removeOne(card.Name);
+      if (res === null) {
+        throw new Error(`Pile: can't pop ${card.Name}`);
+      }
     } else {
       return this._cards.pop();
     }
@@ -116,7 +117,14 @@ class Pile {
     if (name instanceof Card) {
       name = name.Name;
     }
-    this._cards = this._cards.filter( e => e.Name !== name );
+    for (var i = 0; i < this._cards.length; i++) {
+      let card = this._cards[i];
+      if (card.Name == name) {
+        this._cards.splice(i, 1);
+        return card;
+      }
+    }
+    return null;
   }
 
   shuffleArray(array) {
