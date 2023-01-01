@@ -1,0 +1,22 @@
+.Note {
+    display: block;
+    position: absolute;
+}
+
+.Note .Text {
+    display: block;
+    position: absolute;
+    font-family: "Press Start 2P";
+    font-size: 20px;
+    line-height: 80px;
+    font-weight: normal;
+    color: black;
+}
+
+.Note .Line {
+    display: block;
+    position: absolute;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    transform: skew(-22deg);
+}

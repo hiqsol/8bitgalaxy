@@ -17,13 +17,27 @@ class aDrawer {
   elem(id)          { return this.drawer.elem(id); }
   getDrawer(obj)    { return this.drawer.getDrawer(obj); }
 
-  drawNode(parent, params) {
-    let e = this.importNode(parent);
+  drawNode(parent, params, html = null) {
+    let e = this.importNode(parent, html);
     if (params) {
       params = Params.assert(params);
-      if (params.x !== null || params.y !== null) {
-        e.style.left  = (0 + params.x*this.m) + 'px';
-        e.style.top   = (0 + params.y*this.m) + 'px';
+      if (params.x !== null) {
+        e.style.left    = (0 + params.x*this.m) + 'px';
+      }
+      if (params.y !== null) {
+        e.style.top     = (0 + params.y*this.m) + 'px';
+      }
+      if (params.r !== null) {
+        e.style.right   = (0 + params.r*this.m) + 'px';
+      }
+      if (params.b !== null) {
+        e.style.bottom  = (0 + params.b*this.m) + 'px';
+      }
+      if (params.w !== null) {
+        e.style.width   = (0 + params.w*this.m) + 'px';
+      }
+      if (params.h !== null) {
+        e.style.height  = (0 + params.h*this.m) + 'px';
       }
       if (params.id) {
         e.id = params.id;

@@ -42,7 +42,7 @@ class CardDrawer extends aDrawer {
     }
 
     this.drawImage(e, card.Specs);
-    this.drawer.draw(e, card.Specs, Params.empty());
+    this.drawer.draw(e, card.Specs, new Params());
     if (card.Alternative) {
       this.drawer.draw(e, card.Alternative, Params.isAlternative());
     }

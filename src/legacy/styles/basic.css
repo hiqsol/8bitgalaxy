@@ -4,6 +4,7 @@
 @import 'specs.css';
 @import 'piles.css';
 @import 'slots.css';
+@import 'notes.css';
 
 body {
     font-family: "Open Sans", serif;
