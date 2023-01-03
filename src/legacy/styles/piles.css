@@ -65,14 +65,14 @@
     height: 350px;
 }
 
-.Pile.TopToBottom .Base,
-.Pile.BottomToTop .Colony {
+.Pile.TopToBottom .Colony,
+.Pile.BottomToTop .Base {
     transform-origin: top left;
     transform: rotate(-90deg) translate(-100%);
 }
 
-.Pile.BottomToTop .Base,
-.Pile.TopToBottom .Colony {
+.Pile.BottomToTop .Colony,
+.Pile.TopToBottom .Base {
     transform-origin: top left;
     transform: rotate(+90deg) translate(0, -100%);
 }

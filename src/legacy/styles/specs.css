@@ -240,91 +240,81 @@
     top: 50px;
 }
 
-.Base .Spec.Level .Value {
+.Colony .Spec.Level .Value {
     left: 300px;
     height: 60px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-
-.Base .Image .Klass {
+.Colony .Image .Klass {
     left: 210px;
     top: 10px;
 }
-
-.Base .Spec.Require1 .Value {
+.Colony .Spec.Require1 .Value {
     left: 0px;
     top: 70px;
     border-top-right-radius: 12px;
 }
-.Base .Spec.Require2 .Value {
+.Colony .Spec.Require2 .Value {
     left: 0px;
     top: 110px;
     border-bottom-right-radius: 12px;
 }
-
-.Pile.TopToBottom .Base .Spec.Require1 .Value {
+.Pile.TopToBottom .Colony .Spec.Require1 .Value {
     left: 310px;
     top: 70px;
     border-top-left-radius: 12px;
 }
-.Pile.TopToBottom .Base .Spec.Require2 .Value {
+.Pile.TopToBottom .Colony .Spec.Require2 .Value {
     left: 310px;
     top: 110px;
     border-bottom-left-radius: 12px;
 }
-
-.Base .Spec.Attack,
-.Base .Spec.Colonization,
-.Base .Spec.Production,
-.Base .Spec.Science {
-    left: 150px;
-}
-
-.Base .Spec.Cooperation .Value.Attack,
-.Base .Spec.Cooperation .Value.Colonization,
-.Base .Spec.Cooperation .Value.Production,
-.Base .Spec.Cooperation .Value.Science {
-    left: 140px;
-    top: 50px;
-}
-
-.Colony .Spec.Level .Value {
-    height: 60px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.Colony .Image .Klass {
-    left: 10px;
-    top: 10px;
-}
-
-.Colony .Spec.Require1 .Value {
-    top: 70px;
-    height: 40px;
-    line-height: 40px;
-    border-top-right-radius: 12px;
-}
-
-.Colony .Spec.Require2 .Value {
-    top: 110px;
-    height: 40px;
-    line-height: 40px;
-    border-bottom-right-radius: 12px;
-}
-
 .Colony .Spec.Attack,
 .Colony .Spec.Colonization,
 .Colony .Spec.Production,
 .Colony .Spec.Science {
     left: 150px;
 }
-
 .Colony .Spec.Cooperation .Value.Attack,
 .Colony .Spec.Cooperation .Value.Colonization,
 .Colony .Spec.Cooperation .Value.Production,
 .Colony .Spec.Cooperation .Value.Science {
+    left: 140px;
+    top: 50px;
+}
+
+.Base .Spec.Level .Value {
+    height: 60px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.Base .Image .Klass {
+    left: 10px;
+    top: 10px;
+}
+.Base .Spec.Require1 .Value {
+    top: 70px;
+    height: 40px;
+    line-height: 40px;
+    border-top-right-radius: 12px;
+}
+.Base .Spec.Require2 .Value {
+    top: 110px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom-right-radius: 12px;
+}
+.Base .Spec.Attack,
+.Base .Spec.Colonization,
+.Base .Spec.Production,
+.Base .Spec.Science {
+    left: 150px;
+}
+.Base .Spec.Cooperation .Value.Attack,
+.Base .Spec.Cooperation .Value.Colonization,
+.Base .Spec.Cooperation .Value.Production,
+.Base .Spec.Cooperation .Value.Science {
     top: 50px;
     left: 140px;
 }
