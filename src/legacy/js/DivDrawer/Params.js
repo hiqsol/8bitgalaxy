@@ -23,6 +23,7 @@ class Params {
   get h()         { return this._h; }
   get id()        { return this._id; }
   get direction() { return this._direction; }
+  get classList() { return this._classList; }
 
   set x(value)    { this._x = value; }
   set y(value)    { this._y = value; }
@@ -37,16 +38,19 @@ class Params {
     this._direction = value ? Direction.assert(value) : null;
     return this;
   }
+  set classList(value) {
+    if (typeof value === 'string') {
+      this._classList = value.split(' ');
+    } else {
+      this._classList = value;
+    }
+  }
 
   rb(r, b)        { this.r = r; this.b = b; return this; }
   rt(r, t)        { this.r = r; this.t = t; return this; }
   wh(w, h)        { this.w = w; this.h = h; return this; }
 
-  static isAlternative() {
-    let res = new Params(0, 0);
-    res.isAlternative = true;
-    return res;
-  }
+  setClassList(classList) { this.classList = classList; return this; }
 
   static assert(sample) {
     if (sample instanceof(Params)) {

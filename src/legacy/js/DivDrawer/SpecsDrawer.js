@@ -8,8 +8,8 @@ class SpecsDrawer extends aDrawer {
   }
 
   draw(parent, specs, params) {
+    console.log('SpecsDrawer.draw', specs, params);
     let e = this.drawNode(parent, params);
-    e.classList.add('isAlternative' in params ? 'Alternative' : 'Normal');
     this.drawSpecs(e, specs);
     return e;
   }

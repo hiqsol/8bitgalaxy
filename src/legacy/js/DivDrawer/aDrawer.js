@@ -45,6 +45,9 @@ class aDrawer {
       if (params.direction) {
         e.classList.add(params.direction.name);
       }
+      if (params.classList) {
+        e.classList.add(...params.classList);
+      }
     }
     return e;
   }
