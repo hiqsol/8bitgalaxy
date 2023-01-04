@@ -70,7 +70,7 @@ div.Scoreboard {
 }
 
 #Show .Card {
-    transform: scale(3);
+    transform: scale(2.2);
     transform-origin: bottom left;
 }
 

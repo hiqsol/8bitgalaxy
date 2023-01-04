@@ -67,13 +67,11 @@ class Decks {
       return new Specs(Spec.text(Prop.Name, name));
     }
     let ps = Decks.splitName(name);
-    let pair = Pair.assert(ps[2]);
     return new Specs({
       [Prop.Name]:          name,
       [Prop.Race]:          Pair.text(ps[0]),
       [Prop.Type]:          Pair.text(ps[1]),
-      [Prop.Level]:         pair,
-      [pair.klass.name]:    pair.dec(),
+      [Prop.Level]:         Pair.assert(ps[2]),
     });
   }
 
@@ -114,7 +112,7 @@ class Decks {
     let pair = Pair.assert(spec.substring(1, 3));
     if (spec.length === 2) {
       pair = Pair.assert(spec);
-      return new Spec(pair.klass, pair);
+      return new Spec(Prop.Power, pair);
     }
     if (prefix === 'c') {
       return new Spec(Prop.Cooperation, pair);

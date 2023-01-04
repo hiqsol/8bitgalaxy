@@ -22,6 +22,7 @@ class Specs {
   get Colonization()      { return this.getValue(Prop.Colonization, 0); }
   get Science()           { return this.getValue(Prop.Science, 0); }
   get Production()        { return this.getValue(Prop.Production, 0); }
+  get Power()             { return this.getPair(Prop.Power); }
   get Cooperation()       { return this.getPair(Prop.Cooperation); }
   get Alternative()       { return this.getPair(Prop.Alternative); }
 

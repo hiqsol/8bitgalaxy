@@ -1,9 +1,3 @@
-.value {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-}
-
 .Spec {
     position: absolute;
     width: 50px;
@@ -32,6 +26,10 @@
     color: rgba(100, 100, 100, 0.5);
     font-size: 130px;
     font-weight: 100;
+}
+
+.Spec .Value {
+    position: absolute;
 }
 
 .Spec.Level .Value {
@@ -189,17 +187,11 @@
     border-bottom-right-radius: 12px;
 }
 
-.Ship .Spec.Attack,
-.Ship .Spec.Colonization,
-.Ship .Spec.Production,
-.Ship .Spec.Science {
+.Ship .Spec.Power .Value {
     left: 200px;
 }
 
-.Ship .Spec.Cooperation .Value.Attack,
-.Ship .Spec.Cooperation .Value.Colonization,
-.Ship .Spec.Cooperation .Value.Production,
-.Ship .Spec.Cooperation .Value.Science {
+.Ship .Spec.Cooperation .Value {
     left: 190px;
     top: 50px;
 }
@@ -225,17 +217,11 @@
     border-bottom-right-radius: 12px;
 }
 
-.Hero .Spec.Attack,
-.Hero .Spec.Colonization,
-.Hero .Spec.Production,
-.Hero .Spec.Science {
+.Hero .Spec.Power .Value {
     left: 150px;
 }
 
-.Hero .Spec.Cooperation .Value.Attack,
-.Hero .Spec.Cooperation .Value.Colonization,
-.Hero .Spec.Cooperation .Value.Production,
-.Hero .Spec.Cooperation .Value.Science {
+.Hero .Spec.Cooperation .Value {
     left: 155px;
     top: 50px;
 }
@@ -270,16 +256,10 @@
     top: 110px;
     border-bottom-left-radius: 12px;
 }
-.Colony .Spec.Attack,
-.Colony .Spec.Colonization,
-.Colony .Spec.Production,
-.Colony .Spec.Science {
+.Colony .Spec.Power .Value {
     left: 150px;
 }
-.Colony .Spec.Cooperation .Value.Attack,
-.Colony .Spec.Cooperation .Value.Colonization,
-.Colony .Spec.Cooperation .Value.Production,
-.Colony .Spec.Cooperation .Value.Science {
+.Colony .Spec.Cooperation .Value {
     left: 140px;
     top: 50px;
 }
@@ -305,16 +285,10 @@
     line-height: 40px;
     border-bottom-right-radius: 12px;
 }
-.Base .Spec.Attack,
-.Base .Spec.Colonization,
-.Base .Spec.Production,
-.Base .Spec.Science {
+.Base .Spec.Power .Value {
     left: 150px;
 }
-.Base .Spec.Cooperation .Value.Attack,
-.Base .Spec.Cooperation .Value.Colonization,
-.Base .Spec.Cooperation .Value.Production,
-.Base .Spec.Cooperation .Value.Science {
+.Base .Spec.Cooperation .Value {
     top: 50px;
     left: 140px;
 }

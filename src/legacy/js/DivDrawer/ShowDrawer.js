@@ -39,7 +39,7 @@ class ShowDrawer extends aDrawer {
     );
 
     this.drawNote(
-      copy.querySelector(".Normal .Spec.Colonization .Value"),
+      copy.querySelector(".Normal .Spec.Power .Value"),
       'Power', 1
     );
 
