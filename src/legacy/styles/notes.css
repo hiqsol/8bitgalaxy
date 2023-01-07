@@ -3,6 +3,12 @@
     position: absolute;
 }
 
+.Card.Altered .Specs.Normal .Note,
+.Card:not(.Altered) .Specs.Alternative .Note {
+    transform-origin: -25px 25px;
+    transform: rotate(180deg);
+}
+
 .Note .Text {
     display: block;
     position: absolute;
