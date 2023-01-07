@@ -24,15 +24,18 @@
     height: 150px;
 }
 
-.Star .Slot.LeftToRight {
+.Star .Slot.LeftToRight,
+.Star .Slot.LeftToRight .Card:not(.dragging) {
     width: 350px;
     height: 150px;
 }
-.Star .Slot.TopToBottom {
+.Star .Slot.TopToBottom,
+.Star .Slot.TopToBottom .Card:not(.dragging) {
     width: 250px;
     height: 250px;
 }
-.Star .Slot.TopToBottom.for-Hero {
+.Star .Slot.TopToBottom.for-Hero,
+.Star .Slot.TopToBottom .Hero:not(.dragging) {
     width: 250px;
     height: 150px;
 }
@@ -42,19 +45,6 @@
     display: none;
 }
 
-.Star .Slot.TopToBottom .Hero:not(.dragging) {
-    width: 250px;
-    height: 150px;
-}
-.Star .Slot.TopToBottom .Ship:not(.dragging) {
-    width: 250px;
-    height: 250px;
-}
-.Star .Slot.LeftToRight .Base:not(.dragging),
-.Star .Slot.LeftToRight .Colony:not(.dragging) {
-    width: 350px;
-    height: 150px;
-}
 .Star .Slot .Card:not(.dragging) {
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
