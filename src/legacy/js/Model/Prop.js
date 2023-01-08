@@ -8,6 +8,7 @@ class Prop {
   get name() { return this._name; }
 
   static get Names()            { return Names; }
+  static get None()             { return Names.None; }
   static get Name()             { return Names.Name; }
   static get Type()             { return Names.Type; }
   static get Race()             { return Names.Race; }
@@ -55,6 +56,7 @@ class Prop {
 
 const Names = Object.freeze({
   Name:               'Name',
+  None:               'None',
   Type:               'Type',
   Race:               'Race',
   Level:              'Level',

@@ -49,6 +49,10 @@
     /*-webkit-text-stroke: 1px black;*/
 }
 
+.Spec.Level .Value.None {
+    background-color: rgba(155, 155, 155, 0.4);
+}
+
 .Spec.Level .Value.Attack {
     background-color: rgba(255, 0, 0, 0.4);
 }
@@ -105,6 +109,10 @@
     line-height: 45px;
     font-weight: 100;
     color: #000 !important;
+}
+
+.None {
+    color: rgba(55, 55, 55, 0.8);
 }
 
 .Attack {

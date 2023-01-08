@@ -12,6 +12,7 @@ class Klass {
 
   static get Names()            { return Names; }
   static get Letters()          { return Letters; }
+  static get None()             { return Names.None; }
   static get Attack()           { return Names.Attack; }
   static get Colonization()     { return Names.Colonization; }
   static get Production()       { return Names.Production; }
@@ -47,6 +48,7 @@ class Klass {
 }
 
 const Names = Object.freeze({
+  [Prop.None]:          Prop.None,
   [Prop.Attack]:        Prop.Attack,
   [Prop.Colonization]:  Prop.Colonization,
   [Prop.Science]:       Prop.Science,
@@ -55,6 +57,7 @@ const Names = Object.freeze({
 
 // TODO convert automatically
 const Letters = Object.freeze({
+  N:                    Prop.None,
   A:                    Prop.Attack,
   C:                    Prop.Colonization,
   S:                    Prop.Science,
