@@ -58,6 +58,7 @@ class Start {
 
   dealHero(card) {
     if (card.isAnyLevel(1) && this._heroNum++ < 2) {
+      card.alter();
       this.discard.put(card);
       return true;
     }
