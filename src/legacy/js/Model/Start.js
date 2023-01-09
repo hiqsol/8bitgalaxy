@@ -22,7 +22,7 @@ class Start {
 
   initHuman() {
     let tmp = new Pile("tmp");
-    tmp.put(this.deck.lower);
+    tmp.put(this.deck.upper);
     tmp.shuffle();
     this._heroNum = 0;
     this._baseNum = 0;

@@ -281,13 +281,13 @@
     left: 10px;
     top: 10px;
 }
-.Base .Spec.Require1 .Value {
+.Base .Spec.Require2 .Value {
     top: 70px;
     height: 40px;
     line-height: 40px;
     border-top-right-radius: 12px;
 }
-.Base .Spec.Require2 .Value {
+.Base .Spec.Require1 .Value {
     top: 110px;
     height: 40px;
     line-height: 40px;
