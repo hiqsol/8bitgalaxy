@@ -170,10 +170,6 @@
     /*-webkit-text-stroke: 1px white;*/
 }
 
-.Spec.Cooperation .Value::before {
-    content: '+';
-}
-
 .Ship .Spec.Level .Value {
     height: 60px;
     border-top-left-radius: 20px;
@@ -226,11 +222,11 @@
 }
 
 .Hero .Spec.Power .Value {
-    left: 150px;
+    left: 125px;
 }
 
 .Hero .Spec.Cooperation .Value {
-    left: 155px;
+    left: 120px;
     top: 50px;
 }
 

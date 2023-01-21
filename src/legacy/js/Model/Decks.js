@@ -3,6 +3,7 @@ import Prop from "./Prop.js";
 import Type from "./Type.js";
 import Spec from "./Spec.js";
 import aCard from "./aCard.js";
+import Klass from "./Klass.js";
 import Specs from "./Specs.js";
 import Assert from "./Assert.js";
 import Generator from "./Generator.js";
@@ -114,7 +115,19 @@ class Decks {
       pair = Pair.assert(spec);
       return new Spec(Prop.Power, pair);
     }
+    if (spec.length > 4) {
+      let k = spec.substring(2, 3);
+      let klass = new Klass(k);
+      let text = spec.substring(4);
+      pair = new Pair(klass, text);
+    }
+    if (prefix === 'p') {
+      return new Spec(Prop.Power, pair);
+    }
     if (prefix === 'c') {
+      if (pair.value.length === 1) {
+        pair = new Pair(pair.klass, '+' + pair.value);
+      }
       return new Spec(Prop.Cooperation, pair);
     }
     if (prefix === 'a') {
@@ -177,35 +190,35 @@ class Decks {
       //'Human-Ship-8s':      '4s,c4s,r7s,r7p',
 
 
-      'Human-Hero-1a':      '1a,a2a',
-      'Human-Hero-1c':      '1c,a2c',
-      'Human-Hero-1p':      '1p,a2p',
-      'Human-Hero-1s':      '1s,a2s',
+      'Human-Hero-1a':      'a2a,1a',
+      'Human-Hero-1c':      'a2c,1c',
+      'Human-Hero-1p':      'a2p,1p',
+      'Human-Hero-1s':      'a2s,1s',
 
-      'Human-Hero-2a':      '2a,a1a',
-      'Human-Hero-2c':      '2c,a1c',
-      'Human-Hero-2p':      '2p,a1p',
-      'Human-Hero-2s':      '2s,a1s',
+      'Human-Hero-2a':      'a1a,2a',
+      'Human-Hero-2c':      'a1c,2c',
+      'Human-Hero-2p':      'a1p,2p',
+      'Human-Hero-2s':      'a1s,2s',
 
-      'Human-Hero-3a':      '3a,a4a',
-      'Human-Hero-3c':      '3c,a4c',
-      'Human-Hero-3p':      '3p,a4p',
-      'Human-Hero-3s':      '3s,a4s',
+      'Human-Hero-3a':      'a4a,p1a-1/C',
+      'Human-Hero-3c':      'a4c,p1c-1/C',
+      'Human-Hero-3p':      'a4p,p1p-1/C',
+      'Human-Hero-3s':      'a4s,p1s-1/C',
 
-      'Human-Hero-4a':      '4a,a3a,r2a',
-      'Human-Hero-4c':      '4c,a3c,r2c',
-      'Human-Hero-4p':      '4p,a3p,r2p',
-      'Human-Hero-4s':      '4s,a3s,r2s',
+      'Human-Hero-4a':      'a3a,r2a,p1a-1/C,c1a-recon',
+      'Human-Hero-4c':      'a3c,r2c,p1c-1/C,c1c-effup',
+      'Human-Hero-4p':      'a3p,r2p,p1p-1/C,c1p-effup',
+      'Human-Hero-4s':      'a3s,r2s,p1s-1/C,c1s-smart',
 
-      'Human-Hero-5a':      '5a,a6a',
-      'Human-Hero-5c':      '5c,a6c',
-      'Human-Hero-5p':      '5p,a6p',
-      'Human-Hero-5s':      '5s,a6s',
+      'Human-Hero-5a':      'a6a,p1a-2/C,c1a-recon',
+      'Human-Hero-5c':      'a6c,p1c-2/C,c1c-effup',
+      'Human-Hero-5p':      'a6p,p1p-2/C,c1p-effup',
+      'Human-Hero-5s':      'a6s,p1s-2/C,c1s-smart',
 
-      'Human-Hero-6a':      '6a,a5a,r4a',
-      'Human-Hero-6c':      '6c,a5c,r4c',
-      'Human-Hero-6p':      '6p,a5p,r4p',
-      'Human-Hero-6s':      '6s,a5s,r4s',
+      'Human-Hero-6a':      'a5a,r4a,p1a-2/C,c1a-recon',
+      'Human-Hero-6c':      'a5c,r4c,p1c-2/C,c1c-effup',
+      'Human-Hero-6p':      'a5p,r4p,p1p-2/C,c1p-effup',
+      'Human-Hero-6s':      'a5s,r4s,p1s-2/C,c1s-smart',
 
       //'Human-Hero-7a':      '7a,a8a,r6a',
       //'Human-Hero-7c':      '7c,a8c,r6c',
