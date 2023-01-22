@@ -159,20 +159,20 @@ class Decks {
       'Human-Ship-2p':      'a3s,2p,c1p',
       'Human-Ship-2s':      'a3c,2s,c1s',
 
-      'Human-Ship-3a':      'a2c,2a,c1a',
-      'Human-Ship-3c':      'a2s,2c,c1c',
-      'Human-Ship-3p':      'a2a,2p,c1p',
-      'Human-Ship-3s':      'a2p,2s,c1s',
+      'Human-Ship-3a':      'a2c,2a,c1a,r1a',
+      'Human-Ship-3c':      'a2s,2c,c1c,r1c',
+      'Human-Ship-3p':      'a2a,2p,c1p,r1p',
+      'Human-Ship-3s':      'a2p,2s,c1s,r1s',
 
       'Human-Ship-4a':      'a5c,3a,c2a',
       'Human-Ship-4c':      'a5s,3c,c2c',
       'Human-Ship-4p':      'a5a,3p,c2p',
       'Human-Ship-4s':      'a5p,3s,c2s',
 
-      'Human-Ship-5a':      'a4p,3a,c2a,r3a,r3c',
-      'Human-Ship-5c':      'a4a,3c,c2c,r3c,r3s',
-      'Human-Ship-5p':      'a4s,3p,c2p,r3p,r3a',
-      'Human-Ship-5s':      'a4c,3s,c2s,r3s,r3p',
+      'Human-Ship-5a':      'a4p,3a,c2a,r3a,r2p',
+      'Human-Ship-5c':      'a4a,3c,c2c,r3c,r2a',
+      'Human-Ship-5p':      'a4s,3p,c2p,r3p,r2s',
+      'Human-Ship-5s':      'a4c,3s,c2s,r3s,r2c',
 
       //'Human-Ship-6a':      '4a,c3a,a7s,r5a,r5s',
       //'Human-Ship-6c':      '4c,c3c,a7p,r5c,r5p',
@@ -297,10 +297,10 @@ class Decks {
       'Human-Colony-5p':    'a6s,3p,c2p',
       'Human-Colony-5s':    'a6c,3s,c2s',
 
-      'Human-Colony-6a':    'a5c,3a,c3a,r4a,r4c',
-      'Human-Colony-6c':    'a5s,3c,c3c,r4c,r4s',
-      'Human-Colony-6p':    'a5a,3p,c3p,r4p,r4a',
-      'Human-Colony-6s':    'a5p,3s,c3s,r4s,r4p',
+      'Human-Colony-6a':    'a5c,3a,c3a,r4a,r3c',
+      'Human-Colony-6c':    'a5s,3c,c3c,r4c,r3s',
+      'Human-Colony-6p':    'a5a,3p,c3p,r4p,r3a',
+      'Human-Colony-6s':    'a5p,3s,c3s,r4s,r3p',
 
       //'Human-Colony-8a':    '4a,c3a,r7a,r7s',
       //'Human-Colony-8c':    '4c,c3c,r7c,r7p',
