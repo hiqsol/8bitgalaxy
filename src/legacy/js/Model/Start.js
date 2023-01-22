@@ -67,6 +67,7 @@ class Start {
 
   dealBase(card) {
     if (card.isAnyLevel(2) && this._baseNum++ < 2) {
+      card.alter();
       this.home.star.put(card);
       return true;
     }
@@ -75,6 +76,7 @@ class Start {
 
   dealColony(card) {
     if (card.isAnyLevel(2) && card.Klass == "Colonization") {
+      card.alter();
       this.home.star.put(card);
       return true;
     }
