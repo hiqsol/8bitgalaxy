@@ -86,7 +86,7 @@ class Start {
   initAlien() {
     this.initIdeas();
     for (var i in this.ideas.cards) {
-      this.ideas.get(i).turn();
+      this.ideas.get(i).unknow().turn();
     }
     this.ideas._name = 'Source';
     this.research.pile(1)._name = 'Get 1';

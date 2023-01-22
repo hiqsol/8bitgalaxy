@@ -35,7 +35,7 @@
     height: 250px;
 }
 .Star .Slot.TopToBottom.for-Hero,
-.Star .Slot.TopToBottom .Hero:not(.dragging) {
+.Star .Slot.TopToBottom .Hero:not(.dragging):not(.Turned) {
     width: 250px;
     height: 150px;
 }

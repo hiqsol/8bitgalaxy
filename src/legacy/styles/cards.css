@@ -19,36 +19,28 @@
 .Turned div {
     display: none;
 }
-.Card.dragging {
+.Card.dragging:not(.Turned) {
     opacity: 0.5;
+}
+.Card.dragging.Turned {
+    opacity: 0.01;
 }
 .Card[draggable=true] {
     cursor: grab;
 }
-
-.Ship {
+.Card.Unknown.Turned.dragging {
     width: 250px;
     height: 350px;
 }
 
-.Hero {
+.Ship, .Hero, .Tech {
     width: 250px;
     height: 350px;
 }
 
-.Base {
+.Base, .Colony {
     width: 350px;
     height: 250px;
-}
-
-.Colony {
-    width: 350px;
-    height: 250px;
-}
-
-.Tech {
-    width: 250px;
-    height: 350px;
 }
 
 .Specs {

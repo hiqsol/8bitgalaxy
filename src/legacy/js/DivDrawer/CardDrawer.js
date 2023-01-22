@@ -20,7 +20,7 @@ class CardDrawer extends aDrawer {
     params.id = card.id;
     let e = this.drawNode(parent, params);
 
-    if (card.State.name) e.classList.add(card.State.name);
+    if (card.State.name) e.classList.add(...card.State.names);
     if (card.Type) e.classList.add(card.Type);
     if (card.Race) e.classList.add(card.Race);
     if (card.Alternative) e.classList.add('Alterable');

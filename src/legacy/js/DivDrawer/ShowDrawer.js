@@ -19,6 +19,9 @@ class ShowDrawer extends aDrawer {
     if (card.classList.contains("Selected")) {
       return;
     }
+    if (card.classList.contains("Unknown")) {
+      return;
+    }
     let copy = card.cloneNode(true);
     copy.id = 'ShowCopy.' + card.id;
     copy.draggable = false;

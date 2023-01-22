@@ -69,6 +69,7 @@ class Card {
 
   turn()    { this._state.turn();return this; }
   alter()   { this._state.alter();return this; }
+  unknow()  { this._state.unknow();return this; }
   insert()  { this._state.insert();return this; }
 
   setTurned(value)  { this._state.setTurned(value);return this; }
