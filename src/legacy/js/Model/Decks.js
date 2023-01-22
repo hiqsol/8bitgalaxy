@@ -231,25 +231,25 @@ class Decks {
       //'Human-Hero-8s':      '8s,a7s',
 
 
-      'Human-Base-1a':      'a2a,p1n:milit',
+      'Human-Base-1a':      'a2a,p1n:+hand',
       'Human-Base-1c':      'a2c,p1n: conv',
       'Human-Base-1p':      'a2p,p1n: conv',
-      'Human-Base-1s':      'a2s,p1n:smart',
+      'Human-Base-1s':      'a2s,p1n: +lab',
 
-      'Human-Base-2a':      'a1a,p2a:milit',
+      'Human-Base-2a':      'a1a,p2a:+hand',
       'Human-Base-2c':      'a1c,p2c: conv',
       'Human-Base-2p':      'a1p,p2p: conv',
-      'Human-Base-2s':      'a1s,p2s:smart',
+      'Human-Base-2s':      'a1s,p2s: +lab',
 
-      'Human-Base-3a':      'a4a,p3n:+hand',
+      'Human-Base-3a':      'a4a,p3n:milit',
       'Human-Base-3c':      'a4c,p3n:+hero',
       'Human-Base-3p':      'a4p,p3n: +fac',
-      'Human-Base-3s':      'a4s,p3n: +lab',
+      'Human-Base-3s':      'a4s,p3n:smart',
 
-      'Human-Base-4a':      'a3a,p3a:+hand,r2a',
+      'Human-Base-4a':      'a3a,p3a:milit,r2a',
       'Human-Base-4c':      'a3c,p3c:+hero,r2c',
       'Human-Base-4p':      'a3p,p3p: +fac,r2p',
-      'Human-Base-4s':      'a3s,p3s: +lab,r2s',
+      'Human-Base-4s':      'a3s,p3s:smart,r2s',
 
       'Human-Base-5a':      'a6s,p4n: fort',
       'Human-Base-5c':      'a6a,p4n:colab',
