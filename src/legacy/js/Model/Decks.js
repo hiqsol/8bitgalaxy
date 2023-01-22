@@ -287,10 +287,10 @@ class Decks {
       'Human-Colony-3p':    'a4a,2p,c1p',
       'Human-Colony-3s':    'a4c,2s,c1s',
 
-      'Human-Colony-4a':    'a3s,2a,c2a,r2a,r2s',
-      'Human-Colony-4c':    'a3p,2c,c2c,r2c,r2p',
-      'Human-Colony-4p':    'a3a,2p,c2p,r2p,r2a',
-      'Human-Colony-4s':    'a3c,2s,c2s,r2s,r2c',
+      'Human-Colony-4a':    'a3s,2a,c2a,r2a,r1s',
+      'Human-Colony-4c':    'a3p,2c,c2c,r2c,r1p',
+      'Human-Colony-4p':    'a3a,2p,c2p,r2p,r1a',
+      'Human-Colony-4s':    'a3c,2s,c2s,r2s,r1c',
 
       'Human-Colony-5a':    'a6p,3a,c2a',
       'Human-Colony-5c':    'a6a,3c,c2c',
