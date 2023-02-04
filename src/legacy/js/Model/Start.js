@@ -36,6 +36,9 @@ class Start {
         }
       }
     }
+    for (const i in this.research.piles) {
+      this.research.pile(i).sortDesc();
+    }
   }
 
   dealCard(card) {

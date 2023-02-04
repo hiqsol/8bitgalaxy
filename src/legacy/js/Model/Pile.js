@@ -60,6 +60,7 @@ class Pile {
   unfold()  { this._folded = false; }
   fold()    { this._folded = true; }
   shuffle() { this.shuffleArray(this._cards); }
+  sortDesc(){ this.sortDescArray(this._cards); }
 
   put(card) {
     if (card instanceof Card) {
@@ -134,6 +135,10 @@ class Pile {
       array[i] = array[j];
       array[j] = temp;
     }
+  }
+
+  sortDescArray(array) {
+    array = array.sort((a, b) => b.Level - a.Level);
   }
 }
 
