@@ -10,6 +10,7 @@ class Params {
     this.w = null;
     this.h = null;
     this.id = null;
+    this.rotate = null;
     this.direction = direction;
   }
 
@@ -22,6 +23,7 @@ class Params {
   get w()         { return this._w; }
   get h()         { return this._h; }
   get id()        { return this._id; }
+  get rotate()    { return this._rotate; }
   get direction() { return this._direction; }
   get classList() { return this._classList; }
 
@@ -34,6 +36,7 @@ class Params {
   set w(value)    { this._w = value; }
   set h(value)    { this._h = value; }
   set id(value)   { this._id = value; }
+  set rotate(v)   { this._rotate = v; }
   set direction(value) {
     this._direction = value ? Direction.assert(value) : null;
     return this;

@@ -1,0 +1,38 @@
+.Space {
+    position: absolute;
+}
+
+.pentagon {
+    position: relative;
+    width: calc(0.8 * 70px);
+    margin: calc(0.8 * 20.207px) 0;
+    height: 197px;
+    background-color: #404050;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.pentagon:before {
+    content: "";
+    top: calc(0.8 * -24.74874px);
+    left: calc(0.8 * 10.25126px);
+    width: calc(0.8 * 49.497px);
+    height: calc(0.8 * 49.497px);
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    position: absolute;
+    z-index: 1;
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.pentagon span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(0.8 * 70.0px);
+    height: calc(0.8 * 40.41452px);
+    z-index: 2;
+    background: inherit;
+}
