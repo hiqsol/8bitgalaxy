@@ -12,6 +12,7 @@ class Star {
     this._id = 'S' + y + x;
     this._y = y;
     this._x = x;
+    this._spaces = this.initSpaces();
     this._ipm = new Pile(this, ''); // Interplanetary Medium
     this._ships = new Slots(this, Type.Ship, 5);
     this._heroes = new Slots(this, Type.Hero, 4);
@@ -66,12 +67,22 @@ class Star {
   get ships()   { return this._ships; }
   get heroes()  { return this._heroes; }
   get estates() { return this._estates; }
+  get spaces()  { return this._spaces; }
   ship(slot)    { return this._ships[slot]     ?? null; }
   hero(slot)    { return this._heroes[slot]    ?? null; }
   estate(slot)  { return this._estates[slot]   ?? null; }
 
-  space(course) {
-    var adds = {
+  space(course) { return this._spaces[course]  ?? null; }
+
+  initSpaces() {
+    let spaces = [null];
+    for (let i = 0; i <= 12; i++) {
+      spaces[i] = this.createSpace(i);
+    }
+    return spaces;
+  }
+  createSpace(bearing) {
+    var allAdds = {
       'S00': [2, 10, 12],
       'S01': [2,  4, 12],
       'S10': [8, 10, 12],
@@ -80,17 +91,11 @@ class Star {
       'S21': [4,  6,  8],
     };
 
-    var allSkips = {
-      'S00': [1, 9, 11],
-      'S01': [1, 3, 11],
-      'S10': [7, 9, 11],
-      'S12': [1, 3, 5],
-      'S20': [5, 7, 9],
-      'S21': [3, 5, 7],
-    };
-    var skips = allSkips[this.id] ?? [];
-    if (skips.includes(course)) return null;
-    return new Space(this, course, 1);
+    var adds = allAdds[this.id] ?? [];
+    if (bearing %2 == 1 || adds.includes(bearing)) {
+      return new Space(this, bearing, 1);
+    }
+    return null;
   }
 
   put(card, slot) {

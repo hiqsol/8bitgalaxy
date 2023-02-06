@@ -30,12 +30,9 @@ class StarDrawer extends aDrawer {
   }
 
   drawSpaces(parent, star) {
-    this.drawer.draw(parent, star.space(1));
-    this.drawer.draw(parent, star.space(3));
-    this.drawer.draw(parent, star.space(5));
-    this.drawer.draw(parent, star.space(7));
-    this.drawer.draw(parent, star.space(9));
-    this.drawer.draw(parent, star.space(11));
+    for (let space of star.spaces) {
+      this.drawer.draw(parent, space);
+    }
   }
 }
 

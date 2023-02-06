@@ -1,20 +1,20 @@
 import Star from "./Star.js";
+import Bearing from "./Bearing.js";
 import Assert from "./Assert.js";
 
 // Interstellar Space aka ISM - Interstellar Medium
 class Space {
-  constructor(star, course, type) {
+  constructor(star, bearing, type) {
     this._star = Star.assert(star);
-    Assert.assert(course % 2 == 1, "course must be odd", course, course);
-    this._course = course;
-    this._id = 'ism' +star.y + star.x + course;
+    this._bearing = Bearing.assert(bearing);
+    this._id = 'ism' +star.y + star.x + bearing.oclock;
     this._type = type;
   }
 
   toJSON() {
     return {
       '_class':     'Space',
-      'course':     this._course,
+      'bearing':    this._bearing,
       'type':       this._type,
     }
   }
@@ -39,14 +39,14 @@ class Space {
 
   static fromJSON(json, star) {
     Assert.assert(json._class == 'Space', "wrong class hydrating Space", json);
-    return new Space(star, json.course, json.type);
+    return new Space(star, json.bearing, json.type);
   }
 
   get x()       { return this._x; }
   get y()       { return this._y; }
   get id()      { return this._id; }
   get star()    { return this._star; }
-  get course()  { return this._course; }
+  get bearing() { return this._bearing; }
   get type()    { return this._type; }
 
   static assert(sample) {

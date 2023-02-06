@@ -52,6 +52,7 @@ class Params {
   rb(r, b)        { this.r = r; this.b = b; return this; }
   rt(r, t)        { this.r = r; this.t = t; return this; }
   wh(w, h)        { this.w = w; this.h = h; return this; }
+  setRotate(v)    { this.rotate = v; return this; }
 
   setClassList(classList) { this.classList = classList; return this; }
 
