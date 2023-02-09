@@ -2,6 +2,10 @@
     position: absolute;
 }
 
+.pentagon:hover {
+    box-shadow: 0 0 30px white;
+}
+
 .pentagon {
     position: relative;
     width: calc(0.8 * 70px);
