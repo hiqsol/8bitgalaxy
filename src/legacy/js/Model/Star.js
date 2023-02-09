@@ -14,8 +14,8 @@ class Star {
     this._x = x;
     this._spaces = this.initSpaces();
     this._ipm = new Pile(this, ''); // Interplanetary Medium
-    this._ships = new Slots(this, Type.Ship, 5);
-    this._heroes = new Slots(this, Type.Hero, 4);
+    this._ships = new Slots(this, Type.Ship, 4);
+    this._heroes = new Slots(this, Type.Hero, 3);
     this._estates = new Slots(this, Type.Base, 5);
   }
 
