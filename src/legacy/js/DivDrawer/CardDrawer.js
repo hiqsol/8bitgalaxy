@@ -33,12 +33,16 @@ class CardDrawer extends aDrawer {
       event.target.classList.remove("dragging");
     };
     e.ondblclick = (event) => {
-      this.apply(event.ctrlKey ? new AlterCard(card) : new TurnCard(card));
+      this.apply(new TurnCard(card));
     }
     e.onclick = (event) => {
-      let card = event.currentTarget;
-      this.getDrawer('Show').show(card);
-      card.classList.toggle('Selected');
+      if (event.ctrlKey) {
+        this.apply(new AlterCard(card));
+      } else {
+        let card = event.currentTarget;
+        this.getDrawer('Show').show(card);
+        card.classList.toggle('Selected');
+      }
     }
 
     this.drawImage(e, card.Specs);
