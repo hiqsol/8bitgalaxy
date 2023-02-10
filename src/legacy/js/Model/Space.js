@@ -7,14 +7,16 @@ class Space {
   constructor(star, bearing, type) {
     this._star = Star.assert(star);
     this._bearing = Bearing.assert(bearing);
-    this._id = 'ism' +star.y + star.x + bearing.oclock;
+    this._turned = false;
     this._type = type;
+    this._id = 'ism' + this.oclock + 'at' + star.y + star.x;
   }
 
   toJSON() {
     return {
       '_class':     'Space',
       'bearing':    this._bearing,
+      'turned':     this._turned,
       'type':       this._type,
     }
   }
@@ -46,8 +48,17 @@ class Space {
   get y()       { return this._y; }
   get id()      { return this._id; }
   get star()    { return this._star; }
+  get oclock()  { return this._bearing.oclock; }
   get bearing() { return this._bearing; }
   get type()    { return this._type; }
+
+  turn(value = null) {
+    if (value == null) {
+      this._turned = !this._turned;
+    } else {
+      this._turned = value;
+    }
+  }
 
   static assert(sample) {
     if (sample instanceof(Space)) {

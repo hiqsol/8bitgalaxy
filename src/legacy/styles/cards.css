@@ -16,7 +16,7 @@
 .Card.Turned {
     filter: brightness(55%);
 }
-.Turned div {
+.Card.Turned div {
     display: none;
 }
 .Card.dragging:not(.Turned) {

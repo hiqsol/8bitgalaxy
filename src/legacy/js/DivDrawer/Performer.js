@@ -9,6 +9,7 @@ class Performer {
       'DragCard':       (ef) => this.doDragCard(ef),
       'TurnCard':       (ef) => this.doTurnCard(ef),
       'AlterCard':      (ef) => this.doAlterCard(ef),
+      'TurnSpace':      (ef) => this.doTurnSpace(ef),
     };
   }
 
@@ -57,6 +58,22 @@ class Performer {
     this.obj(ef.dst).put(ef.card);
     this.getDragger('Slot').resetDraggability(ef.src);
     this.getDragger('Slot').resetDraggability(ef.dst);
+    return true;
+  }
+
+  doTurnSpace(effect) {
+    let value = effect.value;
+    let space = effect.space;
+    let cl = this.elem(space).classList;
+    if (value === null) {
+      value = !cl.contains('Turned');
+    }
+    if (value) {
+      cl.add('Turned');
+    } else {
+      cl.remove('Turned');
+    }
+    space.turn(value);
     return true;
   }
 

@@ -14,6 +14,9 @@
     background-color: #404050;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
+.Space.Turned .pentagon {
+    background-color: #222;
+}
 
 .pentagon:before {
     content: "";

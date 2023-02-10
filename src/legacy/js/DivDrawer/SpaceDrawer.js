@@ -2,6 +2,7 @@ import Params from './Params.js';
 import Drawer from './Drawer.js';
 import aDrawer from './aDrawer.js';
 import Assert from '../Model/Assert.js';
+import TurnSpace from '../Model/History/TurnSpace.js';
 
 class SpaceDrawer extends aDrawer {
   constructor(drawer) {
@@ -17,11 +18,16 @@ class SpaceDrawer extends aDrawer {
 
   draw(parent, space, params) {
     params = Params.assert(params);
+    params.id = space.id;
     const bp = this.getBearingParams(space.bearing);
     params.x = bp.x;
     params.y = bp.y;
     params.rotate = bp.rotate;
-    return this.drawNode(parent, params);
+    let e = this.drawNode(parent, params);
+    e.ondblclick = (event) => {
+      this.apply(new TurnSpace(space));
+    }
+    return e;
   }
 
   getBearingParams(bearing) {

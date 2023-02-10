@@ -2,6 +2,7 @@ import Effect from "./Effect.js";
 import DragCard from "./DragCard.js";
 import TurnCard from "./TurnCard.js";
 import AlterCard from "./AlterCard.js";
+import TurnSpace from "./TurnSpace.js";
 import Assert from "../Assert.js";
 
 class BulkEffect extends Effect {
@@ -63,6 +64,7 @@ const Effects = Object.freeze({
   DragCard:       DragCard,
   TurnCard:       TurnCard,
   AlterCard:      AlterCard,
+  TurnSpace:       TurnSpace,
 });
 
 export default BulkEffect;
