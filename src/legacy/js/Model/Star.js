@@ -4,6 +4,7 @@ import Type from "./Type.js";
 import Slot from "./Slot.js";
 import Space from "./Space.js";
 import Slots from "./Slots.js";
+import Bearing from "./Bearing.js";
 import Assert from "./Assert.js";
 
 class Star {
@@ -73,6 +74,28 @@ class Star {
   estate(slot)  { return this._estates[slot]   ?? null; }
 
   space(course) { return this._spaces[course]  ?? null; }
+
+  findSpace(bearing) {
+    bearing = Bearing.assert(bearing);
+    let space = this.space(bearing.oclock);
+    if (space) return space;
+    let star = this.findStar(bearing);
+    return star.space(bearing.reversed.oclock);
+  }
+  findStar(bearing) {
+    bearing = Bearing.assert(bearing);
+    return this.nextStar(bearing.xStep, bearing.yStep);
+  }
+  nextStar(dx, dy) {
+    const sign = dx>0 ? 1 : -1;
+    if (dx == +0.5) dx = (this.y%2 == 1 ?  0 : 1);
+    if (dx == -0.5) dx = (this.y%2 == 1 ? -1 : 0);
+    let nx = this.x + dx;
+    let ny = this.y + dy;
+    //console.log('x: ', this.x, dx, nx);
+    //console.log('y: ', this.y, dy, ny);
+    return this.field.star(ny, nx);
+  }
 
   initSpaces() {
     let spaces = [null];
