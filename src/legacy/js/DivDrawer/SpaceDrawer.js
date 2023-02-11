@@ -11,6 +11,7 @@ class SpaceDrawer extends aDrawer {
       <div class="Space">
         <div class="pentagon">
           <span></span>
+          <div class="Type"></div>
         </div>
       </div>
     `;
@@ -27,6 +28,15 @@ class SpaceDrawer extends aDrawer {
     e.ondblclick = (event) => {
       this.apply(new TurnSpace(space));
     }
+    e.querySelector('.Type').innerHTML = space.type;
+    e.classList.add('oclock'+space.bearing.oclock);
+    if (space.oclock % 2 == 0) {
+      e.classList.add('even');
+    }
+    if (space.isTurned) {
+      e.classList.add('Turned');
+    }
+
     return e;
   }
 

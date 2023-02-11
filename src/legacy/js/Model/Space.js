@@ -7,7 +7,7 @@ class Space {
   constructor(star, bearing, type) {
     this._star = Star.assert(star);
     this._bearing = Bearing.assert(bearing);
-    this._turned = false;
+    this._turned = true;
     this._type = type;
     this._id = 'ism' + this.oclock + 'at' + star.y + star.x;
   }
@@ -51,6 +51,7 @@ class Space {
   get oclock()  { return this._bearing.oclock; }
   get bearing() { return this._bearing; }
   get type()    { return this._type; }
+  get isTurned() { return this._turned; }
 
   turn(value = null) {
     if (value == null) {

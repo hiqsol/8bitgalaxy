@@ -1,6 +1,30 @@
 .Space {
     position: absolute;
 }
+.Space.Turned .pentagon {
+    background-color: #404050;
+}
+.Space:not(.Turned) .pentagon {
+    background-image: url('images/nebula.png');
+    background-size: 300%;
+}
+
+.Space.Turned .Type {
+    display: none;
+}
+.Space:not(.Turned) .Type {
+    position: absolute;
+    top: 135px;
+    left: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+.Space.oclock2 .Type, .Space.oclock4 .Type, .Space.oclock6 .Type,
+.Space.oclock7 .Type, .Space.oclock9 .Type, .Space.oclock11 .Type {
+    transform: rotate(180deg);
+    left: 12px;
+}
 
 .pentagon:hover {
     box-shadow: 0 0 30px white;
@@ -11,14 +35,9 @@
     width: calc(0.8 * 70px);
     margin: calc(0.8 * 20.207px) 0;
     height: 197px;
-    background-color: #404050;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    background: inherit;
 }
-.Space.Turned .pentagon {
-    background-image: url('images/nebula.png');
-    background-size: 300%;
-}
-
 .pentagon:before {
     content: "";
     top: calc(0.8 * -24.74874px);

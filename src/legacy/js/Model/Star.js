@@ -79,6 +79,7 @@ class Star {
     for (let i = 0; i <= 12; i++) {
       spaces[i] = this.createSpace(i);
     }
+    console.log(spaces);
     return spaces;
   }
   createSpace(bearing) {
@@ -93,7 +94,7 @@ class Star {
 
     var adds = allAdds[this.id] ?? [];
     if (bearing %2 == 1 || adds.includes(bearing)) {
-      return new Space(this, bearing, 1);
+      return new Space(this, bearing, 4);
     }
     return null;
   }
