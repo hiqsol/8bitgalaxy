@@ -61,10 +61,24 @@ class Game {
   }
 
   start(options = null, parent = null) {
+    this.initCentralVoid();
     for (const player of this.board.players) {
       new Start(player.home);
     }
     this.draw(parent, this);
+  }
+
+  initCentralVoid() {
+    this.setVoid(1, 1, [1, 4, 5, 6, 7, 10, 11, 12]);
+    //this.setVoid(0, 0, [4, 7]);
+    //this.setVoid(2, 1, [1, 10]);
+  }
+
+  setVoid(y, x, bearings) {
+    let star = this.board.field.star(y, x);
+    for (const i of bearings) {
+      star.findSpace(i).turn(false).setType(6);
+    }
   }
 
   draw(parent = null, obj = null, y, x) {

@@ -59,7 +59,10 @@ class Space {
     } else {
       this._turned = value;
     }
+    return this;
   }
+
+  setType(type) { this._type = type; return this; }
 
   static assert(sample) {
     if (sample instanceof(Space)) {
