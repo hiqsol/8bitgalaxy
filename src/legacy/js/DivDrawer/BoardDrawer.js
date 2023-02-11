@@ -11,15 +11,15 @@ class BoardDrawer extends aDrawer {
 
   draw(parent, board, params) {
     let e = this.drawNode(parent, params);
-    this.drawer.draw(e, board.field, new Params(17, 10));
+    this.drawer.draw(e, board.field, new Params(18.1, 10.8));
     this.drawHomes(e, board);
     return e;
   }
 
   drawHomes(parent, board) {
-    this._drawer.draw(parent, board.home(1), new Params(70, 55, Direction.BottomToTop));
-    this._drawer.draw(parent, board.home(2), new Params( 1,  3, Direction.TopToBottom));
-    this._drawer.draw(parent, board.home(3), new Params(55, 12, Direction.TopToBottom));
+    this._drawer.draw(parent, board.home(1), new Params(72.4, 56.5, Direction.BottomToTop));
+    this._drawer.draw(parent, board.home(2), new Params( 1.0,  3.0, Direction.TopToBottom));
+    this._drawer.draw(parent, board.home(3), new Params(57.2, 12.0, Direction.TopToBottom));
   }
 }
 
