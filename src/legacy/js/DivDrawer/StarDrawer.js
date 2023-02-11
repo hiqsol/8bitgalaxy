@@ -10,6 +10,7 @@ class StarDrawer extends aDrawer {
       <div class="Star">
         <div class="hexagon">
           <span><div class="inner lni lni-sun"></div></span>
+          <div class="Id"></div>
         </div>
       </div>
     `;
@@ -21,6 +22,7 @@ class StarDrawer extends aDrawer {
     params.x = (star.x*15.5 + indent);
     params.y = (star.y*13.4 + 1);
     let e = this.drawNode(parent, params);
+    e.querySelector('.Id').innerHTML = star.id.substring(1);
     this.drawSpaces(e, star);
     this.drawer.draw(e, star.ships,   new Params(7.8,  3.0, Direction.TopToBottom));
     this.drawer.draw(e, star.estates, new Params(0.2,  3.0, Direction.LeftToRight));

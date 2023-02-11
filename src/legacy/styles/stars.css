@@ -4,6 +4,15 @@
     color: #556;
 }
 
+.Star .Id {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    font-size: 30px;
+    color: #555555;
+    z-index: 2;
+}
+
 .Star .inner.lni {
     position: absolute;
     left: 140px;
