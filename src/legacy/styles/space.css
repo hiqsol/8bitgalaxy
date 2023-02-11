@@ -15,7 +15,8 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 .Space.Turned .pentagon {
-    background-color: #222;
+    background-image: url('images/nebula.png');
+    background-size: 300%;
 }
 
 .pentagon:before {
@@ -29,8 +30,8 @@
     position: absolute;
     z-index: 1;
     transform: scaleY(0.5774) rotate(-45deg);
-    background-color: inherit;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    background: inherit;
+    box-shadow: inherit;
 }
 
 .pentagon span {
