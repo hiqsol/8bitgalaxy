@@ -4,11 +4,34 @@
 .Space.Turned .pentagon {
     background-color: #404050;
 }
-.Space:not(.Turned) .pentagon {
-    background-image: url('images/nebula.png');
+.Space.Type1:not(.Turned) .pentagon {
+    background-image: url('images/space1.jpg');
+    background-size: 400%;
+}
+.Space.Type2:not(.Turned) .pentagon {
+    background-image: url('images/space2.jpg');
+    background-size: 800%;
+    background-position: center center;
+}
+.Space.Type3:not(.Turned) .pentagon {
+    background-image: url('images/space3.jpg');
     background-size: 300%;
 }
+.Space.Type4:not(.Turned) .pentagon {
+    background-image: url('images/asteroids.jpg');
+    background-size: 700%;
+    background-position: 100px 200px;
+}
+.Space.Type5:not(.Turned) .pentagon {
+    background-image: url('images/nebula.jpg');
+    background-size: 600%;
+    background-position: center center;
+}
+.Space.Type6:not(.Turned) .pentagon {
+    background-color: black;
+}
 
+.Space.Type6:not(.Turned) .Type,
 .Space.Turned .Type {
     display: none;
 }

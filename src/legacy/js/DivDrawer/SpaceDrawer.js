@@ -30,6 +30,7 @@ class SpaceDrawer extends aDrawer {
     }
     e.querySelector('.Type').innerHTML = space.type;
     e.classList.add('oclock'+space.bearing.oclock);
+    e.classList.add('Type'+space.type);
     if (space.oclock % 2 == 0) {
       e.classList.add('even');
     }
