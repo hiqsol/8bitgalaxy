@@ -66,8 +66,8 @@ div.Scoreboard {
     position: fixed;
     left: 100px;
     bottom: 100px;
-    width: 30%;
-    height: 30%;
+    width: 1px;
+    height: 1px;
 }
 
 #Show .Card {
