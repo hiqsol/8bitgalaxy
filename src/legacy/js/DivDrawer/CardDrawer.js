@@ -45,6 +45,8 @@ class CardDrawer extends aDrawer {
       }
     }
 
+    this.addShowEvents(e, card);
+
     this.drawImage(e, card.Specs);
     this.drawer.draw(e, card.Specs, new Params().setClassList('Normal'));
     if (card.Alternative) {
@@ -55,6 +57,23 @@ class CardDrawer extends aDrawer {
 
     return e;
   }
+
+  addShowEvents(e, card) {
+    let show = this.getDrawer('Show');
+    e.onmouseenter = (event) => {
+      if (e.classList.contains("Turned")) {
+        return;
+      }
+      show.show(event.currentTarget);
+    };
+    e.onmouseleave = (event) => {
+      if (e.classList.contains("Turned")) {
+        return;
+      }
+      show.hide();
+    };
+  }
+
 
   drawImage(e, specs) {
     let i = e.querySelector(".Image .Klass.lni");
