@@ -51,7 +51,7 @@
 }
 
 .Home .Slots {
-    box-shadow: 0 0 9px #222;
+    box-shadow: 0 0 9px #eee;
 }
 .Home .Slots .Name .Value {
     display: block;
@@ -65,7 +65,7 @@
     font-weight: 100;
 }
 .Home .Slot {
-    box-shadow: 4px 4px 5px #222;
+    box-shadow: 4px 4px 5px #eee;
 }
 .Home .Slot.TopToBottom {
     width: 250px;

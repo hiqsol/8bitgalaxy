@@ -7,7 +7,7 @@
     border-radius: 20px;
     padding: 0;
     margin: 0;
-    box-shadow: 0 0 9px #222;
+    box-shadow: 0 0 9px #eee;
     z-index: 4;
 }
 .Star .Pile {
@@ -15,10 +15,10 @@
 }
 
 .droppable:hover {
-    border: 1px solid #333;
+    border: 1px solid #aaa;
 }
 .droppable.hover {
-    border: 5px solid black;
+    border: 5px solid #aaa;
 }
 
 .Pile .Name .Value {

@@ -2,7 +2,7 @@
     position: absolute;
 }
 .Space.Turned .pentagon {
-    background-color: #404050;
+    background-color: #1a2020;
 }
 .Space.Type1:not(.Turned) .pentagon {
     background-image: url('images/space1.jpg');
@@ -58,7 +58,7 @@
     width: calc(0.8 * 70px);
     margin: calc(0.8 * 20.207px) 0;
     height: 197px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 5px white;
     background: inherit;
 }
 .pentagon:before {

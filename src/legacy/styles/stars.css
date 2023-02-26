@@ -24,7 +24,7 @@
     position: relative;
     width: 700px;
     height: 404.15px;
-    background-color: #667;
+    background-color: rgba(0, 0, 0, 0.5);
     margin: 202.07px 0;
     box-shadow: 0 0 9px rgba(0, 0, 0, 1);
 }

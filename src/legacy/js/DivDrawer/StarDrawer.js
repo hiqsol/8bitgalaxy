@@ -9,7 +9,6 @@ class StarDrawer extends aDrawer {
     this._HTML = `
       <div class="Star">
         <div class="hexagon">
-          <span><div class="inner lni lni-sun"></div></span>
           <div class="Id"></div>
         </div>
       </div>

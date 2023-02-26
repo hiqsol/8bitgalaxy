@@ -9,7 +9,9 @@
 
 body {
     font-family: "Open Sans", serif;
-    background: #787;
+    color: #aaa;
+    background-image: url('images/quick.jpg');
+    background-size: cover;
 }
 
 .Human {
@@ -46,7 +48,7 @@ div.Scoreboard {
 }
 .Scoreboard label {
     display: block;
-    border: 1px solid black;
+    border: 1px solid #aaa;
     padding: 15px;
     margin: 15px;
     width: 350px;
@@ -54,7 +56,9 @@ div.Scoreboard {
     text-align:center;
 }
 .Scoreboard label:hover {
-    background-color: wheat;
+    border-color: white;;
+    color: white;
+    background-color: rgba(0,0,0,0.2);
 }
 .Scoreboard input {
     display:none;
