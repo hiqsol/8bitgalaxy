@@ -1,4 +1,4 @@
-import Decks from "./Decks.js";
+import Decks from "./Decks/Decks.js";
 
 class Validator {
   constructor() {

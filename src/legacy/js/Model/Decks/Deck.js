@@ -1,4 +1,4 @@
-import Card from "./Card.js";
+import Card from "../Card.js";
 import Decks from "./Decks.js";
 
 class Deck {

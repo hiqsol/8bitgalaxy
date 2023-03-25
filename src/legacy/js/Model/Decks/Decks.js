@@ -1,11 +1,11 @@
-import Pair from "./Pair.js";
-import Prop from "./Prop.js";
-import Type from "./Type.js";
-import Spec from "./Spec.js";
-import aCard from "./aCard.js";
-import Klass from "./Klass.js";
-import Specs from "./Specs.js";
-import Assert from "./Assert.js";
+import Pair from "../Pair.js";
+import Prop from "../Prop.js";
+import Type from "../Type.js";
+import Spec from "../Spec.js";
+import aCard from "../aCard.js";
+import Klass from "../Klass.js";
+import Specs from "../Specs.js";
+import Assert from "../Assert.js";
 import Generator from "./Generator.js";
 
 class Decks {

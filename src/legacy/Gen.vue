@@ -4,7 +4,7 @@
 
 <script setup>
 
-import Decks from "./js/Model/Decks.js";
+import Decks from "./js/Model/Decks/Decks.js";
 import Validator from "./js/Model/Validator.js";
 
 let val = new Validator();

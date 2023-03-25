@@ -4,7 +4,7 @@
 
 <script setup>
 import Game from "./js/Game.js";
-import Deck from "./js/Model/Deck.js";
+import Deck from "./js/Model/Decks/Deck.js";
 import Pile from "./js/Model/Pile.js";
 import Params from "./js/DivDrawer/Params.js";
 import Direction from "./js/DivDrawer/Direction.js";

@@ -1,6 +1,6 @@
 import Home from "./Home.js";
 import Pile from "./Pile.js";
-import Decks from "./Decks.js";
+import Decks from "./Decks/Decks.js";
 
 class Start {
   constructor(home) {

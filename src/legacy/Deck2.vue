@@ -7,7 +7,7 @@
 import Demo from "./js/Demo.js";
 import Card from "./js/Model/Card.js";
 import Pile from "./js/Model/Pile.js";
-import Deck from "./js/Model/Deck.js";
+import Deck from "./js/Model/Decks/Deck.js";
 import Direction from "./js/DivDrawer/Direction.js";
 
 let game = (new Demo()).game;

@@ -1,6 +1,6 @@
-import Type from "./Type.js";
-import aCard from "./aCard.js";
-import Klass from "./Klass.js";
+import Type from "../Type.js";
+import aCard from "../aCard.js";
+import Klass from "../Klass.js";
 
 class Generator {
   constructor(){

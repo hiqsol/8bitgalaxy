@@ -1,5 +1,5 @@
 import Row from "./Row.js";
-import Deck from "./Deck.js";
+import Deck from "./Decks/Deck.js";
 import Pile from "./Pile.js";
 import Slots from "./Slots.js";
 import Player from "./Player.js";
