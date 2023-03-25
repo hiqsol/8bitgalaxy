@@ -10,4 +10,9 @@ export default defineConfig({
     sourcemap: true,
     minify: false
   },
+  resolve: {
+    alias: {
+      $images: './public/images'
+    }
+  }
 });

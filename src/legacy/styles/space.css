@@ -5,25 +5,25 @@
     background-color: #1a2020;
 }
 .Space.Type1:not(.Turned) .pentagon {
-    background-image: url('images/space1.jpg');
+    background-image: url('$images/space1.jpg');
     background-size: 400%;
 }
 .Space.Type2:not(.Turned) .pentagon {
-    background-image: url('images/space2.jpg');
+    background-image: url('$images/space2.jpg');
     background-size: 800%;
     background-position: center center;
 }
 .Space.Type3:not(.Turned) .pentagon {
-    background-image: url('images/space3.jpg');
+    background-image: url('$images/space3.jpg');
     background-size: 300%;
 }
 .Space.Type4:not(.Turned) .pentagon {
-    background-image: url('images/asteroids.jpg');
+    background-image: url('$images/asteroids.jpg');
     background-size: 700%;
     background-position: 100px 200px;
 }
 .Space.Type5:not(.Turned) .pentagon {
-    background-image: url('images/nebula.jpg');
+    background-image: url('$images/nebula.jpg');
     background-size: 600%;
     background-position: center center;
 }

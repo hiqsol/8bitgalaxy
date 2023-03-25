@@ -10,7 +10,7 @@
 body {
     font-family: "Open Sans", serif;
     color: #aaa;
-    background-image: url('images/space0.jpg');
+    background-image: url('$images/space0.jpg');
     background-size: cover;
 }
 
