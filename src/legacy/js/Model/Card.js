@@ -47,6 +47,7 @@ class Card {
   get Level()             { return this.aCard.Level; }
   get AltLevel()          { return this.Alternative ? this.Alternative.Level : null; }
   get Klass()             { return this.aCard.Klass; }
+  get AltKlass()          { return this.Alternative ? this.Alternative.Klass : null; }
   get Attack()            { return this.aCard.Attack; }
   get Colonization()      { return this.aCard.Colonization; }
   get Science()           { return this.aCard.Science; }
@@ -62,10 +63,12 @@ class Card {
 
   isType(type)            { return this.aCard.isType(type); }
   isName(name)            { return name.toLowerCase() === this.Name.toLowerCase(); }
-  isAnyName(name)         { return [this.Name, this.AltName].includes(name.toLowerCase()); }
+  isAltName(name)         { return name.toLowerCase() === this.AltName.toLowerCase(); }
+  isAnyName(name)         { return this.isName(name) || this.isAltName(name); }
 
   isLevel(no)             { return this.Level === no; }
-  isAnyLevel(no)          { return this.Level === no || this.AltLevel === no; }
+  isAltLevel(no)          { return this.AltLevel === no; }
+  isAnyLevel(no)          { return this.isLevel(no) || this.isAltLevel(no); }
 
   turn()    { this._state.turn();return this; }
   alter()   { this._state.alter();return this; }

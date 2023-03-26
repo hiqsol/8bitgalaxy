@@ -69,7 +69,7 @@ class Start {
   }
 
   dealBase(card) {
-    if (card.isAnyLevel(2) && this._baseNum++ < 2) {
+    if (card.isAltLevel(1) && ['Production', 'Colonization'].includes(card.AltKlass)) {
       card.alter();
       this.home.star.put(card);
       return true;
@@ -78,7 +78,7 @@ class Start {
   }
 
   dealColony(card) {
-    if (card.isAnyLevel(2) && card.Klass == "Colonization") {
+    if (card.isAltLevel(1) && card.AltKlass == "Science") {
       card.alter();
       this.home.star.put(card);
       return true;
