@@ -80,20 +80,20 @@ function pile(card) {
   // game.draw(v, pile('Human-S6s'), new Params(x['1.4'],  y['6.5']));
 
 
-  game.draw(v, pile('Human-H2a'), new Params(x['2.1'],  y['1.5']));
-  game.draw(v, pile('Human-H2c'), new Params(x['2.2'],  y['1.5']));
-  game.draw(v, pile('Human-H2p'), new Params(x['2.3'],  y['1.5']));
-  game.draw(v, pile('Human-H2s'), new Params(x['2.4'],  y['1.5']));
+  game.draw(v, pile('Human-H1a'), new Params(x['2.1'],  y['1.0']));
+  game.draw(v, pile('Human-H1p'), new Params(x['2.2'],  y['1.0']));
+  game.draw(v, pile('Human-H2s'), new Params(x['2.3'],  y['2.0']));
+  game.draw(v, pile('Human-H2c'), new Params(x['2.4'],  y['2.0']));
 
-  game.draw(v, pile('Human-H4a'), new Params(x['2.1'],  y['3.5']));
-  game.draw(v, pile('Human-H4c'), new Params(x['2.2'],  y['3.5']));
-  game.draw(v, pile('Human-H4p'), new Params(x['2.3'],  y['3.5']));
-  game.draw(v, pile('Human-H4s'), new Params(x['2.4'],  y['3.5']));
+  game.draw(v, pile('Human-H3a'), new Params(x['2.1'],  y['3.0']));
+  game.draw(v, pile('Human-H3c'), new Params(x['2.2'],  y['3.0']));
+  game.draw(v, pile('Human-H4s'), new Params(x['2.3'],  y['4.0']));
+  game.draw(v, pile('Human-H4p'), new Params(x['2.4'],  y['4.0']));
 
-  game.draw(v, pile('Human-H6a'), new Params(x['2.1'],  y['5.5']));
-  game.draw(v, pile('Human-H6c'), new Params(x['2.2'],  y['5.5']));
-  game.draw(v, pile('Human-H6p'), new Params(x['2.3'],  y['5.5']));
-  game.draw(v, pile('Human-H6s'), new Params(x['2.4'],  y['5.5']));
+  game.draw(v, pile('Human-H5a'), new Params(x['2.1'],  y['5.0']));
+  game.draw(v, pile('Human-H5p'), new Params(x['2.2'],  y['5.0']));
+  game.draw(v, pile('Human-H6s'), new Params(x['2.3'],  y['6.0']));
+  game.draw(v, pile('Human-H6c'), new Params(x['2.4'],  y['6.0']));
 
   // game.draw(v, pile('Human-H7a'), new Params(x['2.1'],  y['7.5']));
   // game.draw(v, pile('Human-H7c'), new Params(x['2.2'],  y['7.5']));
@@ -101,20 +101,20 @@ function pile(card) {
   // game.draw(v, pile('Human-H7s'), new Params(x['2.4'],  y['7.5']));
 
 
-  game.draw(v, pile('Human-B2a'), new Params(x['3.1'],  y['2.0']));
-  game.draw(v, pile('Human-B2c'), new Params(x['3.2'],  y['2.0']));
-  game.draw(v, pile('Human-B2p'), new Params(x['3.3'],  y['2.0']));
-  game.draw(v, pile('Human-B2s'), new Params(x['3.4'],  y['2.0']));
+  game.draw(v, pile('Human-B2a'), new Params(x['3.1'],  y['1.5']));
+  game.draw(v, pile('Human-B2c'), new Params(x['3.2'],  y['1.5']));
+  game.draw(v, pile('Human-B2p'), new Params(x['3.3'],  y['1.5']));
+  game.draw(v, pile('Human-B2s'), new Params(x['3.4'],  y['1.5']));
 
-  game.draw(v, pile('Human-B4a'), new Params(x['3.1'],  y['4.0']));
-  game.draw(v, pile('Human-B4c'), new Params(x['3.2'],  y['4.0']));
-  game.draw(v, pile('Human-B4p'), new Params(x['3.3'],  y['4.0']));
-  game.draw(v, pile('Human-B4s'), new Params(x['3.4'],  y['4.0']));
+  game.draw(v, pile('Human-B4a'), new Params(x['3.1'],  y['3.5']));
+  game.draw(v, pile('Human-B4c'), new Params(x['3.2'],  y['3.5']));
+  game.draw(v, pile('Human-B4p'), new Params(x['3.3'],  y['3.5']));
+  game.draw(v, pile('Human-B4s'), new Params(x['3.4'],  y['3.5']));
 
-  game.draw(v, pile('Human-B6a'), new Params(x['3.1'],  y['6.0']));
-  game.draw(v, pile('Human-B6c'), new Params(x['3.2'],  y['6.0']));
-  game.draw(v, pile('Human-B6p'), new Params(x['3.3'],  y['6.0']));
-  game.draw(v, pile('Human-B6s'), new Params(x['3.4'],  y['6.0']));
+  game.draw(v, pile('Human-B6a'), new Params(x['3.1'],  y['5.5']));
+  game.draw(v, pile('Human-B6c'), new Params(x['3.2'],  y['5.5']));
+  game.draw(v, pile('Human-B6p'), new Params(x['3.3'],  y['5.5']));
+  game.draw(v, pile('Human-B6s'), new Params(x['3.4'],  y['5.5']));
 
   // game.draw(v, pile('Human-B7a'), new Params(x['3.1'],  y['7.5']));
   // game.draw(v, pile('Human-B7c'), new Params(x['3.2'],  y['7.5']));
@@ -138,7 +138,7 @@ function pile(card) {
   game.draw(v, pile('Human-C6s'), new Params(x['4.4'],  y['5.5']));
 
 
-  for (let i = 1;i<9;i++) {
+  for (let i = 1;i<7;i++) {
     let s = i.toString();
     game.draw(v, new Pile(s), new Params(x['5.1'], y[s+'.0']));
   }
