@@ -1,0 +1,2 @@
+- Can't move itself
+- Industrial - built for [[../../Resources/ProductionPower]]

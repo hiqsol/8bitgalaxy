@@ -1,0 +1,7 @@
+- Manage cards:
+    - Alter
+    - Turn
+    - Move to adjacent slot/pile
+- Can be done for any resource
+- [[../Resources/AttackPower]] allows manage:
+    - Moveable cards: [[../Objects/Cards/Ship]] and [[../Objects/Cards/Hero]]
