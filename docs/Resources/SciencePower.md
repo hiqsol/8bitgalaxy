@@ -1,1 +1,4 @@
-- Color - blue 
+- Color - blue
+- Used for:
+	- [[Manage]] any cards
+	- [[Research]]

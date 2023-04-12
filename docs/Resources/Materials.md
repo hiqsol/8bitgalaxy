@@ -1,0 +1,3 @@
+- Stockable resource
+- Stored at [[Colony]] or [[Base]]
+- Spent locally

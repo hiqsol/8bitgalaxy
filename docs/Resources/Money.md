@@ -1,0 +1,3 @@
+- Stockable resource
+- Stored at [[Home]]
+- Spent globally

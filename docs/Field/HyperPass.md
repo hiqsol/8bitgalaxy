@@ -1,0 +1,1 @@
+- Decreases distance to 0

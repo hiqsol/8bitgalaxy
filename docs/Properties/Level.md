@@ -1,0 +1,2 @@
+- 1 to 6
+- Card usually has two levels higher and lower

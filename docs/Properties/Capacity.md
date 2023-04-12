@@ -1,0 +1,2 @@
+- Total size (weight) it can transport
+- Default value= current [[Level]]

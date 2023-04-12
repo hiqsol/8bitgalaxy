@@ -1,0 +1,4 @@
+- Similar to [[../Actions/Manage|Manage]] action
+- Move card from [[../Home/Laboratory|Lab]] to [[../Home/Factory|Factory]]
+- Can only be done for [[../Resources/SciencePower|Science power]]
+- To research a card it is required to satisfy it's [[../Properties/Requirements|Requirements]]

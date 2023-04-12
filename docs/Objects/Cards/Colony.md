@@ -1,2 +1,0 @@
-- Can't move on itself
-- Social - built for [[../../Resources/SocialPower]]

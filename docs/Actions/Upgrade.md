@@ -1,0 +1,4 @@
+- Substitute a card for another card of the same type
+- Cost = [[../Properties/Level|Level]] of the new card
+- [[../Technologies/EfficientUpgrade|Efficient upgrade]] allows upgrade for difference
+- 

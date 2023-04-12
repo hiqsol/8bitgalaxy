@@ -1,0 +1,4 @@
+- Or **Weight**
+- Important for transporting - it's required to have enough capacity
+- Default value = lower [[Level]]
+- 

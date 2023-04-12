@@ -1,0 +1,11 @@
+- Represents Interstellar Space
+- Space sectors are hidden at the beginning of the game
+- Sectors can be revealed with [[Explore]]
+- Cards can't stop and stay in space,  they can only pass by
+- Types of space:
+	- Distance 1 - short space
+	- Distance 2 - long space
+	- Distance 3 - small asteroids
+	- Distance 4 - big asteroids
+	- Distance 5 - nebula (black hole)
+	- Distance 1 - Void - need technology to pass
