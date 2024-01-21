@@ -1,0 +1,3 @@
+- 🔴1 - [[Military]] technology Level 1
+- Open new [[Space]]
+- Cost - 

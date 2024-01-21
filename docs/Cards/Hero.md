@@ -1,4 +1,6 @@
-- [[../Properties/Range|Range]] = [[../Properties/Level|Level]] - can [[../Actions/Move|Move]]
-- [[../Properties/Range|Capacity]] = [[../Properties/Level|Level]] - can not perform [[../Actions/Transport|Transport]], but can take part
-- Social [[../Properties/Origin|Origin]]
-
+- [[Actor]]
+- [[Range]] = current [[Level]] - can [[Move]]
+- Can not [[Transport]] on ifself but can increase [[Capacity]] with current [[Level]]
+- Social [[Origin]]
+- Main use:
+	- Start action

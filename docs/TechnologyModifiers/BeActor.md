@@ -1,0 +1,1 @@
+- Allows to perform [[Actions|Action]] without Actor

@@ -1,6 +1,9 @@
-- Move card from one [[../Field/Star|Star]] to another
-- Can't stop in [[../Field/Space|Space]]
-- Destination [[../Field/Star|Star]] must be within [[../Properties/Range|Range]]
+- Move card(s):
+    - within one [[Star]] system
+    - from one [[Star]] to another
+- Can't finish in [[Space]]
+- Destination [[Star]] must be within [[Range]]
+	- Range can be increased with [[Support]]
 - Several cards can move together in group
-    - [[../Properties/Range|Range]] of the group is the average of the ranges of the cards
+    - [[Range]] of the group is the average of the ranges of the cards
 

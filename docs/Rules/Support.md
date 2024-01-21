@@ -1,0 +1,2 @@
+- Take part in [[PerformAction]] from remote
+- After action **supporters** are discarde

@@ -1,0 +1,7 @@
+- Or **Science** power
+- Color - **blue** 🔵
+- Main use:
+	- [[Research]]
+	- [[Manage]] any cards
+- Additional use:
+- 

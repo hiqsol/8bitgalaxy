@@ -1,0 +1,4 @@
+- consists of:
+	- [[Star]]s
+	- [[Space]]
+	- [[IPS]]

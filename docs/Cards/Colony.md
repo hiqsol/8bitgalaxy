@@ -1,3 +1,4 @@
-- 0 [[../Properties/Range|Range]] - can be transported, don't move
-- Social [[../Properties/Origin|Origin]] - built for [[../../Resources/SocialPower|Social power]]
+- 0 [[Range]] - don't move
+- [[Size]] = total [[Level]], can be [[Transport]]ed
+- Social [[Origin]] - built for [[Social]] power
 

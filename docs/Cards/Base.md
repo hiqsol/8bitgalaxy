@@ -1,3 +1,5 @@
-- 0 [[../Properties/Range|Range]] - can be transported, don't move
-- Industrial [[../Properties/Origin|Origin]] - built for [[../../Resources/ProductionPower|Production power]]
+- 0 [[Range]] - don't move
+- [[Size]] = total [[Level]], can be [[Transport]]ed
+- Industrial [[Origin]] - built for [[Industrial]] power
+- Main use:
 

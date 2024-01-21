@@ -1,0 +1,4 @@
+- Can the card start an [[Actions|Action]]
+	- True for [[Ship]] and [[Hero]]
+	- False for [[Base]] and [[Colony]]
+- Can be provided with [[BeActor]] technology

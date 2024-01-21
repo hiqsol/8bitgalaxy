@@ -1,0 +1,2 @@
+- Factory piles hold cards that are ready to be [[Build|built]]
+- 

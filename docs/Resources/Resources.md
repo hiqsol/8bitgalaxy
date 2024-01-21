@@ -1,0 +1,5 @@
+- Non-stockable:
+	- [[Power]]
+- Stockable:
+	- [[Materials]]
+	- [[Money]]

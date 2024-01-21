@@ -1,3 +1,4 @@
 - Stockable resource
-- Stored at [[Home]]
+- Represented as tokens stored at [[Home]]
 - Spent globally
+- Represented with [[Token]]s

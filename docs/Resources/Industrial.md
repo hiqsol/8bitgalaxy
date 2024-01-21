@@ -1,0 +1,6 @@
+- Or **Production** power
+- Color - **yellow** 🟡
+- Main use:
+	- [[Build]] / [[Upgrade]] industrial cards
+	- [[Manage]] industrial cards
+- Additional use:

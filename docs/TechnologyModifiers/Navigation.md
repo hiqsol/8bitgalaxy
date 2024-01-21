@@ -1,0 +1,2 @@
+- Allows moving through void [[Space]]
+- 

@@ -1,2 +1,6 @@
 - 1 to 6
-- Card usually has two levels higher and lower
+- Card has two levels higher and lower
+- Total level = sum of lower and higher level
+- Current level:
+	- in [[Star]] - the visible one
+	- in [[Hand]] - the lower one 

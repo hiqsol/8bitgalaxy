@@ -2,7 +2,7 @@
 - Mobility types:
 	- Moving - can move on itself, **Range** > 0: [[Ship]], [[Hero]]
 	- Transportable - can't move on itself but can be transported, **Range** = 0: [[Base]], [[Colony]]
-	- Immovable - can't move or be transported - [[../Technologies/Hyperpass|Hyperpass]]
+	- Immovable - can't move or be transported - [[Hyperpass]]
 - Default value:
-	- current [[../Properties/Level|Level]] for moving cards
+	- current [[Level]] for moving cards
 	- 0 for non-moving

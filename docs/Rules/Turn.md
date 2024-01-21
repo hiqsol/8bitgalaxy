@@ -1,0 +1,2 @@
+- Player has 2 [[Actions]] per turn
+- 

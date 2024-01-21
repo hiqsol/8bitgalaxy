@@ -1,4 +1,4 @@
 - Represents Star system with planets
 - Contains:
-	- Slots 
-	- IPS - Int
+	- Slots
+	- [[IPS]] - Interplanetary Space

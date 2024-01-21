@@ -1,0 +1,6 @@
+- 4 types:
+	- [[Ship]]
+	- [[Hero]]
+	- [[Base]]
+	- [[Colony]]
+- 

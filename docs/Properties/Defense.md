@@ -1,1 +1,1 @@
-- Default value=current [[Level]]
+- Default value = current [[Level]]

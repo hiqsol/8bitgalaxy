@@ -1,0 +1,10 @@
+- Spend resources to create new object(s)
+- Before action:
+    - Card has to be available at [[Factory]]
+- [[Actor]] cards:
+    - After creation are put to [[Discard]]
+- Non [[Actor]] cards:
+    - After creation are put to the [[Star]]
+    - [[PerformAction]] must be targeted to the [[Star]]
+- Cost = card's [[Cost]]
+- Multiple cards can be built in single action

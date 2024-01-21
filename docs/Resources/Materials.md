@@ -1,3 +1,4 @@
 - Stockable resource
-- Stored at [[Colony]] or [[Base]]
-- Spent locally
+- Represented as tokens stored at [[Colony]]
+	- Materials can't be stored at star without a [[Colony]]
+- Spent locally at [[Star]]

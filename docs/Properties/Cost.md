@@ -1,2 +1,2 @@
-- The cost of production
-- Default value= higher [[Level]]
+- The cost of production or upgrade
+- Default value = total [[Level]]

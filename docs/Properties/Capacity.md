@@ -1,2 +1,3 @@
 - Total size (weight) it can transport
 - Default value= current [[Level]]
+- Supporters add their lower level

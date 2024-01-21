@@ -66,6 +66,8 @@ Take debt
 
 ### Industrial
 
+- Arrange cards in reserve
+- Utilize - convert card to materials 
 - Conv - Industrial-converter: utilize any card to production power
     - Inactive - 1 point
     - Active - as many points as utilized card level

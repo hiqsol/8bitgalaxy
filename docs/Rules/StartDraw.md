@@ -1,0 +1,13 @@
+- [[Discard]]
+	- 4 ships 1/2
+	- 4 ships
+	- 2 heroes
+- Home star:
+	- 1 Metropolis
+	- 1 Shipyard 
+- [[Factory]]:
+	- 4 heroes
+	- 3 base
+	- 3 colonies 
+- [[Laboratory]]:
+	- hero

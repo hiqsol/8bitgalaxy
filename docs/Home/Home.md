@@ -1,2 +1,8 @@
 - Player's home
-- 
+- Consists of:
+	- [[Discard]]
+	- [[Reserve]]
+	- [[Hand]]
+	- [[Factory]]
+	- [[Laboratory]]
+	- 

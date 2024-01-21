@@ -1,0 +1,5 @@
+- Overload card
+- Use all abilities of card during [[Support]]
+- After action:
+	- card at [[Hand]] gets destroyed - goes to [[Factory]]
+	- card at [[Star]] becomes 
