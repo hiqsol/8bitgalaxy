@@ -6,8 +6,8 @@
 	- [[Size]], [[Capacity]] and [[Range]]
 	- [[Cost]] and [[Defense]]
 - [[Type]] - defines:
-	- [[Actor]]
+	- [[Actor]] / [[Structure]]
 	- [[Origin]]
 - [[PrimaryAbility]]
 - [[SecondaryAbility]]
-- [[Requirements]]
+- [[Prerequisites]]

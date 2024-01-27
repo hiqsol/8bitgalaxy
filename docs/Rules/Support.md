@@ -1,2 +1,7 @@
 - Take part in [[PerformAction]] from remote
-- After action **supporters** are discarde
+- Supporters add to action:
+	- From [[Hand]]:
+		- [[PrimaryAbility]] or [[SecondaryAbility]], not both
+	- From [[Star]]:
+		- [[Technology]] or [[Mastery]]
+- After action [[Deplete]] **supporters**

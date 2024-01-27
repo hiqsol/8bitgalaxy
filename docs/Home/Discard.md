@@ -1,2 +1,2 @@
-- Pile containing [[Actor]] cards after [[Discarding]]
+- Pile holding [[Actor]] cards after [[Deplete]]
 - Cards lay visible face up

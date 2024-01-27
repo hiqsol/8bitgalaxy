@@ -1,2 +1,4 @@
 - Or **Proficiency**
-- Measure of ability to use technology in [[PerformAction]]
+- Measure of ability to use technology in [[PerformAction]]:
+	- [[Technology]] requires mastery
+	- [[Cards]] provide mastery 

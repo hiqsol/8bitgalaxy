@@ -1,3 +1,6 @@
+- Or **Colonization** power 
 - Color - **green** 🟢
+- Social [[Origin]] cards:
+	- [[Hero]] and [[Colony]]
 - Main usage: [[Build]] / [[Upgrade]] social [[Cards]]
 - 

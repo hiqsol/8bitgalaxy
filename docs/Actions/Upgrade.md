@@ -1,10 +1,11 @@
-- Substitute a card for another card of the same type
-- Cost = [[Cost]] of the new card
-	- [[EfficientUpgrade]] allows upgrade for difference
-- Action destination is where the old card is:
-	- [[Actor] card - [[Discard]]
-	- non [[Actor]] - [[Star]]
-- After action:
-	- new card substitutes old card in place
-	- old card: goes to anywhere in [[Factory]]
+1. **Upgrade** action allows substitute a card for another card of the same type
+2. **Direction**:
+	1. [[Actor]] - [[Star]] to [[BuildingFacility]]
+	2. [[Structure]] - [[BuildingFacility]] to old card's [[Star]]
+3. **Cost**:
+	1. [[Cost]] of the new card
+	2. [[EfficientUpgrade]] allows upgrade for difference
+4. **After action**:
+	1. new card substitutes old card in place
+	2. old card: goes to anywhere in [[Factory]]
 

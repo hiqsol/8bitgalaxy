@@ -1,0 +1,3 @@
+- Star is controlled by player when one of the following conditions met:
+	- there are no alien structures
+	- there are alien structures but player has [[Actor]]

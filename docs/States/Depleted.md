@@ -1,0 +1,1 @@
+1. Altered to weaker side after [[Deplete]]

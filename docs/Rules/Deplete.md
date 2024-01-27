@@ -1,0 +1,5 @@
+1. After [[PerformAction]] is done all participants are depleted
+	- Keep from depleting technology???
+2. Cards get depleted differently:
+	1. [[Actor]] cards are go to [[Discard]]
+	2. [[Structure]] cards become (or stay) [[Depleted]]

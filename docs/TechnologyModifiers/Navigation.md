@@ -1,2 +1,1 @@
-- Allows moving through void [[Space]]
-- 
+1. Allows moving through void [[Space]]

@@ -1,6 +1,3 @@
-Consists of:
-- [[Field]] which in turn consists of:
-	- [[Star]]s
-	- [[Space]] between Stars
-	- [[IPS]]
-- [[Home]]s
+1. **Board** consists of:
+	1. [[Field]]
+	2. [[Home]]s

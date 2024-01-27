@@ -2,4 +2,4 @@
 - Similar to [[Manage]] action
 - Can be part of [[Manage]] action
 - Can only be done for [[Scientific]] power
-- To research a card it is required to satisfy it's [[Requirements]]
+- To research a card it is required to satisfy it's [[Prerequisites]]

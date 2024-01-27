@@ -1,4 +1,4 @@
-- consists of:
-	- [[Star]]s
-	- [[Space]]
-	- [[IPS]]
+1. Fields consists of:
+	1. [[Star]]s
+	2. [[Space]]
+	3. [[IPS]]

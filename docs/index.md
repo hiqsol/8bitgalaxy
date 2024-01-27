@@ -1,1 +1,2 @@
 - 4x Strategy
+- Main game rule is [[PerformAction]], start with it

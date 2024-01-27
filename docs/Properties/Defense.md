@@ -1,1 +1,1 @@
-- Default value = current [[Level]]
+1. Default value for card **Defense** = current [[Level]]

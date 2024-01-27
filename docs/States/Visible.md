@@ -1,5 +1,0 @@
-- Two types of visible
-- For everyone
-    - Anyone can take and look
-- For someone
-    - Else can't take and look

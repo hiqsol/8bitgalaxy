@@ -1,0 +1,3 @@
+- 
+- Prerequisites specify several pairs of [[Level]] and [[Class]] required to [[Research]] the card
+- 

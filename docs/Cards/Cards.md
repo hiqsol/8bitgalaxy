@@ -1,12 +1,10 @@
-- Actors:
-	- [[Hero]] - social, move, technology
+- [[Actor]]:
+	- [[Hero]] - social, move
 	- [[Ship]] - industrial, transport
-- Non actors:
+- [[Structure]]:
 	- [[Colony]] - social
 	- [[Base]] - industrial, technology
 
 - Quantity:
 	- Total ??
-	- Hero: 
-	- Ship: 
 

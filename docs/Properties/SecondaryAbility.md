@@ -1,0 +1,4 @@
+- Same as [[PrimaryAbility]]
+- But:
+	- Secondary abilities are usually weaker
+	- Not available when not visible when overlapped with other card

@@ -1,4 +1,4 @@
-Card may provide:
+Card can provide:
 - [[Power]]
 - [[Mastery]]
 - [[Technology]]

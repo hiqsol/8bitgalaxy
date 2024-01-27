@@ -1,4 +1,5 @@
-- 🟢1 - [[Industrial|Industrial]] technology, level 1
-- Allows build industrial cards: [[Ship]] and [[Base]]
-- The place where [[Ship]] start their move from [[Hand]]
+1. 🟢1 - [[Industrial|Industrial]] technology Level 1
+2. Any [[Industrial]] [[Base]] is **Shipyard**
+3. Shipyard is [[BuildingFacility]] for [[Industrial]] cards
+4. The place where [[Ship]] start their move from [[Hand]]
 

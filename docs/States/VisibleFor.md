@@ -1,0 +1,3 @@
+- Not [[Disabled]] or:
+	- Player has not [[Disabled]] card in the system
+- Player can not take a peek at a card that is not visible for him
