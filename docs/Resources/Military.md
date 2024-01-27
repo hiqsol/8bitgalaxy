@@ -1,11 +1,6 @@
-- Or **Attack** power
-- Color - **red** 🔴
-- Primary use:
-	- [[Attack]]
-	- [[Manage]] moving cards: [[Hero]] and [[Ship]]
-- Additional use:
-	- [[Explore]]
-	- Build [[DefSys]]
-
-
+1. **Military** or **Attack** power allows:
+	1. [[Attack]] enemies
+	2. [[Manage]] [[Actor]] cards
+	3. [[Explore]]
+2. Color - **red** 🔴
 

@@ -1,6 +1,6 @@
-- Non-stockable resource
-- Powers satisfy action cost requirements
-- Each of the four powers corresponds to the [[Class]] and color:
+1. **Power** is non-stockable resource
+2. Powers satisfy action cost requirements
+3. Each of the four powers corresponds to the [[Class]] and color:
 	- 🔴 [[Military]]	or **Attack**
 	- 🟡 [[Industrial]] or **Production**
 	- 🟢 [[Social]] s	or **Colonization**

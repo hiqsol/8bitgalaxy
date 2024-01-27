@@ -1,7 +1,4 @@
-- Or **Science** power
-- Color - **blue** 🔵
-- Main use:
-	- [[Research]]
-	- [[Manage]] any cards
-- Additional use:
-- 
+1. **Science** power allows:
+	1. [[Research]]
+	2. [[Manage]] any cards
+2. Color - **blue** 🔵

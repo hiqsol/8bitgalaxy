@@ -1,4 +1,4 @@
-- 0 [[Range]] - don't move
-- [[Size]] = total [[Level]], can be [[Transport]]ed
-- Social [[Origin]] - built for [[Social]] power
+1. 0 [[Range]] - don't move
+2. [[Size]] = total [[Level]], can be [[Transport]]ed
+3. [[Social]] [[Origin]] - built for [[Colonization]] power at [[Academy]]
 
