@@ -17,6 +17,6 @@
 |Production| |+|+| |
 |Science|+|+|+|+|
 
-## Notes
+#### Notes
 
 - E.g. [[Military]] power allows manage [[Hero]] and [[Ship]] cards

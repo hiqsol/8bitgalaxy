@@ -1,2 +1,5 @@
-- 4x Strategy
+- 4x Strategy with:
+    - deck building
+    - worker placement
+    - engine building
 - Main game rule is [[PerformAction]], start with it
