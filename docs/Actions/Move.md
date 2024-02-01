@@ -1,6 +1,10 @@
 1. **Move** action allows move card(s):
-    1. within one [[Star]] system
-    2. from one [[Star]] to another
+    1. Within one [[Star]] system
+        - to other in [[IPS]]
+        - [[IPS]] to [[StarGate]] or back
+        - **distance** = 1 for such movements
+    2. From one [[Star]] to another:
+        - see the [[Distance]] calculation
 2. Can't finish in [[Space]]
 3. Destination [[Star]] must be within [[Range]]
     1. Range can be increased with [[Support]]

@@ -1,22 +1,23 @@
 1. **Manage** action allows to perform manipulation over cards:
-	- **Alter**:
+	1. **Alter**:
 		- to strong side - [[Restore]]
 		- to weak side - [[Deplete]]
 		- cost - 1 power per card
-	- **Shift** to adjacent slot/pile:
-		- within same [[Star]]
-		- within [[Laboratory]] or [[Factory]] row
-2. Manage action can be done for any power, but:
-	1. only one type of power per action
+	2. **Shift**:
+		- to any free slot within the same [[IPS]]
+		- any pile within [[Laboratory]] or [[Factory]] row
+2. Manage action can be done with any power, but:
+	1. only the type of power given by the [[Actor]]
 	2. with limitations, see table below
 
-|Power|Hero|Ship|Base|Colony|
-|---|---|---|---|---|
-|Attack|+|+| | |
-|Colonization|+| | |+|
-|Production| |+|+| |
-|Science|+|+|+|+|
+| Object    | Mil | Soc | Ind | Sci |
+|-----------|-----|-----|-----|-----|
+| Hero      |  +  |  +  |     |  +  |
+| Ship      |  +  |     |  +  |  +  |
+| Colony    |     |  +  |     |  +  |
+| Base      |     |     |  +  |  +  |
 
 #### Notes
 
 - E.g. [[Military]] power allows manage [[Hero]] and [[Ship]] cards
+- The table is same as for [[Manage]] action

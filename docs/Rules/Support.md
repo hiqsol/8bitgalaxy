@@ -1,7 +1,7 @@
-- Take part in [[PerformAction]] from remote
-- Supporters add to action:
-	- From [[Hand]]:
-		- [[PrimaryAbility]] or [[SecondaryAbility]], not both
-	- From [[Star]]:
-		- [[Technology]] or [[Mastery]]
-- After action [[Deplete]] **supporters**
+1. **Support** is taking part in [[PerformAction]] from remote
+2. **Supporters** add to action only one of their abilities:
+		- [[PrimaryAbility]]
+		- [[SecondaryAbility]]
+		- [[Range]]
+		- [[Capacity]]
+3. After action [[Deplete]] **supporters**
