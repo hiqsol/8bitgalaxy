@@ -8,9 +8,7 @@ class StarDrawer extends aDrawer {
     super(drawer);
     this._HTML = `
       <div class="Star">
-        <div class="hexagon">
-          <div class="Id"></div>
-        </div>
+        <div class="Id"></div>
       </div>
     `;
   }

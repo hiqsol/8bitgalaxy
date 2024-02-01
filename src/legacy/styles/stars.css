@@ -1,4 +1,3 @@
-
 .Star {
     position: absolute;
     color: #556;
@@ -6,8 +5,8 @@
 
 .Star .Id {
     position: absolute;
-    top: -40%;
-    left: 50%;
+    top: 50px;
+    left: 320px;
     font-size: 30px;
     color: #555555;
     z-index: 2;
@@ -18,46 +17,4 @@
     left: 140px;
     top: -140px;
     font-size: 300px;
-}
-
-.hexagon {
-    position: relative;
-    width: 700px;
-    height: 404.15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 202.07px 0;
-    box-shadow: 0 0 9px rgba(0, 0, 0, 1);
-}
-
-.hexagon:before, .hexagon:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 494.97px;
-    height: 494.97px;
-    -webkit-transform: scaleY(0.5774) rotate(-45deg);
-    -ms-transform: scaleY(0.5774) rotate(-45deg);
-    transform: scaleY(0.5774) rotate(-45deg);
-    background-color: inherit;
-    left: 102.5126px;
-    box-shadow: 0 0 9px rgba(0, 0, 0, 1);
-}
-
-.hexagon:before {
-    top: -247.4874px;
-}
-
-.hexagon:after {
-    bottom: -247.4874px;
-}
-
-.hexagon span {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 700px;
-    height: 404.1452px;
-    z-index: 2;
-    background: inherit;
 }
