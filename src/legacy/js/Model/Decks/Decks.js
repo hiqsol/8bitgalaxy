@@ -9,7 +9,6 @@ import Assert from "../Assert.js";
 import Human from "./Human.js";
 import AI from "./AI.js";
 import Other from "./Other.js";
-import Generator from "./Generator.js";
 
 class Decks {
   static get(name) {
@@ -20,16 +19,12 @@ class Decks {
   }
 
   static getCard(name) {
-    let res = Decks.get(name);
-    //console.log(name);
-    //console.log(res);throw new Error('die');
     return new aCard(Decks.get(name));
   }
 
   static _all = undefined;
   static all() {
     if (Decks._all === undefined) {
-      //let src = (new Generator().all());
       let src = Decks.allAnyCase();
       Decks._all = Object.keys(src).reduce(function (dst, key) {
         dst[key.toLowerCase()] = src[key];

@@ -5,12 +5,19 @@ class Type {
     this._name = Type.assertName(name);
   }
 
+  toString()        { return this._name; }
+  toLowerCase()     { return this._name.toLowerCase(); }
+
+  static get(name)  { return Objects[Type.assertName(name)]; }
+  equals(type)      { return this._name === Type.assertName(type); }
+
   get name()        { return this._name; }
   get isHero()      { return this._name === Names.Hero; }
   get isShip()      { return this._name === Names.Ship; }
   get isBase()      { return this._name === Names.Base; }
   get isColony()    { return this._name === Names.Colony; }
-  get isEstate()    { return this.isBase || this.isColony; }
+  get isActor()     { return this.isHero || this.isShip; }
+  get isStructure() { return this.isBase || this.isColony; }
 
   static get list()             { return List; }
   static get Names()            { return Names; }
@@ -43,6 +50,9 @@ class Type {
   }
 
   static assertName(name) {
+    if (name instanceof(Type)) {
+      return name.name;
+    }
     if (typeof(name) !== 'string') {
       Assert.error('wrong Type given', name);
     }
@@ -71,6 +81,13 @@ const List = Object.freeze({
   Base:   'Base',
   Ship:   'Ship',
   Colony: 'Colony',
+})
+
+const Objects = Object.freeze({
+  Hero:   new Type(Names.Hero),
+  Base:   new Type(Names.Base),
+  Ship:   new Type(Names.Ship),
+  Colony: new Type(Names.Colony),
 })
 
 export default Type;

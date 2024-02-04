@@ -27,11 +27,13 @@ class aCard {
   get Cooperation()       { return this.Specs.Cooperation; }
   get hasRequirements()   { return this.Specs.Requires == undefined; }
 
-  get isHero()            { return this.isType(Type.Hero); }
-  get isColony()          { return this.isType(Type.Colony); }
-  get isShip()            { return this.isType(Type.Ship); }
-  get isBase()            { return this.isType(Type.Base); }
-  isType(type)            { return this.Type.toLowerCase() === type.toLowerCase(); }
+  isType(type)            { return this.Type.equals(type); }
+  get isHero()            { return this.Type.isHero; }
+  get isColony()          { return this.Type.isColony; }
+  get isShip()            { return this.Type.isShip; }
+  get isBase()            { return this.Type.isBase; }
+  get isActor()           { return this.Type.isActor; }
+  get isStructure()       { return this.Type.isStructure; }
 
   getValue(prop)          { return this.Specs.getValue(prop); }
 

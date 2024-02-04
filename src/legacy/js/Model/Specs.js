@@ -1,6 +1,7 @@
 import Prop from "./Prop.js";
 import Spec from "./Spec.js";
 import Pair from "./Pair.js";
+import Type from "./Type.js";
 import Assert from "./Assert.js";
 
 class Specs {
@@ -13,7 +14,7 @@ class Specs {
 
   get Specs()             { return this._specs; }
   get Name()              { return this.getValue(Prop.Name); }
-  get Type()              { return this.getValue(Prop.Type); }
+  get Type()              { return Type.get(this.getValue(Prop.Type)); }
   get Race()              { return this.getValue(Prop.Race); }
   get Level()             { return this.getIntValue(Prop.Level, 0); }
   get Klass()             { return this.getValue(Prop.Klass); }

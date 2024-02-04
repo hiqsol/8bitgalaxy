@@ -60,6 +60,8 @@ class Card {
   get isColony()          { return this.aCard.isColony; }
   get isShip()            { return this.aCard.isShip; }
   get isBase()            { return this.aCard.isBase; }
+  get isActor()           { return this.aCard.isActor; }
+  get isStructure()       { return this.aCard.isStructure; }
 
   isType(type)            { return this.aCard.isType(type); }
   isName(name)            { return name.toLowerCase() === this.Name.toLowerCase(); }

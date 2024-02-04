@@ -1,6 +1,5 @@
 import Home from "./Home.js";
 import Pile from "./Pile.js";
-import Decks from "./Decks/Decks.js";
 
 class Start {
   constructor(home) {
@@ -42,12 +41,10 @@ class Start {
   }
 
   dealCard(card) {
-    switch (card.Type) {
-      case "Ship":    return this.dealShip(card);
-      case "Hero":    return this.dealHero(card);
-      case "Base":    return this.dealBase(card);
-      case "Colony":  return this.dealColony(card);
-    }
+    if (card.Type.isShip)   return this.dealShip(card);
+    if (card.Type.isHero)   return this.dealHero(card);
+    if (card.Type.isBase)   return this.dealBase(card);
+    if (card.Type.isColony) return this.dealColony(card);
     return false;
   }
 

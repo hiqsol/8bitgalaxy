@@ -1,4 +1,3 @@
-import Drawer from "./Drawer.js";
 import aDrawer from "./aDrawer.js";
 
 class SlotDrawer extends aDrawer {
@@ -16,6 +15,8 @@ class SlotDrawer extends aDrawer {
       types = ['Hero', 'Ship'];
     } else if (slots.isName('Base')) {
       types = ['Base', 'Colony'];
+    } else if (slots.isName('Ship')) {
+      types = ['Hero', 'Ship'];
     }
     for (let type of types) {
       e.classList.add('for-' + type);
