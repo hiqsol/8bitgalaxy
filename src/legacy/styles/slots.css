@@ -34,11 +34,6 @@
     width: 250px;
     height: 250px;
 }
-.Star .Slot.TopToBottom.for-Hero,
-.Star .Slot.TopToBottom .Hero:not(.dragging):not(.Turned) {
-    width: 250px;
-    height: 150px;
-}
 
 .Star .Slot .Card:not(.Turned).Altered .Specs.Normal,
 .Star .Slot .Card:not(.Turned):not(.Altered):not(.dragging) .Specs.Alternative {
