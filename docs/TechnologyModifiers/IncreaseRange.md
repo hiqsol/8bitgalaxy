@@ -1,3 +1,2 @@
-- Improves [[Move]] and [[Transport]] action
-- [[Scientific]] technology
-- Allows to move further
+1. Increase range technology allows to [[Move]] and [[Transport]] further 
+2. [[Scientific]] technology Level ?

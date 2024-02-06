@@ -1,1 +1,1 @@
-1. **Restore** is altering card to 
+1. **Restore** is altering card to strong side
