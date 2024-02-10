@@ -1,10 +1,9 @@
 - [[Discard]]
 	- 4 ships 1/2
-	- 4 ships
-	- 2 heroes
+	- 2 heroes 1/1
 - Home star:
-	- 1 Metropolis
-	- 1 Shipyard 
+	- 1 [[Academy]] colony 1/2
+	- 1 [[Shipyard]] base 1/2
 - [[Factory]]:
 	- 4 heroes
 	- 3 base

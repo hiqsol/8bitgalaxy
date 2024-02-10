@@ -1,2 +1,1 @@
-Lab decks hold cards that are:
-- must researched to be
+1. **Laboratory** decks hold cards that  must be [[Research]]ed before building

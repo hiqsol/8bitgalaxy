@@ -1,5 +1,0 @@
-- After [[PerformAction]] is done all participants are discarded
-	- Keep from discarding technology???
-- Cards are discarded differently:
-	- [[Actor]] cards are discarded to [[Discard]]
-	- Non-actor cards are altered to weaker side

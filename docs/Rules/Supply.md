@@ -1,2 +1,3 @@
-1. **Supply** allows to add more power to action by spending **stockable** [[Resources]]
-2. 
+1. **Supply** is adding more power to action by spending **stockable** [[Resources]]
+2. A participant can **supply** to an action not more than it's [[Capacity]]
+#### Notes

@@ -19,5 +19,5 @@
 
 #### Notes
 
-- E.g. [[Military]] power allows manage [[Hero]] and [[Ship]] cards
-- The table is same as for [[Manage]] action
+1. E.g. [[Military]] power allows manage [[Hero]] and [[Ship]] cards
+2. The table is same as for [[Transport]] action

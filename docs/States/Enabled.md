@@ -1,0 +1,1 @@
+1. **Enabled** is opposite to [[Disabled]] - the card is turned face up

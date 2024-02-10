@@ -1,4 +1,6 @@
-1. **Research** action allows move card from [[Laboratory]] to [[Factory]]
+1. **Research** action allows to move card:
+	1. From [[Laboratory]] to [[Factory]]
+	2. Between [[Laboratory]]s
 2. Similar to [[Manage]] action
 3. Can be part of [[Manage]] action
 4. Can only be done for [[Scientific]] power

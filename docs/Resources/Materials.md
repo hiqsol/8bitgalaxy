@@ -6,4 +6,4 @@
 6. Spent locally - can be added to action starting or finishing where is stored
 7. One can not add more materials then were added with abilities 
 #### Notes
-- Materials can't be stored at star without a [[Colony]]
+1. Materials can't be stored at star without a [[Colony]]

@@ -1,0 +1,1 @@
+1. **Invent** action allows to [[Research]] card from inside of pile
