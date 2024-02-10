@@ -1,2 +1,9 @@
-- [[Explore]]
-- 
+- Military:
+    - [[Explore]]
+- Industrial:
+    - [[Extract]]
+- Cultural:
+    - [[Trade]] / [[Smuggle]]
+    - [[Sell]]
+- Scientific:
+    - [[Research]] / [[Invent]]

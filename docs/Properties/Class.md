@@ -1,3 +1,5 @@
-Each class corresponds to the [[Power]] and color:
-- 🔴 [[Military]]
-- 
+1. Each **class** corresponds to the [[Power]] and color:
+	- 🔴 [[Military]]
+	- 🟡 [[Production]]
+	- 🟢 [[Culture]]
+	- 🔵 [[Scientific]]

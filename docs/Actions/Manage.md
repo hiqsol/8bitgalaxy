@@ -10,7 +10,7 @@
 	1. only the type of power given by the [[Actor]]
 	2. with limitations, see table below
 
-| Object    | Mil | Soc | Ind | Sci |
+| Object    | Mil | Cul | Ind | Sci |
 |-----------|-----|-----|-----|-----|
 | Hero      |  +  |  +  |     |  +  |
 | Ship      |  +  |     |  +  |  +  |

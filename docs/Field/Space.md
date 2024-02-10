@@ -5,7 +5,8 @@
 5. Types of space:
 	1. Distance 1 - short space
 	2. Distance 2 - long space
-	3. Distance 3 - far space
-	4. Distance 4 - asteroids
-	5. Distance 5 - black hole
+	3. Distance 3 - short space with asteroids (1+2)
+	4. Distance 4 - long space with asteroids  (2+2)
+	5. Distance 5 - short void
 	6. Distance 1 - Void - need [[Navigation]] technology to pass
+

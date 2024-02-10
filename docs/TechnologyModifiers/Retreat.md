@@ -1,5 +1,5 @@
-1. **Retreat** technology allows to flee from [[Combat]]
-2. [[Military]] technology Level 3-4
+1. **Retreat** technology allows to escap from [[Combat]]
+2. [[Military]] technology Level 2
 3. Finish the [[Combat]]
 4. Return **direct participants** [[Actor]] cards to [[Discard]]
 #### Notes

@@ -1,4 +1,0 @@
-- Color - **yellow**
-- Used for:
-	- [[Build]] / [[Upgrade]] industrial cards
-	- [[Manage]] industrial cards

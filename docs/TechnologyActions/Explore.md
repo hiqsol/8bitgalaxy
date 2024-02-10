@@ -1,4 +1,3 @@
-1. 🔴1 - [[Military]] technology Level 1
-2. Allows reveal hidden [[Space]]
-3. Direction: [[Star]] to [[Space]]
-4. Requirements:
+1. **Explore** action allows reveal hidden [[Space]]
+2. **Explore** is [[Scientific]] technology Level 1
+3. **Direction**: [[Star]] to [[Space]]

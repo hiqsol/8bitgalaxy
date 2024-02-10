@@ -1,2 +1,2 @@
-- [[Military]] technology Level 4
-- Allows to perform one more [[Actions|Action]]
+1. Allows to perform one more [[Action]]
+2. [[Military]] technology Level 4
