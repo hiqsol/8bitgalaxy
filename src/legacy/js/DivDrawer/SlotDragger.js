@@ -61,13 +61,6 @@ class SlotDragger extends aDragger {
     const type = Type.assert(elem);
     if (!cl.contains('droppable')) return null;
     if (cl.contains('Slot')) {
-      if (elem.classList.contains('Turned')) {
-        if (cl.contains('for-Hero') && !cl.contains('for-Ship')) {
-          return null;
-        } else {
-          return elem;
-        }
-      }
       if (!cl.contains('for-' + type.name)) {
         return null;
       }
