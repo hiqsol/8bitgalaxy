@@ -28,10 +28,6 @@
 .Card[draggable=true] {
     cursor: grab;
 }
-.Card.Unknown.Turned.dragging {
-    width: 250px;
-    height: 350px;
-}
 
 .Ship, .Hero, .Tech {
     width: 250px;
