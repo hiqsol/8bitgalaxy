@@ -1,25 +1,32 @@
+.Card.Turned .Back1 {
+    display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.Card.Turned .Back2 {
+    display: block;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 .Card.Hero.Turned .Back1,
 .Card.Ship.Turned .Back1 {
-    display: block;
     width: 250px;
     height: 175px;
 }
 .Card.Hero.Turned .Back2,
 .Card.Ship.Turned .Back2 {
-    display: block;
     width: 250px;
     height: calc(100% - 175px);
 }
 
 .Card.Base.Turned .Back1,
 .Card.Colony.Turned .Back1 {
-    display: block;
     width: 350px;
     height: 125px;
 }
 .Card.Base.Turned .Back2,
 .Card.Colony.Turned .Back2 {
-    display: block;
     width: 350px;
     height: calc(100% - 125px);
 }
@@ -43,4 +50,3 @@
       rgba(0, 0, 0, 0.3) 30px
     )
 }
-
