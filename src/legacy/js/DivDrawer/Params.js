@@ -56,6 +56,9 @@ class Params {
 
   setClassList(classList) { this.classList = classList; return this; }
 
+  static xyleft(x, y) { return new Params(x, y, Direction.LeftToRight); }
+  static xytop (x, y) { return new Params(x, y, Direction.TopToBottom); }
+
   static assert(sample) {
     if (sample instanceof(Params)) {
       return sample;

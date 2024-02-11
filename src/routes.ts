@@ -1,4 +1,5 @@
 import Index from "./legacy/Index.vue";
+import Card from "./legacy/Card.vue";
 import Cards from "./legacy/Cards.vue";
 import Start from "./legacy/Start.vue";
 import Home from "./legacy/Home.vue";
@@ -14,18 +15,19 @@ import Deck from "./legacy/Deck.vue";
 import Deck2 from "./legacy/Deck2.vue";
 
 export default [
-  { path: "/", component: Index },
-  { path: "/cards", component: Cards },
-  { path: "/start", component: Start },
-  { path: "/home", component: Home },
-  { path: "/home2", component: Home2 },
-  { path: "/full", component: Full },
-  { path: "/adeck", component: ADeck },
-  { path: "/stars", component: Stars },
-  { path: "/pile", component: Pile },
-  { path: "/gen", component: Gen },
-  { path: "/field", component: Field },
-  { path: "/board", component: Board },
-  { path: "/deck", component: Deck },
-  { path: "/deck2", component: Deck2 },
+  {path: "/", component: Index},
+  {path: "/card", component: Card},
+  {path: "/cards", component: Cards},
+  {path: "/start", component: Start},
+  {path: "/home", component: Home},
+  {path: "/home2", component: Home2},
+  {path: "/full", component: Full},
+  {path: "/adeck", component: ADeck},
+  {path: "/stars", component: Stars},
+  {path: "/pile", component: Pile},
+  {path: "/gen", component: Gen},
+  {path: "/field", component: Field},
+  {path: "/board", component: Board},
+  {path: "/deck", component: Deck},
+  {path: "/deck2", component: Deck2},
 ];

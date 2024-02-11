@@ -6,7 +6,6 @@
   import Game from "./js/Game.js";
   import Card from "./js/Model/Card.js";
   import Pile from "./js/Model/Pile.js";
-  import Decks from "./js/Model/Decks/Decks.js";
   import Params from "./js/DivDrawer/Params.js";
   import Direction from "./js/DivDrawer/Direction.js";
 

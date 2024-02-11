@@ -1,24 +1,26 @@
+<template>
+</template>
+
 <script setup>
-import Demo from "./js/Demo.js";
-import Card from "./js/Model/Card.js";
+import Game from "./js/Game.js";
 import Pile from "./js/Model/Pile.js";
+import Params from "./js/DivDrawer/Params.js";
 
-let game = (new Demo()).game;
-let vert = new Pile("Discard");
-vert.put("AI-Hero-1a");
+let g = new Game();
+g.draw(null, g.scoreboard);
 
-let v = game.draw(null, vert, 1, 1);
-game.draw(v, Card.assert("Human-Ship-2c"), 0, 8);
-game.draw(v, Card.assert("Human-Base-3s"), 0, 8 * 2);
-game.draw(v, Card.assert("Human-Colony-4p"), 0, 8 * 3);
-game.draw(v, Card.assert("Human-Tech-5c"), 0, 8 * 4);
+let horz = new Pile(g, "");
+let h = g.draw(null, horz, Params.xytop(1, 1));
+g.draw(h, g.card("Human-S2c"), Params.xyleft(0*8, 0));
+g.draw(h, g.card("Human-H5c"), Params.xyleft(1*8, 0));
+g.draw(h, g.card("Human-B3s"), Params.xyleft(2*8, 0));
+g.draw(h, g.card("Human-C4p"), Params.xyleft(3*8, 0));
 
-let horz = new Pile("Discard", "LeftToRight");
-horz.put("AI-Hero-1a");
+let vert = new Pile(g, "");
+let v = g.draw(null, vert, Params.xyleft(1, 10));
+g.draw(v, g.card("Martian-S2c"), Params.xyleft(0,   0));
+g.draw(v, g.card("Martian-H5c"), Params.xyleft(1*8, 0));
+g.draw(v, g.card("Martian-B3s"), Params.xyleft(2*8, 0));
+g.draw(v, g.card("Martian-C4p"), Params.xyleft(3*8, 0));
 
-let h = game.draw(null, horz, 10, 1);
-game.draw(h, Card.assert("Human-Ship-2c"), 0, 8);
-game.draw(h, Card.assert("Human-Base-3s"), 0, 8 * 2);
-game.draw(h, Card.assert("Human-Colony-4p"), 0, 8 * 3);
-game.draw(h, Card.assert("Human-Tech-5c"), 0, 8 * 4);
 </script>

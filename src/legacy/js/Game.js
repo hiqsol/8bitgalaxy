@@ -81,8 +81,8 @@ class Game {
     }
   }
 
-  draw(parent = null, obj = null, y, x) {
-    return this.drawer.draw(parent, obj ?? this, y, x);
+  draw(parent = null, obj = null, params = null) {
+    return this.drawer.draw(parent, obj ?? this, params);
   }
 
   redraw() {

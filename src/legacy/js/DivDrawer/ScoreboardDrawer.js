@@ -1,5 +1,3 @@
-import Game from '../Game.js';
-import Drawer from './Drawer.js';
 import aDrawer from './aDrawer.js';
 
 class ScoreboardDrawer extends aDrawer {
