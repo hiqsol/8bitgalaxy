@@ -15,10 +15,10 @@
 }
 
 .droppable:hover {
-    border: 1px solid #aaa;
+    border: 1px solid #fff;
 }
 .droppable.hover {
-    border: 5px solid #aaa;
+    border: 5px solid #fff;
 }
 
 .Pile .Name .Value {
