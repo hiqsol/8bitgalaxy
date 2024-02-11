@@ -1,4 +1,4 @@
-1. [[Social]] technology Level 2
+1. **Trade** is [[Social]] technology Level 2
 2. **Trade** action:
     1. Allows to convert [[Materials]] to [[Money]]
     2. Performed as [[Transport]] materials between two nations
@@ -9,4 +9,5 @@
     - Authorization from party nation
 4. **Outcome**:
     - Every item of transported materials converts to [[Money]]
+    - Party nation gets 1 item of [[Materials]]
 

@@ -1,0 +1,1 @@
+1. **Stealth** technology allows to [[Move]] secretly, in [[Hidden]] state

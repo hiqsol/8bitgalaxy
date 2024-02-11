@@ -5,26 +5,28 @@
     1. [[Mastery]]
 
 - Military:
-    - [[Recon]] Action
-    - [[Retreat]] Modifier
+    - [[Recon]] Action - Any
+    - [[Retreat]] Modifier - 
     - [[Militarization]] Modifier
     - [[DrawMore]] Modifier
     - [[Exhaust]] Modifier
-    - [[AdditionalAction]] Modifier
+    - [[Stealth]] Modifier
 - Social:
-    - [[Academy]] Facility
+    - [[Academy]] Facility - Colony
     - [[Sell]] Action
     - [[Trade]] Action
     - [[Smuggle]] Action
 - Industrial:
-    - [[Shipyard]] Facility
-    - [[Extract]] Action
-    - [[NewFactory]] Action
+    - [[Shipyard]] Facility - Base, Ship
+    - [[Extract]] Action - Base, Ship
+    - [[NewFactory]] Action - Any
+    - [[Repair]] Action - Any
 - Scientific:
     - [[Research]] Action
     - [[Explore]] Action
-    - [[Invent]] Modifier
+    - [[Invent]] Modifier - 
     - [[Navigation]] Modifier
+    - [[AdditionalAction]] Modifier
 
 
 
