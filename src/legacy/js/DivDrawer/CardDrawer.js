@@ -1,7 +1,5 @@
-import Drawer from "./Drawer.js";
 import Params from "./Params.js";
 import aDrawer from './aDrawer.js';
-import Assert from '../Model/Assert.js';
 import TurnCard from '../Model/History/TurnCard.js';
 import AlterCard from '../Model/History/AlterCard.js';
 
@@ -10,6 +8,8 @@ class CardDrawer extends aDrawer {
     super(drawer);
     this._HTML = `
       <div class="Card">
+        <span class="Back1"></span>
+        <span class="Back2"></span>
         <div class="Image"><div class="Klass lni"></div></div>
         <div class="Name"><div class="Value">Name</div></div>
       </div>
