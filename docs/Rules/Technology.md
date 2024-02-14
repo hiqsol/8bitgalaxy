@@ -8,7 +8,7 @@
     - [[Recon]] Action - Any
     - [[Retreat]] Modifier - 
     - [[Militarization]] Modifier
-    - [[DrawMore]] Modifier
+    - [[DrawMore]] Modifier (+draw)
     - [[Exhaust]] Modifier
     - [[Stealth]] Modifier
 - Social:
@@ -16,9 +16,11 @@
     - [[Sell]] Action
     - [[Trade]] Action
     - [[Smuggle]] Action
+    - [[DoNotDeplete]] Modifier (-deplete)
 - Industrial:
     - [[Shipyard]] Facility - Base, Ship
     - [[Extract]] Action - Base, Ship
+    - [[Dismantle]] Action - 
     - [[NewFactory]] Action - Any
     - [[Repair]] Action - Any
 - Scientific:

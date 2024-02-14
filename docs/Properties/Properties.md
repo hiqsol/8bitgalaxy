@@ -1,5 +1,7 @@
 ## Card properties
 
+![props](https://8bitgalaxy.com/images/card.png)
+
 - [[Nation]]
 - [[Class]]
 - [[Level]] implies:
