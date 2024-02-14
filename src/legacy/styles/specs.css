@@ -160,7 +160,6 @@
     font-size: 26px;
     font-weight: 900;
     /*-webkit-text-stroke: 1px white;*/
-    filter: brightness(80%);
 }
 
 .Spec.Attack .Value,

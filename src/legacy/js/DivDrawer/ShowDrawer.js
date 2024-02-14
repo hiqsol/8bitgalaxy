@@ -33,22 +33,27 @@ class ShowDrawer extends aDrawer {
 
     this.drawNote(
       copy.querySelector(".Normal .Spec.Level .Value"),
-      'Level', 3
+      'Level', 3.5, Params.xy(35.0/50, 10.0/50)
+    );
+
+    this.drawNote(
+      copy.querySelector(".Normal .Spec.Level .Value"),
+      'Class', 2.6, Params.xy(60.0/50, 5.0/50)
     );
 
     this.drawNote(
       copy.querySelector(".Image .Klass"),
-      'Type', 3, new Params(1.5, 1)
+      'Type', 3, Params.xy(1.5, 1)
     );
 
     this.drawNote(
       copy.querySelector(".Normal .Spec.Power .Value"),
-      'Power', 1
+      'Primary', 1
     );
 
     this.drawNote(
       copy.querySelector(".Normal .Spec.Cooperation .Value"),
-      'More', 0.1
+      'Secondary', 0.1
     );
   }
 

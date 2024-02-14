@@ -88,10 +88,11 @@ class Params {
     return this;
   }
 
+  static xy    (x, y) { return new Params(x, y); }
   static xyleft(x, y) { return new Params(x, y, Direction.LeftToRight); }
   static xytop (x, y) { return new Params(x, y, Direction.TopToBottom); }
   static hidden()     { return (new Params()).hide(); }
-  static rt(r, t)     { return (new Params()).rt(r, t); }
+  static rt    (r, t) { return (new Params()).rt(r, t); }
 
   static assert(sample) {
     if (sample instanceof(Params)) {
