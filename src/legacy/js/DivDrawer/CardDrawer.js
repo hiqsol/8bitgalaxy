@@ -74,6 +74,10 @@ class CardDrawer extends aDrawer {
     };
   }
 
+  removeShowEvents(e) {
+    e.onmouseenter = null;
+    e.onmouseleave = null;
+  }
 
   drawImage(e, specs) {
     let i = e.querySelector(".Image .Klass.lni");

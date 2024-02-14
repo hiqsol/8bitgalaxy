@@ -1,5 +1,4 @@
 import {Div} from './DivDrawer.js';
-import Drawer from './Drawer.js';
 import Params from './Params.js';
 import aDrawer from './aDrawer.js';
 
@@ -23,6 +22,7 @@ class ShowDrawer extends aDrawer {
       return;
     }
     let copy = card.cloneNode(true);
+    copy.hidden = false;
     copy.id = 'ShowCopy.' + card.id;
     copy.draggable = false;
     copy.style.top = null;
@@ -57,6 +57,13 @@ class ShowDrawer extends aDrawer {
   }
 
   drawNote(parent, text, d, params = new Params().rt(0, 0)) {
+    let inverted = params.copy();
+    inverted.addClass('Inverted').addRT(-1.0/50, -1.0/50);
+    this.drawOneNote(parent, text, d, params);
+    this.drawOneNote(parent, text, d, inverted);
+  }
+
+  drawOneNote(parent, text, d, params = new Params().rt(0, 0)) {
     if (!parent) return;
     let y = -1*d;
     let h = Math.abs(d);

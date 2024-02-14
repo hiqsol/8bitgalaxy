@@ -1,4 +1,3 @@
-import Params from './Params.js';
 import aDrawer from './aDrawer.js';
 
 class DivDrawer extends aDrawer {

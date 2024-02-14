@@ -21,6 +21,9 @@ class aDrawer {
     let e = this.importNode(parent, html);
     if (params) {
       params = Params.assert(params);
+      if (params.hidden !== null) {
+        e.hidden = params.hidden;
+      }
       if (params.x !== null) {
         e.style.left    = (0 + params.x*this.m) + 'px';
       }
@@ -62,6 +65,9 @@ class aDrawer {
     let fragment = this.tpl.getFragment(html);
     let n = document.importNode(fragment, true);
     let e = n.firstElementChild;
+    if (parent == null) {
+      parent = document.querySelector("body");
+    }
     parent.appendChild(e);
     return e;
   }

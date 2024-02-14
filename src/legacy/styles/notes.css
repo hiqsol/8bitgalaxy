@@ -22,7 +22,14 @@
 .Note .Line {
     display: block;
     position: absolute;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
     transform: skew(-22deg);
+}
+
+.Inverted.Note .Line {
+    border-color: white;
+}
+.Inverted.Note .Text {
+    color: white;
 }

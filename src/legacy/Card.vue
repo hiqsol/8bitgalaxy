@@ -6,8 +6,15 @@ import Game from "./js/Game.js";
 import Params from "./js/DivDrawer/Params.js";
 
 let g = new Game();
-g.draw(null, g.scoreboard);
+let card = g.card("Human-S2c");
 
-g.draw(null, g.card("Human-S2c"), Params.xyleft(1, 1));
+let sd = g.drawer.getDrawer('Show');
+sd.draw(null, null, Params.xyleft(1, 25));
+g.draw(null, card);
+
+let elem = g.draw(null, card, Params.hidden());
+sd.getDrawer(elem).removeShowEvents(elem);
+
+sd.show(elem);
 
 </script>

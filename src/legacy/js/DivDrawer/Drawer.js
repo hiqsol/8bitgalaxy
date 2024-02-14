@@ -1,5 +1,4 @@
 import Assert from "../Model/Assert.js";
-import Type from "../Model/Type.js";
 import Game from "../Game.js";
 import Params from "./Params.js";
 import Template from "./Template.js";
@@ -60,6 +59,9 @@ class Drawer {
   }
 
   getDrawer(obj) {
+    if (obj instanceof HTMLElement) {
+      obj = this.obj(obj);
+    }
     let name = typeof obj === "string" ? obj : obj.constructor.name;
     let drawer = Drawers[name] ?? null;
     if (!drawer) {
