@@ -221,12 +221,18 @@
 }
 
 .Hero .Spec.Power .Value {
-    left: 125px;
+    left: 50px;
+    width: 195px;
+    font-size: 27px;
+    text-align: right;
 }
 
 .Hero .Spec.Cooperation .Value {
-    left: 120px;
+    left: 50px;
+    width: 195px;
     top: 50px;
+    font-size: 30px;
+    text-align: right;
 }
 
 .Colony .Spec.Level .Value {

@@ -1,3 +1,7 @@
+// powers: a, c, p, s
+// available unique combinations:
+// a-c, a-p, a-s, c-p, c-s, p-s
+// c-a, p-a, s-a, p-c, s-c, s-p
 class Human {
 
   static cards() {
@@ -48,8 +52,8 @@ class Human {
       //'Human-Ship-8s':      '4s,c4s,r7s,r7p',
 
 
-      'Human-Hero-1a':      'a1c,p0a:tx1,c1a',
-      'Human-Hero-1c':      'a1a,p0c:tx1,c1c',
+      'Human-Hero-1a':      'a1c,p0a:retreat,c1a',
+      'Human-Hero-1c':      'a1a,p1c,c1c',
       'Human-Hero-1p':      'a1s,p0p:tx1,c1p',
       'Human-Hero-1s':      'a1p,p0s:tx1,c1s',
 
