@@ -191,12 +191,18 @@
 }
 
 .Ship .Spec.Power .Value {
-    left: 200px;
+    left: 0px;
+    width: 245px;
+    font-size: 30px;
+    text-align: right;
 }
 
 .Ship .Spec.Cooperation .Value {
-    left: 190px;
     top: 50px;
+    left: 0px;
+    width: 245px;
+    font-size: 30px;
+    text-align: right;
 }
 
 .Hero .Spec.Level .Value {
@@ -221,15 +227,15 @@
 }
 
 .Hero .Spec.Power .Value {
-    left: 50px;
-    width: 195px;
-    font-size: 27px;
+    left: 0px;
+    width: 245px;
+    font-size: 30px;
     text-align: right;
 }
 
 .Hero .Spec.Cooperation .Value {
-    left: 50px;
-    width: 195px;
+    left: 0px;
+    width: 245px;
     top: 50px;
     font-size: 30px;
     text-align: right;
