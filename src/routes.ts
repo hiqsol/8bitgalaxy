@@ -13,6 +13,7 @@ import Field from "./legacy/Field.vue";
 import Board from "./legacy/Board.vue";
 import Deck from "./legacy/Deck.vue";
 import Deck2 from "./legacy/Deck2.vue";
+import Human from "./legacy/Human.vue";
 
 export default [
   {path: "/", component: Index},
@@ -30,4 +31,5 @@ export default [
   {path: "/board", component: Board},
   {path: "/deck", component: Deck},
   {path: "/deck2", component: Deck2},
+  {path: "/human", component: Human},
 ];

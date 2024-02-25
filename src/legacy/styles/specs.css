@@ -105,7 +105,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    font-size: 19px;
+    font-size: 21px;
     line-height: 45px;
     font-weight: 100;
     color: #000 !important;
@@ -128,7 +128,7 @@
 }
 
 .Production {
-    color: orange;
+    color: darkorange;
 }
 
 .Spec.Klass {
@@ -157,7 +157,7 @@
     margin-top: 4px;
     text-align: center;
     line-height: 50px;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 900;
     /*-webkit-text-stroke: 1px white;*/
 }
@@ -201,7 +201,6 @@
     top: 50px;
     left: 0px;
     width: 245px;
-    font-size: 30px;
     text-align: right;
 }
 
@@ -237,7 +236,6 @@
     left: 0px;
     width: 245px;
     top: 50px;
-    font-size: 30px;
     text-align: right;
 }
 
@@ -272,10 +270,11 @@
     border-bottom-left-radius: 12px;
 }
 .Colony .Spec.Power .Value {
-    left: 150px;
+    left: 5px;
+    font-size: 33px;
 }
 .Colony .Spec.Cooperation .Value {
-    left: 140px;
+    left: 5px;
     top: 50px;
 }
 
@@ -301,11 +300,16 @@
     border-bottom-right-radius: 12px;
 }
 .Base .Spec.Power .Value {
-    left: 140px;
+    left: 0px;
+    width: 345px;
+    font-size: 33px;
+    text-align: right;
 }
 .Base .Spec.Cooperation .Value {
     top: 50px;
-    left: 140px;
+    left: 0px;
+    width: 345px;
+    text-align: right;
 }
 
 .Tech .Spec.Level .Value {
