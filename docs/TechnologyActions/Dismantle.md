@@ -1,1 +1,1 @@
-1. **Dismantle** action allows to convert cards to 
+1. **Dismantle** action allows to convert cards to [[Materials]]

@@ -3,4 +3,4 @@
 	1. Finish the [[Combat]]
 	2. Participants don't get [[Damaged]] only [[Depleted]]
 #### Notes
-- Useful to save your forces when you are loosing the combat 
+1. Useful to save your forces when you are loosing the combat 

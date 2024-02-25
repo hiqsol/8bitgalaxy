@@ -1,4 +1,0 @@
-- 🔴3 - [[Military]] technology Level 3
-- Improved [[Draw]] action
-- Allows to draw more cards during [[Draw]] action
-- Cost - 3 for every additional card
