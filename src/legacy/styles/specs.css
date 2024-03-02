@@ -30,6 +30,7 @@
 
 .Spec .Value {
     position: absolute;
+    white-space: nowrap;
 }
 
 .Spec.Level .Value {

@@ -5,33 +5,31 @@
     1. [[Mastery]]
 
 - Military:
-    - 1 STRUCTURE - [[Recon]] Action - Any
-    - 2           - [[Retreat]] Modifier - Hero (Culture)
-    - 3 STRUCTURE - [[Militarization]] Modifier
-    - 4 STRUCTURE - [[PlusTakeoff]] Modifier
-    - 4           - [[Stealth]] Modifier
-    - 4           - [[Smuggle]] Action - Ship, Hero (Culture)
+    - 1 BASE    - [[Recon]] Action - Any
+    - 2         - [[Retreat]] Modifier - Hero (Culture)
+    - 3 COLONY  - [[Militarization]] Modifier
+    - 4         - [[Stealth]] Modifier
+    - 4         - [[Smuggle]] Action - Ship, Hero (Culture)
+    - 5 BASE    - [[PlusTakeoff]] Modifier
 - Culture:
-    - 1 STRUCTURE - [[Academy]] Facility - Colony, Ship
-    - 2           - [[Upgrade]] Action
-    - 3 STRUCTURE - [[Trade]] Action - Base
-    - 4 STRUCTURE - [[DoNotDeplete]] Modifier (-deplete)
-    - 4           - [[Exhaust]] Modifier (Scientific)
-    - 6 MAXIMAL   - [[PlusDraw]] Modifier (Production)
+    - 1 COLONY  - [[Academy]] Facility - Colony, Ship
+    - 2         - [[Upgrade]] Action
+    - 3 BASE    - [[Trade]] Action - Base
+    - 4         - [[Exhaust]] Modifier (Scientific)
+    - 5 COLONY  - [[DoNotDeplete]] Modifier (-deplete)
 - Production:
-    - 1 STRUCTURE - [[Shipyard]] Facility - Base, Ship
-    - 2           - [[Repair]] Action - Ship
-    - 3 STRUCTURE - [[Extract]] Action - Base, Ship
-    - 4 STRUCTURE - [[PlusLoad]] Modifier
-    - 4           - [[Dismantle]] Action - Actor (Military)
-    - 4           - [[NewFactory]] Action - Any (Scientific)
+    - 1 BASE    - [[Shipyard]] Facility - Base, Ship
+    - 2         - [[Repair]] Action - Ship
+    - 3 COLONY  - [[Extract]] Action - Base, Ship
+    - 4         - [[Dismantle]] Action - Actor (Military)
+    - 5 BASE    - [[PlusDraw]] Modifier (Culture)
+    - 4         - [[NewFactory]] Action - Any (Scientific)
 - Scientific:
-    - 1 STRUCTURE - [[Research]] Action
-    - 2           - [[Explore]] Action
-    - 3 STRUCTURE - [[Navigation]] Modifier
-    - 4 STRUCTURE - [[PlusRange]] Modifier
-    - 4           - [[Invent]] Modifier - Actor (Production)
-    - 6 MAXIMAL   - [[PlusAction]] Modifier (Military)
+    - 1 COLONY  - [[Research]] Action
+    - 2         - [[Explore]] Action
+    - 3 BASE    - [[Navigation]] Modifier
+    - 4         - [[Invent]] Modifier - Actor (Production)
+    - 5 COLONY  - [[PlusAction]] Modifier (Military)
 
 - Military
     - Military      - Stealth, Militarization
