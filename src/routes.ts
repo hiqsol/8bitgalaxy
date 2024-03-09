@@ -6,6 +6,7 @@ import Home from "./legacy/Home.vue";
 import Home2 from "./legacy/Home2.vue";
 import Full from "./legacy/Full.vue";
 import ADeck from "./legacy/ADeck.vue";
+import Star from "./legacy/Star.vue";
 import Stars from "./legacy/Stars.vue";
 import Pile from "./legacy/Pile.vue";
 import Gen from "./legacy/Gen.vue";
@@ -24,6 +25,7 @@ export default [
   {path: "/home2", component: Home2},
   {path: "/full", component: Full},
   {path: "/adeck", component: ADeck},
+  {path: "/star", component: Star},
   {path: "/stars", component: Stars},
   {path: "/pile", component: Pile},
   {path: "/gen", component: Gen},

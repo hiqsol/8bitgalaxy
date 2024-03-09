@@ -1,4 +1,3 @@
-import Drawer from './Drawer.js';
 import Params from './Params.js';
 import aDrawer from './aDrawer.js';
 import Direction from './Direction.js';

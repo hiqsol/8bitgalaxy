@@ -13,7 +13,7 @@ class Star {
     this._id = 'S' + y + x;
     this._y = y;
     this._x = x;
-    this._spaces = this.initSpaces();
+    this._spaces = this.createSpaces();
     this._ipm = new Pile(this, ''); // Interplanetary Medium
     this._actors = new Slots(this, Type.Ship, 5);
     this._structures = new Slots(this, Type.Base, 5);
@@ -92,14 +92,21 @@ class Star {
     return this.field.star(ny, nx);
   }
 
-  initSpaces() {
+  initAllSpaces() {
     let spaces = [null];
-    for (let i = 0; i <= 12; i++) {
+    for (let i = 1; i <= 12; i++) {
       spaces[i] = this.createSpace(i);
+    }
+    this._spaces = spaces;
+  }
+  createSpaces() {
+    let spaces = [null];
+    for (let i = 1; i <= 12; i++) {
+      spaces[i] = this.createSpaceIfNeeded(i);
     }
     return spaces;
   }
-  createSpace(bearing) {
+  createSpaceIfNeeded(bearing) {
     var allAdds = {
       'S00': [2, 10, 12],
       'S01': [2,  4, 12],
@@ -111,9 +118,12 @@ class Star {
 
     var adds = allAdds[this.id] ?? [];
     if (bearing %2 == 1 || adds.includes(bearing)) {
-      return new Space(this, bearing, this.random(6));
+      return this.createSpace(bearing);
     }
     return null;
+  }
+  createSpace(bearing) {
+    return new Space(this, bearing, this.random(6));
   }
 
   random(range) {
