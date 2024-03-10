@@ -20,8 +20,8 @@ class StarDrawer extends aDrawer {
     let e = this.drawNode(parent, params);
     e.querySelector('.Id').innerHTML = star.id.substring(1);
     this.drawSpaces(e, star);
-    this.drawer.draw(e, star.actors,      new Params(7.8,  3.0, Direction.TopToBottom));
-    this.drawer.draw(e, star.structures,  new Params(0.2,  3.0, Direction.LeftToRight));
+    this.drawer.draw(e, star.actors,      new Params(0.2,  3.2, Direction.TopToBottom));
+    this.drawer.draw(e, star.structures,  new Params(5.8,  3.2, Direction.LeftToRight));
     this.drawer.draw(e, star.ipm,         new Params(3.4,  9.4, Direction.LeftToRight));
     return e;
   }
