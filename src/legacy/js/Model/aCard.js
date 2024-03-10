@@ -24,6 +24,7 @@ class aCard {
   get Colonization()      { return this.Specs.Colonization; }
   get Science()           { return this.Specs.Science; }
   get Production()        { return this.Specs.Production; }
+  get Power()             { return this.Specs.Power; }
   get Cooperation()       { return this.Specs.Cooperation; }
   get hasRequirements()   { return this.Specs.Requires == undefined; }
 

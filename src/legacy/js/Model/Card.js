@@ -46,6 +46,7 @@ class Card {
   get Race()              { return this.aCard.Race; }
   get Level()             { return this.aCard.Level; }
   get AltLevel()          { return this.Alternative ? this.Alternative.Level : null; }
+  get MaxLevel()          { return Math.max(this.Level, this.AltLevel); }
   get Klass()             { return this.aCard.Klass; }
   get AltKlass()          { return this.Alternative ? this.Alternative.Klass : null; }
   get Attack()            { return this.aCard.Attack; }
@@ -53,8 +54,9 @@ class Card {
   get Science()           { return this.aCard.Science; }
   get Production()        { return this.aCard.Production; }
   get Requires()          { return this.aCard.Requires; }
+  get Power()             { return this.aCard.Power; }
   get Cooperation()       { return this.aCard.Cooperation; }
-  get hasRequirements()   { return this.aCard.hasRequirements || this.Alternative.hasRequirements; } 
+  get hasRequirements()   { return this.aCard.hasRequirements || this.Alternative.hasRequirements; }
 
   get isHero()            { return this.aCard.isHero; }
   get isColony()          { return this.aCard.isColony; }
@@ -79,6 +81,19 @@ class Card {
 
   setTurned(value)  { this._state.setTurned(value);return this; }
   setAltered(value) { this._state.setAltered(value);return this; }
+
+  compare(other) {
+    if (this.Level > other.Level) {
+      return 1;
+    }
+    if (this.Level < other.Level) {
+      return -1;
+    }
+    if (!this.Cooperation) {
+      return 1;
+    }
+    return isNaN(this.Cooperation.value) ? 1 : -1;
+  }
 
   static assert(sample) {
     if (sample instanceof(Card)) {

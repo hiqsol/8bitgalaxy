@@ -28,7 +28,7 @@ class Start {
     for (const i in tmp.cards) {
       const card = tmp.get(i);
       if (!this.dealCard(card)) {
-        if (card.hasRequirements) {
+        if (card.MaxLevel <= 3) {
           this.factory.put(card);
         } else {
           this.research.put(card);
@@ -40,11 +40,17 @@ class Start {
     }
   }
 
-  dealCard(card) {
+  oldDealCard(card) {
     if (card.Type.isShip)   return this.dealShip(card);
     if (card.Type.isHero)   return this.dealHero(card);
     if (card.Type.isBase)   return this.dealBase(card);
     if (card.Type.isColony) return this.dealColony(card);
+    return false;
+  }
+
+  dealCard(card) {
+    if (card.Type.isActor)      return this.dealActor(card);
+    if (card.Type.isStructure)  return this.dealStructure(card);
     return false;
   }
 
@@ -77,6 +83,22 @@ class Start {
   dealColony(card) {
     if (card.isAltLevel(1) && card.AltKlass == "Science") {
       card.alter();
+      this.home.star.put(card);
+      return true;
+    }
+    return false;
+  }
+
+  dealActor(card) {
+    if (card.isAnyLevel(1)) {
+      this.discard.put(card);
+      return true;
+    }
+    return false;
+  }
+
+  dealStructure(card) {
+    if (card.isAnyLevel(1) && ['shipyard', 'academy'].includes(card.Power.value)) {
       this.home.star.put(card);
       return true;
     }

@@ -28,7 +28,7 @@ class Deck {
         let lower = card;
         if (alt) {
           let altCard = Card.assert(alt.Name);
-          if (card.Level > alt.Level) {
+          if (card.compare(altCard) > 0) {
             lower = altCard;
           } else {
             upper = altCard;

@@ -42,25 +42,25 @@ class Human {
       'Human-Hero-2p':      'a2c,p2p,c2p',
       'Human-Hero-2s':      'a2a,p2s,c2s:explore',
 
-      'Human-Hero-3a':      'a3p,p3a,c3a,r1a,r1p',
-      'Human-Hero-3c':      'a3s,p3c,c3c,r1c,r1s',
-      'Human-Hero-3p':      'a3a,p3p,c3p',
-      'Human-Hero-3s':      'a3c,p3s,c3s',
+      'Human-Hero-3a':      'a3p,r1a,r1p,p3a,c3a:mastery',
+      'Human-Hero-3c':      'a3s,r1c,r1s,p3c,c3c:mastery',
+      'Human-Hero-3p':      'a3a,r1p,r1a,p3p,c3p',
+      'Human-Hero-3s':      'a3c,r1s,r1c,p3s,c3s',
 
       'Human-Hero-4a':      'a4p,r2a,r2p,p4a,c4a',
       'Human-Hero-4c':      'a4s,r2c,r2s,p4c,c4c',
       'Human-Hero-4p':      'a4a,r2p,r2a,p4p,c4p:mastery',
       'Human-Hero-4s':      'a4c,r2s,r2c,p4s,c4s:mastery',
 
-      'Human-Hero-5a':      'a5s,p5a,c5a,r3a,r3s',
-      'Human-Hero-5c':      'a5p,p5c,c5c',
-      'Human-Hero-5p':      'a5c,p5p,c5p,r3p,r3c',
-      'Human-Hero-5s':      'a5a,p5s,c5s',
+      'Human-Hero-5a':      'a5s,r3a,r3s,p5a,c5a:mastery',
+      'Human-Hero-5c':      'a5p,r3c,r3p,p5c,c5c',
+      'Human-Hero-5p':      'a5c,r3p,r3c,p5p,c5p:mastery',
+      'Human-Hero-5s':      'a5a,r3s,r3a,p5s,c5s',
 
-      'Human-Hero-6a':      'a6c,p6a,c6a',
-      'Human-Hero-6c':      'a6a,p6c,c6c,r4c,r4a',
-      'Human-Hero-6p':      'a6s,p6p,c6p',
-      'Human-Hero-6s':      'a6p,p6s,c6s,r4s,r4p',
+      'Human-Hero-6a':      'a6c,r4a,r4c,p6a,c6a',
+      'Human-Hero-6c':      'a6a,r4c,r4a,p6c,c6c:mastery',
+      'Human-Hero-6p':      'a6s,r4p,r4s,p6p,c6p',
+      'Human-Hero-6s':      'a6p,r4s,r4p,p6s,c6s:mastery',
 
 
       'Human-Base-1a':      'a2a,p1a:recon',
