@@ -240,77 +240,33 @@
     text-align: right;
 }
 
-.Colony .Spec.Level .Value {
+:is(.Base, .Colony) .Spec.Level .Value {
     left: 300px;
     height: 60px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-.Colony .Image .Klass {
+:is(.Base, .Colony) .Image .Klass {
     left: 210px;
     top: 10px;
 }
-.Colony .Spec.Require1 .Value {
-    left: 0px;
-    top: 70px;
-    border-top-right-radius: 12px;
-}
-.Colony .Spec.Require2 .Value {
-    left: 0px;
-    top: 110px;
-    border-bottom-right-radius: 12px;
-}
-.Pile.TopToBottom .Colony .Spec.Require1 .Value {
+:is(.Base, .Colony) .Spec.Require1 .Value {
     left: 310px;
     top: 70px;
     border-top-left-radius: 12px;
 }
-.Pile.TopToBottom .Colony .Spec.Require2 .Value {
+:is(.Base, .Colony) .Spec.Require2 .Value {
     left: 310px;
     top: 110px;
     border-bottom-left-radius: 12px;
 }
-.Colony .Spec.Power .Value {
+:is(.Base, .Colony) .Spec.Power .Value {
     left: 5px;
     font-size: 33px;
 }
-.Colony .Spec.Cooperation .Value {
+:is(.Base, .Colony) .Spec.Cooperation .Value {
     left: 5px;
     top: 50px;
-}
-
-.Base .Spec.Level .Value {
-    height: 60px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-.Base .Image .Klass {
-    left: 10px;
-    top: 10px;
-}
-.Base .Spec.Require1 .Value {
-    top: 70px;
-    height: 40px;
-    line-height: 40px;
-    border-top-right-radius: 12px;
-}
-.Base .Spec.Require2 .Value {
-    top: 110px;
-    height: 40px;
-    line-height: 40px;
-    border-bottom-right-radius: 12px;
-}
-.Base .Spec.Power .Value {
-    left: 0px;
-    width: 345px;
-    font-size: 33px;
-    text-align: right;
-}
-.Base .Spec.Cooperation .Value {
-    top: 50px;
-    left: 0px;
-    width: 345px;
-    text-align: right;
 }
 
 .Tech .Spec.Level .Value {
