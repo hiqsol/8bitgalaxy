@@ -14,6 +14,7 @@ class ShowDrawer extends aDrawer {
 
   show(card) {
     let show = this.elem('Show');
+    if (!show) return;
     show.innerHTML = '';
     if (card.classList.contains("Selected")) {
       return;
@@ -58,7 +59,8 @@ class ShowDrawer extends aDrawer {
   }
 
   hide() {
-    this.elem('Show').innerHTML = '';
+    var show = this.elem('Show')
+    if (show) show.innerHTML = '';
   }
 
   drawNote(parent, text, d, params = new Params().rt(0, 0)) {
