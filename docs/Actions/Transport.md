@@ -1,4 +1,4 @@
-1. **Transport** action allows [[Move]] cargo with [[Ship]]s
+1. **Transport** action allows to [[Move]] cargo with [[Ship]]s
 2. Cargo can be: cards, reserves
 3. Requirements:
      - [[Range]]

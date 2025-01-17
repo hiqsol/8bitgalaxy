@@ -1,5 +1,8 @@
 1. **Upgrade** is [[Social]]/[[Production]] technology Level 1
 2. **Upgrade** action allows to substitute a card for another card of the same type
+3. **Requirements**:
+	1. Old [[Actor]] must be in [[Discard]]
+	2. New card must be available at [[Factory]]
 3. **Direction**:
 	1. For [[Actor]] - any [[Star]] to [[BuildingFacility]]
 	2. For [[Structure]] - [[BuildingFacility]] to old card's [[Star]]
