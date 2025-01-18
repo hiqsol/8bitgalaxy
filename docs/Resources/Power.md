@@ -1,8 +1,8 @@
-1. **Power** is non-stockable resource
+1. **Power** is non-stockable [[Resources|resource]]
 2. Powers satisfy action cost requirements
 3. Each of the four powers corresponds to the [[Class]] and color:
-	- 🔴 [[Military]]
-	- 🟡 [[Production]]
-	- 🟢 [[Culture]]
-	- 🔵 [[Scientific]]
+	- 🔴 [[AttackPower]]		- [[Military]] class
+	- 🟡 [[ProductionPower]]	- [[Production]] class
+	- 🟢 [[CulturePower]]		- [[Culture]] class
+	- 🔵 [[SciencePower]]		- [[Scientific]] class
 

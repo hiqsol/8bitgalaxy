@@ -1,8 +1,6 @@
-1. **Technology** allows:
-    1. perform additional actions
-    2. modify actions
-2. **Technology** requires:
-    1. [[Mastery]]
+1. **Technology** comes in two types:
+    1. [[TechnologyAction]] allows to perform additional actions
+    2. [[TechnologyModifieres]] modify (improve) actions
 
 - Military:
     - 1 BASE    - [[Recon]] Action - Any

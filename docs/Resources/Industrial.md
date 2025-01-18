@@ -1,8 +1,0 @@
-- Or **Production** power
-- Color - **yellow** 🟡
-- Industrial [[Origin]] cards:
-	- [[Ship]] and [[Base]]
-- Main use:
-	- [[Build]] / [[Upgrade]] industrial cards
-	- [[Manage]] industrial cards
-- Additional use:
