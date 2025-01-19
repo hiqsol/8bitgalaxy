@@ -3,6 +3,7 @@
 		- **Source**: [[IPS]]
 	2. **Action** - one of [[Actions]], defines list of **requirements**, can be:
 		- [[Power]]
+		- [[Mastery]]
 		- [[Range]]
 		- [[Capacity]]
 	3. **Participants**:
@@ -10,7 +11,7 @@
 			- selected cards in the **source** [[IPS]]
 		- **Supporters**:
 			- selected cards in [[Hand]]
-			- selected cards [[ActiveFor]] player (not in [[OuterSpace]])
+			- selected cards [[ActiveFor]] player not in [[OuterSpace]]
 	4. Participants **abilities**:
 		- including [[Technology]]
 	5. **Destination** - [[Star]] or [[Space]]
