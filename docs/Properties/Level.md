@@ -1,3 +1,4 @@
+1. **Level** is explicit card [[Property]]
 1. **Level** is number from 1 to 6 (8)
 2. Card has two levels: **higher** and **lower**
 3. **Total level** = sum of lower and higher levels

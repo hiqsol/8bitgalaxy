@@ -26,12 +26,12 @@
     - 4         - [[NewFactory]] Action - Any (Scientific)
     - 5 BASE    - [[PlusDraw]] Modifier (Culture)
 - Scientific:
-    - 1 COLONY  - [[Research]] Action
-    - 2         - [[Explore]] Action
-    - 3 BASE    - [[Navigation]] Modifier
-    - 4         - [[PlusRange]] Modifier
-    - 4         - [[Invent]] Modifier - Actor (Production)
-    - 5 COLONY  - [[PlusAction]] Modifier (Military)
+    - 1 COLONY  - [[Research]]
+    - 2         - [[Explore]]
+    - 3 BASE    - [[Navigation]]
+    - 4         - [[PlusRange]]
+    - 4         - [[Invent]]
+    - 5 COLONY  - [[PlusAction]]
 
 - Military
     - Military      - Stealth, Militarization

@@ -1,9 +1,12 @@
-1. **Basic actions** are:
-	1. [[Draw]] / [[Takeoff]]
-	2. [[Move]] / [[Transport]]
-	3. [[Manage]]
-	4. [[Attack]]
-2. [[TechnologyActions]]:
+1. **Basic actions** are available at any time.
+	1. [[Draw]]
+	2. [[Takeoff]]
+	3. [[Move]]
+	4. [[Transport]]
+	5. [[Manage]]
+	6. [[Research]]
+	7. [[Attack]]
+2. To start a [[TechnologyActions]] one of participants must provide it with its ability.
 	1. [[Build]] / [[Upgrade]] / [[Repair]]
 	2. [[Explore]] / [[Extract]]
 	2. [[Trade]] / [[Smuggle]]
