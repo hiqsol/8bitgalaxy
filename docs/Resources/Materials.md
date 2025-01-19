@@ -1,4 +1,4 @@
-1. Stockable [[Resources]]
+1. **Materials** is stockable [[Resource]]
 2. Represented as tokens
 3. Stored at [[Star]]
 4. Can be moved with [[Transport]]

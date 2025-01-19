@@ -1,6 +1,0 @@
-- Non-stockable:
-	- [[Power]]
-	- [[Mastery]]
-- Stockable:
-	- [[Materials]]
-	- [[Money]]
