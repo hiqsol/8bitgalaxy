@@ -1,8 +1,7 @@
-1. **Technology** allows:
-    1. perform additional actions
-    2. modify actions
-2. **Technology** requires:
-    1. [[Mastery]]
+1. **Technology** is ability...
+1. **Technologies** come in two flavours:
+    1. [[TechnologyAction]] allows to perform non-basic actions
+    2. [[TechnologyModifier]] modify actions for better
 
 - Military:
     - 1 BASE    - [[Recon]] Action - Any
@@ -29,8 +28,8 @@
     - 1 COLONY  - [[Research]]
     - 2         - [[Explore]]
     - 3 BASE    - [[Navigation]]
+    - 3         - [[MinusRequirement]]
     - 4         - [[PlusRange]]
-    - 4         - [[Invent]]
     - 5 COLONY  - [[PlusAction]]
 
 - Military
