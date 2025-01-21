@@ -14,7 +14,8 @@
     - 1 COLONY  - [[Academy]] Facility - Colony, Ship
     - 2         - [[Upgrade]] Action
     - 3 BASE    - [[Trade]] Action - Base
-    - 4         - [[Exhaust]] Modifier (Scientific)
+    - 4         - [[Exhaust]] Modifier
+    - 4 Credit 
     - 5 COLONY  - [[DoNotDeplete]] Modifier (-deplete)
 - Production:
     - 1 BASE    - [[Shipyard]] Facility - Base, Ship
@@ -22,10 +23,10 @@
     - 3 COLONY  - [[Extract]] Action - Base, Ship
     - 4         - [[Dismantle]] Action - Actor (Military)
     - 4         - [[PlusCapacity]] Modifier
-    - 4         - [[NewFactory]] Action - Any (Scientific)
+    - 4         - [[PlusFactory]] Action - Any (Scientific)
     - 5 BASE    - [[PlusDraw]] Modifier (Culture)
 - Scientific:
-    - 1 COLONY  - [[Research]]
+    - 1 
     - 2         - [[Explore]]
     - 3 BASE    - [[Navigation]]
     - 3         - [[MinusRequirement]]

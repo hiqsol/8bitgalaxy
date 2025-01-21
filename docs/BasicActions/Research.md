@@ -1,7 +1,9 @@
-1. **Research** action allows to move card:
+1. **Research** is [[Scientific]] [[BasicAction]]
+2. **Research** action allows to move card:
 	1. From [[Laboratory]] to [[Factory]]
 	2. Between [[Laboratory]]s
-2. Similar to [[Manage]] action
-3. Can be part of [[Manage]] action
-4. Can only be done for [[Scientific]] power
-5. To research a card it is required to satisfy it's [[Prerequisites]]
+3. Direction: any [[Star]] to [[Research Facility]]
+4. Similar to [[Manage]] action
+5. Can be part of [[Manage]] action
+6. Can only be done for [[SciencePower]]
+7. To research a card it is required to satisfy it's [[Prerequisites]]
