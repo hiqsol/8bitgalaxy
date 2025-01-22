@@ -9,6 +9,6 @@
     - Authorization from party nation
 4. **Outcome**:
     1. Party nation gets 1 item of [[Materials]]
-    2. Other items of transported materials converts to [[Money]]
+    2. Other items of transported [[Materials]] converts to [[Money]]
 #### Notes
 1. Transport limitations (range, capacity) apply

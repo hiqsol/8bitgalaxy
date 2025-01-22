@@ -4,5 +4,4 @@
 		1. [[Power]]
 	2. Stockable:
 		1. [[Materials]]
-		2. [[Wreckage]]
 		3. [[Money]]

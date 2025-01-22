@@ -1,5 +1,5 @@
 1. **Militarization** is [[Military]] technology modifier Level 3
-2. **Militarization** technology allows to:
-	1. [[Attack]] with non-military cards
-	2. Use other powers as military (up to current Military level)
+2. **Militarization** technology allows to use non military cards against enemies:
+	1. Increase [[Defense]] of non-military card up to its level 
+	2. Use [[Manage]] action against enemy cards 
 
