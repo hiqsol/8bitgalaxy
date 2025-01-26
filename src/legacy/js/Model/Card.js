@@ -40,6 +40,7 @@ class Card {
   get Alternative()       { return this._acard.Alternative; }
 
   get id()                { return this.Name; }
+  get Uniq()              { return this.aCard.Uniq; }
   get Name()              { return this.aCard.Name; }
   get AltName()           { return this.Alternative ? this.Alternative.Name : null; }
   get Type()              { return this.aCard.Type; }

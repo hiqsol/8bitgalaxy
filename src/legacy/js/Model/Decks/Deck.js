@@ -16,13 +16,17 @@ class Deck {
   get all() {
     if (this._all === undefined) {
       this._all = {};
+      this._uniqs = {};
       this._lower = {};
       this._upper = {};
 
       for (var name in Decks.all()) {
         let card = Card.assert(name);
+        let uniq = card.Uniq;
         if (!this.isRace(card.Race)) continue;
+        if (this._uniqs[uniq]) continue;
         this._all[name] = card;
+        this._uniqs[uniq] = card;
         let alt = card.Alternative;
         let upper = card;
         let lower = card;
