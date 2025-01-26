@@ -1,8 +1,8 @@
 import Params from './Params.js';
-import Drawer from './Drawer.js';
 import aDrawer from './aDrawer.js';
 import Assert from '../Model/Assert.js';
 import TurnSpace from '../Model/History/TurnSpace.js';
+import AlterSpace from '../Model/History/AlterSpace.js';
 
 class SpaceDrawer extends aDrawer {
   constructor(drawer) {
@@ -28,6 +28,11 @@ class SpaceDrawer extends aDrawer {
     e.ondblclick = (event) => {
       this.apply(new TurnSpace(space));
     }
+    e.onclick = (event) => {
+      if (event.ctrlKey) {
+        this.apply(new AlterSpace(space, this.random(5)));
+      }
+    }
     e.querySelector('.Type').innerHTML = space.type;
     e.classList.add('oclock'+space.bearing.oclock);
     e.classList.add('Type'+space.type);
@@ -39,6 +44,10 @@ class SpaceDrawer extends aDrawer {
     }
 
     return e;
+  }
+
+  random(range) {
+    return 1 + Math.floor(Math.random() * range);
   }
 
   getBearingParams(bearing) {

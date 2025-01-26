@@ -10,6 +10,7 @@ class Performer {
       'TurnCard':       (ef) => this.doTurnCard(ef),
       'AlterCard':      (ef) => this.doAlterCard(ef),
       'TurnSpace':      (ef) => this.doTurnSpace(ef),
+      'AlterSpace':     (ef) => this.doAlterSpace(ef),
     };
   }
 
@@ -74,6 +75,18 @@ class Performer {
       cl.remove('Turned');
     }
     space.turn(value);
+    return true;
+  }
+
+  doAlterSpace(effect) {
+    let value = effect.value;
+    let space = effect.space;
+    let elem = this.elem(space);
+    let cl = elem.classList;
+    cl.remove('Type'+space.type);
+    space.alter(value);
+    cl.add('Type'+space.type);
+    elem.querySelector('.Type').innerHTML = space.type;
     return true;
   }
 

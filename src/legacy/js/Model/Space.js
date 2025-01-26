@@ -61,6 +61,12 @@ class Space {
     }
     return this;
   }
+  alter(value) {
+    this._type += value;
+    if (this._type < 1) this._type += 6;
+    if (this._type > 6) this._type -= 6;
+    return this;
+  }
 
   setType(type) { this._type = type; return this; }
 
