@@ -1,4 +1,0 @@
-- Color - **green**
-- Used to [[../Actions/Build|Build]] / [[../Actions/Upgrade|Upgrade]] social [[../Objects|Objects]]:
-    - [[../Objects/Cards/Hero|Hero]]
-    - [[../Objects/Cards/Colony|Colony]]
