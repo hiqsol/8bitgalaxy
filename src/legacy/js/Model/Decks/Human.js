@@ -26,15 +26,15 @@ class Human {
       'Human-Ship-4p':      'a3s,r2p,r1s,p2p,c1p:upgrade',
       'Human-Ship-4s':      'a3p,r2s,r1p,p2s,c1s:exhaust',
 
-      'Human-Ship-5a':      'a6s,r3a,r3s,p3a,c2a',
-      'Human-Ship-5c':      'a6p,r3c,r4p,p2c,c2c',
-      'Human-Ship-5p':      'a6c,r3p,r3c,p3p,c2p',
-      'Human-Ship-5s':      'a6a,r3s,r4a,p2s,c2s',
+      //'Human-Ship-5a':      'a6s,r3a,r3s,p3a,c2a',
+      //'Human-Ship-5c':      'a6p,r3c,r4p,p2c,c2c',
+      //'Human-Ship-5p':      'a6c,r3p,r3c,p3p,c2p',
+      //'Human-Ship-5s':      'a6a,r3s,r4a,p2s,c2s',
 
-      'Human-Ship-6a':      'a5s,r4a,r3s,p3a,c2a',
-      'Human-Ship-6c':      'a5p,r4c,r4p,p2c,c2c',
-      'Human-Ship-6p':      'a5c,r4p,r3c,p3p,c2p',
-      'Human-Ship-5s':      'a5a,r4s,r4a,p2s,c2s',
+      //'Human-Ship-6a':      'a5s,r4a,r3s,p3a,c2a',
+      //'Human-Ship-6c':      'a5p,r4c,r4p,p2c,c2c',
+      //'Human-Ship-6p':      'a5c,r4p,r3c,p3p,c2p',
+      //'Human-Ship-5s':      'a5a,r4s,r4a,p2s,c2s',
 
 
       'Human-Hero-1a':      'a1c,p1a,c1a:recon',
@@ -57,15 +57,15 @@ class Human {
       'Human-Hero-4p':      'a4a,r2p,r2a,p3p,c4p:fix+upg',
       'Human-Hero-4s':      'a4c,r2s,r2c,p3s,c4s:navi',
 
-      'Human-Hero-5a':      'a5s,r3a,r3s,p5a,c5a:mastery',
-      'Human-Hero-5c':      'a5p,r3c,r3p,p5c,c5c',
-      'Human-Hero-5p':      'a5c,r3p,r3c,p5p,c5p:mastery',
-      'Human-Hero-5s':      'a5a,r3s,r3a,p5s,c5s',
+      //'Human-Hero-5a':      'a5s,r3a,r3s,p5a,c5a:mastery',
+      //'Human-Hero-5c':      'a5p,r3c,r3p,p5c,c5c',
+      //'Human-Hero-5p':      'a5c,r3p,r3c,p5p,c5p:mastery',
+      //'Human-Hero-5s':      'a5a,r3s,r3a,p5s,c5s',
 
-      'Human-Hero-6a':      'a6c,r4a,r4c,p6a,c6a',
-      'Human-Hero-6c':      'a6a,r4c,r4a,p6c,c6c:mastery',
-      'Human-Hero-6p':      'a6s,r4p,r4s,p6p,c6p',
-      'Human-Hero-6s':      'a6p,r4s,r4p,p6s,c6s:mastery',
+      //'Human-Hero-6a':      'a6c,r4a,r4c,p6a,c6a',
+      //'Human-Hero-6c':      'a6a,r4c,r4a,p6c,c6c:mastery',
+      //'Human-Hero-6p':      'a6s,r4p,r4s,p6p,c6p',
+      //'Human-Hero-6s':      'a6p,r4s,r4p,p6s,c6s:mastery',
 
 
       'Human-Base-1a':      'a2a,p1a:mobilize',
@@ -88,11 +88,11 @@ class Human {
       'Human-Base-4p':      'a3p,r2p,c3p,p4p:+++load',
       'Human-Base-4s':      'a3s,r2s,c3s,p4s:navi',
 
-      'Human-Base-5a':      'a6a,r3a,p3n:+takeoff',
-      'Human-Base-5p':      'a6p,r3p,p3n:+draw',
+      //'Human-Base-5a':      'a6a,r3a,p3n:+takeoff',
+      //'Human-Base-5p':      'a6p,r3p,p3n:+draw',
 
-      'Human-Base-6a':      'a5a,r4a,p5a:+takeoff,c3a',
-      'Human-Base-6p':      'a5p,r4p,p5p:+draw,c3p',
+      //'Human-Base-6a':      'a5a,r4a,p5a:+takeoff,c3a',
+      //'Human-Base-6p':      'a5p,r4p,p5p:+draw,c3p',
 
 
       'Human-Colony-1a':    'a2a,p1a:recon',
@@ -115,11 +115,11 @@ class Human {
       'Human-Colony-4p':    'a3p,r2p,c3p,p4p:fix+shipy',
       'Human-Colony-4s':    'a3s,r2s,c3s,p4s:+++range',
 
-      'Human-Colony-5c':    'a6c,r3c,p3c:-deplete',
-      'Human-Colony-5s':    'a6s,r3s,p3s:+action',
+      //'Human-Colony-5c':    'a6c,r3c,p3c:-deplete',
+      //'Human-Colony-5s':    'a6s,r3s,p3s:+action',
 
-      'Human-Colony-6c':    'a5c,r4c,p4n:-deplete',
-      'Human-Colony-6s':    'a5s,r4s,p4n:+action',
+      //'Human-Colony-6c':    'a5c,r4c,p4n:-deplete',
+      //'Human-Colony-6s':    'a5s,r4s,p4n:+action',
 
       //'Human-Colony-6a':    'a5a,3a,c3a,r4a,r3c',
       //'Human-Colony-6c':    'a5c,3c,c3c,r4c,r3s',
