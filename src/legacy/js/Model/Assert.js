@@ -19,6 +19,10 @@ class Assert {
     if (!condition) Assert.error(text, sample);
   }
 
+  static that(condition, text = 'assertion failed') {
+    if (!condition) Assert.error(text);
+  }
+
   static error(text, sample) {
     console.log(sample);
     throw new Error(text);
