@@ -4,17 +4,17 @@
 4. Requirements:
      - [[Range]]
      - [[Capacity]]
-5. Total [[Capacity]] of the group is sum of capacities of participants
+5. Total [[Capacity]] of the group is sum of capacities of direct participants
 6. [[Hero]] can increase [[Capacity]] or [[Range]], but can't transport alone
 7. Type limitations in the table below
 
 | Object    | Mil | Cul | Ind | Sci |
-|-----------|-----|-----|-----|-----|
-| Colony    |     |  +  |     |  +  |
+| --------- | --- | --- | --- | --- |
 | Base      |     |     |  +  |  +  |
-| Hero      |  +  |  +  |     |  +  |
+| Colony    |     |  +  |     |  +  |
 | Ship      |  +  |     |  +  |  +  |
-|-----------|-----|-----|-----|-----|
+| Hero      |  +  |  +  |  +  |  +  |
+| --------- | --- | --- | --- | --- |
 | Materials |  +  |  +  |  +  |  +  |
 | Wreckage  |  +  |  +  |  +  |  +  |
 
@@ -26,4 +26,4 @@
 	- [[Culture]] (Colonization) ships can transport social cards
 	- [[Industrial]] ships can transport industrial cards
 	- [[Scientific]] ships can transport anything
-	- [[Materials]] and [[Wreckage]] can be transported with any ships
+	- [[Hero]]s, [[Materials]] and [[Wreckage]] can be transported with any ships
