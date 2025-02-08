@@ -18,6 +18,7 @@ import SlotsDrawer from "./SlotsDrawer.js";
 import SpaceDrawer from "./SpaceDrawer.js";
 import SpecsDrawer from "./SpecsDrawer.js";
 import FieldDrawer from "./FieldDrawer.js";
+import CounterDrawer from "./CounterDrawer.js";
 import ScoreboardDrawer from "./ScoreboardDrawer.js";
 import SlotDragger from "./SlotDragger.js";
 import GameDragger from "./GameDragger.js";
@@ -139,6 +140,7 @@ const Drawers = Object.freeze({
   Pile: PileDrawer,
   Slot: SlotDrawer,
   Slots: SlotsDrawer,
+  Counter: CounterDrawer,
 
   Card: CardDrawer,
   Specs: SpecsDrawer,

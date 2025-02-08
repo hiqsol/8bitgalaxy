@@ -1,9 +1,9 @@
 import Card from "./Card.js";
 import Pile from "./Pile.js";
 import Type from "./Type.js";
-import Slot from "./Slot.js";
 import Space from "./Space.js";
 import Slots from "./Slots.js";
+import Counter from "./Tokens/Counter.js";
 import Bearing from "./Bearing.js";
 import Assert from "./Assert.js";
 
@@ -13,6 +13,7 @@ class Star {
     this._id = 'S' + y + x;
     this._y = y;
     this._x = x;
+    this._counter = new Counter();
     this._spaces = this.createSpaces();
     this._ipm = new Pile(this, ''); // Interplanetary Medium
     this._actors = new Slots(this, Type.Ship, 5);
@@ -65,6 +66,7 @@ class Star {
   get actors()      { return this._actors; }
   get structures()  { return this._structures; }
   get spaces()      { return this._spaces; }
+  get counter()     { return this._counter; }
   actor(slot)       { return this._actors[slot] ?? null; }
   structure(slot)   { return this._structures[slot] ?? null; }
 

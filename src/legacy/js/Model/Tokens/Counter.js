@@ -1,7 +1,8 @@
 import Assert from "../Assert.js";
 
 class Counter {
-  constructor(count = 1) {
+  constructor(count = 0) {
+    this._type = '';
     this._count = count;
   }
 
@@ -9,12 +10,12 @@ class Counter {
   get count() { return this._count; }
 
   inc(count = 1) {
-    Assert.that(count > 0);
     this._count += count;
   }
   dec(count = 1) {
-    Assert.that(count > 0);
-    this._count -= count;
+    if (this._count >= count) {
+      this._count -= count;
+    }
   }
 
 }
