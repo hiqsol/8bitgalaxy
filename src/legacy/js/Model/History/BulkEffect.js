@@ -13,6 +13,13 @@ class BulkEffect extends Effect {
 
   get effects() { return this._effects; }
 
+  perform(performer) {
+    for (const ef of this.effects) {
+      performer.perform(ef);
+    }
+    return true;
+  }
+
   undo() {
     let list = [];
     for (const ef of this.effects) {

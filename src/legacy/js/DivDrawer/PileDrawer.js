@@ -53,7 +53,7 @@ class PileDrawer extends aDrawer {
       this._discards[race] = pile;
     }
     if (pile.name === 'Reserve') {
-      e.ondblclick = (event) => {
+      e.ondblclick = () => {
         if (e.children.length>1) return;
         let discard = this._discards[race];
         let cards = discard.cards;

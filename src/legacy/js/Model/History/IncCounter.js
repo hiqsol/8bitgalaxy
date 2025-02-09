@@ -10,6 +10,13 @@ class IncCounter extends Effect {
   get value()       { return this._value; }
   get counter()     { return this._counter; }
 
+  perform(performer) {
+    let counter = this.counter;
+    counter.inc(this.value);
+    performer.getDrawer(counter).drawValue(performer.elem(counter), counter);
+    return true;
+  }
+
   undo() {
     return new IncCounter(this.counter, 0 - this.value);
   }

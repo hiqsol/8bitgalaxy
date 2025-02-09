@@ -8,6 +8,22 @@ class TurnCard extends CardEffect {
 
   get value()       { return this._value; }
 
+  perform(performer) {
+    let value = this.value;
+    let card = this.card;
+    let cl = performer.elem(card).classList;
+    if (value === null) {
+      value = !cl.contains('Turned');
+    }
+    if (value) {
+      cl.add('Turned');
+    } else {
+      cl.remove('Turned');
+    }
+    card.setTurned(value);
+    return true;
+  }
+
   undo() {
     if (this.value === null) {
       return this;

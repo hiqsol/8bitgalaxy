@@ -8,8 +8,17 @@ class DragCard extends CardEffect {
     this._dst = dst;
   }
 
-  get src()         { return this._src; }
-  get dst()         { return this._dst; }
+  get src() { return this._src; }
+  get dst() { return this._dst; }
+
+  perform(performer) {
+    performer.elem(this.dst).appendChild(performer.elem(this.card));
+    performer.obj(this.src).pop(this.card);
+    performer.obj(this.dst).put(this.card);
+    performer.getDragger('Slot').resetDraggability(this.src);
+    performer.getDragger('Slot').resetDraggability(this.dst);
+    return true;
+  }
 
   undo() {
     return new DragCard(this.card, this.dst, this.src);
