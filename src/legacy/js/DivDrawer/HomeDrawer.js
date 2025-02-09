@@ -1,4 +1,3 @@
-import Drawer from './Drawer.js';
 import Params from './Params.js';
 import aDrawer from './aDrawer.js';
 import Direction from './Direction.js';
@@ -22,11 +21,12 @@ class HomeDrawer extends aDrawer {
     let counterdir = params.direction.counterpart;
     let xStep = counterdir.xStep;
     let yStep = params.direction.yStep;
-    let xIndent = params.direction.isTopToBottom ? 0 : +2;
-    let yIndent = params.direction.isTopToBottom ? 0 : -2;
-    let progressIndent = params.direction.isTopToBottom ? 31 : -46;
+    //let xIndent = params.direction.isTopToBottom ? 0 : +2;
+    //let yIndent = params.direction.isTopToBottom ? 0 : -2;
+    //let progressIndent = params.direction.isTopToBottom ? 31 : -46;
     e.setAttribute('race', home.player.race);
     if (params.direction.isTopToBottom) {
+      this._drawer.draw(e, home.counter,  new Params(19*xStep, 18*yStep, Direction.LeftToRight));
       this._drawer.draw(e, home.progress, new Params(33*xStep,  0*yStep, Direction.LeftToRight));
       this._drawer.draw(e, home.hand,     new Params(24*xStep, -2*yStep, Direction.TopToBottom));
       this._drawer.draw(e, home.discard,  new Params(17*xStep,  9*yStep, params.direction));
@@ -34,6 +34,7 @@ class HomeDrawer extends aDrawer {
       this._drawer.draw(e, home.factory,  new Params( 8*xStep,  0*yStep, params.direction));
       this._drawer.draw(e, home.research, new Params( 0*xStep,  0*yStep, params.direction));
     } else {
+      this._drawer.draw(e, home.counter,  new Params(14*xStep,  12*yStep, Direction.LeftToRight));
       this._drawer.draw(e, home.progress, new Params(49*xStep,  0*yStep, Direction.LeftToRight));
       this._drawer.draw(e, home.hand,     new Params(24*xStep,  0*yStep, Direction.TopToBottom));
       this._drawer.draw(e, home.discard,  new Params(15*xStep,  9*yStep, params.direction));

@@ -1,7 +1,5 @@
 .Counter {
     position: absolute;
-    top: 40px;
-    left: 266px;
     color: #555;
     font-size: 50px;
     display: flex;

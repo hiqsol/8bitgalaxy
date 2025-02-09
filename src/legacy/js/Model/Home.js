@@ -3,6 +3,7 @@ import Deck from "./Decks/Deck.js";
 import Pile from "./Pile.js";
 import Slots from "./Slots.js";
 import Player from "./Player.js";
+import Counter from "./Tokens/Counter.js";
 import Assert from "./Assert.js";
 
 class Home {
@@ -10,6 +11,7 @@ class Home {
     this._player    = Player.assert(player);
     this._id        = player.race + '.home';
     this._deck      = new Deck(this.race);
+    this._counter   = new Counter(this, '', 3);
     this._progress  = new Row(this, 'Progress');
     this._hand      = new Slots(this, 'Hand', 3);
     this._discard   = new Pile(this, 'Discard');
@@ -48,6 +50,7 @@ class Home {
   get race()          { return this._player.race; }
   get deck()          { return this._deck; }
   get hand()          { return this._hand; }
+  get counter()       { return this._counter; }
   get discard()       { return this._discard; }
   get reserve()       { return this._reserve; }
   get progress()      { return this._progress; }
