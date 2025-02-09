@@ -1,4 +1,3 @@
-import Card from "./Card.js";
 import Pile from "./Pile.js";
 import Type from "./Type.js";
 import Space from "./Space.js";
@@ -13,7 +12,7 @@ class Star {
     this._id = 'S' + y + x;
     this._y = y;
     this._x = x;
-    this._counter = new Counter();
+    this._counter = new Counter(this, '', 0);
     this._spaces = this.createSpaces();
     this._ipm = new Pile(this, ''); // Interplanetary Medium
     this._actors = new Slots(this, Type.Ship, 5);

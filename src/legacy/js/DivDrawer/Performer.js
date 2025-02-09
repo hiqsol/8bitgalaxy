@@ -11,6 +11,7 @@ class Performer {
       'AlterCard':      (ef) => this.doAlterCard(ef),
       'TurnSpace':      (ef) => this.doTurnSpace(ef),
       'AlterSpace':     (ef) => this.doAlterSpace(ef),
+      'IncCounter':     (ef) => this.doIncCounter(ef),
     };
   }
 
@@ -19,12 +20,21 @@ class Performer {
 
   obj(elem)         { return this.drawer.obj(elem); }
   elem(obj)         { return this.drawer.elem(obj); }
+  getDrawer(obj)    { return this.drawer.getDrawer(obj); }
   getDragger(obj)   { return this.drawer.getDragger(obj); }
 
   doBulkEffect(effect) {
     for (const ef of effect.effects) {
       this.perform(ef);
     }
+    return true;
+  }
+
+  doIncCounter(effect) {
+    let value = effect.value;
+    let counter = effect.counter;
+    counter.inc(value);
+    this.getDrawer(counter).drawValue(this.elem(counter), counter);
     return true;
   }
 

@@ -1,4 +1,5 @@
 import aDrawer from './aDrawer.js';
+import IncCounter from '../Model/History/IncCounter.js';
 
 class CounterDrawer extends aDrawer {
   constructor(drawer) {
@@ -13,15 +14,14 @@ class CounterDrawer extends aDrawer {
   }
 
   draw(parent, counter, params) {
+    params.id = counter.id;
     let e = this.drawNode(parent, params);
-    e.querySelector(".Count").innerHTML = counter.count;
-    e.querySelector(".Plus").onclick = () => {
-      counter.inc(1);
-      this.drawValue(e, counter);
-    }
+    this.drawValue(e, counter);
     e.querySelector(".Minus").onclick = () => {
-      counter.dec(1);
-      this.drawValue(e, counter);
+      this.apply(new IncCounter(counter, -1));
+    }
+    e.querySelector(".Plus").onclick = () => {
+      this.apply(new IncCounter(counter, 1));
     }
     return e;
   }
