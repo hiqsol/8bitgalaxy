@@ -6,6 +6,7 @@ class Counter {
     this._count = count;
   }
 
+  get zero() { return this._count === 0; }
   get type() { return this._type; }
   get count() { return this._count; }
 
