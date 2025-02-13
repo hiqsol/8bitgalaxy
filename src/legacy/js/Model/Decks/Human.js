@@ -69,12 +69,12 @@ class Human {
 
 
       'Human-Base-1a':      'a2a,p1a:mobilize',
-      'Human-Base-1c':      'a2c,p1c:bank',
+      'Human-Base-1c':      'a2c,p1c:trade',
       'Human-Base-1p':      'a2p,p1p:shipyard',
       'Human-Base-1s':      'a2s,p1s:recycle',
 
       'Human-Base-2a':      'a1a,c1a,p2a:mobilize',
-      'Human-Base-2c':      'a1c,c1c,p2c:bank',
+      'Human-Base-2c':      'a1c,c1c,p2c:trade',
       'Human-Base-2p':      'a1p,c1p,p2p:shipyard',
       'Human-Base-2s':      'a1s,c1s,p2s:recycle',
 
