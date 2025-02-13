@@ -2,7 +2,7 @@
 
 ![props](https://8bitgalaxy.com/images/card.png)
 
-- [[Nation]]
+- [[Faction]]
 - [[Class]]
 - [[Level]] implies:
 	- [[Size]], [[Capacity]] and [[Range]]
