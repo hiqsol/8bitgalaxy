@@ -44,7 +44,7 @@
     text-align: center;
     vertical-align: middle;
     color: black;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 52px;
     font-weight: 100;
     /*-webkit-text-stroke: 1px black;*/
@@ -67,7 +67,7 @@
 }
 
 .Spec.Level .Value.Production {
-    background-color: rgba(255, 255, 0, 0.7);
+    background-color: rgba(255, 235, 0, 0.7);
 }
 
 .Spec.Require1 .Value.Attack {
@@ -83,7 +83,7 @@
 }
 
 .Spec.Require1 .Value.Production {
-    background-color: rgba(255, 255, 0, 0.5);
+    background-color: rgba(255, 235, 0, 0.7);
 }
 
 .Spec.Require2 .Value.Attack {
@@ -99,14 +99,14 @@
 }
 
 .Spec.Require2 .Value.Production {
-    background-color: rgba(255, 255, 0, 0.5);
+    background-color: rgba(255, 235, 0, 0.7);
 }
 
 .Spec.Require1 .Value, .Spec.Require2 .Value {
     position: absolute;
     width: 40px;
     height: 40px;
-    font-size: 21px;
+    font-size: 25px;
     line-height: 45px;
     font-weight: 100;
     color: #000 !important;
@@ -163,11 +163,8 @@
     /*-webkit-text-stroke: 1px white;*/
 }
 
-.Spec.Attack .Value,
-.Spec.Colonization .Value,
-.Spec.Production .Value,
-.Spec.Science .Value {
-    /*-webkit-text-stroke: 1px white;*/
+.Spec.Power .Value {
+    /*-webkit-text-stroke: 1px black;*/
 }
 
 .Ship .Spec.Level .Value {
