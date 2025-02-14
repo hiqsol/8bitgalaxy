@@ -75,7 +75,7 @@ class SlotDragger extends aDragger {
     if (!elem) return;
     this.elem(elem).querySelectorAll('.Card').forEach(
       (card, idx, array) => {
-        card.draggable = (idx === array.length -1);
+        card.draggable = true;
       }
     );
   }

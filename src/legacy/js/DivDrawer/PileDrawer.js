@@ -93,7 +93,7 @@ class PileDrawer extends aDrawer {
     if (!pile.size) return;
     for (let i = 0; i < pile.size; i++) {
       let card = this.drawer.draw(parent, pile.get(i));
-      card.draggable = (i === pile.size-1);
+      card.draggable = true;
     }
   }
 }
