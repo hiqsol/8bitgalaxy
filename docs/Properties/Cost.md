@@ -1,2 +1,2 @@
-- The cost of production or upgrade
-- Default value = total [[Level]]
+1. **Cost** is explicit card [[Property]]
+2. The cost of production or upgrade
