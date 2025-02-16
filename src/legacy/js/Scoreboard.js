@@ -2,7 +2,7 @@ import Game from "./Game.js";
 
 class Scoreboard {
   constructor(game) {
-    this._game = game;
+    this._game = Game.assert(game);
   }
 
   get game() { return this._game; }

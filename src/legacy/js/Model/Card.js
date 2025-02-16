@@ -1,4 +1,3 @@
-import Prop from "./Prop.js";
 import aCard from "./aCard.js";
 import State from "./State.js";
 import Assert from "./Assert.js";
