@@ -43,6 +43,7 @@ class Card {
   get Name()              { return this.aCard.Name; }
   get AltName()           { return this.Alternative ? this.Alternative.Name : null; }
   get Type()              { return this.aCard.Type; }
+  get Role()              { return this.aCard.Role; }
   get Race()              { return this.aCard.Race; }
   get Level()             { return this.aCard.Level; }
   get AltLevel()          { return this.Alternative ? this.Alternative.Level : null; }

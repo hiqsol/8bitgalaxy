@@ -15,6 +15,7 @@ class aCard {
   get Uniq()              { return this.getUniq(); }
   get Name()              { return this.Specs.Name; }
   get Type()              { return this.Specs.Type; }
+  get Role()              { return this.Specs.Role; }
   get Race()              { return this.Specs.Race; }
   get Level()             { return this.Specs.Level; }
   get Klass()             { return this.Specs.Klass; }

@@ -29,7 +29,7 @@
     cursor: grab;
 }
 
-.Ship, .Hero, .Tech {
+.Ship, .Hero, .Tech, .Event, .Tool {
     width: 250px;
     height: 350px;
 }

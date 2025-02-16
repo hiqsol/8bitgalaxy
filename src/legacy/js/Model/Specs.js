@@ -15,6 +15,7 @@ class Specs {
   get Specs()             { return this._specs; }
   get Name()              { return this.getValue(Prop.Name); }
   get Type()              { return Type.get(this.getValue(Prop.Type)); }
+  get Role()              { return this.Type.role; }
   get Race()              { return this.getValue(Prop.Race); }
   get Level()             { return this.getIntValue(Prop.Level, 0); }
   get Klass()             { return this.getValue(Prop.Klass); }

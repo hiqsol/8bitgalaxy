@@ -12,6 +12,7 @@ class Prop {
   static get Name()             { return Names.Name; }
   static get Type()             { return Names.Type; }
   static get Race()             { return Names.Race; }
+  static get Text()             { return Names.Text; }
   static get Level()            { return Names.Level; }
   static get Klass()            { return Names.Klass; }
   static get Power()            { return Names.Power; }
@@ -48,7 +49,7 @@ class Prop {
     }
     name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     if (Names[name] === undefined) {
-      Assert.error('wrong Prop name', name);
+      Assert.error(`wrong Prop name '${name}'`, name);
     }
     return Names[name];
   }
@@ -59,6 +60,7 @@ const Names = Object.freeze({
   None:               'None',
   Type:               'Type',
   Race:               'Race',
+  Text:               'Text',
   Level:              'Level',
   Klass:              'Klass',
   Power:              'Power',

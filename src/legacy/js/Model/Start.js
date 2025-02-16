@@ -116,7 +116,7 @@ class Start {
   }
 
   initIdeas() {
-    this.ideas.put(this.deck.lower);
+    this.ideas.put(this.deck.upper);
     this.ideas.shuffle();
   }
 }

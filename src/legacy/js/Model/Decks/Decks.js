@@ -7,6 +7,7 @@ import Klass from "../Klass.js";
 import Specs from "../Specs.js";
 import Assert from "../Assert.js";
 import Human from "./Human.js";
+import Alien from "./Alien.js";
 import AI from "./AI.js";
 import Other from "./Other.js";
 
@@ -31,7 +32,6 @@ class Decks {
         return dst;
       }, {});
       Decks.copyCards(src, 'Human', 'Martian');
-      Decks.copyCards(src, 'Human', 'Alien');
     }
     return Decks._all;
   }
@@ -147,9 +147,10 @@ class Decks {
 
   static allAnyCase() {
     let human = Human.cards();
+    let alien = Alien.cards();
     let ai = AI.cards();
     let other = Other.cards();
-    return {...human, ...ai, ...other};
+    return {...human, ...alien, ...ai, ...other};
   }
 }
 

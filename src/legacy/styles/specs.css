@@ -303,6 +303,23 @@
     border-bottom-right-radius: 12px;
 }
 
+.Event .Image .Klass {
+    color: rgba(100, 100, 100, 0.5);
+    left: 10px;
+    top: 20px;
+}
+.Event .Spec.Text .Value {
+    top: 30px;
+    display: block;
+    width: 240px;
+    text-wrap: wrap;
+    text-align: right;
+    font-weight: 100;
+    font-size: 25px;
+    color: black;
+
+}
+
 .Card .Name {
     display: none;
 }

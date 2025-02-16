@@ -22,6 +22,7 @@ class CardDrawer extends aDrawer {
 
     if (card.State.name) e.classList.add(...card.State.names);
     if (card.Type) e.classList.add(card.Type);
+    if (card.Type) e.classList.add(card.Role);
     if (card.Race) e.classList.add(card.Race);
     if (card.Alternative) e.classList.add('Alterable');
 
@@ -100,6 +101,8 @@ const TypeImages = Object.freeze({
   ship: "rocket",
   base: "codepen",
   colony: "world",
+  event: "bolt-alt",
+  tool: "wrench",
   tech: "react",
 });
 

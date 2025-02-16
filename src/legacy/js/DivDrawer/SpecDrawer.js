@@ -21,8 +21,10 @@ class SpecDrawer extends aDrawer {
     parent.classList.add(name);
     parent.querySelector('.Value').classList.add(klass);
     if (value) {
-
-      this.setInnerHtml(parent, '.Value', value.replaceAll(' ', '&nbsp;'));
+      if (name != 'Text') {
+        value = value.replaceAll(' ', '&nbsp;')
+      }
+      this.setInnerHtml(parent, '.Value', value);
     } else {
       this.setInnerHtml(parent, '');
     }
