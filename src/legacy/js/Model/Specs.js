@@ -18,6 +18,7 @@ class Specs {
   get Role()              { return this.Type.role; }
   get Race()              { return this.getValue(Prop.Race); }
   get Level()             { return this.getIntValue(Prop.Level, 0); }
+  get Extracost()         { return this.getValue(Prop.Extracost, 0); }
   get Klass()             { return this.getValue(Prop.Klass); }
   get Requires()          { return this.getValue(Prop.Requires); }
   get Attack()            { return this.getValue(Prop.Attack, 0); }

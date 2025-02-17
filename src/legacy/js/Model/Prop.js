@@ -14,6 +14,7 @@ class Prop {
   static get Race()             { return Names.Race; }
   static get Text()             { return Names.Text; }
   static get Level()            { return Names.Level; }
+  static get Extracost()        { return Names.Extracost; }
   static get Klass()            { return Names.Klass; }
   static get Power()            { return Names.Power; }
   static get Requires()         { return Names.Requires; }
@@ -62,6 +63,7 @@ const Names = Object.freeze({
   Race:               'Race',
   Text:               'Text',
   Level:              'Level',
+  Extracost:          'Extracost',
   Klass:              'Klass',
   Power:              'Power',
   Requires:           'Requires',

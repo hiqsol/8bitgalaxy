@@ -70,6 +70,13 @@
     background-color: rgba(255, 235, 0, 0.7);
 }
 
+.Spec.Extracost .Value {
+    position: absolute;
+    left: 37px;
+    color: black;
+    font-size: 25px;
+}
+
 .Spec.Require1 .Value.Attack {
     background-color: rgba(255, 0, 0, 0.2);
 }
@@ -305,8 +312,8 @@
 
 .Event .Image .Klass {
     color: rgba(100, 100, 100, 0.5);
-    left: 10px;
-    top: 20px;
+    left: 5px;
+    top: 15px;
 }
 .Event .Spec.Text .Value {
     top: 30px;

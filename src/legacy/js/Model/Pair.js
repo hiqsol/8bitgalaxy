@@ -1,4 +1,3 @@
-import Specs from "./Specs.js";
 import Klass from "./Klass.js";
 import Assert from "./Assert.js";
 
@@ -32,7 +31,7 @@ class Pair {
     if (typeof (sample) === "string") {
       return Pair.fromString(sample);
     }
-    Assert.error("not a Pair", sample);
+    Assert.error(`not a Pair '${sample}'`, sample);
   }
 
   static fromString(name) {
