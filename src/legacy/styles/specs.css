@@ -244,33 +244,35 @@
     text-align: right;
 }
 
-:is(.Base, .Colony) .Spec.Level .Value {
-    left: 300px;
+.Structure .Spec.Level .Value {
     height: 60px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
-:is(.Base, .Colony) .Image .Klass {
-    left: 210px;
+.Structure .Image .Klass {
+    left: 20px;
     top: 10px;
 }
-:is(.Base, .Colony) .Spec.Require1 .Value {
-    left: 310px;
+.Structure .Spec.Require1 .Value {
     top: 70px;
-    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
-:is(.Base, .Colony) .Spec.Require2 .Value {
+.Structure .Spec.Require2 .Value {
     left: 310px;
     top: 110px;
-    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
-:is(.Base, .Colony) .Spec.Power .Value {
-    left: 5px;
+.Structure .Spec.Power .Value {
+    left: 0px;
+    width: 345px;
     font-size: 33px;
+    text-align: right;
 }
-:is(.Base, .Colony) .Spec.Cooperation .Value {
-    left: 5px;
+.Structure .Spec.Cooperation .Value {
+    left: 0px;
+    width: 345px;
     top: 50px;
+    text-align: right;
 }
 
 .Tech .Spec.Level .Value {
@@ -315,7 +317,7 @@
     left: 5px;
     top: 15px;
 }
-.Event .Spec.Text .Value {
+.Unit .Spec.Text .Value {
     top: 30px;
     display: block;
     width: 240px;
