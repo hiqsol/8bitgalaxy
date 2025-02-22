@@ -5,11 +5,13 @@
 - [[Faction]]
 - [[Class]]
 - [[Level]] implies:
-	- [[Size]], [[Capacity]] and [[Range]]
-	- [[Cost]] and [[Defense]]
+	- [[Capacity]] and [[Range]]
+	- [[Defense]]
+- [[ExtraCost]] implies:
+	- [[Cost]] and [[Size]]
 - [[Type]] - defines:
-	- [[Actor]] / [[Structure]]
-	- [[Origin]]
+	- [[Role]]: [[Unit]] / [[Structure]]
+	- [[Origin]]: [[Social]] / [[Industrial]]
 - [[PrimaryAbility]]
 - [[SecondaryAbility]]
 - [[Prerequisites]]
