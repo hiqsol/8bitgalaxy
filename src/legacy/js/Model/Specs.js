@@ -69,6 +69,9 @@ class Specs {
 
   setSpecs(specs) {
     //console.log(specs);
+    if (!specs) {
+      return this;
+    }
     if (specs instanceof Spec) {
       return this.setSpec(specs);
     }
@@ -81,6 +84,9 @@ class Specs {
       }
       return this;
     }
+    if (typeof(specs) === 'string') {
+      return this.setSpecs(Specs.fromString(specs));
+    }
     Assert.error('wrong Specs', specs);
   }
 
@@ -90,6 +96,27 @@ class Specs {
       specs[prop] = new Spec(prop, pair);
     }
     return specs;
+  }
+
+  static fromName(name) {
+    if (!name.includes('-')) {
+      return new Specs(Spec.text(Prop.Name, name));
+    }
+    let ps = Decks.splitName(name);
+    return new Specs({
+      [Prop.Name]:          name,
+      [Prop.Race]:          Pair.text(ps[0]),
+      [Prop.Type]:          Pair.text(ps[1]),
+      [Prop.Level]:         Pair.assert(ps[2]),
+    });
+  }
+
+  static fromString(specs) {
+    Assert.string(specs);
+    let ps = specs.split(',');
+    let res = new Specs();
+    ps.forEach(value => res.setSpec(Spec.fromString(value)));
+    return res;
   }
 
   static assert(sample) {

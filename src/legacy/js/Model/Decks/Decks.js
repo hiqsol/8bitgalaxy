@@ -47,31 +47,8 @@ class Decks {
   }
 
   static parseCard(name, specs) {
-    let type = typeof(specs);
-    let res = Decks.parseName(name);
-    if (!specs) {
-      return res;
-    }
-    if (type === 'object') {
-      return res.setSpecs(specs);
-    }
-    if (type === 'string') {
-      return res.setSpecs(Decks.parseSpecs(specs));
-    }
-    Assert.error('wrong card specs', specs);
-  }
-
-  static parseName(name) {
-    if (!name.includes('-')) {
-      return new Specs(Spec.text(Prop.Name, name));
-    }
-    let ps = Decks.splitName(name);
-    return new Specs({
-      [Prop.Name]:          name,
-      [Prop.Race]:          Pair.text(ps[0]),
-      [Prop.Type]:          Pair.text(ps[1]),
-      [Prop.Level]:         Pair.assert(ps[2]),
-    });
+    let res = Specs.fromName(name);
+    return res.setSpecs(specs);
   }
 
   static normalizeName(name) {
@@ -95,14 +72,6 @@ class Decks {
   static capitalize(str) {
     if (str.length == 0) return str;
     return str[0].toUpperCase() + str.substr(1);
-  }
-
-  static parseSpecs(specs) {
-    Assert.string(specs);
-    let ps = specs.split(',');
-    let res = new Specs();
-    ps.forEach(value => res.setSpec(Decks.parseSpec(value)));
-    return res;
   }
 
   static parseSpec(spec) {

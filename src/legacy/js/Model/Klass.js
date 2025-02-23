@@ -30,8 +30,6 @@ class Klass {
 
   static fromString(name) { return new Klass(name); }
 
-  static _letters = {};
-
   static assertName(name) {
     if (typeof(name) !== 'string') {
       Assert.error('wrong Klass given', name);

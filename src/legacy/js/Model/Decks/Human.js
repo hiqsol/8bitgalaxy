@@ -6,13 +6,17 @@ class Human {
 
   static cards() {
     return {
-      'Human-Ship-1a':      'a2a,p1a,c1a',
+      'Human-Ship-2c': {
+        'specs':        'l2c,e1p,p1c,c1c:trade',
+        'altspecs':     'l1a,e1p,p1a,c1a',
+      },
+
+
       'Human-Ship-1c':      'a2c,p1c,c1c',
       'Human-Ship-1p':      'a2p,p1p,c1p',
       'Human-Ship-1s':      'a2s,p1s,c1s',
 
       'Human-Ship-2a':      'a1s,p1a,c1a:retreat',
-      'Human-Ship-2c':      'a1a,p1c,c1c:trade',
       'Human-Ship-2p':      'a1c,p1p,c1p:extract',
       'Human-Ship-2s':      'a1p,p1s,c1s:explore',
 
