@@ -1,4 +1,3 @@
-import Pair from "./Pair.js";
 import Specs from "./Specs.js";
 import Decks from "./Decks/Decks.js";
 import Assert from "./Assert.js";
@@ -6,12 +5,12 @@ import Assert from "./Assert.js";
 class aCard {
   constructor(specs) {
     this._specs = Specs.assert(specs);
-    this._alternative = this.findAlternative(specs.Alternative);
+    this._altspecs = this._specs.Alt;
     this._uniq = undefined;
   }
 
   get Specs()             { return this._specs; }
-  get Alternative()       { return this._alternative; }
+  get Alt()               { return this._altspecs; }
   get Uniq()              { return this.getUniq(); }
   get Name()              { return this.Specs.Name; }
   get Type()              { return this.Specs.Type; }
@@ -26,6 +25,7 @@ class aCard {
   get Production()        { return this.Specs.Production; }
   get Power()             { return this.Specs.Power; }
   get Cooperation()       { return this.Specs.Cooperation; }
+  get Alternative()       { return this.Specs.Alternative; }
   get hasRequirements()   { return this.Specs.Requires == undefined; }
 
   isType(type)            { return this.Type.equals(type); }
@@ -38,6 +38,10 @@ class aCard {
 
   getValue(prop)          { return this.Specs.getValue(prop); }
 
+  buildName() {
+    return this._specs.buildName();
+  }
+
   getUniq() {
     if (this._uniq === undefined) {
       this._uniq = this.buildUniq();
@@ -49,9 +53,9 @@ class aCard {
     if (this.Alternative === undefined) {
       return this.Name;
     }
-    return this.Name > this.Alternative.Name
-      ? this.Name + '/' + this.Alternative.Name
-      : this.Alternative.Name + '/' + this.Name
+    return this.Name > this.Alt.Name
+      ? this.Name + '/' + this.Alt.Name
+      : this.Alt.Name + '/' + this.Name
     ;
   }
 
@@ -63,23 +67,6 @@ class aCard {
       return new aCard(Decks.get(sample));
     }
     Assert.error('not a aCard', sample);
-  }
-
-  findAlternative(alt) {
-    if (! alt) {
-      return undefined;
-    }
-    if (typeof(alt) === 'string') {
-      alt = Pair.assert(alt);
-    }
-    if (alt instanceof Pair) {
-      return Decks.get(aCard.buildName(this.Race, this.Type, alt.short));
-    }
-    Assert.error('wrong alternative', alt);
-  }
-
-  static buildName(race, type, pair) {
-    return race + '-' + type + '-' + pair;
   }
 }
 

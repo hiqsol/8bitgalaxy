@@ -66,7 +66,7 @@ class Drawer {
     let name = typeof obj === "string" ? obj : obj.constructor.name;
     let drawer = Drawers[name] ?? null;
     if (!drawer) {
-      Assert.error("no drawer for " + name);
+      Assert.error("no drawer for " + name, obj);
     }
     if (this._drawers[drawer] === undefined) {
       this._drawers[drawer] = new drawer(this);

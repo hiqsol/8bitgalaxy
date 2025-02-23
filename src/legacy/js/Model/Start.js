@@ -98,7 +98,7 @@ class Start {
   }
 
   dealStructure(card) {
-    if (card.isAnyLevel(1) && ['shipyard', 'academy'].includes(card.Power.value)) {
+    if (card.isAnyLevel(1) && ['shpyrd', 'shipyard', 'academy'].includes(card.Power.value)) {
       this.home.star.put(card);
       return true;
     }

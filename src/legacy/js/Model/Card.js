@@ -36,20 +36,20 @@ class Card {
 
   get aCard()             { return this._acard; }
   get Specs()             { return this._acard.Specs; }
-  get Alternative()       { return this._acard.Alternative; }
+  get Alt()               { return this._acard.Alt; }
 
   get id()                { return this.Name; }
   get Uniq()              { return this.aCard.Uniq; }
   get Name()              { return this.aCard.Name; }
-  get AltName()           { return this.Alternative ? this.Alternative.Name : null; }
+  get AltName()           { return this.Alternative ? this.Alt.Name : null; }
   get Type()              { return this.aCard.Type; }
   get Role()              { return this.aCard.Role; }
   get Race()              { return this.aCard.Race; }
   get Level()             { return this.aCard.Level; }
-  get AltLevel()          { return this.Alternative ? this.Alternative.Level : null; }
+  get AltLevel()          { return this.Alternative ? this.Alt.Level : null; }
   get MaxLevel()          { return Math.max(this.Level, this.AltLevel); }
   get Klass()             { return this.aCard.Klass; }
-  get AltKlass()          { return this.Alternative ? this.Alternative.Klass : null; }
+  get AltKlass()          { return this.Alternative ? this.Alt.Klass : null; }
   get Attack()            { return this.aCard.Attack; }
   get Colonization()      { return this.aCard.Colonization; }
   get Science()           { return this.aCard.Science; }
@@ -57,7 +57,8 @@ class Card {
   get Requires()          { return this.aCard.Requires; }
   get Power()             { return this.aCard.Power; }
   get Cooperation()       { return this.aCard.Cooperation; }
-  get hasRequirements()   { return this.aCard.hasRequirements || this.Alternative.hasRequirements; }
+  get Alternative()       { return this.aCard.Alternative; }
+  get hasRequirements()   { return this.aCard.hasRequirements || this.Alt.hasRequirements; }
 
   get isHero()            { return this.aCard.isHero; }
   get isColony()          { return this.aCard.isColony; }

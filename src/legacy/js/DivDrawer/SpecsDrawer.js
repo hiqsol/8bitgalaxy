@@ -1,4 +1,3 @@
-import Drawer from './Drawer.js';
 import aDrawer from './aDrawer.js';
 
 class SpecsDrawer extends aDrawer {
@@ -14,7 +13,7 @@ class SpecsDrawer extends aDrawer {
   }
 
   drawSpecs(e, specs) {
-    for (const [prop, spec] of Object.entries(specs.getSpecs())) {
+    for (const [_, spec] of Object.entries(specs.getSpecs())) {
       this.drawer.draw(e, spec);
     }
   }

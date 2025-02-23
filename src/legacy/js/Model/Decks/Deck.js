@@ -27,7 +27,7 @@ class Deck {
         if (this._uniqs[uniq]) continue;
         this._all[name] = card;
         this._uniqs[uniq] = card;
-        let alt = card.Alternative;
+        let alt = card.Alt;
         let upper = card;
         let lower = card;
         if (alt) {

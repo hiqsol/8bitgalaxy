@@ -51,7 +51,7 @@ class CardDrawer extends aDrawer {
     this.drawImage(e, card.Specs);
     this.drawer.draw(e, card.Specs, new Params().setClassList('Normal'));
     if (card.Alternative) {
-      this.drawer.draw(e, card.Alternative, new Params().setClassList('Alternative'));
+      this.drawer.draw(e, card.Alt, new Params().setClassList('Alternative'));
     }
 
     e.querySelector(".Name .Value").innerHTML = card.Name;

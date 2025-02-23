@@ -16,7 +16,7 @@ class Pair {
   }
 
   static text(text) {
-    return new Pair(Klass.Attack, text);
+    return new Pair(Klass.None, text);
   }
 
   static assertValue(value) {

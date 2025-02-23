@@ -7,6 +7,8 @@ class Prop {
 
   get name() { return this._name; }
 
+  static get specs()            { return Names.specs; }
+  static get altspecs()         { return Names.altspecs; }
   static get Names()            { return Names; }
   static get None()             { return Names.None; }
   static get Name()             { return Names.Name; }
@@ -28,6 +30,10 @@ class Prop {
   static get Cooperation()      { return Names.Cooperation; }
   static get Alternative()      { return Names.Alternative; }
 
+  static isPlusable(name) {
+    return name === Prop.Cooperation || name === Prop.Extracost;
+  }
+
   static assert(sample) {
     if (sample instanceof(Prop)) {
       return sample;
@@ -44,10 +50,23 @@ class Prop {
     Assert.error('wrong Prop', sample);
   }
 
+  static fromPrefix(prefix) {
+    switch (prefix) {
+      case 'a': return Prop.Alternative;
+      case 'c': return Prop.Cooperation;
+      case 'e': return Prop.Extracost;
+      case 'l': return Prop.Level;
+      case 'p': return Prop.Power;
+      case 'r': return Prop.Requires;
+    }
+    return null;
+  }
+
   static assertName(name) {
     if (typeof(name) !== 'string') {
       Assert.error('wrong Prop given', name);
     }
+    if (Names[name]) return name;
     name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     if (Names[name] === undefined) {
       Assert.error(`wrong Prop name '${name}'`, name);
@@ -76,6 +95,8 @@ const Names = Object.freeze({
   Production:         'Production',
   Cooperation:        'Cooperation',
   Alternative:        'Alternative',
+  specs:              'specs',
+  altspecs:           'altspecs',
 })
 
 export default Prop;

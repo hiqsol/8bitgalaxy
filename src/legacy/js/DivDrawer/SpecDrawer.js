@@ -1,5 +1,5 @@
-import Drawer from './Drawer.js';
 import aDrawer from "./aDrawer.js";
+import Prop from '../Model/Prop.js';
 
 class SpecDrawer extends aDrawer {
   constructor(drawer) {
@@ -21,13 +21,20 @@ class SpecDrawer extends aDrawer {
     parent.classList.add(name);
     parent.querySelector('.Value').classList.add(klass);
     if (value) {
-      if (name != 'Text') {
-        value = value.replaceAll(' ', '&nbsp;')
-      }
-      this.setInnerHtml(parent, '.Value', value);
+      this.setInnerHtml(parent, '.Value', this.decorate(value, name));
     } else {
       this.setInnerHtml(parent, '');
     }
+  }
+
+  decorate(value, name) {
+    if (Prop.isPlusable(name) && value.length === 1) {
+      return '+' + value;
+    }
+    if (name != Prop.Text) {
+      return value.replaceAll(' ', '&nbsp;')
+    }
+    return value;
   }
 
   setInnerHtml(parent, selector, value) {
