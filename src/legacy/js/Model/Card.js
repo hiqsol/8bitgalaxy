@@ -44,6 +44,7 @@ class Card {
   get AltName()           { return this.Alternative ? this.Alt.Name : null; }
   get Type()              { return this.aCard.Type; }
   get Role()              { return this.aCard.Role; }
+  get Origin()            { return this.aCard.Origin; }
   get Race()              { return this.aCard.Race; }
   get Level()             { return this.aCard.Level; }
   get AltLevel()          { return this.Alternative ? this.Alt.Level : null; }

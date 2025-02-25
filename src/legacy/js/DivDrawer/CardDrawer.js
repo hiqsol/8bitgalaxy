@@ -23,6 +23,7 @@ class CardDrawer extends aDrawer {
     if (card.State.name) e.classList.add(...card.State.names);
     if (card.Type) e.classList.add(card.Type);
     if (card.Type) e.classList.add(card.Role);
+    if (card.Type) e.classList.add(card.Origin);
     if (card.Race) e.classList.add(card.Race);
     if (card.Alternative) e.classList.add('Alterable');
 

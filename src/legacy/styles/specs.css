@@ -23,9 +23,16 @@
 
 .Image .lni {
     position: absolute;
-    color: rgba(100, 100, 100, 0.8);
     font-size: 130px;
     font-weight: 100;
+}
+
+.Industrial .Image .lni {
+    color: rgba(100, 80, 50, 0.5);
+}
+
+.Social .Image .lni {
+    color: rgba(50, 100, 50, 0.5);
 }
 
 .Spec .Value {

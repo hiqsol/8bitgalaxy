@@ -1,10 +1,12 @@
 import Role from "./Role.js";
+import Origin from "./Origin.js";
 import Assert from "./Assert.js";
 
 class Type {
   constructor(name) {
     this._name = Type.assertName(name);
     this._role = Type.type2role(this._name);
+    this._origin = Type.type2origin(this._name);
   }
 
   toString()        { return this._name; }
@@ -15,6 +17,7 @@ class Type {
 
   get name()        { return this._name; }
   get role()        { return this._role; }
+  get origin()      { return this._origin; }
   get isHero()      { return this._name === Names.Hero; }
   get isShip()      { return this._name === Names.Ship; }
   get isBase()      { return this._name === Names.Base; }
@@ -24,6 +27,12 @@ class Type {
   get isUnit()      { return this._role.isUnit; }
   get isActor()     { return this._role.isActor; }
   get isStructure() { return this._role.isStructure; }
+  get isIndustrial(){ return this._origin.isIndustrial; }
+  get isSocial()    { return this._origin.isSocial; }
+
+  static type2origin(name) {
+    return Origin.get(Origins[Type.assertName(name)]);
+  }
 
   static type2role(name) {
     return Role.get(Roles[Type.assertName(name)]);
@@ -108,6 +117,15 @@ const Roles = Object.freeze({
   Colony: Role.Structure,
   Event:  Role.Unit,
   Tool:   Role.Unit,
+})
+
+const Origins = Object.freeze({
+  Hero:   Origin.Social,
+  Base:   Origin.Industrial,
+  Ship:   Origin.Industrial,
+  Colony: Origin.Social,
+  Event:  Origin.Social,
+  Tool:   Origin.Industrial,
 })
 
 const Objects = Object.freeze({
