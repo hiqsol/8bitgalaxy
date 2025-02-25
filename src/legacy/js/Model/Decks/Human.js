@@ -102,8 +102,8 @@ class Human {
         'altspecs':   'l3a,e1p,r2a,p3n:stealth',
       },
       'Human-Base-4c': {
-        'specs':      'l4c,e1p,r2c,c3c,p4c:heal+acad',
-        'altspecs':   'l3c,e1p,r2c,p3c:heal+acad',
+        'specs':      'l4c,e1p,r2c,c3c,p4c:allacad',
+        'altspecs':   'l3c,e1p,r2c,p3c:allacad',
       },
       'Human-Base-4p': {
         'specs':      'l4p,e1p,r2p,c3p,p4p:+++load',
