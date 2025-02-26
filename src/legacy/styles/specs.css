@@ -182,10 +182,34 @@
     /*-webkit-text-stroke: 1px black;*/
 }
 
-.Ship .Spec.Level .Value {
+.Unit .Spec.Level .Value {
     height: 60px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.Unit .Spec.Require1 .Value {
+    top: 100px;
+    border-top-right-radius: 12px;
+}
+
+.Unit .Spec.Require2 .Value {
+    top: 140px;
+    border-bottom-right-radius: 12px;
+}
+
+.Unit .Spec.Power .Value {
+    left: 0px;
+    width: 245px;
+    font-size: 30px;
+    text-align: right;
+}
+
+.Unit .Spec.Cooperation .Value {
+    top: 50px;
+    left: 0px;
+    width: 245px;
+    text-align: right;
 }
 
 .Ship .Image .Klass {
@@ -193,63 +217,9 @@
     top: 9px;
 }
 
-.Ship .Spec.Require1 .Value {
-    top: 100px;
-    border-top-right-radius: 12px;
-}
-
-.Ship .Spec.Require2 .Value {
-    top: 140px;
-    border-bottom-right-radius: 12px;
-}
-
-.Ship .Spec.Power .Value {
-    left: 0px;
-    width: 245px;
-    font-size: 30px;
-    text-align: right;
-}
-
-.Ship .Spec.Cooperation .Value {
-    top: 50px;
-    left: 0px;
-    width: 245px;
-    text-align: right;
-}
-
-.Hero .Spec.Level .Value {
-    height: 60px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
 .Hero .Image .Klass {
     left: 20px;
     top: 0px;
-}
-
-.Hero .Spec.Require1 .Value {
-    top: 110px;
-    border-top-right-radius: 12px;
-}
-
-.Hero .Spec.Require2 .Value {
-    top: 150px;
-    border-bottom-right-radius: 12px;
-}
-
-.Hero .Spec.Power .Value {
-    left: 0px;
-    width: 245px;
-    font-size: 30px;
-    text-align: right;
-}
-
-.Hero .Spec.Cooperation .Value {
-    left: 0px;
-    width: 245px;
-    top: 50px;
-    text-align: right;
 }
 
 .Structure .Spec.Level .Value {
