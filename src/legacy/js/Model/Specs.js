@@ -15,6 +15,7 @@ class Specs {
   get Specs()             { return this._specs; }
   get Alt()               { return this.getPair(Prop.altspecs); }
   get Name()              { return this.getValue(Prop.Name); }
+  get LowerName()         { return this.Name.toLowerCase(); }
   get Type()              { return Type.get(this.getValue(Prop.Type)); }
   get Role()              { return this.Type.role; }
   get Origin()            { return this.Type.origin; }
@@ -62,12 +63,16 @@ class Specs {
     if (!specs.has(Prop.Race)) {
       specs.setSpec(this.getSpec(Prop.Race));
     }
+    if (!specs.has(Prop.Type)) {
+      specs.setSpec(this.getSpec(Prop.Type));
+    }
     if (!specs.has(Prop.Alternative)) {
       specs.setPair(Prop.Alternative, this.LevelPair);
     }
     if (!specs.has(Prop.Name)) {
-      specs.setPair(Prop.Name, Pair.text(this.buildName()));
+      specs.setPair(Prop.Name, Pair.text(specs.buildName()));
     }
+    specs._specs[Prop.altspecs] = this;
     return specs;
   }
 
@@ -75,6 +80,19 @@ class Specs {
     spec = Spec.assert(spec);
     //this._specs[spec.name] = spec.pair;
     return this.setPair(spec.name, spec.pair);
+  }
+
+  setRace(race, recursive = true) {
+    if (recursive && this.Alt) {
+      this.Alt.setRace(race, false);
+    }
+    this.setText(Prop.Race, race);
+    return this.setName(this.buildName());
+  }
+  setName(name) { return this.setText(Prop.Name, name); }
+
+  setText(name, text) {
+    return this.setPair(name, Pair.text(text));
   }
 
   setPair(name, pair) {
@@ -86,9 +104,7 @@ class Specs {
       this.setPair(Prop.Alternative, pair.LevelPair);
     }
     if (name === Prop.Level) {
-      this._specs[name] = pair;
-      name = Prop.Klass;
-      pair = new Pair(pair.klass, pair.klass.name);
+      this.setPair(Prop.Klass, new Pair(pair.klass, pair.klass.name));
     }
     if (name === Prop.Requires) {
       name = this._specs[Prop.Require1] ? Prop.Require2 : Prop.Require1;

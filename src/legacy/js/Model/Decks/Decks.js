@@ -2,15 +2,12 @@ import aCard from "../aCard.js";
 import Specs from "../Specs.js";
 import Human from "./Human.js";
 import Alien from "./Alien.js";
-import AI from "./AI.js";
 import Other from "./Other.js";
 
 class Decks {
   static get(name) {
     name = Specs.normalizeName(name);
-    let all = Decks.all();
-    let specs = all[name.toLowerCase()];
-    return Specs.fromNameAndSpecs(name, specs);
+    return Decks.all()[name.toLowerCase()];
   }
 
   static getCard(name) {
@@ -21,31 +18,36 @@ class Decks {
   static all() {
     if (Decks._all === undefined) {
       let src = Decks.allAnyCase();
-      Decks._all = Object.keys(src).reduce(function (dst, key) {
-        dst[key.toLowerCase()] = src[key];
+      Decks._all = Object.keys(src).reduce(function (dst, name) {
+        let key = name.toLowerCase();
+        let specs = Specs.fromNameAndSpecs(name, src[name]);
+        let alt = specs.Alt;
+        dst[key] = specs;
+        if (alt) {
+          dst[alt.LowerName] = alt;
+        }
         return dst;
       }, {});
-      Decks.copyCards(src, 'Human', 'Martian');
+      Decks.copyCards(Decks._all, 'Human', 'Martian');
+      console.log(Decks._all);
     }
     return Decks._all;
   }
 
   static copyCards(cards, src, dst) {
-    src = src+'-';
-    dst = dst+'-';
     for (const key in cards) {
-      if (key.startsWith(src)) {
-        Decks._all[key.replace(src, dst).toLowerCase()] = cards[key];
+      if (key.startsWith(src.toLowerCase()+'-')) {
+        let copy = Decks.copyCard(cards[key], dst);
+        Decks._all[copy.LowerName] = copy;
       }
     }
   }
 
-  static old_all() {
-    let src = Decks.allAnyCase();
-    return Object.keys(src).reduce(function (dst, key) {
-      dst[key.toLowerCase()] = src[key];
-      return dst;
-    }, {});
+  static copyCard(specs, race) {
+    let res = new Specs();
+    res.setSpecs(specs); // clone
+    res.setRace(race);
+    return res;
   }
 
   static allAnyCase() {
