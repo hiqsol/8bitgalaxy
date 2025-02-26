@@ -28,11 +28,11 @@
 }
 
 .Industrial .Image .lni {
-    color: rgba(100, 80, 50, 0.5);
+    color: rgba(180, 180, 70, 0.9);
 }
 
 .Social .Image .lni {
-    color: rgba(50, 100, 50, 0.5);
+    color: rgba(50, 180, 50, 0.7);
 }
 
 .Spec .Value {
@@ -66,7 +66,7 @@
 }
 
 .Spec.Level .Value.Colonization {
-    background-color: rgba(0, 255, 0, 0.4);
+    background-color: rgba(0, 255, 0, 0.6);
 }
 
 .Spec.Level .Value.Science {
