@@ -1,5 +1,4 @@
 import Drawer from './Drawer.js';
-import aDrawer from './aDrawer.js';
 
 class GameDragger {
   constructor(drawer) {
@@ -14,10 +13,21 @@ class GameDragger {
   }
 
   addGameKeys(game) {
-    const ele = document.documentElement;
-    ele.addEventListener('keydown', (e) => {
-      if (e.ctrlKey && e.code === 'KeyZ') {
+    document.addEventListener('keydown', (e) => {
+      let board = document.getElementById('Board');
+      let zoom = parseFloat(board.style.zoom);
+      if (!zoom) zoom = 0.3;
+      let save = zoom;
+
+      if (e.ctrlKey && e.key === 'z') {
         game.undo();
+      } else if (e.key === '+' || e.key === '=') {
+        zoom += 0.03;
+      } else if (e.key === '-') {
+        zoom -= 0.03;
+      }
+      if (zoom != save) {
+        board.style.zoom = zoom;
       }
     });
   }
