@@ -1,4 +1,3 @@
-import Drawer from './Drawer.js';
 import Params from './Params.js';
 import aDrawer from './aDrawer.js';
 import Direction from './Direction.js';
@@ -6,7 +5,7 @@ import Direction from './Direction.js';
 class BoardDrawer extends aDrawer {
   constructor(drawer) {
     super(drawer);
-    this._HTML = `<div class="Board"></div>`;
+    this._HTML = `<div class="Board" id="Board"></div>`;
   }
 
   draw(parent, board, params) {

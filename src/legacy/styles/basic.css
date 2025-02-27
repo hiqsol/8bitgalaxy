@@ -16,6 +16,10 @@ body {
     background-size: cover;
 }
 
+#Board {
+    zoom: 0.3;
+}
+
 .Human {
     background-color: #ffb;
 }
@@ -70,15 +74,14 @@ div.Scoreboard {
     display: block;
     z-index: 10;
     position: fixed;
-    left: 100px;
-    bottom: 100px;
+    left: 30px;
+    bottom: 30px;
     width: 1px;
     height: 1px;
 }
 
 #Show .Card {
-    transform: scale(2.2);
-    transform-origin: bottom left;
+    zoom: 0.5;
 }
 
 .Home {
