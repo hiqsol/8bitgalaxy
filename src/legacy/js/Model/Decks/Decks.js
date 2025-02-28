@@ -29,7 +29,6 @@ class Decks {
         return dst;
       }, {});
       Decks.copyCards(Decks._all, 'Human', 'Martian');
-      console.log(Decks._all);
     }
     return Decks._all;
   }

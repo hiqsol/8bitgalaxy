@@ -10,15 +10,15 @@ class Human {
     return {
       'Human-Ship-2a': {
         specs:        'l2a,e1p,p1a,c1a:retreat',
-        altspecs:     'l1s,e1p,p1s,c1s',
+        altspecs:     'l1s,e2p,p1s,c1s',
       },
       'Human-Ship-2c': {
         specs:        'l2c,e1p,p1c,c1c:trade',
-        altspecs:     'l1a,e1p,p1a,c1a',
+        altspecs:     'l1a,e2p,p1a,c1a',
       },
       'Human-Ship-2p': {
         specs:        'l2p,e1p,p1p,c1p:extract',
-        altspecs:     'l1c,e1p,p1c,c1c',
+        altspecs:     'l1c,e2p,p1c,c1c',
       },
       'Human-Ship-2s': {
         specs:        'l2s,e1p,p1s,c1s:explore',

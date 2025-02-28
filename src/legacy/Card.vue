@@ -9,7 +9,7 @@ let g = new Game();
 let card = g.card("Human-S2c");
 
 let sd = g.drawer.getDrawer('Show');
-sd.draw(null, null, Params.xyleft(1, 25));
+sd.draw(null, null, Params.xyleft(1, 7));
 g.draw(null, card);
 
 let elem = g.draw(null, card, Params.hidden());
