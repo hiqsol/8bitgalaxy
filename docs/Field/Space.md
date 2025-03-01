@@ -6,7 +6,7 @@
 6. **Space** segments have multiple properties:
 	1. **Cost** required to [[Explore]]
 	2. **Type**
-	3. **Distance**
+	3. **Length**
 7. Types of space:
 	1. Normal
 	2. [[Asteroids]]
