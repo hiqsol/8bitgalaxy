@@ -4,3 +4,7 @@
 2. **Industrial** [[Origin]] cards are:
 	1. [[Ship]]
 	2. [[Base]]
+3. Distinct names for actions:
+	1. [[Produce]] - [[Build]]
+	2. [[Enhance]] - [[Upgrade]]
+	3. [[Fix]] - [[Repair]]

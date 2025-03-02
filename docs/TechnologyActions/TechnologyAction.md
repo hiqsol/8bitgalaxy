@@ -1,9 +1,16 @@
 - Military:
-    - [[Explore]]
+    - [[Mobilize]]
 - Industrial:
+    - [[Produce]] aka [[Build]]
+    - [[Enhance]] aka [[Upgrade]]
+    - [[Fix]] aka [[Repair]]
     - [[Extract]]
 - Cultural:
+    - [[Raise]] aka [[Build]]
+    - [[Grow]] aka [[Upgrade]]
+    - [[Heal]] aka [[Repair]]
     - [[Trade]] / [[Smuggle]]
     - [[Sell]]
 - Scientific:
-    - [[Research]] / [[Invent]]
+    - [[Explore]]
+    - [[Invent]]

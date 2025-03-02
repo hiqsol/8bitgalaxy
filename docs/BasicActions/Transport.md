@@ -10,13 +10,12 @@
 
 | Object    | Mil | Cul | Ind | Sci |
 | --------- | --- | --- | --- | --- |
-| Base      |     |     |  +  |  +  |
-| Colony    |     |  +  |     |  +  |
-| Ship      |  +  |     |  +  |  +  |
-| Hero      |  +  |  +  |  +  |  +  |
-| --------- | --- | --- | --- | --- |
-| Materials |  +  |  +  |  +  |  +  |
-| Wreckage  |  +  |  +  |  +  |  +  |
+| Base      |     |     | +   | +   |
+| Colony    |     | +   |     | +   |
+| Ship      | +   |     | +   | +   |
+| Hero      | +   | +   | +   | +   |
+| Materials | +   | +   | +   | +   |
+| Wreckage  | +   | +   | +   | +   |
 
 #### Notes
 
