@@ -30,30 +30,38 @@ class ShowDrawer extends aDrawer {
     copy.style.left = '0px';
     copy.style.bottom = '0px';
     copy.classList.remove('Turned');
+    let isalt = card.classList.contains('Altered');
+    let aname = isalt ? '.Alternative' : '.Normal';
+    console.log(card.classList, 'aname', aname);
     show.appendChild(copy);
 
     this.drawNote(
-      copy.querySelector(".Normal .Spec.Level .Value"),
+      copy.querySelector(aname + " .Spec.Level .Value"),
       'Level', 3.5, Params.xy(35.0/50, 10.0/50)
     );
 
     this.drawNote(
-      copy.querySelector(".Normal .Spec.Level .Value"),
+      copy.querySelector(aname + " .Spec.Level .Value"),
       'Class', 2.6, Params.xy(60.0/50, 5.0/50)
     );
 
     this.drawNote(
+      copy.querySelector(aname + " .Spec.Extracost .Value"),
+      'Extracost', 2.1, Params.xy(55.0/50, 19.0/50)
+    );
+
+    this.drawNote(
       copy.querySelector(".Image .Klass"),
-      'Type', 3, Params.xy(1.5, 1)
+      'Type', 2.2, Params.xy(2.1, 1)
     );
 
     this.drawNote(
-      copy.querySelector(".Normal .Spec.Power .Value"),
-      'Primary', 1
+      copy.querySelector(aname + " .Spec.Power .Value"),
+      'Primary', 0.1
     );
 
     this.drawNote(
-      copy.querySelector(".Normal .Spec.Cooperation .Value"),
+      copy.querySelector(aname + " .Spec.Cooperation .Value"),
       'Secondary', 0.1
     );
   }
