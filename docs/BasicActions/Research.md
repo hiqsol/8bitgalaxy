@@ -2,8 +2,7 @@
 2. **Research** action allows to move card:
 	1. From [[Laboratory]] to [[Factory]]
 	2. Between [[Laboratory]]s
-3. Direction: any [[Star]] to [[Research Facility]]
+3. **Direction**: any [[Star]] to corresponding [[BuildingFacility]]
 4. Similar to [[Manage]] action
-5. Can be part of [[Manage]] action
-6. Can only be done for [[SciencePower]]
-7. To research a card it is required to satisfy it's [[Prerequisites]]
+5. **Cost**: card's cost of [[SciencePower]]
+6. To research a card all it's [[Prerequisites]] must be satisfied 

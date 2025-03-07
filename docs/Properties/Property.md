@@ -1,4 +1,4 @@
-## Card properties
+
 
 ![props](https://8bitgalaxy.com/images/card.png)
 
@@ -9,9 +9,10 @@
 	- [[Defense]]
 - [[ExtraCost]] implies:
 	- [[Cost]] and [[Size]]
-- [[Type]] - defines:
+- [[Type]] implies:
 	- [[Role]]: [[Unit]] / [[Structure]]
 	- [[Origin]]: [[Social]] / [[Industrial]]
 - [[PrimaryAbility]]
 - [[SecondaryAbility]]
+- [[AdditionalAbility]]
 - [[Prerequisites]]

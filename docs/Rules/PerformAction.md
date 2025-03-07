@@ -3,7 +3,6 @@
 		- **Source**: [[IPS]]
 	2. **Action** - one of [[Actions]], defines list of **requirements**, can be:
 		- [[Power]]
-		- [[Mastery]]
 		- [[Range]]
 		- [[Capacity]]
 	3. **Participants**:

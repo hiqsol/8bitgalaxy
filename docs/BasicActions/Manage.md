@@ -7,7 +7,7 @@
 			- **Direction**: to the [[Star]]
 		- between piles within [[Laboratory]] or [[Factory]] row
 			- **Direction**: to corresponding [[BuildingFacility]]
-2. **Cost**: 1 resource card
+2. **Cost**: 1 resource per operation with card
 3. **Manage** action can be done with any power, but:
 	1. only the type of power given by the [[Actor]]
 	2. with limitations, see table below
