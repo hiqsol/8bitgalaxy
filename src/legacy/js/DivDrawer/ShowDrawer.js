@@ -52,7 +52,7 @@ class ShowDrawer extends aDrawer {
 
     this.drawNote(
       copy.querySelector(".Image .Klass"),
-      'Type', 2.2, Params.xy(2.1, 1)
+      'Type', 2.0, Params.xy(2.1, 1)
     );
 
     this.drawNote(
