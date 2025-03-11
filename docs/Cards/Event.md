@@ -1,11 +1,12 @@
-1. **Event** triggers when player 
-2. The player has control over anything not explicitly stated in the event description.
+1. **Event** is card [[Type]]
+2. **Event** triggers when player
+3. The player has control over anything not explicitly stated in the event description.
 
 
 - Outcome for alien:
-	- positive 
+	- positive
 	- negative
-	- ambivalent 
+	- ambivalent
 - Apply to:
 	- each faction
 	- non alien
@@ -20,5 +21,5 @@
 		- hide/reveal space
 		- move warp storm
 
-## Examples 
+## Examples
 - **Supernova**: destroy everything in least popular star and put [[Supernova]] at any unexplored space around

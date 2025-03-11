@@ -1,5 +1,4 @@
 
-
 ![props](https://8bitgalaxy.com/images/card.png)
 
 - [[Faction]]
