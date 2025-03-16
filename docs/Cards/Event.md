@@ -3,7 +3,7 @@
 3. The player has control over anything not explicitly stated in the event description.
 
 
-- Outcome for alien:
+- Outcome for [[Alien]]:
 	- positive
 	- negative
 	- ambivalent
@@ -22,4 +22,7 @@
 		- move warp storm
 
 ## Examples
-- **Supernova**: destroy everything in least popular star and put [[Supernova]] at any unexplored space around
+- **Supernova**: destroy everything in least occupied star and put [[Supernova]] at any preferably unexplored space around
+- **Alien Outbreak**: (or surge) add 1 [[Alien]] to each star with [[Alien]] in it
+- **Alien Invasion**: add 1 [[Alien]] [[Unit]] openly to every bordering star and attack where possible
+
