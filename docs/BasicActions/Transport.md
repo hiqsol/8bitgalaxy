@@ -19,10 +19,10 @@
 
 #### Notes
 
-- e.g. [[Colony]] can only be transported with [[Social]] and [[Scientific]] ships
-- Logic behind the table is following:
-	- [[Military]] ships can convoy cards that can move on itself
-	- [[Culture]] (Colonization) ships can transport social cards
-	- [[Industrial]] ships can transport industrial cards
-	- [[Scientific]] ships can transport anything
-	- [[Hero]]s, [[Materials]] and [[Wreckage]] can be transported with any ships
+1. e.g. [[Colony]] can only be transported with [[Social]] and [[Scientific]] ships
+2. Logic behind the table is following:
+	1. [[Military]] ships can convoy cards that can move on itself
+	2. [[Culture]] (Colonization) ships can transport social cards
+	3. [[Industrial]] ships can transport industrial cards
+	4. [[Scientific]] ships can transport anything
+	5. [[Hero]]s, [[Materials]] and [[Wreckage]] can be transported with any ships

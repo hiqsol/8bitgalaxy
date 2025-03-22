@@ -10,6 +10,8 @@
 4. **Outcome**:
     1. Party [[Faction]] gets 1 item of [[Materials]]
     2. Other items of transported [[Materials]] converts to [[Money]]
+
 #### Notes
+
 1. Transport limitations (range, capacity) apply
 2. Performer can be from different [[Faction]] than the colonies

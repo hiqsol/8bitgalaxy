@@ -19,5 +19,3 @@
 4. Total requirements of the action (including used technologies) must be satisfied with abilities provided by participants. Else action is not successful and doesn't yield result but resources are spent.
 5. Action can be extended (increased list of participants and used abilities) gradually with revealed information. For example for [[Explore]] or [[Combat]]
 6. **After action** [[Deplete]] must be applied to all the participants
-#### Notes
-1.
