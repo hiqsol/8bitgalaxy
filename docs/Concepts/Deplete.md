@@ -3,6 +3,6 @@
 	1. [[Actor]] cards go to [[Discard]] pile
 	2. [[Structure]] cards become (or stay) [[Depleted]]
 
-#### Note
+#### Notes
 
 - Keep from depleting technology???
