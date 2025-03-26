@@ -2,14 +2,15 @@
 2. **Event** cards are played out in two steps:
 	1. Preparation - **event** card is put to [[FutureEvents]] pile
 	2. Evaluation - **event** card is revealed then it's text is implemented
-3. The player has control over anything not explicitly stated in the event description.
+3. The player resolving **event** has control over anything not explicitly stated in the event description.
+4. Event classes:
+	1. [[Military]] -  hostile for players from [[Alien]] - they breed, spread and attack
+	2. [[Social]] - positive for players, related to growth
+	3. [[Production]] - positive for all, related to development
+	4. [[Scientific]] - generally negative for all, global disasters 
 
 #### Notes
 
-- Outcome for [[Alien]]:
-	- positive - they bread, spread, attack
-	- negative - useful for players
-	- ambivalent - something happens evenly for all factions
 - Apply to:
 	- each faction
 	- non alien
