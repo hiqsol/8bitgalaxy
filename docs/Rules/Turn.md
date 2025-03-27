@@ -1,6 +1,9 @@
-1. Player has 2 [[Actions]] per turn
-2. More actions can be done with [[PlusAction]] technology
-3. Player can pass
+1. Each **turn** player does in any order:
+	1. Two [[Action]]s
+	2. One [[AlienSpawn]]
+2. Player can't do same action twice in single **turn**
+3. More actions can be done with [[PlusAction]] technology
+4. Player can pass
 
 #### Notes
 
