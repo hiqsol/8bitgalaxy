@@ -115,7 +115,7 @@ const Roles = Object.freeze({
   Base:   Role.Structure,
   Ship:   Role.Unit,
   Colony: Role.Structure,
-  Event:  Role.Unit,
+  Event:  Role.Structure,
   Tool:   Role.Unit,
 })
 
