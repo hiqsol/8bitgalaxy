@@ -22,11 +22,13 @@
 }
 
 .Pile .Name .Value {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     user-select: none;
     width: 250px;
     height: 350px;
-    line-height: 350px;
     text-align: center;
     vertical-align: middle;
     font-size: 30px;
@@ -37,7 +39,6 @@
 .Pile.LeftToRight .Name .Value {
     width: 350px;
     height: 250px;
-    line-height: 250px;
 }
 
 .Pile.BottomToTop .Structure {

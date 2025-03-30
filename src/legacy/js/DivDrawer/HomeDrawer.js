@@ -49,9 +49,11 @@ class HomeDrawer extends aDrawer {
     let xStep = counterdir.xStep;
     let yStep = params.direction.yStep;
     this._drawer.draw(e, home.ideas,      new Params( 0*xStep,  0*yStep, Direction.TopToBottom));
-    this._drawer.draw(e, home.rnd(1),     new Params( 7*xStep,  0*yStep, Direction.TopToBottom));
-    this._drawer.draw(e, home.rnd(2),     new Params(13*xStep,  0*yStep, Direction.TopToBottom));
-    this._drawer.draw(e, home.discard,    new Params(19*xStep,  0*yStep, Direction.TopToBottom));
+    this._drawer.draw(e, home.fab(1),     new Params( 7*xStep,  0*yStep, Direction.TopToBottom));
+    this._drawer.draw(e, home.discard,    new Params(13*xStep,  0*yStep, Direction.TopToBottom));
+    this._drawer.draw(e, home.scrap,      new Params(19*xStep,  0*yStep, Direction.TopToBottom));
+    this._drawer.draw(e, home.rnd(1),     new Params( 7*xStep,  9*yStep, Direction.LeftToRight));
+    this._drawer.draw(e, home.rnd(2),     new Params(17*xStep,  9*yStep, Direction.LeftToRight));
   }
 }
 

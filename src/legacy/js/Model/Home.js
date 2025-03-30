@@ -64,6 +64,7 @@ class Home {
   get ideas()         { return this._research.pile(0); }
 
   rnd(no) { return this._research.pile(no); }
+  fab(no) { return this._factory.pile(no); }
 
   static assert(sample) {
     if (sample instanceof(Home)) {

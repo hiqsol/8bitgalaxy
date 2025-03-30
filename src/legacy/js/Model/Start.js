@@ -15,9 +15,13 @@ class Start {
   get deck()      { return this._home.deck; }
   get field()     { return this._home.player.game.board.field; }
   get ideas()     { return this._home.ideas; }
+  get scrap()     { return this._home.scrap; }
   get factory()   { return this._home.factory; }
   get discard()   { return this._home.discard; }
   get research()  { return this._home.research; }
+
+  rnd(no) { return this._home.rnd(no); }
+  fab(no) { return this._home.fab(no); }
 
   initHuman() {
     let tmp = new Pile("tmp");
@@ -111,8 +115,10 @@ class Start {
       this.ideas.get(i).unknow().turn();
     }
     this.ideas._name = 'Source';
-    this.research.pile(1)._name = 'Get 1';
-    this.research.pile(2)._name = 'Get 2';
+    this.fab(1)._name = '';
+    this.scrap._name = 'Scrap';
+    this.rnd(1)._name = 'Future Events';
+    this.rnd(2)._name = 'Current Events';
   }
 
   initIdeas() {

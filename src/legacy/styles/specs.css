@@ -296,7 +296,7 @@
     top: 15px;
 }
 .Structure .Spec.Text .Value {
-    top: 3px;
+    top: 10px;
     display: block;
     width: 340px;
     text-wrap: wrap;
