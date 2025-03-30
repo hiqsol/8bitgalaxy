@@ -29,12 +29,12 @@
     cursor: grab;
 }
 
-.Ship, .Hero, .Tech, .Event, .Tool {
+.Unit {
     width: 250px;
     height: 350px;
 }
 
-.Base, .Colony {
+.Structure {
     width: 350px;
     height: 250px;
 }

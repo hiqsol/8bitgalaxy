@@ -295,16 +295,17 @@
     left: 5px;
     top: 15px;
 }
-.Unit .Spec.Text .Value {
-    top: 30px;
+.Structure .Spec.Text .Value {
+    top: 3px;
     display: block;
-    width: 240px;
+    width: 340px;
     text-wrap: wrap;
     text-align: right;
+    text-indent: 50px;
     font-weight: 100;
+    line-height: 45px;
     font-size: 25px;
     color: black;
-
 }
 
 .Card .Name {

@@ -40,53 +40,22 @@
     line-height: 250px;
 }
 
-.Pile .Ship {
-    width: 250px;
-    height: 350px;
-}
-
-.Pile .Hero {
-    width: 250px;
-    height: 350px;
-}
-
-.Pile .Base {
-    width: 350px;
-    height: 250px;
-}
-
-.Pile .Colony {
-    width: 350px;
-    height: 250px;
-}
-
-.Pile .Other {
-    width: 250px;
-    height: 350px;
-}
-
-.Pile.TopToBottom .Colony,
-.Pile.BottomToTop .Base {
+.Pile.BottomToTop .Structure {
     transform-origin: top left;
     transform: rotate(-90deg) translate(-100%);
 }
 
-.Pile.BottomToTop .Colony,
-.Pile.TopToBottom .Base {
+.Pile.TopToBottom .Structure {
     transform-origin: top left;
     transform: rotate(+90deg) translate(0, -100%);
 }
 
-.Pile.LeftToRight .Ship,
-.Pile.LeftToRight .Hero,
-.Pile.LeftToRight .Tech,
-.Pile.LeftToRight .Other {
+.Pile.LeftToRight .Unit {
     transform-origin: top left;
     transform: rotate(-90deg) translate(-100%);
 }
 
-.Pile.RightToLeft .Ship,
-.Pile.RightToLeft .Hero {
+.Pile.RightToLeft .Unit {
     transform-origin: top left;
     transform: rotate(+90deg) translate(0, -100%);
 }
