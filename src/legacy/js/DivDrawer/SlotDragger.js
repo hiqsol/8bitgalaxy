@@ -1,4 +1,3 @@
-import Card from "../Model/Card.js";
 import Type from "../Model/Type.js";
 import Assert from "../Model/Assert.js";
 import DragCard from "../Model/History/DragCard.js";

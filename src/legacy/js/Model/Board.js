@@ -1,7 +1,3 @@
-//import Game from "../Game.js";
-
-import Star from "./Star.js";
-import Home from "./Home.js";
 import Field from "./Field.js";
 import Player from "./Player.js";
 import Assert from "./Assert.js";
