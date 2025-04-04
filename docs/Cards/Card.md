@@ -1,9 +1,17 @@
-- [[Actor]]:
-	- [[Hero]] - social, move
-	- [[Ship]] - industrial, transport
+- [[Unit]]:
+	- [[Actor]]:
+		- [[Hero]] - social, move
+		- [[Ship]] - industrial, transport
+	- Non-actor:
+		- [[Tool]]
 - [[Structure]]:
-	- [[Colony]] - social
-	- [[Base]] - industrial, technology
+	- On field:
+		- [[Colony]] - social
+		- [[Base]] - industrial, technology
+		- [[Hyperstructure]]
+	- Off field:
+		- [[Event]]
+		- [[Objective]]
 
 - Quantity:
 	- Total ??
