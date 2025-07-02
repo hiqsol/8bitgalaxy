@@ -8,7 +8,7 @@ class Assert {
 
   static arrayOf(sample, type) {
     Assert.array(sample);
-    if (!sample[0] instanceof type) Assert.error('not array of '+type.name, sample);
+    if (!(sample[0] instanceof type)) Assert.error('not array of '+type.name, sample);
     return sample;
   }
   static array(sample) {

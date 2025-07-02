@@ -27,7 +27,7 @@ class aCard {
   get Power()             { return this.Specs.Power; }
   get Cooperation()       { return this.Specs.Cooperation; }
   get Alternative()       { return this.Specs.Alternative; }
-  get hasRequirements()   { return this.Specs.Requires == undefined; }
+  get hasRequirements()   { return this.Specs.Requires !== undefined; }
 
   isType(type)            { return this.Type.equals(type); }
   get isHero()            { return this.Type.isHero; }

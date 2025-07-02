@@ -24,7 +24,7 @@ class State {
 
   applyName(input) {
     input = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
-    name = Names[input];
+    const name = Names[input];
     if (input && !name) {
       Assert.error('wrong state: ' + input);
     }
