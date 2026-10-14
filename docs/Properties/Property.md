@@ -4,10 +4,12 @@
 - [[Faction]]
 - [[Class]]
 - [[Level]] implies:
-	- [[Capacity]] and [[Range]]
+	- [[Capacity]]
+	- [[Range]]
 	- [[Defense]]
 - [[ExtraCost]] implies:
-	- [[Cost]] and [[Size]]
+	- [[Cost]]
+	- [[Size]]
 - [[Type]] implies:
 	- [[Role]]: [[Unit]] / [[Structure]]
 	- [[Origin]]: [[Social]] / [[Industrial]]
