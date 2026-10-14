@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. Player represents one of the galaxy [[Faction]]s.
 2. [[Faction]]'s **goal** is to become the greatest in the galaxy, which means:
 	1. Survive and save leaders

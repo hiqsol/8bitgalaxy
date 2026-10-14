@@ -1,3 +1,8 @@
+---
+status: draft
+scope: advanced
+---
+
 1. **Hyperstructure** is a card [[Type]]
 2. **Hyperstructure** gives a one-time bonus when its construction is fully completed.
 3. [[Role]] = on field [[Structure]]

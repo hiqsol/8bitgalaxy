@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Retreat** is [[Military]] technology modifier Level 1
 2. **Retreat** technology allows to escape from [[Combat]]:
 	1. Finish the [[Combat]]
@@ -5,4 +10,4 @@
 
 #### Notes
 
-1. Useful to save your forces when you are loosing the combat
+1. Useful to save your forces when you are losing the combat

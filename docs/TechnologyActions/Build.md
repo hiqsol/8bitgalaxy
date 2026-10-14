@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Build** action allows to spend [[Resource]]s to create new object(s)
 2. [[Social]] cards can only be built from [[Level]] 1
 3. Also known as:

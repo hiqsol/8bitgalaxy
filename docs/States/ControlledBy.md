@@ -1,5 +1,10 @@
+---
+status: draft
+scope: core
+---
+
 1. [[Star]] is **controlled by** faction when:
-	1. The faction has not less [[Control]] in the system then others
+	1. The faction has not less [[Control]] in the system than others
 	2. There is consensus between all factions with [[Actor]] cards in the system
 2. [[Actor]] is **controlled by** faction when:
 	1. The actor is not [[Disabled]]

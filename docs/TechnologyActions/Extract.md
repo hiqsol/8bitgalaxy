@@ -1,4 +1,9 @@
-1. **Extract** is [[Industrial]] [[TechnologyAction]] Level 2
+---
+status: draft
+scope: advanced
+---
+
+1. **Extract** is [[Production]] [[TechnologyAction]] Level 2
 2. **Extract** action allows acquire [[Materials]] from [[Space]]
 3. **Direction**: source [[Star]] to [[Space]] with [[Asteroids]]
 4. **Outcome**:

@@ -1,7 +1,12 @@
+---
+status: draft
+scope: core
+---
+
 1. Action is defined with **selected**:
 	1. **Actor** - [[Hero]] or [[Ship]] from [[Field]], defines:
 		- **Source**: [[IPS]]
-	2. **Action** - one of [[Actions]], defines list of **requirements**, can be:
+	2. **Action** - one of [[Action]]s, defines list of **requirements**, can be:
 		- [[Power]]
 		- [[Range]]
 		- [[Capacity]]

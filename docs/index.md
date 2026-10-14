@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 ![game](https://8bitgalaxy.com/images/game.png)
 
 - 4x Strategy with:

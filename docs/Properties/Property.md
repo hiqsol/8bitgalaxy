@@ -1,6 +1,11 @@
+---
+status: draft
+scope: core
+---
 
 ![props](https://8bitgalaxy.com/images/card.png)
 
+- [[Side]] and [[End]]
 - [[Faction]]
 - [[Class]]
 - [[Level]] implies:

@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Production power** is a type of [[Power]]
 2. Color - **yellow**
 3. Used to:

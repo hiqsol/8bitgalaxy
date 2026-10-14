@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Range** is implicit card property
 2. **Range** is the [[Distance]] card can cover
 3. Mobility types:

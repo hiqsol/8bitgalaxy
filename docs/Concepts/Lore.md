@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 ### Technical description
 
 1. Civilizations invent Warp technology that allows:
@@ -15,5 +20,3 @@
 	1. And choose to ally with each other or fight for dominance
 
 ### Artistic description
-
-

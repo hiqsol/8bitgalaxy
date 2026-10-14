@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Move** action allows move card(s):
     1. Within one [[Star]] system:
         - [[Distance]] = 1
@@ -10,4 +15,4 @@
     1. Range can be increased with [[Support]]
 4. Several cards can move together in group
     1. [[Range]] of the group is minimum of the ranges of the direct participants
-
+5. Moving [[Actor]]s are not depleted after **Move**, see [[Deplete]]

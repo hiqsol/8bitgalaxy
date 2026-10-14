@@ -1,4 +1,9 @@
-1. **Disabled** card is turned:
-	1. Face down
-	2. Disabled side up
-2. Same as **turned**, **wrecked**, [[Exhausted]], [[Damaged]] - indistinguishable
+---
+status: draft
+scope: core
+---
+
+1. **Disabled** card is:
+	1. Back [[Side]] up
+	2. Disabled [[End]] up
+2. Same as wrecked, [[Exhausted]], [[Damaged]] - indistinguishable

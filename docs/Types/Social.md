@@ -1,10 +1,12 @@
-1. **Social** stands for both:
-	1. Type of [[Origin]] aka **Alive**
-	2. Type of [[Class]] aka [[Culture]]
-2. **Social** [[Origin]] cards are:
+---
+status: draft
+scope: core
+---
+
+1. **Social** is type of [[Origin]] aka **Alive**
+2. **Social** cards are:
 	1. [[Hero]]
 	2. [[Colony]]
-3. Distinct names for actions:
-	1. [[Raise]] - [[Build]]
-	2. [[Grow]] - [[Upgrade]]
-	3. [[Heal]] - [[Repair]]
+3. **Social** cards are built at [[Academy]] for [[CulturePower]]
+4. Not to be confused with [[Culture]] [[Class]]
+5. [[Build]] for **Social** cards is called [[Raise]]

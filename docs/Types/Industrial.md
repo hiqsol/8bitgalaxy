@@ -1,10 +1,12 @@
-1. **Industrial** stands for both:
-	1. Type of [[Origin]] aka **Not-alive**
-	2. Type of [[Class]] aka [[Production]]
-2. **Industrial** [[Origin]] cards are:
+---
+status: draft
+scope: core
+---
+
+1. **Industrial** is type of [[Origin]] aka **Not-alive**
+2. **Industrial** cards are:
 	1. [[Ship]]
 	2. [[Base]]
-3. Distinct names for actions:
-	1. [[Produce]] - [[Build]]
-	2. [[Enhance]] - [[Upgrade]]
-	3. [[Fix]] - [[Repair]]
+3. **Industrial** cards are built at [[Shipyard]] for [[ProductionPower]]
+4. Not to be confused with [[Production]] [[Class]]
+5. [[Build]] for **Industrial** cards is called [[Produce]]

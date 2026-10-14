@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 - [[Unit]]:
 	- [[Actor]]:
 		- [[Hero]] - social, move
@@ -15,4 +20,3 @@
 
 - Quantity:
 	- Total ??
-

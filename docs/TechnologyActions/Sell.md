@@ -1,3 +1,8 @@
+---
+status: stub
+scope: advanced
+---
+
 1. **Sell** is [[Culture]] technology action Level 3
 2. **Sell** action:
     1. Allows to convert cards to stockable resources

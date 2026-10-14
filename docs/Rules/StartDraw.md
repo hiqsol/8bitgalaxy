@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 - [[Discard]]
 	- 4 ships 1/2
 	- 2 heroes 1/1

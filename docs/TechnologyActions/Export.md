@@ -1,4 +1,9 @@
-1. **Export** is [[Social]] technology Level 2
+---
+status: draft
+scope: advanced
+---
+
+1. **Export** is [[Culture]] technology Level 2
 2. **Export** action:
     1. Allows to convert [[Materials]] to [[Money]]
     2. Performed as [[Transport]] materials between two [[Faction]]s

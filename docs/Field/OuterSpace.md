@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Outer space** is intermediate part of [[Star]] which is:
 	1. Inside of the star system
 	2. Outside of [[IPS]]

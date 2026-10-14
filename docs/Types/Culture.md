@@ -1,4 +1,9 @@
-1. **Culture class** is type of [[Class]]
+---
+status: draft
+scope: core
+---
+
+1. **Culture** is type of [[Class]]
 2. Corresponds to [[CulturePower]]
-3. Color - **yellow**
+3. Color - **green**
 4. Provides [[CulturePower]] and **Culture** technologies

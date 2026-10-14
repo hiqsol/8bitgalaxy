@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Actor** is card [[Role]]
 2. **Actor** is subtype of [[Unit]] role
 3. **Actor** cards can start an [[Action]]

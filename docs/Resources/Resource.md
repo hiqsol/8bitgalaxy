@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Resource** is
 2. **Resources** come in two flavours:
 	1. Non-stockable:

@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Ship** is a card [[Type]]
 2. **Ship** represents a star ship
 3. [[Role]] = on field [[Actor]]

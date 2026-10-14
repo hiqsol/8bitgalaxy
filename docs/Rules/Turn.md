@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. Each **turn** player does in any order:
 	1. Two [[Action]]s
 	2. One [[AlienSpawn]]

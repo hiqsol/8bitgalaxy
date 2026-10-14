@@ -1,3 +1,9 @@
+---
+status: draft
+scope: core
+aliases: [InterStellar Space]
+---
+
 1. **Space** is [[Field]] segment
 2. **Space** represents Interstellar Space and separates [[Star]] from each other
 3. Space sectors are hidden (turned face down) at the beginning of the game
@@ -13,4 +19,3 @@
 	3. Nebula
 	4. Black hole 
 	5. [[Void]]
-

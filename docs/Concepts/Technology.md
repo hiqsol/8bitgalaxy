@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Technology** is ability...
 1. **Technologies** come in two flavours:
     1. [[TechnologyAction]] allows to perform non-basic actions
@@ -22,10 +27,10 @@
     - 2         - [[Repair]] Action - Ship
     - 3 COLONY  - [[Extract]] Action - Base, Ship
     - 4         - [[Dismantle]] Action - Actor (Military)
-    - 4         - [[PlusCapacity]] Modifier
+    - 4         - [[PlusLoad]] Modifier
     - 4         - [[PlusFactory]] Action - Any (Scientific)
     - 5 BASE    - [[PlusDraw]] Modifier (Culture)
-- Scientific:
+- Science:
     - 1 
     - 2         - [[Explore]]
     - 3 BASE    - [[Navigation]]
@@ -37,22 +42,22 @@
     - Military      - Stealth, Militarization
     - Culture       - Smuggle
     - Production    -
-    - Scientific    - PlusAction
+    - Science       - PlusAction
 - Culture
     - Military      - Smuggle
     - Culture       - Academy
     - Production    - PlusDraw
-    - Scientific    - Exhaust
+    - Science       - Exhaust
 - Production
     - Military      - Dismantle
     - Culture       -
     - Production    - Shipyard, Extract
-    - Scientific    - NewFactory
+    - Science       - NewFactory
 - Scientific
     - Military      - PlusAction
     - Culture       -
     - Production    -
-    - Scientific    - Research, Navigation
+    - Science       - Research, Navigation
 
 Pairs:
 - [[Recon]] / [[Explore]]

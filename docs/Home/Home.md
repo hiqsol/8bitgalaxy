@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. Player's **home** consists of:
 	- [[Discard]]
 	- [[Reserve]]

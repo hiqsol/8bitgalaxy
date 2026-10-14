@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Primary Ability** is explicit card [[Property]]
 2. Card can provide:
 	1. [[Power]]

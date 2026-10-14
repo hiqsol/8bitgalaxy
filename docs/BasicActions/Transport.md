@@ -1,6 +1,11 @@
+---
+status: draft
+scope: core
+---
+
 1. **Transport** is basic action
 2. **Transport** action allows to [[Move]] **cargo** with [[Ship]]s
-3. **Cargo** can be: cards, reserves
+3. **Cargo** can be: cards, [[Materials]]
 4. Requirements:
      - [[Range]]
      - [[Capacity]]
@@ -8,7 +13,7 @@
 6. [[Hero]] can increase [[Capacity]] or [[Range]], but can't transport alone
 7. Type limitations in the table below
 
-| Object    | Mil | Cul | Ind | Sci |
+| Object    | Mil | Cul | Pro | Sci |
 | --------- | --- | --- | --- | --- |
 | Base      |     |     | +   | +   |
 | Colony    |     | +   |     | +   |
@@ -19,10 +24,10 @@
 
 #### Notes
 
-1. e.g. [[Colony]] can only be transported with [[Social]] and [[Scientific]] ships
+1. e.g. [[Colony]] can only be transported with [[Culture]] and [[Science]] ships
 2. Logic behind the table is following:
 	1. [[Military]] ships can convoy cards that can move on itself
-	2. [[Culture]] (Colonization) ships can transport social cards
-	3. [[Industrial]] ships can transport industrial cards
-	4. [[Scientific]] ships can transport anything
+	2. [[Culture]] (Colonization) ships can transport [[Social]] cards
+	3. [[Production]] ships can transport [[Industrial]] cards
+	4. [[Science]] ships can transport anything
 	5. [[Hero]]s, [[Materials]] and [[Wreckage]] can be transported with any ships

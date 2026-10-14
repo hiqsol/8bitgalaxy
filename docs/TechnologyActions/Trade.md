@@ -1,4 +1,9 @@
-1. **Trade** is [[Social]] technology Level 2
+---
+status: draft
+scope: advanced
+---
+
+1. **Trade** is [[Culture]] technology Level 2
 2. **Trade** action allows to acquire [[Materials]]
 2. **Direction**:
     - From [[Star]] with colony

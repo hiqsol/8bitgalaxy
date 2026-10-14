@@ -1,3 +1,8 @@
-1. **Hidden** card is turned:
-	1. Face down
-	2. Hidden side up
+---
+status: draft
+scope: core
+---
+
+1. **Hidden** card is:
+	1. Back [[Side]] up
+	2. Hidden [[End]] up

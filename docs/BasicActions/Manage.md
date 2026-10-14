@@ -1,10 +1,16 @@
+---
+status: draft
+scope: core
+---
+
 1. **Manage** action allows to perform manipulation over cards:
-	1. **Alter**:
-		- to strong side - [[Restore]]
-		- to weak side - [[Deplete]]
+	1. **Rotate** ([[End]]):
+		- [[Structure]] to strong end - [[Restore]]
+		- [[Structure]] to weak end - [[Deplete]]
+		- [[Actor]] to the other end - switch its [[Class]]
 	2. **Shift**:
-		- between slots within the same [[IPS]]
-			- **Direction**: to the [[Star]]
+		- between [[Slot]]s within the same [[IPS]]
+			- [[Action]] has to be directed to the [[Star]]
 			- NOT between [[IPS]] and [[OuterSpace]]
 		- between piles within [[Laboratory]] or [[Factory]] row
 			- **Direction**: to corresponding [[BuildingFacility]]
@@ -13,7 +19,7 @@
 	1. only the type of power given by the [[Actor]]
 	2. with limitations, see table below
 
-| Object    | Mil | Cul | Ind | Sci |
+| Object    | Mil | Cul | Pro | Sci |
 |-----------|-----|-----|-----|-----|
 | Base      |     |     |  +  |  +  |
 | Colony    |     |  +  |     |  +  |

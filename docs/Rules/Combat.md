@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Combat** starts when player performs [[Attack]] action
 2. First **attacker**:
 	1. selects **attacking participants** and supporters
@@ -26,4 +31,3 @@ Ideas behind such implementation:
 - there is no random but the result is not predetermined
 - players make decisions and take risks
 - players can prepare surprises and bluff
-

@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Support** is taking part in [[PerformAction]] from remote:
 	1. From [[Hand]] or
 	2. From remote (not source or destination) [[IPS]]
@@ -6,4 +11,5 @@
 	- [[SecondaryAbility]]
 	- [[Range]]
 	- [[Capacity]]
-3. After action [[Deplete]] all the **supporters**
+3. Supporter from [[Hand]] can be used with either [[End]]
+4. After action [[Deplete]] all the **supporters**

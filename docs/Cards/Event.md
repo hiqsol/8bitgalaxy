@@ -1,13 +1,18 @@
+---
+status: draft
+scope: aliens
+---
+
 1. **Event** is a card [[Type]]
 2. **Event** cards are played out in two steps:
 	1. Preparation - **event** card is put to [[FutureEvents]] pile
-	2. Evaluation - **event** card is revealed then it's text is implemented
+	2. Evaluation - **event** card is revealed then its text is implemented
 3. The player resolving **event** has control over anything not explicitly stated in the event description.
 4. Event classes:
 	1. [[Military]] -  hostile for players from [[Alien]] - they breed, spread and attack
-	2. [[Social]] - positive for players, related to growth
+	2. [[Culture]] - positive for players, related to growth
 	3. [[Production]] - positive for all, related to development
-	4. [[Scientific]] - negative for all, global disasters
+	4. [[Science]] - negative for all, global disasters
 
 #### Notes
 
@@ -33,4 +38,3 @@
 - **Alien Outbreak**: (or surge) add 1 [[Alien]] to each star with [[Alien]] in it
 - **Alien Invasion**: add 1 [[Alien]] [[Unit]] openly to every bordering star and attack where possible
 - **Alien production**: [[Alien]]s produce 2 [[Materials]] in every [[Star]] [[ControlledBy]] them
-

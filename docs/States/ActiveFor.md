@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. Card is **active for** faction when:
 	1. It is not [[Disabled]]
 	2. It is [[ControlledBy]] player

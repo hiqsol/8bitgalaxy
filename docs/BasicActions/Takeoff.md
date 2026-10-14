@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Takeoff** is a [[BasicAction]]
 2. **Takeoff** action brings **ONE** card from [[Hand]] to [[Field]]
 3. **Takeoff** is special case of [[Move]]
@@ -5,6 +10,7 @@
 5. **Requirements**:
 	1. Starts from [[Hand]]
 	2. First step must be to corresponding [[BuildingFacility]]
+	3. Owner chooses the [[End]] the card is placed with, for free
 6. [[Ship]] can [[Transport]] cargo during **takeoff**:
 	1. From [[Hand]] or
 	2. From first step [[Star]]

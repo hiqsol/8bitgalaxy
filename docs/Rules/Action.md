@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Action** is a part of [[Turn]]
 2. **Actions** come in two flavours:
 	1. [[BasicAction]]s are available at any time.

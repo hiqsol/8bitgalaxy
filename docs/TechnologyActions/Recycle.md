@@ -1,4 +1,9 @@
-1. **Recycle** is [[Scientific]] [[TechnologyAction]] Level 2
+---
+status: draft
+scope: advanced
+---
+
+1. **Recycle** is [[Science]] [[TechnologyAction]] Level 2
 2. Converts selected card to [[Materials]]
 3. **Direction**: source [[Star]] to the selected card
 4. **Outcome**:

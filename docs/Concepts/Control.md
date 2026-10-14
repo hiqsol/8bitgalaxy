@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Control** represents player's level of presence in a [[Star]]
 2. The concept of **control** is necessary to compare players
 3. The player's level of **control** in a star is (in ascending order)

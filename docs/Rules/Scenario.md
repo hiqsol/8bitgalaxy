@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Scenario** is a predefined framework that describes setup for a game session.
 2. It can include:
 	1. Number of players

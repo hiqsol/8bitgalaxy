@@ -1,3 +1,8 @@
+---
+status: draft
+scope: core
+---
+
 1. **Deck Building** is well known game mechanic 
 2. [[Actor]] cards are constantly moving in circle between 3 piles:
 	1. [[Discard]]
@@ -8,5 +13,5 @@
 	2. [[Shuffle]] to [[Reserve]]
 	3. [[Draw]] to [[Hand]]
 	4. [[Takeoff]] to [[Field]]
-	5. [[Deplete]] to [[Discard]]
+	5. [[Deplete]] to [[Discard]] after any action except [[Move]]
 4. When player wants to [[Draw]] a card from [[Reserve]] to [[Hand]] and [[Reserve]] pile is empty player needs to [[Shuffle]] cards in [[Discard]] pile thus forming [[Reserve]] pile.
