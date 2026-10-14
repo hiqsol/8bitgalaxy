@@ -19,7 +19,7 @@ Answer proposals by number, e.g. "P3 A", "P5 yes".
 
 ### Contradictions
 
-- [ ] **I8. Tech tree.** The three tables in [[Technology]] disagree with each other and with tech notes ([[Explore]] L1 vs L2, [[PlusAction]] Military 6 vs Science 5, [[PlusDraw]] in three classes, [[Trade]] and [[Export]] both Culture L2, [[Repair]]/[[Upgrade]] in two classes). Answer: later.
+- [ ] **I8. Tech tree.** The three tables in [[Technology]] disagree with each other and with tech notes ([[Explore]] L1 vs L2, [[PlusAction]] Military 6 vs Science 5, [[PlusDraw]] in three classes, [[Trade]] and [[Export]] both Culture L2, [[Recover]]/[[Upgrade]] in two classes). Answer: later.
 - [ ] **I11. Attack requirement.** [[Attack]] needs more Military power than the defender, but [[Combat]] decides the winner after both sides commit. → P6
 - [ ] **I14. Factory holds both buildable and [[Destroyed]] cards.** Not a real contradiction: Factory is the pool of cards to (re)build. → P14
 - [ ] **I15. Combat vs Deplete.** [[PerformAction]] depletes all participants, [[Combat]] only supporters. → P5
@@ -32,7 +32,7 @@ Answer proposals by number, e.g. "P3 A", "P5 yes".
 - [ ] **I19. No card data.** No note lists actual cards (levels, class, abilities). → P12.1
 - [ ] **I20. No cost formula.** [[Property]] says ExtraCost implies Cost and Size, but there's no formula. → P12.2
 - [ ] **I21. Stub notes** (`status: stub`): [[Reserve]], [[Wreckage]], [[DefSys]], [[HyperPass]], [[Cost]], [[ExtraCost]], [[MinusRequirement]], [[Sell]], [[PlusFactory]], [[PlusHero]], [[Dismantle]], [[EfficientUpgrade]], [[Navigation]], [[PlusRange]], [[Stealth]], [[Objective]]. Plus an empty `Untitled/` folder.
-- [ ] **I22. Broken links.** Fixed: Actions, NewFactory, PlusCapacity, Leader. Remaining: Mobilize, PlusHand, Void. Enhance/Fix/Grow/Heal now resolve via `aliases` (→ P13).
+- [ ] **I22. Broken links.** Fixed: Actions, NewFactory, PlusCapacity, Leader. Remaining: Mobilize, PlusHand, Void. Enhance/Fix/Grow/Heal are now flavour names (aliases).
 - [ ] **I23. [[ControlledBy]] has a TODO** for structures. → P10
 
 ## Proposals
@@ -53,7 +53,7 @@ Answer proposals by number, e.g. "P3 A", "P5 yes".
 	- Optional faster win: losing both [[BuildingFacility|building facilities]].
 - [ ] **P10. Structure control** in [[ControlledBy]]: "the faction with the highest [[Control]] in the star. If equal, each faction controls its own structures." Drop the "consensus" clause for the duel.
 - [ ] **P11. Core set for the minimal duel:**
-	- Actions: [[Draw]], [[Takeoff]], [[Move]], [[Transport]] (cards only), [[Manage]] (rotate and shift), [[Research]], [[Attack]]/[[Combat]], [[Build]], [[Upgrade]], [[Repair]].
+	- Actions: [[Draw]], [[Takeoff]], [[Move]], [[Transport]] (cards only), [[Manage]] (rotate and shift), [[Research]], [[Attack]]/[[Combat]], [[Create]], [[Upgrade]], [[Recover]].
 	- Technologies: [[Academy]], [[Shipyard]], [[Retreat]], [[PlusDraw]], [[PlusAction]], [[PlusRange]].
 	- Board: all [[Space]] revealed and Normal.
 	- Out: [[Materials]] (Boost, Extract, Trade, Export, Smuggle, Sell, Dismantle, Recycle), [[Money]], [[Hyperstructure]], [[Objective]], [[Event]], [[Tool]], [[Stealth]], Explore/Recon, Aliens.
@@ -64,7 +64,6 @@ Answer proposals by number, e.g. "P3 A", "P5 yes".
 	3. Duel map: 2 home stars and 3 neutral stars in a line or a ring, every Space length 1.
 	4. First player has 1 action on their first turn.
 	5. [[Reserve]]: "a face-down pile in [[Home]]. Cards are [[Draw]]n from its top."
-- [ ] **P13. One name per action.** Use only Build/Upgrade/Repair. Remove the Raise/Produce notes, and the aliases on Repair/Upgrade.
 - [ ] **P14. Small clarifications:**
 	- [[Factory]]/[[Laboratory]]: only the top card of each pile is available.
 	- [[Factory]] is the pool of cards to (re)build, which is why [[Destroyed]] cards go there.

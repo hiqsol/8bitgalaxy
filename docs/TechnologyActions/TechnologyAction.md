@@ -6,14 +6,14 @@ scope: core
 - Military:
     - [[Mobilize]]
 - Production:
-    - [[Produce]] aka [[Build]]
-    - [[Enhance]] aka [[Upgrade]]
-    - [[Fix]] aka [[Repair]]
+    - [[Create]] aka **Produce**
+    - [[Upgrade]] aka **Enhance**
+    - [[Recover]] aka **Fix**
     - [[Extract]]
 - Culture:
-    - [[Raise]] aka [[Build]]
-    - [[Grow]] aka [[Upgrade]]
-    - [[Heal]] aka [[Repair]]
+    - [[Create]] aka **Raise**
+    - [[Upgrade]] aka **Grow**
+    - [[Recover]] aka **Heal**
     - [[Trade]] / [[Smuggle]]
     - [[Sell]]
 - Science:

@@ -14,7 +14,7 @@ scope: core
 		6. [[Research]]
 		7. [[Attack]]
 	2. To start a [[TechnologyAction]] one of action participants must provide it with its ability.
-		1. [[Build]] / [[Upgrade]] / [[Repair]]
+		1. [[Create]] / [[Upgrade]] / [[Recover]]
 		2. [[Explore]] / [[Extract]]
 		2. [[Trade]] / [[Smuggle]]
 		3. [[PlusHero]]

@@ -5,5 +5,5 @@ scope: core
 
 1. **Academy** is [[BuildingFacility]] for [[Social]] cards
 2. **Academy** is [[Culture]] technology Level 1
-3. **Academy** provides [[Raise]] (**Build**) [[TechnologyAction]]
+3. **Academy** provides [[Create]] (aka **Raise**) [[TechnologyAction]]
 3. **Academy** is the place where [[Hero]]es [[Takeoff]]

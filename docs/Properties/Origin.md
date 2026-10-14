@@ -5,8 +5,8 @@ scope: core
 
 - [[Industrial]]:
 	- [[Ship]], [[Base]]
-	- [[Build]] requires [[Shipyard]] and [[Production]] power
+	- [[Create]] requires [[Shipyard]] and [[Production]] power
 - [[Social]] (alive):
 	- [[Hero]], [[Colony]]
-	- [[Build]] requires [[Academy]] and [[CulturePower]]
-	- [[Build]] beginning from smallest [[Level]] then can be [[Upgrade]]d
+	- [[Create]] requires [[Academy]] and [[CulturePower]]
+	- [[Create]]d beginning from smallest [[Level]] then can be [[Upgrade]]d

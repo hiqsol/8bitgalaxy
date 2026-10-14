@@ -7,6 +7,6 @@ scope: core
 2. **Social** cards are:
 	1. [[Hero]]
 	2. [[Colony]]
-3. **Social** cards are built at [[Academy]] for [[CulturePower]]
+3. **Social** cards are created at [[Academy]] for [[CulturePower]]
 4. Not to be confused with [[Culture]] [[Class]]
-5. [[Build]] for **Social** cards is called [[Raise]]
+5. Flavour names for **Social** cards: **Raise** ([[Create]]), **Grow** ([[Upgrade]]), **Heal** ([[Recover]])

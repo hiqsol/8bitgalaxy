@@ -24,7 +24,7 @@ scope: core
     - 5 COLONY  - [[DoNotDeplete]] Modifier (-deplete)
 - Production:
     - 1 BASE    - [[Shipyard]] Facility - Base, Ship
-    - 2         - [[Repair]] Action - Ship
+    - 2         - [[Recover]] Action - Ship
     - 3 COLONY  - [[Extract]] Action - Base, Ship
     - 4         - [[Dismantle]] Action - Actor (Military)
     - 4         - [[PlusLoad]] Modifier

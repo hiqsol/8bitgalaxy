@@ -6,7 +6,7 @@ scope: core
 1. **Hero** is a card [[Type]]
 2. **Hero** represents a faction **leader**
 3. [[Role]] = on field [[Actor]]
-4. [[Origin]] = [[Social]] built for [[CulturePower]] at [[Academy]]
+4. [[Origin]] = [[Social]] created for [[CulturePower]] at [[Academy]]
 5. [[Range]] = current [[Level]] - can [[Move]]
 6. [[Size]] = 1
 7. [[Capacity]] = current [[Level]]

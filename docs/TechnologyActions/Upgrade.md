@@ -5,15 +5,18 @@ aliases: [Enhance, Grow]
 ---
 
 1. **Upgrade** is [[Culture]]/[[Production]] technology Level 1
-2. **Upgrade** action allows to substitute a card for another card of the same type
-3. **Requirements**:
+2. Flavour names:
+	1. **Grow** for [[Social]]
+	2. **Enhance** for [[Industrial]]
+3. **Upgrade** [[Action]] allows to substitute a card for another card of the same type
+4. **Requirements**:
 	1. Old [[Actor]] must be in [[Discard]]
 	2. New card must be available at [[Factory]]
-3. **Direction**:
+5. **Direction**:
 	1. For [[Actor]] - any [[Star]] to [[BuildingFacility]]
 	2. For [[Structure]] - [[BuildingFacility]] to old card's [[Star]]
-4. **Cost**:
+6. **Cost**:
 	1. [[Cost]] of the new card **minus** cost of the old card
-5. **After action**:
+7. **After action**:
 	1. New card substitutes the old card in place
 	2. Old card goes to selected [[Factory]]
