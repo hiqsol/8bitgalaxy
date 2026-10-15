@@ -3,5 +3,5 @@ status: draft
 scope: advanced
 ---
 
-2. **Recon** action is same as [[Explore]] but [[Military]]
-1. **Recon** is [[Military]] technology action Level 1
+1. **Recon** is [[Military]] technology [[Action]]
+2. **Recon** action allows to peak at [[Hidden]] cards at one reachable [[Star]]

@@ -11,7 +11,9 @@ scope: core
 3. The circle is:
 	1. Appear at [[Discard]]
 	2. [[Shuffle]] to [[Reserve]]
-	3. [[Draw]] to [[Hand]]
-	4. [[Takeoff]] to [[Field]]
-	5. [[Deplete]] to [[Discard]] after any action except [[Move]]
-4. When player wants to [[Draw]] a card from [[Reserve]] to [[Hand]] and [[Reserve]] pile is empty player needs to [[Shuffle]] cards in [[Discard]] pile thus forming [[Reserve]] pile.
+	3. [[Draw]] to [[Hand]] at the end of [[Turn]]
+	4. Play from [[Hand]]:
+		1. [[Takeoff]] to [[Field]]
+		2. Or start/support an action and [[Deplete]] to [[Discard]]
+	5. Unused cards go from [[Hand]] to [[Discard]] at the end of [[Turn]]
+	6. From [[Field]] [[Deplete]] to [[Discard]] after any action except [[Move]]

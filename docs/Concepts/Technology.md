@@ -14,7 +14,6 @@ scope: core
     - 3 COLONY  - [[Militarization]] Modifier
     - 4         - [[Stealth]] Modifier
     - 4         - [[Smuggle]] Action - Ship, Hero (Culture)
-    - 5 BASE    - [[PlusTakeoff]] Modifier
 - Culture:
     - 1 COLONY  - [[Academy]] Facility - Colony, Ship
     - 2         - [[Upgrade]] Action

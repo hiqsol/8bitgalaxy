@@ -9,5 +9,4 @@ scope: core
 4. Segments could be:
 	1. [[Space]] has length property 
 	2. [[Star]] - length is 1
-	3. [[Hand]] - length is 1
-	4. [[OuterSpace]] - length is 0
+	3. [[OuterSpace]] - length is 0

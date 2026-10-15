@@ -18,11 +18,11 @@ it tries to kill you. Your job is to stay in control.
 
 ## Core Loop
 
-1. **Draw** cards from your personal deck
-2. **Deploy** heroes and ships to the star map
-3. **Take two actions** — explore, trade, research, attack, build…
-4. **Universe responds** — alien cards spawn, events unfold
-5. **Repeat** — your deck evolves, your empire grows, threats escalate
+1. **Play your hand** — every card either deploys a hero or ship to your
+   stars, or starts an action: explore, trade, research, attack, build…
+2. **Universe responds** — alien cards spawn, events unfold
+3. **Draw a new hand** — and keep it ready to defend on rivals' turns
+4. **Repeat** — your deck evolves, your empire grows, threats escalate
 
 ## What Makes It Special
 

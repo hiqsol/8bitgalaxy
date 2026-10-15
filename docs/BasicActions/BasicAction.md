@@ -5,9 +5,7 @@ scope: core
 
 1. **Basic actions** are available at any time, don't require a [[Technology]]
 2. List:
-	1. [[Draw]]
-	2. [[Takeoff]]
-	3. [[Move]] and [[Transport]]
-	4. [[Manage]]
-	5. [[Research]]
-	6. [[Attack]]
+	1. [[Move]] and [[Transport]]
+	2. [[Manage]]
+	3. [[Research]]
+	4. [[Attack]]

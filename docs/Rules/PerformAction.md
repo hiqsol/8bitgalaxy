@@ -4,8 +4,8 @@ scope: core
 ---
 
 1. Action is defined with **selected**:
-	1. **Actor** - [[Hero]] or [[Ship]] from [[Field]], defines:
-		- **Source**: [[IPS]]
+	1. **Starter** - a card from [[Hand]], defines:
+		- **Source**: [[IPS]] of any [[Star]] [[ControlledBy]] the player, where the starter could [[Takeoff]]
 	2. **Action** - one of [[Action]]s, defines list of **requirements**, can be:
 		- [[Power]]
 		- [[Range]]
@@ -14,6 +14,7 @@ scope: core
 		- **Direct**:
 			- selected cards in the **source** [[IPS]]
 		- **Supporters**:
+			- the **starter**
 			- selected cards in [[Hand]]
 			- selected cards [[ActiveFor]] player not in [[OuterSpace]]
 	4. Participants **abilities**:
@@ -24,3 +25,7 @@ scope: core
 4. Total requirements of the action (including used technologies) must be satisfied with abilities provided by participants. Else action is not successful and doesn't yield result but resources are spent.
 5. Action can be extended (increased list of participants and used abilities) gradually with revealed information. For example for [[Explore]] or [[Combat]]
 6. **After action** [[Deplete]] must be applied to all the participants
+
+#### Notes
+
+1. A card on [[Field]] gives more than a card in [[Hand]]: all of its abilities instead of one. That's what [[Takeoff]] is for.

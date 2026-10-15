@@ -4,4 +4,4 @@ scope: advanced
 ---
 
 1. **Be Actor** is [[Culture]] [[TechnologyAction]] level 4
-2. **Be Actor** allows to perform [[Action]]s without Actor
+2. **Be Actor** allows a card on [[Field]] to start an [[Action]] without a **starter** from [[Hand]]
