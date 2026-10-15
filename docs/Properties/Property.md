@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-![props](https://8bitgalaxy.com/images/card.png)
+![props](../../public/images/card.png)
 
 ```
           ╭──╥─╥──────╮ Strong End    ╭───────────╮ Hidden End
@@ -17,23 +17,19 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
           ╰──────╨─╨──╯               ╰───────────╯
 ```
 
-- [[Side]] and [[End]]
-- [[Faction]] - always visible
-- [[Class]]
-- [[Level]] implies:
-	- [[Capacity]]
-	- [[Range]]
-	- [[Defense]]
-- [[ExtraCost]] implies:
-	- [[Cost]]
-	- [[Size]]
-- [[Type]] implies:
-	- [[Role]]: [[Unit]] / [[Structure]] - always visible
-	- [[Origin]]: [[Social]] / [[Industrial]]
-- [[PrimaryAbility]]
-- [[SecondaryAbility]]
-- [[AdditionalAbility]]
-- [[Prerequisites]]
+1. Card properties are:
+	1. [[Side]] and [[End]]
+	2. [[Faction]] - always visible
+	3. [[Class]]
+	4. [[Level]], which implies [[Capacity]], [[Range]] and [[Defense]]
+	5. [[ExtraCost]], which implies [[Cost]] and [[Size]]
+	6. [[Type]], which implies:
+		1. [[Role]]: [[Unit]] / [[Structure]] - always visible
+		2. [[Origin]]: [[Social]] / [[Industrial]]
+	7. [[PrimaryAbility]]
+	8. [[SecondaryAbility]]
+	9. [[AdditionalAbility]]
+	10. [[Prerequisites]]
 
 #### Notes
 

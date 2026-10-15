@@ -3,5 +3,5 @@ status: stub
 scope: advanced
 ---
 
-- Improved [[Upgrade]] action
-- Allows to spend less resources
+1. **Efficient Upgrade** improves [[Upgrade]]
+2. Efficient Upgrade reduces the resources spent on Upgrade

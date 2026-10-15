@@ -3,5 +3,5 @@ status: stub
 scope: advanced
 ---
 
-- Create new [[Hero]] with level 1
-- You need to upgrade a hero before
+1. **Plus Hero** creates a new Level 1 [[Hero]]
+2. A Hero must be [[Upgrade]]d before using Plus Hero

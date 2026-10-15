@@ -3,22 +3,22 @@ status: draft
 scope: core
 ---
 
-- [[Reserve]]: 10 weakest [[Actor]] cards, shuffled
-	- 4 ships 1/2
-	- 2 heroes 1/1
-	- 4 more TBD
-- [[Hand]]: [[Draw]] from [[Reserve]]:
-	- First player: 3 cards
-	- Other players: full [[Hand]]
-- Home star:
-	- 1 [[Academy]] colony 1/2
-	- 1 [[Shipyard]] base 1/2
-- [[Factory]]:
-	- 4 heroes
-	- 3 base
-	- 3 colonies 
-- [[Laboratory]]:
-	- hero
+1. [[Reserve]]: 10 weakest [[Actor]] cards, shuffled
+	1. 4 ships 1/2
+	2. 2 heroes 1/1
+	3. 4 more TBD
+2. [[Hand]]: [[Draw]] from Reserve
+	1. First player: 3 cards
+	2. Other players: full Hand
+3. Home Star:
+	1. 1 [[Academy]] Colony 1/2
+	2. 1 [[Shipyard]] Base 1/2
+4. [[Factory]]:
+	1. 4 Heroes
+	2. 3 Bases
+	3. 3 Colonies
+5. [[Laboratory]]:
+	1. Hero
 
 #### Notes
 

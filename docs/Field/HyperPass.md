@@ -3,4 +3,4 @@ status: stub
 scope: advanced
 ---
 
-- Decreases distance to 0
+1. **Hyper Pass** decreases [[Distance]] through its [[Space]] to 0

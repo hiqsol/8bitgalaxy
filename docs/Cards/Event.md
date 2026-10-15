@@ -16,25 +16,21 @@ scope: aliens
 
 #### Notes
 
-- Events should perform catch up function:
-	- give less to stronger
-	- seize more from stronger
-- Apply to:
-	- each faction
-	- non alien
-	- alien
-- Relates to:
-	- cards:
-		- add/remove/move
-		- hide/reveal
-	- resources:
-		- add/remove reserves
-	- board:
-		- hide/reveal space
-		- move warp storm
+1. Events should perform a catch-up function:
+	1. Give less to stronger factions
+	2. Seize more from stronger factions
+2. Events can apply to:
+	1. Each faction
+	2. Non-Alien factions
+	3. Aliens
+3. Events can affect:
+	1. Cards: add, remove, move, hide or reveal
+	2. Resources: add or remove reserves
+	3. Board: hide or reveal Space, or move a warp storm
 
 ### Event Examples
-- **Supernova**: destroy everything in the most occupied star and put [[Supernova]] at any preferably unexplored space around
-- **Alien Outbreak**: (or surge) add 1 [[Alien]] to each star with [[Alien]] in it
-- **Alien Invasion**: add 1 [[Alien]] [[Unit]] openly to every bordering star and attack where possible
-- **Alien production**: [[Alien]]s produce 2 [[Materials]] in every [[Star]] [[ControlledBy]] them
+
+1. **Supernova**: destroy everything in the most occupied star and put [[Supernova]] at any preferably unexplored Space around it
+2. **Alien Outbreak**: add 1 [[Alien]] to each Star with an Alien in it
+3. **Alien Invasion**: add 1 Alien [[Unit]] openly to every bordering Star and attack where possible
+4. **Alien production**: Aliens produce 2 [[Materials]] in every [[Star]] [[ControlledBy]] them

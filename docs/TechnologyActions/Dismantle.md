@@ -4,4 +4,4 @@ scope: advanced
 ---
 
 1. **Dismantle** is [[TechnologyAction]]
-1. **Dismantle** action allows to convert cards to [[Materials]]
+2. **Dismantle** action converts cards to [[Materials]]

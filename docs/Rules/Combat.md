@@ -17,18 +17,18 @@ scope: core
 	2. Player can reveal rival's hidden cards with [[Explore]] or [[Recon]]
 6. Parties can add resources with cards:
 	1. At the moment when they add card, not later.
-	2. Not more than card's [[Defense]]
+	2. Not more than card's [[Capacity]]
 7. Defending players can add non-[[Military]] cards. Their combat power is their defense = 1
 8. At following rounds parties continue to pass or add more participants and supporters
 9. After all parties have passed reveal hidden cards, count total powers and determine winner
 10. After action:
 	1. Winner can save from damage direct participants with total sum of levels less than his total combat power advantage
 	2. All other direct participants become [[Damaged]].
-	3. [[Deplete]] supporters
+	3. If the attacker wins, their surviving attacking [[Unit]]s move to the destination [[Star]].
+	4. [[Deplete]] supporters
 
-## Comments
-Ideas behind such implementation:
-- there is no random but the result is not predetermined
-- many rounds are intended: they make [[Hidden]] cards and [[Recon]] interesting
-- players make decisions and take risks
-- players can prepare surprises and bluff
+#### Notes
+
+1. Combat has no random resolution, but hidden commitments keep the result from being predetermined.
+2. Multiple rounds make [[Hidden]] cards and [[Recon]] relevant.
+3. Players make decisions, take risks, prepare surprises and bluff.

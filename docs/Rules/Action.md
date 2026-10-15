@@ -15,7 +15,7 @@ scope: core
 	2. To start a [[TechnologyAction]] one of action participants must provide it with its ability.
 		1. [[Create]] / [[Upgrade]] / [[Recover]]
 		2. [[Explore]] / [[Extract]]
-		2. [[Trade]] / [[Smuggle]]
-		3. [[PlusHero]]
-		4. [[PlusFactory]]
-		5. [[PlusLaboratory]]
+		3. [[Trade]] / [[Smuggle]]
+		4. [[PlusHero]]
+		5. [[PlusFactory]]
+		6. [[PlusLaboratory]]

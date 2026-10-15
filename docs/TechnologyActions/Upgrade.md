@@ -12,6 +12,7 @@ aliases: [Enhance, Grow]
 4. **Requirements**:
 	1. Old [[Actor]] must be in [[Discard]]
 	2. New card must be available at [[Factory]]
+	3. New card's [[Cost]] must be greater than old card's Cost
 5. **Direction**:
 	1. For [[Actor]] - any [[Star]] to [[BuildingFacility]]
 	2. For [[Structure]] - [[BuildingFacility]] to old card's [[Star]]

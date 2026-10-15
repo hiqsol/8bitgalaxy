@@ -7,12 +7,11 @@ scope: core
 	1. Goes to [[Field]] with [[Takeoff]] or
 	2. Starts an [[Action]] as its **starter**, see [[PerformAction]]
 2. More cards from [[Hand]] can join an action as [[Support]]ers
-3. One [[AlienSpawn]] at any moment of the **turn**
-4. **End of turn**:
+3. **End of turn**:
 	1. Unused cards from [[Hand]] go to [[Discard]]
 	2. [[Draw]] a full [[Hand]]
-5. Player can pass: play no cards
-6. At rivals' turns cards from [[Hand]] can only join [[Combat]] as supporters
+4. Player can pass: play no cards
+5. At rivals' turns cards from [[Hand]] can only join [[Combat]] as supporters
 
 #### Notes
 

@@ -7,7 +7,8 @@ scope: core
 	1. The faction has not less [[Control]] in the system than others
 	2. There is consensus between all factions with [[Actor]] cards in the system
 2. [[Actor]] is **controlled by** faction when:
-	1. The actor is not [[Damaged]]
+	1. The actor belongs to the faction
+	2. The actor is not [[Damaged]]
 3. [[Structure]] is **controlled by** faction when:
 	1. The faction has more control in the [[Star]]
 	2. TODO

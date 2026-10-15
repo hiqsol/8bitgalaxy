@@ -8,11 +8,11 @@ scope: advanced
     1. Allows to convert [[Materials]] to [[Money]]
     2. Performed as [[Transport]] materials between two [[Faction]]s
 3. **Direction**:
-    - From [[Star]] having colony of one [[Faction]]
-    - To [[Star]] having colony of other [[Faction]]
+    1. From [[Star]] having colony of one [[Faction]]
+    2. To [[Star]] having colony of other [[Faction]]
 4. **Requirements**:
-    - Authorization from party [[Faction]]s
-4. **Outcome**:
+    1. Authorization from party [[Faction]]s
+5. **Outcome**:
     1. Party [[Faction]] gets 1 item of [[Materials]]
     2. Other items of transported [[Materials]] converts to [[Money]]
 

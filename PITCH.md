@@ -68,7 +68,6 @@ Multiple winners are possible — greatness is a spectrum.
 ## Tech Stack
 
 Vue 3 + TypeScript + Vite + Sass. Runs in any browser.
-Core rules engine in separate `8bitgalaxy-core` package.
 
 ## Status
 

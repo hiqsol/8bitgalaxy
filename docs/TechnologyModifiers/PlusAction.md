@@ -1,7 +1,0 @@
----
-status: draft
-scope: core
----
-
-1. **Plus Action** is [[Military]] technology Level 6
-2. **Plus Action** allows to perform one more [[Action]] in [[Turn]]: the **starter** of the action returns to [[Hand]] instead of [[Deplete]]

@@ -3,71 +3,68 @@ status: draft
 scope: core
 ---
 
-1. **Technology** is ability...
-1. **Technologies** come in two flavours:
+1. **Technology** is a card ability
+2. **Technologies** come in two flavours:
     1. [[TechnologyAction]] allows to perform non-basic actions
     2. [[TechnologyModifier]] modify actions for better
 
-- Military:
-    - 1 BASE    - [[Recon]] Action - Any
-    - 2         - [[Retreat]] Modifier - Hero (Culture)
-    - 3 COLONY  - [[Militarization]] Modifier
-    - 4         - [[Stealth]] Modifier
-    - 4         - [[Smuggle]] Action - Ship, Hero (Culture)
-- Culture:
-    - 1 COLONY  - [[Academy]] Facility - Colony, Ship
-    - 2         - [[Upgrade]] Action
-    - 3 BASE    - [[Trade]] Action - Base
-    - 4         - [[Exhaust]] Modifier
-    - 4 Credit 
-    - 5 COLONY  - [[DoNotDeplete]] Modifier (-deplete)
-- Production:
-    - 1 BASE    - [[Shipyard]] Facility - Base, Ship
-    - 2         - [[Recover]] Action - Ship
-    - 3 COLONY  - [[Extract]] Action - Base, Ship
-    - 4         - [[Dismantle]] Action - Actor (Military)
-    - 4         - [[PlusLoad]] Modifier
-    - 4         - [[PlusFactory]] Action - Any (Scientific)
-    - 5 BASE    - [[PlusDraw]] Modifier (Culture)
-- Science:
-    - 1 
-    - 2         - [[Explore]]
-    - 3 BASE    - [[Navigation]]
-    - 3         - [[MinusRequirement]]
-    - 4         - [[PlusRange]]
-    - 5 COLONY  - [[PlusAction]]
+3. Military technologies:
+	1. 1 BASE - [[Recon]] Action - Any
+	2. 2 - [[Retreat]] Modifier - Hero (Culture)
+	3. 3 COLONY - [[Militarization]] Modifier
+	4. 4 - [[Stealth]] Modifier
+	5. 4 - [[Smuggle]] Action - Ship, Hero (Culture)
+4. Culture technologies:
+	1. 1 COLONY - [[Academy]] Facility - Colony, Ship
+	2. 2 - [[Upgrade]] Action
+	3. 3 BASE - [[Trade]] Action - Base
+	4. 4 - [[Exhaust]] Modifier
+	5. 4 Credit
+	6. 5 COLONY - [[DoNotDeplete]] Modifier (-deplete)
+5. Production technologies:
+	1. 1 BASE - [[Shipyard]] Facility - Base, Ship
+	2. 2 - [[Recover]] Action - Ship
+	3. 3 COLONY - [[Extract]] Action - Base, Ship
+	4. 4 - [[Dismantle]] Action - Actor (Military)
+	5. 4 - [[PlusLoad]] Modifier
+	6. 4 - [[PlusFactory]] Action - Any (Scientific)
+	7. 5 BASE - [[PlusDraw]] Modifier (Culture)
+6. Science technologies:
+	1. 1
+	2. 2 - [[Explore]]
+	3. 3 BASE - [[Navigation]]
+	4. 3 - [[MinusRequirement]]
+	5. 4 - [[PlusRange]]
 
-- Military
-    - Military      - Stealth, Militarization
-    - Culture       - Smuggle
-    - Production    -
-    - Science       - PlusAction
-- Culture
-    - Military      - Smuggle
-    - Culture       - Academy
-    - Production    - PlusDraw
-    - Science       - Exhaust
-- Production
-    - Military      - Dismantle
-    - Culture       -
-    - Production    - Shipyard, Extract
-    - Science       - PlusFactory
-- Scientific
-    - Military      - PlusAction
-    - Culture       -
-    - Production    -
-    - Science       - Research, Navigation
+7. Military pairs:
+	1. Military - Stealth, Militarization
+	2. Culture - Smuggle
+	3. Production - none
+	4. Science - none
+8. Culture pairs:
+	1. Military - Smuggle
+	2. Culture - Academy
+	3. Production - PlusDraw
+	4. Science - Exhaust
+9. Production pairs:
+	1. Military - Dismantle
+	2. Culture - none
+	3. Production - Shipyard, Extract
+	4. Science - PlusFactory
+10. Science pairs:
+	1. Military - none
+	2. Culture - none
+	3. Production - none
+	4. Science - Research, Navigation
 
 Pairs:
-- [[Recon]] / [[Explore]]
+1. [[Recon]] / [[Explore]]
 
 General idea:
-- For every power:
-    - 1/2 Structure Technology
-    - 3/4 Structure Technology
-    - 5/6 Maximal Hero Technology:
-        - [[PlusAction]] - Scientific/Military
-        - [[PlusDraw]] - Culture/Production
+1. For every power:
+	1. 1/2 Structure Technology
+	2. 3/4 Structure Technology
+	3. 5/6 Maximal Hero Technology: [[PlusDraw]] - Culture/Production
 
 |Object| Military | Culture  | Product  |Scientific|
 |------|----------|----------|----------|----------|
@@ -102,5 +99,5 @@ General idea:
 |      |          |          |          |          |
 |6 Colo|          |          |          |          |
 |6 Base|          |          |          |          |
-|6 Hero|          |6M +draw  |          |6M +action|
+|6 Hero|          |6M +draw  |          |          |
 |6 Ship|          |          |          |          |

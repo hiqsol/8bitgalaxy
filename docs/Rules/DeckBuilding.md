@@ -17,3 +17,7 @@ scope: core
 		2. Or start/support an action and [[Deplete]] to [[Discard]]
 	5. Unused cards go from [[Hand]] to [[Discard]] at the end of [[Turn]]
 	6. From [[Field]] [[Deplete]] to [[Discard]] after any action except [[Move]]
+
+#### Notes
+
+1. Actors form the cycling deck; structures form the persistent engine on the Field.

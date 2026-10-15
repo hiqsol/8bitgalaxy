@@ -10,4 +10,4 @@ scope: core
 3. **Direction**: any [[Star]] to corresponding [[BuildingFacility]]
 4. Similar to [[Manage]] action
 5. **Cost**: card's cost of [[SciencePower]]
-6. To research a card all its [[Prerequisites]] must be satisfied
+6. To research a card all its [[Prerequisites]] must be provided by the action's participants

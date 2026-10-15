@@ -12,6 +12,7 @@ aliases: [Disabled, Exhausted, Wrecked]
 	2. After applying [[Exhaust]] modifier
 3. **Damaged** is opposite to [[Enabled]]
 4. [[Recover]] makes card [[Enabled]]
+5. A Damaged card that becomes Damaged again is [[Destroyed]]
 
 #### Notes
 

@@ -8,5 +8,5 @@ scope: core
 	1. Added [[Power]] - adds to the [[PrimaryAbility]] power, shown as `+1`
 	2. [[Technology]] - its name is shown in place of `+1`
 3. But:
-	- Secondary abilities are usually weaker
-	- Not available when overlapped: the card is placed one [[Slot]] higher than other card
+	1. Secondary abilities are usually weaker
+	2. Not available when overlapped: the card is placed one [[Slot]] higher than other card

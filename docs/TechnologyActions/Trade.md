@@ -5,11 +5,11 @@ scope: advanced
 
 1. **Trade** is [[Culture]] technology Level 2
 2. **Trade** action allows to acquire [[Materials]]
-2. **Direction**:
-    - From [[Star]] with colony
-    - To [[Star]] with colony
+3. **Direction**:
+    1. From [[Star]] with colony
+    2. To [[Star]] with colony
 4. **Requirements**:
-    - Authorization from party [[Faction]]
-4. **Outcome**:
-    - Power converts to [[Materials]] one to one
-    - [[Materials]] are split evenly between [[Star]]s
+    1. Authorization from party [[Faction]]
+5. **Outcome**:
+    1. Power converts to [[Materials]] one to one
+    2. [[Materials]] are split evenly between [[Star]]s

@@ -15,15 +15,15 @@ scope: core
 6. **Strong** end is the one with higher [[Level]], the other is **weak**
 7. Ends mean different things for different cards:
 	1. [[Actor]]s ([[Ship]], [[Hero]]) - each end may (and usually does) have its own [[Class]], [[Level]] and abilities:
-		- the card is used with the end that is up
-		- owner picks the end for free at [[Takeoff]], after that only [[Manage]] rotates it
-		- supporter from [[Hand]] can be used with either end, see [[Support]]
+		1. The card is used with the end that is up
+		2. Owner picks the end for free at [[Takeoff]], after that only [[Manage]] rotates it
+		3. Supporter from [[Hand]] can be used with either end, see [[Support]]
 	2. [[Structure]]s:
-		- strong end up - the card is [[Ready]]
-		- weak end up - the card is [[Depleted]]
+		1. Strong end up - the card is [[Ready]]
+		2. Weak end up - the card is [[Depleted]]
 	3. Back [[Side]] of any card:
-		- damaged end up - the card is [[Damaged]]
-		- hidden end up - the card is [[Hidden]]
+		1. Damaged end up - the card is [[Damaged]]
+		2. Hidden end up - the card is [[Hidden]]
 
 #### Notes
 

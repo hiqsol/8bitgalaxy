@@ -7,11 +7,14 @@ scope: core
 2. **Transport** action allows to [[Move]] **cargo** with [[Ship]]s
 3. **Cargo** can be: cards, [[Materials]]
 4. Requirements:
-     - [[Range]]
-     - [[Capacity]]
+     1. [[Range]]
+     2. [[Capacity]]
 5. Total [[Capacity]] of the group is sum of capacities of direct participants
 6. [[Hero]] can increase [[Capacity]] or [[Range]], but can't transport alone
 7. Type limitations in the table below
+8. Transported cards are cargo, not participants
+9. Moving direct participants and transported cards are not depleted after Transport
+10. Supporters are depleted as usual
 
 | Object    | Mil | Cul | Pro | Sci |
 | --------- | --- | --- | --- | --- |
