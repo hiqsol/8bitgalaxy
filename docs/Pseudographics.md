@@ -24,7 +24,7 @@ Class ──►╞═══╝    +1 │ ◄── Secondary
          │   ship    │
  Type ──►│- -image- -│- - - - - - 
          │    here   │ Weak End
-         │  T+   ╔═══╡ ◄── Class
-         │  T    ║ T │ ◄── Level
+         │ T+    ╔═══╡ ◄── Class
+         │ T     ║ T │ ◄── Level
          ╰───────╨───╯
 ```
