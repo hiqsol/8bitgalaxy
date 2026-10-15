@@ -9,3 +9,7 @@ scope: core
 	3. Can hold unlimited number of cards
 2. **Outer space** is represented as a pile inside of every Star
 3. Cards in **outer space** can only [[Move]] not [[PerformAction]]
+
+#### Notes
+
+1. Which [[End]] is up doesn't matter in **outer space**: cards can only move from there

@@ -33,7 +33,7 @@ Answer proposals by number, e.g. "P3 A", "P5 yes".
 - [ ] **I19. No card data.** No note lists actual cards (levels, class, abilities). → P12.1. The code has a full 32-card deck, see I24.
 - [ ] **I20. No cost formula.** [[Property]] says ExtraCost implies Cost and Size, but there's no formula. → P12.2. The code data supports P12.2, see I25.
 - [ ] **I21. Stub notes** (`status: stub`): [[Wreckage]], [[DefSys]], [[HyperPass]], [[Cost]], [[ExtraCost]], [[MinusRequirement]], [[Sell]], [[PlusFactory]], [[PlusHero]], [[Dismantle]], [[EfficientUpgrade]], [[Navigation]], [[PlusRange]], [[Stealth]], [[Objective]]. Plus an empty `Untitled/` folder.
-- [ ] **I22. Broken links.** Fixed: Actions, NewFactory, PlusCapacity, Leader. Remaining: Mobilize, PlusHand, Void. Enhance/Fix/Grow/Heal are now flavour names (aliases).
+- [ ] **I22. Broken links:** Mobilize, PlusHand, Void.
 - [ ] **I23. [[ControlledBy]] has a TODO** for structures. → P10
 
 ### Images and implementation
@@ -71,42 +71,38 @@ Sources: `public/images/card.png`, `public/images/game.png` (the other images ar
 - [ ] **I31. Setup in code vs [[StartDraw]].** `Start.js` matches the note for Discard (4 Ships 2/1, 2 Heroes 1/1), the home star (Academy Colony-2c and Shipyard Base-2p, Ready) and Factory (4 Heroes, 3 Bases, 3 Colonies: all cards with max level ≤ 3).
 	- Laboratory gets all 14 level-4 cards (4 Ships, 2 Heroes, 4 Bases, 4 Colonies), not just "hero".
 	- Factory cards are shuffled and dealt round-robin to 4 piles. With P14 ("only the top card is available"), which card you can build is random. Laboratory has 5 piles, each sorted with the lowest level on top.
-	- Reserve and Hand start empty, so the first action is always Draw, after a Shuffle of the 6 discarded cards. Obsolete with the new [[Turn]]: [[StartDraw]] now deals the Reserve and a Hand.
+	- Reserve and Hand start empty, the 6 starting cards are in Discard. [[StartDraw]] deals them to Reserve and Hand.
 - [ ] **I32. Home in code vs [[Home]].**
 	- Extra **Progress** row (Attack, Colo, Prod, Science piles), also visible in `game.png`. Not in any note.
 	- 4 Factory piles and 5 Laboratory (`RnD`) piles. The notes don't give counts.
-	- Hand is 3 slots, [[Hand]] now says the size is 5. → P19
+	- Hand is 3 slots, [[Hand]] says the size is 5. → P19
 - [ ] **I33. Board geometry exists only in code.** 7 hex stars in rows of 2-3-2. The center star `S11` is walled off with Void, P1 starts at `S21`, P2 at `S00`, the center is for Aliens. Space segments sit on star edges (plus corners for border stars), start hidden, and get a random type 1–6 (6 = Void). [[Space]] lists 5 types and gives Space a Length and Cost, which the code doesn't have. → P20
 - [ ] **I34. Names in code vs notes.**
 	- Classes: Attack / Colonization / Production / Science (letters `a c p s`) vs Military / Culture / Production / Science.
 	- Secondary ability = `Cooperation`. Laboratory = `Research` / `RnD`.
 	- The [[OuterSpace]] pile is called `ipm` ("Interplanetary Medium"), which is easy to confuse with [[IPS]] (the slots).
-	- Card states `Turned` (flip) and `Altered` (rotate) vs [[Side]] and [[End]]. The back side has no Disabled/Hidden distinction (`Unknown` is used for Aliens only).
+	- Card states `Turned` (flip) and `Altered` (rotate) vs [[Side]] and [[End]]. The back side has no Damaged/Hidden distinction (`Unknown` is used for Aliens only).
 - [ ] **I35. Images are stale** (Feb 2024).
 	- `game.png` shows an old card set (`tx1`–`tx6`, `bank`, `hyper`, `+hero`, `sYard`, `xtrct`, `eXplr`) and old Home buttons (Get 1, Get 2, Discard, counter 60) that are no longer in the code.
-	- `card.png` labels only Level, Class, Type, Primary and Secondary. Missing: the other end (bottom corners), ExtraCost, Faction, Prerequisites and technology name.
+	- `card.png` labels only Level, Class, Type, Primary and Secondary. The card picture in [[Property]] adds both ends and the back side, and puts the technology name in place of the Secondary `+1`. Still missing: ExtraCost, Faction on the front and Prerequisites. Answer: will be added later.
 	- [[index]] and [[Property]] link to `https://8bitgalaxy.com/images/…` instead of the repo copy, so they don't render offline. → P21
 - [ ] **I36. Stale code.** It doesn't affect the rules, but it makes the code a weaker reference:
 	- `Demo.js` uses AI cards (the AI deck is commented out in `Decks.js`) and Human cards that don't exist (`Human-Base-7a`, `Human-B6c`), so it throws.
 	- `Generator.js` calls a nonexistent `aCard.buildName`.
 	- [[PITCH]] mentions a `8bitgalaxy-core` package that isn't in this repo.
 
-### New turn
-
-The [[Turn]] is now like Star Realms: play cards from [[Hand]] one by one, each card either [[Takeoff]]s to a free slot of a controlled star or starts an action as the **starter** ([[PerformAction]]). At the end of the turn unused cards go to [[Discard]] and the hand is refilled. [[Draw]] and [[Takeoff]] are no longer actions, PlusTakeoff and Transport during Takeoff are removed. Takeoff no longer starts at a [[BuildingFacility]].
+### Turn
 
 - [ ] **I38. Not enough weak actors for the starting deck.** [[StartDraw]] wants the 10 weakest [[Actor]] cards, but the deck data (I24) has only 6 actors with a level 1 end (Ship-2x, Hero-1x). The next weakest are Hero-2a and Hero-2c, then level 3. Add 4 basic starter cards (like Scouts and Vipers), or take them from the deck? Also update the [[Factory]] list in [[StartDraw]] accordingly.
-- [ ] **I39. Technologies redefined for the new turn** (check them):
-	- New: [[ForceDiscard]] (Military) and [[Express]] (Culture), levels TBD, not yet in the tech tables (I8).
-	- [[PlusDraw]]: draw one card when used in an action (was: more cards with the Draw action).
+- [ ] **I39. Technologies to check:**
+	- [[ForceDiscard]] (Military) and [[Express]] (Culture): levels TBD, not in the tech tables (I8).
+	- [[PlusDraw]]: draw one card when used in an action.
 	- [[PlusAction]]: the starter returns to Hand instead of Deplete, so the card starts one more action.
-	- [[BeActor]]: a Field card can start an action without a starter from Hand (was: actions without an Actor).
-	- [[DoNotDeplete]] sends a Hand card to [[Reserve]]. Maybe back to [[Hand]] now, which would be the same as PlusAction.
-- [ ] **I41. Who controls a star** is now core: it decides where you can [[Takeoff]] and which stars can be an action source. → P10
+	- [[BeActor]]: a Field card can start an action without a starter from Hand.
+	- [[DoNotDeplete]] sends a Hand card to [[Reserve]]. Back to [[Hand]] would be the same as PlusAction.
+- [ ] **I41. Who controls a star** is core: it decides where you can [[Takeoff]] and which stars can be an action source. → P10
 
 ### Extensions
-
-[[index]] now lists the inspirations (Star Realms, Twilight Imperium, Chess) and the scopes: `core`, `advanced`, and the extensions `aliens`, `objectives`, `politics`.
 
 - [ ] **I43. Objectives details.** [[Objective]] (`objectives`): the list of objectives, the number of victory points to win, and whether a public objective gives more than 1 point.
 - [ ] **I44. Politics details.** [[StrategyCard]]: the list of roles. [[PromissoryNote]]: what each side gets and whether the card returns to its owner.
@@ -116,7 +112,7 @@ The [[Turn]] is now like Star Realms: play cards from [[Hand]] one by one, each 
 ## Proposals
 
 - [ ] **P2. Hidden only in combat.** For the duel, allow Hidden only for supporters committed from Hand during [[Combat]] (bluffing). They are revealed when combat resolves. [[Stealth]] moves come later.
-- [ ] **P4. Transport doesn't deplete moving cards.** It is a kind of Move. Otherwise a colony ship vanishes after delivering. ([[Takeoff]] is no longer an action and doesn't deplete.)
+- [ ] **P4. Transport doesn't deplete moving cards.** It is a kind of Move. Otherwise a colony ship vanishes after delivering.
 - [ ] **P5. Combat is an exception to Deplete.** Direct participants of both sides stay (saved) or become [[Damaged]], and supporters deplete. Otherwise a winning defender's ships leave the star they defended.
 - [ ] **P6. Attack requirement.** "At least one [[Military]] direct participant, and the target [[Star]] within [[Range]] (the source star is allowed)." [[Combat]] decides the winner.
 - [ ] **P7. Combat strength, stated once:**
@@ -124,7 +120,7 @@ The [[Turn]] is now like Star Realms: play cards from [[Hand]] one by one, each 
 	- Boost: [[Materials]] up to [[Capacity]] (the general [[Boost]] rule).
 	- A tie goes to the defender.
 	- Advantage = winner total − loser total. The winner saves direct participants with total level **≤** the advantage (not "less than").
-- [ ] **P8. How cards die.** "A Disabled card that becomes Damaged again is Destroyed." Destroyed cards go to the owner's [[Factory]].
+- [ ] **P8. How cards die.** "A [[Damaged]] card that gets damaged again is Destroyed." Destroyed cards go to the owner's [[Factory]].
 - [ ] **P9. Defeat condition** in [[Goal]]:
 	- "Has no leader" = at the end of their own turn, no Enabled [[Hero]] on Field, Hand, Reserve or Discard.
 	- "Can not make a move" = at the start of their turn, no action is possible.
@@ -135,21 +131,18 @@ The [[Turn]] is now like Star Realms: play cards from [[Hand]] one by one, each 
 	- Technologies: [[Academy]], [[Shipyard]], [[Retreat]], [[PlusDraw]], [[PlusAction]], [[PlusRange]].
 	- Board: all [[Space]] revealed and Normal.
 	- Out: [[Materials]] (Boost, Extract, Trade, Export, Smuggle, Sell, Dismantle, Recycle), [[Money]], [[Hyperstructure]], [[Objective]], [[Event]], [[Tool]], [[Stealth]], Explore/Recon, Aliens.
-	- [[Takeoff]] and [[Draw]] are no longer actions, they are part of the [[Turn]].
 	- Combat bluffing stays.
 - [ ] **P12. What's still missing before a first game:**
 	1. Card data. Default rule: [[PrimaryAbility]] = [[Power]] of the card's [[Class]] equal to its current [[Level]]. [[SecondaryAbility]] = one [[Technology]] or none. An actor is then just: Type, and for each end Class, level and technology. ⚠ The card data disagrees, see I26 and I27.
 	2. Cost = strong level + [[ExtraCost]].
 	3. Duel map: 2 home stars and 3 neutral stars in a line or a ring, every Space length 1. See P20 for the map the code already has.
-	4. ~~First player has 1 action on their first turn.~~ Done: the first player starts with 3 cards, see [[StartDraw]].
-	5. ~~[[Reserve]]~~ Done.
 - [ ] **P14. Small clarifications:**
 	- [[Factory]]/[[Laboratory]]: only the top card of each pile is available.
 	- [[Factory]] is the pool of cards to (re)build, which is why [[Destroyed]] cards go there.
 	- [[Research]] [[Prerequisites]] are provided by the action's participants.
 	- Pick one Hero row for the [[Manage]] and [[Transport]] tables.
 - [ ] **P15. Put the deck into the notes.** Add a `docs/Cards/Deck.md` table generated from `Human.js` (one row per end: type, level, class, ExtraCost, Primary, Secondary, technology, prerequisites). The notes stay the source of truth, and the code is regenerated from them later. This resolves I19.
-- [ ] **P16. One ability format:** "An ability gives [[Power]] of its class and amount, and may also name one [[Technology]]." That's what the data already does. Alternative: a technology replaces the power, and the number is the tech level. Either way, fix `Spec.fromString` so it keeps the number.
+- [ ] **P16. One ability format.** [[SecondaryAbility]] is either added power (`+1`) or a [[Technology]] in its place. Open: can [[PrimaryAbility]] also be a technology, as on structures in the data (I27)? Fix `Spec.fromString` so it keeps the number.
 - [ ] **P17. Tech tree baseline.** Use the card data (I28) as the starting point for I8, since it's the only version that fits a real deck. Then either add cards for [[PlusDraw]] and [[PlusAction]] or drop them from the P11 core set.
 - [ ] **P18. Depleted structures:** "A [[Depleted]] structure still participates with its weak end: its level and [[PrimaryAbility]], no [[SecondaryAbility]]." This matches the data and keeps one structure useful without a [[Manage]] every turn. There is no free [[Restore]].
 - [ ] **P19. Hand size:** 5 (note, like Star Realms with a 10-card deck), 4, or 3 (code)? Smaller hand = slower game, see [[GameBalance]].

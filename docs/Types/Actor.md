@@ -9,4 +9,3 @@ scope: core
 4. List:
 	1. [[Ship]]
 	2. [[Hero]]
-4. Can be provided with [[BeActor]] technology

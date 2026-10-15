@@ -4,18 +4,25 @@ scope: core
 ---
 
 1. **End** is one of two short edges of a card
-2. The end that is up is the one pointing away from the owner
+2. The end that is **up** is the one pointing:
+	1. On [[Field]] - to the top of the [[Star]] the card is in
+	2. Elsewhere - away from the owner
 3. Changing the end is called **rotate** (180°)
 4. In a [[Slot]] only the end that is up is visible, the other end is inside the pocket
-5. Ends mean different things for different cards:
+5. Front [[Side]] of a card is double ended, each end has the same layout, see [[Property]]:
+	1. [[Level]] and [[Class]] in one corner
+	2. [[PrimaryAbility]] and [[SecondaryAbility]] in the other corner
+6. **Strong** end is the one with higher [[Level]], the other is **weak**
+7. Ends mean different things for different cards:
 	1. [[Actor]]s ([[Ship]], [[Hero]]) - each end may (and usually does) have its own [[Class]], [[Level]] and abilities:
 		- the card is used with the end that is up
-		- rotate to use the card the other way
-	2. [[Structure]]s - **strong** end and **weak** end:
+		- owner picks the end for free at [[Takeoff]], after that only [[Manage]] rotates it
+		- supporter from [[Hand]] can be used with either end, see [[Support]]
+	2. [[Structure]]s:
 		- strong end up - the card is [[Ready]]
 		- weak end up - the card is [[Depleted]]
 	3. Back [[Side]] of any card:
-		- disabled end up - the card is [[Disabled]]
+		- damaged end up - the card is [[Damaged]]
 		- hidden end up - the card is [[Hidden]]
 
 #### Notes

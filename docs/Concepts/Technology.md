@@ -51,7 +51,7 @@ scope: core
     - Military      - Dismantle
     - Culture       -
     - Production    - Shipyard, Extract
-    - Science       - NewFactory
+    - Science       - PlusFactory
 - Scientific
     - Military      - PlusAction
     - Culture       -

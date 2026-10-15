@@ -14,17 +14,3 @@
 │╰╯│╱╲│┃  ┃  ┃
 ╰──┴──╯┗━━┻━━┛
 ```
-
-## Card
-
-```
-         ╭───╥───────╮ Strong End
-Level ──►│ 2 ║     1 │ ◄── Primary
-Class ──►╞═══╝    +1 │ ◄── Secondary
-         │   ship    │
- Type ──►│- -image- -│- - - - - - 
-         │    here   │ Weak End
-         │ T+    ╔═══╡ ◄── Class
-         │ T     ║ T │ ◄── Level
-         ╰───────╨───╯
-```

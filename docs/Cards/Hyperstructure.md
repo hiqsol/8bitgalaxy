@@ -10,7 +10,3 @@ scope: advanced
 5. [[Range]] = 0 and cannot be [[Transport]]ed
 6. [[Size]] = current [[Level]] + [[ExtraCost]]
 7. [[Capacity]] = current [[Level]]
-
-#### Notes
-
-1. **Objective** or **Task** or **Agenda** ???

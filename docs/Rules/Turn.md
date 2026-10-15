@@ -16,6 +16,7 @@ scope: core
 
 #### Notes
 
-1. The [[Hand]] is the budget of the **turn**: no action counting and no checks
+1. The [[Hand]] is the budget of the **turn**: no action counting and no checks. Battle tested in Star Realms.
 2. Cards drawn at the end of the turn stay in [[Hand]] during the rivals' turns, so they can be used for defense in [[Combat]]. Cards used for defense are missing at your own turn.
 3. Drawing at the end of turn speeds the game up: player sees the next hand and plans it during rivals' turns
+4. Allows Star Realms mechanics: draw a card ([[PlusDraw]]), rival discards ([[ForceDiscard]])

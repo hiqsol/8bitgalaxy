@@ -14,3 +14,7 @@ aliases: [Pocket]
 	1. A card placed one **slot** higher than other card is **overlapped**
 	2. Overlapped card's [[SecondaryAbility]] is not available
 6. Cards can be shifted between slots with [[Manage]] action
+
+#### Notes
+
+1. Overlap is a new mechanic, not seen in other games
