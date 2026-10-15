@@ -9,13 +9,13 @@ scope: meta
 
 Review of the notes in `docs/` (the source of truth), aimed at a **minimal playable duel**: 2 players, no Aliens, playable with an AI from the notes alone.
 
-Answer proposals by number, e.g. "P12.1 A", "P10 yes".
+Answer proposals by number, e.g. "P7 yes", "P10 yes".
 
 ## Issues
 
 ### Game end and scope
 
-- [ ] **I5. Setup missing:** board layout and initial board. [[StartDraw]] is incomplete. → P12.3
+- [ ] **I5. Setup incomplete:** [[StartDraw]] has 4 Reserve cards TBD and doesn't name cards from [[Deck]].
 
 ### Contradictions
 
@@ -23,9 +23,8 @@ Answer proposals by number, e.g. "P12.1 A", "P10 yes".
 
 ### Missing content
 
-- [ ] **I19. No card data.** No note lists actual cards (levels, class, abilities). → P12.1 and P15.
-- [ ] **I20. No cost formula.** [[Property]] says ExtraCost implies Cost and Size, but there is no formula. → P12.2.
-- [ ] **I21. Stub notes** (`status: stub`): [[Wreckage]], [[DefSys]], [[HyperPass]], [[Cost]], [[ExtraCost]], [[MinusRequirement]], [[Sell]], [[PlusFactory]], [[PlusHero]], [[Dismantle]], [[EfficientUpgrade]], [[Navigation]], [[PlusRange]], [[Stealth]].
+- [ ] **I19. Deck review.** [[Deck]] is imported from the legacy code. Unclear technologies: `improve`, `allacad`, `×3` for [[PlusLoad]] and [[PlusRange]]. Deck technologies don't match [[Technology]] tables. → P17
+- [ ] **I21. Stub notes** (`status: stub`): [[Wreckage]], [[DefSys]], [[HyperPass]], [[MinusRequirement]], [[Sell]], [[PlusFactory]], [[PlusHero]], [[Dismantle]], [[EfficientUpgrade]], [[Navigation]], [[PlusRange]], [[Stealth]].
 - [ ] **I23. [[ControlledBy]] has a TODO** for structures. → P10
 
 ### Turn
@@ -57,18 +56,12 @@ Answer proposals by number, e.g. "P12.1 A", "P10 yes".
 	- Board: all [[Space]] revealed and Normal.
 	- Out: [[Materials]] (Boost, Extract, Trade, Export, Smuggle, Sell, Dismantle, Recycle), [[Money]], [[Hyperstructure]], [[Objective]], [[Event]], [[Tool]], [[Stealth]], Explore/Recon, Aliens.
 	- Combat bluffing stays.
-- [ ] **P12. What's still missing before a first game:**
-	1. Card data. Default rule: [[PrimaryAbility]] = [[Power]] of the card's [[Class]] equal to its current [[Level]]. [[SecondaryAbility]] = one [[Technology]] or none. An actor is then just: Type, and for each end Class, level and technology.
-	2. Cost = strong level + [[ExtraCost]].
-	3. Duel map: 2 home stars and 3 neutral stars in a line or a ring, every Space length 1.
 - [ ] **P14. Small clarifications:**
 	- [[Factory]]/[[Laboratory]]: only the top card of each pile is available.
 	- [[Factory]] is the pool of cards to (re)build, which is why [[Destroyed]] cards go there.
-- [ ] **P15. Put the deck into the notes.** Add a `docs/Cards/Deck.md` table with one row per end: type, level, class, ExtraCost, Primary, Secondary, technology and prerequisites.
-- [ ] **P16. One ability format.** Decide whether [[PrimaryAbility]] and [[SecondaryAbility]] provide power, technology or both, and document one representation.
 - [ ] **P17. Tech tree baseline.** Replace the conflicting technology catalogs with one canonical table, then ensure every core technology is present in the deck.
-- [ ] **P18. Depleted structures, after P16:** "A [[Depleted]] structure still participates with its weak end: its level and [[PrimaryAbility]], no [[SecondaryAbility]]." There is no free [[Restore]].
-- [ ] **P21. Images.** Update `game.png` and `card.png` after the canonical rules and card data are settled. Annotate `card.png` with both ends, ExtraCost, Prerequisites and the technology name.
+- [ ] **P18. Depleted structures:** "A [[Depleted]] structure still participates with its weak end: its level and [[PrimaryAbility]], no [[SecondaryAbility]]." There is no free [[Restore]].
+- [ ] **P21. Images.** Update `card.png` after the canonical rules and card data are settled. Annotate `card.png` with both ends, ExtraCost, Prerequisites and the technology name.
 
 ### Ideas
 
