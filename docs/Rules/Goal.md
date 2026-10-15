@@ -16,3 +16,4 @@ scope: core
 	2. Expansion
 	3. Wealth
 	4. Development
+5. With [[Objective]]s extension the first to get enough victory points wins

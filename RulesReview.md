@@ -40,7 +40,7 @@ Answer proposals by number, e.g. "P3 A", "P5 yes".
 
 Sources: `public/images/card.png`, `public/images/game.png` (the other images are backgrounds), `src/legacy/js/Model/` (`Decks/Human.js`, `Start.js`, `Home.js`, `Star.js`, `Row.js`, `Spec.js`).
 
-- [ ] **I24. The deck exists only in code.** `Decks/Human.js` defines 32 two-ended cards: 8 each of Ship, Hero, Base and Colony, levels 1–4. Notation per end: `l` level+class, `e` [[ExtraCost]], `p` [[PrimaryAbility]], `c` [[SecondaryAbility]] (called *Cooperation*), `r` [[Prerequisites]], `:name` technology. The Martian deck is a copy of the Human deck. → P15
+- [ ] **I24. The deck exists only in code.** `Decks/Human.js` defines 32 two-ended cards: 8 each of Ship, Hero, Base and Colony, levels 1–4. Notation per end: `l` level+class, `e` [[ExtraCost]], `p` [[PrimaryAbility]], `c` [[SecondaryAbility]] (called *Cooperation*), `r` [[Prerequisites]], `:name` technology. The Martian deck is a copy of the Human deck, that's fine: even contest needs even decks ([[GameBalance]]). → P15
 - [ ] **I25. The data confirms P12.2.** Ship ends are balanced: level + ExtraCost is the same on both ends (2+1 = 1+2 = 3; 4+1 = 3+2 = 5). Heroes have equal levels on both ends and ExtraCost 1. For structures the weak end is one level lower. So "Cost = strong level + ExtraCost" holds for every card. The ExtraCost class also says which power pays: `p` for [[Industrial]], `c` for [[Social]], as in [[Origin]].
 - [ ] **I26. Primary is not equal to level.** The P12.1 default ("Primary = power equal to current level") doesn't match the data:
 	- Ships: L1 → 1, L2 → 1, L3 → 2, L4 → 2
@@ -95,16 +95,23 @@ Sources: `public/images/card.png`, `public/images/game.png` (the other images ar
 
 The [[Turn]] is now like Star Realms: play cards from [[Hand]] one by one, each card either [[Takeoff]]s to a free slot of a controlled star or starts an action as the **starter** ([[PerformAction]]). At the end of the turn unused cards go to [[Discard]] and the hand is refilled. [[Draw]] and [[Takeoff]] are no longer actions, PlusTakeoff and Transport during Takeoff are removed. Takeoff no longer starts at a [[BuildingFacility]].
 
-- [ ] **I37. Restore at start of turn?** Structures act like Star Realms bases, but only [[Manage]] restores them (see the Restore economy idea). Should all your structures be restored at the start of your turn? Answer: discuss later.
 - [ ] **I38. Not enough weak actors for the starting deck.** [[StartDraw]] wants the 10 weakest [[Actor]] cards, but the deck data (I24) has only 6 actors with a level 1 end (Ship-2x, Hero-1x). The next weakest are Hero-2a and Hero-2c, then level 3. Add 4 basic starter cards (like Scouts and Vipers), or take them from the deck? Also update the [[Factory]] list in [[StartDraw]] accordingly.
 - [ ] **I39. Technologies redefined for the new turn** (check them):
+	- New: [[ForceDiscard]] (Military) and [[Express]] (Culture), levels TBD, not yet in the tech tables (I8).
 	- [[PlusDraw]]: draw one card when used in an action (was: more cards with the Draw action).
 	- [[PlusAction]]: the starter returns to Hand instead of Deplete, so the card starts one more action.
 	- [[BeActor]]: a Field card can start an action without a starter from Hand (was: actions without an Actor).
 	- [[DoNotDeplete]] sends a Hand card to [[Reserve]]. Maybe back to [[Hand]] now, which would be the same as PlusAction.
-- [ ] **I40. Pace.** About 5 actions per turn instead of 2. Hand size (P19) is the main knob. Answer: we'll see later.
 - [ ] **I41. Who controls a star** is now core: it decides where you can [[Takeoff]] and which stars can be an action source. → P10
-- [ ] **I42. Hand supporters in defense.** [[Combat]] already lets the defender add cards from Hand. With the hand refilled at the end of your turn it now always works. Proposal: on rivals' turns Hand cards can only join [[Combat]] as defenders' supporters. State it in [[Combat]] or [[Turn]].
+
+### Extensions
+
+[[index]] now lists the inspirations (Star Realms, Twilight Imperium, Chess) and the scopes: `core`, `advanced`, and the extensions `aliens`, `objectives`, `politics`.
+
+- [ ] **I43. Objectives details.** [[Objective]] (`objectives`): the list of objectives, the number of victory points to win, and whether a public objective gives more than 1 point.
+- [ ] **I44. Politics details.** [[StrategyCard]]: the list of roles. [[PromissoryNote]]: what each side gets and whether the card returns to its owner.
+- [ ] **I45. Derelict details.** [[Derelict]] (`aliens`): where they come from (setup, [[Event]]s) and the recruit cost.
+- [ ] **I46. Deck thinning by Takeoff.** A player can take off all weak cards and cycle only strong ones. To be worked out in [[GameBalance]].
 
 ## Proposals
 
@@ -144,8 +151,8 @@ The [[Turn]] is now like Star Realms: play cards from [[Hand]] one by one, each 
 - [ ] **P15. Put the deck into the notes.** Add a `docs/Cards/Deck.md` table generated from `Human.js` (one row per end: type, level, class, ExtraCost, Primary, Secondary, technology, prerequisites). The notes stay the source of truth, and the code is regenerated from them later. This resolves I19.
 - [ ] **P16. One ability format:** "An ability gives [[Power]] of its class and amount, and may also name one [[Technology]]." That's what the data already does. Alternative: a technology replaces the power, and the number is the tech level. Either way, fix `Spec.fromString` so it keeps the number.
 - [ ] **P17. Tech tree baseline.** Use the card data (I28) as the starting point for I8, since it's the only version that fits a real deck. Then either add cards for [[PlusDraw]] and [[PlusAction]] or drop them from the P11 core set.
-- [ ] **P18. Depleted structures:** "A [[Depleted]] structure still participates with its weak end: its level and [[PrimaryAbility]], no [[SecondaryAbility]]." This matches the data and keeps one structure useful without a [[Manage]] every turn (see the Restore economy idea).
-- [ ] **P19. Hand size:** 5 (note, like Star Realms with a 10-card deck), 4, or 3 (code)? Smaller hand = slower game, see I40.
+- [ ] **P18. Depleted structures:** "A [[Depleted]] structure still participates with its weak end: its level and [[PrimaryAbility]], no [[SecondaryAbility]]." This matches the data and keeps one structure useful without a [[Manage]] every turn. There is no free [[Restore]].
+- [ ] **P19. Hand size:** 5 (note, like Star Realms with a 10-card deck), 4, or 3 (code)? Smaller hand = slower game, see [[GameBalance]].
 - [ ] **P20. Duel map = the code's map** (replaces P12.3): 7 hex stars, Void center, homes at opposite corners, every Space revealed, Normal, length 1.
 - [ ] **P21. Images.** Regenerate `game.png` and `card.png` from the current code. Annotate `card.png` with both ends, ExtraCost, Prerequisites and the technology name. Link the images with local paths (`../public/images/…`).
 
@@ -153,6 +160,4 @@ The [[Turn]] is now like Star Realms: play cards from [[Hand]] one by one, each 
 
 - [ ] **Actors are the deck, structures are the engine.** Actors cycle through Discard, structures stay and rotate. Say this in [[DeckBuilding]] or [[index]].
 - [ ] **Raids vs occupation.** Attacks don't take territory, you Move in afterwards. State it in [[Attack]].
-- [ ] **Restore economy.** Only [[Manage]] restores structures. Watch in playtests whether the game slows down. Fallback: restore one structure for free at the start of your turn.
-- [ ] **More Star Realms mechanics** now fit: "draw a card" ([[PlusDraw]]), "rival discards a card" at the start of their turn, scrap a card from Hand or [[Discard]] to [[Factory]] to thin the deck.
 - [ ] **AI playtesting.** Export all `scope: core` notes into one file and run AI-vs-AI duels to find holes in the rules.
