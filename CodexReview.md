@@ -29,27 +29,23 @@ scope: meta
 	4. Alternate commitments in a defined order and resolve after consecutive passes.
 	5. The defender should select defenders.
 	6. Specify legal targets, hidden commitments, damage, destruction, retreat and cleanup.
-4. [[Distance]] counts both endpoint stars, apparently making adjacent stars distance 3:
-	1. Treat the board as a graph.
-	2. Route cost is the sum of traversed edges or [[Space]] segments.
-	3. State how group [[Range]], [[Support]], [[Void]] and [[OuterSpace]] modify it.
-5. Setup is not executable:
+4. Setup is not executable:
 	1. [[StartDraw]] specifies only 6 of 10 starter cards.
 	2. Its [[Laboratory]] contents are incomplete.
 	3. It does not define a complete board setup.
 	4. Create one `MinimalDuel` scenario containing setup, first-player rule, deck lists, ordered zones, map and initial states.
-6. Card data and technologies have no canonical schema:
+5. Card data and technologies have no canonical schema:
 	1. [[Technology]] contains several contradictory catalogs.
 	2. Keep one canonical technology and deck table.
 	3. Leaf pages should explain behavior without repeating class and level assignments.
-7. Core taxonomy classifies [[Event]]s and [[Objective]]s as [[Structure]]s:
+6. Core taxonomy classifies [[Event]]s and [[Objective]]s as [[Structure]]s:
 	1. Add a non-field card role instead of treating every non-hand card as a structure.
-8. Remote [[Support]] has no distance restriction:
+7. Remote [[Support]] has no distance restriction:
 	1. Declare that global support is intentional or constrain it.
-9. [[Slot]] overlap does not unambiguously identify which card is overlapped.
-10. [[Destroyed]] cards return to [[Factory]], but their destination pile and position are undefined.
-11. "Cannot make a move" must include both [[Takeoff]] and actions and be tested after mandatory [[Draw]].
-12. AI play requires exact turn order, starting-player selection, information rules and response timing.
+8. [[Slot]] overlap does not unambiguously identify which card is overlapped.
+9. [[Destroyed]] cards return to [[Factory]], but their destination pile and position are undefined.
+10. "Cannot make a move" must include both [[Takeoff]] and actions and be tested after mandatory [[Draw]].
+11. AI play requires exact turn order, starting-player selection, information rules and response timing.
 
 ## Recommended minimal-duel decisions
 

@@ -3,10 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Distance** of a route is a total length of covered [[Field]] segments including start and finish
-2. When starting/finishing in [[OuterSpace]] don't include length of star
-3. Segments of a route must have a common side
-4. Segments could be:
-	1. [[Space]] has length property 
-	2. [[Star]] - length is 1
-	3. [[OuterSpace]] - length is 0
+1. **Distance** of a route between [[Star]]s is the total length of [[Space]] segments it passes
+2. Segments of a route must have a common side
+3. [[Star]]s on the route add no length
+4. Within one [[Star]] see [[Move]]

@@ -37,7 +37,7 @@ Answer proposals by number, e.g. "P12.1 A", "P10 yes".
 - [ ] **I43. Objectives details.** [[Objective]] (`objectives`): the list of objectives, the number of victory points to win, and whether a public objective gives more than 1 point.
 - [ ] **I44. Politics details.** [[StrategyCard]]: the list of roles. [[PromissoryNote]]: what each side gets and whether the card returns to its owner.
 - [ ] **I45. Derelict details.** [[Derelict]] (`aliens`): where they come from (setup, [[Event]]s) and the recruit cost.
-- [ ] **I46. Deck thinning by Takeoff.** A player can take off all weak cards and cycle only strong ones. To be worked out in [[GameBalance]].
+- [ ] **I46. Deck thinning by Takeoff.** A player can take off weak cards and cycle only strong ones. Free [[Slot]]s limit it. To be worked out in [[GameBalance]].
 
 ## Proposals
 

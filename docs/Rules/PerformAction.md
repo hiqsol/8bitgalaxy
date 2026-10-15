@@ -16,7 +16,7 @@ scope: core
 		2. **Supporters**:
 			1. The **starter**
 			2. Selected cards in [[Hand]]
-			3. Selected cards [[ActiveFor]] player not in [[OuterSpace]]
+			3. Selected cards [[ActiveFor]] player on [[Field]]
 	4. Participants **abilities**:
 		1. Including [[Technology]]
 	5. **Destination** - [[Star]] or [[Space]]

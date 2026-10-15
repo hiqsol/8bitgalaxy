@@ -11,7 +11,6 @@ scope: core
 	2. **Shift**:
 		1. Between [[Slot]]s within the same [[IPS]]
 			1. [[Action]] has to be directed to the [[Star]]
-			2. Not between [[IPS]] and [[OuterSpace]]
 		2. Between piles within [[Laboratory]] or [[Factory]] row
 			1. **Direction**: to corresponding [[BuildingFacility]]
 2. **Cost**: 1 resource per operation with card
@@ -29,4 +28,4 @@ scope: core
 #### Notes
 
 1. E.g. [[Military]] power allows manage [[Hero]] and [[Ship]] cards
-2. You can't move between [[IPS]] and [[OuterSpace]] with [[Manage]] action
+2. Movement keeps the card's [[End]], only **Manage** rotates it

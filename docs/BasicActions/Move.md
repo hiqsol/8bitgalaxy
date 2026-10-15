@@ -7,12 +7,13 @@ scope: core
     1. Within one [[Star]] system:
         1. [[Distance]] = 1
         2. From one [[IPS]] slot to other
-        3. [[IPS]] to [[OuterSpace]] or back
     2. From one [[Star]] to another:
         1. See the [[Distance]] calculation
 2. Can't finish in [[Space]]
 3. Destination [[Star]] must be within [[Range]]
     1. Range can be increased with [[Support]]
-4. Several cards can move together in group
+4. Destination [[IPS]] must have a free [[Slot]] for every moving card
+5. Several cards can move together in group
     1. [[Range]] of the group is minimum of the ranges of the direct participants
-5. Moving [[Actor]]s are not depleted after **Move**, see [[Deplete]]
+6. Moving [[Actor]]s are not depleted after **Move**, see [[Deplete]]
+7. Moving cards keep their [[End]], only [[Manage]] rotates it

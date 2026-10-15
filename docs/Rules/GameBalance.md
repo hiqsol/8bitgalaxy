@@ -11,10 +11,13 @@ scope: core
 	2. So field card uses all abilities, hand card only one, see [[PerformAction]]
 	3. No other bonuses for playing from [[Hand]]
 3. Taking cards to [[Field]] thins the deck, that's intended: no scrap technology needed
-4. No free [[Restore]] and no free return from [[Field]] to the deck
-5. No limit on actions from the same [[Star]] in a [[Turn]]
+4. Field space is limited to [[Slot]]s, no unlimited parking:
+	1. Space pressure is good: it pushes to expand
+	2. It limits deck thinning: [[Field]] can't hold all weak cards
+5. No free [[Restore]] and no free return from [[Field]] to the deck
+6. No limit on actions from the same [[Star]] in a [[Turn]]
 
 #### Notes
 
-1. Potential issue: player takes off all weak cards and cycles only strong ones. To be worked out.
+1. Potential issue: player takes off weak cards and cycles only strong ones. Free [[Slot]]s limit it, to be worked out.
 2. Pace: about 5 actions per turn, [[Hand]] size is the main knob. We'll see later.

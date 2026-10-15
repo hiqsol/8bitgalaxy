@@ -15,6 +15,8 @@ scope: core
 8. Transported cards are cargo, not participants
 9. Moving direct participants and transported cards are not depleted after Transport
 10. Supporters are depleted as usual
+11. Destination [[IPS]] must have a free [[Slot]] for every transported card
+12. Moving and transported cards keep their [[End]], only [[Manage]] rotates it
 
 | Object    | Mil | Cul | Pro | Sci |
 | --------- | --- | --- | --- | --- |

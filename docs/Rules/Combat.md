@@ -24,7 +24,7 @@ scope: core
 10. After action:
 	1. Winner can save from damage direct participants with total sum of levels less than his total combat power advantage
 	2. All other direct participants become [[Damaged]].
-	3. If the attacker wins, their surviving attacking [[Unit]]s move to the destination [[Star]].
+	3. If the attacker wins, their surviving attacking [[Unit]]s move to free [[Slot]]s of the destination [[Star]], keeping their [[End]]. Units that don't fit stay in the source.
 	4. [[Deplete]] supporters
 
 #### Notes

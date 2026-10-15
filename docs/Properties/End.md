@@ -16,7 +16,7 @@ scope: core
 7. Ends mean different things for different cards:
 	1. [[Actor]]s ([[Ship]], [[Hero]]) - each end may (and usually does) have its own [[Class]], [[Level]] and abilities:
 		1. The card is used with the end that is up
-		2. Owner picks the end for free at [[Takeoff]], after that only [[Manage]] rotates it
+		2. Owner picks the end for free at [[Takeoff]], after that only [[Manage]] rotates it: movement keeps the end
 		3. Supporter from [[Hand]] can be used with either end, see [[Support]]
 	2. [[Structure]]s:
 		1. Strong end up - the card is [[Ready]]
