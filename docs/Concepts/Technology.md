@@ -23,7 +23,7 @@ scope: core
 | [[Explore]] | Action | S | core | Ship 2S strong, Colony 2S |
 | [[Express]] | Modifier | C | core | - |
 | [[ForceDiscard]] | Modifier | M | core | - |
-| [[Recon]] | Action | M | core | Hero 1M strong, Hero 2M strong, Colony 2M |
+| [[Spy]] | Action | M | core | Hero 1M strong, Hero 2M strong, Colony 2M |
 | [[Stealth]] | Modifier | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
 | [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
 | [[Militarization]] | Modifier | M | advanced | Base 2M, Colony 4M |
@@ -41,9 +41,22 @@ scope: core
 | [[PlusFactory]] | Action | P | advanced | - |
 | [[PlusLaboratory]] | Action | S | advanced | - |
 | [[Invent]] | Action | S | advanced | - |
+| [[Tactics]] | Modifier | M | advanced | - |
+| [[Ambush]] | Modifier | M | advanced | - |
+| [[Raid]] | Action | M | advanced | - |
+| [[Command]] | Modifier | C | advanced | - |
+| [[Recall]] | Modifier | C | advanced | - |
+| [[Settle]] | Modifier | C | advanced | - |
+| [[Legacy]] | Action | C | objectives | - |
+| [[Guard]] | Modifier | P | advanced | - |
+| [[Salvage]] | Modifier | P | advanced | - |
+| [[Prefab]] | Modifier | P | advanced | - |
+| [[EfficientUpgrade]] | Modifier | P | advanced | - |
+| [[Scan]] | Modifier | S | advanced | - |
+| [[Forecast]] | Modifier | S | advanced | - |
+| [[Jump]] | Modifier | S | advanced | - |
 | [[MinusRequirement]] | Modifier | S | advanced | - |
 | [[PlusHero]] | Action | TBD | advanced | - |
-| [[EfficientUpgrade]] | Modifier | TBD | advanced | - |
 
 #### Notes
 

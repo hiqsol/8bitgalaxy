@@ -1,0 +1,7 @@
+---
+status: draft
+scope: advanced
+---
+
+1. **Scan** is [[TechnologyModifier]]
+2. With **Scan** [[Explore]] also reveals one hidden segment bordering the target, for free

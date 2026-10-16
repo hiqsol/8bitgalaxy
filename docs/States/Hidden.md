@@ -15,10 +15,11 @@ scope: core
 	1. When attacked
 	2. When it takes part in any action other than [[Move]] or [[Transport]]
 	3. By its player at any time of own [[Turn]], for free
-	4. By rival's [[Explore]] or [[Recon]], if the rival chooses so
+	4. By rival's [[Explore]] or [[Spy]], if the rival chooses so
 5. In [[Combat]] parties bluff with **hidden** cards from [[Hand]]
 
 #### Notes
 
 1. A hidden card moves with minimal values because the rival can't know or check what card it is
 2. Cards get hidden on the [[Field]] by [[Takeoff]] or [[Stealth]]
+3. Hidden cards neither pin nor get pinned, see [[Pinning]]

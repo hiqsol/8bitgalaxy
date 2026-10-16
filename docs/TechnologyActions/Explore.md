@@ -18,10 +18,10 @@ scope: core
 	1. Adds more power by spending more cards
 	2. Cancels the action, losing what's already spent
 8. For a [[Hidden]] card the acting player chooses to reveal it to all or keep it hidden
-9. [[Recon]] has the same rules, but the Cost is [[AttackPower]]
+9. [[Spy]] has the same rules, but the Cost is [[AttackPower]]
 
 #### Notes
 
-1. **Explore** is scientific, [[Recon]] is military: both kinds of factions can reveal
+1. **Explore** is scientific, [[Spy]] is military: both kinds of factions can reveal
 2. Better segments cost more, so running out of power hints at a good one
 3. To reach a hidden Star explore the Space before it, then the Star itself

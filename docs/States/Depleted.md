@@ -8,7 +8,7 @@ scope: core
 	2. Weak [[End]] up
 2. [[Structure]] cards become **depleted** after [[Deplete]]
 3. **Depleted** structure still participates with its weak [[End]]: its [[Level]] and [[PrimaryAbility]], no [[SecondaryAbility]]
-4. There is no free [[Restore]]
+4. [[Restore]] makes it [[Ready]]: with [[Manage]] or 1 free at the end of own [[Turn]]
 
 #### Notes
 

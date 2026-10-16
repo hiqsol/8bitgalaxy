@@ -7,6 +7,7 @@ scope: core
 2. First **attacker**:
 	1. selects **attacking participants** and supporters
 	2. selects **defending participants**
+	3. When the target [[Star]] has the defender's [[Academy]], defending participants can also be selected from the defender's [[Discard]], [[Reserve]] or [[Hand]]
 3. Then **defender**:
 	1. Chooses to pass or add more participants and supporters
 4. More players can join to the **combat**:
@@ -14,7 +15,7 @@ scope: core
 	2. They must have active [[Military]] [[Actor]]s in the star
 5. Parties can bluff by adding [[Hidden]] cards from [[Hand]], also at rival's [[Turn]]
 	1. Hidden card can be revealed by its player at any time
-	2. Player can reveal rival's hidden cards with [[Explore]] or [[Recon]]
+	2. Player can reveal rival's hidden cards with [[Explore]] or [[Spy]]
 6. Parties can add resources with cards:
 	1. At the moment when they add card, not later.
 	2. Not more than card's [[Capacity]]
@@ -34,5 +35,6 @@ scope: core
 #### Notes
 
 1. Combat has no random resolution, but hidden commitments keep the result from being predetermined.
-2. Multiple rounds make [[Hidden]] cards and [[Recon]] relevant.
+2. Multiple rounds make [[Hidden]] cards and [[Spy]] relevant.
 3. Players make decisions, take risks, prepare surprises and bluff.
+4. Attacking the [[Academy]] reaches [[Hero]]es in the deck, so leaders can be defeated, see [[Goal]]

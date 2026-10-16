@@ -7,7 +7,7 @@ scope: core
 2. **Star** represents star system with planets
 3. **Star** contains [[IPS]] - Interplanetary Space
 4. **Stars** are hidden (turned face down) at the beginning of the game, except home Stars
-5. Hidden **Star** is revealed with [[Explore]] or [[Recon]] action
+5. Hidden **Star** is revealed with [[Explore]] or [[Spy]] action
 6. Cards can't pass or enter a hidden **Star**
 7. **Star** properties:
 	1. **Type**: one of the [[Class]]es, it sets the class of a [[Power]] ability

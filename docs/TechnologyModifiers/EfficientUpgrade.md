@@ -1,7 +1,7 @@
 ---
-status: stub
+status: draft
 scope: advanced
 ---
 
-1. **Efficient Upgrade** improves [[Upgrade]]
-2. Efficient Upgrade reduces the resources spent on Upgrade
+1. **Efficient Upgrade** is [[TechnologyModifier]]
+2. **Efficient Upgrade** reduces the [[Upgrade]] cost by 1

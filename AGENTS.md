@@ -7,6 +7,8 @@ Every page has:
 - notes
 
 Docs include rules, notes and reviews.
+Reviews number issues `I<n>` and proposals `P<n>`, continuing across review files.
+Write the points of an issue or proposal as lettered bullets `- a) ...`, so they can be referred to as `P24 a`.
 Run `make check` (`bin/checkdocs`) after editing docs.
 Docs must contain only actual, current information.
 Do not keep legacy or historical information in docs.

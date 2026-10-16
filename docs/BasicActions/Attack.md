@@ -10,6 +10,7 @@ scope: core
 	1. At least one direct participant is a [[Military]] [[Actor]]
 	2. The target Star is within the direct participants' group [[Range]]
 	3. The source Star can be the target
+	4. The route obeys [[Pinning]]
 
 #### Notes
 

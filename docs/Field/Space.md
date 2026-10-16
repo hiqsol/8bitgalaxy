@@ -12,7 +12,7 @@ aliases: [InterStellar Space]
 	3. Each segment is separate: explored and passed on its own, so two Stars are linked by 2 routes
 	4. A segment connects to the Stars it borders and to the next segments along the edges
 4. Space sectors are hidden (turned face down) at the beginning of the game
-5. Sectors can be revealed with [[Explore]] or [[Recon]] action
+5. Sectors can be revealed with [[Explore]] or [[Spy]] action
 6. Cards can't stop and stay in space, they can only pass by
 	1. Cards can't pass a hidden **Space**
 7. **Space** segments have multiple properties:

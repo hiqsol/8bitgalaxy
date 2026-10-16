@@ -14,3 +14,4 @@ scope: core
     1. [[Range]] of the group is minimum of the ranges of the direct participants
 6. Moving [[Actor]]s are not depleted after **Move**, see [[Deplete]]
 7. Moving cards keep their [[End]], only [[Manage]] rotates it
+8. The route obeys [[Pinning]]
