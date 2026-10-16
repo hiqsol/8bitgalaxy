@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Star** is [[Field]] segment 
+1. **Star** is a [[Field]] segment
 2. **Star** represents star system with planets
 3. **Star** contains [[IPS]] - Interplanetary Space
 4. **Stars** are hidden (turned face down) at the beginning of the game, except home Stars

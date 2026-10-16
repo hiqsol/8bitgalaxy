@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Range** is implicit card property
+1. **Range** is implicit card [[Property]] derived from [[Level]] and [[Type]]
 2. **Range** is the [[Distance]] card can cover
 3. Mobility types:
 	1. Moving - can move on itself, **Range** > 0: [[Ship]], [[Hero]]

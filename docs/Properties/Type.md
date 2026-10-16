@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Type** is implicit card [[Property]]
+1. **Type** is explicit card [[Property]]
 2. List:
 	1. [[Ship]]
 	2. [[Hero]]

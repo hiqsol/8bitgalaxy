@@ -3,13 +3,13 @@ status: draft
 scope: core
 ---
 
-1. **Explore** is [[TechnologyAction]]
+1. **Explore** is [[Science]] [[TechnologyAction]]
 2. **Explore** opens one target to the acting player:
 	1. Hidden [[Space]]
 	2. Hidden [[Star]]
 	3. [[Hidden]] card
 3. **Direction**: [[Star]] to the target
-4. Requirements:
+4. **Requirements**:
 	1. Hidden segment borders the source [[Star]] or a revealed segment reachable within [[Range]]
 	2. Hidden card is in the source [[Star]] or in a Star reachable within [[Range]]
 5. **Cost**: the target's Cost of [[SciencePower]], for a card its [[Cost]]

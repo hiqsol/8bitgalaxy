@@ -3,12 +3,13 @@ status: draft
 scope: core
 ---
 
-1. **Depleted** [[Structure]] is:
+1. **Depleted** is a [[Structure]] [[State]]
+2. **Depleted** [[Structure]] is:
 	1. Front [[Side]] up
 	2. Weak [[End]] up
-2. [[Structure]] cards become **depleted** after [[Deplete]]
-3. **Depleted** structure still participates with its weak [[End]]: its [[Level]] and [[PrimaryAbility]], no [[SecondaryAbility]]
-4. [[Restore]] makes it [[Ready]]: with [[Manage]] or 1 free at the end of own [[Turn]]
+3. [[Structure]] cards become **depleted** after [[Deplete]]
+4. **Depleted** structure still participates with its weak [[End]]: its [[Level]] and [[PrimaryAbility]], no [[SecondaryAbility]]
+5. [[Restore]] makes it [[Ready]]: with [[Manage]] or 1 free at the end of own [[Turn]]
 
 #### Notes
 

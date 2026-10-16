@@ -69,6 +69,8 @@ Answer proposals by number and letter, e.g. "P41 a, f", "P60 b, h".
 	- d) Naming: [[AttackPower]] → `MilitaryPower`, like the other three powers.
 	- e) Naming: [[Militarization]] is managing enemy cards: `Sabotage` fits better, its Defense part is a [[Plus]].
 	- f) [[Card]] doesn't list Stars and Spaces, though P36 makes Stars a deck.
+	- g) [[Combat]] 9: a [[Military]] defender adds its [[AttackPower]], but [[Defense]] is the combat power of a defending card, its [[Level]] for Military: which one counts?
+	- h) [[Deck]]: [[Plus]] Defense of [[Militarization]] cards raised the default Defense 1 to the end's [[Level]], now Military Defense is Level by default: drop it?
 - [ ] **I76. Academy attack details** ([[Combat]] 2.3):
 	- a) [[Reserve]] is face down: the attacker picks blindly or takes from the top?
 	- b) [[Hand]] is hidden: picked blindly, or by name after [[Spy]]?

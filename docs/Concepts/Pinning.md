@@ -8,6 +8,7 @@ scope: core
 	2. The rival can allow the group to pass
 2. **Pinning** applies to every route through Stars: [[Move]], [[Transport]], [[Attack]]
 3. [[Hidden]] cards neither pin nor get pinned
+4. A player can reveal own [[Hidden]] cards in a Star a rival group is passing: revealed [[Military]] [[Actor]]s pin it
 
 #### Notes
 

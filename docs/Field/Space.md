@@ -4,7 +4,7 @@ scope: core
 aliases: [InterStellar Space]
 ---
 
-1. **Space** is [[Field]] segment
+1. **Space** is a [[Field]] segment
 2. **Space** represents Interstellar Space and separates [[Star]] from each other
 3. Each [[Star]] side has 2 **Space** segments, so a Star has 12, named by o'clock bearing:
 	1. 1-2 upper right side, 3-4 right, 5-6 lower right, 7-8 lower left, 9-10 left, 11-12 upper left
@@ -23,6 +23,7 @@ aliases: [InterStellar Space]
 	1. Normal
 	2. [[Asteroids]]
 	3. Nebula
-	4. Black hole 
+	4. Black hole
 	5. [[Void]]
 	6. [[Supernova]]
+	7. [[HyperPass]]

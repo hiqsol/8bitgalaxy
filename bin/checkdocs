@@ -27,6 +27,20 @@ KEYS = {'status', 'scope', 'aliases', 'date', 'updated'}
 CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
 TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers')
 TECH_BASES = {'TechnologyAction', 'TechnologyModifier'}
+KIND_TECH = {'Action': 'TechnologyAction', 'Modifier': 'TechnologyModifier', 'Facility': 'BuildingFacility'}
+# folder: kind pages the first rule links
+KINDS = {
+    'BasicActions': {'BasicAction'},
+    'TechnologyActions': {'TechnologyAction'},
+    'TechnologyModifiers': {'TechnologyModifier', 'BuildingFacility'},
+    'Cards': {'Type'},
+    'Properties': {'Property', 'Trait'},
+    'Resources': {'Resource', 'Power'},
+    'States': {'State'},
+    'Types': {'Class', 'Origin', 'Role'},
+    'Home': {'Home'},
+}
+KIND_PAGES = {'BasicAction', 'TechnologyAction', 'TechnologyModifier', 'Card', 'Deck', 'Property', 'Resource', 'State', 'Home'}
 CLASS_TECH = re.compile(r'\[\[(%s)\]\] technolog|technology Level' % '|'.join(CLASSES.values()))
 
 problems = []
@@ -64,6 +78,36 @@ def links(element):
     return [a.get('href') for a in element.iter('a')]
 
 
+def top_rules(page):
+    """Top-level numbered rules, each without its nested lists."""
+    ol = page.tree.find('ol')
+    result = []
+    for li in [] if ol is None else ol.findall('li'):
+        rule = ET.Element('li')
+        rule.text = li.text
+        rule.extend(child for child in li if child.tag not in ('ol', 'ul'))
+        result.append(rule)
+    return result
+
+
+def check_templates(pages):
+    for page in pages.values():
+        folder = page.path.parent.name
+        if folder not in KINDS or page.path.stem in KIND_PAGES or page.meta.get('status') == 'stub':
+            continue
+        rules = top_rules(page)
+        if not rules or not KINDS[folder] & set(links(rules[0])):
+            report(page.path, f'first rule must link {" or ".join(sorted(KINDS[folder]))}')
+        if folder == 'Cards':
+            role = next((r for r in rules if text(r).startswith('Role =')), None)
+            need = ['Role =', 'Origin =']
+            if role is not None and {'Unit', 'Actor', 'Structure'} & set(links(role)):
+                need += ['Range =', 'Size =', 'Capacity =']
+            for prefix in need:
+                if not any(text(r).startswith(prefix) for r in rules):
+                    report(page.path, f'card type needs a rule "{prefix} ..."')
+
+
 def check_page(page, statuses, scopes):
     for key in page.meta.keys() - KEYS:
         report(page.path, f'unknown frontmatter key: {key}')
@@ -99,6 +143,12 @@ def check_technologies(pages):
         page = pages.get(tech)
         if page and page.meta.get('scope') != scope:
             report(catalog.path, f'{tech} scope {scope}, its page says {page.meta.get("scope")}')
+        first = top_rules(page)[:1] if page else []
+        if first:
+            named = set(links(first[0]))
+            want = set() if cls == 'TBD' else {CLASSES[c.strip()] for c in cls.split(',')}
+            if KIND_TECH[kind] not in named or named & set(CLASSES.values()) != want:
+                report(page.path, f'first rule must name {cls} {KIND_TECH[kind]}, as in [[Technology]]')
 
         listed = set()
         for item in (c.strip() for c in cards.split(',')):
@@ -137,6 +187,7 @@ def main():
     for page in pages.values():
         check_page(page, statuses, scopes)
     check_technologies(pages)
+    check_templates(pages)
 
     for line in problems:
         print(line)

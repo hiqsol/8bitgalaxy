@@ -3,7 +3,8 @@ status: draft
 scope: core
 ---
 
-1. Card is **active for** faction when:
+1. **Active for** is a card [[State]] relative to a [[Faction]]
+2. Card is **active for** faction when:
 	1. It is not [[Damaged]]
 	2. It is [[ControlledBy]] player
 

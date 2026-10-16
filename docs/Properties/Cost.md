@@ -3,6 +3,6 @@ status: draft
 scope: core
 ---
 
-1. **Cost** is implicit card [[Property]]
+1. **Cost** is implicit card [[Property]] derived from [[Level]] and [[ExtraCost]]
 2. The cost of production or upgrade
 3. **Cost** = strong [[End]] [[Level]] + its [[ExtraCost]]

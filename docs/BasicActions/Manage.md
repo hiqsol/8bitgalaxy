@@ -3,7 +3,8 @@ status: draft
 scope: core
 ---
 
-1. **Manage** action allows to perform manipulation over cards:
+1. **Manage** is [[BasicAction]] of any [[Class]], within the table below
+2. **Manage** allows to manipulate cards:
 	1. **Rotate** ([[End]]):
 		1. [[Structure]] to strong end - [[Restore]]
 		2. [[Structure]] to weak end - [[Deplete]]
@@ -13,8 +14,8 @@ scope: core
 			1. [[Action]] has to be directed to the [[Star]]
 		2. Between piles within [[Laboratory]] or [[Factory]] row
 			1. **Direction**: to corresponding [[BuildingFacility]]
-2. **Cost**: 1 resource per operation with card
-3. **Manage** action can be done with any power, but:
+3. **Cost**: 1 resource per operation with card
+4. **Manage** action can be done with any power, but:
 	1. only the type of power given by the **starter**, see [[PerformAction]]
 	2. with limitations, see table below
 

@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Basic actions** are available at any time, don't require a [[Technology]]
+1. **Basic action** is an [[Action]] available at any time, it doesn't require a [[Technology]]
 2. List:
 	1. [[Move]] and [[Transport]]
 	2. [[Manage]]

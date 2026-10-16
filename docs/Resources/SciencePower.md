@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Science Power** is a type of [[Power]]
+1. **Science power** is [[Science]] [[Power]]
 2. Color - **blue**
 3. Used for:
 	1. [[Research]]

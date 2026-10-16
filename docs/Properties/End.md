@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **End** is one of two short edges of a card
+1. **End** is physical card [[Property]]: one of two short edges of a card
 2. The end that is **up** is the one pointing:
 	1. On [[Field]] - to the top of the [[Star]] the card is in
 	2. Elsewhere - away from the player

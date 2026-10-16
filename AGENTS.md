@@ -16,4 +16,20 @@ Delete obsolete information, resolved issues and resolved proposals.
 When a proposal is accepted, incorporate its result into the applicable rules before deleting the proposal.
 
 Keep rules and notes concise.
+Indent nested rules with tabs.
 Don't miss my input, organize it all into rules/notes.
+
+## Page templates
+
+Write a page like the best existing page of its kind:
+
+- Basic action: `docs/BasicActions/Attack.md`
+- Technology action: `docs/TechnologyActions/Upgrade.md`
+- Technology modifier: `docs/TechnologyModifiers/Stealth.md`
+- Card type: `docs/Cards/Ship.md`
+- Property: `docs/Properties/Range.md`
+- State: `docs/States/Damaged.md`
+- Power: `docs/Resources/AttackPower.md`
+- Class, Origin, Role: `docs/Types/Social.md`
+- Home pile: `docs/Home/Hand.md`
+- Space type: `docs/Field/Asteroids.md`

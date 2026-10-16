@@ -3,5 +3,5 @@ status: draft
 scope: advanced
 ---
 
-1. [[Space]] with asteroids.
-2. Allows [[Extract]] [[Materials]].
+1. **Asteroids** is a [[Space]] type
+2. **Asteroids** allow [[Extract]] of [[Materials]]

@@ -21,8 +21,13 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	1. [[Side]] and [[End]]
 	2. [[Faction]] - always visible
 	3. [[Class]]
-	4. [[Level]], which implies [[Capacity]], [[Range]] and [[Defense]]
-	5. [[ExtraCost]], which implies [[Cost]] and [[Size]]
+	4. [[Level]], which implies:
+		1. [[Capacity]], default is [[Level]] or 0 for [[Hero]]
+		2. [[Range]], default is [[Level]] or 0 for [[Structure]]
+		3. [[Defense]], default is [[Level]] or 1 for non-[[Military]]
+	5. [[ExtraCost]], which implies:
+		1. [[Cost]] = [[Level]] + [[ExtraCost]]
+		2. [[Size]] = [[Level]] + [[ExtraCost]]
 	6. [[Type]], which implies:
 		1. [[Role]]: [[Unit]] / [[Structure]] / [[Agenda]] - always visible
 		2. [[Origin]]: [[Social]] / [[Industrial]]
@@ -30,6 +35,10 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	8. [[SecondaryAbility]]
 	9. [[Trait]]
 	10. [[Prerequisites]]
+2. Kinds of properties:
+	1. **explicit** - printed on the card
+	2. **implicit** - derived from other properties
+	3. **physical** - [[Side]] and [[End]]
 
 #### Notes
 

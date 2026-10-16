@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Shuffle** is part of [[DeckBuilding]] mechanic 
+1. **Shuffle** is part of [[DeckBuilding]] mechanic
 2. When player has to [[Draw]] a card and [[Reserve]] is empty:
 	1. Shuffle all cards from [[Discard]]
 	2. They form the new [[Reserve]]

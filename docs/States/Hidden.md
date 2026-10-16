@@ -3,20 +3,22 @@ status: draft
 scope: core
 ---
 
-1. **Hidden** card is:
+1. **Hidden** is a card [[State]]
+2. **Hidden** card is:
 	1. Back [[Side]] up
 	2. Hidden [[End]] up
-2. Only the player of its [[Faction]] knows a **hidden** card, others see only its [[Faction]] and [[Role]]
-3. **Hidden** card on [[Field]]:
+3. Only the player of its [[Faction]] knows a **hidden** card, others see only its [[Faction]] and [[Role]]
+4. **Hidden** card on [[Field]]:
 	1. Gives [[Control]] by its [[Role]]
 	2. Moves as a minimal [[Ship]]: [[Range]] 1, [[Capacity]] 1
 	3. Can be attacked
-4. **Hidden** card on [[Field]] is revealed:
+5. **Hidden** card on [[Field]] is revealed:
 	1. When attacked
 	2. When it takes part in any action other than [[Move]] or [[Transport]]
 	3. By its player at any time of own [[Turn]], for free
 	4. By rival's [[Explore]] or [[Spy]], if the rival chooses so
-5. In [[Combat]] parties bluff with **hidden** cards from [[Hand]]
+	5. By its player when a rival group passes its [[Star]], to pin the group, see [[Pinning]]
+6. In [[Combat]] parties bluff with **hidden** cards from [[Hand]]
 
 #### Notes
 

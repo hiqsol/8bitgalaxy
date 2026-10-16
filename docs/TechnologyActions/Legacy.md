@@ -3,7 +3,7 @@ status: draft
 scope: objectives
 ---
 
-1. **Legacy** is [[TechnologyAction]]
+1. **Legacy** is [[Culture]] [[TechnologyAction]]
 2. **Legacy** moves a card from [[Discard]] to the **History** pile in [[Home]]
 3. Cards in **History** are out of play, they count for [[Objective]]s
 

@@ -86,6 +86,5 @@ scope: core
 	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology, ends have different classes
 	2. [[Structure]]s: Primary is technology at both ends, Secondary is power at strong end only, both ends have the same class
 	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't change with rotation
-3. [[Plus]] Defense of [[Militarization]] cards raises [[Defense]] to the end's [[Level]]
-4. Technology classes and scopes are in [[Technology]]
-5. Unclear technology from the legacy code: `allacad`
+3. Technology classes and scopes are in [[Technology]]
+4. Unclear technology from the legacy code: `allacad`

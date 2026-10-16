@@ -9,7 +9,7 @@ scope: core
 	3. [[Hand]]
 	4. [[Factory]] piles row
 	5. [[Laboratory]] piles row
-	6. History pile, see [[Legacy]]
+	6. [[History]] pile
 2. [[Alien]] **home** consists of:
 	1. [[FutureEvents]] pile
 	2. [[CurrentEvents]] pile

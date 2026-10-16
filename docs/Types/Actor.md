@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Actor** is card [[Role]]
+1. **Actor** is a card [[Role]]
 2. **Actor** is subtype of [[Unit]] role
 3. **Actor** cards are played from [[Hand]]: [[Takeoff]] or start an [[Action]]
 4. List:

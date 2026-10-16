@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Deck Building** is well known game mechanic 
+1. **Deck Building** is well known game mechanic
 2. [[Actor]] cards are constantly moving in circle between 3 piles:
 	1. [[Discard]]
 	2. [[Reserve]]

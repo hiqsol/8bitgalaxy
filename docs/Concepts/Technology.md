@@ -11,7 +11,7 @@ scope: core
 3. The table below is the only catalog of technologies:
 	1. **Class** is the [[Class]] of the card [[End]]s that carry the technology
 	2. **Cards** lists the [[Deck]] cards and ends that carry it, their levels are in the [[Deck]]
-	3. Technology pages describe behavior only, without class and level
+	3. Technology pages name their kind and **Class** in the first rule, as in the table, and describe behavior, without level
 
 | Technology | Kind | Class | Scope | Cards |
 |------------|------|-------|-------|-------|

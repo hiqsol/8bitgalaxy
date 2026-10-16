@@ -3,14 +3,14 @@ status: draft
 scope: core
 ---
 
-1. **Transport** is basic action
-2. **Transport** action allows to [[Move]] **cargo** with [[Ship]]s
+1. **Transport** is [[BasicAction]] of any [[Class]], within the table below
+2. **Transport** allows to [[Move]] **cargo** with [[Ship]]s
 3. **Cargo** can be: cards, [[Materials]]
-4. Requirements:
-     1. [[Range]]
-     2. [[Capacity]]
+4. **Requirements**:
+	1. [[Range]]
+	2. [[Capacity]]
 5. Total [[Capacity]] of the group is sum of capacities of direct participants
-6. [[Hero]] can increase [[Capacity]] or [[Range]], but can't transport alone
+6. [[Hero]] can increase [[Range]], but can't transport: its [[Capacity]] is 0
 7. Type limitations in the table below
 8. Transported cards are cargo, not participants
 9. Moving direct participants and transported cards are not depleted after Transport

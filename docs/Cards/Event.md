@@ -4,11 +4,14 @@ scope: aliens
 ---
 
 1. **Event** is a card [[Type]]
-2. **Event** cards are played out in two steps:
+2. **Event** represents something that happens in the galaxy
+3. [[Role]] = [[Agenda]]
+4. [[Origin]] = none
+5. **Event** cards are played out in two steps:
 	1. Preparation - **event** card is put to [[FutureEvents]] pile
 	2. Evaluation - **event** card is revealed then its text is implemented
-3. The player resolving **event** has control over anything not explicitly stated in the event description.
-4. Event classes:
+6. The player resolving **event** has control over anything not explicitly stated in the event description.
+7. Event classes:
 	1. [[Military]] -  hostile for players from [[Alien]] - they breed, spread and attack
 	2. [[Culture]] - positive for players, related to growth
 	3. [[Production]] - positive for all, related to development
