@@ -1,7 +1,7 @@
 ---
-status: stub
+status: draft
 scope: core
 ---
 
-1. Increase range technology allows to [[Move]] and [[Transport]] further 
-2. [[Science]] technology Level ?
+1. **Plus Range** is [[TechnologyModifier]]
+2. **Plus Range +N** increases [[Range]] of the group in [[Move]] or [[Transport]] action by N

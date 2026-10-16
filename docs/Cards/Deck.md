@@ -24,14 +24,14 @@ scope: core
 |  | weak | 1+2 | P | 1 | +1 |  |
 | Ship 4M | strong | 4+1 | M | 2 | [[Smuggle]] | 1C, 2M |
 |  | weak | 3+2 | C | 2 | +1 |  |
-| Ship 4C | strong | 4+1 | C | 2 | improve | 1M, 2C |
+| Ship 4C | strong | 4+1 | C | 2 | [[Upgrade]] | 1M, 2C |
 |  | weak | 3+2 | M | 2 | +1 |  |
 | Ship 4P | strong | 4+1 | P | 2 | [[Upgrade]] | 1S, 2P |
 |  | weak | 3+2 | S | 2 | +1 |  |
 | Ship 4S | strong | 4+1 | S | 2 | [[Exhaust]] | 1P, 2S |
 |  | weak | 3+2 | P | 2 | +1 |  |
 | Hero 1M | strong | 1+1 | M | 1 | [[Recon]] | - |
-|  | weak | 1+1 | C | 1 | improve |  |
+|  | weak | 1+1 | C | 1 | [[Upgrade]] |  |
 | Hero 1P | strong | 1+1 | P | 1 | [[Recover]] | - |
 |  | weak | 1+1 | S | 1 | [[Recycle]] |  |
 | Hero 2M | strong | 2+1 | M | 2 | [[Recon]] | - |
@@ -40,11 +40,11 @@ scope: core
 |  | weak | 2+1 | P | 2 | [[Upgrade]] |  |
 | Hero 3M | strong | 3+1 | M | 2 | [[Stealth]] | 1M, 1P |
 |  | weak | 3+1 | P | 2 | [[Upgrade]] |  |
-| Hero 3C | strong | 3+1 | C | 2 | improve | 1C, 1S |
+| Hero 3C | strong | 3+1 | C | 2 | [[Upgrade]] | 1C, 1S |
 |  | weak | 3+1 | S | 2 | [[Navigation]] |  |
 | Hero 4M | strong | 4+1 | M | 3 | [[Stealth]] | 2M, 2P |
 |  | weak | 4+1 | P | 3 | [[Recover]], [[Upgrade]] |  |
-| Hero 4C | strong | 4+1 | C | 3 | [[Recover]], improve | 2C, 2S |
+| Hero 4C | strong | 4+1 | C | 3 | [[Recover]], [[Upgrade]] | 2C, 2S |
 |  | weak | 4+1 | S | 3 | [[Navigation]] |  |
 | Base 2M | strong | 2+1 | M | [[Militarization]] | +1 | - |
 |  | weak | 1+1 | M | [[Militarization]] | - |  |
@@ -58,8 +58,8 @@ scope: core
 |  | weak | 3+1 | M | [[Stealth]] | - |  |
 | Base 4C | strong | 4+1 | C | allacad | +3 | 2C |
 |  | weak | 3+1 | C | allacad | - |  |
-| Base 4P | strong | 4+1 | P | [[PlusLoad]] ×3 | +3 | 2P |
-|  | weak | 3+1 | P | [[PlusLoad]] | - |  |
+| Base 4P | strong | 4+1 | P | [[PlusLoad]] +3 | +3 | 2P |
+|  | weak | 3+1 | P | [[PlusLoad]] +1 | - |  |
 | Base 4S | strong | 4+1 | S | [[Navigation]] | +3 | 2S |
 |  | weak | 3+1 | S | [[Navigation]] | - |  |
 | Colony 2M | strong | 2+1 | M | [[Recon]] | +2 | - |
@@ -76,8 +76,8 @@ scope: core
 |  | weak | 3+1 | C | [[Export]] | - |  |
 | Colony 4P | strong | 4+1 | P | [[Recover]], [[Shipyard]] | +3 | 2P |
 |  | weak | 3+1 | P | [[Recover]], [[Shipyard]] | - |  |
-| Colony 4S | strong | 4+1 | S | [[PlusRange]] ×3 | +3 | 2S |
-|  | weak | 3+1 | S | [[PlusRange]] | - |  |
+| Colony 4S | strong | 4+1 | S | [[PlusRange]] +3 | +3 | 2S |
+|  | weak | 3+1 | S | [[PlusRange]] +1 | - |  |
 
 #### Notes
 
@@ -86,4 +86,6 @@ scope: core
 	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology, ends have different classes
 	2. [[Structure]]s: Primary is technology at both ends, Secondary is power at strong end only, both ends have the same class
 	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't change with rotation
-3. Unclear technology names from the legacy code: `improve`, `allacad`, `×3` for [[PlusLoad]] and [[PlusRange]]
+3. [[PlusLoad]] and [[PlusRange]] show their amount: `+3` at strong end, `+1` at weak end
+4. Technology classes and scopes are in [[Technology]]
+5. Unclear technology from the legacy code: `allacad`

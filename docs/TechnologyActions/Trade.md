@@ -3,7 +3,7 @@ status: draft
 scope: advanced
 ---
 
-1. **Trade** is [[Culture]] technology Level 2
+1. **Trade** is [[TechnologyAction]]
 2. **Trade** action allows to acquire [[Materials]]
 3. **Direction**:
     1. From [[Star]] with colony

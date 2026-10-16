@@ -4,5 +4,5 @@ scope: core
 aliases: [Draw More]
 ---
 
-1. **Draw More** is [[Military]] technology modifier Level 3
-2. **Draw More** allows to [[Draw]] one card from [[Reserve]] to [[Hand]] when used in an action
+1. **Plus Draw** is [[TechnologyModifier]]
+2. **Plus Draw** allows to [[Draw]] one card from [[Reserve]] to [[Hand]] when used in an action

@@ -4,7 +4,7 @@ scope: core
 aliases: [Repair, Heal, Fix]
 ---
 
-1. **Recover** is [[Culture]]/[[Production]] technology Level 1
+1. **Recover** is [[TechnologyAction]] of [[BuildingFacility]]
 2. Flavour names:
 	1. **Heal** for [[Social]]
 	2. **Fix** for [[Industrial]]

@@ -4,7 +4,7 @@ scope: core
 aliases: [Enhance, Grow]
 ---
 
-1. **Upgrade** is [[Culture]]/[[Production]] technology Level 1
+1. **Upgrade** is [[TechnologyAction]] of [[BuildingFacility]]
 2. Flavour names:
 	1. **Grow** for [[Social]]
 	2. **Enhance** for [[Industrial]]

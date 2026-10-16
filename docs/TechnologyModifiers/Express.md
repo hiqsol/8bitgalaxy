@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Express** is [[Culture]] technology modifier, level TBD
+1. **Express** is [[TechnologyModifier]]
 2. **Express** makes [[Create]] put new [[Actor]] cards on top of [[Reserve]] instead of [[Discard]]
 
 #### Notes

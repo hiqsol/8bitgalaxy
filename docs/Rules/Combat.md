@@ -18,11 +18,15 @@ scope: core
 6. Parties can add resources with cards:
 	1. At the moment when they add card, not later.
 	2. Not more than card's [[Capacity]]
-7. Defending players can add non-[[Military]] cards. Their combat power is their defense = 1
+7. Defending players can add non-[[Military]] cards
 8. At following rounds parties continue to pass or add more participants and supporters
-9. After all parties have passed reveal hidden cards, count total powers and determine winner
+9. After all parties have passed reveal hidden cards, count total powers and determine winner:
+	1. Each card adds its [[AttackPower]]
+	2. A non-[[Military]] defender adds its [[Defense]]
+	3. A tie goes to the defender
+	4. **Advantage** = winner total − loser total
 10. After action:
-	1. Winner can save from damage direct participants with total sum of levels less than his total combat power advantage
+	1. Winner can save from damage direct participants with total sum of levels **not more** than the advantage
 	2. All other direct participants become [[Damaged]].
 	3. If the attacker wins, their surviving attacking [[Unit]]s move to free [[Slot]]s of the destination [[Star]], keeping their [[End]]. Units that don't fit stay in the source.
 	4. [[Deplete]] supporters
