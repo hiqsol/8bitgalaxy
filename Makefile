@@ -1,7 +1,12 @@
-.PHONY: upgit docs
+.PHONY: upgit docs check
+
+UWIKI ?= $(HOME)/prj/hiqsol/uwiki/src/uwiki.py
+export UWIKI
 
 upgit:
 	rm -rf  ~/prj/Sync/8bitgalaxy/.git
 	cp -r ~/prj/hiqsol/8bitgalaxy/.git .git
 docs:
-	uwiki docs
+	$(UWIKI) docs
+check:
+	bin/checkdocs

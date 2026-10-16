@@ -7,6 +7,7 @@ Every page has:
 - notes
 
 Docs include rules, notes and reviews.
+Run `make check` (`bin/checkdocs`) after editing docs.
 Docs must contain only actual, current information.
 Do not keep legacy or historical information in docs.
 Delete obsolete information, resolved issues and resolved proposals.

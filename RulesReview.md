@@ -76,4 +76,3 @@ Answer proposals by number, e.g. "P22 yes", "P23 no".
 ### Ideas
 
 - [ ] **AI playtesting.** Export all `scope: core` notes into one file and run AI-vs-AI duels to find holes in the rules.
-- [ ] **Docs checker.** A script that checks required frontmatter, allowed statuses and scopes, unresolved wiki links, numbered rules, and duplicate technology assignments outside [[Technology]].

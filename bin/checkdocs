@@ -1,0 +1,148 @@
+#!/usr/bin/env python3
+"""Check the docs wiki: generic checks by uwiki, then frontmatter, numbered rules, technology catalog.
+
+Usage: bin/checkdocs  (exits 1 on problems; UWIKI env var points to uwiki.py, default: uwiki on PATH)
+Needs the markdown package, same as uwiki.
+"""
+
+import os
+import re
+import shutil
+import sys
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+try:
+    import markdown
+except ImportError:
+    sys.exit('markdown not found: pip3 install markdown')
+
+ROOT = Path(__file__).resolve().parent.parent
+PATHS = ['docs', 'ideas', 'RulesReview.md']
+FILES = sorted(f for p in PATHS for f in ([ROOT / p] if p.endswith('.md') else (ROOT / p).glob('**/*.md')))
+UWIKI = os.environ.get('UWIKI') or shutil.which('uwiki') or sys.exit('uwiki not found, set UWIKI to uwiki.py path')
+sys.path.insert(0, os.path.dirname(os.path.realpath(UWIKI)))
+import uwiki  # noqa: E402
+KEYS = {'status', 'scope', 'aliases', 'date', 'updated'}
+CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
+TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers')
+TECH_BASES = {'TechnologyAction', 'TechnologyModifier'}
+CLASS_TECH = re.compile(r'\[\[(%s)\]\] technolog|technology Level' % '|'.join(CLASSES.values()))
+
+problems = []
+
+
+def report(path, msg):
+    problems.append(f'{path.relative_to(ROOT)}: {msg}')
+
+
+class Page:
+    def __init__(self, path):
+        md = markdown.Markdown(extensions=['meta', 'tables', 'wikilinks'],
+                               extension_configs={'wikilinks': {'build_url': lambda label, base, end: label}})
+        self.path = path
+        self.text = path.read_text()
+        self.tree = ET.fromstring(f'<div>{md.convert(self.text)}</div>')
+        self.meta = {k: ' '.join(v) for k, v in md.Meta.items()}
+
+    def table(self):
+        """Rows of the first table as lists of cells, without header."""
+        return [list(tr) for tr in self.tree.iter('tr')][1:]
+
+    def section(self, heading):
+        """Code values of the list under a heading."""
+        children = list(self.tree)
+        start = next(i for i, e in enumerate(children) if ''.join(e.itertext()) == heading)
+        return {c.text for c in next(e for e in children[start:] if e.tag == 'ol').iter('code')}
+
+
+def text(element):
+    return ''.join(element.itertext()).strip()
+
+
+def links(element):
+    return [a.get('href') for a in element.iter('a')]
+
+
+def check_page(page, statuses, scopes):
+    for key in page.meta.keys() - KEYS:
+        report(page.path, f'unknown frontmatter key: {key}')
+    for key, allowed in (('status', statuses), ('scope', scopes)):
+        if page.meta.get(key) not in allowed:
+            report(page.path, f'{key} not in docs/index.md: {page.meta.get(key)}')
+    if page.meta.get('scope') != 'meta' and page.meta.get('status') != 'stub' and page.tree.find('ol') is None:
+        report(page.path, 'no numbered rules')
+
+
+def deck_assignments(deck):
+    """Map technology -> {(card, end): class} from the Deck table."""
+    result, card = {}, None
+    for row in deck.table():
+        card = text(row[0]) or card
+        for tech in links(row[4]) + links(row[5]):
+            result.setdefault(tech, {})[(card, text(row[1]))] = text(row[3])
+    return result
+
+
+def check_technologies(pages):
+    catalog, deck = pages['Technology'], pages['Deck']
+    assigned = deck_assignments(deck)
+    # BuildingFacility actions (Create) are technologies via the facility
+    cataloged = set(links(pages['BuildingFacility'].tree))
+
+    for row in catalog.table():
+        if not links(row[0]):
+            continue  # unnamed placeholders like `allacad`
+        tech, kind, cls, scope, cards = text(row[0]), *map(text, row[1:])
+        cataloged.add(tech)
+
+        page = pages.get(tech)
+        if page and page.meta.get('scope') != scope:
+            report(catalog.path, f'{tech} scope {scope}, its page says {page.meta.get("scope")}')
+
+        listed = set()
+        for item in (c.strip() for c in cards.split(',')):
+            card, _, end = item.rpartition(' ')
+            if end in ('strong', 'weak'):
+                listed.add((card, end))
+            elif item != '-':
+                listed |= {(item, 'strong'), (item, 'weak')}
+        actual = assigned.pop(tech, {})
+        for card, end in sorted(listed - actual.keys()):
+            report(catalog.path, f'{tech}: {card} {end} not in Deck')
+        for card, end in sorted(actual.keys() - listed):
+            report(catalog.path, f'{tech}: missing {card} {end} from Deck')
+
+        used = set(actual.values())
+        if actual and cls != 'TBD' and {c.strip() for c in cls.split(',')} != used:
+            report(catalog.path, f'{tech} class {cls}, Deck ends are {", ".join(sorted(used))}')
+
+    for tech in sorted(assigned):
+        report(deck.path, f'technology not in Technology table: {tech}')
+
+    for page in pages.values():
+        if page not in (catalog, deck) and CLASS_TECH.search(page.text):
+            report(page.path, 'technology class or level belongs in [[Technology]] only')
+        if page.path.parent.name in TECH_DIRS and page.path.stem not in TECH_BASES | cataloged:
+            report(page.path, 'technology missing from [[Technology]] table')
+
+
+def main():
+    os.chdir(ROOT)
+    problems.extend(uwiki.Checker(PATHS).check())  # links, images, frontmatter syntax, list numbering
+    pages = {path.stem: Page(path) for path in FILES}
+    statuses = pages['index'].section('Status')
+    scopes = pages['index'].section('Scopes')
+
+    for page in pages.values():
+        check_page(page, statuses, scopes)
+    check_technologies(pages)
+
+    for line in problems:
+        print(line)
+    print(f'{len(FILES)} pages, {len(problems)} problems', file=sys.stderr)
+    return 1 if problems else 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())
