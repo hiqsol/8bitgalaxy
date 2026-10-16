@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Technology** is an [[Ability]]
+1. **Technology** is a kind of [[Ability]]: a named rule
 2. **Technologies** come in three flavours:
 	1. [[TechnologyAction]] allows to perform non-basic actions
 	2. [[TechnologyModifier]] modify actions for better
@@ -21,8 +21,6 @@ scope: core
 | [[Recover]] | Action | C, P | core | Hero 1P strong, Hero 2C strong, Hero 4M weak, Hero 4C strong, Colony 4P |
 | [[Retreat]] | Modifier | M | core | Ship 2M strong |
 | [[Explore]] | Action | S | core | Ship 2S strong, Colony 2S |
-| [[PlusRange]] | Modifier | S | core | Colony 4S |
-| [[PlusDraw]] | Modifier | TBD | core | - |
 | [[Express]] | Modifier | C | core | - |
 | [[ForceDiscard]] | Modifier | M | core | - |
 | [[Recon]] | Action | M | core | Hero 1M strong, Hero 2M strong, Colony 2M |
@@ -34,7 +32,6 @@ scope: core
 | [[Export]] | Action | C | advanced | Colony 4C |
 | `allacad` | TBD | C | TBD | Base 4C |
 | [[Extract]] | Action | P | advanced | Ship 2P strong, Colony 2P |
-| [[PlusLoad]] | Modifier | P | advanced | Base 4P |
 | [[Recycle]] | Action | S | advanced | Hero 1P weak, Hero 2M weak, Base 2S |
 | [[Exhaust]] | Modifier | S | advanced | Ship 4S strong |
 | [[DoNotDeplete]] | Modifier | C | advanced | - |
@@ -51,4 +48,4 @@ scope: core
 #### Notes
 
 1. Technologies without cards are planned, they need cards to be playable
-2. Design idea: stronger technologies sit on higher levels, the maximal ones (like [[PlusDraw]]) on the highest [[Hero]]es
+2. Design idea: stronger technologies sit on higher levels, the maximal ones on the highest [[Hero]]es

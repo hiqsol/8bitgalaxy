@@ -9,4 +9,4 @@ scope: core
 		1. [[Power]]
 	2. Stockable:
 		1. [[Materials]]
-		2. [[Money]]
+		2. [[Energy]]

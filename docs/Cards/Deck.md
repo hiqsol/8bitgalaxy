@@ -7,8 +7,8 @@ scope: core
 2. Columns:
 	1. **Level** - [[Level]] + [[ExtraCost]], as printed on the card
 	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P [[Production]], S [[Science]]
-	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class or [[Technology]]
-	4. **Secondary** - [[SecondaryAbility]]: added power `+N` or [[Technology]]
+	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class, other [[Plus]] or [[Technology]]
+	4. **Secondary** - [[SecondaryAbility]]: [[Plus]] power `+N` or [[Technology]]
 	5. **Prerequisites** - [[Prerequisites]] as level and class pairs, same for both ends
 3. Card name is [[Type]] with strong end level and class
 
@@ -46,7 +46,7 @@ scope: core
 |  | weak | 4+1 | P | 3 | [[Recover]], [[Upgrade]] |  |
 | Hero 4C | strong | 4+1 | C | 3 | [[Recover]], [[Upgrade]] | 2C, 2S |
 |  | weak | 4+1 | S | 3 | [[Navigation]] |  |
-| Base 2M | strong | 2+1 | M | [[Militarization]] | +1 | - |
+| Base 2M | strong | 2+1 | M | [[Militarization]], +1 Defense | +1 | - |
 |  | weak | 1+1 | M | [[Militarization]] | - |  |
 | Base 2C | strong | 2+1 | C | [[Trade]] | +1 | - |
 |  | weak | 1+1 | C | [[Trade]] | - |  |
@@ -58,8 +58,8 @@ scope: core
 |  | weak | 3+1 | M | [[Stealth]] | - |  |
 | Base 4C | strong | 4+1 | C | allacad | +3 | 2C |
 |  | weak | 3+1 | C | allacad | - |  |
-| Base 4P | strong | 4+1 | P | [[PlusLoad]] +3 | +3 | 2P |
-|  | weak | 3+1 | P | [[PlusLoad]] +1 | - |  |
+| Base 4P | strong | 4+1 | P | +3 Capacity | +3 | 2P |
+|  | weak | 3+1 | P | +1 Capacity | - |  |
 | Base 4S | strong | 4+1 | S | [[Navigation]] | +3 | 2S |
 |  | weak | 3+1 | S | [[Navigation]] | - |  |
 | Colony 2M | strong | 2+1 | M | [[Recon]] | +2 | - |
@@ -70,14 +70,14 @@ scope: core
 |  | weak | 1+1 | P | [[Extract]] | - |  |
 | Colony 2S | strong | 2+1 | S | [[Explore]] | +2 | - |
 |  | weak | 1+1 | S | [[Explore]] | - |  |
-| Colony 4M | strong | 4+1 | M | [[Militarization]] | +3 | 2M |
-|  | weak | 3+1 | M | [[Militarization]] | - |  |
+| Colony 4M | strong | 4+1 | M | [[Militarization]], +3 Defense | +3 | 2M |
+|  | weak | 3+1 | M | [[Militarization]], +2 Defense | - |  |
 | Colony 4C | strong | 4+1 | C | [[Export]] | +3 | 2C |
 |  | weak | 3+1 | C | [[Export]] | - |  |
 | Colony 4P | strong | 4+1 | P | [[Recover]], [[Shipyard]] | +3 | 2P |
 |  | weak | 3+1 | P | [[Recover]], [[Shipyard]] | - |  |
-| Colony 4S | strong | 4+1 | S | [[PlusRange]] +3 | +3 | 2S |
-|  | weak | 3+1 | S | [[PlusRange]] +1 | - |  |
+| Colony 4S | strong | 4+1 | S | +3 Range | +3 | 2S |
+|  | weak | 3+1 | S | +1 Range | - |  |
 
 #### Notes
 
@@ -86,6 +86,6 @@ scope: core
 	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology, ends have different classes
 	2. [[Structure]]s: Primary is technology at both ends, Secondary is power at strong end only, both ends have the same class
 	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't change with rotation
-3. [[PlusLoad]] and [[PlusRange]] show their amount: `+3` at strong end, `+1` at weak end
+3. [[Plus]] Defense of [[Militarization]] cards raises [[Defense]] to the end's [[Level]]
 4. Technology classes and scopes are in [[Technology]]
 5. Unclear technology from the legacy code: `allacad`

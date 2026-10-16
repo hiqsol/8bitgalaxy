@@ -28,7 +28,7 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 		2. [[Origin]]: [[Social]] / [[Industrial]]
 	7. [[PrimaryAbility]]
 	8. [[SecondaryAbility]]
-	9. [[AdditionalAbility]]
+	9. [[Trait]]
 	10. [[Prerequisites]]
 
 #### Notes

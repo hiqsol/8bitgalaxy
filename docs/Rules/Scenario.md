@@ -17,7 +17,7 @@ scope: core
 	2. [[Field]]: 7 Stars in rows of 2, 3 and 2: `00 01`, `10 11 12`, `20 21`
 	3. Home Stars in opposite corners: `00` and `21`
 	4. Every [[Space]] has length 1
-	5. Home [[Star]]s: [[Ability]] gives 1 [[Money]]. Other Stars: hidden, from the Star deck
+	5. Home [[Star]]s: [[Ability]] gives 1 [[Energy]]. Other Stars: hidden, from the Star deck
 	6. Setup: [[StartDraw]]
 	7. Field schematic: hex is a [[Star]], `[ ]` home Star, each side has 2 [[Space]] segments, one per symbol:
 ```

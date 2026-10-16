@@ -1,0 +1,24 @@
+---
+status: draft
+scope: core
+---
+
+1. **Plus** is a kind of [[Ability]]: a number, shown as `+N`
+2. **Plus** of all participants sums up
+3. **Plus** can add:
+	1. [[Power]] - plain `+N` is power of the end's [[Class]]
+	2. [[Materials]]
+	3. [[Energy]]
+	4. [[Defense]]
+	5. [[Range]] - to the group in [[Move]] or [[Transport]]
+	6. [[Capacity]] - to the total in [[Transport]]
+	7. [[Draw]] - cards from [[Reserve]] to [[Hand]] when used in an action
+	8. [[Slot]]s - free slots in a [[Star]]
+	9. [[Hand]] size
+	10. [[Restore]] - cards that become [[Ready]] each [[Turn]]
+	11. Victory points for [[Objective]]s
+	12. Votes for [[Politics]]
+
+#### Notes
+
+1. More kinds of **plus** can be added later
