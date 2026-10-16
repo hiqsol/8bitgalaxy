@@ -18,6 +18,23 @@ scope: core
 	3. Home Stars in opposite corners: `00` and `21`
 	4. Every [[Space]] has length 1
 	5. Setup: [[StartDraw]]
+	6. Field schematic: hex is a [[Star]], `[ ]` home Star, each side has 2 [[Space]] segments, one per symbol:
+		```
+		     ╱ ╲   ╱ ╲
+		    ╱   ╲ ╱   ╲
+		   │[00] │ 01  │
+		   │     │     │
+		  ╱ ╲   ╱ ╲   ╱ ╲
+		 ╱   ╲ ╱   ╲ ╱   ╲
+		│ 10  │ 11  │ 12  │
+		│     │     │     │
+		 ╲   ╱ ╲   ╱ ╲   ╱
+		  ╲ ╱   ╲ ╱   ╲ ╱
+		   │ 20  │[21] │
+		   │     │     │
+		    ╲   ╱ ╲   ╱
+		     ╲ ╱   ╲ ╱
+		```
 
 #### Notes
 

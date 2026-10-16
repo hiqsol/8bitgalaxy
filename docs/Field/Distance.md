@@ -4,7 +4,7 @@ scope: core
 ---
 
 1. **Distance** of a route is the sum of lengths of all its segments but the first one
-2. A route is a chain of [[Field]] segments, each sharing a common side with the next
+2. A route is a chain of [[Field]] segments, each connected to the next, see [[Space]]
 3. Segment lengths:
 	1. [[Star]] - 1
 	2. [[Space]] - its length property
