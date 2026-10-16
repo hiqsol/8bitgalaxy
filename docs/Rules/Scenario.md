@@ -19,7 +19,7 @@ scope: core
 	4. Every [[Space]] has length 1
 	5. Setup: [[StartDraw]]
 	6. Field schematic: hex is a [[Star]], `[ ]` home Star, each side has 2 [[Space]] segments, one per symbol:
-		```
+```
 		     ╱ ╲   ╱ ╲
 		    ╱   ╲ ╱   ╲
 		   │[00] │ 01  │
@@ -34,7 +34,7 @@ scope: core
 		   │     │     │
 		    ╲   ╱ ╲   ╱
 		     ╲ ╱   ╲ ╱
-		```
+```
 
 #### Notes
 
