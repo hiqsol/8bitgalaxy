@@ -24,7 +24,7 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	4. [[Level]], which implies [[Capacity]], [[Range]] and [[Defense]]
 	5. [[ExtraCost]], which implies [[Cost]] and [[Size]]
 	6. [[Type]], which implies:
-		1. [[Role]]: [[Unit]] / [[Structure]] - always visible
+		1. [[Role]]: [[Unit]] / [[Structure]] / [[Agenda]] - always visible
 		2. [[Origin]]: [[Social]] / [[Industrial]]
 	7. [[PrimaryAbility]]
 	8. [[SecondaryAbility]]

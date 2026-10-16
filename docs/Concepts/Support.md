@@ -6,7 +6,7 @@ scope: core
 1. **Support** is taking part in [[PerformAction]] from remote:
 	1. From [[Hand]], including the **starter** of the action, or
 	2. From remote (not source or destination) [[IPS]]
-2. **Supporters** add to action only one of their abilities:
+2. **Supporters** add to action only one [[Ability]]:
 	1. [[PrimaryAbility]]
 	2. [[SecondaryAbility]]
 	3. [[Range]]

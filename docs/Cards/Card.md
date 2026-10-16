@@ -10,10 +10,9 @@ scope: core
 	2. Non-actor cards:
 		1. [[Tool]]
 2. [[Structure]] cards:
-	1. On [[Field]]:
-		1. [[Colony]] - social
-		2. [[Base]] - industrial, technology
-		3. [[Hyperstructure]]
-	2. Off Field:
-		1. [[Event]]
-		2. [[Objective]]
+	1. [[Colony]] - social
+	2. [[Base]] - industrial, technology
+	3. [[Hyperstructure]]
+3. [[Agenda]] cards:
+	1. [[Event]]
+	2. [[Objective]]

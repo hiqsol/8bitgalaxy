@@ -17,7 +17,7 @@ scope: core
 			1. The **starter**
 			2. Selected cards in [[Hand]]
 			3. Selected cards [[ActiveFor]] player on [[Field]]
-	4. Participants **abilities**:
+	4. Participants [[Ability]]:
 		1. Including [[Technology]]
 	5. **Destination** - [[Star]] or [[Space]]
 2. **Direct participants** can use all of their abilities

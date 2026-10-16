@@ -10,4 +10,4 @@ scope: politics
 #### Notes
 
 1. Deals work through deck building itself
-2. Details TBD: what the card gives to each side, when it returns to the owner
+2. Details TBD: what the card gives to each side, when it returns to its [[Faction]]

@@ -12,7 +12,7 @@ scope: core
 		3. [[Manage]]
 		4. [[Research]]
 		5. [[Attack]]
-	2. To start a [[TechnologyAction]] one of action participants must provide it with its ability.
+	2. To start a [[TechnologyAction]] one of action participants must provide it as its [[Ability]].
 		1. [[Create]] / [[Upgrade]] / [[Recover]]
 		2. [[Explore]] / [[Extract]]
 		3. [[Trade]] / [[Smuggle]]

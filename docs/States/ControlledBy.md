@@ -3,12 +3,10 @@ status: draft
 scope: core
 ---
 
-1. [[Star]] is **controlled by** faction when:
+1. [[Star]] is **controlled by** faction when either:
 	1. The faction has not less [[Control]] in the system than others
 	2. There is consensus between all factions with [[Actor]] cards in the system
-2. [[Actor]] is **controlled by** faction when:
-	1. The actor belongs to the faction
-	2. The actor is not [[Damaged]]
+2. [[Actor]] is **controlled by** its [[Faction]] unless [[Damaged]]
 3. [[Structure]] is **controlled by** the faction with the highest [[Control]] in its [[Star]]
 	1. If equal, each faction controls its own structures
 

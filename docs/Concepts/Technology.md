@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Technology** is a card ability
+1. **Technology** is an [[Ability]]
 2. **Technologies** come in three flavours:
 	1. [[TechnologyAction]] allows to perform non-basic actions
 	2. [[TechnologyModifier]] modify actions for better
@@ -25,8 +25,9 @@ scope: core
 | [[PlusDraw]] | Modifier | TBD | core | - |
 | [[Express]] | Modifier | C | core | - |
 | [[ForceDiscard]] | Modifier | M | core | - |
-| [[Recon]] | Action | M | advanced | Hero 1M strong, Hero 2M strong, Colony 2M |
-| [[Stealth]] | Modifier | M | advanced | Hero 3M strong, Hero 4M strong, Base 4M |
+| [[Recon]] | Action | M | core | Hero 1M strong, Hero 2M strong, Colony 2M |
+| [[Stealth]] | Modifier | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
+| [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
 | [[Militarization]] | Modifier | M | advanced | Base 2M, Colony 4M |
 | [[Smuggle]] | Action | M | advanced | Ship 4M strong |
 | [[Trade]] | Action | C | advanced | Ship 2C strong, Base 2C |
@@ -35,7 +36,6 @@ scope: core
 | [[Extract]] | Action | P | advanced | Ship 2P strong, Colony 2P |
 | [[PlusLoad]] | Modifier | P | advanced | Base 4P |
 | [[Recycle]] | Action | S | advanced | Hero 1P weak, Hero 2M weak, Base 2S |
-| [[Navigation]] | Modifier | S | advanced | Hero 3C weak, Hero 4C weak, Base 4S |
 | [[Exhaust]] | Modifier | S | advanced | Ship 4S strong |
 | [[DoNotDeplete]] | Modifier | C | advanced | - |
 | [[BeActor]] | Modifier | C | advanced | - |

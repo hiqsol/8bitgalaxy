@@ -6,7 +6,7 @@ scope: core
 1. **End** is one of two short edges of a card
 2. The end that is **up** is the one pointing:
 	1. On [[Field]] - to the top of the [[Star]] the card is in
-	2. Elsewhere - away from the owner
+	2. Elsewhere - away from the player
 3. Changing the end is called **rotate** (180°)
 4. In a [[Slot]] only the end that is up is visible, the other end is inside the pocket
 5. Front [[Side]] of a card is double ended, each end has the same layout, see [[Property]]:
@@ -16,7 +16,7 @@ scope: core
 7. Ends mean different things for different cards:
 	1. [[Actor]]s ([[Ship]], [[Hero]]) - each end may (and usually does) have its own [[Class]], [[Level]] and abilities:
 		1. The card is used with the end that is up
-		2. Owner picks the end for free at [[Takeoff]], after that only [[Manage]] rotates it: movement keeps the end
+		2. Player picks the end for free at [[Takeoff]], after that only [[Manage]] rotates it: movement keeps the end
 		3. Supporter from [[Hand]] can be used with either end, see [[Support]]
 	2. [[Structure]]s:
 		1. Strong end up - the card is [[Ready]]

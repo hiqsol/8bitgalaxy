@@ -1,7 +1,7 @@
 ---
 status: draft
-scope: advanced
+scope: core
 ---
 
 1. **Recon** is [[TechnologyAction]]
-2. **Recon** action allows to peek at [[Hidden]] cards at one reachable [[Star]]
+2. **Recon** reveals hidden [[Space]], [[Star]] or [[Hidden]] card by the [[Explore]] rules, but the Cost is [[AttackPower]]

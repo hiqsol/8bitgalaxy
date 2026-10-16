@@ -4,6 +4,4 @@ scope: core
 ---
 
 1. **Primary Ability** is explicit card [[Property]]
-2. Card can provide:
-	1. [[Power]]
-	2. [[Technology]]
+2. **Primary Ability** is an [[Ability]]: [[Power]] or [[Technology]]

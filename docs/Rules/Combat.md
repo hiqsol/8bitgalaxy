@@ -13,7 +13,7 @@ scope: core
 	1. On any side
 	2. They must have active [[Military]] [[Actor]]s in the star
 5. Parties can bluff by adding [[Hidden]] cards from [[Hand]], also at rival's [[Turn]]
-	1. Hidden card can be revealed by owner's desire at any time
+	1. Hidden card can be revealed by its player at any time
 	2. Player can reveal rival's hidden cards with [[Explore]] or [[Recon]]
 6. Parties can add resources with cards:
 	1. At the moment when they add card, not later.

@@ -8,4 +8,5 @@ scope: core
 3. Used for:
 	1. [[Research]]
 	2. [[Manage]] any cards
-	3. Other [[Science]] actions
+	3. [[Explore]]
+	4. Other [[Science]] actions
