@@ -4,7 +4,7 @@ scope: core
 ---
 
 1. **Explore** is [[TechnologyAction]]
-2. **Explore** reveals one target:
+2. **Explore** opens one target to the acting player:
 	1. Hidden [[Space]]
 	2. Hidden [[Star]]
 	3. [[Hidden]] card
@@ -17,7 +17,8 @@ scope: core
 7. If the power is not enough the player either:
 	1. Adds more power by spending more cards
 	2. Cancels the action, losing what's already spent
-8. [[Recon]] has the same rules, but the Cost is [[AttackPower]]
+8. For a [[Hidden]] card the acting player chooses to reveal it to all or keep it hidden
+9. [[Recon]] has the same rules, but the Cost is [[AttackPower]]
 
 #### Notes
 

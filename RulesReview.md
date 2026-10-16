@@ -23,7 +23,7 @@ Answer proposals by number, e.g. "P22 yes", "P23 no".
 ### Rules
 
 - [ ] **I49. Space types.** [[Space]] types Nebula and Black hole have no behavior, [[Asteroids]], [[Void]] and [[HyperPass]] are thin, and the first duel has no Space tile set. → P24, P35
-- [ ] **I57. Star deck.** [[Star]]s come from the Star deck, but there is no Type list, no Ability list, and no first duel deck. → P36
+- [ ] **I57. Star deck.** [[Star]]s come from the Star deck, but there is no Ability list, and no first duel deck. → P36
 - [ ] **I58. Money use.** [[Money]] is now `core` (home Stars give it), but nothing in `core` spends it. → P37
 - [ ] **I50. Action sequence.** [[PerformAction]] doesn't define a complete sequence: legality is checked late, failed actions spend unspecified resources, actions have no common template. → P34
 - [ ] **I51. Combat sequence.** [[Combat]] isn't deterministic: the attacker selects defending participants, there is no pass order, hidden cards may be revealed "at any time". → P28
@@ -71,12 +71,28 @@ Answer proposals by number, e.g. "P22 yes", "P23 no".
 - [ ] **P34. Action template** in [[PerformAction]]: declare (starter, action, direction), commit participants and abilities, validate, resolve, [[Deplete]]. An invalid action is taken back and nothing is spent, instead of "resources are spent".
 
 - [ ] **P36. Star deck** in [[Star]]:
-	- **Type**, pick one: a) by [[Class]]: Military, Culture, Production, Science; sets the class of a Power ability. b) astronomical: Red dwarf, Yellow star, Blue giant, Binary, Neutron star; the type hints the ability. c) by main planet: Rocky, Gas giant, Ocean, Ice, Asteroid belt.
-	- [[Ability]] variants, one per Star: a) +1 [[Power]] of its class to one action started there. b) +1 [[Money]]. c) +1 [[Materials]] stored there. d) +1 [[Defense]] to own defenders there. e) a [[Technology]] for own cards there, e.g. [[Shipyard]], [[Academy]], [[PlusRange]], [[Recon]]. f) [[Draw]] 1 card, rare.
+	- [[Ability]] variants, one per Star: a) +1 [[Power]] of its Type class to one action started there. b) +1 [[Money]]. c) +1 [[Materials]] stored there. d) +1 [[Defense]] to own defenders there. e) a [[Technology]] for own cards there, e.g. [[Shipyard]], [[Academy]], [[PlusRange]], [[Recon]]. f) [[Draw]] 1 card, rare.
 	- Cost grows with the Ability: Money 1, Power, Materials and Defense 2, Technology 3, Draw 4.
 	- The player takes the Ability during own [[Turn]], it is not automatic.
 	- First duel deck: 5 Stars, shuffled face down on non-home Stars: Money (Cost 1), Military Power (2), Science Power (2), Defense (2), [[Shipyard]] (3).
 - [ ] **P37. Money use in core.** Move [[Boost]] to `core`: 1 [[Money]] adds 1 [[Power]] of any class to an action, not more than a participant's [[Capacity]]. So Money is a flexible wildcard for any action.
+- [ ] **P38. Resource names**, for later: rename the triple non-stockable – local stockable – global stockable ([[Power]] – [[Materials]] – [[Money]]). Pick one:
+	- **Power – Materials – Credits** (recommended): one rename, no clashes.
+	- **Points – Goods – Energy**: fits [[Trade]] and [[Export]], but "Points" clashes with victory points of [[Objective]]s.
+	- **Force – Resources – Credits**: but "Resources" clashes with [[Resource]], the common name.
+	- **Effort – Cargo – Credits**: Cargo is what [[Transport]] carries.
+	- **Power – Supplies – Credits**: Supplies is less industrial than Materials.
+	- **Influence – Matter – Energy**: physics-like, Energy fits [[Lore]] (Warp).
+	- **Might – Ore – Warp**: short words, Warp as currency ties to [[Lore]].
+- [ ] **P39. More abilities** in [[Ability]], so far it has Power, Materials, Money, Defense, Technology, Range, Capacity, Prerequisites. Possibly forgotten, pick any:
+	- a) [[Slot]]s: +1 free slot in a [[Star]], e.g. a Star with large planets.
+	- b) [[Control]]: counts as an Actor for Control, e.g. a [[Hyperstructure]].
+	- c) Victory points: for [[Objective]]s.
+	- d) Hand size: +1 [[Hand]] size, a weaker [[PlusDraw]].
+	- e) [[Restore]]: one card of the Star is [[Ready]] again each turn.
+	- f) Vision: sees [[Hidden]] cards in the Star, a free [[Recon]].
+	- g) Distance: Space segments bordering the Star are length 0, like [[HyperPass]].
+	- h) Votes: for [[Politics]].
 
 ### Ideas
 

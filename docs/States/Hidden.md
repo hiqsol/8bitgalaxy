@@ -15,7 +15,7 @@ scope: core
 	1. When attacked
 	2. When it takes part in any action other than [[Move]] or [[Transport]]
 	3. By its player at any time of own [[Turn]], for free
-	4. By rival's [[Explore]] or [[Recon]]
+	4. By rival's [[Explore]] or [[Recon]], if the rival chooses so
 5. In [[Combat]] parties bluff with **hidden** cards from [[Hand]]
 
 #### Notes

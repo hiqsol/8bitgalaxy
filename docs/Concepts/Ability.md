@@ -11,6 +11,7 @@ scope: core
 	4. [[Defense]]
 	5. [[Technology]]
 	6. [[Range]] or [[Capacity]]
+	7. [[Level]] and [[Class]] for [[Prerequisites]]
 3. Card abilities: [[PrimaryAbility]], [[SecondaryAbility]], [[AdditionalAbility]]
 4. [[Star]] has one **ability**, usable once per own [[Turn]]
 

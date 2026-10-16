@@ -10,7 +10,7 @@ scope: core
 5. Hidden **Star** is revealed with [[Explore]] or [[Recon]] action
 6. Cards can't pass or enter a hidden **Star**
 7. **Star** properties:
-	1. **Type**
+	1. **Type**: one of the [[Class]]es, it sets the class of a [[Power]] ability
 	2. **Cost** required to [[Explore]]
 	3. [[Ability]] usable once per own [[Turn]] by the player who controls the Star, see [[ControlledBy]]
 8. **Stars** form the **Star deck**: hidden Stars are placed from it, see [[Scenario]]
