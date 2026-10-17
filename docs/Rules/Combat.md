@@ -22,8 +22,8 @@ scope: core
 7. Defending players can add non-[[Military]] cards
 8. At following rounds parties continue to pass or add more participants and supporters
 9. After all parties have passed reveal hidden cards, count total powers and determine winner:
-	1. Each card adds its [[AttackPower]]
-	2. A non-[[Military]] defender adds its [[Defense]]
+	1. An attacking card adds its [[AttackPower]]
+	2. A defending card adds its [[Defense]]
 	3. A tie goes to the defender
 	4. **Advantage** = winner total − loser total
 10. After action:

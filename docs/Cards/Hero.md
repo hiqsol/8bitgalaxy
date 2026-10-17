@@ -8,5 +8,11 @@ scope: core
 3. [[Role]] = [[Actor]]
 4. [[Origin]] = [[Social]] created for [[CulturePower]] at [[Academy]]
 5. [[Range]] = current [[Level]] - can [[Move]]
-6. [[Size]] = 1
-7. [[Capacity]] = 0, can't [[Transport]]
+6. [[Size]] = current [[Level]]
+7. [[Capacity]] = current [[Level]]
+	1. Can not [[Transport]] on itself but can increase [[Capacity]] with current [[Level]]
+
+#### Notes
+
+1. **Hero** is a strong figure: its [[Capacity]] can help a group much
+2. The cooler a **Hero** becomes the more demanding it becomes: its [[Size]] grows with [[Level]]

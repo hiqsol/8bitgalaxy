@@ -20,14 +20,14 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 1. Card properties are:
 	1. [[Side]] and [[End]]
 	2. [[Faction]] - always visible
-	3. [[Class]]
+	3. [[Class]], which implies:
+		1. [[Defense]], default is [[AttackPower]] or **1** for non-[[Military]]
 	4. [[Level]], which implies:
-		1. [[Capacity]], default is [[Level]] or 0 for [[Hero]]
-		2. [[Range]], default is [[Level]] or 0 for [[Structure]]
-		3. [[Defense]], default is [[Level]] or 1 for non-[[Military]]
+		1. [[Capacity]], default is [[Level]]
+		2. [[Range]], default is [[Level]] or **0** for [[Structure]]
 	5. [[ExtraCost]], which implies:
 		1. [[Cost]] = [[Level]] + [[ExtraCost]]
-		2. [[Size]] = [[Level]] + [[ExtraCost]]
+		2. [[Size]] = [[Level]] + [[ExtraCost]] or [[Level]] for [[Hero]]
 	6. [[Type]], which implies:
 		1. [[Role]]: [[Unit]] / [[Structure]] / [[Agenda]] - always visible
 		2. [[Origin]]: [[Social]] / [[Industrial]]

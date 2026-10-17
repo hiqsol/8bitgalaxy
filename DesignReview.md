@@ -67,10 +67,9 @@ Answer proposals by number and letter, e.g. "P41 a, f", "P60 b, h".
 	- b) [[Research]] has a direction to a [[BuildingFacility]], though it only moves cards between Home piles.
 	- c) [[Combat]] 10.1: say that the winner saves only own participants.
 	- d) Naming: [[AttackPower]] → `MilitaryPower`, like the other three powers.
-	- e) Naming: [[Militarization]] is managing enemy cards: `Sabotage` fits better, its Defense part is a [[Plus]].
+	- e) Naming: [[Militarization]] cards are [[Military]] already, they don't militarize. The technology is [[Manage]] of enemy cards, which lowers their [[Defense]] before an [[Attack]]: `Suppression` fits best, also `Sabotage`, `Disruption`. Its Defense part is a [[Plus]].
 	- f) [[Card]] doesn't list Stars and Spaces, though P36 makes Stars a deck.
-	- g) [[Combat]] 9: a [[Military]] defender adds its [[AttackPower]], but [[Defense]] is the combat power of a defending card, its [[Level]] for Military: which one counts?
-	- h) [[Deck]]: [[Plus]] Defense of [[Militarization]] cards raised the default Defense 1 to the end's [[Level]], now Military Defense is Level by default: drop it?
+	- g) [[Deck]]: [[Plus]] Defense of [[Militarization]] cards was set to raise Defense 1 to the end's [[Level]], but [[Military]] cards defend with their [[AttackPower]]: revise the values?
 - [ ] **I76. Academy attack details** ([[Combat]] 2.3):
 	- a) [[Reserve]] is face down: the attacker picks blindly or takes from the top?
 	- b) [[Hand]] is hidden: picked blindly, or by name after [[Spy]]?
