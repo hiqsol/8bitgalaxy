@@ -7,7 +7,7 @@ scope: core
 2. First **attacker**:
 	1. selects **attacking participants** and supporters
 	2. selects **defending participants**
-	3. When the target [[Star]] has the defender's [[Academy]], defending participants can also be selected from the defender's [[Discard]], [[Reserve]] or [[Hand]]
+	3. When the target [[Star]] has an [[Academy]] [[ControlledBy]] the defender, defending participants can also be selected from the defender's [[Discard]], [[Reserve]] or [[Hand]]
 3. Then **defender**:
 	1. Chooses to pass or add more participants and supporters
 4. More players can join to the **combat**:
@@ -30,7 +30,8 @@ scope: core
 	1. Winner can save from damage direct participants with total sum of levels **not more** than the advantage
 	2. All other direct participants become [[Damaged]].
 	3. If the attacker wins, their surviving attacking [[Unit]]s move to free [[Slot]]s of the destination [[Star]], keeping their [[End]]. Units that don't fit stay in the source.
-	4. [[Deplete]] supporters
+	4. Direct participants don't [[Deplete]]
+	5. [[Deplete]] supporters
 
 #### Notes
 
@@ -38,3 +39,5 @@ scope: core
 2. Multiple rounds make [[Hidden]] cards and [[Spy]] relevant.
 3. Players make decisions, take risks, prepare surprises and bluff.
 4. Attacking the [[Academy]] reaches [[Hero]]es in the deck, so leaders can be defeated, see [[Goal]]
+5. Supporters from the [[Field]] must have the target [[Star]] within their group's [[Range]], see [[Support]]
+6. Direct participants hold ground like chess pieces: survivors stay or move in

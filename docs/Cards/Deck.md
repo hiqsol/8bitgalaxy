@@ -7,7 +7,7 @@ scope: core
 2. Columns:
 	1. **Level** - [[Level]] + [[ExtraCost]], as printed on the card
 	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P [[Production]], S [[Science]]
-	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class, other [[Plus]] or [[Technology]]
+	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class, `X+Y` for [[Actor]]s, other [[Plus]] or [[Technology]]
 	4. **Secondary** - [[SecondaryAbility]]: [[Plus]] power `+N` or [[Technology]]
 	5. **Prerequisites** - [[Prerequisites]] as level and class pairs, same for both ends
 3. Card name is [[Type]] with strong end level and class

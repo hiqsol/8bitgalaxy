@@ -4,7 +4,7 @@ scope: core
 ---
 
 1. **Standing** is a card [[State]] by position relative to a [[Faction]]
-2. **Standing** card is an own [[Enabled]] card:
+2. **Standing** card is an [[Enabled]] card [[ControlledBy]] the faction:
 	1. On the [[Field]]
 	2. In [[Hand]]
 	3. In [[History]]

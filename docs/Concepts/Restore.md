@@ -6,7 +6,7 @@ scope: core
 1. **Restore** is rotating [[Structure]] to strong [[End]], see [[Ready]]
 2. **Restore** is done:
 	1. With [[Manage]]
-	2. At the end of own [[Turn]]: 1 own [[Structure]], more with `+Restore` [[Plus]]
+	2. At the end of own [[Turn]]: 1 [[Structure]] [[ControlledBy]] the player, more with `+Restore` [[Plus]]
 
 #### Notes
 

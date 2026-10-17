@@ -10,3 +10,10 @@ scope: core
 5. **Current level**:
 	1. the visible one when other is not visible, e.g. in a [[Slot]]
 	2. else the lower one
+6. A card provides one **Level** with its [[Class]], e.g. for [[Prerequisites]] and the Singularity path of [[Goal]]:
+	1. On the [[Field]]: the [[End]] that is up
+	2. Elsewhere: the End chosen by its player
+
+#### Notes
+
+1. After [[Takeoff]] the other End is inside the pocket of the [[Slot]]: a card shows one Level, so it gives one Level everywhere

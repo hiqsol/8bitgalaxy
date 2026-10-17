@@ -1,6 +1,0 @@
----
-status: stub
-scope: advanced
----
-
-

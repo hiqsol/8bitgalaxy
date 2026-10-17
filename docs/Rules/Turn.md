@@ -8,9 +8,10 @@ scope: core
 	2. Starts an [[Action]] as its **starter**, see [[PerformAction]]
 2. More cards from [[Hand]] can join an action as [[Support]]ers
 3. **End of turn**:
-	1. [[Restore]] 1 own [[Structure]]
-	2. Unused cards from [[Hand]] go to [[Discard]]
-	3. [[Draw]] a full [[Hand]]
+	1. [[Restore]] 1 [[Structure]] [[ControlledBy]] the player
+	2. Check the [[Goal]] paths
+	3. Unused cards from [[Hand]] go to [[Discard]]
+	4. [[Draw]] a full [[Hand]]
 4. Player can pass: play no cards
 5. At rivals' turns cards from [[Hand]] can only join [[Combat]] as supporters
 

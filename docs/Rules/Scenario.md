@@ -40,3 +40,4 @@ scope: core
 #### Notes
 
 1. First duel layout is shown in `game.png`, see [[index]]
+2. [[Void]]s keep the home Stars apart: there is no short route between them

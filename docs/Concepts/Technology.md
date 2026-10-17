@@ -44,7 +44,6 @@ scope: core
 | [[Tactics]] | Modifier | M | advanced | - |
 | [[Ambush]] | Modifier | M | advanced | - |
 | [[Raid]] | Action | M | advanced | - |
-| [[Command]] | Modifier | C | advanced | - |
 | [[Recall]] | Modifier | C | advanced | - |
 | [[Settle]] | Modifier | C | advanced | - |
 | [[Legacy]] | Action | C | objectives | - |

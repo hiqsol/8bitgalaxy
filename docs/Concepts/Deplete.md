@@ -12,6 +12,8 @@ scope: core
 	1. [[Support]]ers of the [[Move]] are depleted as usual
 4. [[Transport]] doesn't deplete moving ships or transported cards
 	1. Supporters of the Transport are depleted as usual
+5. [[Combat]] doesn't deplete direct participants: survivors stay or move in
+	1. Supporters of the Combat are depleted as usual
 
 #### Notes
 

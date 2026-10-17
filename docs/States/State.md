@@ -10,8 +10,7 @@ scope: core
 	3. [[Hidden]] - back Side up, Hidden End up
 3. Card states by position:
 	1. [[Destroyed]]
-	2. [[Wreckage]]
-	3. [[Standing]]
+	2. [[Standing]]
 4. Card states relative to a faction or player:
 	1. [[ActiveFor]]
 	2. [[ControlledBy]]

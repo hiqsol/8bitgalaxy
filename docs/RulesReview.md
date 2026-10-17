@@ -1,6 +1,6 @@
 ---
 date: 2026-10-10
-updated: 2026-10-16
+updated: 2026-10-17
 status: WIP
 scope: meta
 ---
@@ -24,8 +24,10 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- a) `allacad` (Base 4C) is unclear, see [[DesignReview]] P59.
 	- b) Core technologies [[Express]] and [[ForceDiscard]] and `+Draw` [[Plus]] have no cards.
 	- c) Redo the decks up to [[Level]] 8, planned: the Singularity path of [[Goal]] takes the highest Level from the faction deck.
+	- d) [[Actor]] Primary power values as `X+Y`, see [[PrimaryAbility]].
+	- e) More [[BuildingFacility|building facilities]], planned: a faction that lost its home Star can rebuild.
 - [ ] **I21. Stub notes** (`status: stub`):
-	- a) [[Wreckage]], [[DefSys]]: see [[DesignReview]] P44, P52.
+	- a) [[DefSys]]: see [[DesignReview]] P52.
 	- b) [[HyperPass]]: see P24.
 	- c) [[Sell]], [[Dismantle]]: see [[DesignReview]] P57.
 	- d) [[PlusHero]]: see [[DesignReview]] P59.
@@ -50,7 +52,6 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- a) The attacker selects defending participants.
 	- b) There is no pass order.
 	- c) Hidden cards may be revealed "at any time".
-- [ ] **I52. Remote support.** [[Support]] from the [[Field]] has no distance limit. → P29
 
 ### Extensions
 
@@ -97,7 +98,6 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- a) The defending participants are all the defender's Enabled cards in the target [[IPS]].
 	- b) After the attacker's commit, sides alternate starting with the defender: add one card or pass.
 	- c) Combat resolves when both sides pass in a row. Hidden cards are revealed then.
-- [ ] **P29. Global support.** [[Support]] from the [[Field]] works from any distance: Warp gives faster-than-light communication, see [[Lore]].
 - [ ] **P34. Action template** in [[PerformAction]]: declare (starter, action, direction), commit participants and abilities, validate, resolve, [[Deplete]]. An invalid action is taken back and nothing is spent, instead of "resources are spent".
 - [ ] **P36. Star deck** in [[Star]]:
 	- a) [[Ability]]: +1 [[Power]] of its Type class to one action started there.

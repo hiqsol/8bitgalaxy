@@ -25,7 +25,6 @@ scope: core
 | Ship      | +   |     | +   | +   |
 | Hero      | +   | +   | +   | +   |
 | Materials | +   | +   | +   | +   |
-| Wreckage  | +   | +   | +   | +   |
 
 #### Notes
 
@@ -35,4 +34,4 @@ scope: core
 	2. [[Culture]] (Colonization) ships can transport [[Social]] cards
 	3. [[Production]] ships can transport [[Industrial]] cards
 	4. [[Science]] ships can transport anything
-	5. [[Hero]]s, [[Materials]] and [[Wreckage]] can be transported with any ships
+	5. [[Hero]]s and [[Materials]] can be transported with any ships

@@ -12,3 +12,8 @@ scope: core
 4. Default value:
 	1. Current [[Level]] for moving cards
 	2. 0 for [[Structure]]
+5. **Range** of a group is the sum of the Ranges of its cards, plus Range from [[Support]]
+
+#### Notes
+
+1. Big groups go far: [[Pinning]], [[Void]] and hidden [[Space]] stop them

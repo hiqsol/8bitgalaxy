@@ -12,7 +12,7 @@ scope: core
 	1. Range can be increased with [[Support]]
 5. Destination [[IPS]] must have a free [[Slot]] for every moving card
 6. Several cards can move together in group
-	1. [[Range]] of the group is minimum of the ranges of the direct participants
+	1. [[Range]] of the group is the sum of the ranges of the direct participants, see [[Range]]
 7. Moving [[Actor]]s are not depleted after **Move**, see [[Deplete]]
 8. Moving cards keep their [[End]], only [[Manage]] rotates it
 9. The route obeys [[Pinning]]

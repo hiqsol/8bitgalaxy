@@ -1,7 +1,7 @@
 ---
 status: draft
 scope: core
-aliases: [Disabled, Exhausted, Wrecked]
+aliases: [Disabled, Exhausted]
 ---
 
 1. **Damaged** is a card [[State]]
@@ -14,7 +14,8 @@ aliases: [Disabled, Exhausted, Wrecked]
 4. **Damaged** is opposite to [[Enabled]]
 5. [[Recover]] makes card [[Enabled]]
 6. A Damaged card that becomes Damaged again is [[Destroyed]]
+7. A Damaged card in a [[Star]] where its [[Faction]] has no [[Enabled]] card is [[Destroyed]]
 
 #### Notes
 
-1. Disabled, Exhausted, Wrecked are the same state, indistinguishable
+1. Disabled, Exhausted are the same state, indistinguishable
