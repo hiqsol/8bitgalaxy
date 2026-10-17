@@ -18,8 +18,8 @@ except ImportError:
     sys.exit('markdown not found: pip3 install markdown')
 
 ROOT = Path(__file__).resolve().parent.parent
-PATHS = ['docs', 'ideas', 'RulesReview.md', 'DesignReview.md']
-FILES = sorted(f for p in PATHS for f in ([ROOT / p] if p.endswith('.md') else (ROOT / p).glob('**/*.md')))
+PATHS = ['docs', 'ideas']
+FILES = sorted(f for p in PATHS for f in (ROOT / p).glob('**/*.md'))
 UWIKI = os.environ.get('UWIKI') or shutil.which('uwiki') or sys.exit('uwiki not found, set UWIKI to uwiki.py path')
 sys.path.insert(0, os.path.dirname(os.path.realpath(UWIKI)))
 import uwiki  # noqa: E402

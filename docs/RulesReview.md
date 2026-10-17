@@ -7,7 +7,7 @@ scope: meta
 
 # Rules review
 
-Review of the notes in `docs/` (the source of truth), aimed at a **minimal playable duel**: 2 players, no Aliens, playable with an AI from the notes alone.
+Review of the rules (the source of truth), aimed at a **minimal playable duel**: 2 players, no Aliens, playable with an AI from the notes alone.
 
 Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 
