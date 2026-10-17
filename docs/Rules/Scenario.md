@@ -11,9 +11,9 @@ scope: core
 		1. Shape of the game board
 		2. Placement of starting systems
 		3. Placement of [[Void]]s
-	4. List of [[Alien]] cards
+	4. [[GalaxyDeck]] composition, see [[Galaxy]]
 3. **First duel**:
-	1. 2 players, competitive, no [[Alien]]s
+	1. 2 players, competitive, no [[GalaxyDeck]]
 	2. [[Field]]: 7 Stars in rows of 2, 3 and 2: `00 01`, `10 11 12`, `20 21`
 	3. Home Stars in opposite corners: `00` and `21`
 	4. Every [[Space]] has length 1

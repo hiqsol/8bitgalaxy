@@ -20,7 +20,7 @@ it tries to kill you. Your job is to stay in control.
 
 1. **Play your hand** — every card either deploys a hero or ship to your
    stars, or starts an action: explore, trade, research, attack, build…
-2. **Universe responds** — alien cards spawn, events unfold
+2. **Galaxy moves** — the Galaxy deck plays: events, aliens, derelicts
 3. **Draw a new hand** — and keep it ready to defend on rivals' turns
 4. **Repeat** — your deck evolves, your empire grows, threats escalate
 
@@ -35,8 +35,9 @@ it tries to kill you. Your job is to stay in control.
   attackers, bluff with hidden cards, allocate resources. The better
   strategist wins, not the luckier roller.
 
-- *Solo-friendly.* Aliens create real pressure even without other players.
-  The universe is a worthy opponent on its own.
+- *One rules set, many galaxies.* The scenario picks the Galaxy deck: a
+  dangerous one for co-op and solo, a resourceful one for quick duels,
+  or a campaign series of decks. The galaxy is a worthy opponent on its own.
 
 - *Deck as identity.* Each player's deck evolves differently — your card
   circulation (discard → shuffle → reserve → hand → field → deplete)
@@ -49,21 +50,20 @@ it tries to kill you. Your job is to stay in control.
 ## The Universe Is Not Your Enemy (Or Your Friend)
 
 This is the key insight: the universe is *neutral but active*. Each turn's
-AlienSpawn isn't just "enemies attack" — it's the cosmos generating content.
+Galaxy move isn't just "enemies attack" — it's the cosmos generating content.
 Sometimes it's a threat (ancient warships), sometimes an opportunity
 (alien tech you can research), sometimes a puzzle (objectives that reward
 the bold). You don't fight *against* the universe — you *navigate* it.
 
 ## Victory
 
-Become the greatest civilization by any combination of:
-- Population (grow your people)
-- Expansion (control star systems)
-- Wealth (accumulate resources)
-- Development (unlock technologies)
+Become the greatest civilization by one of four paths:
+- Military: defeat every rival leader
+- Culture: the most Culture points at Twilight
+- Production: to be defined
+- Singularity (Science): top-level cards of every class
 
 A faction falls when it loses all leaders or can't make a move.
-Multiple winners are possible — greatness is a spectrum.
 
 ## Tech Stack
 

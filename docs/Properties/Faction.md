@@ -8,7 +8,7 @@ scope: core
 3. All cards of **faction** form a faction deck
 4. There are two **faction** types:
 	1. for players
-	2. [[Alien]]
+	2. [[Galaxy]]
 
 #### Notes
 

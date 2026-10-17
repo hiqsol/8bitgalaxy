@@ -35,6 +35,7 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	8. [[SecondaryAbility]]
 	9. [[Trait]]
 	10. [[Prerequisites]]
+	11. [[CulturePoints]]
 2. Kinds of properties:
 	1. **explicit** - printed on the card
 	2. **implicit** - derived from other properties

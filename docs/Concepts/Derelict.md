@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: aliens
+scope: galaxy
 ---
 
 1. **Derelict** is a neutral card lying in a [[Star]]
@@ -11,4 +11,4 @@ scope: aliens
 #### Notes
 
 1. Makes exploring pay off
-2. [[Alien]] cards partly fill this role
+2. Other [[Galaxy]] cards partly fill this role

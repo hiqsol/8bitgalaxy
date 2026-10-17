@@ -1,7 +1,7 @@
 ---
 status: draft
-scope: aliens
+scope: galaxy
 ---
 
-1. **Future events** is a pile in [[Alien]] [[Home]]
+1. **Future events** is a pile in [[Galaxy]] [[Home]]
 2. Cards in **Future events** are [[Hidden]]

@@ -4,8 +4,8 @@ scope: core
 ---
 
 1. Action is defined with **selected**:
-	1. **Starter** - a card from [[Hand]], defines:
-		1. **Source**: [[IPS]] of any [[Star]] [[ControlledBy]] the player, where the starter could [[Takeoff]]
+	1. **Starter** - a card from [[Hand]] or a [[Field]] card with [[Starter]], defines:
+		1. **Source**: [[IPS]] of any [[Star]] [[ControlledBy]] the player, where the starter could [[Takeoff]], or the Field starter's own IPS
 	2. **Action** - one of [[Action]]s, defines list of **requirements**, can be:
 		1. [[Power]]
 		2. [[Range]]

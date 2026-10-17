@@ -7,7 +7,7 @@ scope: meta
 
 # Rules review
 
-Review of the rules (the source of truth), aimed at a **minimal playable duel**: 2 players, no Aliens, playable with an AI from the notes alone.
+Review of the rules (the source of truth), aimed at a **minimal playable duel**: 2 players, no [[GalaxyDeck]], playable with an AI from the notes alone.
 
 Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 
@@ -23,6 +23,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 - [ ] **I19. Deck review.** → P25
 	- a) `allacad` (Base 4C) is unclear, see [[DesignReview]] P59.
 	- b) Core technologies [[Express]] and [[ForceDiscard]] and `+Draw` [[Plus]] have no cards.
+	- c) Redo the decks up to [[Level]] 8, planned: the Singularity path of [[Goal]] takes the highest Level from the faction deck.
 - [ ] **I21. Stub notes** (`status: stub`):
 	- a) [[Wreckage]], [[DefSys]]: see [[DesignReview]] P44, P52.
 	- b) [[HyperPass]]: see P24.
@@ -61,8 +62,8 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- a) [[StrategyCard]]: the list of roles.
 	- b) [[PromissoryNote]]: what each side gets.
 	- c) [[PromissoryNote]]: whether the card returns to its owner.
-- [ ] **I45. Derelict details.** [[Derelict]] (`aliens`):
-	- a) Where they come from: setup, [[Event]]s.
+- [ ] **I45. Derelict details.** [[Derelict]] (`galaxy`):
+	- a) Where they come from: setup or a [[GalaxyMove]], which [[Star]].
 	- b) The recruit cost.
 - [ ] **I46. Deck thinning by Takeoff.** A player can take off weak cards and cycle only strong ones. Free [[Slot]]s limit it. To be worked out in [[GameBalance]].
 

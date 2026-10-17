@@ -12,7 +12,7 @@ scope: core
 2. Main game rule is [[PerformAction]], start with it
 3. These docs are the source of truth for the rules
 4. Game is played by 1+ players with different options, see [[Scenario]]
-5. First focus: minimal playable duel without [[Alien]]s, playable with AI
+5. First focus: minimal playable duel without the [[GalaxyDeck]], playable with AI
 
 #### Inspiration
 
@@ -27,7 +27,7 @@ Every page states its `scope` in frontmatter:
 1. `core` - minimal playable game
 2. `advanced` - more technologies and rules on top of core
 3. Extensions:
-	1. `aliens` - [[Alien]]s, [[Event]]s, [[Derelict]]s
+	1. `galaxy` - [[Galaxy]] deck: [[Event]]s, [[Alien]]s, [[Derelict]]s
 	2. `objectives` - [[Objective]]s and victory points
 	3. `politics` - [[Politics]]
 4. `meta` - reviews and documentation support

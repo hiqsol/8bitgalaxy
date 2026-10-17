@@ -20,4 +20,4 @@ scope: objectives
 #### Notes
 
 1. Gives the game a clock and a clear winner, see [[Goal]]
-2. [[Alien]]s extension can add more objectives
+2. The [[GalaxyDeck]] can add more objectives

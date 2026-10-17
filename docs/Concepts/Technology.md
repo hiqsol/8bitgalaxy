@@ -35,7 +35,7 @@ scope: core
 | [[Recycle]] | Action | S | advanced | Hero 1P weak, Hero 2M weak, Base 2S |
 | [[Exhaust]] | Modifier | S | advanced | Ship 4S strong |
 | [[DoNotDeplete]] | Modifier | C | advanced | - |
-| [[BeActor]] | Modifier | C | advanced | - |
+| [[Starter]] | Modifier | C | advanced | - |
 | [[Sell]] | Action | C | advanced | - |
 | [[Dismantle]] | Action | P | advanced | - |
 | [[PlusFactory]] | Action | P | advanced | - |
