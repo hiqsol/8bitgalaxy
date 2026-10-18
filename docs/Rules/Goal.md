@@ -8,7 +8,7 @@ scope: core
 3. A [[Faction]] wins by a path:
 	1. [[Military]]: at the end of own [[Turn]] every rival **has no leader**
 	2. [[Culture]]: at [[Twilight]] has the most **Culture points**:
-		1. Total [[Level]] of [[Colony]] cards on the [[Field]] [[ControlledBy]] the faction
+		1. Sum of current [[Level]]s of [[Colony]] cards on the [[Field]] [[ControlledBy]] the faction
 		2. Plus [[CulturePoints]] printed on [[Standing]] cards
 		3. A tie is a draw between the tied factions
 	3. [[Production]]: TBD
@@ -30,4 +30,4 @@ scope: core
 	2. Heroes in the deck are reached by attacking the [[Academy]], see [[Combat]]
 6. Losing the home [[Star]] is a heavy loss by intention, a goal for rivals, but it doesn't end the game, neither does losing the [[BuildingFacility|building facilities]]: the faction still moves and can defeat the rival leader. The captor gets the facilities, like taking the queen in Chess
 7. A faction that controls no [[Star]] can not make a move, see [[Takeoff]]
-8. An empty [[Hand]] at the start of own [[Turn]] can end the game too, like an unexpected checkmate: spending the whole Hand on defense in [[Combat]] or losing it to [[ForceDiscard]] is a real risk, unless a [[Ready]] [[Structure]] with [[Starter]] can act
+8. An empty [[Hand]] at the start of own [[Turn]] can end the game too, like an unexpected checkmate: spending the whole Hand on defense in [[Combat]] or losing it to [[ForceDiscard]] is a real risk, unless a [[Field]] card with [[Starter]] can act

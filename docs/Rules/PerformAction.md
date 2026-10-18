@@ -14,6 +14,7 @@ scope: core
 	3. **Participants**:
 		1. **Direct**:
 			1. Selected cards in the **source** [[IPS]]
+			2. In [[Combat]] also the defending cards in the **destination** IPS
 		2. **Supporters**:
 			1. The **starter**
 			2. Selected cards in [[Hand]]
@@ -30,4 +31,4 @@ scope: core
 
 #### Notes
 
-1. A card on [[Field]] gives more than a card in [[Hand]]: all of its abilities instead of one. That's what [[Takeoff]] is for.
+1. A direct participant on [[Field]] gives more than a card in [[Hand]]: all of its abilities instead of one. That's what [[Takeoff]] is for.

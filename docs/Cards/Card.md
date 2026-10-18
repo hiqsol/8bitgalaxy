@@ -11,7 +11,7 @@ scope: core
 		1. [[Tool]]
 2. [[Structure]] cards:
 	1. [[Colony]] - social
-	2. [[Base]] - industrial, technology
+	2. [[Base]] - industrial
 	3. [[Hyperstructure]]
 3. [[Agenda]] cards:
 	1. [[Event]]

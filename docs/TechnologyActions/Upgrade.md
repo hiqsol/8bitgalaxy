@@ -18,4 +18,4 @@ scope: core
 6. **Cost**: [[Cost]] of the new card **minus** cost of the old card
 7. **Outcome**:
 	1. New card substitutes the old card in place
-	2. Old card goes to selected [[Factory]]
+	2. Old card goes to a selected [[Factory]] pile

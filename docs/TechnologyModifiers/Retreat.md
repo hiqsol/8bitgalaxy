@@ -6,7 +6,7 @@ scope: core
 1. **Retreat** is [[Military]] [[TechnologyModifier]]
 2. **Retreat** allows to escape from [[Combat]]:
 	1. Finish the [[Combat]]
-	2. Participants don't get [[Damaged]] only [[Depleted]]
+	2. Own participants don't get [[Damaged]] only [[Depleted]]
 
 #### Notes
 

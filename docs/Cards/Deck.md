@@ -84,7 +84,7 @@ scope: core
 1. Imported from the legacy code (`src/legacy/js/Model/Decks/Human.js`), to be reviewed
 2. Patterns:
 	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology, ends have different classes
-	2. [[Structure]]s: Primary is technology at both ends, Secondary is power at strong end only, both ends have the same class
+	2. [[Structure]]s: Primary is technology or a non-power [[Plus]] at both ends, Secondary is power at strong end only, both ends have the same class
 	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't change with rotation
 3. Technology classes and scopes are in [[Technology]]
 4. Unclear technology from the legacy code: `allacad`

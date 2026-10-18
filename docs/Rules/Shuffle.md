@@ -9,4 +9,4 @@ scope: core
 	2. They form the new [[Reserve]]
 	3. Continue to [[Draw]]
 3. Player can NOT **shuffle** when [[Reserve]] is not empty
-4. Player can NOT drop cards to [[Discard]] except unused cards from [[Hand]] at the end of [[Turn]]
+4. Player can NOT drop cards to [[Discard]] at will: cards get there only by the rules, e.g. [[Deplete]], unused [[Hand]] at the end of [[Turn]], [[ForceDiscard]]

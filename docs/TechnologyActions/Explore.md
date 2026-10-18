@@ -4,7 +4,7 @@ scope: core
 ---
 
 1. **Explore** is [[Science]] [[TechnologyAction]]
-2. **Explore** opens one target to the acting player:
+2. **Explore** reveals one target:
 	1. Hidden [[Space]]
 	2. Hidden [[Star]]
 	3. [[Hidden]] card
@@ -18,7 +18,6 @@ scope: core
 	1. Adds more power by spending more cards
 	2. Cancels the action, losing what's already spent
 8. For a [[Hidden]] card the acting player chooses to reveal it to all or keep it hidden
-9. [[Spy]] has the same rules, but the Cost is [[AttackPower]]
 
 #### Notes
 

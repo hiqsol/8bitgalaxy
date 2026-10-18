@@ -38,11 +38,12 @@ Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
 
 ## Issues
 
-- [ ] **I67. Control tie.** [[ControlledBy]] 1.1 "not less Control than others" gives a Star to both factions with Actors, [[Disputed]] gives it to nobody. Consensus is a [[Politics]] notion inside core. → P46
+- [ ] **I67. Control tie.** [[ControlledBy]] 2.1 "not less Control than others" gives a Star to both factions with Actors, [[Disputed]] gives it to nobody. Consensus is a [[Politics]] notion inside core. → P46
 - [ ] **I69. Upgrade and Recover source.** [[BuildingFacility]] and [[Technology]] say a facility provides Create, Upgrade and Recover, [[Academy]] and [[Shipyard]] say only Create, and 12 card ends carry [[Upgrade]] or [[Recover]]:
 	- a) Recommended: a facility provides Create and is the destination of all three, Upgrade and Recover come from a participant.
 - [ ] **I70. Social Create level.** "Social cards can only be created from Level 1": Hero 2M and 2C have Level 2 at both ends, so they can only be upgraded, yet P27 puts them in the [[Factory]]:
 	- a) Recommended: a Social card can be created when its weak end is Level 1, others only by Upgrade.
+	- b) [[Origin]] 3.3 says "from the smallest Level", [[Create]] 4 "from Level 1": keep the rule in Create only.
 - [ ] **I72. Explore peek.** If the explorer looks at the face to learn the hidden Cost, cancelling after one card is a cheap look at what's there. → P49
 - [ ] **I73. Source needs a free Slot.** The source is a Star "where the starter could [[Takeoff]]", so a Star with full Unit Slots can't start actions from Hand:
 	- a) Recommended: any Star [[ControlledBy]] the player.

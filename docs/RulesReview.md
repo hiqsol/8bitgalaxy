@@ -52,6 +52,26 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- a) The attacker selects defending participants.
 	- b) There is no pass order.
 	- c) Hidden cards may be revealed "at any time".
+- [ ] **I82. Military path timing.** [[Goal]] 3.1 checks at the end of the attacker's Turn that every rival "has no leader", but 4.2 checks "has no leader" at the end of the rival's own Turn, and note 5.1 gives the rival one Turn to [[Recover]] the last Hero. Read with 3.1 timing, the attacker wins at once and the note is wrong. → P61
+- [ ] **I83. Defending power.** [[Combat]] 9.2 adds a defending card's [[Defense]], but Defense is a property, not an [[Ability]], and a supporter adds one Ability ([[Support]] 2): → P62
+	- a) What a defending supporter from [[Hand]] or a remote [[IPS]] adds: its Defense or its Primary power.
+	- b) A [[Military]] card without power has Defense 0, below non-Military 1: every Depleted Military [[Structure]] (Base 2M, 4M, Colony 2M, 4M weak ends) defends with 0.
+- [ ] **I84. Move and Manage overlap.** [[Move]] 2.1 moves cards between [[Slot]]s of one [[IPS]] for free ([[Distance]] 0, no power), [[Manage]] Shift does the same for 1 power per card. → P63
+- [ ] **I85. Settle and Prefab vs Range.** [[PerformAction]] 4.1 checks [[Range]] for building too. A [[Settle]] or [[Prefab]] provider in the source makes the source the destination ([[Distance]] 0), so the technology adds nothing; in the destination it can't take part, [[Support]] comes only from a remote IPS. → P64
+- [ ] **I86. Pinning scope.** [[Pinning]] 2 covers routes of [[Move]], [[Transport]] and [[Attack]]. [[Range]] is now checked for every action: does Pinning also stop [[Explore]] reach, a remote [[Support]] group and [[Create]] placement?
+	- a) Recommended: Pinning stops moving cards only, other Range checks ignore it.
+- [ ] **I87. Slot split.** [[IPS]] 3: the [[Star]] **Size** is the total number of Slots, up to 5 for Units and 5 for Structures, but nothing says how a Size splits between the rows.
+	- a) Recommended: the Star shows both numbers, Size is their sum.
+- [ ] **I88. Minor.**
+	- a) [[Research]] 2.2 "between Laboratories": [[Manage]] Shift already moves cards between piles of one [[Laboratory]]. Another player's Laboratory, or drop it?
+	- b) Combined prints: Colony 4P "Recover, Shipyard", Hero 4M weak and Hero 4C strong "Recover, Upgrade", Base 2M "Militarization, +1 Defense". One [[Ability]] or two for a supporter?
+	- c) [[End]] 6: strong is the end with the higher [[Level]], but Hero ends have equal Levels, only the [[Deck]] names them.
+	- d) [[Damaged]] 7: own [[Hidden]] cards give [[Control]] but don't keep a Damaged card from [[Destroyed]], they are not Enabled. Intended?
+	- e) [[VisibleFor]] 2.1: a Hidden card is not Damaged, so it is visible for everyone, against [[Hidden]] 3. Recommended: visible when front Side up, own, revealed to the player, or Damaged with the player's Enabled card in its Star.
+	- f) [[Combat]] 7 lets defenders add non-Military cards, as if attackers can't, but [[Attack]] 4.1 needs only one Military Actor.
+	- g) [[DoNotDeplete]] 2.2: a kept card from Hand goes to [[Reserve]]: on top, like [[Recall]]?
+	- h) [[Materials]] storage: its note needs a [[Colony]] in the Star, [[Base]] 7 holds Materials, [[Extract]], [[Raid]], [[Salvage]] and [[Event]]s put them in a Star. See [[DesignReview]] P57.
+	- i) [[Scenario]] note 2: [[Void]]s keep the home Stars apart, `game.png` shows them, but the first duel places no Voids, Void is `advanced` and every Space is Normal of length 1.
 
 ### Extensions
 
@@ -66,6 +86,11 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 - [ ] **I45. Derelict details.** [[Derelict]] (`galaxy`):
 	- a) Where they come from: setup or a [[GalaxyMove]], which [[Star]].
 	- b) The recruit cost.
+- [ ] **I89. Galaxy flow.** [[Galaxy]] (`galaxy`):
+	- a) [[Turn]] has no step for the [[GalaxyMove]]: when in the Turn, by whom.
+	- b) When a card in [[FutureEvents]] is evaluated.
+	- c) [[CurrentEvents]] is never used and holds [[Hidden]] cards, though an evaluated [[Event]] is revealed. Nothing puts cards to [[GalaxyScrap]].
+	- d) [[Event]] note 3.3 moves a "warp storm", which is defined nowhere.
 - [ ] **I46. Deck thinning by Takeoff.** A player can take off weak cards and cycle only strong ones. Free [[Slot]]s limit it. To be worked out in [[GameBalance]].
 
 ## Proposals
@@ -95,7 +120,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- e) One pile per [[Type]], lowest [[Level]] on top.
 	- f) First player is random.
 - [ ] **P28. Combat sequence** in [[Combat]]:
-	- a) The defending participants are all the defender's Enabled cards in the target [[IPS]].
+	- a) The defending participants are all the defender's Enabled and [[Hidden]] cards in the target [[IPS]].
 	- b) After the attacker's commit, sides alternate starting with the defender: add one card or pass.
 	- c) Combat resolves when both sides pass in a row. Hidden cards are revealed then.
 - [ ] **P34. Action template** in [[PerformAction]]: declare (starter, action, direction), commit participants and abilities, validate, resolve, [[Deplete]]. An invalid action is taken back and nothing is spent, instead of "resources are spent".
@@ -110,6 +135,17 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- h) The player takes the Ability during own [[Turn]], it is not automatic.
 	- i) First duel deck: 5 Stars, shuffled face down on non-home Stars: Energy (Cost 1), Military Power (2), Science Power (2), Defense (2), [[Shipyard]] (3).
 - [ ] **P37. Energy use in core.** Move [[Boost]] to `core`: 1 [[Energy]] adds 1 [[Power]] of any class to an action, not more than a participant's [[Capacity]]. So Energy is a flexible wildcard for any action.
+
+- [ ] **P61. Military path** in [[Goal]] 3.1:
+	- a) Recommended: a rival that has no leader is over by 4.2 at the end of its own Turn, so 3.1 goes: the last faction not over wins by rule 5, in a duel that's the Military win. Note 5.1 holds.
+	- b) Keep the check at the end of the attacker's Turn and drop note 5.1: losing the last Hero ends the game at once.
+- [ ] **P62. Defense** in [[Defense]] and [[Combat]]:
+	- a) Defense = [[AttackPower]], at least 1, for every card.
+	- b) A defending supporter adds its Defense as its one [[Ability]].
+- [ ] **P63. Slots in one IPS:**
+	- a) Recommended: [[Move]] goes between Stars only, changing Slots in an [[IPS]] is [[Manage]] Shift, so [[Slot]] overlap costs power to fix.
+	- b) Move within a Star for own [[Actor]]s, Manage Shift for [[Structure]]s and rival cards with [[Militarization]].
+- [ ] **P64. Settle and Prefab:** the provider can be in the destination [[IPS]], and [[Create]] reaches it at any [[Distance]], like `allacad` in [[DesignReview]] P59 e.
 
 ### Ideas
 

@@ -5,7 +5,7 @@ scope: core
 
 1. **Secondary Ability** is explicit card [[Property]]
 2. **Secondary ability** is an [[Ability]]:
-	1. [[Plus]] - plain `+N` adds to the [[PrimaryAbility]] power
+	1. [[Plus]] - plain `+N` is power of the end's [[Class]], see [[Plus]]
 	2. [[Technology]] - its name is shown in place of `+1`
 3. But:
 	1. Secondary abilities are usually weaker

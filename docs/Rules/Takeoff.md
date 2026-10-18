@@ -11,5 +11,5 @@ scope: core
 #### Notes
 
 1. Free slots are limited, that creates pressure to expand
-2. On [[Field]] the card is a direct participant of actions and uses all of its abilities, from [[Hand]] it uses only one, see [[PerformAction]]
+2. On [[Field]] the card can be a direct participant of actions and use all of its abilities, from [[Hand]] it uses only one, see [[PerformAction]]
 3. Player who controls no [[Star]] can neither **Takeoff** nor start an action

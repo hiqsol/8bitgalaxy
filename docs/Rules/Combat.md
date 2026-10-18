@@ -16,9 +16,7 @@ scope: core
 5. Parties can bluff by adding [[Hidden]] cards from [[Hand]], also at rival's [[Turn]]
 	1. Hidden card can be revealed by its player at any time
 	2. Player can reveal rival's hidden cards with [[Explore]] or [[Spy]]
-6. Parties can add resources with cards:
-	1. At the moment when they add card, not later.
-	2. Not more than card's [[Capacity]]
+6. Parties can [[Boost]] with cards at the moment when they add the card, not later
 7. Defending players can add non-[[Military]] cards
 8. At following rounds parties continue to pass or add more participants and supporters
 9. After all parties have passed reveal hidden cards, count total powers and determine winner:

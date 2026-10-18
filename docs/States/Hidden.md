@@ -25,4 +25,4 @@ scope: core
 1. A hidden card moves with minimal values because the rival can't know or check what card it is
 2. Cards get hidden on the [[Field]] by [[Takeoff]] or [[Stealth]]
 3. Hidden cards neither pin nor get pinned, see [[Pinning]]
-4. A lone hidden card stays in its [[Star]], it leaves inside a group, whose [[Range]] is the sum
+4. Range 1 doesn't reach the next [[Star]]: a hidden card leaves with [[Support]] or inside a group, whose [[Range]] is the sum

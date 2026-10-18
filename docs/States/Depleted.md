@@ -13,4 +13,4 @@ scope: core
 
 #### Notes
 
-1. In the [[Deck]] a structure's [[PrimaryAbility]] is a [[Technology]] at both ends, so a depleted structure keeps its technology but gives no [[Power]]
+1. In the [[Deck]] a structure's [[PrimaryAbility]] is a [[Technology]] or a non-power [[Plus]] at both ends, so a depleted structure keeps it but gives no [[Power]]

@@ -29,4 +29,4 @@ scope: core
 #### Notes
 
 1. E.g. [[Military]] power allows manage [[Hero]] and [[Ship]] cards
-2. Movement keeps the card's [[End]], only **Manage** rotates it
+2. Movement keeps the card's [[End]], see [[End]]
