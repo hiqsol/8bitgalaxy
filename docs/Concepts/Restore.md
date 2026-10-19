@@ -7,7 +7,7 @@ scope: core
 2. **Restore** is done:
 	1. With [[Manage]]
 	2. At the end of own [[Turn]]: 1 [[Structure]] [[ControlledBy]] the player,
-	   more with `+Restore` [[Plus]]
+	   more with `+Restore` [[Plus]], see [[Turn]]
 
 #### Notes
 

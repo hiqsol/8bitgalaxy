@@ -14,8 +14,8 @@ scope: advanced
 	1. **Citadel** - [[Military]]: +3 [[Defense]] to the controller's cards in
 	   its [[Star]]
 	2. **Senate** - [[Culture]]: [[Hand]] size +1
-	3. **Dyson Sphere** - [[Production]]: +2 [[Energy]] each [[Turn]] of the
-	   controller
+	3. **Dyson Sphere** - [[Production]]: +2 [[Energy]] at the end of each
+	   [[Turn]] of the controller
 	4. **Warp Gate** - [[Science]]: [[Distance]] between its Star and every Star
 	   with a [[Colony]] of the controller is 2, as between adjacent Stars
 9. A **Hyperstructure** works for the faction it is [[ControlledBy]]

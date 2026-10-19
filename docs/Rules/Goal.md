@@ -15,12 +15,10 @@ scope: core
 		3. A tie is a draw between the tied factions
 	3. [[Production]]: TBD
 	4. [[Science]]: [[Singularity]]
-4. A [[Faction]] is over when one of:
-	1. **Has no Star**: at the start of own [[Turn]] controls no [[Star]], see
-	   [[ControlledBy]]
-	2. **Can not make a move**: at the start of own [[Turn]] can make neither a
+4. A [[Faction]] is over when one of, see [[Turn]]:
+	1. **Can not make a move**: at the start of own [[Turn]] can make neither a
 	   [[Takeoff]] nor an [[Action]]
-	3. **Has no leader**: at the end of own [[Turn]] has no [[Enabled]] [[Hero]]
+	2. **Has no leader**: at the end of own [[Turn]] has no [[Enabled]] [[Hero]]
 	   on [[Field]], [[Hand]], [[Reserve]] or [[Discard]]
 5. With [[Objective]]s extension the first to get enough victory points wins
 
@@ -41,8 +39,9 @@ scope: core
    [[BuildingFacility|building facilities]]: the faction still moves and can
    defeat the rival leader. The captor gets the facilities, like taking the
    queen in Chess
-6. Losing the last Star does end the game: a faction without a Star has no place
-   for [[Takeoff]] and no source for an action from [[Hand]]
+6. Losing the last Star does end the game: a faction that controls no [[Star]]
+   can not make a move, it has no place for [[Takeoff]] and no source for an
+   action from [[Hand]]
 7. An empty [[Hand]] at the start of own [[Turn]] can end the game too, like an
    unexpected checkmate: spending the whole Hand on defense in [[Combat]] or
    losing it to [[ForceDiscard]] is a real risk, unless a [[Field]] card with

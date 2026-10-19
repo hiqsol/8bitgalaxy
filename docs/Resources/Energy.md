@@ -10,6 +10,7 @@ scope: core
 4. Used from [[Hand]]: spent globally to [[Boost]] any action
 5. Tokens are not cards: they don't count to the [[Hand]] size and stay in Hand
    at the end of [[Turn]]
+6. Tokens in Hand lie open beside the cards: every player sees them
 
 #### Notes
 

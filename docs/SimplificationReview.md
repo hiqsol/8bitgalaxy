@@ -11,7 +11,7 @@ Review of the action rules: their inner logic and ideas to make the rules
 shorter without losing decisions. Complements [[RulesReview]] and
 [[DesignReview]]. Simplifications are numbered `S<n>`.
 
-Answer by number and letter, e.g. "S4 a", "S15 yes", "S16 no".
+Answer by number and letter, e.g. "S4 a", "S4 no".
 
 ## Inner logic of actions
 
@@ -38,6 +38,10 @@ Answer by number and letter, e.g. "S4 a", "S15 yes", "S16 no".
 - **What moves.** [[Actor]]s move on their own, Range above 0, a [[Move]] costs
   only its starter. [[Structure]]s, Range 0, are shifted by [[Manage]] for power
   or carried as cargo of a Move: options, both cost a starter.
+- **No memory.** The table shows the state: [[End]], [[Side]] and [[Slot]]
+  show the states, Energy tokens lie open, the starter always depletes, a card
+  can act in the Turn of its [[Takeoff]], [[Turn]] lists every start and end
+  step, [[Objective]]s check only the current table.
 - **Applied wording.** [[PerformAction]] is reworded along these lines: starter,
   Direction, direct participants at both ends, supporters, **targets** (cards
   the action works on, not participants), one group per IPS.
@@ -60,37 +64,6 @@ Answer by number and letter, e.g. "S4 a", "S15 yes", "S16 no".
 	- d) What it removes: the facility as a target of Research. Today a lost
 	  [[Academy]] stops [[Social]] Research too, not only [[Create]]. If that
 	  pressure is wanted, keep the Direction and only add one for b).
-
-## Bookkeeping
-
-What players must remember or track besides the table. Already without
-bookkeeping: [[End]], [[Side]] and [[Slot]] show the states, the starter always
-depletes ([[Deplete]]), a card can act in the Turn of its [[Takeoff]], overlap
-is physical, the Hero check comes at the end of own [[Turn]] ([[Goal]] note 4).
-
-- [ ] **S15. Star Ability without memory.** [[Star]] 7.5 "usable once per own
-  Turn" makes players remember which Stars they used, [[RulesReview]] P36 h
-  adds a choice when:
-	- a) Income Abilities (Energy, Materials, Draw) are taken at the end of own
-	  Turn from every controlled Star, with [[Restore]].
-	- b) Action Abilities (Power, Defense, Technology) work like a direct
-	  participant: the Star adds its Ability to every own action whose source or
-	  destination it is.
-	- c) Alternative to a) and b): using a Star Ability [[Deplete]]s an own
-	  [[Ready]] Structure there, the state is on the table.
-- [ ] **S16. One end of Turn sequence.** Steps are spread over pages:
-  [[Restore]], [[Goal]] 4.3, [[Singularity]], [[Objective]] 7, Hyperstructure
-  Dyson Sphere income, Discard and [[Draw]]. Start of Turn has Goal 4.1-4.2:
-	- a) [[Turn]] 3 lists every end of Turn step in order, pages link it.
-	- b) [[Turn]] gets a start of Turn step with the Goal checks.
-- [ ] **S17. Objectives on the table.** [[Objective]] "Win 2 Combats" needs a
-  count of past combats:
-	- a) Objectives check only the current table, like [[CulturePoints]]:
-	  control 3 Stars, have 4 technologies, hold a rival's home Star.
-- [ ] **S18. Open tokens.** [[Energy]] tokens are in [[Hand]], whose cards are
-  secret:
-	- a) Tokens lie open beside the Hand: rivals see the Boost reserve without
-	  asking, like a TI trade good.
 
 ## Already proposed
 
