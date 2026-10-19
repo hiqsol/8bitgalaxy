@@ -34,11 +34,11 @@ scope: core
 |  | weak | 3+2 | S | 2 | +1 |  |
 | Ship 4S | strong | 4+1 | S | 2 | [[Exhaust]] | 1P, 2S |
 |  | weak | 3+2 | P | 2 | +1 |  |
-| Hero 1M | strong | 1+1 | M | 1 | [[Recon]] | - |
+| Hero 1M | strong | 1+1 | M | 1 | [[Explore]] | - |
 |  | weak | 1+1 | C | 1 | [[Upgrade]] |  |
 | Hero 1P | strong | 1+1 | P | 1 | [[Recover]] | - |
 |  | weak | 1+1 | S | 1 | [[Recycle]] |  |
-| Hero 2M | strong | 2+1 | M | 2 | [[Recon]] | - |
+| Hero 2M | strong | 2+1 | M | 2 | [[Explore]] | - |
 |  | weak | 2+1 | S | 2 | [[Recycle]] |  |
 | Hero 2C | strong | 2+1 | C | 2 | [[Recover]] | - |
 |  | weak | 2+1 | P | 2 | [[Upgrade]] |  |
@@ -66,8 +66,8 @@ scope: core
 |  | weak | 3+1 | P | +1 Capacity | - |  |
 | Base 4S | strong | 4+1 | S | [[Navigation]] | +3 | 2S |
 |  | weak | 3+1 | S | [[Navigation]] | - |  |
-| Colony 2M | strong | 2+1 | M | [[Recon]] | +2 | - |
-|  | weak | 1+1 | M | [[Recon]] | - |  |
+| Colony 2M | strong | 2+1 | M | [[Explore]] | +2 | - |
+|  | weak | 1+1 | M | [[Explore]] | - |  |
 | Colony 2C | strong | 2+1 | C | [[Academy]] | +2 | - |
 |  | weak | 1+1 | C | [[Academy]] | - |  |
 | Colony 2P | strong | 2+1 | P | [[Extract]] | +2 | - |
@@ -97,3 +97,4 @@ scope: core
 	   with rotation
 3. Technology classes and scopes are in [[Technology]]
 4. Unclear technology from the legacy code: `allacad`
+5. [[Explore]] on a [[Military]] end is printed as **Recon**

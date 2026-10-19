@@ -1,6 +1,6 @@
 ---
 date: 2026-10-16
-updated: 2026-10-17
+updated: 2026-10-19
 status: WIP
 scope: meta
 ---
@@ -75,7 +75,7 @@ Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
 - [ ] **I76. Academy attack details** ([[Combat]] 2.3):
 	- a) [[Reserve]] is face down: the attacker picks blindly or takes from the
 	  top?
-	- b) [[Hand]] is hidden: picked blindly, or by name after [[Recon]]?
+	- b) [[Hand]] is hidden: picked blindly, or by name after Recon ([[Explore]])?
 	- c) Where a Damaged card from a pile goes: it stays Damaged in its pile and
 	  cycles as a dead card until [[Recover]]ed (Mage Knight wounds)?
 	- d) Cards selected from piles are defending participants, so they add their
@@ -153,23 +153,16 @@ Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
 
 ### Removals and simplifications
 
-- [ ] **P55. One handling rule.** Replace the [[Manage]] and [[Transport]]
-  tables with one rule, both tables say exactly this:
+- [ ] **P55. One handling rule.** Replace the [[Manage]] table with the rule
+  that [[Move]] 6 uses for cargo, the table says exactly this:
 	- a) Military handles [[Actor]]s, Culture handles [[Social]] cards,
 	  Production handles [[Industrial]] cards, Science handles anything.
-	- b) Any ship also carries [[Hero]]es and [[Materials]].
-- [ ] **P56. Open Laboratory and Factory.** Prerequisites and [[Cost]] already
-  order the tech tree:
-	- a) Any [[Laboratory]] card with met [[Prerequisites]] can be
-	  [[Research]]ed, any [[Factory]] card [[Create]]d: no piles. Removes pile
-	  Shift in [[Manage]], [[Invent]], [[PlusFactory]], [[PlusLaboratory]];
-	  [[Destroyed]] cards just go to the Factory.
-	- b) Keep piles for table space, drop Shift and Invent.
+	- b) Any ship also carries [[Hero]]es and [[Materials]] (Move only).
 - [ ] **P57. Economy roles.** One job per stockable resource (Eclipse, TtA:
   materials build, money is the wildcard):
 	- a) [[Materials]] pay [[Create]], [[Upgrade]] and [[Recover]] costs at a
 	  facility in the Star where they are: [[Extract]] at [[Asteroids]],
-	  Transport to the Shipyard.
+	  carried to the Shipyard.
 	- b) [[Energy]] [[Boost]]s any action (already in `core`).
 	- c) [[Trade]] turns power into Energy between two own Colonies: a trade
 	  route.
@@ -181,10 +174,10 @@ Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
 	  Heroes (TI).
 	- b) `Consumable`: [[Destroyed]] after use, replaces the [[Tool]] type:
 	  probes, mines, missiles.
-	- c) `Immovable`: can't be moved or transported, replaces the third mobility
+	- c) `Immovable`: can't move or be cargo, replaces the third mobility
 	  type in [[Range]], for Hyperstructures.
 	- d) Card orientations are all taken (strong and weak front, Damaged and
-	  Hidden back), so new states should come from position, like [[Standing]]
+	  Hidden back), so new states should come from position, like [[ActiveFor]]
 	  and [[Pinning]], not markers.
 - [ ] **P59. Stubs** ([[RulesReview]] I21):
 	- a) [[DefSys]]: by P52.
@@ -212,8 +205,6 @@ Not for answering now, kept for later.
   wait.
 - **Upkeep at Shuffle** (Voidfall, Eclipse), only if the leader snowballs in
   playtests: 1 Energy per Star beyond 3.
-- **Overlap**: [[Slot]] overlap is the most per-action bookkeeping. Drop it if
-  AI playtests show no real decisions.
 - **One Space per side**: halves first-duel tiles (24 → 12) and Explore actions,
   at the price of a single route between two Stars.
 - **Drones** (TI fighters): Range 0 Military Units carried by ships, if

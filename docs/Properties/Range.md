@@ -7,7 +7,7 @@ scope: core
 2. **Range** is the [[Distance]] card can cover
 3. Mobility types:
 	1. Moving - can move on itself, **Range** > 0: [[Ship]], [[Hero]]
-	2. Transportable - can't move on itself but can be transported, **Range** =
+	2. Carried - can't move on itself but can be cargo of a [[Move]], **Range** =
 	   0: [[Base]], [[Colony]]
 	3. Immovable - can not be moved: [[Hyperstructure]]
 4. Default value:

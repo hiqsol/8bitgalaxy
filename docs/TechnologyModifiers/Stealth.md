@@ -11,4 +11,4 @@ scope: core
 
 #### Notes
 
-1. Stealth makes hidden moves on the [[Field]] possible, [[Recon]] counters it
+1. Stealth makes hidden moves on the [[Field]] possible, [[Explore]] counters it

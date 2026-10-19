@@ -7,6 +7,6 @@ scope: core
 2. **Colony** represents a populated world
 3. [[Role]] = [[Structure]]
 4. [[Origin]] = [[Social]] created for [[CulturePower]] at [[Academy]]
-5. [[Range]] = 0, can be [[Transport]]ed
+5. [[Range]] = 0, can be cargo of a [[Move]]
 6. [[Size]] = current [[Level]] + [[ExtraCost]]
 7. [[Capacity]] = current [[Level]], can hold [[Materials]]

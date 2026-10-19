@@ -40,6 +40,10 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	1. **explicit** - printed on the card
 	2. **implicit** - derived from other properties
 	3. **physical** - [[Side]] and [[End]]
+3. [[Component]] properties, of cards and tiles: [[Side]], [[ExtraCost]],
+   [[Cost]]
+4. [[Star]] and [[Space]] have own properties: Star Size and Type are not card
+   [[Size]] and [[Type]]
 
 #### Notes
 

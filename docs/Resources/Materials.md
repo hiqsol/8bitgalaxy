@@ -4,9 +4,10 @@ scope: advanced
 ---
 
 1. **Materials** is stockable [[Resource]]
-2. Represented as tokens of [[Size]] 1 or 5, see [[Component]]
+2. **Materials** is a token in a [[Star]], the same token in [[Hand]] is
+   [[Energy]], see [[Component]]
 3. Stored at [[Star]] or card
-4. Can be moved with [[Transport]]
+4. Carried as cargo of a [[Move]]
 5. Can be used to [[Boost]] action
 6. Spent locally - can be added to action starting or finishing where it is
    stored

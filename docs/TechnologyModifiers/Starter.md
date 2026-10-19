@@ -8,7 +8,8 @@ scope: advanced
    [[Action]], see [[PerformAction]]:
 	1. Its **source** is its own [[IPS]]
 	2. It is a direct participant there and can use all of its abilities
-	3. It always [[Deplete]]s after the action, even when it moved or fought
+	3. It always [[Deplete]]s after the action, even when it moved or fought,
+	   see [[Deplete]]
 	4. A [[Structure]] must be [[Ready]]
 
 #### Notes

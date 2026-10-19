@@ -11,7 +11,7 @@ scope: core
 	2. [[Culture]]: at [[Twilight]] has the most **Culture points**:
 		1. Sum of current [[Level]]s of [[Colony]] cards on the [[Field]]
 		   [[ControlledBy]] the faction
-		2. Plus [[CulturePoints]] printed on [[Standing]] cards
+		2. Plus [[CulturePoints]] printed on [[ActiveFor|active]] cards
 		3. A tie is a draw between the tied factions
 	3. [[Production]]: TBD
 	4. [[Science]]: [[Singularity]]

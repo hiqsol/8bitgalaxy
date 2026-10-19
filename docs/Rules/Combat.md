@@ -18,7 +18,7 @@ scope: core
 5. Parties can bluff by adding [[Hidden]] cards from [[Hand]], also at rival's
    [[Turn]]
 	1. Hidden card can be revealed by its player at any time
-	2. Player can reveal rival's hidden cards with [[Explore]] or [[Recon]]
+	2. Player can reveal rival's hidden cards with [[Explore]]
 6. Parties can [[Boost]] with cards at the moment when they add the card, not
    later
 7. Defending players can add non-[[Military]] cards
@@ -37,14 +37,13 @@ scope: core
 	3. If the attacker wins, their surviving attacking [[Unit]]s move to free
 	   [[Slot]]s of the destination [[Star]], keeping their [[End]]. Units that
 	   don't fit stay in the source.
-	4. Direct participants don't [[Deplete]], except the starter
-	5. [[Deplete]] supporters
+	4. Then [[Deplete]]
 
 #### Notes
 
 1. Combat has no random resolution, but hidden commitments keep the result from
    being predetermined.
-2. Multiple rounds make [[Hidden]] cards and [[Recon]] relevant.
+2. Multiple rounds make [[Hidden]] cards and [[Explore]] relevant.
 3. Players make decisions, take risks, prepare surprises and bluff.
 4. Attacking the [[Academy]] reaches [[Hero]]es in the deck, so leaders can be
    defeated, see [[Goal]]

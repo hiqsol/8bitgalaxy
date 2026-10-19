@@ -73,7 +73,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- a) [[Range]] 5 adds "Range from Support" to a group: with several groups,
 	  which one gets a [[Hand]] supporter's Range? Recommended: one group of the
 	  player's choice.
-	- b) Cards in the destination may join a [[Move]] or [[Transport]], but they
+	- b) Cards in the destination may join a [[Move]], but they
 	  don't move, so they deplete, and their Range and [[Capacity]] don't help
 	  the moving group: they add only technologies, e.g. [[Navigation]].
 	  Intended?
@@ -85,10 +85,6 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	  [[Ability]] or two for a supporter?
 	- d) [[Damaged]] 7: own [[Hidden]] cards give [[Control]] but don't keep a
 	  Damaged card from [[Destroyed]], they are not Enabled. Intended?
-	- e) [[VisibleFor]] 2.1: a Hidden card is not Damaged, so it is visible for
-	  everyone, against [[Hidden]] 3. Recommended: visible when front Side up,
-	  own, revealed to the player, or Damaged with the player's Enabled card in
-	  its Star.
 	- f) [[Combat]] 7 lets defenders add non-Military cards, as if attackers
 	  can't, but [[Attack]] 4.1 needs only one Military Actor.
 	- g) [[DoNotDeplete]] 2.2: a kept card from Hand goes to [[Reserve]]: on
@@ -96,6 +92,13 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- h) [[Materials]] storage: its note needs a [[Colony]] in the Star,
 	  [[Base]] 7 holds Materials, [[Extract]], [[Raid]], [[Salvage]] and
 	  [[Event]]s put them in a Star. See [[DesignReview]] P57.
+- [ ] **I93. Token passage.** One token is [[Energy]] in [[Hand]] and
+  [[Materials]] in a [[Star]] ([[Component]]), but only [[Export]] and
+  [[Smuggle]] turn Materials into Energy, nothing turns Energy into Materials:
+	- a) Recommended: Hand → Star by [[Takeoff]], a token to a Star the player
+	  controls, like a card, it takes no [[Slot]].
+	- b) Star → Hand by [[Manage]], 1 power per token, from a Star the player
+	  controls.
 
 ### Extensions
 
@@ -133,8 +136,8 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	  [[Capacity]] ≤ 2 pass. d) rough: length +1 for all but [[Military]]
 	  [[Ship]]s.
 	- **Nebula** (Cost 1, obstacle, TI-like): a) a group entering it must stop
-	  at the next Star, it can't go further this action. b) blind: [[Recon]] and
-	  [[Explore]] can't look past it. c) shroud: cards passing it may become
+	  at the next Star, it can't go further this action. b) blind: [[Explore]]
+	  can't look past it. c) shroud: cards passing it may become
 	  [[Hidden]] for free. d) static: no [[Support]] from the [[Field]] through
 	  it.
 	- **Black hole** (Cost 3, shortcut): a) slingshot: length 0. b) gravity
@@ -146,7 +149,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	  passable, but no Explore cost, its back shows it (a known wall).
 	- **[[HyperPass]]** (Cost 4, best, a Space type): a) length 0. b) wormhole
 	  pair: two HyperPass tiles anywhere are adjacent to each other. c) highway:
-	  length 0 and [[Transport]] Capacity +1.
+	  length 0 and [[Move]] cargo Capacity +1.
 	- **Relic** (Cost 4, new type, like Eclipse discovery tiles): a) the first
 	  explorer takes the top card of a [[Laboratory]] pile to [[Factory]]. b)
 	  the first explorer gains 2 [[Energy]]. Then it's Normal.
@@ -162,7 +165,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- c) Types whose chosen variants need `advanced` rules are replaced with
 	  Normal.
 - [ ] **P25. Core technologies on cards** (replacing duplicates):
-	- a) [[ForceDiscard]] on Hero 2M strong, instead of [[Recon]] (Recon stays
+	- a) [[ForceDiscard]] on Hero 2M strong, instead of [[Explore]] (Recon stays
 	  on Hero 1M and Colony 2M).
 	- b) [[Express]] on Colony 4C, instead of [[Export]] (Materials are
 	  `advanced`).
@@ -196,7 +199,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- c) Ability: +1 [[Materials]] stored there.
 	- d) Ability: +1 [[Defense]] to own defenders there.
 	- e) Ability: a [[Technology]] for own cards there, e.g. [[Shipyard]],
-	  [[Academy]], [[Recon]].
+	  [[Academy]], [[Explore]].
 	- f) Ability: [[Draw]] 1 card, rare.
 	- g) [[ExtraCost]] grows with the Ability: Energy 1, Power, Materials and
 	  Defense 2, Technology 3, Draw 4.
@@ -207,6 +210,13 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 - [ ] **P62. Defense** in [[Defense]] and [[Combat]]:
 	- a) Defense = [[AttackPower]], at least 1, for every card.
 	- b) A defending supporter adds its Defense as its one [[Ability]].
+- [ ] **P66. Weak Structure ends.** Weak ends can provide abilities, just
+  weaker ([[End]] 8), but every weak Structure end in the [[Deck]] has no
+  [[SecondaryAbility]]:
+	- a) Weak end Secondary is one less than the strong end's: Colony 2x +1,
+	  Base 4x and Colony 4x +2, Base 2x stays without.
+	- b) A [[Depleted]] Structure then still gives some [[Power]], so
+	  [[Restore]] matters less: an alternative to a) is +1 on 4x weak ends only.
 - [ ] **P65. Interdiction.** [[Pinning]] stops moving cards only. A
   [[Military]] [[TechnologyModifier]] (`advanced`) extends it: rival Enabled
   Actors with it in a [[Star]] also stop the [[Range]] of other actions through

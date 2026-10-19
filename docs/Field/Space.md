@@ -18,7 +18,7 @@ aliases: [InterStellar Space]
 	4. A tile connects to the Stars it borders and to the next tiles along the
 	   edges
 4. **Space** tiles are hidden (turned face down) at the beginning of the game
-5. They can be revealed with [[Explore]] or [[Recon]] action
+5. They can be revealed with [[Explore]] action
 6. Cards can't stop and stay in space, they can only pass by
 	1. Cards can't pass a hidden **Space**
 7. **Space** tiles have multiple properties:

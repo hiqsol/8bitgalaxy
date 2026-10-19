@@ -20,4 +20,5 @@ aliases: [Pocket]
 
 #### Notes
 
-1. Overlap is a new mechanic, not seen in other games
+1. Overlap is a new mechanic, not seen in other board games: cards naturally
+   get one under another and the [[SecondaryAbility]] is not visible

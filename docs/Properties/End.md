@@ -28,6 +28,7 @@ scope: core
 	3. Back [[Side]] of any card:
 		1. Damaged end up - the card is [[Damaged]]
 		2. Hidden end up - the card is [[Hidden]]
+8. Both ends can provide abilities, the weak end's are just weaker
 
 #### Notes
 

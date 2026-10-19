@@ -22,10 +22,9 @@ scope: core
 | [[Upgrade]] | Action | C, P | core | Hero 1M weak, Hero 2C weak, Hero 3M weak, Hero 3C strong, Hero 4M weak, Hero 4C strong, Ship 4C strong, Ship 4P strong |
 | [[Recover]] | Action | C, P | core | Hero 1P strong, Hero 2C strong, Hero 4M weak, Hero 4C strong, Colony 4P |
 | [[Retreat]] | Modifier | M | core | Ship 2M strong |
-| [[Explore]] | Action | S | core | Ship 2S strong, Colony 2S |
+| [[Explore]] | Action | M, S | core | Ship 2S strong, Colony 2S, Hero 1M strong, Hero 2M strong, Colony 2M |
 | [[Express]] | Modifier | C | core | - |
 | [[ForceDiscard]] | Modifier | M | core | - |
-| [[Recon]] | Action | M | core | Hero 1M strong, Hero 2M strong, Colony 2M |
 | [[Stealth]] | Modifier | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
 | [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
 | [[Settle]] | Modifier | C | core | - |

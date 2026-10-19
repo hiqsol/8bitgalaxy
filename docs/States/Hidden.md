@@ -15,9 +15,9 @@ scope: core
 	3. Can be attacked
 5. **Hidden** card on [[Field]] is revealed:
 	1. When attacked
-	2. When it takes part in any action other than [[Move]] or [[Transport]]
+	2. When it takes part in any action other than [[Move]]
 	3. By its player at any time of own [[Turn]], for free
-	4. By rival's [[Explore]] or [[Recon]], if the rival chooses so
+	4. By rival's [[Explore]], if the rival chooses so
 	5. By its player when a rival group passes its [[Star]], to pin the group,
 	   see [[Pinning]]
 6. In [[Combat]] parties bluff with **hidden** cards from [[Hand]]

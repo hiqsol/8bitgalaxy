@@ -19,7 +19,7 @@ scope: core
 		   destination IPS
 		2. **Supporters**: the starter from Hand, selected cards from Hand and
 		   from other IPSs, see [[Support]]
-	5. **Targets**: cards the action works on, e.g. the cargo of [[Transport]]
+	5. **Targets**: cards the action works on, e.g. the cargo of [[Move]]
 	   or the card to [[Recover]]: targets are not participants
 2. **Direct participants** use all of their abilities, **supporters** only one
 3. Total requirements of the action, used technologies included, must be
@@ -34,16 +34,18 @@ scope: core
 5. Action can be extended (increased list of participants and used abilities)
    gradually with revealed information. For example for [[Explore]] or
    [[Combat]]
-6. **After action** [[Deplete]] must be applied to all participants unless the
-   action defines an exception
+6. **After action** participants [[Deplete]]
 7. In [[Combat]] the defender's cards in the destination take part as defending
    direct participants, see [[Combat]]
 
 #### Notes
 
-1. A direct participant on [[Field]] gives more than a card in [[Hand]]: all of
+1. In short: to act, play a starter from Hand. Pick a source Star you control
+   and a destination. Your cards at both places take part with all abilities;
+   cards from Hand, and from other Stars within Range, help with one ability
+   each. Their abilities must cover the requirements. Then the used cards
+   deplete, except those that moved or fought; the starter always does.
+2. A direct participant on [[Field]] gives more than a card in [[Hand]]: all of
    its abilities instead of one. That's what [[Takeoff]] is for.
-2. Positions matter: a card acts fully at either end of the Direction, from any
+3. Positions matter: a card acts fully at either end of the Direction, from any
    other IPS it gives one ability and must reach the destination
-3. In short: a starter, the cards at both ends, and help from Hand and from
-   other Stars

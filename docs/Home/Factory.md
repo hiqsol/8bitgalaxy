@@ -12,3 +12,4 @@ scope: core
 
 1. **Factory** is the pool of cards to (re)build, that's why [[Destroyed]] cards
    go there
+2. Managing own piles is a subgame, see [[Laboratory]]

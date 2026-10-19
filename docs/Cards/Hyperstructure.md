@@ -7,7 +7,7 @@ scope: advanced
 2. **Hyperstructure** is a wonder with a strong permanent effect
 3. [[Role]] = [[Structure]]
 4. [[Origin]] = both [[Social]] and [[Industrial]], build two times
-5. [[Range]] = 0 and cannot be [[Transport]]ed
+5. [[Range]] = 0 and cannot be cargo of a [[Move]]
 6. [[Size]] = current [[Level]] + [[ExtraCost]]
 7. [[Capacity]] = current [[Level]]
 8. List, one per [[Class]]:

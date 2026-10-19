@@ -8,14 +8,14 @@ scope: core
 3. **Star** contains [[IPS]] - Interplanetary Space
 4. **Stars** are hidden (turned face down) at the beginning of the game, except
    home Stars
-5. Hidden **Star** is revealed with [[Explore]] or [[Recon]] action
+5. Hidden **Star** is revealed with [[Explore]] action
 6. Cards can't pass or enter a hidden **Star**
 7. **Star** properties:
 	1. **Size** - the main property: total number of [[Slot]]s in its [[IPS]]
 	2. **Split** of the Size between [[Unit]] and [[Structure]] Slots, see
 	   [[IPS]]
-	3. **Type**: one of the [[Class]]es, it sets the class of a [[Power]]
-	   ability
+	3. **Type**: one of the [[Class]]es, shown by its color, it sets the class
+	   of a [[Power]] ability
 	4. **Cost** required to [[Explore]]: Size + [[ExtraCost]]
 	5. [[Ability]] usable once per own [[Turn]] by the player who controls the
 	   Star, see [[ControlledBy]]

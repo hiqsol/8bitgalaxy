@@ -9,5 +9,5 @@ scope: advanced
 4. [[Origin]] = [[Industrial]]
 5. [[Range]] = 0, can't [[Move]]
 6. [[Size]] = current [[Level]] + [[ExtraCost]]
-7. [[Capacity]] = 0, can't [[Transport]]
+7. [[Capacity]] = 0, can't carry cargo
 8. **Tool** is [[Destroyed]] after use

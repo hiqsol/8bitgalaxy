@@ -7,8 +7,8 @@ scope: core
    [[Military]] [[Actor]]s:
 	1. The group can't pass through such a Star, it can finish there
 	2. The rival can allow the group to pass
-2. **Pinning** stops moving cards only, on every route through Stars: [[Move]],
-   [[Transport]], [[Attack]]
+2. **Pinning** stops moving cards only, on every route through Stars: [[Move]]
+   and [[Attack]]
 	1. Other [[Range]] checks ignore it: [[Explore]] reach, a remote
 	   [[Support]] group, [[Create]] placement
 3. [[Hidden]] cards neither pin nor get pinned

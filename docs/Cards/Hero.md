@@ -10,7 +10,7 @@ scope: core
 5. [[Range]] = current [[Level]] - can [[Move]]
 6. [[Size]] = current [[Level]]
 7. [[Capacity]] = current [[Level]]
-	1. Can not [[Transport]] on itself but can increase [[Capacity]] with
+	1. Can not carry cargo on itself but can increase [[Capacity]] with
 	   current [[Level]]
 
 #### Notes

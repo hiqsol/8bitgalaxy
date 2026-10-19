@@ -3,21 +3,18 @@ status: draft
 scope: core
 ---
 
-1. After [[PerformAction]] is done all participants are depleted unless the
-   action defines an exception
-	1. The starter always depletes, a [[Field]] starter too: the exceptions
-	   below don't apply to it, see [[Starter]]
+1. After [[PerformAction]] is done participants are depleted:
+	1. The starter and [[Support]]ers always, a [[Field]] starter too, see
+	   [[Starter]]
+	2. Direct participants unless they moved or fought: the moving cards of
+	   [[Move]], the direct participants of [[Combat]]
 2. Cards get depleted differently:
 	1. [[Unit]] cards, from the [[Field]] or [[Hand]], go to [[Discard]] pile
 	2. [[Structure]] cards become (or stay) [[Depleted]]
-3. Exception: [[Move]] doesn't deplete moving cards, they stay where they
-   finished
-	1. [[Support]]ers of the [[Move]] are depleted as usual
-4. [[Transport]] doesn't deplete moving ships or transported cards
-	1. Supporters of the Transport are depleted as usual
-5. [[Combat]] doesn't deplete direct participants: survivors stay or move in
-	1. Supporters of the Combat are depleted as usual
+3. Targets are not participants, they don't deplete, e.g. cargo of [[Move]]
 
 #### Notes
 
 1. Keep from depleting technology: [[DoNotDeplete]]
+2. Cards that move or fight hold the ground, the starter always pays: nobody has
+   to remember which cards already moved

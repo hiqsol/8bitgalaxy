@@ -7,6 +7,6 @@ scope: core
 2. **Ship** represents a star ship
 3. [[Role]] = [[Actor]]
 4. [[Origin]] = [[Industrial]] created for [[ProductionPower]] at [[Shipyard]]
-5. [[Range]] = current [[Level]] - can [[Move]] and [[Transport]]
+5. [[Range]] = current [[Level]] - can [[Move]] and carry cargo
 6. [[Size]] = current [[Level]] + [[ExtraCost]]
 7. [[Capacity]] = current [[Level]]

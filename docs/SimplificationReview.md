@@ -1,5 +1,6 @@
 ---
 date: 2026-10-18
+updated: 2026-10-19
 status: WIP
 scope: meta
 ---
@@ -10,7 +11,7 @@ Review of the action rules: their inner logic and ideas to make the rules
 shorter without losing decisions. Complements [[RulesReview]] and
 [[DesignReview]]. Simplifications are numbered `S<n>`.
 
-Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
+Answer by number and letter, e.g. "S4 a", "S11 yes", "S14 no".
 
 ## Inner logic of actions
 
@@ -36,36 +37,12 @@ Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
   power), it costs a Takeoff and comes back to the deck when used.
 - **What moves.** [[Actor]]s move on their own, Range above 0, a [[Move]] costs
   only its starter. [[Structure]]s, Range 0, are shifted by [[Manage]] for power
-  or carried by [[Transport]]. So Move and Manage don't overlap, Transport
-  and Manage Shift are options: both cost a starter.
+  or carried as cargo of a Move: options, both cost a starter.
 - **Applied wording.** [[PerformAction]] is reworded along these lines: starter,
   Direction, direct participants at both ends, supporters, **targets** (cards
   the action works on, not participants), one group per IPS.
 
 ## Simplifications
-
-### Wording
-
-- [ ] **S1. The rule in one paragraph.** Put a short form on top of
-  [[PerformAction]] notes, for a rulebook and for AI players:
-	- a) "To act, play a starter from Hand. Pick a source Star you control and a
-	  destination. Your cards at both places take part with all abilities; cards
-	  from Hand, and from other Stars within Range, help with one ability each.
-	  Their abilities must cover the requirements. Then the used cards deplete,
-	  except those that moved or fought."
-- [ ] **S2. Depletion in one rule.** [[Deplete]] lists three exceptions,
-  repeated in [[Move]] 7, [[Transport]] 9-10 and [[Combat]] 10.4-5:
-	- a) One rule in [[Deplete]]: the starter and supporters always deplete,
-	  direct participants deplete unless they moved or fought ([[Move]],
-	  [[Transport]], [[Combat]]). Action pages only link it.
-- [ ] **S3. Distance.** "The sum of lengths of all its tiles but the first one"
-  is exact but hard to read:
-	- a) Same values, plain words: each [[Space]] adds its Length, each [[Star]]
-	  entered adds 1. Inside one Star nothing is entered: 0.
-	- b) Stars add 0, only Spaces count: adjacent Stars are at Distance 1. Every
-	  [[Range]] reaches twice as far, so the [[Deck]] needs new values, and a
-	  [[Hidden]] card with Range 1 reaches the next Star alone. Not recommended
-	  before playtests.
 
 ### Actions
 
@@ -76,69 +53,40 @@ Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
 	  player, no destination, no [[Range]].
 	- b) The same for [[Legacy]], [[Recall]], [[Forecast]] and [[Invent]], which
 	  don't name a Direction now.
-- [ ] **S5. Move carries cargo, Transport goes.** [[Transport]] repeats
-  [[Move]]: Range, free Slots, no depletion, [[Pinning]]:
-	- a) One Move: the moving group carries cargo within its total [[Capacity]],
-	  the handling rule of [[DesignReview]] P55 says who carries what.
-	- b) A [[Hero]] adds Capacity, but cargo needs a [[Ship]] in the group, as
-	  now.
-	- c) Removes the Transport page, [[Deplete]] 4 and the Transport table.
-	  [[Export]], [[Smuggle]] and [[HyperPass]] P24 c refer to Move instead.
-- [ ] **S6. Explore and Recon are one action.** [[Recon]] is [[Explore]] paid
-  with [[AttackPower]]:
-	- a) **Explore** is a [[Military]] and [[Science]] [[TechnologyAction]],
-	  like [[Create]] is Culture and Production. Flavour names: **Recon** for
-	  Military, **Survey** for Science.
-	- b) Looking at a rival's [[Hand]] through an [[Academy]] stays Military
-	  only, or opens to both.
-	- c) One page and one Cost rule instead of two, the [[Technology]] table
-	  keeps the cards.
-- [ ] **S7. Drop Slot overlap.** The [[DesignReview]] idea **Overlap**, as a
-  proposal:
-	- a) Every Field card has its [[SecondaryAbility]], a [[Depleted]] Structure
-	  still loses it.
-	- b) Removes Slot heights, Move within a Star ([[Move]] 2.1), Manage Shift
-	  between Slots.
-	- c) A Star just holds as many cards as its Size, see [[IPS]].
-	- d) Cost: the one mechanic "not seen in other games", see [[Slot]]. Try it
-	  in AI playtests first: if nobody shifts, drop it.
-- [ ] **S8. Manage only rotates.** After S7 and [[DesignReview]] P56 there is
-  nothing left to shift:
-	- a) **Manage**: pay 1 power to rotate a card: [[Restore]] or [[Deplete]] a
-	  [[Structure]], switch an [[Actor]]'s [[Class]].
-	- b) Its table goes with P55.
+	- c) Why: nothing on the [[Field]] changes, the destination only adds a
+	  Range check. Usually the player picks the facility's Star as the source,
+	  [[Distance]] 0, so the check costs nothing but rules text and a step for
+	  AI players. Half the Home actions name no Direction at all.
+	- d) What it removes: the facility as a target of Research. Today a lost
+	  [[Academy]] stops [[Social]] Research too, not only [[Create]]. If that
+	  pressure is wanted, keep the Direction and only add one for b).
 
-### Game end
+### Turn
 
-- [ ] **S9. Plain over checks.** [[Goal]] 4.2 "can make neither a Takeoff nor an
-  Action" asks to search for a legal move:
-	- a) Replace it with: at the start of own [[Turn]] the [[Hand]] is empty and
-	  no [[Field]] card has [[Starter]].
-	- b) Together with 4.1 (no Star) and 4.3 (no leader) all three are visible
-	  on the table.
+- [ ] **S14. Takeoff is an action.** [[Goal]] 4.2 "can make neither a Takeoff
+  nor an Action" and [[Turn]] 1 list two ways to play a card:
+	- a) **Takeoff** becomes a [[BasicAction]]: the starter is the card itself,
+	  the destination is a [[Star]] [[ControlledBy]] the player, no [[Range]], no
+	  [[Power]], it needs a free [[Slot]].
+	- b) Its starter doesn't [[Deplete]]: it lands, the one exception, as it is
+	  also the target.
+	- c) Gains: one way to play a card, Goal 4.2 reads "can make no action",
+	  and modifiers can apply, e.g. Takeoff to a Star within Range, or two cards
+	  with a [[Plus]].
+	- d) Costs: the exception of b), and Takeoff stays special anyway: a
+	  [[Hidden]] End, no Direction. Recommended only together with c) modifiers.
 
 ### States and properties
 
-- [ ] **S10. ActiveFor merges into Standing.** [[ActiveFor]] (not Damaged,
-  controlled) and [[Standing]] (Enabled, controlled, on Field, in Hand or
-  History) are nearly one state:
-	- a) **Standing**: not [[Damaged]] and [[ControlledBy]] the faction: on the
-	  Field, in Hand or in [[History]]. Participants are standing cards.
-	- b) A [[Hidden]] card is standing too, it is revealed to count for
-	  [[CulturePoints]] or [[Singularity]].
-	- c) Removes the ActiveFor page.
-- [ ] **S11. Damaged cards are open.** [[VisibleFor]] decides who may look at a
-  Damaged card, and [[RulesReview]] I88 e shows it leaks Hidden cards:
-	- a) Anyone may look at a [[Damaged]] card, nobody at a rival's [[Hidden]]
-	  card. A wreck is no secret.
-	- b) Removes the VisibleFor page and I88 e.
-- [ ] **S12. Size is Cost.** [[Size]] is current [[Level]] + [[ExtraCost]], but
-  Level only for a [[Hero]], while [[Cost]] is strong Level + ExtraCost:
-	- a) **Size** = Cost for every card: one number, it doesn't change with
-	  rotation ([[Deck]] note 2.3 wants that for Ships already).
-	- b) A Hero gets 1 heavier, a [[Depleted]] Structure keeps its full Size in
-	  [[Transport]].
-	- c) Removes the Size defaults and the Hero exception.
+- [ ] **S11. VisibleFor into Hidden.** [[VisibleFor]] 2.1 now says "not
+  [[Hidden]]", so 2.2 lets a player with a card in the Star look at a rival's
+  Hidden card there, against [[Hidden]] 3 and the bluff in [[Combat]]:
+	- a) Presence doesn't reveal: the page says only that a Hidden card is
+	  known to its faction, which is Hidden 3, and that a [[Damaged]] card is
+	  open. Remove the page, add "anyone may look at a Damaged card" to Damaged.
+	  Recommended.
+	- b) Presence reveals (sensors): move 2.2 to Hidden as a rule, still no
+	  page needed. [[Explore]] of a card in the source Star is then useless.
 - [ ] **S13. Control without levels.** On top of [[DesignReview]] P46:
 	- a) A [[Star]] is [[ControlledBy]] the only faction with [[Actor]]s there;
 	  with no Actors, by the only faction with [[Structure]]s; else by nobody.
@@ -150,5 +98,5 @@ Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
 ## Already proposed
 
 Simplifications from other reviews: [[DesignReview]] P55 (one handling rule),
-P56 (open Laboratory and Factory), P57 (economy roles), P58 (traits instead of
-types), [[RulesReview]] P34 (action template), P28 (combat sequence).
+P57 (economy roles), P58 (traits instead of types), [[RulesReview]] P34 (action
+template), P28 (combat sequence).
