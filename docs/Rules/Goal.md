@@ -16,8 +16,8 @@ scope: core
 	3. [[Production]]: TBD
 	4. [[Science]]: [[Singularity]]
 4. A [[Faction]] is over when one of:
-	1. **Has no Star**: at the start of own [[Turn]] controls no [[Star]], not
-	   even by consensus with a rival, see [[ControlledBy]]
+	1. **Has no Star**: at the start of own [[Turn]] controls no [[Star]], see
+	   [[ControlledBy]]
 	2. **Can not make a move**: at the start of own [[Turn]] can make neither a
 	   [[Takeoff]] nor an [[Action]]
 	3. **Has no leader**: at the end of own [[Turn]] has no [[Enabled]] [[Hero]]

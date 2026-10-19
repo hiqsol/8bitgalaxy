@@ -14,7 +14,6 @@ scope: core
 4. Card states relative to a faction or player:
 	1. [[ActiveFor]]
 	2. [[ControlledBy]]
-	3. [[VisibleFor]]
 5. [[Star]] states:
 	1. [[ControlledBy]]
 	2. [[Disputed]]

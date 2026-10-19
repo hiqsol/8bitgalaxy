@@ -16,6 +16,7 @@ aliases: [Disabled, Exhausted]
 6. A Damaged card that becomes Damaged again is [[Destroyed]]
 7. A Damaged card in a [[Star]] where its [[Faction]] has no [[Enabled]] card is
    [[Destroyed]]
+8. Anyone may look at a **Damaged** card: a wreck is no secret
 
 #### Notes
 

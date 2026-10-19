@@ -11,7 +11,7 @@ Review of the whole design against 4X and deck-building games: what is missing,
 broken, worth adding or removing. Complements [[RulesReview]] (minimal duel),
 numbers continue it.
 
-Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
+Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 
 ## Lessons from other games
 
@@ -43,9 +43,6 @@ Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
 
 ## Issues
 
-- [ ] **I67. Control tie.** [[ControlledBy]] 2.1 "not less Control than others"
-  gives a Star to both factions with Actors, [[Disputed]] gives it to nobody.
-  Consensus is a [[Politics]] notion inside core. → P46
 - [ ] **I69. Upgrade and Recover source.** [[BuildingFacility]] and
   [[Technology]] say a facility provides Create, Upgrade and Recover,
   [[Academy]] and [[Shipyard]] say only Create, and 12 card ends carry
@@ -130,15 +127,9 @@ Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
 
 ### Fixes
 
-- [ ] **P46. Control.** [[ControlledBy]]:
-	- a) The faction with strictly the highest [[Control]] controls the Star.
-	- b) An Actor tie is [[Disputed]].
-	- c) A Structure tie: every faction controls the Star and its own
-	  Structures.
-	- d) Consensus moves to [[Politics]].
 - [ ] **P48. Hidden movement.** Combinable:
-	- b) Cards hidden by [[Stealth]] keep their real Range and Capacity: a
-	  reason for Stealth beyond the free hidden [[Takeoff]].
+	- b) Cards hidden by [[Stealth]] keep their real Range and Capacity: Stealth
+	  pays off, though rivals can't check the values.
 	- c) Hidden [[Structure]]s don't move.
 
 ### Additions

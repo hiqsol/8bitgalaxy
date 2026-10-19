@@ -4,22 +4,27 @@ scope: core
 ---
 
 1. **Controlled by** is a [[Star]] and card [[State]] relative to a [[Faction]]
-2. [[Star]] is **controlled by** faction when either:
-	1. The faction has not less [[Control]] in the system than others
-	2. There is consensus between all factions with [[Actor]] cards in the
-	   system
+2. [[Star]] is **controlled by** the faction with strictly the highest
+   [[Control]] in it:
+	1. A tie of [[Actor]] Control: the Star is [[Disputed]], nobody controls it
+	2. A tie of [[Structure]] Control: every tied faction controls the Star
 3. [[Actor]] is **controlled by** its [[Faction]] unless [[Damaged]]
-4. [[Structure]] is **controlled by** the faction with the highest [[Control]]
-   in its [[Star]]
-	1. If equal, each faction controls its own structures
+4. [[Structure]] is **controlled by**:
+	1. The faction that controls its Star alone
+	2. Its own faction in a Star controlled by several factions
+	3. Its own faction in a [[Disputed]] Star if the faction has Actors there,
+	   else by nobody: it is out of control, nobody can use it
 
 #### Notes
 
 1. Consequences from the rules on examples:
 	1. single faction is present in a star - the faction controls all the
 	   structures
-	2. single faction has [[Actor]]s in a star - the faction controls all the
-	   structures
-	3. no [[Actor]]s in a star - every faction controls only own structures
-	4. [[Disputed]] star (no consensus) - nobody controls the star, every
-	   faction controls only own structures
+	2. single faction has [[Actor]]s in a star - the faction controls the star
+	   and all the structures, rival ones captured
+	3. no [[Actor]]s in a star - every faction with structures controls the
+	   star and its own structures
+	4. [[Disputed]] star - nobody controls the star, every faction with Actors
+	   controls its own cards, structures of a faction with only structures
+	   there are out of control
+2. Agreements on control are [[Politics]], not core

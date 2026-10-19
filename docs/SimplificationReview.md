@@ -11,7 +11,7 @@ Review of the action rules: their inner logic and ideas to make the rules
 shorter without losing decisions. Complements [[RulesReview]] and
 [[DesignReview]]. Simplifications are numbered `S<n>`.
 
-Answer by number and letter, e.g. "S4 a", "S11 yes", "S14 no".
+Answer by number and letter, e.g. "S4 a", "S15 yes", "S16 no".
 
 ## Inner logic of actions
 
@@ -61,39 +61,36 @@ Answer by number and letter, e.g. "S4 a", "S11 yes", "S14 no".
 	  [[Academy]] stops [[Social]] Research too, not only [[Create]]. If that
 	  pressure is wanted, keep the Direction and only add one for b).
 
-### Turn
+## Bookkeeping
 
-- [ ] **S14. Takeoff is an action.** [[Goal]] 4.2 "can make neither a Takeoff
-  nor an Action" and [[Turn]] 1 list two ways to play a card:
-	- a) **Takeoff** becomes a [[BasicAction]]: the starter is the card itself,
-	  the destination is a [[Star]] [[ControlledBy]] the player, no [[Range]], no
-	  [[Power]], it needs a free [[Slot]].
-	- b) Its starter doesn't [[Deplete]]: it lands, the one exception, as it is
-	  also the target.
-	- c) Gains: one way to play a card, Goal 4.2 reads "can make no action",
-	  and modifiers can apply, e.g. Takeoff to a Star within Range, or two cards
-	  with a [[Plus]].
-	- d) Costs: the exception of b), and Takeoff stays special anyway: a
-	  [[Hidden]] End, no Direction. Recommended only together with c) modifiers.
+What players must remember or track besides the table. Already without
+bookkeeping: [[End]], [[Side]] and [[Slot]] show the states, the starter always
+depletes ([[Deplete]]), a card can act in the Turn of its [[Takeoff]], overlap
+is physical, the Hero check comes at the end of own [[Turn]] ([[Goal]] note 4).
 
-### States and properties
-
-- [ ] **S11. VisibleFor into Hidden.** [[VisibleFor]] 2.1 now says "not
-  [[Hidden]]", so 2.2 lets a player with a card in the Star look at a rival's
-  Hidden card there, against [[Hidden]] 3 and the bluff in [[Combat]]:
-	- a) Presence doesn't reveal: the page says only that a Hidden card is
-	  known to its faction, which is Hidden 3, and that a [[Damaged]] card is
-	  open. Remove the page, add "anyone may look at a Damaged card" to Damaged.
-	  Recommended.
-	- b) Presence reveals (sensors): move 2.2 to Hidden as a rule, still no
-	  page needed. [[Explore]] of a card in the source Star is then useless.
-- [ ] **S13. Control without levels.** On top of [[DesignReview]] P46:
-	- a) A [[Star]] is [[ControlledBy]] the only faction with [[Actor]]s there;
-	  with no Actors, by the only faction with [[Structure]]s; else by nobody.
-	- b) A Structure is controlled by the controller of its Star, if nobody
-	  controls the Star, by its own faction.
-	- c) Removes the [[Control]] levels page and [[Disputed]], consensus moves
-	  to [[Politics]].
+- [ ] **S15. Star Ability without memory.** [[Star]] 7.5 "usable once per own
+  Turn" makes players remember which Stars they used, [[RulesReview]] P36 h
+  adds a choice when:
+	- a) Income Abilities (Energy, Materials, Draw) are taken at the end of own
+	  Turn from every controlled Star, with [[Restore]].
+	- b) Action Abilities (Power, Defense, Technology) work like a direct
+	  participant: the Star adds its Ability to every own action whose source or
+	  destination it is.
+	- c) Alternative to a) and b): using a Star Ability [[Deplete]]s an own
+	  [[Ready]] Structure there, the state is on the table.
+- [ ] **S16. One end of Turn sequence.** Steps are spread over pages:
+  [[Restore]], [[Goal]] 4.3, [[Singularity]], [[Objective]] 7, Hyperstructure
+  Dyson Sphere income, Discard and [[Draw]]. Start of Turn has Goal 4.1-4.2:
+	- a) [[Turn]] 3 lists every end of Turn step in order, pages link it.
+	- b) [[Turn]] gets a start of Turn step with the Goal checks.
+- [ ] **S17. Objectives on the table.** [[Objective]] "Win 2 Combats" needs a
+  count of past combats:
+	- a) Objectives check only the current table, like [[CulturePoints]]:
+	  control 3 Stars, have 4 technologies, hold a rival's home Star.
+- [ ] **S18. Open tokens.** [[Energy]] tokens are in [[Hand]], whose cards are
+  secret:
+	- a) Tokens lie open beside the Hand: rivals see the Boost reserve without
+	  asking, like a TI trade good.
 
 ## Already proposed
 
