@@ -22,4 +22,5 @@ scope: core
 
 #### Notes
 
-1. Like in Star Realms: 10 cards starting deck, first player starts with smaller hand
+1. Like in Star Realms: 10 cards starting deck, first player starts with smaller
+   hand

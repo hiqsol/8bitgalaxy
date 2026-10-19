@@ -43,5 +43,6 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 
 #### Notes
 
-1. In the card picture `T` is upside-down `1`: the weak [[End]] is printed rotated by 180°
+1. In the card picture `T` is upside-down `1`: the weak [[End]] is printed
+   rotated by 180°
 2. The picture is generic for all double ended cards

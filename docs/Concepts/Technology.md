@@ -10,8 +10,10 @@ scope: core
 	3. [[BuildingFacility]] provides [[Create]], [[Upgrade]] and [[Recover]]
 3. The table below is the only catalog of technologies:
 	1. **Class** is the [[Class]] of the card [[End]]s that carry the technology
-	2. **Cards** lists the [[Deck]] cards and ends that carry it, their levels are in the [[Deck]]
-	3. Technology pages name their kind and **Class** in the first rule, as in the table, and describe behavior, without level
+	2. **Cards** lists the [[Deck]] cards and ends that carry it, their levels
+	   are in the [[Deck]]
+	3. Technology pages name their kind and **Class** in the first rule, as in
+	   the table, and describe behavior, without level
 
 | Technology | Kind | Class | Scope | Cards |
 |------------|------|-------|-------|-------|
@@ -23,7 +25,7 @@ scope: core
 | [[Explore]] | Action | S | core | Ship 2S strong, Colony 2S |
 | [[Express]] | Modifier | C | core | - |
 | [[ForceDiscard]] | Modifier | M | core | - |
-| [[Spy]] | Action | M | core | Hero 1M strong, Hero 2M strong, Colony 2M |
+| [[Recon]] | Action | M | core | Hero 1M strong, Hero 2M strong, Colony 2M |
 | [[Stealth]] | Modifier | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
 | [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
 | [[Militarization]] | Modifier | M | advanced | Base 2M, Colony 4M |
@@ -60,4 +62,5 @@ scope: core
 #### Notes
 
 1. Technologies without cards are planned, they need cards to be playable
-2. Design idea: stronger technologies sit on higher levels, the maximal ones on the highest [[Hero]]es
+2. Design idea: stronger technologies sit on higher levels, the maximal ones on
+   the highest [[Hero]]es

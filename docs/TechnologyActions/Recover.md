@@ -3,7 +3,8 @@ status: draft
 scope: core
 ---
 
-1. **Recover** is [[Culture]] and [[Production]] [[TechnologyAction]] of [[BuildingFacility]]
+1. **Recover** is [[Culture]] and [[Production]] [[TechnologyAction]] of
+   [[BuildingFacility]]
 2. Flavour names:
 	1. **Heal** for [[Social]]
 	2. **Fix** for [[Industrial]]

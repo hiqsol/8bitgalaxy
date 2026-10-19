@@ -4,11 +4,12 @@ scope: advanced
 ---
 
 1. **Materials** is stockable [[Resource]]
-2. Represented as tokens
+2. Represented as tokens of [[Size]] 1 or 5, see [[Component]]
 3. Stored at [[Star]] or card
 4. Can be moved with [[Transport]]
 5. Can be used to [[Boost]] action
-6. Spent locally - can be added to action starting or finishing where it is stored
+6. Spent locally - can be added to action starting or finishing where it is
+   stored
 7. Card can not add more **materials** than it's [[Capacity]]
 
 #### Notes

@@ -12,13 +12,17 @@ scope: core
 2. Main game rule is [[PerformAction]], start with it
 3. These docs are the source of truth for the rules
 4. Game is played by 1+ players with different options, see [[Scenario]]
-5. First focus: minimal playable duel without the [[GalaxyDeck]], playable with AI
+5. First focus: minimal playable duel without the [[GalaxyDeck]], playable with
+   AI
 
 #### Inspiration
 
-1. **Star Realms**: deck building and [[Turn]], but more complex: plus a [[Field]]
-2. **Twilight Imperium**: 4X on a [[Field]], but faster: simpler turns, politics as an extension
-3. **Chess**: even contest, no luck in [[Combat]], see [[GameBalance]]; losing all [[Hero]]es is checkmate, see [[Goal]]
+1. **Star Realms**: deck building and [[Turn]], but more complex: plus a
+   [[Field]]
+2. **Twilight Imperium**: 4X on a [[Field]], but faster: simpler turns, politics
+   as an extension
+3. **Chess**: even contest, no luck in [[Combat]], see [[GameBalance]]; losing
+   all [[Hero]]es is checkmate, see [[Goal]]
 
 #### Scopes
 

@@ -10,4 +10,5 @@ scope: core
 
 #### Notes
 
-1. **Factory** is the pool of cards to (re)build, that's why [[Destroyed]] cards go there
+1. **Factory** is the pool of cards to (re)build, that's why [[Destroyed]] cards
+   go there

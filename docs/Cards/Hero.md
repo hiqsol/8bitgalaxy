@@ -10,9 +10,11 @@ scope: core
 5. [[Range]] = current [[Level]] - can [[Move]]
 6. [[Size]] = current [[Level]]
 7. [[Capacity]] = current [[Level]]
-	1. Can not [[Transport]] on itself but can increase [[Capacity]] with current [[Level]]
+	1. Can not [[Transport]] on itself but can increase [[Capacity]] with
+	   current [[Level]]
 
 #### Notes
 
 1. **Hero** is a strong figure: its [[Capacity]] can help a group much
-2. The cooler a **Hero** becomes the more demanding it becomes: its [[Size]] grows with [[Level]]
+2. The cooler a **Hero** becomes the more demanding it becomes: its [[Size]]
+   grows with [[Level]]

@@ -9,11 +9,12 @@ scope: core
 4. **Requirements**:
 	1. [[Range]]
 	2. [[Capacity]]
-5. Total [[Capacity]] of the group is sum of capacities of direct participants
+5. Total [[Capacity]] of the moving group is sum of capacities of its cards
 6. [[Hero]] can increase [[Capacity]] or [[Range]], but can't transport alone
 7. Type limitations in the table below
 8. Transported cards are cargo, not participants
-9. Moving direct participants and transported cards are not depleted after Transport
+9. Moving direct participants and transported cards are not depleted after
+   Transport
 10. Supporters are depleted as usual
 11. Destination [[IPS]] must have a free [[Slot]] for every transported card
 
@@ -27,7 +28,8 @@ scope: core
 
 #### Notes
 
-1. e.g. [[Colony]] can only be transported with [[Culture]] and [[Science]] ships
+1. e.g. [[Colony]] can only be transported with [[Culture]] and [[Science]]
+   ships
 2. Logic behind the table is following:
 	1. [[Military]] ships can convoy cards that can move on itself
 	2. [[Culture]] (Colonization) ships can transport [[Social]] cards

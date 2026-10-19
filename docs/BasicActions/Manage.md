@@ -10,7 +10,8 @@ scope: core
 		2. [[Structure]] to weak end - [[Deplete]]
 		3. [[Actor]] to the other end - switch its [[Class]]
 	2. **Shift**:
-		1. Between [[Slot]]s within the same [[IPS]]
+		1. Between [[Slot]]s within the same [[IPS]], for cards that don't
+		   [[Move]] there: [[Structure]]s, rival cards with [[Militarization]]
 			1. [[Action]] has to be directed to the [[Star]]
 		2. Between piles within [[Laboratory]] or [[Factory]] row
 			1. **Direction**: to corresponding [[BuildingFacility]]

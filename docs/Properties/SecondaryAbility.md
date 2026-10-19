@@ -9,4 +9,5 @@ scope: core
 	2. [[Technology]] - its name is shown in place of `+1`
 3. But:
 	1. Secondary abilities are usually weaker
-	2. Not available when overlapped: the card is placed one [[Slot]] higher than other card
+	2. Not available when overlapped: the card is placed one [[Slot]] higher
+	   than other card

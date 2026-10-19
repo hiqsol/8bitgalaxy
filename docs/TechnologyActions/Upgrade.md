@@ -3,7 +3,8 @@ status: draft
 scope: core
 ---
 
-1. **Upgrade** is [[Culture]] and [[Production]] [[TechnologyAction]] of [[BuildingFacility]]
+1. **Upgrade** is [[Culture]] and [[Production]] [[TechnologyAction]] of
+   [[BuildingFacility]]
 2. Flavour names:
 	1. **Grow** for [[Social]]
 	2. **Enhance** for [[Industrial]]

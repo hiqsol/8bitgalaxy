@@ -15,7 +15,8 @@ scope: core
 	7. [[Draw]] - cards from [[Reserve]] to [[Hand]] when used in an action
 	8. [[Slot]]s - free slots in a [[Star]]
 	9. [[Hand]] size
-	10. [[Restore]] - more [[Structure]]s that become [[Ready]] at the end of own [[Turn]]
+	10. [[Restore]] - more [[Structure]]s that become [[Ready]] at the end of
+	    own [[Turn]]
 	11. Victory points for [[Objective]]s
 	12. Votes for [[Politics]]
 

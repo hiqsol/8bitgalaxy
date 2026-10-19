@@ -10,4 +10,5 @@ scope: core
 
 #### Notes
 
-1. When card is **active for** faction and in [[IPS]] it can be used to participate in [[PerformAction]]
+1. When card is **active for** faction and in [[IPS]] it can be used to
+   participate in [[PerformAction]]

@@ -6,10 +6,14 @@ scope: core
 1. **Deck** lists all cards of the Human [[Faction]], one row per [[End]]
 2. Columns:
 	1. **Level** - [[Level]] + [[ExtraCost]], as printed on the card
-	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P [[Production]], S [[Science]]
-	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class, `X+Y` for [[Actor]]s, other [[Plus]] or [[Technology]]
-	4. **Secondary** - [[SecondaryAbility]]: [[Plus]] power `+N` or [[Technology]]
-	5. **Prerequisites** - [[Prerequisites]] as level and class pairs, same for both ends
+	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P [[Production]], S
+	   [[Science]]
+	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class, `X+Y` for
+	   [[Actor]]s, other [[Plus]] or [[Technology]]
+	4. **Secondary** - [[SecondaryAbility]]: [[Plus]] power `+N` or
+	   [[Technology]]
+	5. **Prerequisites** - [[Prerequisites]] as level and class pairs, same for
+	   both ends
 3. Card name is [[Type]] with strong end level and class
 
 | Card | End | Level | Class | Primary | Secondary | Prerequisites |
@@ -30,11 +34,11 @@ scope: core
 |  | weak | 3+2 | S | 2 | +1 |  |
 | Ship 4S | strong | 4+1 | S | 2 | [[Exhaust]] | 1P, 2S |
 |  | weak | 3+2 | P | 2 | +1 |  |
-| Hero 1M | strong | 1+1 | M | 1 | [[Spy]] | - |
+| Hero 1M | strong | 1+1 | M | 1 | [[Recon]] | - |
 |  | weak | 1+1 | C | 1 | [[Upgrade]] |  |
 | Hero 1P | strong | 1+1 | P | 1 | [[Recover]] | - |
 |  | weak | 1+1 | S | 1 | [[Recycle]] |  |
-| Hero 2M | strong | 2+1 | M | 2 | [[Spy]] | - |
+| Hero 2M | strong | 2+1 | M | 2 | [[Recon]] | - |
 |  | weak | 2+1 | S | 2 | [[Recycle]] |  |
 | Hero 2C | strong | 2+1 | C | 2 | [[Recover]] | - |
 |  | weak | 2+1 | P | 2 | [[Upgrade]] |  |
@@ -62,8 +66,8 @@ scope: core
 |  | weak | 3+1 | P | +1 Capacity | - |  |
 | Base 4S | strong | 4+1 | S | [[Navigation]] | +3 | 2S |
 |  | weak | 3+1 | S | [[Navigation]] | - |  |
-| Colony 2M | strong | 2+1 | M | [[Spy]] | +2 | - |
-|  | weak | 1+1 | M | [[Spy]] | - |  |
+| Colony 2M | strong | 2+1 | M | [[Recon]] | +2 | - |
+|  | weak | 1+1 | M | [[Recon]] | - |  |
 | Colony 2C | strong | 2+1 | C | [[Academy]] | +2 | - |
 |  | weak | 1+1 | C | [[Academy]] | - |  |
 | Colony 2P | strong | 2+1 | P | [[Extract]] | +2 | - |
@@ -81,10 +85,15 @@ scope: core
 
 #### Notes
 
-1. Imported from the legacy code (`src/legacy/js/Model/Decks/Human.js`), to be reviewed
+1. Imported from the legacy code (`src/legacy/js/Model/Decks/Human.js`), to be
+   reviewed
 2. Patterns:
-	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology, ends have different classes
-	2. [[Structure]]s: Primary is technology or a non-power [[Plus]] at both ends, Secondary is power at strong end only, both ends have the same class
-	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't change with rotation
+	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology, ends have
+	   different classes
+	2. [[Structure]]s: Primary is technology or a non-power [[Plus]] at both
+	   ends, Secondary is power at strong end only, both ends have the same
+	   class
+	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't change
+	   with rotation
 3. Technology classes and scopes are in [[Technology]]
 4. Unclear technology from the legacy code: `allacad`

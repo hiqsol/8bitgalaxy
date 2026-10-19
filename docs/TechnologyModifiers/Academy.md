@@ -8,4 +8,6 @@ scope: core
 
 #### Notes
 
-1. Losing the only **Academy** stops [[Social]] building, intended: keep another **Academy** or capture a rival's one, a [[Structure]] is [[ActiveFor]] the faction that controls it, see [[ControlledBy]]
+1. Losing the only **Academy** stops [[Social]] building, intended: keep another
+   **Academy** or capture a rival's one, a [[Structure]] is [[ActiveFor]] the
+   faction that controls it, see [[ControlledBy]]

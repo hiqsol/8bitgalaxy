@@ -9,4 +9,5 @@ scope: core
 	2. [[Colony]]
 3. **Social** cards are created at [[Academy]] for [[CulturePower]]
 4. Not to be confused with [[Culture]] [[Class]]
-5. Flavour names for **Social** cards: **Raise** ([[Create]]), **Grow** ([[Upgrade]]), **Heal** ([[Recover]])
+5. Flavour names for **Social** cards: **Raise** ([[Create]]), **Grow**
+   ([[Upgrade]]), **Heal** ([[Recover]])

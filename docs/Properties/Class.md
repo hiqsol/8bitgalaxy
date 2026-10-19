@@ -10,4 +10,5 @@ scope: core
 	3. 🟡 [[Production]] - [[ProductionPower]]
 	4. 🔵 [[Science]] - [[SciencePower]]
 3. **Class** is independent of [[Origin]] ([[Social]] / [[Industrial]])
-4. [[Actor]] card can have a different **class** at each [[End]], the visible one is used
+4. [[Actor]] card can have a different **class** at each [[End]], the visible
+   one is used

@@ -10,17 +10,23 @@ scope: core
 	3. [[Hidden]] card
 3. **Direction**: [[Star]] to the target
 4. **Requirements**:
-	1. Hidden segment borders the source [[Star]] or a revealed segment reachable within [[Range]]
-	2. Hidden card is in the source [[Star]] or in a Star reachable within [[Range]]
+	1. Hidden tile borders the source [[Star]] or a revealed tile reachable
+	   within [[Range]]
+	2. Hidden card is in the source [[Star]] or in a Star reachable within
+	   [[Range]]
 5. **Cost**: the target's Cost of [[SciencePower]], for a card its [[Cost]]
 6. The Cost is not shown: the player starts the action, then learns the Cost
 7. If the power is not enough the player either:
 	1. Adds more power by spending more cards
 	2. Cancels the action, losing what's already spent
-8. For a [[Hidden]] card the acting player chooses to reveal it to all or keep it hidden
+8. For a [[Hidden]] card the acting player chooses to reveal it to all or keep
+   it hidden
 
 #### Notes
 
-1. **Explore** is scientific, [[Spy]] is military: both kinds of factions can reveal
-2. Better segments cost more, so running out of power hints at a good one
+1. **Explore** is scientific, [[Recon]] is military: both kinds of factions can
+   reveal
+2. Better tiles cost more, so running out of power hints at a good one
 3. To reach a hidden Star explore the Space before it, then the Star itself
+4. Learning the Cost and cancelling is a cheap look, that's fine: the back of a
+   [[Space]] already hints at it

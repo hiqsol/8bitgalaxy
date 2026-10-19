@@ -10,4 +10,4 @@ scope: core
 3. [[Social]] cards:
 	1. [[Hero]], [[Colony]]
 	2. Create requires [[Academy]] and [[CulturePower]]
-	3. Created beginning from the smallest [[Level]], then can be [[Upgrade]]d
+	3. Created small, then grow by [[Upgrade]], see [[Create]]

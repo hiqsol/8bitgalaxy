@@ -1,0 +1,6 @@
+#!/bin/sh
+# Check the docs wiki and lint staged markdown, see AGENTS.md
+files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.md' | tr '\n' ' ')
+[ -z "$files" ] && exit 0
+make --no-print-directory check || exit 1
+make --no-print-directory lint MD="$files"

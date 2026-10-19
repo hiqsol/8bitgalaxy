@@ -13,7 +13,8 @@ scope: idea
 
 #### Notes
 
-1. Out of the rules: unlimited parking removes space pressure and allows unlimited deck thinning, see [[GameBalance]]
+1. Out of the rules: unlimited parking removes space pressure and allows
+   unlimited deck thinning, see [[GameBalance]]
 2. Open holes if revived:
 	1. Parked [[Hero]]es can't be attacked: an unkillable leader, see [[Goal]]
 	2. Parked [[Actor]]s may count for [[Control]] and block the rival's star

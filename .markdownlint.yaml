@@ -1,7 +1,10 @@
 MD007: false
 MD009: false
 MD010: false
-MD013: false
+MD013:
+  line_length: 80
+  tables: false
+  code_blocks: false
 MD022: false
 MD029: false
 MD030: false

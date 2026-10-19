@@ -14,7 +14,8 @@ aliases: [Disabled, Exhausted]
 4. **Damaged** is opposite to [[Enabled]]
 5. [[Recover]] makes card [[Enabled]]
 6. A Damaged card that becomes Damaged again is [[Destroyed]]
-7. A Damaged card in a [[Star]] where its [[Faction]] has no [[Enabled]] card is [[Destroyed]]
+7. A Damaged card in a [[Star]] where its [[Faction]] has no [[Enabled]] card is
+   [[Destroyed]]
 
 #### Notes
 

@@ -8,8 +8,10 @@ scope: core
 	1. On the [[Field]]
 	2. In [[Hand]]
 	3. In [[History]]
-3. [[Damaged]] cards and cards in [[Reserve]], [[Discard]], [[Factory]] and [[Laboratory]] are not **standing**
-4. Used by the [[Goal]] paths: [[CulturePoints]] and Singularity count **standing** cards
+3. [[Damaged]] cards and cards in [[Reserve]], [[Discard]], [[Factory]] and
+   [[Laboratory]] are not **standing**
+4. Used by the [[Goal]] paths: [[CulturePoints]] and [[Singularity]] count
+   **standing** cards
 
 #### Notes
 
