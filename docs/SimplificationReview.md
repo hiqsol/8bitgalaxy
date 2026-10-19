@@ -29,14 +29,15 @@ Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
   [[Technology]] makes an action possible or better.
 - **Depleting is the wear.** Used Units leave the [[Field]] for [[Discard]] and
   return to the deck cycle, used [[Structure]]s turn to their weak [[End]].
-  Cards that move or fight hold the ground and don't wear.
+  Cards that move or fight hold the ground and don't wear, the starter always
+  wears.
 - **The loop.** [[Takeoff]] → act from the Field → Discard → [[Draw]] → Takeoff
   again. A Field card is worth more than a Hand card (all abilities, `+Y`
   power), it costs a Takeoff and comes back to the deck when used.
 - **What moves.** [[Actor]]s move on their own, Range above 0, a [[Move]] costs
   only its starter. [[Structure]]s, Range 0, are shifted by [[Manage]] for power
-  or carried by [[Transport]]. So Move and Manage don't overlap, see
-  [[RulesReview]] I91 for Transport.
+  or carried by [[Transport]]. So Move and Manage don't overlap, Transport
+  and Manage Shift are options: both cost a starter.
 - **Applied wording.** [[PerformAction]] is reworded along these lines: starter,
   Direction, direct participants at both ends, supporters, **targets** (cards
   the action works on, not participants), one group per IPS.
@@ -54,10 +55,9 @@ Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
 	  except those that moved or fought."
 - [ ] **S2. Depletion in one rule.** [[Deplete]] lists three exceptions,
   repeated in [[Move]] 7, [[Transport]] 9-10 and [[Combat]] 10.4-5:
-	- a) One rule in [[Deplete]]: supporters always deplete, direct participants
-	  deplete unless they moved or fought ([[Move]], [[Transport]], [[Combat]]).
-	  Action pages only link it.
-	- b) Together with [[RulesReview]] I90: a Field starter always depletes.
+	- a) One rule in [[Deplete]]: the starter and supporters always deplete,
+	  direct participants deplete unless they moved or fought ([[Move]],
+	  [[Transport]], [[Combat]]). Action pages only link it.
 - [ ] **S3. Distance.** "The sum of lengths of all its tiles but the first one"
   is exact but hard to read:
 	- a) Same values, plain words: each [[Space]] adds its Length, each [[Star]]
@@ -71,7 +71,7 @@ Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
 
 - [ ] **S4. Home actions without Direction.** [[Research]] and [[Manage]] Shift
   of piles work on [[Home]] piles, yet they are directed to a
-  [[BuildingFacility]] ([[DesignReview]] I75 b, [[RulesReview]] I88 a):
+  [[BuildingFacility]] ([[DesignReview]] I75 b):
 	- a) A Home action has only a source: any [[Star]] [[ControlledBy]] the
 	  player, no destination, no [[Range]].
 	- b) The same for [[Legacy]], [[Recall]], [[Forecast]] and [[Invent]], which
@@ -82,9 +82,8 @@ Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
 	  the handling rule of [[DesignReview]] P55 says who carries what.
 	- b) A [[Hero]] adds Capacity, but cargo needs a [[Ship]] in the group, as
 	  now.
-	- c) Removes the Transport page, [[Deplete]] 4, the Transport table and
-	  [[RulesReview]] I91. [[Export]], [[Smuggle]] and [[HyperPass]] P24 c refer
-	  to Move instead.
+	- c) Removes the Transport page, [[Deplete]] 4 and the Transport table.
+	  [[Export]], [[Smuggle]] and [[HyperPass]] P24 c refer to Move instead.
 - [ ] **S6. Explore and Recon are one action.** [[Recon]] is [[Explore]] paid
   with [[AttackPower]]:
 	- a) **Explore** is a [[Military]] and [[Science]] [[TechnologyAction]],
@@ -99,7 +98,7 @@ Answer by number and letter, e.g. "S3 a", "S5 yes", "S7 no".
 	- a) Every Field card has its [[SecondaryAbility]], a [[Depleted]] Structure
 	  still loses it.
 	- b) Removes Slot heights, Move within a Star ([[Move]] 2.1), Manage Shift
-	  between Slots, [[RulesReview]] I91.
+	  between Slots.
 	- c) A Star just holds as many cards as its Size, see [[IPS]].
 	- d) Cost: the one mechanic "not seen in other games", see [[Slot]]. Try it
 	  in AI playtests first: if nobody shifts, drop it.

@@ -16,6 +16,8 @@ scope: core
 	   [[Range]]
 5. **Cost**: the target's Cost of [[SciencePower]], for a card its [[Cost]]
 6. The Cost is not shown: the player starts the action, then learns the Cost
+	1. A hidden [[Star]] shows its Size, its minimal Cost: the action starts
+	   with at least Size of power
 7. If the power is not enough the player either:
 	1. Adds more power by spending more cards
 	2. Cancels the action, losing what's already spent
@@ -29,4 +31,4 @@ scope: core
 2. Better tiles cost more, so running out of power hints at a good one
 3. To reach a hidden Star explore the Space before it, then the Star itself
 4. Learning the Cost and cancelling is a cheap look, that's fine: the back of a
-   [[Space]] already hints at it
+   [[Space]] already hints at it, and a [[Star]] look costs at least its Size

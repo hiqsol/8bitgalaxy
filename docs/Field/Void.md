@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: advanced
+scope: core
 ---
 
 1. **Void** is a [[Space]] type

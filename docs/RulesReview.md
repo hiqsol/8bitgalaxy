@@ -1,6 +1,6 @@
 ---
 date: 2026-10-10
-updated: 2026-10-17
+updated: 2026-10-19
 status: WIP
 scope: meta
 ---
@@ -24,8 +24,8 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- d) No first player rule.
 - [ ] **I19. Deck review.** → P25
 	- a) `allacad` (Base 4C) is unclear, see [[DesignReview]] P59.
-	- b) Core technologies [[Express]] and [[ForceDiscard]] and `+Draw` [[Plus]]
-	  have no cards.
+	- b) Core technologies [[Express]], [[ForceDiscard]], [[Settle]],
+	  [[Prefab]] and `+Draw` [[Plus]] have no cards.
 	- c) Redo the decks up to [[Level]] 8, planned: [[Singularity]] takes the
 	  highest Level from the faction deck.
 	- d) [[Actor]] Primary power values as `X+Y`, see [[PrimaryAbility]].
@@ -51,8 +51,6 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 - [ ] **I57. Star deck.** [[Star]]s come from the Star deck, but: → P36
 	- a) There is no Ability list.
 	- b) There is no first duel deck.
-- [ ] **I58. Energy use.** [[Energy]] is now `core` (home Stars give it), but
-  nothing in `core` spends it. → P37
 - [ ] **I50. Action sequence.** [[PerformAction]] doesn't define a complete
   sequence: → P34
 	- a) Legality is checked late.
@@ -70,33 +68,6 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- b) A [[Military]] card without power has Defense 0, below non-Military 1:
 	  every Depleted Military [[Structure]] (Base 2M, 4M, Colony 2M, 4M weak
 	  ends) defends with 0.
-- [ ] **I85. Settle and Prefab vs Range.** [[PerformAction]] 4 checks [[Range]]
-  for building too. A [[Settle]] or [[Prefab]] provider in the source makes the
-  source the destination ([[Distance]] 0), so the technology adds nothing. In
-  the destination it is a direct participant now, but the source group must
-  still reach the destination, so again it adds nothing. → P64
-- [ ] **I86. Pinning scope.** [[Pinning]] 2 covers routes of [[Move]],
-  [[Transport]] and [[Attack]]. [[Range]] is now checked for every action: does
-  Pinning also stop [[Explore]] reach, a remote [[Support]] group and [[Create]]
-  placement?
-	- a) Recommended: Pinning stops moving cards only, other Range checks ignore
-	  it.
-- [ ] **I87. Slot split.** [[IPS]] 3: the [[Star]] **Size** is the total number
-  of Slots, up to 5 for Units and 5 for Structures, but nothing says how a Size
-  splits between the rows.
-	- a) Recommended: the Star shows both numbers, Size is their sum.
-- [ ] **I90. Free Field starter.** [[Starter]] 2.3 depletes a Field starter "as
-  any participant", but [[Move]], [[Transport]] and [[Combat]] don't deplete
-  direct participants that move or fight. A Field starter Ship that moves itself
-  never depletes: unlimited Moves and Attacks per [[Turn]] without a [[Hand]]
-  card.
-	- a) Recommended: a Field starter always depletes, the exceptions of
-	  [[Deplete]] don't apply to it.
-- [ ] **I91. Transport inside one IPS.** [[Transport]] moves a [[Structure]]
-  between [[Slot]]s of one [[IPS]] at [[Distance]] 0 with no power, [[Manage]]
-  Shift does the same for 1 power per card: after [[Move]] got cards that move
-  on their own, this is the last overlap.
-	- a) Recommended: Transport cargo goes to another [[Star]].
 - [ ] **I92. Groups.** [[PerformAction]] 4 forms one group per [[IPS]], each
   reaching the destination with its own [[Range]]:
 	- a) [[Range]] 5 adds "Range from Support" to a group: with several groups,
@@ -109,14 +80,9 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- c) The attacker's own cards already in the target [[Star]] join an
 	  [[Attack]] as direct participants: attack from two sides. Intended?
 - [ ] **I88. Minor.**
-	- a) [[Research]] 2.2 "between Laboratories": [[Manage]] Shift already moves
-	  cards between piles of one [[Laboratory]]. Another player's Laboratory, or
-	  drop it?
 	- b) Combined prints: Colony 4P "Recover, Shipyard", Hero 4M weak and Hero
 	  4C strong "Recover, Upgrade", Base 2M "Militarization, +1 Defense". One
 	  [[Ability]] or two for a supporter?
-	- c) [[End]] 6: strong is the end with the higher [[Level]], but Hero ends
-	  have equal Levels, only the [[Deck]] names them.
 	- d) [[Damaged]] 7: own [[Hidden]] cards give [[Control]] but don't keep a
 	  Damaged card from [[Destroyed]], they are not Enabled. Intended?
 	- e) [[VisibleFor]] 2.1: a Hidden card is not Damaged, so it is visible for
@@ -130,9 +96,6 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- h) [[Materials]] storage: its note needs a [[Colony]] in the Star,
 	  [[Base]] 7 holds Materials, [[Extract]], [[Raid]], [[Salvage]] and
 	  [[Event]]s put them in a Star. See [[DesignReview]] P57.
-	- i) [[Scenario]] note 2: [[Void]]s keep the home Stars apart, `game.png`
-	  shows them, but the first duel places no Voids, Void is `advanced` and
-	  every Space is Normal of length 1.
 
 ### Extensions
 
@@ -235,22 +198,24 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c", "P23 no".
 	- e) Ability: a [[Technology]] for own cards there, e.g. [[Shipyard]],
 	  [[Academy]], [[Recon]].
 	- f) Ability: [[Draw]] 1 card, rare.
-	- g) Cost grows with the Ability: Energy 1, Power, Materials and Defense 2,
-	  Technology 3, Draw 4.
+	- g) [[ExtraCost]] grows with the Ability: Energy 1, Power, Materials and
+	  Defense 2, Technology 3, Draw 4.
 	- h) The player takes the Ability during own [[Turn]], it is not automatic.
 	- i) First duel deck: 5 Stars, shuffled face down on non-home Stars: Energy
-	  (Cost 1), Military Power (2), Science Power (2), Defense (2), [[Shipyard]]
-	  (3).
-- [ ] **P37. Energy use in core.** Move [[Boost]] to `core`: 1 [[Energy]] adds 1
-  [[Power]] of any class to an action, not more than a participant's
-  [[Capacity]]. So Energy is a flexible wildcard for any action.
-
+	  (ExtraCost 1), Military Power (2), Science Power (2), Defense (2),
+	  [[Shipyard]] (3).
 - [ ] **P62. Defense** in [[Defense]] and [[Combat]]:
 	- a) Defense = [[AttackPower]], at least 1, for every card.
 	- b) A defending supporter adds its Defense as its one [[Ability]].
-- [ ] **P64. Settle and Prefab:** with the provider in the destination [[IPS]],
-  [[Create]] reaches it at any [[Distance]]: the source group needs no
-  [[Range]], like `allacad` in [[DesignReview]] P59 e.
+- [ ] **P65. Interdiction.** [[Pinning]] stops moving cards only. A
+  [[Military]] [[TechnologyModifier]] (`advanced`) extends it: rival Enabled
+  Actors with it in a [[Star]] also stop the [[Range]] of other actions through
+  that Star: [[Explore]] reach, remote [[Support]] groups, [[Create]] placement.
+  Pick a name:
+	- a) **Interdiction** (recommended): blocks reach, not only movement.
+	- b) **Blockade**: plain, but sounds like movement only, as Pinning.
+	- c) **Jamming**: fits signals: Support and Explore, less so Create.
+	- d) **Lockdown**: the whole Star is closed.
 
 ### Ideas
 

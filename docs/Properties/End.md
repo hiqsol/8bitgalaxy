@@ -33,3 +33,5 @@ scope: core
 
 1. Not to be confused with orientation: [[Unit]]s are vertical, [[Structure]]s
    are horizontal
+2. [[Hero]] ends may have equal Levels: which one is strong doesn't matter,
+   an [[Actor]] depletes to [[Discard]] anyway

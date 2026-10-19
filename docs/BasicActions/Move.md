@@ -15,7 +15,8 @@ scope: core
 5. Destination [[IPS]] must have a free [[Slot]] for every moving card
 6. Several cards can move together in group, its [[Range]] is the sum, see
    [[Range]]
-7. Moving cards are not depleted after **Move**, see [[Deplete]]
+7. Moving cards are not depleted after **Move**, except the starter, see
+   [[Deplete]]
 8. The route obeys [[Pinning]]
 
 #### Notes

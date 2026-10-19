@@ -37,7 +37,7 @@ scope: core
 	3. If the attacker wins, their surviving attacking [[Unit]]s move to free
 	   [[Slot]]s of the destination [[Star]], keeping their [[End]]. Units that
 	   don't fit stay in the source.
-	4. Direct participants don't [[Deplete]]
+	4. Direct participants don't [[Deplete]], except the starter
 	5. [[Deplete]] supporters
 
 #### Notes

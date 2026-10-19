@@ -14,7 +14,7 @@ scope: core
 7. Type limitations in the table below
 8. Transported cards are cargo, not participants
 9. Moving direct participants and transported cards are not depleted after
-   Transport
+   Transport, except the starter, see [[Deplete]]
 10. Supporters are depleted as usual
 11. Destination [[IPS]] must have a free [[Slot]] for every transported card
 

@@ -12,17 +12,21 @@ scope: core
 6. Cards can't pass or enter a hidden **Star**
 7. **Star** properties:
 	1. **Size** - the main property: total number of [[Slot]]s in its [[IPS]]
-	2. **Type**: one of the [[Class]]es, it sets the class of a [[Power]]
+	2. **Split** of the Size between [[Unit]] and [[Structure]] Slots, see
+	   [[IPS]]
+	3. **Type**: one of the [[Class]]es, it sets the class of a [[Power]]
 	   ability
-	3. **Cost** required to [[Explore]]
-	4. [[Ability]] usable once per own [[Turn]] by the player who controls the
+	4. **Cost** required to [[Explore]]: Size + [[ExtraCost]]
+	5. [[Ability]] usable once per own [[Turn]] by the player who controls the
 	   Star, see [[ControlledBy]]
 8. **Stars** form the **Star deck**: hidden Stars are placed from it, see
    [[Scenario]]
-9. **Size** is written on the back side, so hidden Stars are drawn equally at
-   the start
+9. Only **Size** is written on the back side, so hidden Stars are drawn equally
+   at the start
 
 #### Notes
 
 1. More **Star** properties can be added later
 2. Star **Size** is not card [[Size]]
+3. Size is the minimal Cost: a hidden Star shows how much at least its
+   [[Explore]] takes

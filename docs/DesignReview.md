@@ -19,7 +19,7 @@ Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
 |------|--------------|-------|
 | Through the Ages | Discover with science then build, upgrade pays the difference (already: [[Research]], [[Create]], [[Upgrade]]). Wonders. Players seed future events (already: [[FutureEvents]]). Game ends when the Age III deck runs out. Tactics reward a mixed army. | [[Twilight]], [[Hyperstructure]], [[Tactics]] |
 | Civilization (2010) | Four victories: capture a capital, culture, economy, technology. Tech pyramid instead of printed prerequisites. | [[Goal]] |
-| Civilization: A New Dawn | Focus row 1-5: a used card drops to slot 1 and recharges over time. Trade tokens boost a card (already: [[Boost]], P37). Unique wonders. | [[Restore]], [[Hyperstructure]] |
+| Civilization: A New Dawn | Focus row 1-5: a used card drops to slot 1 and recharges over time. Trade tokens boost a card (already: [[Boost]]). Unique wonders. | [[Restore]], [[Hyperstructure]] |
 | Voidfall | 3 cycles, each ends with evaluation: scoring and upkeep; Focus cards come back at the cycle end. Diceless combat, defender wins ties, max 2 fleets per sector (already: [[Combat]], [[Slot]]). Trade tokens unlock an extra action. | Ideas |
 | Imperium: Classics | Reshuffle is the progress tick: gain or develop a card. History pile: cards out of the deck still score. Game ends when a supply runs out. | [[Twilight]], [[Legacy]] |
 | Twilight Imperium | Ships can't pass systems with enemy ships. Planets exhaust and ready every round. Home system has a space dock. Mecatol Rex is a prize in the center. | [[Pinning]], [[Restore]], Ideas |
@@ -170,7 +170,7 @@ Answer proposals by number and letter, e.g. "P46 a", "P60 b, d".
 	- a) [[Materials]] pay [[Create]], [[Upgrade]] and [[Recover]] costs at a
 	  facility in the Star where they are: [[Extract]] at [[Asteroids]],
 	  Transport to the Shipyard.
-	- b) [[Energy]] [[Boost]]s any action (P37).
+	- b) [[Energy]] [[Boost]]s any action (already in `core`).
 	- c) [[Trade]] turns power into Energy between two own Colonies: a trade
 	  route.
 	- d) [[Dismantle]] merges into [[Recycle]].
@@ -205,7 +205,7 @@ Not for answering now, kept for later.
   `advanced`.
 - **Energy as an extra action** (Voidfall trade tokens): spend 2 [[Energy]] to
   let a Field card act without a starter from Hand ([[Starter]]). Alternative to
-  P37.
+  [[Boost]].
 - **Center prize** (TI Mecatol Rex): Star 11 of the first duel is fixed with the
   best Ability, e.g. [[Draw]] 1.
 - **Derelict row** (TtA card row): [[Derelict]]s get cheaper the longer they

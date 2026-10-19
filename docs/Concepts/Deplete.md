@@ -5,6 +5,8 @@ scope: core
 
 1. After [[PerformAction]] is done all participants are depleted unless the
    action defines an exception
+	1. The starter always depletes, a [[Field]] starter too: the exceptions
+	   below don't apply to it, see [[Starter]]
 2. Cards get depleted differently:
 	1. [[Unit]] cards, from the [[Field]] or [[Hand]], go to [[Discard]] pile
 	2. [[Structure]] cards become (or stay) [[Depleted]]

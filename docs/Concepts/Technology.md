@@ -28,6 +28,8 @@ scope: core
 | [[Recon]] | Action | M | core | Hero 1M strong, Hero 2M strong, Colony 2M |
 | [[Stealth]] | Modifier | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
 | [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
+| [[Settle]] | Modifier | C | core | - |
+| [[Prefab]] | Modifier | P | core | - |
 | [[Militarization]] | Modifier | M | advanced | Base 2M, Colony 4M |
 | [[Smuggle]] | Action | M | advanced | Ship 4M strong |
 | [[Trade]] | Action | C | advanced | Ship 2C strong, Base 2C |
@@ -47,11 +49,9 @@ scope: core
 | [[Ambush]] | Modifier | M | advanced | - |
 | [[Raid]] | Action | M | advanced | - |
 | [[Recall]] | Modifier | C | advanced | - |
-| [[Settle]] | Modifier | C | advanced | - |
 | [[Legacy]] | Action | C | objectives | - |
 | [[Guard]] | Modifier | P | advanced | - |
 | [[Salvage]] | Modifier | P | advanced | - |
-| [[Prefab]] | Modifier | P | advanced | - |
 | [[EfficientUpgrade]] | Modifier | P | advanced | - |
 | [[Scan]] | Modifier | S | advanced | - |
 | [[Forecast]] | Modifier | S | advanced | - |
