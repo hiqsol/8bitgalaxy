@@ -3,7 +3,7 @@
 UWIKI ?= $(HOME)/prj/hiqsol/uwiki/src/uwiki.py
 export UWIKI
 MDLINT ?= npx --yes markdownlint-cli2@0.23.3
-MD ?= "docs/**/*.md" "ideas/**/*.md" "*.md"
+MD ?= "docs/**/*.md" "ideas/**/*.md" "adr/**/*.md" "*.md"
 
 upgit:
 	rm -rf  ~/prj/Sync/8bitgalaxy/.git
