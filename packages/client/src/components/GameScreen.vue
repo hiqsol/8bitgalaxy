@@ -1,15 +1,29 @@
 <script setup lang="ts">
 import { culturePoints, restorable } from '@8bitgalaxy/engine';
-import { computed, ref } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { cardName } from '../format';
 import { exportLocal, game, leave } from '../session';
 import { act, reset, startManual, ui } from '../ui';
 import ActionPanel from './ActionPanel.vue';
 import CombatPanel from './CombatPanel.vue';
 import FieldView from './FieldView.vue';
-import HomePanel from './HomePanel.vue';
+import HomeRow from './HomeRow.vue';
 import Inspector from './Inspector.vue';
 import LogPanel from './LogPanel.vue';
+import PilesView from './PilesView.vue';
+
+// The legacy board: the Field in the middle, the rival's Lab and Factory on the left, yours on
+// the right, Homes along the top and bottom. Board pixels, zoomed to fit the window.
+const PILES_W = 740;
+const FIELD_X = PILES_W + 40;
+const FIELD_Y = 400;
+const FIELD_W = 2405;
+const FIELD_H = 2315;
+const ROW_H = 400;
+const BOARD_W = FIELD_X + FIELD_W + 40 + PILES_W;
+const BOARD_H = FIELD_Y + FIELD_H + ROW_H - 60;
+/** screen pixels kept for the side panels */
+const SIDE_W = 360;
 
 const view = computed(() => game.view!);
 const me = computed(() => game.seat!);
@@ -18,6 +32,16 @@ const name = (p: string) => view.value.players.find((x) => x.id === p)!.name;
 const myTurn = computed(() => view.value.turn.player === me.value && !view.value.combat && !view.value.winner);
 const restore = ref('');
 const restoreOptions = computed(() => (myTurn.value ? restorable(view.value, me.value) : []));
+
+const zoom = ref(0.3);
+function fit() {
+  zoom.value = Math.max(0.18, Math.min((innerWidth - SIDE_W - 16) / BOARD_W, (innerHeight - 8) / BOARD_H, 1));
+}
+onMounted(() => {
+  fit();
+  addEventListener('resize', fit);
+});
+onBeforeUnmount(() => removeEventListener('resize', fit));
 
 async function endTurn() {
   if (await act({ type: 'endTurn', restore: restore.value || undefined })) {
@@ -43,12 +67,23 @@ const shareLink = computed(() => `${location.origin}${location.pathname}?room=${
 
 <template>
   <div class="screen" @click="ui.menu = null">
-    <header class="panel bar">
-      <span class="title">8-bit Galaxy</span>
-      <span>Turn {{ view.turn.number }}: <b :class="`p-${view.turn.player}`">{{ name(view.turn.player) }}</b></span>
-      <span v-if="game.kind === 'local'" class="muted">you see as <b :class="`p-${me}`">{{ name(me) }}</b></span>
-      <span v-if="view.twilight" class="error">Twilight: last turns</span>
-      <span class="spacer" />
+    <div class="board-wrap" :style="{ width: `${BOARD_W * zoom}px`, height: `${BOARD_H * zoom}px` }">
+      <div class="board" :style="{ width: `${BOARD_W}px`, height: `${BOARD_H}px`, zoom }">
+        <PilesView :player="rival" class="at" :style="{ left: '0px', top: '0px' }" />
+        <HomeRow :player="rival" top class="at" :width="FIELD_W + 40 + PILES_W" :style="{ left: `${FIELD_X}px`, top: '0px' }" />
+        <FieldView class="at" :style="{ left: `${FIELD_X}px`, top: `${FIELD_Y}px` }" />
+        <HomeRow :player="me" class="at" :width="FIELD_W" :style="{ left: `${FIELD_X}px`, top: `${FIELD_Y + FIELD_H - 60}px` }" />
+        <PilesView :player="me" mirror class="at" :style="{ right: '0px', bottom: '0px' }" />
+      </div>
+    </div>
+
+    <nav class="controls">
+      <div class="turn">
+        Turn {{ view.turn.number }}<br />
+        <b :class="`p-${view.turn.player}`">{{ name(view.turn.player) }}</b>
+      </div>
+      <div v-if="game.kind === 'local'" class="seat">you see as <b :class="`p-${me}`">{{ name(me) }}</b></div>
+      <div v-if="view.twilight" class="error">Twilight: last turns</div>
       <template v-if="myTurn">
         <select v-if="restoreOptions.length" v-model="restore" title="Structure to restore at the end of Turn">
           <option value="">restore: best</option>
@@ -63,81 +98,98 @@ const shareLink = computed(() => `${location.origin}${location.pathname}?room=${
       <button v-if="game.kind === 'local'" @click="download">Export</button>
       <button :disabled="!!view.winner" @click="concede">Concede</button>
       <button @click="leave">Leave</button>
-    </header>
+      <div v-if="game.kind === 'online' && game.roomId" class="share">
+        room {{ game.roomId }}<br /><a :href="shareLink">invite link</a>
+        <div v-if="game.status" class="error">{{ game.status }}</div>
+      </div>
+    </nav>
 
-    <div v-if="game.kind === 'online' && game.roomId" class="share muted">
-      room <b>{{ game.roomId }}</b> · invite: <a :href="shareLink">{{ shareLink }}</a>
-      <span v-if="game.status" class="error"> · {{ game.status }}</span>
-    </div>
-    <div v-if="game.error" class="panel error-bar error" @click="game.error = ''">{{ game.error }}</div>
-    <div v-if="view.winner" class="panel winner">
+    <aside class="side">
+      <div v-if="game.error" class="panel error-bar error" @click="game.error = ''">{{ game.error }}</div>
+      <CombatPanel v-if="view.combat" />
+      <ActionPanel v-else-if="ui.mode === 'action' && ui.draft" />
+      <div v-else-if="ui.mode === 'takeoff'" class="panel">
+        <h2>Take off</h2>
+        <p>Click a free Unit slot in a Star you control.</p>
+        <div class="row">
+          <select v-model="ui.takeoff.end"><option value="strong">strong End</option><option value="weak">weak End</option></select>
+          <label><input v-model="ui.takeoff.hidden" type="checkbox" /> hidden (Stealth)</label>
+          <button @click="reset">Cancel</button>
+        </div>
+      </div>
+      <div v-else-if="ui.mode === 'manual'" class="panel">
+        <h2>Table mode</h2>
+        <p class="muted">Free moves, everyone sees them in the log. Click a card, then a Slot or a pile. Click a hidden tile to reveal it. ◀ ▶ change Energy.</p>
+        <div v-if="ui.manualCard" class="row">
+          <b>{{ cardName(view.cards[ui.manualCard]) }}</b>
+          <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'front' } })">enable</button>
+          <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'damaged' } })">damage</button>
+          <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'hidden' } })">hide</button>
+          <button @click="act({ type: 'manual', op: { op: 'setEnd', card: ui.manualCard, end: view.cards[ui.manualCard].end === 'strong' ? 'weak' : 'strong' } })">rotate</button>
+        </div>
+        <div v-if="myTurn" class="row">
+          <button title="Counts as a played card: for a Turn with no legal play" @click="act({ type: 'manual', op: { op: 'pass' } })">No legal play: pass</button>
+        </div>
+      </div>
+      <div v-else-if="myTurn" class="panel muted">
+        Your turn: click a card in your Hand to take it off or start an action. Play at least one card, then end the turn.
+      </div>
+      <LogPanel />
+      <Inspector class="inspector" />
+    </aside>
+
+    <div v-if="view.winner" class="panel winner" @click.stop>
       <h1>
         {{ view.winner.players.map(name).join(' and ') }} {{ view.winner.players.length > 1 ? 'draw' : 'wins' }} by
         {{ view.winner.path }}
       </h1>
       <div>Culture points: <span v-for="p in view.players" :key="p.id">{{ p.name }} {{ culturePoints(view, p.id) }} </span></div>
     </div>
-
-    <HomePanel :player="rival" class="rival" />
-    <div class="middle">
-      <div class="board">
-        <FieldView />
-      </div>
-      <aside class="side">
-        <CombatPanel v-if="view.combat" />
-        <ActionPanel v-else-if="ui.mode === 'action' && ui.draft" />
-        <div v-else-if="ui.mode === 'takeoff'" class="panel">
-          <h2>Take off</h2>
-          <p>Click a free Unit slot in a Star you control.</p>
-          <div class="row">
-            <select v-model="ui.takeoff.end"><option value="strong">strong End</option><option value="weak">weak End</option></select>
-            <label><input v-model="ui.takeoff.hidden" type="checkbox" /> hidden (Stealth)</label>
-            <button @click="reset">Cancel</button>
-          </div>
-        </div>
-        <div v-else-if="ui.mode === 'manual'" class="panel">
-          <h2>Table mode</h2>
-          <p class="muted">Free moves, everyone sees them in the log. Click a card, then a Slot or a pile. Click a hidden tile to reveal it.</p>
-          <div v-if="ui.manualCard" class="row">
-            <b>{{ cardName(view.cards[ui.manualCard]) }}</b>
-            <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'front' } })">enable</button>
-            <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'damaged' } })">damage</button>
-            <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'hidden' } })">hide</button>
-            <button @click="act({ type: 'manual', op: { op: 'setEnd', card: ui.manualCard, end: view.cards[ui.manualCard].end === 'strong' ? 'weak' : 'strong' } })">rotate</button>
-          </div>
-          <div v-if="myTurn" class="row">
-            <button title="Counts as a played card: for a Turn with no legal play" @click="act({ type: 'manual', op: { op: 'pass' } })">No legal play: pass</button>
-          </div>
-          <div class="row">
-            Energy
-            <button @click="act({ type: 'manual', op: { op: 'energy', player: me, delta: 1 } })">+1</button>
-            <button @click="act({ type: 'manual', op: { op: 'energy', player: me, delta: -1 } })">-1</button>
-          </div>
-        </div>
-        <div v-else-if="myTurn" class="panel muted">
-          Your turn: click a card in your Hand to take it off or start an action. Play at least one card, then end the turn.
-        </div>
-        <Inspector />
-        <LogPanel />
-      </aside>
-    </div>
-    <HomePanel :player="me" class="mine" />
   </div>
 </template>
 
 <style scoped>
-.screen { display: flex; flex-direction: column; gap: 8px; padding: 8px; min-height: 100vh; }
-.bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 6px 10px; }
-.bar .title { font-size: 12px; }
-.spacer { flex: 1; }
-.share a { color: var(--p1); }
+.screen { min-height: 100vh; padding: 4px; padding-right: 360px; }
+.board-wrap { margin: 0 auto; }
+.board { position: relative; }
+.at { position: absolute; }
+
+.controls {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 50;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.controls .turn, .controls .seat, .controls .share { font-family: var(--font-title); font-size: 9px; line-height: 1.5; color: #aaa; text-shadow: 0 0 3px #000; }
+.controls .turn b { font-size: 11px; }
+.controls .share a { color: var(--p1); }
+.controls select { font-size: 15px; }
+
+.side {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  width: 340px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+.side .inspector { margin-top: auto; }
 .error-bar { cursor: pointer; }
-.winner { text-align: center; border-color: var(--ok); }
-.middle { display: flex; gap: 8px; align-items: flex-start; }
-.board { flex: 1; overflow: auto; min-width: 0; }
-.side { width: 380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px; }
-@media (max-width: 1100px) {
-  .middle { flex-direction: column; }
-  .side { width: 100%; }
+.winner {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 60;
+  text-align: center;
+  border-color: var(--ok);
 }
 </style>

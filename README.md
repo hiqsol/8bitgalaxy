@@ -22,6 +22,11 @@ npm test         # engine tests
 
 ## Play
 
+The board follows the look of the legacy prototype: your Home along
+the bottom with your Laboratory and Factory on the right, the rival's
+along the top and on the left; card colors and borders tell the
+players apart, the Field turns so that your Home Star is at the bottom.
+
 1. Click a card in your Hand: take it off to a Star you control, or
    start an action
 2. The action panel shows what is missing: pick the destination,

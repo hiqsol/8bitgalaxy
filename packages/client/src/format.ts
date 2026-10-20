@@ -44,3 +44,24 @@ export function cardName(card: Card | undefined): string {
 }
 
 export const defOf = (card: Card) => cardDef(card.def);
+
+/** Card face words of the legacy version: lowercase, at most 7 letters */
+const TECH_WORDS: Record<string, string> = {
+  Shipyard: 'shpyrd',
+  Militarization: 'mobilz',
+  Navigation: 'navi',
+  ForceDiscard: 'fdiscrd',
+  DoNotDeplete: 'nodeplt',
+  PlusFactory: '+fctry',
+  PlusLaboratory: '+lab',
+  EfficientUpgrade: 'effupgr',
+  MinusRequirement: '-req',
+  PlusHero: '+hero',
+};
+
+/** One Ability as printed on the card: `2+1`, `+1`, `+1rng`, `academy` */
+export function cardWord(a: Ability): string {
+  if (a.kind === 'power') return a.field ? `${a.base}+${a.field}` : `${a.base}`;
+  if (a.kind === 'plus') return a.what === 'power' ? `+${a.n}` : `+${a.n}${a.what === 'range' ? 'rng' : a.what.slice(0, 3)}`;
+  return TECH_WORDS[a.tech] ?? a.tech.toLowerCase().slice(0, 7);
+}
