@@ -18,7 +18,9 @@ export function viewFor(state: State, viewer: PlayerId | null): View {
 
   for (const [player, home] of Object.entries(v.homes)) {
     home.reserve = home.reserve.map((uid) => (drop(uid), placeholder(player, true)));
-    if (player !== viewer) home.hand = home.hand.map((uid) => (drop(uid), placeholder(player, true)));
+    // cards played openly in a Combat stay in Hand until it resolves, they are seen
+    const open = new Set(v.combat?.entries.filter((e) => !e.secret).map((e) => e.card));
+    if (player !== viewer) home.hand = home.hand.map((uid) => (open.has(uid) ? uid : (drop(uid), placeholder(player, true))));
   }
   for (const star of Object.values(v.stars)) {
     if (!star.revealed) {

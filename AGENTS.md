@@ -43,3 +43,15 @@ Write a page like the best existing page of its kind:
 - Class, Origin, Role: `docs/Types/Social.md`
 - Home pile: `docs/Home/Hand.md`
 - Space type: `docs/Field/Asteroids.md`
+
+## Code
+
+The game is in `packages/`, see `README.md` and
+`adr/0001-engine-and-multiplayer.md`:
+
+- Rules belong in `packages/engine`, never in the client or server
+- After editing `docs/Cards/Deck.md` or the technology table run
+  `npm run cards`, the engine test checks they are in sync
+- Run `npm test` and `npm run typecheck` after code changes
+- Engine comments link rules pages as `[[Page]]`, values the docs
+  don't set are marked `ASSUMPTION` in `scenario.ts`

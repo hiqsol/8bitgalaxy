@@ -74,7 +74,8 @@ A faction falls when it loses all leaders or can't make a move.
 
 ## Tech Stack
 
-Vue 3 + TypeScript + Vite + Sass. Runs in any browser.
+Vue 3 + TypeScript + Vite, Colyseus game server. Runs in any
+browser.
 
 ## Status
 

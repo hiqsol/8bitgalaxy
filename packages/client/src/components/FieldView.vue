@@ -126,7 +126,7 @@ const tileClass = (id: string) => ({ destination: ui.draft?.destination === id }
             :data-row="row"
             :data-index="i"
             :class="[row, { free: !uid }]"
-            :style="{ left: `${slotLeft(row)}px`, top: `${i * SLOT_STEP}px`, zIndex: i + 1 }"
+            :style="{ left: `${slotLeft(row)}px`, top: `${i * SLOT_STEP}px`, zIndex: uid ? i + 1 : 0 }"
             @click.stop="clickSlot(star.id, row, i)"
           >
             <CardView v-if="uid" :uid="uid" :look="row === 'units' ? 'v' : 'h'" :overlapped="isOverlapped(view, uid)" />

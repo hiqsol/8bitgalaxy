@@ -345,6 +345,8 @@ describe('Combat', () => {
     // the rival sees only that a card was committed
     const bobSees = viewFor(s, 'p2');
     expect(bobSees.combat!.entries.find((e) => e.secret)!.card).toMatch(/^\?/);
+    // the starter is played openly
+    expect(bobSees.cards[f.starter].def).toBe('Ship 1M');
     expect(err(s, 'p1', { type: 'combatPass' })).toMatch(/not your move/);
     s = ok(s, 'p2', { type: 'combatPass' });
     s = ok(s, 'p1', { type: 'combatPass' });

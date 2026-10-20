@@ -1,30 +1,48 @@
-## Install dependencies
+# 8-bit Galaxy
 
-Install dependencies with npm:
+A 4X strategy card game, see [PITCH](PITCH.md). The rules live in
+`docs/`, the source of truth; the code follows them, see
+[ADR 0001](adr/0001-engine-and-multiplayer.md).
 
-```bash
-npm i
-```
-
-## Development
+## Run
 
 ```bash
-npm run dev
+npm install
+npm run dev      # client at http://localhost:5173
+npm run server   # game server at ws://localhost:2567, for online play
+npm test         # engine tests
 ```
 
-## Build
+- **Hot seat**: two players at one screen, the screen is covered
+  between turns; "open hands" plays without secrets
+- **Online**: "Create game" gives an invite link for the rival, the
+  server holds the game, every player sees only their view
+- `?seed=N` in the URL starts a reproducible hot-seat game
+- `VITE_SERVER_URL` points the client to another server
 
-Build production (distribution) files in your **dist** folder:
+## Play
 
-```bash
-npm run build
-```
+1. Click a card in your Hand: take it off to a Star you control, or
+   start an action
+2. The action panel shows what is missing: pick the destination,
+   click participants on the Field or in Hand, then Perform
+3. Play at least one card, then End turn
+4. Undo takes back moves of the current turn that revealed nothing
+5. **Table** mode makes free moves for what the engine doesn't
+   handle yet, every one is logged for both players
 
-or
+## Code
 
-```bash
-npm run build:watch
-```
+- `packages/engine`: pure TypeScript rules, no DOM:
+  `apply(state, player, move)` returns a new state or the broken
+  rule, `viewFor(state, player)` hides what a player may not see
+- `packages/client`: Vue 3 + Vite, renders a view, sends moves
+- `packages/server`: Colyseus room that runs the engine
+- `packages/engine/src/data/deck.json` is generated from
+  `docs/Cards/Deck.md`: run `npm run cards` after editing the deck
+- `packages/engine/src/scenario.ts` holds the first duel setup,
+  values the docs don't set yet are marked `ASSUMPTION`
+- `legacy/` is the previous prototype, kept for reference
 
 ## License
 
