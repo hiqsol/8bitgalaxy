@@ -12,7 +12,8 @@ scope: objectives
 4. [[Origin]] = none
 5. **Public objectives**: 3 cards face up, available to all players
 6. **Secret objectives**: 1 [[Hidden]] card for each player
-7. At the end of own [[Turn]] player can score **one** objective, see [[Turn]]:
+7. At the end of own [[Turn]] player can score **one** objective, see
+   [[Turn]]:
 	1. Public objective is replaced with a new one
 	2. Secret objective is revealed
 8. First player to get N victory points wins, N is about 6 in a duel
@@ -21,5 +22,5 @@ scope: objectives
 
 1. Gives the game a clock and a clear winner, see [[Goal]]
 2. The [[GalaxyDeck]] can add more objectives
-3. Objectives check only the current table, like [[CulturePoints]]: no counts
-   of past events to keep, e.g. no "win 2 Combats"
+3. Objectives check only the current table, like [[CulturePoints]]: no
+   counts of past events to keep, e.g. no "win 2 Combats"

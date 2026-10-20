@@ -1,4 +1,4 @@
-.PHONY: upgit docs check lint hooks
+.PHONY: upgit docs check lint wrap hooks
 
 UWIKI ?= $(HOME)/prj/hiqsol/uwiki/src/uwiki.py
 export UWIKI
@@ -14,5 +14,7 @@ check:
 	bin/checkdocs
 lint:
 	$(MDLINT) $(MD)
+wrap:
+	git ls-files "*.md" | xargs bin/wrapmd
 hooks:
 	git config core.hooksPath .githooks

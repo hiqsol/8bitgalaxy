@@ -3,12 +3,13 @@ status: draft
 scope: core
 ---
 
-1. **Upgrade** is [[Culture]] and [[Production]] [[TechnologyAction]] of
-   [[BuildingFacility]]
+1. **Upgrade** is [[Culture]] and [[Production]] [[TechnologyAction]]
+   of [[BuildingFacility]]
 2. Flavour names:
 	1. **Grow** for [[Social]]
 	2. **Enhance** for [[Industrial]]
-3. **Upgrade** allows to substitute a card for another card of the same type
+3. **Upgrade** allows to substitute a card for another card of the
+   same type
 4. **Direction**:
 	1. For [[Actor]] - any [[Star]] to [[BuildingFacility]]
 	2. For [[Structure]] - [[BuildingFacility]] to old card's [[Star]]

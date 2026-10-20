@@ -7,20 +7,20 @@ Every page has:
 - notes
 
 Docs include rules, notes and reviews.
-Reviews number issues `I<n>`, proposals `P<n>` and simplifications `S<n>`,
-continuing across review files.
-Write the points of an issue or proposal as lettered bullets `- a) ...`, so they
-can be referred to as `P24 a`.
-Run `make check` (`bin/checkdocs`) and `make lint` (markdownlint) after editing
-docs.
-Lines are at most 80 characters (tab counts as 4), tables and code blocks
-excepted.
+Reviews number issues `I<n>`, proposals `P<n>` and simplifications
+`S<n>`, continuing across review files.
+Write the points of an issue or proposal as lettered bullets
+`- a) ...`, so they can be referred to as `P24 a`.
+Run `make check` (`bin/checkdocs`) and `make lint` (markdownlint)
+after editing docs.
+Lines are at most 70 characters (tab counts as 4), tables and code
+blocks excepted, `make wrap` (`bin/wrapmd`) rewraps longer lines.
 The pre-commit hook runs both, enable it with `make hooks`.
 Docs must contain only actual, current information.
 Do not keep legacy or historical information in docs.
 Delete obsolete information, resolved issues and resolved proposals.
-When a proposal is accepted, incorporate its result into the applicable rules
-before deleting the proposal.
+When a proposal is accepted, incorporate its result into the
+applicable rules before deleting the proposal.
 
 Keep rules and notes concise.
 Indent nested rules with tabs.

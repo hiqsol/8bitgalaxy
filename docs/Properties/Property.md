@@ -21,15 +21,18 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	1. [[Side]] and [[End]]
 	2. [[Faction]] - always visible
 	3. [[Class]], which implies:
-		1. [[Defense]], default is [[AttackPower]] or **1** for non-[[Military]]
+		1. [[Defense]], default is [[AttackPower]] or **1** for
+		   non-[[Military]]
 	4. [[Level]], which implies:
 		1. [[Capacity]], default is [[Level]]
 		2. [[Range]], default is [[Level]] or **0** for [[Structure]]
 	5. [[ExtraCost]], which implies:
 		1. [[Cost]] = [[Level]] + [[ExtraCost]]
-		2. [[Size]] = [[Level]] + [[ExtraCost]] or [[Level]] for [[Hero]]
+		2. [[Size]] = [[Level]] + [[ExtraCost]] or [[Level]] for
+		   [[Hero]]
 	6. [[Type]], which implies:
-		1. [[Role]]: [[Unit]] / [[Structure]] / [[Agenda]] - always visible
+		1. [[Role]]: [[Unit]] / [[Structure]] / [[Agenda]] - always
+		   visible
 		2. [[Origin]]: [[Social]] / [[Industrial]]
 	7. [[PrimaryAbility]]
 	8. [[SecondaryAbility]]
@@ -40,13 +43,13 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	1. **explicit** - printed on the card
 	2. **implicit** - derived from other properties
 	3. **physical** - [[Side]] and [[End]]
-3. [[Component]] properties, of cards and tiles: [[Side]], [[ExtraCost]],
-   [[Cost]]
-4. [[Star]] and [[Space]] have own properties: Star Size and Type are not card
-   [[Size]] and [[Type]]
+3. [[Component]] properties, of cards and tiles: [[Side]],
+   [[ExtraCost]], [[Cost]]
+4. [[Star]] and [[Space]] have own properties: Star Size and Type are
+   not card [[Size]] and [[Type]]
 
 #### Notes
 
-1. In the card picture `T` is upside-down `1`: the weak [[End]] is printed
-   rotated by 180°
+1. In the card picture `T` is upside-down `1`: the weak [[End]] is
+   printed rotated by 180°
 2. The picture is generic for all double ended cards

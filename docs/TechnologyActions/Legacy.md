@@ -8,4 +8,5 @@ scope: objectives
 
 #### Notes
 
-1. Like the inner circle of Tyrants of the Underdark and the history of Imperium
+1. Like the inner circle of Tyrants of the Underdark and the history
+   of Imperium

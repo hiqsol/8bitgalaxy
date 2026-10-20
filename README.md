@@ -30,8 +30,10 @@ npm run build:watch
 
 This project is released under the terms of the **CC BY-NC-ND**
 [license](LICENSE). Read more
-[about the license](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+[about the
+license](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 Copyright ©2021-2024, Andrii Vasyliev (<sol@hiqdev.com>)
 
-[![CC BY-NC-ND](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![CC
+BY-NC-ND](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)

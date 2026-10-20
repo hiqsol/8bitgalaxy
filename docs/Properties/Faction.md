@@ -12,5 +12,5 @@ scope: core
 
 #### Notes
 
-1. Asymmetric **faction** is asymmetric deck. For an even contest players get
-   even decks, see [[GameBalance]].
+1. Asymmetric **faction** is asymmetric deck. For an even contest
+   players get even decks, see [[GameBalance]].

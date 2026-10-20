@@ -6,7 +6,8 @@ scope: core
 ### Technical description
 
 1. Civilizations invent Warp technology that allows:
-	1. Travel and communication between stars with faster than light speed
+	1. Travel and communication between stars with faster than light
+	   speed
 	2. Limitless energy extraction
 	3. Colonization of new star systems
 	4. Creation of devastating weaponry

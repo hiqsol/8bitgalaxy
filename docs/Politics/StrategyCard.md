@@ -12,5 +12,5 @@ scope: politics
 
 #### Notes
 
-1. Makes the game political without extra rules: players watch and use each
-   other's roles
+1. Makes the game political without extra rules: players watch and use
+   each other's roles

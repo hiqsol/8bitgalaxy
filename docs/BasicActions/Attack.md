@@ -15,5 +15,5 @@ scope: core
 
 #### Notes
 
-1. A winning attack moves the attacker's surviving [[Unit]]s to the destination
-   [[Star]], like a capture in chess.
+1. A winning attack moves the attacker's surviving [[Unit]]s to the
+   destination [[Star]], like a capture in chess.

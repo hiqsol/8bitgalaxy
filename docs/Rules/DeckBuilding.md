@@ -15,11 +15,12 @@ scope: core
 	4. Play from [[Hand]]:
 		1. [[Takeoff]] to [[Field]]
 		2. Or start/support an action and [[Deplete]] to [[Discard]]
-	5. Unused cards go from [[Hand]] to [[Discard]] at the end of [[Turn]]
-	6. From [[Field]] [[Deplete]] to [[Discard]] after an action, exceptions are
-	   in [[Deplete]]
+	5. Unused cards go from [[Hand]] to [[Discard]] at the end of
+	   [[Turn]]
+	6. From [[Field]] [[Deplete]] to [[Discard]] after an action,
+	   exceptions are in [[Deplete]]
 
 #### Notes
 
-1. Actors form the cycling deck; structures form the persistent engine on the
-   Field.
+1. Actors form the cycling deck; structures form the persistent engine
+   on the Field.

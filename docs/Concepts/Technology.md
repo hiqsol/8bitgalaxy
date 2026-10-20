@@ -7,13 +7,15 @@ scope: core
 2. **Technologies** come in three flavours:
 	1. [[TechnologyAction]] allows to perform non-basic actions
 	2. [[TechnologyModifier]] modify actions for better
-	3. [[BuildingFacility]] provides [[Create]], [[Upgrade]] and [[Recover]]
+	3. [[BuildingFacility]] provides [[Create]], [[Upgrade]] and
+	   [[Recover]]
 3. The table below is the only catalog of technologies:
-	1. **Class** is the [[Class]] of the card [[End]]s that carry the technology
-	2. **Cards** lists the [[Deck]] cards and ends that carry it, their levels
-	   are in the [[Deck]]
-	3. Technology pages name their kind and **Class** in the first rule, as in
-	   the table, and describe behavior, without level
+	1. **Class** is the [[Class]] of the card [[End]]s that carry the
+	   technology
+	2. **Cards** lists the [[Deck]] cards and ends that carry it,
+	   their levels are in the [[Deck]]
+	3. Technology pages name their kind and **Class** in the first
+	   rule, as in the table, and describe behavior, without level
 
 | Technology | Kind | Class | Scope | Cards |
 |------------|------|-------|-------|-------|
@@ -60,6 +62,7 @@ scope: core
 
 #### Notes
 
-1. Technologies without cards are planned, they need cards to be playable
-2. Design idea: stronger technologies sit on higher levels, the maximal ones on
-   the highest [[Hero]]es
+1. Technologies without cards are planned, they need cards to be
+   playable
+2. Design idea: stronger technologies sit on higher levels, the
+   maximal ones on the highest [[Hero]]es

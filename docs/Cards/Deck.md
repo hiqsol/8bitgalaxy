@@ -3,17 +3,18 @@ status: draft
 scope: core
 ---
 
-1. **Deck** lists all cards of the Human [[Faction]], one row per [[End]]
+1. **Deck** lists all cards of the Human [[Faction]], one row per
+   [[End]]
 2. Columns:
 	1. **Level** - [[Level]] + [[ExtraCost]], as printed on the card
-	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P [[Production]], S
-	   [[Science]]
-	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class, `X+Y` for
-	   [[Actor]]s, other [[Plus]] or [[Technology]]
+	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P
+	   [[Production]], S [[Science]]
+	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class,
+	   `X+Y` for [[Actor]]s, other [[Plus]] or [[Technology]]
 	4. **Secondary** - [[SecondaryAbility]]: [[Plus]] power `+N` or
 	   [[Technology]]
-	5. **Prerequisites** - [[Prerequisites]] as level and class pairs, same for
-	   both ends
+	5. **Prerequisites** - [[Prerequisites]] as level and class pairs,
+	   same for both ends
 3. Card name is [[Type]] with strong end level and class
 
 | Card | End | Level | Class | Primary | Secondary | Prerequisites |
@@ -85,16 +86,16 @@ scope: core
 
 #### Notes
 
-1. Imported from the legacy code (`src/legacy/js/Model/Decks/Human.js`), to be
-   reviewed
+1. Imported from the legacy code
+   (`src/legacy/js/Model/Decks/Human.js`), to be reviewed
 2. Patterns:
-	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology, ends have
-	   different classes
-	2. [[Structure]]s: Primary is technology or a non-power [[Plus]] at both
-	   ends, Secondary is power at strong end only, both ends have the same
-	   class
-	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't change
-	   with rotation
+	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology,
+	   ends have different classes
+	2. [[Structure]]s: Primary is technology or a non-power [[Plus]]
+	   at both ends, Secondary is power at strong end only, both ends
+	   have the same class
+	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't
+	   change with rotation
 3. Technology classes and scopes are in [[Technology]]
 4. Unclear technology from the legacy code: `allacad`
 5. [[Explore]] on a [[Military]] end is printed as **Recon**

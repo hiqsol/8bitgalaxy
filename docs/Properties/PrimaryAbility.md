@@ -8,10 +8,10 @@ scope: core
    [[Technology]]
 3. [[Power]] of an [[Actor]] is printed as `X+Y`:
 	1. `X` always
-	2. `+Y` is added on the [[Field]]: for a direct participant and a supporter
-	   from the Field
+	2. `+Y` is added on the [[Field]]: for a direct participant and a
+	   supporter from the Field
 
 #### Notes
 
-1. [[Takeoff]] pays off: a Field card gives more power, as a direct participant
-   its [[SecondaryAbility]] gives even more
+1. [[Takeoff]] pays off: a Field card gives more power, as a direct
+   participant its [[SecondaryAbility]] gives even more
