@@ -1,6 +1,6 @@
 ---
 date: 2026-10-16
-updated: 2026-10-19
+updated: 2026-10-20
 status: WIP
 scope: meta
 ---
@@ -9,9 +9,9 @@ scope: meta
 
 Review of the whole design against 4X and deck-building games: what is
 missing, broken, worth adding or removing. Complements [[RulesReview]]
-(minimal duel), numbers continue it.
+(minimal duel); the numeric suffixes continue it.
 
-Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
+Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 
 ## Lessons from other games
 
@@ -23,9 +23,9 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 | Voidfall | 3 cycles, each ends with evaluation: scoring and upkeep; Focus cards come back at the cycle end. Diceless combat, defender wins ties, max 2 fleets per sector (already: [[Combat]], [[Slot]]). Trade tokens unlock an extra action. | Ideas |
 | Imperium: Classics | Reshuffle is the progress tick: gain or develop a card. History pile: cards out of the deck still score. Game ends when a supply runs out. | [[Twilight]], [[Legacy]] |
 | Twilight Imperium | Ships can't pass systems with enemy ships. Planets exhaust and ready every round. Home system has a space dock. Mecatol Rex is a prize in the center. | [[Pinning]], [[Restore]], Ideas |
-| Eclipse | Pinning. Sector tier is printed on the tile back (already: [[Space]] Length). Ancients guard the good hexes. | P52, [[Pinning]] |
+| Eclipse | Pinning. Sector tier is printed on the tile back (already: [[Space]] Length). Ancients guard the good hexes. | DP52, [[Pinning]] |
 | Star Realms | Authority is the clock. Outposts must be destroyed first. | [[Guard]] |
-| Mage Knight | Deck building, hex exploration and diceless combat in one game. Wounds go to the deck and clog the hand. | I76 c |
+| Mage Knight | Deck building, hex exploration and diceless combat in one game. Wounds go to the deck and clog the hand. | DI76 c |
 | Tyrants of the Underdark | Deck building with area control. Promoting a card takes it out of the deck for points. | [[Legacy]] |
 | Kemet | Diceless battle cards. Points for holding temples are lost with the temples. | [[Goal]] |
 
@@ -44,14 +44,14 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 
 ## Issues
 
-- [ ] **I74. Economy overlap.** → P57
+- [ ] **DI74. Economy overlap.** → DP57
 	- a) [[Recycle]] and [[Dismantle]] both turn cards into
 	  [[Materials]].
 	- b) [[Export]] and [[Smuggle]] need a rival's Colony: dead in a
 	  duel.
 	- c) [[Sell]] is a stub.
 	- d) [[Energy]] says [[Trade]] gives Energy, Trade says Materials.
-- [ ] **I75. Minor.**
+- [ ] **DI75. Minor.**
 	- a) [[GameBalance]] expects about 5 actions per Turn, but every
 	  Hand action takes a starter and usually supporters: 2-3 is
 	  likelier.
@@ -64,12 +64,12 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 	  cards, which lowers their [[Defense]] before an [[Attack]]:
 	  `Suppression` fits best, also `Sabotage`, `Disruption`. Its
 	  Defense part is a [[Plus]].
-	- e) [[Card]] doesn't list Stars and Spaces, though P36 makes
+	- e) [[Card]] doesn't list Stars and Spaces, though RP36 makes
 	  Stars a deck.
 	- f) [[Deck]]: [[Plus]] Defense of [[Militarization]] cards was
 	  set to raise Defense 1 to the end's [[Level]], but [[Military]]
 	  cards defend with their [[AttackPower]]: revise the values?
-- [ ] **I76. Academy attack details** ([[Combat]] 2.3):
+- [ ] **DI76. Academy attack details** ([[Combat]] 2.3):
 	- a) [[Reserve]] is face down: the attacker picks blindly or takes
 	  from the top?
 	- b) [[Hand]] is hidden: picked blindly, or by name after Recon
@@ -79,22 +79,22 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 	  Knight wounds)?
 	- d) Cards selected from piles are defending participants, so they
 	  add their power to the defense: intended?
-- [ ] **I77. Hyperstructure count and build.**
+- [ ] **DI77. Hyperstructure count and build.**
 	- a) How many in a game, one copy of each?
 	- b) A shared row, the first to complete one takes it?
 	- c) Built in stages: each [[Create]] adds Culture or Production
 	  power as tokens until they reach its [[Cost]]?
-- [ ] **I78. Production path** ([[Goal]] 3.3) is TBD. → P60
-- [ ] **I79. New technologies follow-ups.**
-	- b) [[Legacy]] thins the deck, like I46: keep it in `objectives`
+- [ ] **DI78. Production path** ([[Goal]] 3.3) is TBD. → DP60
+- [ ] **DI79. New technologies follow-ups.**
+	- b) [[Legacy]] thins the deck, like RI46: keep it in `objectives`
 	  or drop it?
 	- c) The new technologies have no cards yet.
 	- d) All are `advanced`, [[Legacy]] is `objectives`: should some
 	  go to `core`?
-- [ ] **I80. Event catch-up measure.** [[Event]] notes give less to
+- [ ] **DI80. Event catch-up measure.** [[Event]] notes give less to
   stronger factions, but greatness is now the four paths of [[Goal]]:
   which measure says who is stronger, Culture points?
-- [ ] **I81. Combat damage, to brainstorm.** [[Combat]] 10.1-2 Damage
+- [ ] **DI81. Combat damage, to brainstorm.** [[Combat]] 10.1-2 Damage
   every direct participant the winner doesn't save by the advantage,
   on both sides; supporters only [[Deplete]]:
 	- a) Exploit: one cheap [[Military]] ship plus [[Hand]] supporters
@@ -109,13 +109,13 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 	  loss: the winner Damages own direct participants of total
 	  [[Level]] at least the loser's direct total, chosen by the
 	  winner.
-	- e) Depends on I76 c: where a Damaged card from Hand goes.
+	- e) Depends on DI76 c: where a Damaged card from Hand goes.
 
 ## Proposals
 
 ### Victory
 
-- [ ] **P60. Production path** for [[Goal]] 3, pick one or more:
+- [ ] **DP60. Production path** for [[Goal]] 3, pick one or more:
 	- a) Production, Wealth: stock 12 [[Energy]] (Civilization's
 	  economic victory).
 	- b) Production, Industry: total [[Level]] of own [[Base]]s on the
@@ -130,7 +130,7 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 
 ### Fixes
 
-- [ ] **P48. Hidden movement.** Combinable:
+- [ ] **DP48. Hidden movement.** Combinable:
 	- b) Cards hidden by [[Stealth]] keep their real Range and
 	  Capacity: Stealth pays off, though rivals can't check the
 	  values.
@@ -138,8 +138,8 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 
 ### Additions
 
-- [ ] **P52. Native defense.** [[DefSys]] is a [[Star]] property of
-  the Star deck (P36), like Eclipse Ancients:
+- [ ] **DP52. Native defense.** [[DefSys]] is a [[Star]] property of
+  the Star deck (RP36), like Eclipse Ancients:
 	- a) A number on some Stars: to control the Star a player first
 	  wins an [[Attack]] against that [[Defense]], then it's gone.
 	- b) Better Abilities have higher DefSys.
@@ -148,7 +148,7 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 
 ### Removals and simplifications
 
-- [ ] **P55. One handling rule.** Replace the [[Manage]] table with
+- [ ] **DP55. One handling rule.** Replace the [[Manage]] table with
   the rule that [[Move]] 6 uses for cargo, the table says exactly
   this:
 	- a) Military handles [[Actor]]s, Culture handles [[Social]]
@@ -156,7 +156,7 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 	  anything.
 	- b) Any ship also carries [[Hero]]es and [[Materials]] (Move
 	  only).
-- [ ] **P57. Economy roles.** One job per stockable resource (Eclipse,
+- [ ] **DP57. Economy roles.** One job per stockable resource (Eclipse,
   TtA: materials build, money is the wildcard):
 	- a) [[Materials]] pay [[Create]], [[Upgrade]] and [[Recover]]
 	  costs at a [[Hub]] in the Star where they are: [[Extract]] at
@@ -167,7 +167,7 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 	- d) [[Dismantle]] merges into [[Recycle]].
 	- e) [[Export]], [[Smuggle]] and [[Sell]] move to [[Politics]] as
 	  trade between factions.
-- [ ] **P58. Traits instead of new Types.** Variety via [[Trait]]s:
+- [ ] **DP58. Traits instead of new Types.** Variety via [[Trait]]s:
 	- a) `Unique`: one per faction on the [[Field]], for flagships and
 	  top Heroes (TI).
 	- b) `Consumable`: [[Destroyed]] after use, replaces the [[Tool]]
@@ -177,11 +177,11 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 	- d) Card orientations are all taken (strong and weak front,
 	  Damaged and Hidden back), so new states should come from
 	  position, like [[ActiveFor]] and [[Pinning]], not markers.
-- [ ] **P59. Stubs** ([[RulesReview]] I21):
-	- a) [[DefSys]]: by P52.
-	- b) [[Dismantle]], [[Sell]]: by P57.
+- [ ] **DP59. Stubs** ([[RulesReview]] RI21):
+	- a) [[DefSys]]: by DP52.
+	- b) [[Dismantle]], [[Sell]]: by DP57.
 	- c) [[PlusHero]]: remove, [[Create]] of Heroes covers it.
-	- d) [[HyperPass]]: by P24.
+	- d) [[HyperPass]]: by RP24.
 	- e) `allacad` on Base 4C, read as "all-academy": an [[Academy]]
 	  that creates Colonies in any Star the player controls, without
 	  the [[Range]] requirement.
