@@ -12,4 +12,4 @@ scope: advanced
 	1. Authorization from party [[Faction]]
 5. **Outcome**:
 	1. Power converts to [[Materials]] one to one
-	2. [[Materials]] are split evenly between [[Star]]s
+	2. [[Materials]] are split as agreed between [[Star]]s

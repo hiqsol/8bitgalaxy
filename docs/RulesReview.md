@@ -34,7 +34,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	  takes the highest Level from the faction deck.
 	- d) [[Actor]] Primary power values as `X+Y`, see
 	  [[PrimaryAbility]].
-	- e) More [[BuildingFacility|building facilities]], planned: a
+	- e) More [[Hub|hubs]], planned: a
 	  faction that lost its home Star can rebuild.
 - [ ] **I21. Stub notes** (`status: stub`):
 	- a) [[DefSys]]: see [[DesignReview]] P52.

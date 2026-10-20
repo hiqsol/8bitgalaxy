@@ -25,14 +25,15 @@ sys.path.insert(0, os.path.dirname(os.path.realpath(UWIKI)))
 import uwiki  # noqa: E402
 KEYS = {'status', 'scope', 'aliases', 'date', 'updated'}
 CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
-TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers')
-TECH_BASES = {'TechnologyAction', 'TechnologyModifier'}
-KIND_TECH = {'Action': 'TechnologyAction', 'Modifier': 'TechnologyModifier', 'Facility': 'BuildingFacility'}
+TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')
+TECH_BASES = {'TechnologyAction', 'TechnologyModifier', 'Hub'}
+KIND_TECH = {'Action': 'TechnologyAction', 'Modifier': 'TechnologyModifier', 'Hub': 'Hub'}
 # folder: kind pages the first rule links
 KINDS = {
     'BasicActions': {'BasicAction'},
     'TechnologyActions': {'TechnologyAction'},
-    'TechnologyModifiers': {'TechnologyModifier', 'BuildingFacility'},
+    'TechnologyModifiers': {'TechnologyModifier'},
+    'Hubs': {'Hub'},
     'Cards': {'Type'},
     'Properties': {'Property', 'Trait'},
     'Resources': {'Resource', 'Power'},
@@ -40,7 +41,7 @@ KINDS = {
     'Types': {'Class', 'Origin', 'Role'},
     'Home': {'Home'},
 }
-KIND_PAGES = {'BasicAction', 'TechnologyAction', 'TechnologyModifier', 'Card', 'Deck', 'Property', 'Resource', 'State', 'Home'}
+KIND_PAGES = {'BasicAction', 'TechnologyAction', 'TechnologyModifier', 'Hub', 'Card', 'Deck', 'Property', 'Resource', 'State', 'Home'}
 CLASS_TECH = re.compile(r'\[\[(%s)\]\] technolog|technology Level' % '|'.join(CLASSES.values()))
 
 problems = []
@@ -131,8 +132,8 @@ def deck_assignments(deck):
 def check_technologies(pages):
     catalog, deck = pages['Technology'], pages['Deck']
     assigned = deck_assignments(deck)
-    # BuildingFacility actions (Create) are technologies via the facility
-    cataloged = set(links(pages['BuildingFacility'].tree))
+    # Hub actions (Create) are technologies via the hub
+    cataloged = set(links(pages['Hub'].tree))
 
     for row in catalog.table():
         if not links(row[0]):

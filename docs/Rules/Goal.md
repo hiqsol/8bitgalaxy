@@ -39,8 +39,8 @@ scope: core
 	   see [[Combat]]
 5. Losing the home [[Star]] is a heavy loss by intention, a goal for
    rivals, but it doesn't end the game, neither does losing the
-   [[BuildingFacility|building facilities]]: the faction still moves
-   and can defeat the rival leader. The captor gets the facilities,
+   [[Hub|hubs]]: the faction still moves
+   and can defeat the rival leader. The captor gets the hubs,
    like taking the queen in Chess
 6. Losing the last Star does end the game: a faction that controls no
    [[Star]] can not make a move, it has no place for [[Takeoff]] and

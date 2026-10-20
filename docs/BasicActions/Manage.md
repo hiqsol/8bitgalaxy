@@ -16,7 +16,7 @@ scope: core
 		   [[Militarization]]
 			1. [[Action]] has to be directed to the [[Star]]
 		2. Between piles within [[Laboratory]] or [[Factory]] row
-			1. **Direction**: to corresponding [[BuildingFacility]]
+			1. **Direction**: to corresponding [[Hub]]
 3. **Cost**: 1 resource per operation with card
 4. **Manage** action can be done with any power, but:
 	1. only the type of power given by the **starter**, see

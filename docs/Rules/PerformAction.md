@@ -28,11 +28,13 @@ scope: core
    be satisfied with abilities provided by participants. Else action
    is not successful and doesn't yield result but resources are spent.
 4. [[Range]] is always a requirement, building included:
-	1. The selected participants from one IPS form a **group**
+	1. The selected participants from one IPS other than the
+	   destination form a **group**: the source group and remote
+	   [[Support]] groups
 	2. Every group must reach the destination: the [[Distance]] from
 	   its IPS must be within the group's Range, see [[Range]]
-	3. For the source group it is the [[Direction]] length, for the
-	   destination group it is 0
+	3. Cards in the destination are direct participants without a
+	   Range check
 5. Action can be extended (increased list of participants and used
    abilities) gradually with revealed information. For example for
    [[Explore]] or [[Combat]]

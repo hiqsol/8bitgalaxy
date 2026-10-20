@@ -7,6 +7,8 @@ scope: core
 2. **Laboratory** piles hold cards that must be [[Research]]ed before
    building
 3. Only the top card of each pile is available
+4. Moving a card between **Laboratory** piles costs 1 power per card,
+   whatever action moves it
 
 #### Notes
 

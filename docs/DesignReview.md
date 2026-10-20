@@ -44,13 +44,6 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 
 ## Issues
 
-- [ ] **I69. Upgrade and Recover source.** [[BuildingFacility]] and
-  [[Technology]] say a facility provides Create, Upgrade and Recover,
-  [[Academy]] and [[Shipyard]] say only Create, and 12 card ends carry
-  [[Upgrade]] or [[Recover]]:
-	- a) Recommended: a facility provides Create and is the
-	  destination of all three, Upgrade and Recover come from a
-	  participant.
 - [ ] **I74. Economy overlap.** → P57
 	- a) [[Recycle]] and [[Dismantle]] both turn cards into
 	  [[Materials]].
@@ -62,20 +55,18 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 	- a) [[GameBalance]] expects about 5 actions per Turn, but every
 	  Hand action takes a starter and usually supporters: 2-3 is
 	  likelier.
-	- b) [[Research]] has a direction to a [[BuildingFacility]],
-	  though it only moves cards between Home piles.
-	- c) [[Combat]] 10.1: say that the winner saves only own
+	- b) [[Combat]] 10.1: say that the winner saves only own
 	  participants.
-	- d) Naming: [[AttackPower]] → `MilitaryPower`, like the other
+	- c) Naming: [[AttackPower]] → `MilitaryPower`, like the other
 	  three powers.
-	- e) Naming: [[Militarization]] cards are [[Military]] already,
+	- d) Naming: [[Militarization]] cards are [[Military]] already,
 	  they don't militarize. The technology is [[Manage]] of enemy
 	  cards, which lowers their [[Defense]] before an [[Attack]]:
 	  `Suppression` fits best, also `Sabotage`, `Disruption`. Its
 	  Defense part is a [[Plus]].
-	- f) [[Card]] doesn't list Stars and Spaces, though P36 makes
+	- e) [[Card]] doesn't list Stars and Spaces, though P36 makes
 	  Stars a deck.
-	- g) [[Deck]]: [[Plus]] Defense of [[Militarization]] cards was
+	- f) [[Deck]]: [[Plus]] Defense of [[Militarization]] cards was
 	  set to raise Defense 1 to the end's [[Level]], but [[Military]]
 	  cards defend with their [[AttackPower]]: revise the values?
 - [ ] **I76. Academy attack details** ([[Combat]] 2.3):
@@ -168,7 +159,7 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 - [ ] **P57. Economy roles.** One job per stockable resource (Eclipse,
   TtA: materials build, money is the wildcard):
 	- a) [[Materials]] pay [[Create]], [[Upgrade]] and [[Recover]]
-	  costs at a facility in the Star where they are: [[Extract]] at
+	  costs at a [[Hub]] in the Star where they are: [[Extract]] at
 	  [[Asteroids]], carried to the Shipyard.
 	- b) [[Energy]] [[Boost]]s any action (already in `core`).
 	- c) [[Trade]] turns power into Energy between two own Colonies: a
@@ -194,7 +185,7 @@ Answer proposals by number and letter, e.g. "P48 b", "P60 b, d".
 	- e) `allacad` on Base 4C, read as "all-academy": an [[Academy]]
 	  that creates Colonies in any Star the player controls, without
 	  the [[Range]] requirement.
-	- f) `allacad` read as a facility for both [[Origin]]s.
+	- f) `allacad` read as a global [[Hub]] for both [[Origin]]s.
 
 ## Ideas
 

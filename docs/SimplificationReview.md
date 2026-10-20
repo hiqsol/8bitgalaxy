@@ -56,23 +56,6 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 
 ### Actions
 
-- [ ] **S4. Home actions without Direction.** [[Research]] and
-  [[Manage]] Shift of piles work on [[Home]] piles, yet they are
-  directed to a [[BuildingFacility]] ([[DesignReview]] I75 b):
-	- a) A Home action has only a source: any [[Star]]
-	  [[ControlledBy]] the player, no destination, no [[Range]].
-	- b) The same for [[Legacy]], [[Recall]], [[Forecast]] and
-	  [[Invent]], which don't name a Direction now.
-	- c) Why: nothing on the [[Field]] changes, the destination only
-	  adds a Range check. Usually the player picks the facility's Star
-	  as the source, [[Distance]] 0, so the check costs nothing but
-	  rules text and a step for AI players. Half the Home actions name
-	  no Direction at all.
-	- d) What it removes: the facility as a target of Research. Today
-	  a lost [[Academy]] stops [[Social]] Research too, not only
-	  [[Create]]. If that pressure is wanted, keep the Direction and
-	  only add one for b).
-
 - [ ] **S19. One first-play rule.** [[Turn]] 2 says every play starts
   with a card from [[Hand]], and rule 4 requires at least one such
   card, but [[Starter]] and [[Goal]] note 7 say a Field card can act
@@ -104,47 +87,21 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	- c) Defensive Abilities apply continuously in that Star.
 	- d) Balance their values for those timings, then remove "once per
 	  Turn".
-- [ ] **S22. Range only where distance exists.** [[PerformAction]]
-  checks every IPS group, including the destination group whose
-  Distance is always 0:
-	- a) Only a source group and remote [[Support]] group must reach
-	  the destination. Cards already there are direct participants
-	  without a Range check.
-	- b) An action with no Field destination has no Range check, with
-	  S4.
-	- c) This changes no reachable action; it removes a group and a
-	  vacuous check from the common sequence.
-- [ ] **S34. One payment rule.** Pages name the paying [[Power]] in
-  four ways: [[Create]] by the card's [[Origin]], [[Explore]] by the
-  Class of the end with the technology, [[Manage]] by the starter,
-  [[Research]] Science; [[Extract]], [[Recycle]] and [[Trade]] name
-  none:
-	- a) A technology action's Cost is paid in the power of the
-	  [[Class]] of the [[Technology]] it requires, for a two-class one
-	  of the providing end.
-	- b) Build actions require the facility ([[DesignReview]] I69 a):
-	  Academy is Culture, Shipyard Production, the same as the Origin
-	  rule today.
-	- c) Basic actions keep their own rule: Research Science, Manage
-	  the starter's Class, Move and Attack pay no Cost.
-	- d) Remove the power from every Cost line and the "Used for"
-	  lists of the four Power pages.
 - [ ] **S35. One build direction.** [[Create]] 6, [[Upgrade]] 4 and
   [[Recover]] 4 each define directions for the same three actions,
-  [[Settle]] and [[Prefab]] add a third; today a facility in a
+  [[Settle]] and [[Prefab]] add a third; today a hub in a
   [[Disputed]] Star still builds Actors (it is the destination) but
   not Structures (it is the source):
-	- a) The source is the facility's [[Star]], the destination is the
+	- a) The source is the hub's [[Star]], the destination is the
 	  Star of the card: where a [[Structure]] is or goes, where a
-	  Damaged card lies; a card in [[Home]] has the facility's Star as
+	  Damaged card lies; a card in [[Home]] has the hub's Star as
 	  both ends, [[Distance]] 0.
-	- b) Settle and Prefab: the Ship's Star is both ends, no facility.
-	- c) State it once, in [[BuildingFacility]] or, with S37, in
-	  Create; the three action pages keep only requirements, Cost and
-	  outcome.
+	- b) Settle and Prefab: the Ship's Star is both ends, no hub.
+	- c) State it once, in [[Hub]]; the three action pages keep only
+	  requirements, Cost and outcome.
 	- d) What it changes: an Actor is built only with cards at the
-	  facility as direct participants, not at another source Star, and
-	  a facility in a Disputed Star builds nothing.
+	  hub as direct participants, not at another source Star, and
+	  a hub in a Disputed Star builds nothing.
 - [ ] **S36. Twin technologies as one.** [[Explore]] already is one
   technology of two Classes. [[Settle]] and [[Prefab]] are one page
   with Colony/Base and Academy/Shipyard swapped, [[PlusFactory]] and
@@ -157,36 +114,30 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  with a Production end, a new [[Laboratory]] pile with a Science
 	  end.
 	- c) Two pages and two catalog rows less.
-- [ ] **S37. Technologies without kinds.** The Kind column of
-  [[Technology]] sorts technologies into Action, Modifier and
-  Facility, but the split doesn't hold: [[Invent]] is "Research from
-  inside a pile", [[Raid]] "an Attack whose winners don't move",
-  [[Smuggle]] "Export without authorization", [[Sell]] "like Trade",
-  all filed as Actions, while [[Express]] changes Create and is a
-  Modifier; [[Academy]] and [[Shipyard]] are Facilities in the
-  `TechnologyModifiers` folder:
-	- a) A Technology is a named rule; its page says what it allows or
-	  changes, its first rule names only its Class.
-	- b) Remove the Kind column and the [[TechnologyModifier]] and
-	  [[BuildingFacility]] pages, with S27 also [[TechnologyAction]].
-	  Keep **facility** as a word for Academy and Shipyard, defined in
-	  [[Create]].
-	- c) One `Technologies` folder; `bin/checkdocs` drops its kind
-	  checks.
-- [ ] **S38. One route rule.** What a route may pass is spread over
-  [[Space]] 6, [[Star]] 6, [[Void]], [[Supernova]], [[Navigation]],
-  [[Jump]] and [[Pinning]], with two gaps:
-	- a) Supernova stops Ships, Void stops all cards: Heroes pass
-	  Supernova.
-	- b) Pinning 2.1 says remote [[Support]], [[Explore]] reach and
-	  [[Create]] placement ignore Pinning, but not whether they pass
-	  Void, Supernova or a hidden Space.
-	- c) One rule in [[Distance]]: a route passes only revealed tiles
-	  and no Void or Supernova; Navigation passes Void, Jump one
-	  hidden Space. Every [[Range]] check uses such a route, moving
-	  groups also obey Pinning.
-	- d) The tile and technology pages link it instead of restating
-	  it.
+- [ ] **S38. Route details where they belong.** The general rule is
+  [[Distance]]: a route is a chain of tiles. It already doesn't list
+  blockers, but the specific rules don't all hook into it: they speak
+  of moving cards, so it's unclear which [[Range]] checks they bind,
+  and general pages list them back:
+	- a) Specific pages state their detail on **the route**, one line
+	  each, nothing in Distance:
+		- [[Space]] 6.1, [[Star]] 6: a route can't pass a hidden tile.
+		- [[Void]]: a route can't pass Void.
+		- [[Supernova]]: a route can't pass Supernova, today only
+		  Ships are stopped and Heroes pass, or keep "Ships" if that
+		  is intended.
+		- [[Navigation]]: the route of a group with Navigation can
+		  pass Void; [[Jump]]: one hidden Space, it gets revealed.
+		  Today both name only [[Move]].
+		- [[Pinning]]: the route of a moving group can't pass a Star
+		  with rival Enabled Military Actors.
+	- b) The gap closes by itself: remote [[Support]], [[Explore]]
+	  reach and [[Create]] placement use routes, so they obey every
+	  tile rule; only Pinning, by its own words, binds moving groups.
+	- c) Remove the back references: [[Range]] note 1 (Pinning, Void,
+	  hidden Space), [[Pinning]] 2 and 2.1 (which checks ignore it),
+	  [[Move]] 9 and [[Attack]] 4.4 (the route obeys Pinning).
+	- d) Recommended: a-c, with "route" for Supernova.
 - [ ] **S39. One conversion outcome.** [[Extract]] and [[Recycle]]
   have the same outcome text, [[Trade]] half of it:
 	- a) Define **conversion** once in [[Materials]]: the action's
@@ -196,15 +147,6 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  Energy.
 	- c) Recycle doesn't say what happens to the converted card: say
 	  it, e.g. [[Destroyed]].
-- [ ] **S40. One price for Laboratory order.** [[Research]] 2.2 and
-  [[Manage]] Shift both move cards between [[Laboratory]] piles, one
-  for the card's Cost with its [[Prerequisites]], the other for 1
-  power per card:
-	- a) Keep Research 2.2, limit Manage Shift of piles to
-	  [[Factory]].
-	- b) Or keep Manage Shift and remove Research 2.2.
-	- c) Recommended: a, Research 2.2 is the recent decision and keeps
-	  the tech tree a Science matter.
 
 ### Abilities and states
 
@@ -351,14 +293,6 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 
 ### Fewer concepts
 
-- [ ] **S27. One Action kind.** [[BasicAction]] means "needs no
-  Technology"; [[TechnologyAction]] means "needs one", while
-  "available at any time" is false outside the player's Turn:
-	- a) Every [[Action]] has an optional required Technology.
-	- b) List Move, Manage, Research and Attack in Action with no
-	  requirement; every other action names its required Technology.
-	- c) Remove the Basic Action and Technology Action kinds and their
-	  two index pages. No behavior changes.
 - [ ] **S28. Unit instead of Actor.** If [[DesignReview]] P58 b
   replaces [[Tool]] with a `Consumable` trait, every [[Unit]] is an
   [[Actor]]:

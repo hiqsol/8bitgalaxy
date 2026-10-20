@@ -17,8 +17,7 @@ scope: core
 	   reachable within [[Range]]
 	2. Hidden card is in the source [[Star]] or in a Star reachable
 	   within [[Range]]
-6. **Cost**: the target's Cost, for a card its [[Cost]], of
-   [[AttackPower]] for **Recon** or [[SciencePower]] for **Survey**
+6. **Cost**: the target's Cost, for a card its [[Cost]]
 7. The Cost is not shown: the player starts the action, then learns
    the Cost
 	1. A hidden [[Star]] shows its Size, its minimal Cost: the action

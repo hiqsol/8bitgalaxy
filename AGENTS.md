@@ -23,6 +23,9 @@ When a proposal is accepted, incorporate its result into the
 applicable rules before deleting the proposal.
 
 Keep rules and notes concise.
+A general rule doesn't list the specific cases: a more specific
+rule adds its detail on its own page, e.g. Distance doesn't mention
+Void, the Void page says a route can't pass it.
 Indent nested rules with tabs.
 Don't miss my input, organize it all into rules/notes.
 

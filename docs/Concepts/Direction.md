@@ -9,6 +9,6 @@ scope: core
 	2. **Destination** where action finishes
 3. Direct participants are in the **source** or the **destination**,
    see [[PerformAction]]
-4. An action directed to a card, e.g. to a [[BuildingFacility]], is
+4. An action directed to a card, e.g. to a [[Hub]], is
    directed to the [[Star]] the card is in
 5. **Direction** has length: [[Distance]] from source to destination

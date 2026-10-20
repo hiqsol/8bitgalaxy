@@ -4,11 +4,10 @@ scope: core
 ---
 
 1. **Technology** is a kind of [[Ability]]: a named rule
-2. **Technologies** come in three flavours:
-	1. [[TechnologyAction]] allows to perform non-basic actions
-	2. [[TechnologyModifier]] modify actions for better
-	3. [[BuildingFacility]] provides [[Create]], [[Upgrade]] and
-	   [[Recover]]
+2. **Technologies** come in three kinds:
+	1. [[TechnologyAction]] is a new action, it works alone
+	2. [[TechnologyModifier]] changes an action or a rule for better
+	3. [[Hub]] provides [[Create]]
 3. The table below is the only catalog of technologies:
 	1. **Class** is the [[Class]] of the card [[End]]s that carry the
 	   technology
@@ -19,8 +18,8 @@ scope: core
 
 | Technology | Kind | Class | Scope | Cards |
 |------------|------|-------|-------|-------|
-| [[Academy]] | Facility | C | core | Colony 2C |
-| [[Shipyard]] | Facility | P | core | Base 2P, Colony 4P |
+| [[Academy]] | Hub | C | core | Colony 2C |
+| [[Shipyard]] | Hub | P | core | Base 2P, Colony 4P |
 | [[Upgrade]] | Action | C, P | core | Hero 1M weak, Hero 2C weak, Hero 3M weak, Hero 3C strong, Hero 4M weak, Hero 4C strong, Ship 4C strong, Ship 4P strong |
 | [[Recover]] | Action | C, P | core | Hero 1P strong, Hero 2C strong, Hero 4M weak, Hero 4C strong, Colony 4P |
 | [[Retreat]] | Modifier | M | core | Ship 2M strong |
