@@ -14,5 +14,11 @@
     "test": "npm test -w @8bitgalaxy/engine",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "cards": "npm run cards -w @8bitgalaxy/engine"
+  },
+  "overrides": {
+    "typescript": "~5.9.3"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3"
   }
 }
