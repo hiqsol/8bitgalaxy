@@ -413,3 +413,92 @@ describe('goals', () => {
     expect(s).toEqual(copy);
   });
 });
+
+describe('more rules', () => {
+  it('Recover flips an own Damaged card with Recover and the hub', () => {
+    let s = duel();
+    const ship = toSlot(s, 'p1', 'Ship 2M', '21');
+    s.cards[ship].face = 'damaged';
+    const starter = toHand(s, 'p1', 'Hero 1P'); // strong: Recover
+    const yard = uid(s, 'p1', 'Base 2P'); // Shipyard, +1 P
+    const decl = action({ kind: 'recover', starter, starterUse: 'secondary', source: '21', destination: '21', participants: [{ card: yard }], recover: { card: ship } });
+    expect(err(s, 'p1', decl)).toMatch(/Recover costs 2 P power, the participants give 1/);
+    const p = toHand(s, 'p1', 'Ship 1P');
+    if (decl.type === 'action') decl.action.participants.push({ card: p, use: 'primary', end: 'strong' });
+    s = ok(s, 'p1', decl);
+    expect(s.cards[ship].face).toBe('front');
+  });
+
+  it("Manage pays 1 power of the starter's Class per operation, within the table", () => {
+    let s = duel();
+    const base = uid(s, 'p1', 'Base 2P');
+    s.cards[base].end = 'weak';
+    const mil = toHand(s, 'p1', 'Ship 1M');
+    const rotate = (starter: string) => action({ kind: 'manage', starter, source: '21', destination: '21', manage: [{ op: 'rotate', card: base }] });
+    expect(err(s, 'p1', rotate(mil))).toMatch(/M power doesn't manage a Base/);
+    const pro = toHand(s, 'p1', 'Ship 1P');
+    s = ok(s, 'p1', rotate(pro));
+    expect(s.cards[base].end).toBe('strong');
+    const sci = toHand(s, 'p1', 'Ship 1S');
+    s = ok(s, 'p1', action({ kind: 'manage', starter: sci, source: '21', destination: '21', manage: [{ op: 'labShift', from: 1, to: 0 }] }));
+    expect(s.homes.p1.laboratory[0].cards).toHaveLength(5);
+  });
+
+  it('Retreat ends the Combat: own participants deplete instead of damage', () => {
+    let s = duel();
+    revealBetween(s, '21', [1]);
+    s.stars['12'].revealed = true;
+    const ship = toSlot(s, 'p1', 'Ship 2M', '21'); // strong: Retreat
+    const rival = toSlot(s, 'p2', 'Hero 2M', '12');
+    const starter = toHand(s, 'p1', 'Ship 1M');
+    s = ok(s, 'p1', action({ kind: 'attack', starter, source: '21', destination: '12', participants: [{ card: ship }] }));
+    s = ok(s, 'p2', { type: 'combatPass' });
+    s = ok(s, 'p1', { type: 'combatRetreat' });
+    expect(s.combat).toBeNull();
+    expect(locate(s, ship)).toEqual({ zone: 'discard', player: 'p1' });
+    expect(s.cards[rival].face).toBe('front');
+  });
+
+  it('a Hidden takeoff needs Stealth, the rival sees a hidden Unit, Explore reveals it', () => {
+    let s = duel();
+    const hero = toHand(s, 'p2', 'Hero 3M'); // strong: Stealth
+    s.turn.player = 'p2';
+    s = ok(s, 'p2', { type: 'takeoff', card: hero, star: '00', end: 'strong', hidden: true });
+    expect(s.log.at(-1)!.text).toBe('takes off a hidden card at 00');
+    expect(viewFor(s, 'p1').cards[hero].def).toBe('?Unit');
+    // Ann explores it from 01 next to 00
+    s.turn.player = 'p1';
+    revealBetween(s, '00', [3]);
+    s.stars['01'].revealed = true;
+    toSlot(s, 'p1', 'Ship 2S', '01'); // Explore, S power 1, Range 2
+    const scout = uid(s, 'p1', 'Ship 2S');
+    const starter = toHand(s, 'p1', 'Ship 1S');
+    s.homes.p1.energy = 2;
+    s = ok(s, 'p1', action({ kind: 'explore', starter, source: '01', destination: '00', participants: [{ card: scout }], target: { kind: 'card', card: hero, reveal: true }, boost: { S: 2 } }));
+    expect(s.cards[hero].face).toBe('front');
+  });
+
+  it('Singularity: active cards with the top Level of every Class win at the end of Turn', () => {
+    let s = duel();
+    for (const [i, def] of ['Ship 4M', 'Ship 4C', 'Ship 4P'].entries()) toSlot(s, 'p1', def, '21', i);
+    toHand(s, 'p1', 'Ship 4S');
+    const card = toHand(s, 'p1', 'Ship 1M');
+    s.stars['21'].units.push(null);
+    s = ok(s, 'p1', { type: 'takeoff', card, star: '21', slot: 3, end: 'strong' });
+    s = ok(s, 'p1', { type: 'endTurn' });
+    expect(s.winner).toEqual({ players: ['p1'], path: 'singularity' });
+  });
+
+  it('Twilight: an empty Laboratory gives every rival one last Turn, then Culture decides', () => {
+    let s = duel();
+    s.homes.p1.laboratory.forEach((pile, i) => s.homes.p1.factory[i].cards.push(...pile.cards.splice(0)));
+    toHand(s, 'p2', 'Ship 1M'); // an empty Hand at the start of a Turn is over
+    const play = (st: State, p: string) => ok(st, p, { type: 'manual', op: { op: 'pass' } });
+    s = ok(play(s, 'p1'), 'p1', { type: 'endTurn' });
+    expect(s.twilight).toEqual({ by: 'p1', last: ['p2'] });
+    expect(s.winner).toBeNull();
+    s = ok(play(s, 'p2'), 'p2', { type: 'endTurn' });
+    // both have Colony 2C at home: Level 2 each, a draw
+    expect(s.winner).toEqual({ players: ['p1', 'p2'], path: 'culture' });
+  });
+});

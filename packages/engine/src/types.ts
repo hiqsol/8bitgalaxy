@@ -222,7 +222,9 @@ export type ManualOp =
   | { op: 'setFace'; card: string; face: Face }
   | { op: 'setEnd'; card: string; end: EndName }
   | { op: 'revealTile'; id: string }
-  | { op: 'energy'; player: PlayerId; delta: number };
+  | { op: 'energy'; player: PlayerId; delta: number }
+  /** the Turn player found no legal play, see Decisions S19 */
+  | { op: 'pass' };
 
 export type Move =
   | { type: 'takeoff'; card: string; star: string; slot?: number; end: EndName; hidden?: boolean }

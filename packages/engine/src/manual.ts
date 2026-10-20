@@ -33,6 +33,11 @@ export function manual(state: State, player: PlayerId, op: ManualOp): void {
       log(state, `manual: reveals ${op.id}`, player);
       return;
     }
+    case 'pass':
+      check(state.turn.player === player, 'pass at your own Turn');
+      state.turn.played++;
+      log(state, 'manual: finds no legal play and passes', player);
+      return;
     case 'energy': {
       const home = state.homes[op.player];
       check(home && home.energy + op.delta >= 0, 'Energy can not be negative');

@@ -105,6 +105,9 @@ const shareLink = computed(() => `${location.origin}${location.pathname}?room=${
             <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'hidden' } })">hide</button>
             <button @click="act({ type: 'manual', op: { op: 'setEnd', card: ui.manualCard, end: view.cards[ui.manualCard].end === 'strong' ? 'weak' : 'strong' } })">rotate</button>
           </div>
+          <div v-if="myTurn" class="row">
+            <button title="Counts as a played card: for a Turn with no legal play" @click="act({ type: 'manual', op: { op: 'pass' } })">No legal play: pass</button>
+          </div>
           <div class="row">
             Energy
             <button @click="act({ type: 'manual', op: { op: 'energy', player: me, delta: 1 } })">+1</button>
