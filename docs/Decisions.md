@@ -27,14 +27,14 @@ evidence from a played game, not from a review.
 
 Questions a played game answers better than a review:
 
-1. Do players take off weak cards to cycle strong ones (I46, I79 b)?
-2. How many actions fit in a Turn (I75 a)?
-3. Is the narrow-win damage exploit real (I81)?
-4. Is Militarization Defense right (I75 f) and do weak Structure ends
-   need Secondary (P66)?
-5. Does a Damaged card kept only by Hidden cards matter (I88 d)?
-6. Do attackers miss non-Military cards in Combat (I88 f)?
-7. Does Stealth pay off with Range 1, Capacity 1 (P48)?
+1. Do players take off weak cards to cycle strong ones (RI46, DI79 b)?
+2. How many actions fit in a Turn (DI75 a)?
+3. Is the narrow-win damage exploit real (DI81)?
+4. Is Militarization Defense right (DI75 f) and do weak Structure ends
+   need Secondary (RP66)?
+5. Does a Damaged card kept only by Hidden cards matter (RI88 d)?
+6. Do attackers miss non-Military cards in Combat (RI88 f)?
+7. Does Stealth pay off with Range 1, Capacity 1 (DP48)?
 8. Does a Turn ever start with no legal play (S19)?
 
 ## Next step

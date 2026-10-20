@@ -1,6 +1,6 @@
 ---
 date: 2026-10-10
-updated: 2026-10-19
+updated: 2026-10-20
 status: WIP
 scope: meta
 ---
@@ -12,22 +12,22 @@ playable duel**:
 2 players, no [[GalaxyDeck]], playable with an AI from the notes
 alone.
 
-Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
-"P23 no".
+Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
+"RP23 no".
 
 ## Issues
 
 ### Setup and card data
 
-- [ ] **I5. Setup incomplete** in [[StartDraw]]: → P27
+- [ ] **RI5. Setup incomplete** in [[StartDraw]]: → RP27
 	- a) 4 [[Reserve]] cards are TBD, cards aren't named from the
 	  [[Deck]].
 	- b) 4 Heroes in [[Factory]], while the Deck has only 2 Heroes
 	  without [[Prerequisites]].
 	- c) [[Laboratory]] is incomplete.
 	- d) No first player rule.
-- [ ] **I19. Deck review.** → P25
-	- a) `allacad` (Base 4C) is unclear, see [[DesignReview]] P59.
+- [ ] **RI19. Deck review.** → RP25
+	- a) `allacad` (Base 4C) is unclear, see [[DesignReview]] DP59.
 	- b) Core technologies [[Express]], [[ForceDiscard]], [[Settle]],
 	  [[Prefab]] and `+Draw` [[Plus]] have no cards.
 	- c) Redo the decks up to [[Level]] 8, planned: [[Singularity]]
@@ -36,47 +36,47 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	  [[PrimaryAbility]].
 	- e) More [[Hub|hubs]], planned: a
 	  faction that lost its home Star can rebuild.
-- [ ] **I21. Stub notes** (`status: stub`):
-	- a) [[DefSys]]: see [[DesignReview]] P52.
-	- b) [[HyperPass]]: see P24.
-	- c) [[Sell]], [[Dismantle]]: see [[DesignReview]] P57.
-	- d) [[PlusHero]]: see [[DesignReview]] P59.
-- [ ] **I60. Advanced technologies in the first duel.** They are not
+- [ ] **RI21. Stub notes** (`status: stub`):
+	- a) [[DefSys]]: see [[DesignReview]] DP52.
+	- b) [[HyperPass]]: see RP24.
+	- c) [[Sell]], [[Dismantle]]: see [[DesignReview]] DP57.
+	- d) [[PlusHero]]: see [[DesignReview]] DP59.
+- [ ] **RI60. Advanced technologies in the first duel.** They are not
   ignored, so the first duel needs their rules or must avoid their
-  cards: e.g. P27 Reserve has Ship 2C ([[Trade]]), Ship 2P
+  cards: e.g. RP27 Reserve has Ship 2C ([[Trade]]), Ship 2P
   ([[Extract]]), Hero 1P weak ([[Recycle]]).
-- [ ] **I47. Images.** Update `card.png` after the rules and card data
+- [ ] **RI47. Images.** Update `card.png` after the rules and card data
   are settled: annotate both ends, ExtraCost, Prerequisites and the
   technology name.
 
 ### Rules
 
-- [ ] **I49. Space types.** → P24, P35
+- [ ] **RI49. Space types.** → RP24, RP35
 	- a) [[Space]] types Nebula and Black hole have no behavior.
 	- b) [[Asteroids]], [[Void]] and [[HyperPass]] are thin.
 	- c) The first duel has no Space tile set.
-- [ ] **I57. Star deck.** [[Star]]s come from the Star deck, but: →
-  P36
+- [ ] **RI57. Star deck.** [[Star]]s come from the Star deck, but: →
+  RP36
 	- a) There is no Ability list.
 	- b) There is no first duel deck.
-- [ ] **I50. Action sequence.** [[PerformAction]] doesn't define a
-  complete sequence: → P34
+- [ ] **RI50. Action sequence.** [[PerformAction]] doesn't define a
+  complete sequence: → RP34
 	- a) Legality is checked late.
 	- b) Failed actions spend unspecified resources.
 	- c) Actions have no common template.
-- [ ] **I51. Combat sequence.** [[Combat]] isn't deterministic: → P28
+- [ ] **RI51. Combat sequence.** [[Combat]] isn't deterministic: → RP28
 	- a) The attacker selects defending participants.
 	- b) There is no pass order.
 	- c) Hidden cards may be revealed "at any time".
-- [ ] **I83. Defending power.** [[Combat]] 9.2 adds a defending card's
+- [ ] **RI83. Defending power.** [[Combat]] 9.2 adds a defending card's
   [[Defense]], but Defense is a property, not an [[Ability]], and a
-  supporter adds one Ability ([[Support]] 2): → P62
+  supporter adds one Ability ([[Support]] 2): → RP62
 	- a) What a defending supporter from [[Hand]] or a remote [[IPS]]
 	  adds: its Defense or its Primary power.
 	- b) A [[Military]] card without power has Defense 0, below
 	  non-Military 1: every Depleted Military [[Structure]] (Base 2M,
 	  4M, Colony 2M, 4M weak ends) defends with 0.
-- [ ] **I92. Groups.** [[PerformAction]] 4 forms one group per
+- [ ] **RI92. Groups.** [[PerformAction]] 4 forms one group per
   [[IPS]], each reaching the destination with its own [[Range]]:
 	- a) [[Range]] 5 adds "Range from Support" to a group: with
 	  several groups, which one gets a [[Hand]] supporter's Range?
@@ -88,7 +88,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	- c) The attacker's own cards already in the target [[Star]] join
 	  an [[Attack]] as direct participants: attack from two sides.
 	  Intended?
-- [ ] **I88. Minor.**
+- [ ] **RI88. Minor.**
 	- b) Combined prints: Colony 4P "Recover, Shipyard", Hero 4M weak
 	  and Hero 4C strong "Recover, Upgrade", Base 2M "Militarization,
 	  +1 Defense". One [[Ability]] or two for a supporter?
@@ -103,8 +103,8 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	- h) [[Materials]] storage: its note needs a [[Colony]] in the
 	  Star, [[Base]] 7 holds Materials, [[Extract]], [[Raid]],
 	  [[Salvage]] and [[Event]]s put them in a Star. See
-	  [[DesignReview]] P57.
-- [ ] **I93. Token passage.** One token is [[Energy]] in [[Hand]] and
+	  [[DesignReview]] DP57.
+- [ ] **RI93. Token passage.** One token is [[Energy]] in [[Hand]] and
   [[Materials]] in a [[Star]] ([[Component]]), but only [[Export]] and
   [[Smuggle]] turn Materials into Energy, nothing turns Energy into
   Materials:
@@ -115,19 +115,19 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 
 ### Extensions
 
-- [ ] **I43. Objectives details.** [[Objective]] (`objectives`):
+- [ ] **RI43. Objectives details.** [[Objective]] (`objectives`):
 	- a) The list of objectives.
 	- b) The number of victory points to win.
 	- c) Whether a public objective gives more than 1 point.
-- [ ] **I44. Politics details.**
+- [ ] **RI44. Politics details.**
 	- a) [[StrategyCard]]: the list of roles.
 	- b) [[PromissoryNote]]: what each side gets.
 	- c) [[PromissoryNote]]: whether the card returns to its owner.
-- [ ] **I45. Derelict details.** [[Derelict]] (`galaxy`):
+- [ ] **RI45. Derelict details.** [[Derelict]] (`galaxy`):
 	- a) Where they come from: setup or a [[GalaxyMove]], which
 	  [[Star]].
 	- b) The recruit cost.
-- [ ] **I89. Galaxy flow.** [[Galaxy]] (`galaxy`):
+- [ ] **RI89. Galaxy flow.** [[Galaxy]] (`galaxy`):
 	- a) [[Turn]] has no step for the [[GalaxyMove]]: when in the
 	  Turn, by whom.
 	- b) When a card in [[FutureEvents]] is evaluated.
@@ -136,15 +136,15 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	  [[GalaxyScrap]].
 	- d) [[Event]] note 3.3 moves a "warp storm", which is defined
 	  nowhere.
-- [ ] **I46. Deck thinning by Takeoff.** A player can take off weak
+- [ ] **RI46. Deck thinning by Takeoff.** A player can take off weak
   cards and cycle only strong ones. Free [[Slot]]s limit it. To be
   worked out in [[GameBalance]].
 
 ## Proposals
 
-- [ ] **P24. Space type behaviors.** No dice: every effect is
+- [ ] **RP24. Space type behaviors.** No dice: every effect is
   deterministic. Better types cost more to [[Explore]]. Pick one or
-  more variants per type, e.g. "P24 Nebula a, c":
+  more variants per type, e.g. "RP24 Nebula a, c":
 	- **Normal** (Cost 2): a) plain, length 1. b) length 1 or 2,
 	  longer is cheaper (Cost 1).
 	- **[[Asteroids]]** (Cost 3, resource): a) [[Extract]]
@@ -176,7 +176,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	- **[[Supernova]]**: a) impassable, can't be explored, only from
 	  an [[Event]] (current). b) also gives +1 [[Power]] of any class
 	  to actions started in a bordering Star.
-- [ ] **P35. First duel Space set** in [[Scenario]], after P24,
+- [ ] **RP35. First duel Space set** in [[Scenario]], after RP24,
   replacing "every Space has length 1":
 	- a) 24 tiles on the inner sides, shuffled and placed face down.
 	  Outer sides stay empty: the edge of the galaxy.
@@ -184,14 +184,14 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	  [[Void]], 2 [[HyperPass]], 2 Relic.
 	- c) Types whose chosen variants need `advanced` rules are
 	  replaced with Normal.
-- [ ] **P25. Core technologies on cards** (replacing duplicates):
+- [ ] **RP25. Core technologies on cards** (replacing duplicates):
 	- a) [[ForceDiscard]] on Hero 2M strong, instead of [[Explore]]
 	  (Recon stays on Hero 1M and Colony 2M).
 	- b) [[Express]] on Colony 4C, instead of [[Export]] (Materials
 	  are `advanced`).
 	- c) `+Draw` [[Plus]] on Hero 4C strong, instead of [[Recover]],
 	  [[Upgrade]] (both stay on other Heroes).
-- [ ] **P27. First duel setup** in [[StartDraw]], from the [[Deck]]:
+- [ ] **RP27. First duel setup** in [[StartDraw]], from the [[Deck]]:
 	- a) [[Reserve]]: Ship 2M, 2C, 2P, 2S, Hero 1M, 1P and 4
 	  technology-free starters (level 1/1, Primary 1, no Secondary),
 	  one per class.
@@ -202,18 +202,18 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	- d) [[Laboratory]] (with [[Prerequisites]]): all level 3-4 cards.
 	- e) One pile per [[Type]], lowest [[Level]] on top.
 	- f) First player is random.
-- [ ] **P28. Combat sequence** in [[Combat]]:
+- [ ] **RP28. Combat sequence** in [[Combat]]:
 	- a) The defending participants are all the defender's Enabled and
 	  [[Hidden]] cards in the target [[IPS]].
 	- b) After the attacker's commit, sides alternate starting with
 	  the defender: add one card or pass.
 	- c) Combat resolves when both sides pass in a row. Hidden cards
 	  are revealed then.
-- [ ] **P34. Action template** in [[PerformAction]]: declare (starter,
+- [ ] **RP34. Action template** in [[PerformAction]]: declare (starter,
   action, direction), commit participants and abilities, validate,
   resolve, [[Deplete]]. An invalid action is taken back and nothing is
   spent, instead of "resources are spent".
-- [ ] **P36. Star deck** in [[Star]]:
+- [ ] **RP36. Star deck** in [[Star]]:
 	- a) [[Ability]]: +1 [[Power]] of its Type class to one action
 	  started there.
 	- b) Ability: +1 [[Energy]].
@@ -229,11 +229,11 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	- i) First duel deck: 5 Stars, shuffled face down on non-home
 	  Stars: Energy (ExtraCost 1), Military Power (2), Science Power
 	  (2), Defense (2), [[Shipyard]] (3).
-- [ ] **P62. Defense** in [[Defense]] and [[Combat]]:
+- [ ] **RP62. Defense** in [[Defense]] and [[Combat]]:
 	- a) Defense = [[AttackPower]], at least 1, for every card.
 	- b) A defending supporter adds its Defense as its one
 	  [[Ability]].
-- [ ] **P66. Weak Structure ends.** Weak ends can provide abilities,
+- [ ] **RP66. Weak Structure ends.** Weak ends can provide abilities,
   just weaker ([[End]] 8), but every weak Structure end in the
   [[Deck]] has no [[SecondaryAbility]]:
 	- a) Weak end Secondary is one less than the strong end's: Colony
@@ -241,7 +241,7 @@ Answer proposals by number and letter, e.g. "P22 yes", "P27 a, c",
 	- b) A [[Depleted]] Structure then still gives some [[Power]], so
 	  [[Restore]] matters less: an alternative to a) is +1 on 4x weak
 	  ends only.
-- [ ] **P65. Interdiction.** [[Pinning]] stops moving cards only. A
+- [ ] **RP65. Interdiction.** [[Pinning]] stops moving cards only. A
   [[Military]] [[TechnologyModifier]] (`advanced`) extends it: rival
   Enabled Actors with it in a [[Star]] also stop the [[Range]] of
   other actions through that Star: [[Explore]] reach, remote

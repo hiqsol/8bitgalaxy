@@ -7,10 +7,11 @@ Every page has:
 - notes
 
 Docs include rules, notes and reviews.
-Reviews number issues `I<n>`, proposals `P<n>` and simplifications
-`S<n>`, continuing across review files.
+RulesReview numbers issues `RI<n>` and proposals `RP<n>`.
+DesignReview numbers issues `DI<n>` and proposals `DP<n>`.
+SimplificationReview numbers simplifications `S<n>`.
 Write the points of an issue or proposal as lettered bullets
-`- a) ...`, so they can be referred to as `P24 a`.
+`- a) ...`, so they can be referred to as `RP24 a`.
 Run `make check` (`bin/checkdocs`) and `make lint` (markdownlint)
 after editing docs.
 Lines are at most 70 characters (tab counts as 4), tables and code

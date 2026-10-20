@@ -1,6 +1,6 @@
 ---
 date: 2026-10-18
-updated: 2026-10-19
+updated: 2026-10-20
 status: WIP
 scope: meta
 ---
@@ -68,7 +68,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	- c) After the first play the player may end the Turn. This keeps
 	  "no pass" without requiring a Hand card.
 - [ ] **S20. Visible Explore cost.** [[Explore]] reveals the Cost only
-  after cards are spent, while [[RulesReview]] P34 validates every
+  after cards are spent, while [[RulesReview]] RP34 validates every
   action before resolution and takes an invalid action back:
 	- a) Print Explore Cost on the back of every [[Star]] and
 	  [[Space]], beside Size or Length. Type and Ability stay hidden.
@@ -79,7 +79,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  visible Cost.
 - [ ] **S21. Star abilities without use tracking.** [[Ability]] and
   [[Star]] say a Star Ability is usable once per own Turn,
-  contradicting **No memory**; [[RulesReview]] P36 adds more such
+  contradicting **No memory**; [[RulesReview]] RP36 adds more such
   Abilities:
 	- a) Income Abilities resolve at the income step of [[Turn]].
 	- b) Local action Abilities apply automatically to own actions
@@ -143,7 +143,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	- a) Define **conversion** once in [[Materials]]: the action's
 	  power becomes Materials one to one in the source [[Star]].
 	- b) The pages keep only what they convert: [[Asteroids]], a card,
-	  a trade route, unless [[DesignReview]] P57 c turns Trade into
+	  a trade route, unless [[DesignReview]] DP57 c turns Trade into
 	  Energy.
 	- c) Recycle doesn't say what happens to the converted card: say
 	  it, e.g. [[Destroyed]].
@@ -183,13 +183,13 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  attacker-selected after Recon.
 	- c) The leader check becomes: a Hero in Hand, Reserve or Discard,
 	  or an Enabled Hero on the Field. This resolves [[DesignReview]]
-	  I76 a-d with one rule instead of four pile exceptions.
+	  DI76 a-d with one rule instead of four pile exceptions.
 - [ ] **S26. All Combat cards from Hand are face down.** [[Combat]]
   gives a special bluff to "Hidden cards from Hand", although Hand is
   already secret and Hidden is otherwise a Field state:
 	- a) Every Combat supporter from Hand is committed face down.
 	- b) Reveal all commitments only at resolution, as in
-	  [[RulesReview]] P28; remove voluntary reveal-at-any-time and the
+	  [[RulesReview]] RP28; remove voluntary reveal-at-any-time and the
 	  special Hidden-Hand rule.
 	- c) Bluffing stays, with one commitment procedure and no state
 	  change.
@@ -213,7 +213,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  all, a supporter one.
 	- b) Support 2 and Plus 3.5-3.6 link it; a Range Plus adds to any
 	  group.
-	- c) It answers [[RulesReview]] I83 a and whether a supporter's
+	- c) It answers [[RulesReview]] RI83 a and whether a supporter's
 	  Level is its one Ability for [[Prerequisites]]. Recommended:
 	  yes.
 - [ ] **S43. Control by present cards.** [[Control]] 3 repeats
@@ -224,7 +224,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	- b) The Control level is the highest [[Role]] among them: Actor,
 	  then Structure, then none.
 	- c) Damaged 7 checks present cards: own Hidden cards keep a
-	  Damaged card, which answers [[RulesReview]] I88 d. Pinning keeps
+	  Damaged card, which answers [[RulesReview]] RI88 d. Pinning keeps
 	  Enabled.
 	- d) Say "own faction's cards": "player has" leaves open whether a
 	  captured rival Structure counts.
@@ -270,7 +270,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	- b) [[Destroyed]], [[Recall]] and [[Express]] put a card on top,
 	  [[Upgrade]] 7.2 and [[Research]] 2.1 don't say where in
 	  [[Factory]], [[DoNotDeplete]] doesn't say where in [[Reserve]]
-	  ([[RulesReview]] I88 g).
+	  ([[RulesReview]] RI88 g).
 	- c) Galaxy piles and secret [[Objective]]s use the Field state
 	  [[Hidden]] for face down.
 	- d) One table in [[Home]]: pile, owner, face up or down, who sees
@@ -293,7 +293,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 
 ### Fewer concepts
 
-- [ ] **S28. Unit instead of Actor.** If [[DesignReview]] P58 b
+- [ ] **S28. Unit instead of Actor.** If [[DesignReview]] DP58 b
   replaces [[Tool]] with a `Consumable` trait, every [[Unit]] is an
   [[Actor]]:
 	- a) Merge Actor into Unit and use Unit for movement, starters and
@@ -345,18 +345,18 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  back with S20.
 	- b) ExtraCost is a card property again: remove ExtraCost 4 and 6,
 	  [[Cost]] 3 and ExtraCost from the [[Component]] properties.
-	- c) [[RulesReview]] P36 g then sets printed Costs: Size plus 1
+	- c) [[RulesReview]] RP36 g then sets printed Costs: Size plus 1
 	  to 4.
 
 ### Documentation
 
 - [ ] **S32. One meaning of starter.** **Starter** is both the role a
   card has in every action and a [[Starter|Technology]];
-  [[RulesReview]] P27 also calls four initial deck cards "starters":
+  [[RulesReview]] RP27 also calls four initial deck cards "starters":
 	- a) Keep **starter** only for the card selected to begin an
 	  action.
 	- b) Rename the Technology to **Field Start** or **Initiative**.
-	- c) Call the P27 cards **starting cards**.
+	- c) Call the RP27 cards **starting cards**.
 - [ ] **S33. Drop worker placement from the genre.** [[index]] calls
   the game worker placement, while [[ComparisonReview]] correctly says
   Slots limit presence and are not action spaces:
@@ -394,7 +394,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	- c) Core pages state only the Hand starter; Starter states its
 	  own exceptions, as other modifiers do, S19 a included.
 	- d) Trait and NoSupport go to `advanced`, or wait for
-	  [[DesignReview]] P58.
+	  [[DesignReview]] DP58.
 	- e) [[Turn]] keeps every step, extension steps included, by its
 	  rule.
 - [ ] **S53. Drop filler rules.** Rules that state no decision:
@@ -403,13 +403,13 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
   [[TechnologyAction]] 2. [[Board]] is a page of two links that no
   page links:
 	- a) Remove them and the Board page.
-- [ ] **S54. One stub list.** [[RulesReview]] I21 and [[DesignReview]]
-  P59 list the same stubs with the same pointers, P59 adds `allacad`:
-  delete I21.
+- [ ] **S54. One stub list.** [[RulesReview]] RI21 and [[DesignReview]]
+  DP59 list the same stubs with the same pointers, DP59 adds `allacad`:
+  delete RI21.
 
 ## Already proposed
 
-Simplifications from other reviews: [[DesignReview]] P55 (one handling
+Simplifications from other reviews: [[DesignReview]] DP55 (one handling
 rule),
-P57 (economy roles), P58 (traits instead of types), [[RulesReview]]
-P34 (action template), P28 (combat sequence).
+DP57 (economy roles), DP58 (traits instead of types), [[RulesReview]]
+RP34 (action template), RP28 (combat sequence).
