@@ -32,6 +32,7 @@ async function importFile(e: Event) {
   <div class="lobby">
     <h1>8-bit Galaxy</h1>
     <p class="muted">First duel: 2 players, core rules, see docs/. The rules engine checks every move, the Table mode handles the rest.</p>
+    <p class="muted">The previous prototype: <a class="legacy" href="/legacy/">legacy</a></p>
     <div class="cards">
       <section class="panel">
         <h2>Hot seat</h2>
@@ -72,5 +73,6 @@ async function importFile(e: Event) {
 section { display: flex; flex-direction: column; gap: 8px; }
 .file input { display: none; }
 .invite a { color: var(--p1); word-break: break-all; }
+.legacy { color: var(--p1); }
 .file span { border: 2px solid var(--line); padding: 2px 10px; cursor: pointer; }
 </style>

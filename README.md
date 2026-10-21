@@ -11,6 +11,7 @@ npm install
 npm run dev      # client at http://localhost:5173
 npm run server   # game server at ws://localhost:2567, for online play
 npm test         # engine tests
+make site        # the site in dist/: game, legacy/, docs.html
 ```
 
 - **Hot seat**: two players at one screen, the screen is covered
@@ -18,14 +19,16 @@ npm test         # engine tests
 - **Online**: "Create game" gives an invite link for the rival, the
   server holds the game, every player sees only their view
 - `?seed=N` in the URL starts a reproducible hot-seat game
-- `VITE_SERVER_URL` points the client to another server
+- `VITE_SERVER_URL` points the client to another server, a path
+  like `/colyseus` is on the page host, as on the site
 
 ## Play
 
 The board follows the look of the legacy prototype: your Home along
 the bottom with your Laboratory and Factory on the right, the rival's
 along the top and on the left; card colors and borders tell the
-players apart, the Field turns so that your Home Star is at the bottom.
+players apart, the Field turns so that your Home Star is at the
+bottom.
 
 1. Click a card in your Hand: take it off to a Star you control, or
    start an action
@@ -47,7 +50,9 @@ players apart, the Field turns so that your Home Star is at the bottom.
   `docs/Cards/Deck.md`: run `npm run cards` after editing the deck
 - `packages/engine/src/scenario.ts` holds the first duel setup,
   values the docs don't set yet are marked `ASSUMPTION`
-- `legacy/` is the previous prototype, kept for reference
+- `legacy/` is the previous prototype, kept for reference, with
+  its own deps: `cd legacy && npm ci && npx vite`, served at
+  `/legacy/`, its pages are listed there
 
 ## License
 

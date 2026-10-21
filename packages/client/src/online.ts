@@ -17,11 +17,12 @@ export interface OnlineHandlers {
 
 const TOKEN = '8bitgalaxy.reconnect';
 
-/** Server URL: VITE_SERVER_URL, or the page host on port 2567 */
+/** Server URL: VITE_SERVER_URL, a path is on the page host, or the page host on port 2567 */
 export function serverUrl(): string {
   const env = import.meta.env.VITE_SERVER_URL as string | undefined;
-  if (env) return env;
   const proto = location.protocol === 'https:' ? 'wss' : 'ws';
+  if (env?.startsWith('/')) return `${proto}://${location.host}${env}`;
+  if (env) return env;
   return `${proto}://${location.hostname}:2567`;
 }
 

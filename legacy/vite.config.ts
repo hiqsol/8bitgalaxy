@@ -4,6 +4,8 @@ import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/legacy/",
+  publicDir: "../public",
   plugins: [
     vue(),
   ],
@@ -13,7 +15,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      $images: resolve('./public/images')
+      $images: resolve(__dirname, "../public/images")
     }
   }
 });
