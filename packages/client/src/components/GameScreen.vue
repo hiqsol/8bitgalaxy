@@ -2,7 +2,7 @@
 import { culturePoints, restorable } from '@8bitgalaxy/engine';
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { cardName } from '../format';
-import { exportLocal, game, leave } from '../session';
+import { downloadLocal, game, leave } from '../session';
 import { act, reset, startManual, ui } from '../ui';
 import ActionPanel from './ActionPanel.vue';
 import CombatPanel from './CombatPanel.vue';
@@ -11,6 +11,8 @@ import HomeRow from './HomeRow.vue';
 import Inspector from './Inspector.vue';
 import LogPanel from './LogPanel.vue';
 import PilesView from './PilesView.vue';
+import TablePanel from './TablePanel.vue';
+import TakeoffPanel from './TakeoffPanel.vue';
 
 // The legacy board: the Field in the middle, the rival's Lab and Factory on the left, yours on
 // the right, Homes along the top and bottom. Board pixels, zoomed to fit the window.
@@ -50,14 +52,6 @@ async function endTurn() {
   }
 }
 
-function download() {
-  const blob = new Blob([exportLocal()], { type: 'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `8bitgalaxy-turn${view.value.turn.number}.json`;
-  a.click();
-}
-
 function concede() {
   if (confirm('Concede the game?')) void act({ type: 'concede' });
 }
@@ -95,7 +89,7 @@ const shareLink = computed(() => `${location.origin}${location.pathname}?room=${
       <button :class="{ on: ui.mode === 'manual' }" title="Free table moves for what the engine doesn't handle, logged" @click="ui.mode === 'manual' ? reset() : startManual()">
         Table
       </button>
-      <button v-if="game.kind === 'local'" @click="download">Export</button>
+      <button v-if="game.kind === 'local'" @click="downloadLocal">Export</button>
       <button :disabled="!!view.winner" @click="concede">Concede</button>
       <button @click="leave">Leave</button>
       <div v-if="game.kind === 'online' && game.roomId" class="share">
@@ -108,29 +102,8 @@ const shareLink = computed(() => `${location.origin}${location.pathname}?room=${
       <div v-if="game.error" class="panel error-bar error" @click="game.error = ''">{{ game.error }}</div>
       <CombatPanel v-if="view.combat" />
       <ActionPanel v-else-if="ui.mode === 'action' && ui.draft" />
-      <div v-else-if="ui.mode === 'takeoff'" class="panel">
-        <h2>Take off</h2>
-        <p>Click a free Unit slot in a Star you control.</p>
-        <div class="row">
-          <select v-model="ui.takeoff.end"><option value="strong">strong End</option><option value="weak">weak End</option></select>
-          <label><input v-model="ui.takeoff.hidden" type="checkbox" /> hidden (Stealth)</label>
-          <button @click="reset">Cancel</button>
-        </div>
-      </div>
-      <div v-else-if="ui.mode === 'manual'" class="panel">
-        <h2>Table mode</h2>
-        <p class="muted">Free moves, everyone sees them in the log. Click a card, then a Slot or a pile. Click a hidden tile to reveal it. ◀ ▶ change Energy.</p>
-        <div v-if="ui.manualCard" class="row">
-          <b>{{ cardName(view.cards[ui.manualCard]) }}</b>
-          <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'front' } })">enable</button>
-          <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'damaged' } })">damage</button>
-          <button @click="act({ type: 'manual', op: { op: 'setFace', card: ui.manualCard, face: 'hidden' } })">hide</button>
-          <button @click="act({ type: 'manual', op: { op: 'setEnd', card: ui.manualCard, end: view.cards[ui.manualCard].end === 'strong' ? 'weak' : 'strong' } })">rotate</button>
-        </div>
-        <div v-if="myTurn" class="row">
-          <button title="Counts as a played card: for a Turn with no legal play" @click="act({ type: 'manual', op: { op: 'pass' } })">No legal play: pass</button>
-        </div>
-      </div>
+      <TakeoffPanel v-else-if="ui.mode === 'takeoff'" />
+      <TablePanel v-else-if="ui.mode === 'manual'" :my-turn="myTurn" />
       <div v-else-if="myTurn" class="panel muted">
         Your turn: click a card in your Hand to take it off or start an action. Play at least one card, then end the turn.
       </div>

@@ -1,0 +1,63 @@
+/* The pixel perfect look: the legacy styles as they are, then only what the legacy version has
+   no counterpart for. Nothing below changes the board at rest. */
+@import '../../../../legacy/src/legacy/styles/8bitfont.css';
+@import '../base.css';
+
+/* the legacy canvas only sizes the page */
+#myCanvas { pointer-events: none; }
+
+/* Star click areas, invisible at rest */
+.pp-areas { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; }
+.pp-area { fill: transparent; cursor: pointer; }
+.pp-area:hover { fill: rgba(255, 255, 255, 0.05); }
+.pp-area.pp-source { fill: rgba(255, 255, 255, 0.08); }
+.pp-area.pp-dest { fill: rgba(255, 140, 90, 0.16); }
+.Space.pp-dest .pentagon { box-shadow: 0 0 30px var(--warn); }
+
+/* a hidden Star: its tile face down, the legacy Field has none */
+.Card.pp-star-back { left: 225px; top: 279px; height: 250px; cursor: pointer; }
+.Card.Unit.Turned.pp-star-back .Back1 { height: 125px; }
+
+/* roles in the drafted action, the legacy Selected is the starter */
+.Card.pp-participant { border: 3px solid var(--ok); box-shadow: 0 0 20px var(--ok); }
+.Card.pp-cargo { border: 3px solid var(--P); box-shadow: 0 0 20px var(--P); }
+.Card.pp-target { border: 3px solid var(--warn); box-shadow: 0 0 20px var(--warn); }
+.Card.pp-saved { border: 3px solid var(--S); box-shadow: 0 0 20px var(--S); }
+.Card.pp-fighting { box-shadow: 0 0 30px 10px var(--warn); }
+.Pile.pp-picked { box-shadow: 0 0 30px 10px var(--warn); }
+
+/* Scoreboard labels beyond the legacy Export, Import and Undo */
+.Scoreboard label { cursor: pointer; }
+.Scoreboard label.pp-off { opacity: 0.4; cursor: default; }
+.Scoreboard label.pp-on { border-color: #fff; color: #fff; }
+.Scoreboard .pp-restore { display: block; margin: 5px; width: 102px; font-size: 10px; }
+.pp-status { margin: 5px; width: 140px; font-size: 8px; line-height: 1.6; text-shadow: 0 0 3px #000; }
+.pp-status a { color: inherit; }
+.pp-human { color: #ffb; }
+.pp-martian { color: #cec; }
+
+/* panels: the controls of the new game, in its style */
+.pp-ui { font-family: var(--font); font-size: 18px; line-height: 1.15; color: var(--text); }
+.pp-ui * { box-sizing: border-box; }
+.pp-side {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  width: 340px;
+  max-height: calc(100vh - 16px);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+.pp-side .error { cursor: pointer; }
+.pp-winner {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 60;
+  text-align: center;
+  border-color: var(--ok);
+}

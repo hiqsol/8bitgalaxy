@@ -76,6 +76,15 @@ export function exportLocal(): string {
   return JSON.stringify(local, null, 1);
 }
 
+/** Saves the local game as a file */
+export function downloadLocal(): void {
+  const blob = new Blob([exportLocal()], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `8bitgalaxy-turn${game.view?.turn.number}.json`;
+  a.click();
+}
+
 export function importLocal(json: string): void {
   local = JSON.parse(json);
   openLocal(game.openHands);

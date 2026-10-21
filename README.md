@@ -11,7 +11,7 @@ npm install
 npm run dev      # client at http://localhost:5173
 npm run server   # game server at ws://localhost:2567, for online play
 npm test         # engine tests
-make site        # the site in dist/: game, legacy/, docs.html
+make site        # the site in dist/: game, pp/, legacy/, docs.html
 ```
 
 - **Hot seat**: two players at one screen, the screen is covered
@@ -19,6 +19,8 @@ make site        # the site in dist/: game, legacy/, docs.html
 - **Online**: "Create game" gives an invite link for the rival, the
   server holds the game, every player sees only their view
 - `?seed=N` in the URL starts a reproducible hot-seat game
+- `VITE_LOOK=pp` builds the pixel perfect legacy look, served at
+  `/pp/`, see [ADR 0002](adr/0002-appearance.md)
 - `VITE_SERVER_URL` points the client to another server, a path
   like `/colyseus` is on the page host, as on the site
 
@@ -29,6 +31,11 @@ the bottom with your Laboratory and Factory on the right, the rival's
 along the top and on the left; card colors and borders tell the
 players apart, the Field turns so that your Home Star is at the
 bottom.
+
+The pixel perfect look at `/pp/` is the legacy board as it was: the
+first player's Home at the bottom right, hover a card to see it in
+the Show box, hover a pile to fan it out, the panels show up at the
+top right when needed.
 
 1. Click a card in your Hand: take it off to a Star you control, or
    start an action

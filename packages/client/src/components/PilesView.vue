@@ -2,7 +2,7 @@
 import { isActorType, type PlayerId } from '@8bitgalaxy/engine';
 import { computed } from 'vue';
 import { game } from '../session';
-import { clickPile, ui } from '../ui';
+import { type PileZone, pickPile as pick, pilePicked } from '../ui';
 import CardView from './CardView.vue';
 
 // Factory and Laboratory of a Home: a column each, a row per card type, cards fanned down
@@ -14,40 +14,11 @@ const SHOWN = 4;
 
 const view = computed(() => game.view!);
 const home = computed(() => view.value.homes[props.player]);
-const mine = computed(() => game.seat === props.player);
 const zones = computed(() => (props.mirror ? (['factory', 'laboratory'] as const) : (['laboratory', 'factory'] as const)));
 
-/** A pile click: picks it for the drafted action, or is a table move target */
-function pickPile(zone: 'factory' | 'laboratory', pile: number): void {
-  const d = ui.draft;
-  if (ui.mode === 'manual') {
-    const cards = home.value[zone][pile].cards;
-    if (!ui.manualCard && cards.length) ui.manualCard = cards[cards.length - 1];
-    else void clickPile({ zone, player: props.player, pile });
-    return;
-  }
-  if (!d || !mine.value) return;
-  if (zone === 'laboratory' && d.kind === 'research') {
-    if (d.research && d.research.pile !== pile && ui.pick === 'target') d.research.toLab = pile;
-    else d.research = { pile };
-  }
-  if (zone === 'factory' && d.kind === 'create') d.create!.piles.push(pile);
-  if (zone === 'factory' && d.kind === 'upgrade') d.upgrade = { old: d.upgrade?.old ?? '', pile, oldTo: d.upgrade?.oldTo };
-  if (d.kind === 'manage') {
-    const prev = d.manage!.at(-1);
-    const op = zone === 'factory' ? 'factoryShift' : 'labShift';
-    if (prev && prev.op === op && prev.to === -1) prev.to = pile;
-    else d.manage!.push({ op, from: pile, to: -1 });
-  }
-}
-
+const pickPile = (zone: PileZone, pile: number) => pick(props.player, zone, pile);
 const shown = (cards: string[]) => cards.slice(-SHOWN);
-const picked = (zone: 'factory' | 'laboratory', i: number) => {
-  const d = ui.draft;
-  if (!d || !mine.value) return false;
-  if (zone === 'laboratory') return d.research?.pile === i || d.research?.toLab === i || d.manage?.some((o) => o.op === 'labShift' && (o.from === i || o.to === i));
-  return d.create?.piles.includes(i) || d.upgrade?.pile === i || d.manage?.some((o) => o.op === 'factoryShift' && (o.from === i || o.to === i));
-};
+const picked = (zone: PileZone, i: number) => pilePicked(props.player, zone, i);
 </script>
 
 <template>

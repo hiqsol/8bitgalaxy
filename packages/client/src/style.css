@@ -1,26 +1,4 @@
-:root {
-  --bg: #07080f;
-  --panel: #10131f;
-  --panel-2: #181c2c;
-  --line: #2a3048;
-  --text: #ccc;
-  --muted: #888;
-  --M: #e0464b;
-  --C: #4cc06a;
-  --P: #e8c547;
-  --S: #4a8ff0;
-  --p1: #39d0d8;
-  --p2: #e05fd6;
-  /* card colors of the legacy races: Human and Martian */
-  --tint-p1: #ffb;
-  --tint-p2: #cec;
-  --void: #000;
-  --hidden: #2c3147;
-  --warn: #ff8c5a;
-  --ok: #6be38a;
-  --font-title: 'Press Start 2P', monospace;
-  --font: 'VT323', monospace;
-}
+@import './base.css';
 
 * { box-sizing: border-box; }
 
@@ -32,53 +10,3 @@ html, body {
   font-size: 18px;
   line-height: 1.15;
 }
-
-h1, h2, h3, .title {
-  font-family: var(--font-title);
-  font-weight: normal;
-  letter-spacing: 0.5px;
-}
-h1 { font-size: 22px; }
-h2 { font-size: 13px; margin: 0 0 8px; }
-h3 { font-size: 10px; margin: 0 0 6px; color: var(--muted); }
-
-/* the legacy Scoreboard labels */
-button {
-  font-family: var(--font-title);
-  font-size: 10px;
-  line-height: 1.4;
-  color: #aaa;
-  background: rgba(0, 0, 0, 0.55);
-  border: 1px solid #aaa;
-  padding: 5px 8px;
-  cursor: pointer;
-}
-button:hover:not(:disabled) { border-color: #fff; color: #fff; background: rgba(0, 0, 0, 0.2); }
-button:active:not(:disabled) { transform: translate(1px, 1px); }
-button:disabled { opacity: 0.4; cursor: default; }
-button.primary { border-color: var(--ok); color: var(--ok); }
-button.on { border-color: #fff; color: #fff; background: rgba(255, 255, 255, 0.15); }
-
-input, select {
-  font: inherit;
-  color: var(--text);
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid #aaa;
-  padding: 1px 4px;
-}
-input[type='number'] { width: 3.2em; }
-
-.panel {
-  background: rgba(0, 0, 0, 0.72);
-  border: 1px solid #777;
-  border-radius: 6px;
-  box-shadow: 0 0 4px rgba(238, 238, 238, 0.5);
-  padding: 10px;
-}
-
-.row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-.muted { color: var(--muted); }
-.error { color: var(--warn); }
-.ok { color: var(--ok); }
-.k-M { color: var(--M); } .k-C { color: var(--C); } .k-P { color: var(--P); } .k-S { color: var(--S); }
-.p-p1 { color: var(--p1); } .p-p2 { color: var(--p2); }

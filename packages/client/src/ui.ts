@@ -9,6 +9,7 @@ import {
   type Location,
   type Move,
   type Participant,
+  type PlayerId,
   type Row,
   type SupportUse,
   type View,
@@ -241,6 +242,61 @@ export async function clickPile(to: Location): Promise<void> {
   if (ui.mode === 'manual' && ui.manualCard) {
     if (await act({ type: 'manual', op: { op: 'moveCard', card: ui.manualCard, to } })) ui.manualCard = '';
   }
+}
+
+export type PileZone = 'factory' | 'laboratory';
+
+/** A Factory or Laboratory pile click: picks it for the drafted action, or is a table move target */
+export function pickPile(player: PlayerId, zone: PileZone, pile: number): void {
+  const d = ui.draft;
+  if (ui.mode === 'manual') {
+    const cards = view().homes[player][zone][pile].cards;
+    if (!ui.manualCard && cards.length) ui.manualCard = cards[cards.length - 1];
+    else void clickPile({ zone, player, pile });
+    return;
+  }
+  if (!d || player !== seat()) return;
+  if (zone === 'laboratory' && d.kind === 'research') {
+    if (d.research && d.research.pile !== pile && ui.pick === 'target') d.research.toLab = pile;
+    else d.research = { pile };
+  }
+  if (zone === 'factory' && d.kind === 'create') d.create!.piles.push(pile);
+  if (zone === 'factory' && d.kind === 'upgrade') d.upgrade = { old: d.upgrade?.old ?? '', pile, oldTo: d.upgrade?.oldTo };
+  if (d.kind === 'manage') {
+    const prev = d.manage!.at(-1);
+    const op = zone === 'factory' ? 'factoryShift' : 'labShift';
+    if (prev && prev.op === op && prev.to === -1) prev.to = pile;
+    else d.manage!.push({ op, from: pile, to: -1 });
+  }
+}
+
+/** Is the pile picked by the drafted action */
+export function pilePicked(player: PlayerId, zone: PileZone, i: number): boolean {
+  const d = ui.draft;
+  if (!d || player !== seat()) return false;
+  if (zone === 'laboratory') return !!(d.research?.pile === i || d.research?.toLab === i || d.manage?.some((o) => o.op === 'labShift' && (o.from === i || o.to === i)));
+  return !!(d.create?.piles.includes(i) || d.upgrade?.pile === i || d.manage?.some((o) => o.op === 'factoryShift' && (o.from === i || o.to === i)));
+}
+
+/** The roles of a card in the drafted action, Combat or table move */
+export function cardMarks(uid: string): string[] {
+  const m: string[] = [];
+  const d = ui.draft;
+  if (d) {
+    if (d.starter === uid) m.push('starter');
+    if (d.participants.some((p) => p.card === uid)) m.push('participant');
+    if (d.cargo?.includes(uid)) m.push('cargo');
+    const t = d.target;
+    if ((t?.kind === 'card' && t.card === uid) || d.recover?.card === uid || d.upgrade?.old === uid) m.push('target');
+    if (d.manage?.some((o) => 'card' in o && o.card === uid) || ui.shiftCard === uid) m.push('target');
+  }
+  if (ui.mode === 'takeoff' && ui.takeoff.card === uid) m.push('starter');
+  if (ui.manualCard === uid) m.push('manual');
+  if (ui.menu === uid) m.push('menu');
+  if (ui.combat.card === uid) m.push('participant');
+  if (ui.saved.includes(uid)) m.push('saved');
+  if (game.view?.combat?.entries.some((e) => e.card === uid)) m.push('fighting');
+  return m;
 }
 
 /** Send a move, true when it is applied */

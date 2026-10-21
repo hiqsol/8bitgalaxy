@@ -4,7 +4,7 @@ import { computed } from 'vue';
 import { cardWord } from '../format';
 import { TYPE_ICONS } from '../icons';
 import { game } from '../session';
-import { clickCard, ui } from '../ui';
+import { cardMarks, clickCard, ui } from '../ui';
 
 // Sizes are in board pixels of the legacy version (a Unit is 250x350), the board zooms them.
 const props = withDefaults(
@@ -25,25 +25,7 @@ const back = computed(() => !def.value || card.value!.face !== 'front');
 const unit = computed(() => (def.value ? isActorType(def.value.type) : card.value?.def === '?Unit'));
 const ends = computed<EndName[]>(() => (props.look === 'hand' ? ['strong', 'weak'] : [card.value!.end]));
 
-const marks = computed(() => {
-  const m: string[] = [];
-  const d = ui.draft;
-  if (d) {
-    if (d.starter === props.uid) m.push('starter');
-    if (d.participants.some((p) => p.card === props.uid)) m.push('participant');
-    if (d.cargo?.includes(props.uid)) m.push('cargo');
-    const t = d.target;
-    if ((t?.kind === 'card' && t.card === props.uid) || d.recover?.card === props.uid || d.upgrade?.old === props.uid) m.push('target');
-    if (d.manage?.some((o) => 'card' in o && o.card === props.uid) || ui.shiftCard === props.uid) m.push('target');
-  }
-  if (ui.mode === 'takeoff' && ui.takeoff.card === props.uid) m.push('starter');
-  if (ui.manualCard === props.uid) m.push('manual');
-  if (ui.menu === props.uid) m.push('menu');
-  if (ui.combat.card === props.uid) m.push('participant');
-  if (ui.saved.includes(props.uid)) m.push('saved');
-  if (game.view?.combat?.entries.some((e) => e.card === props.uid)) m.push('fighting');
-  return m;
-});
+const marks = computed(() => cardMarks(props.uid));
 
 /** Shrinks a word to fit the width, the font is monospace */
 const fit = (text: string, size: number, width: number) => ({ fontSize: `${Math.min(size, width / Math.max(text.length, 1))}px` });
