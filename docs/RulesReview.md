@@ -80,13 +80,6 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 	- a) [[Range]] 5 adds "Range from Support" to a group: with
 	  several groups, which one gets a [[Hand]] supporter's Range?
 	  Recommended: one group of the player's choice.
-	- b) Cards in the destination may join a [[Move]], but they don't
-	  move, so they deplete, and their Range and [[Capacity]] don't
-	  help the moving group: they add only technologies, e.g.
-	  [[Navigation]]. Intended?
-	- c) The attacker's own cards already in the target [[Star]] join
-	  an [[Attack]] as direct participants: attack from two sides.
-	  Intended?
 - [ ] **RI88. Minor.**
 	- b) Combined prints: Hero 4M weak and Hero 4C strong "Recover,
 	  Upgrade", Base 2M "Militarization, +1 Defense". One [[Ability]]

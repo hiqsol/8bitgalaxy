@@ -17,3 +17,5 @@ scope: core
 
 1. A winning attack moves the attacker's surviving [[Unit]]s to the
    destination [[Star]], like a capture in chess.
+2. The attacker's own cards already in the target [[Star]] may join as
+   direct participants: an attack from two sides.

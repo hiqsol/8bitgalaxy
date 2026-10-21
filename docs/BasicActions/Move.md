@@ -14,6 +14,8 @@ scope: core
 	1. Range can be increased with [[Support]]
 5. Several cards can move together in group, its [[Range]] is the sum,
    see [[Range]]
+	1. Direct participants in the destination don't move, but add
+	   their [[Range]] and [[Capacity]] to the moving group
 6. [[Ship]]s of the group carry **cargo**: cards and [[Materials]]
 	1. The total [[Size]] of cargo is within the group's total
 	   [[Capacity]]
@@ -36,3 +38,5 @@ scope: core
    Shift or go as cargo, both cost a starter: the player has options
 3. E.g. a [[Colony]] is carried only by Culture and Science Ships:
    colony ships
+4. Cards waiting at the destination pull the group in: they stay, but
+   their Range and Capacity help it arrive
