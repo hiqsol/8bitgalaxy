@@ -4,7 +4,7 @@ Docs are organized as Obsidian compatible wiki
 Every page has:
 - frontmatter: status, scope and optionally: aliases
 - numbered bullet point rules
-- notes
+- numbered bullet point notes
 
 Docs include rules, notes and reviews.
 RulesReview numbers issues `RI<n>` and proposals `RP<n>`.
