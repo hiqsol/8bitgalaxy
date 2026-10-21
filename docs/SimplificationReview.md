@@ -216,15 +216,13 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  Level is its one Ability for [[Prerequisites]]. Recommended:
 	  yes.
 - [ ] **S43. Control by present cards.** [[Control]] 3 repeats
-  "Enabled or Hidden" at every level, [[Pinning]] and [[Damaged]] 7
-  say Enabled:
+  "Enabled or Hidden" at every level, [[Pinning]] says
+  Enabled:
 	- a) A faction's cards in a Star that are not [[Damaged]] are
 	  **present**.
 	- b) The Control level is the highest [[Role]] among them: Actor,
 	  then Structure, then none.
-	- c) Damaged 7 checks present cards: own Hidden cards keep a
-	  Damaged card, which answers [[RulesReview]] RI88 d. Pinning keeps
-	  Enabled.
+	- c) Pinning keeps Enabled.
 	- d) Say "own faction's cards": "player has" leaves open whether a
 	  captured rival Structure counts.
 - [ ] **S44. One control page.** The tie rule is written in

@@ -18,15 +18,15 @@ scope: core
 #### Notes
 
 1. Consequences from the rules on examples:
-	1. single faction is present in a star - the faction controls all
+	1. Single faction is present in a star - the faction controls all
 	   the structures
-	2. single faction has [[Actor]]s in a star - the faction controls
+	2. Single faction has [[Actor]]s in a star - the faction controls
 	   the star and all the structures, rival ones captured
-	3. no [[Actor]]s, structures of several factions - the star is
+	3. No [[Actor]]s, structures of several factions - the star is
 	   disputed, every faction controls its own structures
 	4. Actors of several factions - the star is disputed, every
 	   faction with Actors controls its own cards, structures of a
 	   faction with only structures there are out of control
-	5. a Damaged rival [[Actor]] in a Star the faction controls is
+	5. A [[Damaged]] rival [[Actor]] in a Star the faction controls is
 	   captured like a structure
 2. Agreements on control are [[Politics]], not core

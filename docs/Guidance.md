@@ -37,8 +37,8 @@ G9. RI88 b - a combined print is one Ability. RI88 g - on top of
 ## Watch in the first duel
 
 G10. Delete from the reviews, they are listed in "Watch in
-    playtest" of Decisions: RI46, DI75 a, DI75 f, DI79 b, DI81, RI88 d,
-    RI88 f, DP48, RP66, S19.
+    playtest" of Decisions: RI46, DI75 a, DI75 f, DI79 b, DI81, RI88 f,
+    DP48, RP66, S19.
 
 ## Later
 

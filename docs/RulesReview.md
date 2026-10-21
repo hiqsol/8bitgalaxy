@@ -91,9 +91,6 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 	- b) Combined prints: Hero 4M weak and Hero 4C strong "Recover,
 	  Upgrade", Base 2M "Militarization, +1 Defense". One [[Ability]]
 	  or two for a supporter?
-	- d) [[Damaged]] 7: own [[Hidden]] cards give [[Control]] but
-	  don't keep a Damaged card from being [[Destroy]]ed, they are not
-	  Enabled. Intended?
 	- f) [[Combat]] 7 lets defenders add non-Military cards, as if
 	  attackers can't, but [[Attack]] 4.1 needs only one Military
 	  Actor.
