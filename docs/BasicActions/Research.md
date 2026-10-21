@@ -12,4 +12,4 @@ scope: core
 4. **Direction**: any [[Star]] to corresponding [[Hub]]
 5. **Requirements**: to [[Factory]], all [[Prerequisites]] of the card
    are provided by the action's participants
-6. **Cost**: the card's [[Cost]] of [[SciencePower]] to [[Factory]]
+6. **Cost**: the card's [[Price]] of [[SciencePower]] to [[Factory]]

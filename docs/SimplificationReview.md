@@ -29,7 +29,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
   [[IPS]], must reach the destination. Range sums, so groups reach
   farther; [[Pinning]] and hidden [[Space]] stop moving groups.
 - **Power is the price.** Power of the matching [[Class]] pays the
-  [[Cost]]; [[Technology]] makes an action possible or better.
+  [[Price]]; [[Technology]] makes an action possible or better.
 - **Depleting is the wear.** Used Units leave the [[Field]] for
   [[Discard]] and return to the deck cycle, used [[Structure]]s turn
   to their weak [[End]]. Cards that move or fight hold the ground and
@@ -67,16 +67,16 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  test twice.
 	- c) After the first play the player may end the Turn. This keeps
 	  "no pass" without requiring a Hand card.
-- [ ] **S20. Visible Explore cost.** [[Explore]] reveals the Cost only
+- [ ] **S20. Visible Explore cost.** [[Explore]] reveals the Price only
   after cards are spent, while [[RulesReview]] RP34 validates every
   action before resolution and takes an invalid action back:
-	- a) Print Explore Cost on the back of every [[Star]] and
+	- a) Print the [[Price]] on the back of every [[Star]] and
 	  [[Space]], beside Size or Length. Type and Ability stay hidden.
 	- b) Validate before revealing, like every other action. Remove
 	  Explore 7-8 and the Explore exception from [[PerformAction]] 5.
 	- c) This removes failure and refund rules without removing a
 	  choice: the player still chooses which unknown tile is worth its
-	  visible Cost.
+	  visible Price.
 - [ ] **S21. Star abilities without use tracking.** [[Ability]] and
   [[Star]] say a Star Ability is usable once per own Turn,
   contradicting **No memory**; [[RulesReview]] RP36 adds more such
@@ -87,15 +87,14 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	- c) Defensive Abilities apply continuously in that Star.
 	- d) Balance their values for those timings, then remove "once per
 	  Turn".
-- [ ] **S35. One build direction.** [[Create]] 6, [[Upgrade]] 4 and
-  [[Recover]] 4 each define directions for the same three actions,
-  [[Settle]] and [[Prefab]] add a third; today a hub in a
+- [ ] **S35. One build direction.** [[Create]] 6 and [[Upgrade]] 4
+  each define directions for the same two actions, [[Settle]] and
+  [[Prefab]] add a third; today a hub in a
   [[Disputed]] Star still builds Actors (it is the destination) but
   not Structures (it is the source):
 	- a) The source is the hub's [[Star]], the destination is the
-	  Star of the card: where a [[Structure]] is or goes, where a
-	  Damaged card lies; a card in [[Home]] has the hub's Star as
-	  both ends, [[Distance]] 0.
+	  Star of the card: where a [[Structure]] is or goes; a card in
+	  [[Home]] has the hub's Star as both ends, [[Distance]] 0.
 	- b) Settle and Prefab: the Ship's Star is both ends, no hub.
 	- c) State it once, in [[Hub]]; the three action pages keep only
 	  requirements, Cost and outcome.
@@ -146,7 +145,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  a trade route, unless [[DesignReview]] DP57 c turns Trade into
 	  Energy.
 	- c) Recycle doesn't say what happens to the converted card: say
-	  it, e.g. [[Destroyed]].
+	  it, e.g. [[Destroy]].
 
 ### Abilities and states
 
@@ -217,15 +216,13 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  Level is its one Ability for [[Prerequisites]]. Recommended:
 	  yes.
 - [ ] **S43. Control by present cards.** [[Control]] 3 repeats
-  "Enabled or Hidden" at every level, [[Pinning]] and [[Damaged]] 7
-  say Enabled:
+  "Enabled or Hidden" at every level, [[Pinning]] says
+  Enabled:
 	- a) A faction's cards in a Star that are not [[Damaged]] are
 	  **present**.
 	- b) The Control level is the highest [[Role]] among them: Actor,
 	  then Structure, then none.
-	- c) Damaged 7 checks present cards: own Hidden cards keep a
-	  Damaged card, which answers [[RulesReview]] RI88 d. Pinning keeps
-	  Enabled.
+	- c) Pinning keeps Enabled.
 	- d) Say "own faction's cards": "player has" leaves open whether a
 	  captured rival Structure counts.
 - [ ] **S44. One control page.** The tie rule is written in
@@ -267,7 +264,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
   and entry in different words, some not at all:
 	- a) [[Factory]], [[Laboratory]] and [[History]] don't say who
 	  sees them.
-	- b) [[Destroyed]], [[Recall]] and [[Express]] put a card on top,
+	- b) [[Destroy]], [[Recall]] and [[Express]] put a card on top,
 	  [[Upgrade]] 7.2 and [[Research]] 2.1 don't say where in
 	  [[Factory]], [[DoNotDeplete]] doesn't say where in [[Reserve]]
 	  ([[RulesReview]] RI88 g).
@@ -338,14 +335,14 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  color.
 	- c) A token's amount stays its Size: it is its weight as cargo.
 	- d) [[Size]] drops "aka Weight", one name for one property.
-- [ ] **S50. Star Cost printed.** A [[Star]] alone among tiles has
-  [[ExtraCost]], non-negative, only to compute its [[Explore]] Cost,
-  while a [[Space]] prints its Cost:
-	- a) Print a Star's Cost like a Space's, at least its Size; on the
+- [ ] **S50. Star Price printed.** A [[Star]] alone among tiles has
+  [[ExtraPrice]], non-negative, only to compute its [[Explore]] Cost,
+  while a [[Space]] prints its Price:
+	- a) Print a Star's Price like a Space's, at least its Size; on the
 	  back with S20.
-	- b) ExtraCost is a card property again: remove ExtraCost 4 and 6,
-	  [[Cost]] 3 and ExtraCost from the [[Component]] properties.
-	- c) [[RulesReview]] RP36 g then sets printed Costs: Size plus 1
+	- b) ExtraPrice is a card property again: remove ExtraPrice 4 and 6,
+	  [[Price]] 3 and ExtraPrice from the [[Component]] properties.
+	- c) [[RulesReview]] RP36 g then sets printed Prices: Size plus 1
 	  to 4.
 
 ### Documentation
@@ -404,8 +401,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
   page links:
 	- a) Remove them and the Board page.
 - [ ] **S54. One stub list.** [[RulesReview]] RI21 and [[DesignReview]]
-  DP59 list the same stubs with the same pointers, DP59 adds `allacad`:
-  delete RI21.
+  DP59 list the same stubs with the same pointers: delete RI21.
 
 ## Already proposed
 

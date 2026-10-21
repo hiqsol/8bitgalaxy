@@ -18,8 +18,8 @@ evidence from a played game, not from a review.
    tie makes it [[Disputed]], see [[ControlledBy]]
 5. **Explore**: one technology, Recon and Survey are its flavour
    names, see [[Explore]]
-6. **Build**: [[Create]], [[Upgrade]], [[Recover]] at a [[Hub]],
-   Academy and Shipyard
+6. **Build**: [[Create]], [[Upgrade]] at a [[Hub]]; [[Recover]]
+   from the card that provides it
 7. **Field start**: a Field card starts an action only with
    [[Starter]], `advanced`
 
@@ -32,10 +32,9 @@ Questions a played game answers better than a review:
 3. Is the narrow-win damage exploit real (DI81)?
 4. Is Militarization Defense right (DI75 f) and do weak Structure ends
    need Secondary (RP66)?
-5. Does a Damaged card kept only by Hidden cards matter (RI88 d)?
-6. Do attackers miss non-Military cards in Combat (RI88 f)?
-7. Does Stealth pay off with Range 1, Capacity 1 (DP48)?
-8. Does a Turn ever start with no legal play (S19)?
+5. Do attackers miss non-Military cards in Combat (RI88 f)?
+6. Does Stealth pay off with Range 1, Capacity 1 (DP48)?
+7. Does a Turn ever start with no legal play (S19)?
 
 ## Next step
 

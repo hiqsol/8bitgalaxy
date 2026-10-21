@@ -137,7 +137,7 @@ def check_technologies(pages):
 
     for row in catalog.table():
         if not links(row[0]):
-            continue  # unnamed placeholders like `allacad`
+            continue  # unnamed placeholders
         tech, kind, cls, scope, cards = text(row[0]), *map(text, row[1:])
         cataloged.add(tech)
 

@@ -19,7 +19,7 @@ scope: core
 		1. With [[Settle]] or [[Prefab]]: to the Star of the Ship that
 		   converts itself
 7. **Requirements**: target card has to be available at [[Factory]]
-8. **Cost**: card's [[Cost]]
+8. **Cost**: card's [[Price]]
 9. **Outcome**:
 	1. [[Actor]] - goes to [[Discard]]
 	2. [[Structure]] - goes to a selected free slot in [[Star]]

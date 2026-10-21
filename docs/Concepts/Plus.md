@@ -12,8 +12,8 @@ scope: core
 	4. [[Defense]]
 	5. [[Range]] - to the group in [[Move]]
 	6. [[Capacity]] - to the cargo total in [[Move]]
-	7. [[Draw]] - cards from [[Reserve]] to [[Hand]] when used in an
-	   action
+	7. [[Draw]] - cards from [[Reserve]] to [[Hand]], an
+	   [[ImmediateAction]]
 	8. [[Slot]]s - free slots in a [[Star]]
 	9. [[Hand]] size
 	10. [[Restore]] - more [[Structure]]s that become [[Ready]] at the

@@ -14,14 +14,14 @@ any answer, then apply.
 G1. RI5, RP27 - yes, setup as RP27 a-f. Call the 4 technology-free
     Reserve cards "starting cards", not starters (S32 c).
 G2. RI60 - in the first duel a printed technology that is not `core`
-    or is a stub is blank. This covers RI21 and `allacad` (DP59) for
-    the duel, and keeps Materials out of it.
+    or is a stub is blank. This covers RI21 and DP59 for the duel,
+    and keeps Materials out of it.
 G3. RI57, RP36, S21 - Star deck for the first duel is RP36 i, abilities
     as RP36 a, b, d, e. Abilities apply automatically by S21 a-c, no
     "once per Turn".
 G4. RI50, RP34, S20 - yes: action template, an invalid action is taken
-    back and nothing is spent. Explore Cost is printed on the back of
-    Stars and Spaces (S20 a, b), remove Explore 7-8.
+    back and nothing is spent. Price is printed on the back of Stars
+    and Spaces (S20 a, b), remove Explore 7-8.
 G5. RI51, RP28, S26 - yes: combat sequence by RP28, every Hand card is
     committed face down and revealed at resolution.
 G6. RI83, RP62 - yes: Defense = AttackPower, at least 1. A defending
@@ -37,8 +37,8 @@ G9. RI88 b - a combined print is one Ability. RI88 g - on top of
 ## Watch in the first duel
 
 G10. Delete from the reviews, they are listed in "Watch in
-    playtest" of Decisions: RI46, DI75 a, DI75 f, DI79 b, DI81, RI88 d,
-    RI88 f, DP48, RP66, S19.
+    playtest" of Decisions: RI46, DI75 a, DI75 f, DI79 b, DI81, RI88 f,
+    DP48, RP66, S19.
 
 ## Later
 
@@ -51,7 +51,7 @@ G11. Merge RulesReview, DesignReview and SimplificationReview into
         - Economy, `advanced`: DI74, RI93, DP57, S39, RI88 h.
         - Extensions: RI43, RI44, RI45, DI77, DI78, DI80, RI89, DP60.
         - Additions: DP52, DP58, RP65, S28, S36.
-        - Stubs: RI21, DP59.
+        - Stubs and underdescribed: RI21, DP59, RI94.
     2. Editorial, one batch after the playtest, only for pages that
        confused play: DP55, DI75 b, S23, S24, S25, S29, S30, S31, S33,
        S35, S38, S41, S42, S43, S44, S45, S46, S47, S48, S49, S50,

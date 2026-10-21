@@ -18,15 +18,17 @@ scope: core
 
 | Technology | Kind | Class | Scope | Cards |
 |------------|------|-------|-------|-------|
-| [[Academy]] | Hub | C | core | Colony 2C |
-| [[Shipyard]] | Hub | P | core | Base 2P, Colony 4P |
+| [[Academy]] | Hub | C | core | Colony 2C, Base 4C |
+| [[FullAcad]] | Hub | C | core | - |
+| [[Shipyard]] | Hub | P | core | Base 2P |
+| [[FullYard]] | Hub | P | core | Colony 4P |
 | [[Upgrade]] | Action | C, P | core | Hero 1M weak, Hero 2C weak, Hero 3M weak, Hero 3C strong, Hero 4M weak, Hero 4C strong, Ship 4C strong, Ship 4P strong |
-| [[Recover]] | Action | C, P | core | Hero 1P strong, Hero 2C strong, Hero 4M weak, Hero 4C strong, Colony 4P |
-| [[Retreat]] | Modifier | M | core | Ship 2M strong |
+| [[Recover]] | Action | C, P | core | Hero 1P strong, Hero 2C strong, Hero 4M weak, Hero 4C strong |
+| [[Retreat]] | Action | M | core | Ship 2M strong |
 | [[Explore]] | Action | M, S | core | Ship 2S strong, Colony 2S, Hero 1M strong, Hero 2M strong, Colony 2M |
 | [[Express]] | Modifier | C | core | - |
-| [[ForceDiscard]] | Modifier | M | core | - |
-| [[Stealth]] | Modifier | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
+| [[ForceDiscard]] | Action | M | core | - |
+| [[Stealth]] | Action | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
 | [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
 | [[Settle]] | Modifier | C | core | - |
 | [[Prefab]] | Modifier | P | core | - |
@@ -34,7 +36,6 @@ scope: core
 | [[Smuggle]] | Action | M | advanced | Ship 4M strong |
 | [[Trade]] | Action | C | advanced | Ship 2C strong, Base 2C |
 | [[Export]] | Action | C | advanced | Colony 4C |
-| `allacad` | TBD | C | TBD | Base 4C |
 | [[Extract]] | Action | P | advanced | Ship 2P strong, Colony 2P |
 | [[Recycle]] | Action | S | advanced | Hero 1P weak, Hero 2M weak, Base 2S |
 | [[Exhaust]] | Modifier | S | advanced | Ship 4S strong |
@@ -48,13 +49,13 @@ scope: core
 | [[Tactics]] | Modifier | M | advanced | - |
 | [[Ambush]] | Modifier | M | advanced | - |
 | [[Raid]] | Action | M | advanced | - |
-| [[Recall]] | Modifier | C | advanced | - |
+| [[Recall]] | Action | C | advanced | - |
 | [[Legacy]] | Action | C | objectives | - |
 | [[Guard]] | Modifier | P | advanced | - |
 | [[Salvage]] | Modifier | P | advanced | - |
 | [[EfficientUpgrade]] | Modifier | P | advanced | - |
 | [[Scan]] | Modifier | S | advanced | - |
-| [[Forecast]] | Modifier | S | advanced | - |
+| [[Forecast]] | Action | S | advanced | - |
 | [[Jump]] | Modifier | S | advanced | - |
 | [[MinusRequirement]] | Modifier | S | advanced | - |
 | [[PlusHero]] | Action | TBD | advanced | - |

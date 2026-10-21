@@ -50,7 +50,6 @@ Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 	- b) [[Export]] and [[Smuggle]] need a rival's Colony: dead in a
 	  duel.
 	- c) [[Sell]] is a stub.
-	- d) [[Energy]] says [[Trade]] gives Energy, Trade says Materials.
 - [ ] **DI75. Minor.**
 	- a) [[GameBalance]] expects about 5 actions per Turn, but every
 	  Hand action takes a starter and usually supporters: 2-3 is
@@ -83,7 +82,7 @@ Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 	- a) How many in a game, one copy of each?
 	- b) A shared row, the first to complete one takes it?
 	- c) Built in stages: each [[Create]] adds Culture or Production
-	  power as tokens until they reach its [[Cost]]?
+	  power as tokens until they reach its [[Price]]?
 - [ ] **DI78. Production path** ([[Goal]] 3.3) is TBD. → DP60
 - [ ] **DI79. New technologies follow-ups.**
 	- b) [[Legacy]] thins the deck, like RI46: keep it in `objectives`
@@ -170,7 +169,7 @@ Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 - [ ] **DP58. Traits instead of new Types.** Variety via [[Trait]]s:
 	- a) `Unique`: one per faction on the [[Field]], for flagships and
 	  top Heroes (TI).
-	- b) `Consumable`: [[Destroyed]] after use, replaces the [[Tool]]
+	- b) `Consumable`: [[Destroy]] after use, replaces the [[Tool]]
 	  type: probes, mines, missiles.
 	- c) `Immovable`: can't move or be cargo, replaces the third
 	  mobility type in [[Range]], for Hyperstructures.
@@ -182,10 +181,6 @@ Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 	- b) [[Dismantle]], [[Sell]]: by DP57.
 	- c) [[PlusHero]]: remove, [[Create]] of Heroes covers it.
 	- d) [[HyperPass]]: by RP24.
-	- e) `allacad` on Base 4C, read as "all-academy": an [[Academy]]
-	  that creates Colonies in any Star the player controls, without
-	  the [[Range]] requirement.
-	- f) `allacad` read as a global [[Hub]] for both [[Origin]]s.
 
 ## Ideas
 

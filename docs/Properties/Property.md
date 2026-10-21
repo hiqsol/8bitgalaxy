@@ -26,9 +26,9 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	4. [[Level]], which implies:
 		1. [[Capacity]], default is [[Level]]
 		2. [[Range]], default is [[Level]] or **0** for [[Structure]]
-	5. [[ExtraCost]], which implies:
-		1. [[Cost]] = [[Level]] + [[ExtraCost]]
-		2. [[Size]] = [[Level]] + [[ExtraCost]] or [[Level]] for
+	5. [[ExtraPrice]], which implies:
+		1. [[Price]] = [[Level]] + [[ExtraPrice]]
+		2. [[Size]] = [[Level]] + [[ExtraPrice]] or [[Level]] for
 		   [[Hero]]
 	6. [[Type]], which implies:
 		1. [[Role]]: [[Unit]] / [[Structure]] / [[Agenda]] - always
@@ -44,7 +44,7 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	2. **implicit** - derived from other properties
 	3. **physical** - [[Side]] and [[End]]
 3. [[Component]] properties, of cards and tiles: [[Side]],
-   [[ExtraCost]], [[Cost]]
+   [[ExtraPrice]], [[Price]]
 4. [[Star]] and [[Space]] have own properties: Star Size and Type are
    not card [[Size]] and [[Type]]
 
