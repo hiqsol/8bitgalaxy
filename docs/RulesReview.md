@@ -111,6 +111,15 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 	  the player controls, like a card, it takes no [[Slot]].
 	- b) Star → Hand by [[Manage]], 1 power per token, from a Star the
 	  player controls.
+- [ ] **RI94. Underdescribed technologies.** Their pages don't say
+  enough to play them, stubs are in RI21:
+	- a) [[Militarization]]: what [[Manage]] does to an enemy card.
+	- b) [[Invent]]: which pile and the Cost.
+	- c) [[PlusFactory]], [[PlusLaboratory]]: the Cost, the limit and
+	  how an extra pile works.
+	- d) [[Stealth]] at [[Takeoff]]: Takeoff 3.1 lets the card itself
+	  or an own Enabled card in that Star provide it. Does the
+	  providing card Deplete as in [[ImmediateAction]]?
 
 ### Extensions
 

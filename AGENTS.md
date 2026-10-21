@@ -39,7 +39,7 @@ Write a page like the best existing page of its kind:
 
 - Basic action: `docs/BasicActions/Attack.md`
 - Technology action: `docs/TechnologyActions/Upgrade.md`
-- Technology modifier: `docs/TechnologyModifiers/Stealth.md`
+- Technology modifier: `docs/TechnologyModifiers/Ambush.md`
 - Card type: `docs/Cards/Ship.md`
 - Property: `docs/Properties/Range.md`
 - State: `docs/States/Damaged.md`

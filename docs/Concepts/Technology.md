@@ -28,7 +28,7 @@ scope: core
 | [[Explore]] | Action | M, S | core | Ship 2S strong, Colony 2S, Hero 1M strong, Hero 2M strong, Colony 2M |
 | [[Express]] | Modifier | C | core | - |
 | [[ForceDiscard]] | Action | M | core | - |
-| [[Stealth]] | Modifier | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
+| [[Stealth]] | Action | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
 | [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
 | [[Settle]] | Modifier | C | core | - |
 | [[Prefab]] | Modifier | P | core | - |

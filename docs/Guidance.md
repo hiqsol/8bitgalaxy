@@ -51,7 +51,7 @@ G11. Merge RulesReview, DesignReview and SimplificationReview into
         - Economy, `advanced`: DI74, RI93, DP57, S39, RI88 h.
         - Extensions: RI43, RI44, RI45, DI77, DI78, DI80, RI89, DP60.
         - Additions: DP52, DP58, RP65, S28, S36.
-        - Stubs: RI21, DP59.
+        - Stubs and underdescribed: RI21, DP59, RI94.
     2. Editorial, one batch after the playtest, only for pages that
        confused play: DP55, DI75 b, S23, S24, S25, S29, S30, S31, S33,
        S35, S38, S41, S42, S43, S44, S45, S46, S47, S48, S49, S50,
