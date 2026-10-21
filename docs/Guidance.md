@@ -11,14 +11,6 @@ any answer, then apply.
 
 ## Blocks the first duel
 
-G. Price and Cost - recommended yes. **Cost** now means two
-   things: the [[Cost]] property of a card or Star and the **Cost**
-   rule of 14 action pages, e.g. "Upgrade Cost: Cost of the new card
-   minus Cost of the old card". Rename the property to **Price**
-   (Cost and ExtraCost pages become Price and ExtraPrice, about 80
-   mentions in 18 pages) and keep **Cost** for what an action pays:
-   Create Cost is the card's Price, Explore Cost is the Star's Price.
-
 G1. RI5, RP27 - yes, setup as RP27 a-f. Call the 4 technology-free
     Reserve cards "starting cards", not starters (S32 c).
 G2. RI60 - in the first duel a printed technology that is not `core`
@@ -28,8 +20,8 @@ G3. RI57, RP36, S21 - Star deck for the first duel is RP36 i, abilities
     as RP36 a, b, d, e. Abilities apply automatically by S21 a-c, no
     "once per Turn".
 G4. RI50, RP34, S20 - yes: action template, an invalid action is taken
-    back and nothing is spent. Explore Cost is printed on the back of
-    Stars and Spaces (S20 a, b), remove Explore 7-8.
+    back and nothing is spent. Price is printed on the back of Stars
+    and Spaces (S20 a, b), remove Explore 7-8.
 G5. RI51, RP28, S26 - yes: combat sequence by RP28, every Hand card is
     committed face down and revealed at resolution.
 G6. RI83, RP62 - yes: Defense = AttackPower, at least 1. A defending

@@ -8,5 +8,5 @@ scope: core
 3. [[Role]] = [[Actor]]
 4. [[Origin]] = [[Industrial]] created at a Industrial [[Hub]]
 5. [[Range]] = current [[Level]] - can [[Move]] and carry cargo
-6. [[Size]] = current [[Level]] + [[ExtraCost]]
+6. [[Size]] = current [[Level]] + [[ExtraPrice]]
 7. [[Capacity]] = current [[Level]]

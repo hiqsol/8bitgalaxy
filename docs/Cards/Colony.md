@@ -8,5 +8,5 @@ scope: core
 3. [[Role]] = [[Structure]]
 4. [[Origin]] = [[Social]] created at a Social [[Hub]]
 5. [[Range]] = 0, can be cargo of a [[Move]]
-6. [[Size]] = current [[Level]] + [[ExtraCost]]
+6. [[Size]] = current [[Level]] + [[ExtraPrice]]
 7. [[Capacity]] = current [[Level]], can hold [[Materials]]

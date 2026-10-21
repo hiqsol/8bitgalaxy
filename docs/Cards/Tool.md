@@ -8,6 +8,6 @@ scope: advanced
 3. [[Role]] = [[Unit]], not an [[Actor]]
 4. [[Origin]] = [[Industrial]]
 5. [[Range]] = 0, can't [[Move]]
-6. [[Size]] = current [[Level]] + [[ExtraCost]]
+6. [[Size]] = current [[Level]] + [[ExtraPrice]]
 7. [[Capacity]] = 0, can't carry cargo
-8. **Tool** is [[Destroyed]] after use
+8. **Tool** is [[Destroy]]ed after use

@@ -23,7 +23,7 @@ aliases: [InterStellar Space]
 6. Cards can't stop and stay in space, they can only pass by
 	1. Cards can't pass a hidden **Space**
 7. **Space** tiles have multiple properties:
-	1. **Cost** required to [[Explore]]
+	1. **Price**: the Cost to [[Explore]]
 	2. **Type**
 	3. **Length** - independent of Type, shown on the back side
 	4. [[Ability]] - given by its Type
@@ -39,5 +39,5 @@ aliases: [InterStellar Space]
 #### Notes
 
 1. The back shows the **Length**, as the back of a [[Star]] shows its
-   Size: a hint at the Cost, while Type and Cost stay hidden until
+   Size: a hint at the Price, while Type and Price stay hidden until
    [[Explore]]

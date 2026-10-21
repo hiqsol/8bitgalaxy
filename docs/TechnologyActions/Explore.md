@@ -17,10 +17,10 @@ scope: core
 	   reachable within [[Range]]
 	2. Hidden card is in the source [[Star]] or in a Star reachable
 	   within [[Range]]
-6. **Cost**: the target's Cost, for a card its [[Cost]]
+6. **Cost**: the target's [[Price]]
 7. The Cost is not shown: the player starts the action, then learns
    the Cost
-	1. A hidden [[Star]] shows its Size, its minimal Cost: the action
+	1. A hidden [[Star]] shows its Size, its minimal Price: the action
 	   starts with at least Size of power
 8. If the power is not enough the player either:
 	1. Adds more power by spending more cards
@@ -30,7 +30,7 @@ scope: core
 10. **Recon** directed to an [[Academy]] [[ControlledBy]] a rival
     looks at that rival's [[Hand]]:
 	1. The [[Academy]] card is the target: in reach as a Hidden card,
-	   the Cost is its [[Cost]]
+	   the Cost is its [[Price]]
 
 #### Notes
 

@@ -45,7 +45,7 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
   cards: e.g. RP27 Reserve has Ship 2C ([[Trade]]), Ship 2P
   ([[Extract]]), Hero 1P weak ([[Recycle]]).
 - [ ] **RI47. Images.** Update `card.png` after the rules and card data
-  are settled: annotate both ends, ExtraCost, Prerequisites and the
+  are settled: annotate both ends, ExtraPrice, Prerequisites and the
   technology name.
 
 ### Rules
@@ -92,7 +92,7 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 	  Upgrade", Base 2M "Militarization, +1 Defense". One [[Ability]]
 	  or two for a supporter?
 	- d) [[Damaged]] 7: own [[Hidden]] cards give [[Control]] but
-	  don't keep a Damaged card from [[Destroyed]], they are not
+	  don't keep a Damaged card from being [[Destroy]]ed, they are not
 	  Enabled. Intended?
 	- f) [[Combat]] 7 lets defenders add non-Military cards, as if
 	  attackers can't, but [[Attack]] 4.1 needs only one Military
@@ -144,31 +144,31 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 - [ ] **RP24. Space type behaviors.** No dice: every effect is
   deterministic. Better types cost more to [[Explore]]. Pick one or
   more variants per type, e.g. "RP24 Nebula a, c":
-	- **Normal** (Cost 2): a) plain, length 1. b) length 1 or 2,
-	  longer is cheaper (Cost 1).
-	- **[[Asteroids]]** (Cost 3, resource): a) [[Extract]]
+	- **Normal** (Price 2): a) plain, length 1. b) length 1 or 2,
+	  longer is cheaper (Price 1).
+	- **[[Asteroids]]** (Price 3, resource): a) [[Extract]]
 	  [[Materials]] from a bordering Star (current). b) cover: a
 	  [[Hidden]] card passing it stays Hidden even if it took part in
 	  an action. c) narrow: only groups of total [[Capacity]] ≤ 2
 	  pass. d) rough: length +1 for all but [[Military]] [[Ship]]s.
-	- **Nebula** (Cost 1, obstacle, TI-like): a) a group entering it
+	- **Nebula** (Price 1, obstacle, TI-like): a) a group entering it
 	  must stop at the next Star, it can't go further this action. b)
 	  blind: [[Explore]] can't look past it. c) shroud: cards passing
 	  it may become [[Hidden]] for free. d) static: no [[Support]]
 	  from the [[Field]] through it.
-	- **Black hole** (Cost 3, shortcut): a) slingshot: length 0. b)
+	- **Black hole** (Price 3, shortcut): a) slingshot: length 0. b)
 	  gravity well: length 0, but each passing group [[Deplete]]s its
 	  weakest card. c) one-way: passable only away from the nearest
 	  home Star. d) lab: Science actions started in a bordering Star
 	  get +1 [[SciencePower]].
-	- **[[Void]]** (Cost 1, wall): a) impassable without
+	- **[[Void]]** (Price 1, wall): a) impassable without
 	  [[Navigation]] (current). b) with Navigation length 2, without
 	  impassable. c) never passable, but no Explore cost, its back
 	  shows it (a known wall).
-	- **[[HyperPass]]** (Cost 4, best, a Space type): a) length 0. b)
+	- **[[HyperPass]]** (Price 4, best, a Space type): a) length 0. b)
 	  wormhole pair: two HyperPass tiles anywhere are adjacent to each
 	  other. c) highway: length 0 and [[Move]] cargo Capacity +1.
-	- **Relic** (Cost 4, new type, like Eclipse discovery tiles): a)
+	- **Relic** (Price 4, new type, like Eclipse discovery tiles): a)
 	  the first explorer takes the top card of a [[Laboratory]] pile
 	  to [[Factory]]. b) the first explorer gains 2 [[Energy]]. Then
 	  it's Normal.
@@ -221,12 +221,12 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 	- e) Ability: a [[Technology]] for own cards there, e.g.
 	  [[Shipyard]], [[Academy]], [[Explore]].
 	- f) Ability: [[Draw]] 1 card, rare.
-	- g) [[ExtraCost]] grows with the Ability: Energy 1, Power,
+	- g) [[ExtraPrice]] grows with the Ability: Energy 1, Power,
 	  Materials and Defense 2, Technology 3, Draw 4.
 	- h) The player takes the Ability during own [[Turn]], it is not
 	  automatic.
 	- i) First duel deck: 5 Stars, shuffled face down on non-home
-	  Stars: Energy (ExtraCost 1), Military Power (2), Science Power
+	  Stars: Energy (ExtraPrice 1), Military Power (2), Science Power
 	  (2), Defense (2), [[Shipyard]] (3).
 - [ ] **RP62. Defense** in [[Defense]] and [[Combat]]:
 	- a) Defense = [[AttackPower]], at least 1, for every card.

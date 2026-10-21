@@ -82,7 +82,7 @@ Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 	- a) How many in a game, one copy of each?
 	- b) A shared row, the first to complete one takes it?
 	- c) Built in stages: each [[Create]] adds Culture or Production
-	  power as tokens until they reach its [[Cost]]?
+	  power as tokens until they reach its [[Price]]?
 - [ ] **DI78. Production path** ([[Goal]] 3.3) is TBD. → DP60
 - [ ] **DI79. New technologies follow-ups.**
 	- b) [[Legacy]] thins the deck, like RI46: keep it in `objectives`
@@ -169,7 +169,7 @@ Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 - [ ] **DP58. Traits instead of new Types.** Variety via [[Trait]]s:
 	- a) `Unique`: one per faction on the [[Field]], for flagships and
 	  top Heroes (TI).
-	- b) `Consumable`: [[Destroyed]] after use, replaces the [[Tool]]
+	- b) `Consumable`: [[Destroy]] after use, replaces the [[Tool]]
 	  type: probes, mines, missiles.
 	- c) `Immovable`: can't move or be cargo, replaces the third
 	  mobility type in [[Range]], for Hyperstructures.

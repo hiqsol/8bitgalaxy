@@ -29,7 +29,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
   [[IPS]], must reach the destination. Range sums, so groups reach
   farther; [[Pinning]] and hidden [[Space]] stop moving groups.
 - **Power is the price.** Power of the matching [[Class]] pays the
-  [[Cost]]; [[Technology]] makes an action possible or better.
+  [[Price]]; [[Technology]] makes an action possible or better.
 - **Depleting is the wear.** Used Units leave the [[Field]] for
   [[Discard]] and return to the deck cycle, used [[Structure]]s turn
   to their weak [[End]]. Cards that move or fight hold the ground and
@@ -67,16 +67,16 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  test twice.
 	- c) After the first play the player may end the Turn. This keeps
 	  "no pass" without requiring a Hand card.
-- [ ] **S20. Visible Explore cost.** [[Explore]] reveals the Cost only
+- [ ] **S20. Visible Explore cost.** [[Explore]] reveals the Price only
   after cards are spent, while [[RulesReview]] RP34 validates every
   action before resolution and takes an invalid action back:
-	- a) Print Explore Cost on the back of every [[Star]] and
+	- a) Print the [[Price]] on the back of every [[Star]] and
 	  [[Space]], beside Size or Length. Type and Ability stay hidden.
 	- b) Validate before revealing, like every other action. Remove
 	  Explore 7-8 and the Explore exception from [[PerformAction]] 5.
 	- c) This removes failure and refund rules without removing a
 	  choice: the player still chooses which unknown tile is worth its
-	  visible Cost.
+	  visible Price.
 - [ ] **S21. Star abilities without use tracking.** [[Ability]] and
   [[Star]] say a Star Ability is usable once per own Turn,
   contradicting **No memory**; [[RulesReview]] RP36 adds more such
@@ -145,7 +145,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  a trade route, unless [[DesignReview]] DP57 c turns Trade into
 	  Energy.
 	- c) Recycle doesn't say what happens to the converted card: say
-	  it, e.g. [[Destroyed]].
+	  it, e.g. [[Destroy]].
 
 ### Abilities and states
 
@@ -266,7 +266,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
   and entry in different words, some not at all:
 	- a) [[Factory]], [[Laboratory]] and [[History]] don't say who
 	  sees them.
-	- b) [[Destroyed]], [[Recall]] and [[Express]] put a card on top,
+	- b) [[Destroy]], [[Recall]] and [[Express]] put a card on top,
 	  [[Upgrade]] 7.2 and [[Research]] 2.1 don't say where in
 	  [[Factory]], [[DoNotDeplete]] doesn't say where in [[Reserve]]
 	  ([[RulesReview]] RI88 g).
@@ -337,14 +337,14 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	  color.
 	- c) A token's amount stays its Size: it is its weight as cargo.
 	- d) [[Size]] drops "aka Weight", one name for one property.
-- [ ] **S50. Star Cost printed.** A [[Star]] alone among tiles has
-  [[ExtraCost]], non-negative, only to compute its [[Explore]] Cost,
-  while a [[Space]] prints its Cost:
-	- a) Print a Star's Cost like a Space's, at least its Size; on the
+- [ ] **S50. Star Price printed.** A [[Star]] alone among tiles has
+  [[ExtraPrice]], non-negative, only to compute its [[Explore]] Cost,
+  while a [[Space]] prints its Price:
+	- a) Print a Star's Price like a Space's, at least its Size; on the
 	  back with S20.
-	- b) ExtraCost is a card property again: remove ExtraCost 4 and 6,
-	  [[Cost]] 3 and ExtraCost from the [[Component]] properties.
-	- c) [[RulesReview]] RP36 g then sets printed Costs: Size plus 1
+	- b) ExtraPrice is a card property again: remove ExtraPrice 4 and 6,
+	  [[Price]] 3 and ExtraPrice from the [[Component]] properties.
+	- c) [[RulesReview]] RP36 g then sets printed Prices: Size plus 1
 	  to 4.
 
 ### Documentation

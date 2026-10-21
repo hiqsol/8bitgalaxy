@@ -17,7 +17,7 @@ scope: core
 	   see [[IPS]]
 	3. **Type**: one of the [[Class]]es, shown by its color, it sets
 	   the class of a [[Power]] ability
-	4. **Cost** required to [[Explore]]: Size + [[ExtraCost]]
+	4. **Price**: Size + [[ExtraPrice]], the Cost to [[Explore]]
 	5. [[Ability]] usable once per own [[Turn]] by the player who
 	   controls the Star, see [[ControlledBy]]
 8. **Stars** form the **Star deck**: hidden Stars are placed from it,
@@ -29,5 +29,5 @@ scope: core
 
 1. More **Star** properties can be added later
 2. Star **Size** is not card [[Size]]
-3. Size is the minimal Cost: a hidden Star shows how much at least its
+3. Size is the minimal Price: a hidden Star shows how much at least its
    [[Explore]] takes

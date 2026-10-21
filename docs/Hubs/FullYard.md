@@ -3,9 +3,9 @@ status: draft
 scope: core
 ---
 
-1. **Drydock** is [[Production]] [[Hub]]: a full **Industrial hub**,
+1. **FullYard** is [[Production]] [[Hub]]: a full **Industrial hub**,
    for [[Industrial]] cards
-2. **Drydock** provides [[Create]] (aka **Produce**) and [[Recover]]
+2. **FullYard** provides [[Create]] (aka **Produce**) and [[Recover]]
    (aka **Fix**) [[TechnologyAction]]s
 
 #### Notes

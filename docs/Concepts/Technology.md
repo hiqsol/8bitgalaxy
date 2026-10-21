@@ -19,9 +19,9 @@ scope: core
 | Technology | Kind | Class | Scope | Cards |
 |------------|------|-------|-------|-------|
 | [[Academy]] | Hub | C | core | Colony 2C, Base 4C |
-| [[University]] | Hub | C | core | - |
+| [[FullAcad]] | Hub | C | core | - |
 | [[Shipyard]] | Hub | P | core | Base 2P |
-| [[Drydock]] | Hub | P | core | Colony 4P |
+| [[FullYard]] | Hub | P | core | Colony 4P |
 | [[Upgrade]] | Action | C, P | core | Hero 1M weak, Hero 2C weak, Hero 3M weak, Hero 3C strong, Hero 4M weak, Hero 4C strong, Ship 4C strong, Ship 4P strong |
 | [[Recover]] | Action | C, P | core | Hero 1P strong, Hero 2C strong, Hero 4M weak, Hero 4C strong |
 | [[Retreat]] | Action | M | core | Ship 2M strong |

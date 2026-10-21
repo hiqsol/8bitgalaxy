@@ -6,7 +6,7 @@ scope: core
 1. **Deck** lists all cards of the Human [[Faction]], one row per
    [[End]]
 2. Columns:
-	1. **Level** - [[Level]] + [[ExtraCost]], as printed on the card
+	1. **Level** - [[Level]] + [[ExtraPrice]], as printed on the card
 	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P
 	   [[Production]], S [[Science]]
 	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the end's class,
@@ -79,8 +79,8 @@ scope: core
 |  | weak | 3+1 | M | [[Militarization]], +2 Defense | - |  |
 | Colony 4C | strong | 4+1 | C | [[Export]] | +3 | 2C |
 |  | weak | 3+1 | C | [[Export]] | - |  |
-| Colony 4P | strong | 4+1 | P | [[Drydock]] | +3 | 2P |
-|  | weak | 3+1 | P | [[Drydock]] | - |  |
+| Colony 4P | strong | 4+1 | P | [[FullYard]] | +3 | 2P |
+|  | weak | 3+1 | P | [[FullYard]] | - |  |
 | Colony 4S | strong | 4+1 | S | +3 Range | +3 | 2S |
 |  | weak | 3+1 | S | +1 Range | - |  |
 
@@ -94,7 +94,7 @@ scope: core
 	2. [[Structure]]s: Primary is technology or a non-power [[Plus]]
 	   at both ends, Secondary is power at strong end only, both ends
 	   have the same class
-	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't
+	3. [[Ship]] ends have equal Level + ExtraPrice, so [[Size]] doesn't
 	   change with rotation
 3. Technology classes and scopes are in [[Technology]]
 4. [[Explore]] on a [[Military]] end is printed as **Recon**
