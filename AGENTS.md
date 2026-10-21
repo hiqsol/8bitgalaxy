@@ -24,9 +24,12 @@ When a proposal is accepted, incorporate its result into the
 applicable rules before deleting the proposal.
 
 Keep rules and notes concise.
-A general rule doesn't list the specific cases: a more specific
-rule adds its detail on its own page, e.g. Distance doesn't mention
-Void, the Void page says a route can't pass it.
+IMPORTANT: exceptions and specific cases live only on the specific
+page, never on the general page. A general rule doesn't list or
+mention the cases that change it: the specific page states its
+exception on its own, e.g. Distance doesn't mention Void, the Void
+page says a route can't pass it; Turn doesn't mention Trade, the
+Trade page says the partner's Hand cards join at the starter's Turn.
 Indent nested rules with tabs.
 Don't miss my input, organize it all into rules/notes.
 

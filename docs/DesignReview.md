@@ -50,7 +50,6 @@ Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 	- b) [[Export]] and [[Smuggle]] need a rival's Colony: dead in a
 	  duel.
 	- c) [[Sell]] is a stub.
-	- d) [[Energy]] says [[Trade]] gives Energy, Trade says Materials.
 - [ ] **DI75. Minor.**
 	- a) [[GameBalance]] expects about 5 actions per Turn, but every
 	  Hand action takes a starter and usually supporters: 2-3 is
@@ -182,10 +181,6 @@ Answer proposals by number and letter, e.g. "DP48 b", "DP60 b, d".
 	- b) [[Dismantle]], [[Sell]]: by DP57.
 	- c) [[PlusHero]]: remove, [[Create]] of Heroes covers it.
 	- d) [[HyperPass]]: by RP24.
-	- e) `allacad` on Base 4C, read as "all-academy": an [[Academy]]
-	  that creates Colonies in any Star the player controls, without
-	  the [[Range]] requirement.
-	- f) `allacad` read as a global [[Hub]] for both [[Origin]]s.
 
 ## Ideas
 

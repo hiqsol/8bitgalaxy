@@ -87,15 +87,14 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
 	- c) Defensive Abilities apply continuously in that Star.
 	- d) Balance their values for those timings, then remove "once per
 	  Turn".
-- [ ] **S35. One build direction.** [[Create]] 6, [[Upgrade]] 4 and
-  [[Recover]] 4 each define directions for the same three actions,
-  [[Settle]] and [[Prefab]] add a third; today a hub in a
+- [ ] **S35. One build direction.** [[Create]] 6 and [[Upgrade]] 4
+  each define directions for the same two actions, [[Settle]] and
+  [[Prefab]] add a third; today a hub in a
   [[Disputed]] Star still builds Actors (it is the destination) but
   not Structures (it is the source):
 	- a) The source is the hub's [[Star]], the destination is the
-	  Star of the card: where a [[Structure]] is or goes, where a
-	  Damaged card lies; a card in [[Home]] has the hub's Star as
-	  both ends, [[Distance]] 0.
+	  Star of the card: where a [[Structure]] is or goes; a card in
+	  [[Home]] has the hub's Star as both ends, [[Distance]] 0.
 	- b) Settle and Prefab: the Ship's Star is both ends, no hub.
 	- c) State it once, in [[Hub]]; the three action pages keep only
 	  requirements, Cost and outcome.
@@ -404,8 +403,7 @@ Answer by number and letter, e.g. "S4 a", "S4 no".
   page links:
 	- a) Remove them and the Board page.
 - [ ] **S54. One stub list.** [[RulesReview]] RI21 and [[DesignReview]]
-  DP59 list the same stubs with the same pointers, DP59 adds `allacad`:
-  delete RI21.
+  DP59 list the same stubs with the same pointers: delete RI21.
 
 ## Already proposed
 

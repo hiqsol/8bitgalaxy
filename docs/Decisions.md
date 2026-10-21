@@ -18,8 +18,8 @@ evidence from a played game, not from a review.
    tie makes it [[Disputed]], see [[ControlledBy]]
 5. **Explore**: one technology, Recon and Survey are its flavour
    names, see [[Explore]]
-6. **Build**: [[Create]], [[Upgrade]], [[Recover]] at a [[Hub]],
-   Academy and Shipyard
+6. **Build**: [[Create]], [[Upgrade]] at a [[Hub]]; [[Recover]]
+   from the card that provides it
 7. **Field start**: a Field card starts an action only with
    [[Starter]], `advanced`
 

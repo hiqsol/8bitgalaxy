@@ -4,9 +4,10 @@ scope: core
 aliases: [Rival Discards]
 ---
 
-1. **Force Discard** is [[Military]] [[TechnologyModifier]]
-2. **Force Discard** makes a rival move one card of the rival's choice
-   from [[Hand]] to [[Discard]]
+1. **Force Discard** is [[Military]] [[TechnologyAction]]
+2. **Force Discard** is an [[ImmediateAction]]
+3. **Outcome**: a rival moves one card of the rival's choice from
+   [[Hand]] to [[Discard]]
 
 #### Notes
 

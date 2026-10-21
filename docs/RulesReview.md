@@ -27,14 +27,13 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 	- c) [[Laboratory]] is incomplete.
 	- d) No first player rule.
 - [ ] **RI19. Deck review.** → RP25
-	- a) `allacad` (Base 4C) is unclear, see [[DesignReview]] DP59.
-	- b) Core technologies [[Express]], [[ForceDiscard]], [[Settle]],
+	- a) Core technologies [[Express]], [[ForceDiscard]], [[Settle]],
 	  [[Prefab]] and `+Draw` [[Plus]] have no cards.
-	- c) Redo the decks up to [[Level]] 8, planned: [[Singularity]]
+	- b) Redo the decks up to [[Level]] 8, planned: [[Singularity]]
 	  takes the highest Level from the faction deck.
-	- d) [[Actor]] Primary power values as `X+Y`, see
+	- c) [[Actor]] Primary power values as `X+Y`, see
 	  [[PrimaryAbility]].
-	- e) More [[Hub|hubs]], planned: a
+	- d) More [[Hub|hubs]], planned: a
 	  faction that lost its home Star can rebuild.
 - [ ] **RI21. Stub notes** (`status: stub`):
 	- a) [[DefSys]]: see [[DesignReview]] DP52.
@@ -89,9 +88,9 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 	  an [[Attack]] as direct participants: attack from two sides.
 	  Intended?
 - [ ] **RI88. Minor.**
-	- b) Combined prints: Colony 4P "Recover, Shipyard", Hero 4M weak
-	  and Hero 4C strong "Recover, Upgrade", Base 2M "Militarization,
-	  +1 Defense". One [[Ability]] or two for a supporter?
+	- b) Combined prints: Hero 4M weak and Hero 4C strong "Recover,
+	  Upgrade", Base 2M "Militarization, +1 Defense". One [[Ability]]
+	  or two for a supporter?
 	- d) [[Damaged]] 7: own [[Hidden]] cards give [[Control]] but
 	  don't keep a Damaged card from [[Destroyed]], they are not
 	  Enabled. Intended?
@@ -105,8 +104,8 @@ Answer proposals by number and letter, e.g. "RP22 yes", "RP27 a, c",
 	  [[Salvage]] and [[Event]]s put them in a Star. See
 	  [[DesignReview]] DP57.
 - [ ] **RI93. Token passage.** One token is [[Energy]] in [[Hand]] and
-  [[Materials]] in a [[Star]] ([[Component]]), but only [[Export]] and
-  [[Smuggle]] turn Materials into Energy, nothing turns Energy into
+  [[Materials]] in a [[Star]] ([[Component]]), but only [[Export]] turns
+  Materials into Energy, nothing turns Energy into
   Materials:
 	- a) Recommended: Hand → Star by [[Takeoff]], a token to a Star
 	  the player controls, like a card, it takes no [[Slot]].

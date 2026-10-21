@@ -61,8 +61,8 @@ scope: core
 |  | weak | 1+1 | S | [[Recycle]] | - |  |
 | Base 4M | strong | 4+1 | M | [[Stealth]] | +3 | 2M |
 |  | weak | 3+1 | M | [[Stealth]] | - |  |
-| Base 4C | strong | 4+1 | C | allacad | +3 | 2C |
-|  | weak | 3+1 | C | allacad | - |  |
+| Base 4C | strong | 4+1 | C | [[Academy]] | +3 | 2C |
+|  | weak | 3+1 | C | [[Academy]] | - |  |
 | Base 4P | strong | 4+1 | P | +3 Capacity | +3 | 2P |
 |  | weak | 3+1 | P | +1 Capacity | - |  |
 | Base 4S | strong | 4+1 | S | [[Navigation]] | +3 | 2S |
@@ -79,8 +79,8 @@ scope: core
 |  | weak | 3+1 | M | [[Militarization]], +2 Defense | - |  |
 | Colony 4C | strong | 4+1 | C | [[Export]] | +3 | 2C |
 |  | weak | 3+1 | C | [[Export]] | - |  |
-| Colony 4P | strong | 4+1 | P | [[Recover]], [[Shipyard]] | +3 | 2P |
-|  | weak | 3+1 | P | [[Recover]], [[Shipyard]] | - |  |
+| Colony 4P | strong | 4+1 | P | [[Drydock]] | +3 | 2P |
+|  | weak | 3+1 | P | [[Drydock]] | - |  |
 | Colony 4S | strong | 4+1 | S | +3 Range | +3 | 2S |
 |  | weak | 3+1 | S | +1 Range | - |  |
 
@@ -97,5 +97,4 @@ scope: core
 	3. [[Ship]] ends have equal Level + ExtraCost, so [[Size]] doesn't
 	   change with rotation
 3. Technology classes and scopes are in [[Technology]]
-4. Unclear technology from the legacy code: `allacad`
-5. [[Explore]] on a [[Military]] end is printed as **Recon**
+4. [[Explore]] on a [[Military]] end is printed as **Recon**

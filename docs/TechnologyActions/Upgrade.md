@@ -16,8 +16,10 @@ scope: core
 5. **Requirements**:
 	1. Old [[Actor]] must be in [[Discard]]
 	2. New card must be available at [[Factory]]
-	3. New card's [[Cost]] must be greater than old card's Cost
-6. **Cost**: [[Cost]] of the new card **minus** cost of the old card
+	3. New card's [[Cost]] can be greater, equal or lower than old
+	   card's Cost: a downgrade is allowed
+6. **Cost**: [[Cost]] of the new card **minus** cost of the old card,
+   at least 1
 7. **Outcome**:
 	1. New card substitutes the old card in place
 	2. Old card goes to a selected [[Factory]] pile
