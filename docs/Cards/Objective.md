@@ -24,3 +24,10 @@ scope: objectives
 2. The [[GalaxyDeck]] can add more objectives
 3. Objectives check only the current table, like [[CulturePoints]]: no
    counts of past events to keep, e.g. no "win 2 Combats"
+4. One objective per [[Turn]], like Twilight Imperium, paces scoring:
+	1. A big turn can't jump to the win, rivals always get a turn to
+	   answer
+	2. N victory points take at least N turns: a predictable game
+	   length
+	3. The cost: an objective met but not yet scored can be lost, as
+	   objectives check only the current table
