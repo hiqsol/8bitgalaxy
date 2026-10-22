@@ -30,8 +30,7 @@ scope: core
 | [[ForceDiscard]] | Action | M | core | - |
 | [[Stealth]] | Action | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
 | [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
-| [[Settle]] | Modifier | C | core | - |
-| [[Prefab]] | Modifier | P | core | - |
+| [[Settle]] | Modifier | C, P | core | - |
 | [[Militarization]] | Modifier | M | advanced | Base 2M, Colony 4M |
 | [[Smuggle]] | Action | M | advanced | Ship 4M strong |
 | [[Trade]] | Action | C | advanced | Ship 2C strong, Base 2C |
@@ -43,11 +42,11 @@ scope: core
 | [[Starter]] | Modifier | C | advanced | - |
 | [[Sell]] | Action | C | advanced | - |
 | [[Dismantle]] | Action | P | advanced | - |
-| [[PlusFactory]] | Action | P | advanced | - |
-| [[PlusLaboratory]] | Action | S | advanced | - |
+| [[PlusPile]] | Action | P, S | advanced | - |
 | [[Invent]] | Action | S | advanced | - |
 | [[Tactics]] | Modifier | M | advanced | - |
 | [[Ambush]] | Modifier | M | advanced | - |
+| [[Jamming]] | Modifier | M | advanced | - |
 | [[Raid]] | Action | M | advanced | - |
 | [[Recall]] | Action | C | advanced | - |
 | [[Legacy]] | Action | C | objectives | - |

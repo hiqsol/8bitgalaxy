@@ -20,5 +20,3 @@ scope: core
 1. Like in Twilight Imperium and Eclipse: fronts form and the home
    Star can be defended
 2. Allowing to pass makes deals in games of 3+ players
-3. Stopping the reach of other actions through a Star is left to a
-   separate technology

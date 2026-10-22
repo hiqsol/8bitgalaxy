@@ -302,8 +302,8 @@ The first duel keeps Spaces of length 1.
 ### Deck
 
 - [ ] **I19. Deck review.** → P25
-	- a) Core technologies [[Express]], [[ForceDiscard]], [[Settle]],
-	  [[Prefab]] and `+Draw` [[Plus]] have no cards.
+	- a) Core technologies [[Express]], [[ForceDiscard]], [[Settle]]
+	  and `+Draw` [[Plus]] have no cards.
 	- b) Redo the decks up to [[Level]] 8, planned: [[Singularity]]
 	  takes the highest Level from the faction deck.
 	- c) [[Actor]] Primary power values as `X+Y`, see
@@ -413,18 +413,6 @@ All `advanced`.
 	- d) Card orientations are all taken (strong and weak front,
 	  Damaged and Hidden back), so new states should come from
 	  position, like [[ActiveFor]] and [[Pinning]], not markers.
-- [ ] **P65. Interdiction.** [[Pinning]] stops moving cards only. A
-  [[Military]] [[TechnologyModifier]] (`advanced`) extends it: rival
-  Enabled Actors with it in a [[Star]] also stop the [[Range]] of
-  other actions through that Star: [[Explore]] reach, remote
-  [[Support]] groups, [[Create]] placement. Pick a name:
-	- a) **Interdiction** (recommended): blocks reach, not only
-	  movement.
-	- b) **Blockade**: plain, but sounds like movement only, as
-	  Pinning.
-	- c) **Jamming**: fits signals: Support and Explore, less so
-	  Create.
-	- d) **Lockdown**: the whole Star is closed.
 - [ ] **S28. Unit instead of Actor.** If P58 b replaces [[Tool]] with
   a `Consumable` trait, every [[Unit]] is an [[Actor]]:
 	- a) Merge Actor into Unit and use Unit for movement, starters and
@@ -433,18 +421,6 @@ All `advanced`.
 	  lists.
 	- c) Ships and Heroes keep all current rules; Consumable Units are
 	  destroyed after use by their trait.
-- [ ] **S36. Twin technologies as one.** [[Explore]] already is one
-  technology of two Classes. [[Settle]] and [[Prefab]] are one page
-  with Colony/Base and Academy/Shipyard swapped, [[PlusFactory]] and
-  [[PlusLaboratory]] one page with the pile row swapped, none of them
-  has a card yet:
-	- a) **Settle**, Culture and Production: a Ship converts itself
-	  into a Colony with a Culture end, into a Base with a Production
-	  end.
-	- b) **Plus Pile**, Production and Science: a new [[Factory]] pile
-	  with a Production end, a new [[Laboratory]] pile with a Science
-	  end.
-	- c) Two pages and two catalog rows less.
 
 ### Stubs and underdescribed
 
@@ -455,8 +431,8 @@ All `advanced`.
   enough to play them, stubs are in P59:
 	- a) [[Militarization]]: what [[Manage]] does to an enemy card.
 	- b) [[Invent]]: which pile and the Cost.
-	- c) [[PlusFactory]], [[PlusLaboratory]]: the Cost, the limit and
-	  how an extra pile works.
+	- c) [[PlusPile]]: the Cost, the limit and how an extra pile
+	  works.
 	- d) [[Stealth]] at [[Takeoff]]: Stealth 4 lets the card itself
 	  or an own Enabled card in that Star provide it. Does the
 	  providing card Deplete as in [[ImmediateAction]]?
@@ -514,14 +490,13 @@ One batch after the playtest, only for pages that confused play.
 	- b) No rule changes; the shorter description avoids promising a
 	  mechanic the game does not have.
 - [ ] **S35. One build direction.** [[Create]] 6 and [[Upgrade]] 4
-  each define directions for the same two actions, [[Settle]] and
-  [[Prefab]] add a third; today a hub in a [[Disputed]] Star still
-  builds Actors (it is the destination) but not Structures (it is the
-  source):
+  each define directions for the same two actions, [[Settle]] adds
+  a third; today a hub in a [[Disputed]] Star still builds Actors
+  (it is the destination) but not Structures (it is the source):
 	- a) The source is the hub's [[Star]], the destination is the Star
 	  of the card: where a [[Structure]] is or goes; a card in
 	  [[Home]] has the hub's Star as both ends, [[Distance]] 0.
-	- b) Settle and Prefab: the Ship's Star is both ends, no hub.
+	- b) Settle: the Ship's Star is both ends, no hub.
 	- c) State it once, in [[Hub]]; the three action pages keep only
 	  requirements, Cost and outcome.
 	- d) What it changes: an Actor is built only with cards at the hub
