@@ -3,8 +3,8 @@ status: draft
 scope: core
 ---
 
-1. **Takeoff** is one of two ways to play a card from [[Hand]] in a
-   [[Turn]], the other is to start an [[Action]]
+1. **Takeoff** is one of the ways to play a card from [[Hand]] in a
+   [[Turn]], see [[Turn]]
 2. **Takeoff** puts **ONE** [[Unit]] card from [[Hand]] to a free
    [[Unit]] [[Slot]] in the [[IPS]] of a [[Star]] [[ControlledBy]] the
    player

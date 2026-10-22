@@ -17,6 +17,6 @@ scope: core
 	8. [[Slot]]s - free slots in a [[Star]]
 	9. [[Hand]] size
 	10. [[Restore]] - more [[Structure]]s that become [[Ready]] at the
-	    end of own [[Turn]]
+	    **Restore** phase of own [[Turn]]
 	11. Victory points for [[Objective]]s
 	12. Votes for [[Politics]]

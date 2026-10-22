@@ -16,8 +16,8 @@ scope: core
 4. More players can join the **combat**:
 	1. On any side
 	2. They must have active [[Military]] [[Actor]]s in the Star
-5. Parties can bluff by adding [[Hidden]] cards from [[Hand]], also at
-   rival's [[Turn]]
+5. Cards from [[Hand]] join as supporters, also at rival's [[Turn]].
+   Parties can bluff by adding [[Hidden]] cards from [[Hand]]:
 	1. Hidden card can be revealed by its player at any time
 	2. Player can reveal rival's hidden cards with [[Explore]]
 6. Parties can [[Boost]] with cards at the moment when they add the

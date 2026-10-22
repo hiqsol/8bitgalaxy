@@ -16,10 +16,9 @@ scope: core
 		3. A tie is a draw between the tied factions
 	3. [[Production]]: TBD
 	4. [[Science]]: [[Singularity]]
-4. A [[Faction]] is over when one of, see [[Turn]]:
-	1. **Can not make a move**: at the start of own [[Turn]] can make
-	   neither a [[Takeoff]] nor an [[Action]]
-	2. **Has no leader**: at the end of own [[Turn]] has no
+4. A [[Faction]] is over when one of:
+	1. **Can not make a move**, tested at the start of own [[Turn]]
+	2. **Has no leader**: at **Check** phase of own [[Turn]] has no
 	   [[Enabled]] [[Hero]] on [[Field]], [[Hand]], [[Reserve]] or
 	   [[Discard]]
 
@@ -32,7 +31,8 @@ scope: core
    counting, like temples in Kemet
 4. Losing all [[Hero]]es is inspired by checkmate in Chess:
 	1. Like check: a player whose last Hero got [[Damaged]] has one
-	   turn to [[Recover]] it, the check comes at the end of own Turn
+	   turn to [[Recover]] it, the check comes at **Check** phase of
+	   own Turn
 	2. Heroes in the deck are reached by attacking the [[Academy]],
 	   see [[Combat]]
 5. Losing the home [[Star]] is a heavy loss by intention, a goal for

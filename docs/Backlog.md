@@ -231,16 +231,6 @@ Questions a played game answers better than a review.
 	  [[Level]] at least the loser's direct total, chosen by the
 	  winner.
 	- e) Depends on I76 c: where a Damaged card from Hand goes.
-- [ ] **S19. One first-play rule.** [[Turn]] 2 says every play starts
-  with a card from [[Hand]], and rule 4 requires at least one such
-  card, but [[Starter]] lets a Field card act when Hand is empty:
-	- a) A player must make at least one **play**: a [[Takeoff]] or an
-	  action started from Hand or the Field.
-	- b) If no legal first play exists, the faction is over. Put that
-	  rule in [[Turn]] and let [[Goal]] link it, instead of defining
-	  the test twice.
-	- c) After the first play the player may end the Turn. This keeps
-	  "no pass" without requiring a Hand card.
 
 ## After the first duel
 

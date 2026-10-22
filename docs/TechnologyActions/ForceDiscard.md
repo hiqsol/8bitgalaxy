@@ -11,5 +11,6 @@ aliases: [Rival Discards]
 
 #### Notes
 
-1. Hand is used for defense at rivals' turns, see [[Turn]]: discarding
-   weakens both the rival's defense and the rival's next turn
+1. Hand is used for defense at rivals' turns, see [[Combat]]:
+   discarding weakens both the rival's defense and the rival's next
+   turn

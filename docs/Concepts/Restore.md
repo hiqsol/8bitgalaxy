@@ -7,7 +7,7 @@ scope: core
    [[Ready]]
 2. **Restore** is done:
 	1. With [[Manage]]
-	2. For free at the end of own [[Turn]], see [[Turn]]
+	2. For free at **Restore** phase of own [[Turn]], see [[Turn]]
 
 #### Notes
 

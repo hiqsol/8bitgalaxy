@@ -18,8 +18,8 @@ scope: core
 4. Field space is limited to [[Slot]]s, no unlimited parking:
 	1. Space pressure is good: it pushes to expand
 	2. It limits deck thinning: [[Field]] can't hold all weak cards
-5. Only 1 free [[Restore]] per [[Turn]], no free return from [[Field]]
-   to the deck
+5. Limited free [[Restore]] per [[Turn]], no free return from
+   [[Field]] to the deck
 6. No limit on actions from the same [[Star]] in a [[Turn]]
 
 #### Notes
