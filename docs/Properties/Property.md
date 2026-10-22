@@ -9,10 +9,10 @@ scope: core
           ╭──╥─╥──────╮ Strong End    ╭───────────╮ Hidden End
 Level+EP─►│ 2+1║    1 │ ◄── Primary   │           │
 Class ───►╞══╩═╝   +1 │ ◄── Secondary │           │
-          │   ship    │               │  faction  │
 Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - - 
+│   ship    │               │  faction  │
           │    here   │ Weak End      │/// here //│ Damaged End
-          │ T+   ╔═╦══╡ ◄── Class     │///////////│
+          │ T+   ╔═╦══╡ ◄── Class     │///////////│ (dashed)
           │ T    ║ᘔ +T│ ◄── Level+EP  │///////////│
           ╰──────╨─╨──╯               ╰───────────╯
 ```
@@ -36,8 +36,6 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	3. **physical** - [[Side]] and [[End]]
 3. [[Component]] properties, of cards and tiles: [[Side]],
    [[ExtraPrice]], [[Price]]
-4. [[Star]] and [[Space]] have own properties: Star Size and Type are
-   not card [[Size]] and [[Type]]
 
 #### Notes
 

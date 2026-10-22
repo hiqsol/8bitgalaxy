@@ -9,7 +9,7 @@ scope: core
 	2. **Survey** for [[Science]]
 3. **Explore** reveals one target:
 	1. Hidden [[Space]]
-	2. Hidden [[Star]]: [[Alien]]s appear in it, see [[Alien]]
+	2. Hidden [[Star]]: [[Alien]]s appear in it
 	3. [[Hidden]] card
 4. **Direction**: [[Star]] to the target
 5. **Requirements**:
@@ -20,8 +20,8 @@ scope: core
 6. **Cost**: the target's [[Price]]
 7. The Cost is not shown: the player starts the action, then learns
    the Cost
-	1. A hidden [[Star]] shows its Size, its minimal Price: the action
-	   starts with at least Size of power
+	1. A hidden [[Star]] shows its Slots, its minimal Price: the
+	   action starts with at least that much power
 8. If the power is not enough the player either:
 	1. Adds more power by spending more cards
 	2. Cancels the action, losing what's already spent
@@ -41,7 +41,7 @@ scope: core
    itself
 4. Learning the Cost and cancelling is a cheap look, that's fine: the
    back of a [[Space]] already hints at it, and a [[Star]] look costs
-   at least its Size
+   at least its Slots
 5. The [[Academy]] is where a faction's leaders come from, so
    **Recon** of it opens the way to the faction's deck, see also
    [[Combat]]

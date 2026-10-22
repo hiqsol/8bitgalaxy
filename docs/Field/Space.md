@@ -20,8 +20,7 @@ aliases: [InterStellar Space]
 4. **Space** tiles are hidden (turned face down) at the beginning of
    the game
 5. They can be revealed with [[Explore]] action
-6. Cards can't stop and stay in space, they can only pass by
-	1. Cards can't pass a hidden **Space**
+6. Cards can't stop in a **Space**, they only pass a revealed one
 7. **Space** tiles have multiple properties:
 	1. **Price**: the Cost to [[Explore]]
 	2. **Type**
@@ -38,5 +37,5 @@ aliases: [InterStellar Space]
 #### Notes
 
 1. The back shows the **Length**, as the back of a [[Star]] shows its
-   Size: a hint at the Price, while Type and Price stay hidden until
+   Slots: a hint at the Price, while Type and Price stay hidden until
    [[Explore]]

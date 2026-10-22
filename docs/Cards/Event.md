@@ -34,7 +34,7 @@ scope: galaxy
 3. Events can affect:
 	1. Cards: add, remove, move, hide or reveal
 	2. Resources: add or remove reserves
-	3. Board: hide or reveal Space, or move a warp storm
+	3. [[Field]]: hide or reveal Space, or move a warp storm
 
 ### Event Examples
 

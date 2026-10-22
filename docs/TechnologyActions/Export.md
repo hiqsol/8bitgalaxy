@@ -10,13 +10,11 @@ scope: advanced
 3. **Direction**:
 	1. From [[Star]] having colony of one [[Faction]]
 	2. To [[Star]] having colony of other [[Faction]]
-4. **Requirements**:
-	1. Consent of the party [[Faction]]s' players
+4. **Requirements**: consent of the party [[Faction]]s' players
 5. **Outcome**:
 	1. Party [[Faction]] gets 1 item of [[Materials]]
 	2. Other items of carried [[Materials]] convert to [[Energy]]
 
 #### Notes
 
-1. Move limitations (range, capacity) apply
-2. Performer can be from different [[Faction]] than the colonies
+1. Performer can be from different [[Faction]] than the colonies

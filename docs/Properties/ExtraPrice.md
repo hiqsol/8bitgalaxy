@@ -7,11 +7,9 @@ scope: core
    and a [[Star]]
 2. Printed after the [[Level]] at each card [[End]]: `2+1` is level 2,
    extra price 1
-3. A card's **extra price** adds to its level for [[Price]] and
-   [[Size]]
-4. A card's **extra price** can be negative, printed as `2-1`: its
+3. A card's **extra price** can be negative, printed as `2-1`: its
    [[Price]] and [[Size]] stay at least 1
-5. A [[Star]]'s **extra price** is not negative: its Size is its
+4. A [[Star]]'s **extra price** is not negative: its Slots are its
    minimal Price, see [[Explore]]
 
 #### Notes

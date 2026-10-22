@@ -17,7 +17,7 @@ scope: core
 3. Aliens threaten all other civilizations because they:
 	1. Have far more advanced technologies
 	2. Want to exterminate all newcomers
-4. New civilizations have to survive and prosper
-	1. And choose to ally with each other or fight for dominance
+4. New civilizations have to survive and prosper, and choose to ally
+   with each other or fight for dominance
 
 ### Artistic description

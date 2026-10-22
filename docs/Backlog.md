@@ -78,14 +78,14 @@ answers.
 	- a) There is no Ability list.
 	- b) There is no first duel deck.
 - [ ] **P36. Star deck** in [[Star]]:
-	- a) [[Ability]]: +1 [[Power]] of its Type class to one action
+	- a) [[Ability]]: +1 [[Power]] of its [[Class]] to one action
 	  started there.
 	- b) Ability: +1 [[Energy]].
 	- c) Ability: +1 [[Materials]] stored there.
 	- d) Ability: +1 [[Defense]] to own defenders there.
 	- e) Ability: a [[Technology]] for own cards there, e.g.
 	  [[Shipyard]], [[Academy]], [[Explore]].
-	- f) Ability: [[Draw]] 1 card, rare.
+	- f) Ability: [[DeckBuilding|Draw]] 1 card, rare.
 	- g) [[ExtraPrice]] grows with the Ability: Defense 1, Power and
 	  Materials 2, Energy and Technology 3, Draw 4, and so the number
 	  of [[Alien]]s guarding it. Energy is above Power: any class,
@@ -120,7 +120,8 @@ answers.
   only after cards are spent, while P34 validates every action before
   resolution and takes an invalid action back:
 	- a) Print the [[Price]] on the back of every [[Star]] and
-	  [[Space]], beside Size or Length. Type and Ability stay hidden.
+	  [[Space]], beside Slots or Length. Class, Type and Ability stay
+	  hidden.
 	- b) Validate before revealing, like every other action. Remove
 	  Explore 7-8 and the Explore exception from [[PerformAction]] 5.
 	- c) This removes failure and refund rules without removing a
@@ -287,7 +288,7 @@ The first duel keeps Spaces of length 1.
 - [ ] **S38. Route details where they belong.** [[Distance]] defines a
   route, [[Void]] says a route can't pass it. Other tile rules speak
   of moving cards, so it's unclear which [[Range]] checks they bind:
-	- a) [[Space]] 6.1, [[Star]] 6: a route can't pass a hidden tile.
+	- a) [[Space]] 6, [[Star]] 6: a route can't pass a hidden tile.
 	- b) [[Supernova]]: a route can't pass Supernova; today only Ships
 	  are stopped and Heroes pass, keep "Ships" if that is intended.
 	- c) [[Navigation]]: the route of a group with Navigation can pass
@@ -456,7 +457,7 @@ All `advanced`.
 	- b) [[Invent]]: which pile and the Cost.
 	- c) [[PlusFactory]], [[PlusLaboratory]]: the Cost, the limit and
 	  how an extra pile works.
-	- d) [[Stealth]] at [[Takeoff]]: Takeoff 3.1 lets the card itself
+	- d) [[Stealth]] at [[Takeoff]]: Stealth 4 lets the card itself
 	  or an own Enabled card in that Star provide it. Does the
 	  providing card Deplete as in [[ImmediateAction]]?
 
@@ -492,13 +493,12 @@ One batch after the playtest, only for pages that confused play.
 	- c) A timed Ability resolves at its named [[Turn]] step. Remove
 	  passive and timed effects from the rule that participant Pluses
 	  sum.
-- [ ] **S31. One verb for each build action.** Raise/Produce,
-  Grow/Enhance and Heal/Fix are six flavour names of [[Create]],
-  [[Upgrade]] and [[Recover]], listed on their pages:
-	- a) Use Create, Upgrade and Recover in rules and cards for both
-	  Origins.
+- [ ] **S31. One verb for each build action.** Raise/Produce and
+  Heal/Fix are four flavour names of [[Create]] and [[Recover]],
+  listed on their pages; Upgrade's Grow/Enhance carry rules:
+	- a) Use Create and Recover in rules and cards for both Origins.
 	- b) Keep the flavour words in art or notes only, if wanted.
-	- c) This removes six terms without removing a rule or decision.
+	- c) This removes four terms without removing a rule or decision.
 - [ ] **S32. One meaning of starter.** **Starter** is both the role a
   card has in every action and a [[Starter|Technology]]; P27 also
   calls four initial deck cards "starters":
@@ -573,31 +573,17 @@ One batch after the playtest, only for pages that confused play.
 	- e) One rule: a card put into a pile goes on top; in a row of
 	  piles the player picks the pile.
 	- f) Piles are face up or face down, not Hidden, as S25 a. Pile
-	  pages keep only their own behavior, e.g. [[Shuffle]] for
-	  Reserve.
-- [ ] **S48. One deck-cycle page.** [[DeckBuilding]], [[Draw]] and
-  [[Shuffle]] describe one loop:
-	- a) Merge Draw and Shuffle into DeckBuilding, their links then
-	  point to DeckBuilding.
-- [ ] **S49. One meaning per property name.** **Size** is a card's
-  weight, the number of a Star's Slots and a token's amount; **Type**
-  is a card's kind, a Star's Class and a Space's kind. [[Property]] 4
-  and [[Star]] note 1 exist only to tell them apart:
-	- a) Star **Size** → **Slots**: the number on its back, the total
-	  of its [[Slot]]s.
-	- b) Star **Type** → **Class**: it is one of the [[Class]]es, by
-	  color.
-	- c) A token's amount stays its Size: it is its weight as cargo.
-	- d) [[Size]] drops "aka Weight", one name for one property.
+	  pages keep only their own behavior, e.g.
+	  [[DeckBuilding|Shuffle]] for Reserve.
 - [ ] **S50. Star Price printed.** A [[Star]] alone among tiles has
   [[ExtraPrice]], non-negative, only to compute its [[Explore]] Cost,
   while a [[Space]] prints its Price:
-	- a) Print a Star's Price like a Space's, at least its Size; on
+	- a) Print a Star's Price like a Space's, at least its Slots; on
 	  the back with S20.
 	- b) ExtraPrice is a card property again: remove the Star from
 	  ExtraPrice and [[Price]], and ExtraPrice from the Component
 	  properties in [[Property]] 3.
-	- c) P36 g then sets printed Prices: Size plus 1 to 4.
+	- c) P36 g then sets printed Prices: Slots plus 1 to 4.
 - [ ] **S52. Traits in core.** [[Trait]] and [[NoSupport]] are `core`,
   but no card has a Trait:
 	- a) Trait and NoSupport go to `advanced`, or wait for P58.
@@ -613,7 +599,7 @@ Not for answering now, kept for later.
   [[Energy]] to let a Field card act without a starter from Hand
   ([[Starter]]). Alternative to [[Boost]].
 - **Center prize** (TI Mecatol Rex): Star 11 of the first duel is
-  fixed with the best Ability, e.g. [[Draw]] 1.
+  fixed with the best Ability, e.g. [[DeckBuilding|Draw]] 1.
 - **Derelict row** (TtA card row): [[Derelict]]s get cheaper the
   longer they wait.
 - **Upkeep at Shuffle** (Voidfall, Eclipse), only if the leader

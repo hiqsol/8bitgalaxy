@@ -11,8 +11,7 @@ scope: core
 	   [[Energy]] in [[Hand]], [[Materials]] in a [[Star]]
 3. Cards and tiles have two [[Side]]s and provide
    [[Ability|abilities]]
-4. A token has one property: its [[Size]], 1 or 5, the amount of the
-   resource it stands for
+4. A token stands for 1 [[Energy]] or 1 [[Materials]]
 
 #### Notes
 

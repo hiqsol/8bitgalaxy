@@ -6,5 +6,4 @@ scope: core
 1. **Prerequisites** is explicit card [[Property]]
 2. **Prerequisites** specify several pairs of [[Level]] and [[Class]]
    required to [[Research]] the card
-3. Each pair is provided by a separate participant: a card provides
-   one Level with Class, see [[Level]]
+3. Each pair is provided by a separate participant, see [[Level]]

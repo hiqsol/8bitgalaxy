@@ -9,9 +9,9 @@ scope: core
 4. [[Origin]] = [[Social]]
 5. [[Range]] = current [[Level]] - can [[Move]]
 6. [[Size]] = current [[Level]]
-7. [[Capacity]] = current [[Level]]
-	1. Can not carry cargo on itself but can increase [[Capacity]]
-	   with current [[Level]]
+7. [[Capacity]] = current [[Level]], added to the group's: a Hero
+   carries no cargo itself
+8. Carried as cargo of a [[Move]] by any [[Ship]]
 
 #### Notes
 

@@ -8,9 +8,7 @@ scope: core
 3. **Direction**: [[Star]] to [[Star]]
 4. **Requirements**:
 	1. At least one direct participant is a [[Military]] [[Actor]]
-	2. The target Star is within the source group's [[Range]], see
-	   [[PerformAction]]
-	3. The source Star can be the target
+	2. The source Star can be the target
 
 #### Notes
 

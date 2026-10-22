@@ -5,7 +5,6 @@ scope: core
 
 1. **Academy** is [[Culture]] [[Hub]]: the **Social hub**, for
    [[Social]] cards
-2. **Academy** provides [[Create]] [[TechnologyAction]]
 
 #### Notes
 

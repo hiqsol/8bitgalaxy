@@ -5,9 +5,10 @@ scope: core
 
 1. **Upgrade** is [[Culture]] and [[Production]] [[TechnologyAction]]
    of [[Hub]]
-2. Flavour names:
-	1. **Grow** for [[Social]]
-	2. **Enhance** for [[Industrial]]
+2. **Upgrade** comes in two flavours:
+	1. **Grow**: only for [[Social]] cards, paid in [[Culture]]
+	2. **Enhance**: only for [[Industrial]] cards, paid in
+	   [[Production]]
 3. **Upgrade** replaces a card with another card of the same type
 4. **Direction**:
 	1. For [[Actor]] - any [[Star]] to [[Hub]]

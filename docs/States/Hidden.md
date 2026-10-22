@@ -8,8 +8,8 @@ scope: core
 	1. Back [[Side]] up
 	2. Hidden [[End]] up
 3. Only the player of its [[Faction]] knows a **hidden** card, others
-   see only its [[Faction]] and [[Role]]: being in the same [[Star]]
-   is not enough to see it
+   see only its back, see [[Side]]: being in the same [[Star]] is not
+   enough to see it
 4. **Hidden** card on [[Field]]:
 	1. Gives [[Control]] by its [[Role]]
 	2. Moves as a minimal [[Ship]]: [[Range]] 1, [[Capacity]] 1

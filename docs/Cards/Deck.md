@@ -94,7 +94,7 @@ scope: core
 	2. [[Structure]]s: Primary is technology or a non-power [[Plus]]
 	   at both ends, Secondary is power at strong end only, both ends
 	   have the same class
-	3. [[Ship]] ends have equal Level + ExtraPrice, so [[Size]] doesn't
-	   change with rotation
+	3. [[Ship]] ends have equal Level + ExtraPrice, so [[Size]]
+	   doesn't change with rotation
 3. Technology classes and scopes are in [[Technology]]
 4. [[Explore]] on a [[Military]] end is printed as **Recon**

@@ -24,4 +24,5 @@ scope: core
 
 #### Notes
 
-1. Pace: about 5 actions per turn, [[Hand]] size is the main knob
+1. Pace: about 5 actions per turn, [[Hand]] size is the main knob, 4
+   is an option

@@ -7,6 +7,9 @@ scope: core
 2. **Stealth** is an [[ImmediateAction]]
 3. **Outcome**: the shown card makes another own card on the
    [[Field]] [[Hidden]]
+4. At [[Takeoff]] a card can be placed with its [[Hidden]] [[End]] up
+   when **Stealth** is provided by the card itself or by an own
+   [[Enabled]] card in that [[Star]]
 
 #### Notes
 

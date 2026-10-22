@@ -12,8 +12,7 @@ scope: objectives
 4. [[Origin]] = none
 5. **Public objectives**: 3 cards face up, available to all players
 6. **Secret objectives**: 1 [[Hidden]] card for each player
-7. Objectives are scored at **Check** phase of own [[Turn]], see
-   [[Turn]]:
+7. Objectives are scored at **Check** phase of own [[Turn]]:
 	1. Public objective is replaced with a new one
 	2. Secret objective is revealed
 8. First player to get N victory points wins, N is about 6 in a duel

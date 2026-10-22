@@ -10,7 +10,7 @@ scope: advanced
 	2. It is a direct participant there and can use all of its
 	   abilities
 	3. It always [[Deplete]]s after the action, even when it moved or
-	   fought, see [[Deplete]]
+	   fought
 	4. A [[Structure]] must be [[Ready]]
 
 #### Notes

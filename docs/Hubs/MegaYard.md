@@ -5,8 +5,7 @@ scope: core
 
 1. **MegaYard** is [[Production]] [[Hub]]: a full **Industrial hub**,
    for [[Industrial]] cards
-2. **MegaYard** provides [[Create]] and [[Recover]]
-   [[TechnologyAction]]s
+2. **MegaYard** also provides [[Recover]] [[TechnologyAction]]
 
 #### Notes
 

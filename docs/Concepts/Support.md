@@ -13,7 +13,6 @@ scope: core
 	2. [[SecondaryAbility]]
 	3. [[Range]]
 	4. [[Capacity]]
-3. After action [[Deplete]] all the **supporters**
 
 #### Notes
 

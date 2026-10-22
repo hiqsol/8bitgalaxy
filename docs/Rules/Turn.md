@@ -16,7 +16,7 @@ scope: core
 4. **Check**: the [[Goal]] is checked, then player scores one
    [[Objective]], with the `objectives` extension
 5. **Draw**: unused cards from [[Hand]] go to [[Discard]], then player
-   [[Draw]]s a full [[Hand]]
+   [[DeckBuilding|Draw]]s a full [[Hand]]
 6. **Restore**: [[Restore]] 3 [[Structure]]s [[ControlledBy]] the
    player
 
@@ -31,7 +31,6 @@ scope: core
    hand and plans it during rivals' turns
 4. Allows Star Realms mechanics: draw a card (`+Draw` [[Plus]]), rival
    discards ([[ForceDiscard]])
-5. Every turn shows the player is alive: no pass, at least one
-   [[Takeoff]] or [[Action]]
+5. Every turn shows the player is alive
 6. **Restore** comes after **Draw**: player sees the next [[Hand]] and
    restores the [[Structure]]s it needs

@@ -11,8 +11,8 @@ scope: core
 	3. When the target [[Star]] has an [[Academy]] [[ControlledBy]]
 	   the defender, defending participants can also be selected from
 	   the defender's [[Discard]], [[Reserve]] or [[Hand]]
-3. Then **defender**:
-	1. Chooses to pass or add more participants and supporters
+3. Then the **defender** chooses to pass or add more participants and
+   supporters
 4. More players can join the **combat**:
 	1. On any side
 	2. They must have active [[Military]] [[Actor]]s in the Star

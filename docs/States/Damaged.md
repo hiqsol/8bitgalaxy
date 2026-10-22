@@ -8,9 +8,8 @@ aliases: [Disabled, Exhausted]
 2. **Damaged** card is:
 	1. Back [[Side]] up
 	2. Damaged [[End]] up
-3. Card becomes **damaged**:
-	1. In [[Combat]], when the winner doesn't save it
-	2. After applying [[Exhaust]] modifier
+3. Card becomes **damaged** in [[Combat]], when the winner doesn't
+   save it
 4. **Damaged** is opposite to [[Enabled]]
 5. [[Recover]] makes card [[Enabled]]
 6. A Damaged card that becomes Damaged again is [[Destroy]]ed

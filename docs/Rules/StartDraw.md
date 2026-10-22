@@ -7,7 +7,7 @@ scope: core
 	1. 4 ships 1/2
 	2. 2 heroes 1/1
 	3. 4 more TBD
-2. [[Hand]]: [[Draw]] from Reserve
+2. [[Hand]]: [[DeckBuilding|Draw]] from Reserve
 	1. First player: 3 cards
 	2. Other players: full Hand
 3. Home Star:

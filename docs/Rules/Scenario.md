@@ -8,10 +8,7 @@ scope: core
 2. It can include:
 	1. Number of players
 	2. Game mode: solo, co-op, competitive
-	3. Layout of the game board:
-		1. Shape of the game board
-		2. Placement of starting systems
-		3. Placement of [[Void]]s
+	3. [[Field]] layout: its shape, home [[Star]]s and [[Void]]s
 	4. [[GalaxyDeck]] composition, see [[Galaxy]]
 3. **First duel**:
 	1. 2 players, competitive, no [[GalaxyDeck]]
@@ -21,8 +18,7 @@ scope: core
 	4. Every [[Space]] has length 1, [[Void]]s are placed as in
 	   `game.png`
 	5. Home [[Star]]s: [[Ability]] gives 1 [[Energy]]. Other Stars:
-	   hidden, drawn from the Star deck equally by **Size**, see
-	   [[Star]]
+	   hidden, drawn from the Star deck equally by **Slots**
 	6. [[Alien]] deck: 12 Aliens, [[Defense]] 1, 2 and 3, four of
 	   each
 	7. Setup: [[StartDraw]]

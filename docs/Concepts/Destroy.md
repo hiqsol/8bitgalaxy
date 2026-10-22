@@ -11,4 +11,4 @@ scope: core
 #### Notes
 
 1. **Destroy** is not a [[State]]: a destroyed card is like any other
-   card in the [[Factory]], the pool of cards to (re)build
+   card in the [[Factory]]

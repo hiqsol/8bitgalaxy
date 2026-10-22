@@ -3,14 +3,11 @@ status: draft
 scope: core
 ---
 
-1. **Takeoff** is one of the ways to play a card from [[Hand]] in a
-   [[Turn]], see [[Turn]]
+1. **Takeoff** is a way to play a card from [[Hand]], see [[Turn]]
 2. **Takeoff** puts **ONE** [[Unit]] card from [[Hand]] to a free
    [[Unit]] [[Slot]] in the [[IPS]] of a [[Star]] [[ControlledBy]] the
    player
 3. Player chooses the [[End]] the card is placed with, for free
-	1. The [[Hidden]] end needs [[Stealth]]: provided by the card
-	   itself or by an own [[Enabled]] card in that Star
 4. **Takeoff** has no cost and is not an [[Action]]: the card can act
    in the same turn
 

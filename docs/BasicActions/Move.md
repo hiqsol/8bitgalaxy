@@ -9,8 +9,7 @@ scope: core
 	1. Within one [[Star]] system: from one [[IPS]] slot to other
 	2. From one [[Star]] to another
 3. Can't finish in [[Space]]
-4. **Requirements**: [[Range]] only, no [[Power]]: the [[Distance]] to
-   the destination must be within the moving group's Range
+4. **Requirements**: [[Range]] only, no [[Power]]
 5. Several cards can move together in a group, see [[Range]]
 	1. Direct participants in the destination don't move, but add
 	   their [[Range]] and [[Capacity]] to the moving group
@@ -18,9 +17,8 @@ scope: core
 	1. The total [[Size]] of cargo is within the group's total
 	   [[Capacity]]
 	2. Every cargo card needs a Ship in the group whose [[Class]]
-	   handles it, see [[Class]]
-	3. Any Ship carries [[Hero]]es
-	4. Cargo is a target, not a participant
+	   handles it
+	3. Cargo is a target, not a participant
 7. Destination [[IPS]] must have a free [[Slot]] for every moving and
    carried card
 8. After **Move**: see [[Deplete]]

@@ -17,7 +17,7 @@ scope: core
 	3. [[Production]]: TBD
 	4. [[Science]]: [[Singularity]]
 4. A [[Faction]] is over when one of:
-	1. **Can not make a move**, tested at the start of own [[Turn]]
+	1. **Can not make a move**, see [[Turn]]
 	2. **Has no leader**: at **Check** phase of own [[Turn]] has no
 	   [[Enabled]] [[Hero]] on [[Field]], [[Hand]], [[Reserve]] or
 	   [[Discard]]
