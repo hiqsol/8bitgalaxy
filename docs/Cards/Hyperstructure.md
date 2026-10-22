@@ -6,7 +6,7 @@ scope: advanced
 1. **Hyperstructure** is a card [[Type]]
 2. **Hyperstructure** is a wonder with a strong permanent effect
 3. [[Role]] = [[Structure]]
-4. [[Origin]] = both [[Social]] and [[Industrial]], build two times
+4. [[Origin]] = both [[Social]] and [[Industrial]], built two times
 5. [[Range]] = 0 and cannot be cargo of a [[Move]]
 6. [[Size]] = current [[Level]] + [[ExtraPrice]]
 7. [[Capacity]] = current [[Level]]

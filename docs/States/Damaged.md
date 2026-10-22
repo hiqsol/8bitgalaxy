@@ -9,7 +9,7 @@ aliases: [Disabled, Exhausted]
 	1. Back [[Side]] up
 	2. Damaged [[End]] up
 3. Card becomes **damaged**:
-	1. After defeat in [[Combat]]
+	1. In [[Combat]], when the winner doesn't save it
 	2. After applying [[Exhaust]] modifier
 4. **Damaged** is opposite to [[Enabled]]
 5. [[Recover]] makes card [[Enabled]]

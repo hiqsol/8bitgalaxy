@@ -1,13 +1,14 @@
 ---
 date: 2026-10-19
+updated: 2026-10-21
 status: WIP
 scope: meta
 ---
 
 # Comparison review
 
-Comparison of the current design with the most mechanically similar
-games.
+Comparison of the design with other games: the closest ones, what is
+distinctive and what to take from others.
 
 ## Closest games
 
@@ -71,14 +72,21 @@ games.
 	3. Use all abilities as a direct participant or one ability as a
 	   [[Support]]er.
 	4. Return to the deck cycle after [[Deplete]].
-3. Other distinctive mechanisms are:
+3. Other distinctive mechanisms, worth keeping:
 	1. Double-ended cards for [[Class]], [[Level]], [[Ready]] and
-	   [[Depleted]].
-	2. The back side for [[Damaged]] and [[Hidden]].
-	3. [[Slot]] pressure and overlap.
-	4. Cards on the [[Field]] being stronger than the same cards in
-	   [[Hand]].
-	5. Deterministic [[Combat]] with hidden commitments.
+	   [[Depleted]], the back side for [[Damaged]] and [[Hidden]]:
+	   no tokens needed.
+	2. [[Slot]] pressure and overlap, instead of fleet supply and
+	   upkeep.
+	3. Cards on the [[Field]] being stronger than the same cards in
+	   [[Hand]]; [[Takeoff]] also thins the deck, no separate scrap
+	   rule.
+	4. [[Hand]] as the turn budget, drawn at the end of the [[Turn]]
+	   and spent on defense: Star Realms plus TI action cards.
+	5. [[Research]] → [[Create]] → [[Upgrade]], the proven Through the
+	   Ages chain.
+	6. Deterministic [[Combat]] with hidden commitments, which works
+	   in Voidfall, Kemet and Dune: Imperium.
 
 ## Classification
 
@@ -89,7 +97,23 @@ games.
 3. Here, [[Slot]]s limit spatial presence while cards provide
    abilities to actions; they are not action spaces.
 
-### Notes
+## Lessons from other games
+
+| Game | What to take | Where |
+|------|--------------|-------|
+| Through the Ages | Discover with science then build, upgrade pays the difference (already: [[Research]], [[Create]], [[Upgrade]]). Wonders. Players seed future events (already: [[FutureEvents]]). Game ends when the Age III deck runs out. Tactics reward a mixed army. | [[Twilight]], [[Hyperstructure]], [[Tactics]] |
+| Civilization (2010) | Four victories: capture a capital, culture, economy, technology. Tech pyramid instead of printed prerequisites. | [[Goal]] |
+| Civilization: A New Dawn | Focus row 1-5: a used card drops to slot 1 and recharges over time. Trade tokens boost a card (already: [[Boost]]). Unique wonders. | [[Restore]], [[Hyperstructure]] |
+| Voidfall | 3 cycles, each ends with evaluation: scoring and upkeep; Focus cards come back at the cycle end. Diceless combat, defender wins ties, max 2 fleets per sector (already: [[Combat]], [[Slot]]). Trade tokens unlock an extra action. | [[Backlog]] ideas |
+| Imperium: Classics | Reshuffle is the progress tick: gain or develop a card. History pile: cards out of the deck still score. Game ends when a supply runs out. | [[Twilight]], [[Legacy]] |
+| Twilight Imperium | Ships can't pass systems with enemy ships. Planets exhaust and ready every round. Home system has a space dock. Mecatol Rex is a prize in the center. | [[Pinning]], [[Restore]], [[Backlog]] ideas |
+| Eclipse | Pinning. Sector tier is printed on the tile back (already: [[Space]] Length). Ancients guard the good hexes. | [[Alien]], [[Pinning]] |
+| Star Realms | Authority is the clock. Outposts must be destroyed first. | [[Guard]] |
+| Mage Knight | Deck building, hex exploration and diceless combat in one game. Wounds go to the deck and clog the hand. | [[Backlog]] I76 c |
+| Tyrants of the Underdark | Deck building with area control. Promoting a card takes it out of the deck for points. | [[Legacy]] |
+| Kemet | Diceless battle cards. Points for holding temples are lost with the temples. | [[Goal]] |
+
+## Notes
 
 1. Primary comparison: [A Handful of Stars
    rules](https://tesera.ru/images/items/899552/TFG_aHoS_Rules_A4_v5_web.pdf).

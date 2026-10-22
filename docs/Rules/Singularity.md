@@ -4,8 +4,8 @@ scope: core
 ---
 
 1. **Singularity** is the [[Science]] path of [[Goal]]
-2. A [[Faction]] reaches **Singularity** at the end of own [[Turn]],
-   before the [[Draw]], see [[Turn]], when for every [[Class]] it has
+2. A [[Faction]] reaches **Singularity** at **Check** phase of own
+   [[Turn]], see [[Turn]], when for every [[Class]] it has
    an [[ActiveFor|active]] card that provides that Class at the
    highest [[Level]] of that Class in its faction deck
 3. One card per Class: a card provides one Level with its Class, see

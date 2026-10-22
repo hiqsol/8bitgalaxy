@@ -10,8 +10,7 @@ scope: core
 3. [[Structure]] cards become **depleted** after [[Deplete]]
 4. **Depleted** structure still participates with its weak [[End]]:
    its [[Level]] and abilities, weaker than at the strong End
-5. [[Restore]] makes it [[Ready]]: with [[Manage]] or 1 free at the
-   end of own [[Turn]]
+5. [[Restore]] makes it [[Ready]]
 
 #### Notes
 

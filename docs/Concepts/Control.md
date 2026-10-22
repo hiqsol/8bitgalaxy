@@ -3,11 +3,9 @@ status: draft
 scope: core
 ---
 
-1. **Control** represents player's level of presence in a [[Star]]
-2. The concept of **control** is necessary to compare players
-3. The player's level of **control** in a star is (in ascending order)
-	1. **None** - player has no [[Enabled]] or [[Hidden]] cards in the
-	   star
-	2. **Structure** - player has [[Enabled]] or [[Hidden]]
-	   [[Structure]]
-	3. **Actor** - player has [[Enabled]] or [[Hidden]] [[Actor]]
+1. **Control** is a [[Faction]]'s level of presence in a [[Star]]
+2. The level is set by its cards in the Star that are not
+   [[Damaged]], in ascending order:
+	1. **None** - no such cards
+	2. **Structure** - a [[Structure]]
+	3. **Actor** - an [[Actor]]

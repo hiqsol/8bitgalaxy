@@ -34,7 +34,6 @@ aliases: [InterStellar Space]
 	4. Black hole
 	5. [[Void]]
 	6. [[Supernova]]
-	7. [[HyperPass]]
 
 #### Notes
 

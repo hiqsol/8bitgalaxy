@@ -24,3 +24,5 @@ scope: advanced
    [[Discard]]
 4. A Structure alone acts only inside its own [[Star]], with its
    [[Range]] 0: it rebuilds, it doesn't fight
+5. A Field starter can act with an empty [[Hand]]: the faction is not
+   over, see [[Goal]]

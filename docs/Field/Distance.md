@@ -18,4 +18,3 @@ scope: core
 1. Examples:
 	1. Star → Space(1) → Star = 0 + 1 + 1 = 2
 	2. Star → Space(2) → Space(1) → Star = 0 + 2 + 1 + 1 = 4
-	3. Within one Star = 0: the route is a single tile

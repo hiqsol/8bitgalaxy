@@ -11,5 +11,9 @@ scope: core
 	4. 🔵 [[Science]] - [[SciencePower]]
 3. **Class** is independent of [[Origin]] ([[Social]] /
    [[Industrial]])
-4. [[Actor]] card can have a different **class** at each [[End]], the
-   visible one is used
+4. An [[Actor]] card can have a different **class** at each [[End]]
+5. A **class** handles cards, e.g. for [[Manage]] and [[Move]] cargo:
+	1. [[Military]] - [[Actor]]s
+	2. [[Culture]] - [[Social]] cards
+	3. [[Production]] - [[Industrial]] cards
+	4. [[Science]] - any card

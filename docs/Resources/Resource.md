@@ -10,4 +10,3 @@ scope: core
 	2. Stockable:
 		1. [[Materials]]
 		2. [[Energy]]
-3. Both stockable **resources** are one token, see [[Component]]

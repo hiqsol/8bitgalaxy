@@ -10,10 +10,7 @@ scope: core
 	3. **Token**: one kind for both stockable [[Resource]]s:
 	   [[Energy]] in [[Hand]], [[Materials]] in a [[Star]]
 3. Cards and tiles have two [[Side]]s and provide
-   [[Ability|abilities]]:
-	1. Front: properties and abilities
-	2. Back: what is known while the component is hidden: [[Faction]]
-	   of a card, **Size** of a [[Star]], **Length** of a [[Space]]
+   [[Ability|abilities]]
 4. A token has one property: its [[Size]], 1 or 5, the amount of the
    resource it stands for
 

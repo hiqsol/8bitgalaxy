@@ -3,8 +3,8 @@ status: draft
 scope: core
 ---
 
-1. **Takeoff** is one of two ways to play a card from [[Hand]] in a
-   [[Turn]], the other is to start an [[Action]]
+1. **Takeoff** is one of the ways to play a card from [[Hand]] in a
+   [[Turn]], see [[Turn]]
 2. **Takeoff** puts **ONE** [[Unit]] card from [[Hand]] to a free
    [[Unit]] [[Slot]] in the [[IPS]] of a [[Star]] [[ControlledBy]] the
    player
@@ -20,7 +20,5 @@ scope: core
 2. On [[Field]] the card can be a direct participant of actions and
    use all of its abilities, from [[Hand]] it uses only one, see
    [[PerformAction]]
-3. Player who controls no [[Star]] can neither **Takeoff** nor start
-   an action from [[Hand]], and is over, see [[Goal]]
-4. Acting in the same turn means nobody has to remember which cards
+3. Acting in the same turn means nobody has to remember which cards
    took off

@@ -8,8 +8,7 @@ scope: core
 2. Flavour names:
 	1. **Grow** for [[Social]]
 	2. **Enhance** for [[Industrial]]
-3. **Upgrade** allows to substitute a card for another card of the
-   same type
+3. **Upgrade** replaces a card with another card of the same type
 4. **Direction**:
 	1. For [[Actor]] - any [[Star]] to [[Hub]]
 	2. For [[Structure]] - [[Hub]] to old card's [[Star]]
