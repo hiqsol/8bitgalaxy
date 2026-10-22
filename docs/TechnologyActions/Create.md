@@ -8,16 +8,13 @@ scope: core
 2. Flavour names:
 	1. **Raise** for [[Social]]
 	2. **Produce** for [[Industrial]]
-3. **Create** allows to spend [[Resource]]s to create new object(s)
+3. **Create** spends [[Resource]]s to create new cards
 4. A [[Social]] card is created only when its lower [[Level]] is 1: a
    higher Social card comes by [[Upgrade]] of a created one
 5. Multiple cards can be created in a single action
 6. **Direction**:
 	1. For [[Actor]]: any [[Star]] to [[Hub]]
-	2. For [[Structure]]: [[Hub]] to [[Star]] where
-	   created
-		1. With [[Settle]] or [[Prefab]]: to the Star of the Ship that
-		   converts itself
+	2. For [[Structure]]: [[Hub]] to [[Star]] where created
 7. **Requirements**: target card has to be available at [[Factory]]
 8. **Cost**: card's [[Price]]
 9. **Outcome**:

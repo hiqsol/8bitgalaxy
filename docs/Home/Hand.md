@@ -9,8 +9,7 @@ scope: core
    up to it.
 4. Cards from **Hand** are played in [[Turn]]: [[Takeoff]] or start an
    [[Action]].
-5. **Hand** also holds [[Energy]] tokens, open to all, they are not
-   cards, see [[Energy]]
+5. **Hand** also holds [[Energy]] tokens, see [[Energy]]
 
 #### Notes
 

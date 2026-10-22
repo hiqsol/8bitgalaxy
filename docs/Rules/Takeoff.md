@@ -20,7 +20,5 @@ scope: core
 2. On [[Field]] the card can be a direct participant of actions and
    use all of its abilities, from [[Hand]] it uses only one, see
    [[PerformAction]]
-3. Player who controls no [[Star]] can neither **Takeoff** nor start
-   an action from [[Hand]], and is over, see [[Goal]]
-4. Acting in the same turn means nobody has to remember which cards
+3. Acting in the same turn means nobody has to remember which cards
    took off

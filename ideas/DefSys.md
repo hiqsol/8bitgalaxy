@@ -1,6 +1,6 @@
 ---
 status: stub
-scope: advanced
+scope: idea
 ---
 
 

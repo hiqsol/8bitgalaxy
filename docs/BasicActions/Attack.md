@@ -11,11 +11,8 @@ scope: core
 	2. The target Star is within the source group's [[Range]], see
 	   [[PerformAction]]
 	3. The source Star can be the target
-	4. The route obeys [[Pinning]]
 
 #### Notes
 
-1. A winning attack moves the attacker's surviving [[Unit]]s to the
-   destination [[Star]], like a capture in chess.
-2. The attacker's own cards already in the target [[Star]] may join as
+1. The attacker's own cards already in the target [[Star]] may join as
    direct participants: an attack from two sides.

@@ -79,8 +79,8 @@ scope: core
 |  | weak | 3+1 | M | [[Militarization]], +2 Defense | - |  |
 | Colony 4C | strong | 4+1 | C | [[Export]] | +3 | 2C |
 |  | weak | 3+1 | C | [[Export]] | - |  |
-| Colony 4P | strong | 4+1 | P | [[FullYard]] | +3 | 2P |
-|  | weak | 3+1 | P | [[FullYard]] | - |  |
+| Colony 4P | strong | 4+1 | P | [[MegaYard]] | +3 | 2P |
+|  | weak | 3+1 | P | [[MegaYard]] | - |  |
 | Colony 4S | strong | 4+1 | S | +3 Range | +3 | 2S |
 |  | weak | 3+1 | S | +1 Range | - |  |
 

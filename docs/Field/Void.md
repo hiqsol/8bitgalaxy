@@ -4,4 +4,4 @@ scope: core
 ---
 
 1. **Void** is a [[Space]] type
-2. Cards cannot move through Void without [[Navigation]]
+2. A route can't pass **Void**, see [[Distance]]

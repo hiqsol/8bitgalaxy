@@ -15,4 +15,3 @@ scope: core
 
 1. A disputed Star is a front: no faction can start an action from it
    or [[Takeoff]] there, bring an [[Actor]] to break the tie
-2. With [[Politics]] the factions can agree on control

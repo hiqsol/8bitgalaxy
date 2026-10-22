@@ -13,8 +13,7 @@ scope: core
 	2. [[SecondaryAbility]]
 	3. [[Range]]
 	4. [[Capacity]]
-3. Supporter from [[Hand]] can be used with either [[End]]
-4. After action [[Deplete]] all the **supporters**
+3. After action [[Deplete]] all the **supporters**
 
 #### Notes
 

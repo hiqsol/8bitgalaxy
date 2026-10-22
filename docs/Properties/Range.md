@@ -20,5 +20,4 @@ scope: core
 
 #### Notes
 
-1. Big groups go far: [[Pinning]], [[Void]] and hidden [[Space]] stop
-   them
+1. Big groups go far: a group reaches farther than any of its cards

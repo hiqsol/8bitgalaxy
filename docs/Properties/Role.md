@@ -4,7 +4,7 @@ scope: core
 ---
 
 1. **Role** is implicit card [[Property]] derived from [[Type]]
-2. Roles:
+2. Roles, see [[Card]] for their types:
 	1. [[Unit]]
 		1. [[Actor]]
 	2. [[Structure]]
@@ -12,10 +12,6 @@ scope: core
 
 #### Notes
 
-1. The main conceptual difference between roles is where the card can
-   be:
-	1. [[Unit]] can be drawn and played from hand
-	2. [[Structure]] is on the [[Field]] but never in hand
-	3. [[Agenda]] is neither on the [[Field]] nor in hand, it can be
-	   in a [[Home]]
-2. For example [[Event]] just happens, so it is an [[Agenda]]
+1. Roles differ by where the card can be: a [[Unit]] in [[Hand]] and
+   on the [[Field]], a [[Structure]] only on the Field, an [[Agenda]]
+   in neither, e.g. an [[Event]] just happens

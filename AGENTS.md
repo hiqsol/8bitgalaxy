@@ -6,12 +6,11 @@ Every page has:
 - numbered bullet point rules
 - numbered bullet point notes
 
-Docs include rules, notes and reviews.
-RulesReview numbers issues `RI<n>` and proposals `RP<n>`.
-DesignReview numbers issues `DI<n>` and proposals `DP<n>`.
-SimplificationReview numbers simplifications `S<n>`.
+Docs include rules, notes and meta pages.
+Backlog holds all open review items: issues `I<n>`, proposals `P<n>`
+and simplifications `S<n>`; an item keeps its number when it moves.
 Write the points of an issue or proposal as lettered bullets
-`- a) ...`, so they can be referred to as `RP24 a`.
+`- a) ...`, so they can be referred to as `P24 a`.
 Run `make check` (`bin/checkdocs`) and `make lint` (markdownlint)
 after editing docs.
 Lines are at most 70 characters (tab counts as 4), tables and code

@@ -23,8 +23,10 @@ scope: core
 	5. Home [[Star]]s: [[Ability]] gives 1 [[Energy]]. Other Stars:
 	   hidden, drawn from the Star deck equally by **Size**, see
 	   [[Star]]
-	6. Setup: [[StartDraw]]
-	7. Field schematic: hex is a [[Star]], `[ ]` home Star, each side
+	6. [[Alien]] deck: 12 Aliens, [[Defense]] 1, 2 and 3, four of
+	   each
+	7. Setup: [[StartDraw]]
+	8. Field schematic: hex is a [[Star]], `[ ]` home Star, each side
 	   has 2 [[Space]] tiles, one per symbol:
 ```
 		     ╱ ╲   ╱ ╲

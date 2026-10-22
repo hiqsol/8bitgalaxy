@@ -5,9 +5,8 @@ scope: core
 
 1. **Twilight** is the end of the game when no [[Faction]] has won
    before, see [[Goal]]
-2. **Twilight** is triggered when either:
-	1. All piles of a player's [[Laboratory]] are empty
-	2. The [[GalaxyDeck]] runs out, when the [[Galaxy]] is present
+2. **Twilight** is triggered when all piles of a player's
+   [[Laboratory]] are empty
 3. The [[Turn]] of the trigger is the last one of the triggering
    player
 4. After it every other player makes one last [[Turn]], starting with

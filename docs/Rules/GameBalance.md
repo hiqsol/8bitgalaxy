@@ -7,11 +7,11 @@ scope: core
 	1. Asymmetric [[Faction]] means asymmetric deck
 	2. For an even contest players get even decks
 2. Playing a card from [[Field]] is stronger than from [[Hand]]:
-	1. Field card takes about 2x efforts: [[Takeoff]] and then a
-	   **starter** from [[Hand]]
-	2. So field card as a direct participant uses all abilities and
-	   its `+Y` power, hand card only one, see [[PerformAction]] and
-	   [[PrimaryAbility]]
+	1. A Field card takes about twice the effort: [[Takeoff]] and
+	   then a **starter** from [[Hand]]
+	2. So a Field card as a direct participant uses all abilities
+	   and its `+Y` power, a Hand card only one, see
+	   [[PerformAction]] and [[PrimaryAbility]]
 	3. No other bonuses for playing from [[Hand]]
 3. Taking cards to [[Field]] thins the deck, that's intended: no scrap
    technology needed
@@ -24,5 +24,4 @@ scope: core
 
 #### Notes
 
-1. Pace: about 5 actions per turn, [[Hand]] size is the main knob.
-   We'll see later.
+1. Pace: about 5 actions per turn, [[Hand]] size is the main knob

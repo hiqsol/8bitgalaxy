@@ -4,4 +4,4 @@ scope: advanced
 ---
 
 1. **Invent** is [[Science]] [[TechnologyAction]]
-2. **Invent** action allows to [[Research]] card from inside of a pile
+2. **Invent** lets [[Research]] take a card from inside a pile

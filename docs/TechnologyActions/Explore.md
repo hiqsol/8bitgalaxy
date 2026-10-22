@@ -9,7 +9,7 @@ scope: core
 	2. **Survey** for [[Science]]
 3. **Explore** reveals one target:
 	1. Hidden [[Space]]
-	2. Hidden [[Star]]
+	2. Hidden [[Star]]: [[Alien]]s appear in it, see [[Alien]]
 	3. [[Hidden]] card
 4. **Direction**: [[Star]] to the target
 5. **Requirements**:

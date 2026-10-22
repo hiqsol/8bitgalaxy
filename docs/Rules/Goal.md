@@ -22,8 +22,6 @@ scope: core
 	2. **Has no leader**: at the end of own [[Turn]] has no
 	   [[Enabled]] [[Hero]] on [[Field]], [[Hand]], [[Reserve]] or
 	   [[Discard]]
-5. With [[Objective]]s extension the first to get enough victory
-   points wins
 
 #### Notes
 
@@ -39,13 +37,12 @@ scope: core
 	   see [[Combat]]
 5. Losing the home [[Star]] is a heavy loss by intention, a goal for
    rivals, but it doesn't end the game, neither does losing the
-   [[Hub|hubs]]: the faction still moves
-   and can defeat the rival leader. The captor gets the hubs,
-   like taking the queen in Chess
+   [[Hub|hubs]]: the faction still moves and can defeat the rival
+   leader. The captor gets the hubs, like taking the queen in Chess
 6. Losing the last Star does end the game: a faction that controls no
    [[Star]] can not make a move, it has no place for [[Takeoff]] and
    no source for an action from [[Hand]]
 7. An empty [[Hand]] at the start of own [[Turn]] can end the game
    too, like an unexpected checkmate: spending the whole Hand on
    defense in [[Combat]] or losing it to [[ForceDiscard]] is a real
-   risk, unless a [[Field]] card with [[Starter]] can act
+   risk

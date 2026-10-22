@@ -4,14 +4,13 @@ scope: core
 ---
 
 1. Player defines an [[Action]] by selecting:
-	1. **Starter**: an [[Actor]] from [[Hand]] or a [[Field]] card
-	   with [[Starter]], every action has one
+	1. **Starter**: an [[Actor]] from [[Hand]], every action has one
 	2. **Action**: one of [[Action]]s, it sets the **requirements**:
 	   [[Power]], [[Range]], [[Capacity]]
 	3. **Direction**: from the **source** to the **destination**, see
 	   [[Direction]]:
 		1. **Source**: the [[IPS]] of any [[Star]] [[ControlledBy]]
-		   the player, for a Field starter its own IPS
+		   the player
 		2. **Destination**: a [[Star]] or a [[Space]]
 	4. **Participants**: cards [[ActiveFor]] the player that give
 	   their [[Ability|abilities]], [[Technology]] included:
@@ -39,8 +38,6 @@ scope: core
    abilities) gradually with revealed information. For example for
    [[Explore]] or [[Combat]]
 6. **After action** participants [[Deplete]]
-7. In [[Combat]] the defender's cards in the destination take part as
-   defending direct participants, see [[Combat]]
 
 #### Notes
 
@@ -50,9 +47,3 @@ scope: core
    help with one ability each. Their abilities must cover the
    requirements. Then the used cards deplete, except those that moved
    or fought; the starter always does.
-2. A direct participant on [[Field]] gives more than a card in
-   [[Hand]]: all of its abilities instead of one. That's what
-   [[Takeoff]] is for.
-3. Positions matter: a card acts fully at either end of the Direction,
-   from any other IPS it gives one ability and must reach the
-   destination

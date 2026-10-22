@@ -9,5 +9,3 @@ scope: core
 	2. [[Base]]
 3. **Industrial** cards are created at a Industrial [[Hub]]
 4. Not to be confused with [[Production]] [[Class]]
-5. Flavour names for **Industrial** cards: **Produce** ([[Create]]),
-   **Enhance** ([[Upgrade]]), **Fix** ([[Recover]])

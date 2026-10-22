@@ -36,7 +36,7 @@ Every page states its `scope` in frontmatter:
 	   [[Derelict]]s
 	2. `objectives` - [[Objective]]s and victory points
 	3. `politics` - [[Politics]]
-4. `meta` - reviews and documentation support
+4. `meta` - [[Backlog]] and documentation support
 5. `idea` - out of the rules, kept in `ideas/` for later
 
 #### Status

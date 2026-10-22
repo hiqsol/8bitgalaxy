@@ -20,7 +20,3 @@ scope: core
 	    end of own [[Turn]]
 	11. Victory points for [[Objective]]s
 	12. Votes for [[Politics]]
-
-#### Notes
-
-1. More kinds of **plus** can be added later
