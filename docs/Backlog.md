@@ -71,13 +71,13 @@ answers.
   cards: e.g. P27 Reserve has Ship 2C ([[Trade]]), Ship 2P
   ([[Extract]]), Hero 1P weak ([[Recycle]]).
 
-### Star deck
+### World deck
 
-- [ ] **I57. Star deck.** [[Star]]s come from the Star deck, but: →
-  P36
+- [ ] **I57. World deck.** [[World]]s come from the World
+  deck, but: → P36
 	- a) There is no Ability list.
 	- b) There is no first duel deck.
-- [ ] **P36. Star deck** in [[Star]]:
+- [ ] **P36. World deck** in [[World]]:
 	- a) [[Ability]]: +1 [[Power]] of its [[Class]] to one action
 	  started there.
 	- b) Ability: +1 [[Energy]].
@@ -90,20 +90,9 @@ answers.
 	  Materials 2, Energy and Technology 3, Draw 4, and so the number
 	  of [[Alien]]s guarding it. Energy is above Power: any class,
 	  anywhere, kept between Turns.
-	- h) The player takes the Ability during own [[Turn]], it is not
-	  automatic.
-	- i) First duel deck: 5 Stars, shuffled face down on non-home
-	  Stars: Energy (ExtraPrice 3), Military Power (2), Science Power
-	  (2), Defense (1), [[Shipyard]] (3).
-- [ ] **S21. Star abilities without use tracking.** [[Star]] makes its
-  Ability usable once per own Turn, so players must remember its use;
-  P36 adds more such Abilities:
-	- a) Income Abilities resolve at the income step of [[Turn]].
-	- b) Local action Abilities apply automatically to own actions
-	  whose source or destination is that Star.
-	- c) Defensive Abilities apply continuously in that Star.
-	- d) Balance their values for those timings, then remove "once per
-	  Turn".
+	- i) First duel deck: 5 Worlds: Energy (ExtraPrice 3),
+	  Military Power (2), Science Power (2), Defense (1), [[Shipyard]]
+	  (3).
 
 ### Action sequence
 
@@ -119,9 +108,8 @@ answers.
 - [ ] **S20. Visible Explore cost.** [[Explore]] reveals the Price
   only after cards are spent, while P34 validates every action before
   resolution and takes an invalid action back:
-	- a) Print the [[Price]] on the back of every [[Star]] and
-	  [[Space]], beside Slots or Length. Class, Type and Ability stay
-	  hidden.
+	- a) Print the [[Price]] on the back of every [[Space]], beside
+	  its Length. Type and Ability stay hidden.
 	- b) Validate before revealing, like every other action. Remove
 	  Explore 7-8 and the Explore exception from [[PerformAction]] 5.
 	- c) This removes failure and refund rules without removing a
@@ -288,7 +276,7 @@ The first duel keeps Spaces of length 1.
 - [ ] **S38. Route details where they belong.** [[Distance]] defines a
   route, [[Void]] says a route can't pass it. Other tile rules speak
   of moving cards, so it's unclear which [[Range]] checks they bind:
-	- a) [[Space]] 6, [[Star]] 6: a route can't pass a hidden tile.
+	- a) [[Space]] 6: a route can't pass a hidden Space.
 	- b) [[Supernova]]: a route can't pass Supernova; today only Ships
 	  are stopped and Heroes pass, keep "Ships" if that is intended.
 	- c) [[Navigation]]: the route of a group with Navigation can pass
@@ -320,8 +308,6 @@ The first duel keeps Spaces of length 1.
 - [ ] **I47. Images.** Update `card.png` after the rules and card
   data are settled: annotate both ends, ExtraPrice, Prerequisites and
   the technology name.
-- [ ] **I75 e. Stars as cards.** [[Card]] doesn't list Stars and
-  Spaces, though P36 makes Stars a deck.
 - [ ] **I79 c, d. New technologies.**
 	- c) [[Tactics]] to [[MinusRequirement]] in the [[Technology]]
 	  table have no cards yet.
@@ -550,15 +536,6 @@ One batch after the playtest, only for pages that confused play.
 	- f) Piles are face up or face down, not Hidden, as S25 a. Pile
 	  pages keep only their own behavior, e.g.
 	  [[DeckBuilding|Shuffle]] for Reserve.
-- [ ] **S50. Star Price printed.** A [[Star]] alone among tiles has
-  [[ExtraPrice]], non-negative, only to compute its [[Explore]] Cost,
-  while a [[Space]] prints its Price:
-	- a) Print a Star's Price like a Space's, at least its Slots; on
-	  the back with S20.
-	- b) ExtraPrice is a card property again: remove the Star from
-	  ExtraPrice and [[Price]], and ExtraPrice from the Component
-	  properties in [[Property]] 3.
-	- c) P36 g then sets printed Prices: Slots plus 1 to 4.
 - [ ] **S52. Traits in core.** [[Trait]] and [[NoSupport]] are `core`,
   but no card has a Trait:
 	- a) Trait and NoSupport go to `advanced`, or wait for P58.
@@ -573,8 +550,8 @@ Not for answering now, kept for later.
 - **Energy as an extra action** (Voidfall trade tokens): spend 2
   [[Energy]] to let a Field card act without a starter from Hand
   ([[Starter]]). Alternative to [[Boost]].
-- **Center prize** (TI Mecatol Rex): Star 11 of the first duel is
-  fixed with the best Ability, e.g. [[DeckBuilding|Draw]] 1.
+- **Center prize** (TI Mecatol Rex): Star 11 of the first duel has a
+  fixed World with the best Ability, e.g. [[DeckBuilding|Draw]] 1.
 - **Derelict row** (TtA card row): [[Derelict]]s get cheaper the
   longer they wait.
 - **Upkeep at Shuffle** (Voidfall, Eclipse), only if the leader

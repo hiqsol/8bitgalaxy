@@ -6,21 +6,17 @@ scope: core
 1. **Star** is a [[Field]] tile, see [[Component]]
 2. **Star** represents star system with planets
 3. **Star** contains [[IPS]] - Interplanetary Space
-4. **Stars** are hidden (turned face down) at the beginning of the
-   game, except home Stars
-5. Hidden **Star** is revealed with [[Explore]] action
-6. Cards can't pass or enter a hidden **Star**
-7. **Star** properties:
+4. **Star** tile properties:
 	1. **Slots** - the main property: total number of [[Slot]]s in its
-	   [[IPS]]
+	   [[IPS]], 7 to 10
 	2. **Split** of the Slots between [[Unit]] and [[Structure]] rows,
 	   see [[IPS]]
-	3. [[Class]]: shown by its color, it sets the class of a [[Power]]
-	   ability
-	4. **Price**: the Cost to [[Explore]], see [[Price]]
-	5. [[Ability]] usable once per own [[Turn]] by the player who
-	   controls the Star, see [[ControlledBy]]
-8. **Stars** form the **Star deck**: hidden Stars are placed from it,
-   see [[Scenario]]
-9. Only **Slots** is written on the back side, so hidden Stars are
-   drawn equally at the start
+5. Below its rows a **Star** has one more slot, shaped as a Structure
+   slot, for its [[World]]
+6. The World gives the **Star** its [[Class]] and
+   [[Ability|abilities]], a **Star** without one is [[Wild]]
+
+#### Notes
+
+1. Star tiles come in 4 sizes only, a Star's variety comes from its
+   World

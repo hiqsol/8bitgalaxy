@@ -7,9 +7,7 @@ scope: core
    [[ExtraPrice]]
 2. Card **Price** = strong [[End]] [[Level]] + its [[ExtraPrice]]: the
    Cost of [[Research]], [[Create]] and [[Upgrade]]
-3. [[Star]] **Price** = its Slots + its [[ExtraPrice]]: the Cost of
-   [[Explore]]
-4. [[Space]] **Price** is printed on its front: the Cost of
+3. [[Space]] **Price** is printed on its front: the Cost of
    [[Explore]]
 
 #### Notes

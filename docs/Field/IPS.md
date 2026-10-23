@@ -16,4 +16,3 @@ aliases: [InterPlanetary Space]
 
 1. Slots are pockets of the Star tile, in the physical and the virtual
    game alike
-2. The split is seen after [[Explore]]

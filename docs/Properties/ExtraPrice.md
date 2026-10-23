@@ -3,14 +3,11 @@ status: draft
 scope: core
 ---
 
-1. **Extra price** is explicit [[Component]] [[Property]] of a card
-   and a [[Star]]
+1. **Extra price** is explicit card [[Property]]
 2. Printed after the [[Level]] at each card [[End]]: `2+1` is level 2,
    extra price 1
 3. A card's **extra price** can be negative, printed as `2-1`: its
    [[Price]] and [[Size]] stay at least 1
-4. A [[Star]]'s **extra price** is not negative: its Slots are its
-   minimal Price, see [[Explore]]
 
 #### Notes
 

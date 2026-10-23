@@ -15,12 +15,11 @@ G1. I5, P27 - yes, setup as P27 a-f. Call the 4 technology-free
 G2. I60 - in the first duel a printed technology that is not `core`
     or is a stub is blank. This covers P59 for the duel, and keeps
     Materials out of it.
-G3. I57, P36, S21 - Star deck for the first duel is P36 i,
-    abilities as P36 a, b, d, e. Abilities apply automatically by
-    S21 a-c, no "once per Turn".
+G3. I57, P36 - World deck for the first duel is P36 i, abilities as
+    P36 a, b, d, e.
 G4. I50, P34, S20 - yes: action template, an invalid action is taken
-    back and nothing is spent. Price is printed on the back of Stars
-    and Spaces (S20 a, b), remove Explore 7-8.
+    back and nothing is spent. Price is printed on the back of Spaces
+    (S20 a, b), remove Explore 7-8.
 G5. I51, P28, S26 - yes: combat sequence by P28, every Hand card is
     committed face down and revealed at resolution.
 G6. I83, P62 - yes: Defense = AttackPower, at least 1. A defending

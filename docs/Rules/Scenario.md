@@ -17,8 +17,8 @@ scope: core
 	3. Home Stars in opposite corners: `00` and `21`
 	4. Every [[Space]] has length 1, [[Void]]s are placed as in
 	   `game.png`
-	5. Home [[Star]]s: [[Ability]] gives 1 [[Energy]]. Other Stars:
-	   hidden, drawn from the Star deck equally by **Slots**
+	5. Home [[Star]]s: a [[Ready]] home [[World]], its [[Ability]]
+	   gives 1 [[Energy]]. Other Stars are [[Wild]]
 	6. [[Alien]] deck: 12 Aliens, [[Defense]] 1, 2 and 3, four of
 	   each
 	7. Setup: [[StartDraw]]

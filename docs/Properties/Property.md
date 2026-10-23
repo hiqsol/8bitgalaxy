@@ -9,8 +9,8 @@ scope: core
           ╭──╥─╥──────╮ Strong End    ╭───────────╮ Hidden End
 Level+EP─►│ 2+1║    1 │ ◄── Primary   │           │
 Class ───►╞══╩═╝   +1 │ ◄── Secondary │           │
+          │   ship    │               │  faction  │
 Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - - 
-│   ship    │               │  faction  │
           │    here   │ Weak End      │/// here //│ Damaged End
           │ T+   ╔═╦══╡ ◄── Class     │///////////│ (dashed)
           │ T    ║ᘔ +T│ ◄── Level+EP  │///////////│
@@ -34,8 +34,7 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	1. **explicit** - printed on the card
 	2. **implicit** - derived from other properties
 	3. **physical** - [[Side]] and [[End]]
-3. [[Component]] properties, of cards and tiles: [[Side]],
-   [[ExtraPrice]], [[Price]]
+3. [[Component]] properties, of cards and tiles: [[Side]], [[Price]]
 
 #### Notes
 

@@ -36,6 +36,5 @@ aliases: [InterStellar Space]
 
 #### Notes
 
-1. The back shows the **Length**, as the back of a [[Star]] shows its
-   Slots: a hint at the Price, while Type and Price stay hidden until
-   [[Explore]]
+1. The back shows the **Length**: a hint at the Price, while Type and
+   Price stay hidden until [[Explore]]

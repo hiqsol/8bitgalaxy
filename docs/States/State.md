@@ -15,3 +15,4 @@ scope: core
 4. [[Star]] states:
 	1. [[ControlledBy]]
 	2. [[Disputed]]
+	3. [[Wild]]

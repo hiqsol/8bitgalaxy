@@ -6,7 +6,7 @@ scope: core
 1. **Energy** is stockable [[Resource]]
 2. **Energy** is a token in [[Hand]], the same token in a [[Star]] is
    [[Materials]], see [[Component]]
-3. Obtained from [[Star]] ability
+3. Obtained from [[World]] abilities
 4. Spent globally from [[Hand]]: any participant can [[Boost]] any
    action with it
 5. Tokens are not cards: they don't count to the [[Hand]] size and
