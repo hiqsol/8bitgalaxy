@@ -18,5 +18,6 @@ scope: core
 #### Notes
 
 1. Like in Twilight Imperium and Eclipse: fronts form and the home
-   Star can be defended
+   Star can be defended, a pinned group that stays meets an
+   [[Intercept]]
 2. Allowing to pass makes deals in games of 3+ players
