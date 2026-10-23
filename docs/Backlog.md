@@ -356,12 +356,13 @@ All `advanced`.
 	  logistics race.
 	- e) Production, Built out: own [[Factory]] and [[Laboratory]] are
 	  empty, the mirror of Science.
-	- f) Production, Wonders: 2 completed [[Hyperstructure]]s.
+	- f) Production, Wonders: 3 completed [[Hyperstructure]]s, the
+	  Homeworld included.
 - [ ] **I77. Hyperstructure count and build.**
 	- a) How many in a game, one copy of each?
 	- b) A shared row, the first to complete one takes it?
-	- c) Built in stages: each [[Create]] adds Culture or Production
-	  power as tokens until they reach its [[Price]]?
+	- c) How an unfinished one lies in its [[Slot]] between its two
+	  [[Create]]s.
 - [ ] **I43. Objectives details.** [[Objective]] (`objectives`):
 	- a) The list of objectives.
 	- b) The number of victory points to win.

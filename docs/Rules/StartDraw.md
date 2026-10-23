@@ -13,6 +13,7 @@ scope: core
 3. Home Star:
 	1. 1 [[Academy]] Colony 1/2
 	2. 1 [[Shipyard]] Base 1/2
+	3. 1 [[Hyperstructure|Homeworld]], built
 4. [[Factory]]:
 	1. 4 Heroes
 	2. 3 Bases
