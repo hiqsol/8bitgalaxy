@@ -4,9 +4,9 @@ scope: core
 ---
 
 1. [[Reserve]]: 10 weakest [[Actor]] cards, shuffled
-	1. 4 ships 1/2
-	2. 2 heroes 1/1
-	3. 4 more TBD
+	1. 4 ships 1/0
+	2. 4 ships 1/2
+	3. 2 heroes 1/1
 2. [[Hand]]: [[DeckBuilding|Draw]] from Reserve
 	1. First player: 3 cards
 	2. Other players: full Hand
