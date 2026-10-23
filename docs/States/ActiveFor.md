@@ -3,7 +3,8 @@ status: draft
 scope: core
 ---
 
-1. **Active for** is a card [[State]] relative to a [[Faction]]
+1. **Active for** is a card and [[Star]] [[State]] relative to a
+   [[Faction]]
 2. Card is **active for** faction when:
 	1. It is not [[Damaged]]
 	2. It is [[ControlledBy]] the faction
@@ -12,10 +13,13 @@ scope: core
    [[Goal]] paths
 4. Cards in [[Reserve]], [[Discard]], [[Factory]] and [[Laboratory]]
    are not **active**
-5. Used by:
+5. [[Star]] is **active for** faction when it is [[ControlledBy]] the
+   faction or [[Disputed]] with the faction among the tied ones
+6. Used by:
 	1. [[PerformAction]]: participants are active cards
 	2. The [[Goal]] paths: [[CulturePoints]] and [[Singularity]] count
 	   active cards
+	3. [[Takeoff]]: to an active Star
 
 #### Notes
 

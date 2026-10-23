@@ -13,6 +13,7 @@ scope: core
 	1. [[ActiveFor]]
 	2. [[ControlledBy]]
 4. [[Star]] states:
-	1. [[ControlledBy]]
-	2. [[Disputed]]
-	3. [[Wild]]
+	1. [[ActiveFor]]
+	2. [[ControlledBy]]
+	3. [[Disputed]]
+	4. [[Wild]]

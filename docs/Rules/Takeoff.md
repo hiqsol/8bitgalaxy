@@ -5,7 +5,7 @@ scope: core
 
 1. **Takeoff** is a way to play a card from [[Hand]], see [[Turn]]
 2. **Takeoff** puts **ONE** [[Unit]] card from [[Hand]] to a free
-   [[Unit]] [[Slot]] in the [[IPS]] of a [[Star]] [[ControlledBy]] the
+   [[Unit]] [[Slot]] in the [[IPS]] of a [[Star]] [[ActiveFor]] the
    player
 3. Player chooses the [[End]] the card is placed with, for free
 4. **Takeoff** has no cost and is not an [[Action]]: the card can act
@@ -19,3 +19,5 @@ scope: core
    [[PerformAction]]
 3. Acting in the same turn means nobody has to remember which cards
    took off
+4. A [[Disputed]] Star is active for the tied factions: a player
+   reinforces a front, a Disputed home too, and keeps a move
