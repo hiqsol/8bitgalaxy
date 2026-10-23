@@ -16,7 +16,12 @@ aliases: [Disabled, Exhausted]
 7. A **Damaged** card stays on the [[Field]] until it is
    [[Destroy]]ed or [[Recover]]ed
 8. Anyone may look at a **Damaged** card: a wreck is no secret
+9. [[Attack]] destroys **Damaged** cards: the attacker selects them in
+   the target [[Star]] as defending participants, each with
+   [[Defense]] 1
 
 #### Notes
 
 1. Disabled, Exhausted are the same state, indistinguishable
+2. Wrecks are cleared by force: three **Damaged** cards defend with 3,
+   an Attack of 3 is a tie and loses, see [[Combat]]

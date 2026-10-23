@@ -34,9 +34,9 @@ scope: core
 	1. Winner can save from damage own direct participants with total
 	   sum of levels **not more** than the advantage
 	2. All other direct participants become [[Damaged]].
-	3. If the attacker wins, their surviving attacking [[Unit]]s move
-	   to free [[Slot]]s of the destination [[Star]], keeping their
-	   [[End]]. Units that don't fit stay in the source.
+	3. If the attacker wins, the attacker may move surviving attacking
+	   [[Unit]]s to free [[Slot]]s of the destination [[Star]],
+	   keeping their [[End]]. The others stay in the source.
 	4. Then [[Deplete]]
 
 #### Notes
