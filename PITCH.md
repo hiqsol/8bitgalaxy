@@ -11,7 +11,7 @@ colonize star systems, and survive a living universe — all in glorious
 You are a young civilization that just discovered Warp drive. The
 galaxy is yours to explore — but the universe has its own plans.
 
-Every turn, the cosmos deals you a hand: resources, alien artifacts,
+Every turn, the cosmos deals you a hand: resources, ancient artifacts,
 mysterious technologies… or mortal danger. An ancient race awakened by
 your
 Warp signature, a supernova threatening your colony, a derelict ship
@@ -23,7 +23,8 @@ tests you, it tries to kill you. Your job is to stay in control.
 1. **Play your hand** — every card either deploys a hero or ship to
    your stars, or starts an action: explore, trade, research, attack,
    build…
-2. **Galaxy moves** — the Galaxy deck plays: events, aliens, derelicts
+2. **Galaxy moves** — the Galaxy deck plays: events, ancients,
+   derelicts
 3. **Draw a new hand** — and keep it ready to defend on rivals' turns
 4. **Repeat** — your deck evolves, your empire grows, threats escalate
 
@@ -58,7 +59,7 @@ turn's
 Galaxy move isn't just "enemies attack" — it's the cosmos generating
 content.
 Sometimes it's a threat (ancient warships), sometimes an opportunity
-(alien tech you can research), sometimes a puzzle (objectives that
+(ancient tech you can research), sometimes a puzzle (objectives that
 reward the bold). You don't fight *against* the universe — you
 *navigate* it.
 

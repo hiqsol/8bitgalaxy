@@ -10,7 +10,7 @@ scope: core
 	2. Game mode: solo, co-op, competitive
 	3. [[Field]] layout: its shape, home [[Star]]s and [[Void]]s
 	4. [[GalaxyDeck]] composition, see [[Galaxy]]
-	5. **Alien deck** and **World deck**, see [[Alien]], [[World]]
+	5. **Ancient deck** and **World deck**, see [[Ancient]], [[World]]
 	6. Starting [[Home]] piles
 3. Scenarios:
 	1. [[Duel]]

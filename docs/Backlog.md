@@ -76,7 +76,7 @@ answers.
 	- f) Ability: [[DeckBuilding|Draw]] 1 card, rare.
 	- g) [[ExtraPrice]] grows with the Ability: Defense 1, Power and
 	  Materials 2, Energy and Technology 3, Draw 4, and so the number
-	  of [[Alien]]s guarding it. Energy is above Power: any class,
+	  of [[Ancient]]s guarding it. Energy is above Power: any class,
 	  anywhere, kept between Turns.
 	- i) First duel deck: 5 Worlds: Energy (ExtraPrice 3),
 	  Military Power (2), Science Power (2), Defense (1), [[Shipyard]]
@@ -494,20 +494,20 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  [[Upgrade]], which slows the race of F2.
 - [ ] **S59. Destroy returns a card to its supply.** [[Destroy]] sends
   a card to the [[Factory]], but a [[World]] goes under the World
-  deck, [[Alien]]s to their discard and a [[Tool]] out of the game:
+  deck, [[Ancient]]s to their discard and a [[Tool]] out of the game:
 	- a) Destroy: a faction card to the top of a Factory pile of the
 	  player's choice, a card of no player under its deck.
-	- b) World 13 and the Alien discard with its reshuffle go, Tool
+	- b) World 13 and the Ancient discard with its reshuffle go, Tool
 	  keeps its own exception.
 - [ ] **S60. Conquest without loops.** A conquest draws Worlds until
   one meets the participants' [[Prerequisites]], then as many
-  [[Alien]] cards as its Price; Aliens take no Slot, print their own
-  Defense, never get Damaged, need a discard and a reshuffle. All
-  Combats of the AI duels were against Aliens, won by the attacker:
-	- a) Aliens are a number: they defend with N × the World's
-	  [[Price]], no Alien deck, the playtest sets N.
-	- b) Lighter: keep the Alien deck, the Aliens defend with their
-	  total and go under the deck after the Combat.
+  [[Ancient]] cards as its Price; Ancients take no Slot, print their
+  own Defense, never get Damaged, need a discard and a reshuffle. All
+  Combats of the AI duels were against Ancients, won by the attacker:
+	- a) Ancients are a number: they defend with N × the World's
+	  [[Price]], no Ancient deck, the playtest sets N.
+	- b) Lighter: keep the Ancient deck, the Ancients defend with
+	  their total and go under the deck after the Combat.
 	- c) The attacker takes the top World: Worlds have no
 	  Prerequisites, P36 gives them none.
 	- d) Or the [[Scenario]] deals a face-down World into the World
@@ -616,8 +616,8 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	- e) [[Enabled]] goes, rules say "face up".
 	- f) [[Direction]] and [[Action]] fold into [[PerformAction]].
 	- g) [[Agenda]] moves to an extension scope, [[World]] and
-	  [[Alien]] have no Faction, [[Faction]] 4 goes: core stops naming
-	  the [[Galaxy]].
+	  [[Ancient]] have no Faction, [[Faction]] 4 goes: core stops
+	  naming the [[Galaxy]].
 	- h) The Cards column of [[Technology]] goes, [[Deck]] holds the
 	  assignments, checkdocs drops the cross-check.
 - [ ] **S74. Bigger cuts, speculative.**

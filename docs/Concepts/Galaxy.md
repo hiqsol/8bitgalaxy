@@ -8,13 +8,13 @@ scope: galaxy
    [[Turn]]
 3. **Galaxy** cards are:
 	1. [[Event]]s
-	2. [[Alien]]s
+	2. [[Ancient]]s
 	3. [[Derelict]]s
 	4. [[Tool]]s
 	5. [[Objective]]s
 	6. More [[Technology]]s
 4. The [[Scenario]] composes the [[GalaxyDeck]], for example:
-	1. **Dangerous**: hostile [[Alien]]s and disasters, for a
+	1. **Dangerous**: hostile [[Ancient]]s and disasters, for a
 	   cooperative or solo game against the Galaxy
 	2. **Resourceful**: helpful [[Derelict]]s, [[Tool]]s and positive
 	   [[Event]]s, for quick duels

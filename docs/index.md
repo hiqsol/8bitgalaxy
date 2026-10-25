@@ -32,10 +32,10 @@ Every page states its `scope` in frontmatter:
 1. `core` - streamlined rules, independent of a faction deck, a
    technology and a scenario
 2. `duel` - minimal playable game on top of core: the [[Duel]]
-   setup, the Human [[Deck]] and its technologies
+   setup, the Human and Alien [[Deck]] and its technologies
 3. `advanced` - more technologies and rules on top of duel
 4. Extensions:
-	1. `galaxy` - [[Galaxy]] deck: [[Event]]s, [[Alien]]s,
+	1. `galaxy` - [[Galaxy]] deck: [[Event]]s, [[Ancient]]s,
 	   [[Derelict]]s
 	2. `objectives` - [[Objective]]s and victory points
 	3. `politics` - [[Politics]]

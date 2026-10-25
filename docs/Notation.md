@@ -18,7 +18,7 @@ scope: meta
 6. `hw1` - Homeworld-1
 7. `t1` - Tool-1
 8. `w1` - World-1
-9. `a2` - Alien with Defense 2, `a?` - Alien not revealed
+9. `a2` - Ancient with Defense 2, `a?` - Ancient not revealed
 10. `1c` - 1 Culture
 11. `1m` - 1 Military
 12. `1n` - 1 None
@@ -38,8 +38,8 @@ scope: meta
 24. [[Home]] piles are words: `Hand`, `Reserve`, `Discard`, `History`
 	1. A pile of a row adds its number: `Factory2`, `Laboratory1`
 	2. A rival's pile adds the player: `B:Hand`
-25. Decks beside the [[Field]] are words: `WorldDeck`, `AlienDeck`,
-    `AlienDiscard`
+25. Decks beside the [[Field]] are words: `WorldDeck`, `AncientDeck`,
+    `AncientDiscard`
 
 ## Cards
 
@@ -178,9 +178,9 @@ S21[h1p@Hand|Recover + s2p@Hand|Prod1 = Prod1] Recover(s1m@u1|Cost=Prod1) -> S21
    winner and the **Advantage**
 4. Then `Outcome`, as for any action: saved cards, [[Damaged]] cards,
    moves into the destination, Deplete
-5. [[Alien]]s defend as `a?` until the reveal, then by their
+5. [[Ancient]]s defend as `a?` until the reveal, then by their
    [[Defense]]: `-> S01[a?]`, `Reveal: s2c, a3`, they go
-   `a3->AlienDeck`
+   `a3->AncientDeck`
 6. Example:
 
 ```text
@@ -195,14 +195,14 @@ S00[s2m@Hand|Mil2 + s1m@u1|Mil1,Range1 + h2m@u2|Mil2,Range2 = Mil5,Range3] Attac
     s2m,h1m->Discard; h2c->B:Discard
 ```
 
-7. Example against [[Alien]]s:
+7. Example against [[Ancient]]s:
 
 ```text
 S00[s2c@Hand|Mil1+1e Hidden + s2m@Hand|Mil1 Hidden + s1m@u3|Mil1,Range1 + h1m@u4|Mil1,Range1 = Mil5,Range2]
     Attack -- Range2 -> S01[a?]
   Reveal: s2c, s2m, a3
   Total: Mil5 against Def3, attacker wins, Advantage 2
-  Outcome: s1m,h1m saved; s1m->S01u1; h1m->S01u3; a3->AlienDeck; s2c,s2m->Discard
+  Outcome: s1m,h1m saved; s1m->S01u1; h1m->S01u3; a3->AncientDeck; s2c,s2m->Discard
 ```
 
 ## Game
@@ -233,7 +233,7 @@ S00[s2c@Hand|Mil1+1e Hidden + s2m@Hand|Mil1 Hidden + s1m@u3|Mil1,Range1 + h1m@u4
 ```text
 Game: First duel
 Player A: Human, home S00
-Player B: Human, home S21
+Player B: Alien, home S21
 
 Round 3, A, Energy 1
   Play:

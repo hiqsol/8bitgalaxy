@@ -9,7 +9,7 @@ scope: core
 	1. The attacker draws cards from the World deck until the Attack's
 	   participants satisfy the [[Prerequisites]] of one, the others
 	   go under the World deck. If none does, there is no conquest
-	2. [[Alien]]s defend the Star
+	2. [[Ancient]]s defend the Star
 	3. If the attacker wins, the World goes into the Star: it is not
 	   **wild** any more
 	4. Else the World goes under the World deck, the Star stays

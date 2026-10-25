@@ -3,8 +3,9 @@ status: draft
 scope: duel
 ---
 
-1. **Deck** lists the cards of the Human [[Faction]], one row per
-   [[End]]
+1. **Deck** lists the cards of the Human and the Alien [[Faction]],
+   one row per [[End]]: both have the same cards, only the printed
+   Faction differs
 2. Columns:
 	1. **Level** - [[Level]] + [[ExtraPrice]], as printed on the card
 	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P

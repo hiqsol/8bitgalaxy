@@ -16,7 +16,7 @@ scope: galaxy
 6. The player resolving **event** has control over anything not
    explicitly stated in the event description.
 7. Event classes:
-	1. [[Military]] - hostile for players from [[Alien]]s - they
+	1. [[Military]] - hostile for players from [[Ancient]]s - they
 	   breed, spread and attack
 	2. [[Culture]] - positive for players, related to growth
 	3. [[Production]] - positive for all, related to development
@@ -30,7 +30,7 @@ scope: galaxy
 2. Events can apply to:
 	1. Each faction
 	2. Player factions
-	3. [[Alien]]s
+	3. [[Ancient]]s
 3. Events can affect:
 	1. Cards: add, remove, move, hide or reveal
 	2. Resources: add or remove reserves
@@ -40,9 +40,9 @@ scope: galaxy
 
 1. **Supernova**: destroy everything in the most occupied star and put
    [[Supernova]] at any preferably unexplored Space around it
-2. **Alien Outbreak**: add 1 [[Alien]] to each Star with an Alien in
-   it
-3. **Alien Invasion**: add 1 Alien [[Unit]] openly to every bordering
-   Star and attack where possible
-4. **Alien production**: Aliens produce 2 [[Materials]] in every
+2. **Ancient Outbreak**: add 1 [[Ancient]] to each Star with an
+   Ancient in it
+3. **Ancient Invasion**: add 1 Ancient [[Unit]] openly to every
+   bordering Star and attack where possible
+4. **Ancient production**: Ancients produce 2 [[Materials]] in every
    [[Star]] [[ControlledBy]] them

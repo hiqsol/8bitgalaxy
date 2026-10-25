@@ -13,8 +13,8 @@ scope: core
 	4. Creation of devastating weaponry
 2. But use of Warp is visible through all the universe, so:
 	1. All Warp-capable civilizations see each other's activity
-	2. Including the old Alien civilization
-3. Aliens threaten all other civilizations because they:
+	2. Including the **Ancients**, an old civilization
+3. Ancients threaten all other civilizations because they:
 	1. Have far more advanced technologies
 	2. Want to exterminate all newcomers
 4. New civilizations have to survive and prosper, and choose to ally
