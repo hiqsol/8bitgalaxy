@@ -5,9 +5,11 @@ scope: core
 
 1. **Price** is implicit [[Component]] [[Property]] derived from
    [[ExtraPrice]]
-2. Card **Price** = strong [[End]] [[Level]] + its [[ExtraPrice]]: the
-   Cost of [[Research]], [[Create]] and [[Upgrade]]
-3. [[Space]] **Price** is printed on its front: the Cost of
+2. **Price** of an [[End]] = its [[Level]] + its [[ExtraPrice]]: an
+   [[Upgrade]] pays the Price of an End
+3. Card **Price** = Price of its strong End: the Cost of [[Research]]
+   and [[Create]]
+4. [[Space]] **Price** is printed on its front: the Cost of
    [[Explore]]
 
 #### Notes

@@ -473,13 +473,14 @@ One batch after the playtest, only for pages that confused play.
 	  engine building** everywhere.
 	- b) No rule changes; the shorter description avoids promising a
 	  mechanic the game does not have.
-- [ ] **S35. One build direction.** [[Create]] 6 and [[Upgrade]] 4
-  each define directions for the same two actions, [[Settle]] adds
-  a third; today a hub in a [[Disputed]] Star still builds Actors
-  (it is the destination) but not Structures (it is the source):
+- [ ] **S35. One build direction.** [[Create]] 6 defines two
+  directions, [[Upgrade]] 4 one, [[Settle]] adds a third; today a
+  hub in a [[Disputed]] Star still creates Actors (it is the
+  destination) but not Structures (it is the source):
 	- a) The source is the hub's [[Star]], the destination is the Star
-	  of the card: where a [[Structure]] is or goes; a card in
-	  [[Home]] has the hub's Star as both ends, [[Distance]] 0.
+	  of the card: where a [[Structure]] is or goes, as Upgrade 4
+	  has it; a card in [[Home]] has the hub's Star as both ends,
+	  [[Distance]] 0.
 	- b) Settle: the Ship's Star is both ends, no hub.
 	- c) State it once, in [[Hub]]; the three action pages keep only
 	  requirements, Cost and outcome.
