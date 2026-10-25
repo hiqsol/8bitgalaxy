@@ -48,28 +48,15 @@ answers.
 
 ### Setup
 
-- [ ] **I5. Setup incomplete** in [[StartDraw]]: → P27
-	- a) 4 [[Reserve]] cards are TBD, cards aren't named from the
-	  [[Deck]].
-	- b) 4 Heroes in [[Factory]], while the Deck has only 2 Heroes
-	  without [[Prerequisites]].
-	- c) [[Laboratory]] is incomplete.
-	- d) No first player rule.
+- [ ] **I5 d. First player.** [[StartDraw]] has no first player
+  rule. → P27
 - [ ] **P27. First duel setup** in [[StartDraw]], from the [[Deck]]:
-	- a) [[Reserve]]: Ship 2M, 2C, 2P, 2S, Hero 1M, 1P and 4
-	  technology-free starters (level 1/1, Primary 1, no Secondary),
-	  one per class.
-	- b) Home [[Star]]: Colony 2C ([[Academy]]) and Base 2P
-	  ([[Shipyard]]), both [[Ready]].
-	- c) [[Factory]] (no [[Prerequisites]]): Hero 2M, 2C, Base 2M, 2C,
-	  2S, Colony 2M, 2P, 2S.
-	- d) [[Laboratory]] (with [[Prerequisites]]): all level 3-4 cards.
 	- e) One pile per [[Type]], lowest [[Level]] on top.
 	- f) First player is random.
 - [ ] **I60. Advanced technologies in the first duel.** They are not
   ignored, so the first duel needs their rules or must avoid their
-  cards: e.g. P27 Reserve has Ship 2C ([[Trade]]), Ship 2P
-  ([[Extract]]), Hero 1P weak ([[Recycle]]).
+  cards: e.g. the [[StartDraw]] Reserve has Ship 2C ([[Trade]]), Ship
+  2P ([[Extract]]), and Hero 2P weak ([[Recycle]]) if chosen.
 
 ### World deck
 
@@ -185,8 +172,8 @@ answers.
 Questions a played game answers better than a review.
 
 - [ ] **I46. Deck thinning by Takeoff.** A player can take off weak
-  cards and cycle only strong ones. Free [[Slot]]s limit it. To be
-  worked out in [[GameBalance]].
+  cards, the [[Tool]]s first, and cycle only strong ones. Free
+  [[Slot]]s limit it. To be worked out in [[GameBalance]].
 - [ ] **I79 b. Legacy thins the deck** like I46: keep [[Legacy]] in
   `objectives` or drop it?
 - [ ] **I75 a. Actions per Turn.** [[GameBalance]] expects about 5
@@ -413,21 +400,13 @@ All `advanced`.
 - [ ] **P58. Traits instead of new Types.** Variety via [[Trait]]s:
 	- a) `Unique`: one per faction on the [[Field]], for flagships and
 	  top Heroes (TI).
-	- b) `Consumable`: [[Destroy]] after use, replaces the [[Tool]]
-	  type: probes, mines, missiles.
+	- b) `Consumable`: [[Destroy]] after use: probes, mines,
+	  missiles, Galaxy [[Tool]]s.
 	- c) `Immovable`: can't move or be cargo, replaces the third
 	  mobility type in [[Range]], for Hyperstructures.
 	- d) Card orientations are all taken (strong and weak front,
 	  Damaged and Hidden back), so new states should come from
 	  position, like [[ActiveFor]] and [[Pinning]], not markers.
-- [ ] **S28. Unit instead of Actor.** If P58 b replaces [[Tool]] with
-  a `Consumable` trait, every [[Unit]] is an [[Actor]]:
-	- a) Merge Actor into Unit and use Unit for movement, starters and
-	  Control.
-	- b) Remove one Role level, the Actor page and the nested Role
-	  lists.
-	- c) Ships and Heroes keep all current rules; Consumable Units are
-	  destroyed after use by their trait.
 
 ### Stubs and underdescribed
 
@@ -483,12 +462,10 @@ One batch after the playtest, only for pages that confused play.
 	- b) Keep the flavour words in art or notes only, if wanted.
 	- c) This removes four terms without removing a rule or decision.
 - [ ] **S32. One meaning of starter.** **Starter** is both the role a
-  card has in every action and a [[Starter|Technology]]; P27 also
-  calls four initial deck cards "starters":
+  card has in every action and a [[Starter|Technology]]:
 	- a) Keep **starter** only for the card selected to begin an
 	  action.
 	- b) Rename the Technology to **Field Start** or **Initiative**.
-	- c) Call the P27 cards **starting cards**.
 - [ ] **S33. Drop worker placement from the genre.** [[index]] calls
   the game worker placement, while [[ComparisonReview]] correctly says
   Slots limit presence and are not action spaces:

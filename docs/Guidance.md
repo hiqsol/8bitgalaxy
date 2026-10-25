@@ -10,8 +10,7 @@ the recommended answers. Edit any answer, then apply.
 
 ## Blocks the first duel
 
-G1. I5, P27 - yes, setup as P27 a-f. Call the 4 technology-free
-    Reserve cards "starting cards", not starters (S32 c).
+G1. I5 d, P27 e, f - yes.
 G2. I60 - in the first duel a printed technology that is not `core`
     or is a stub is blank. This covers P59 for the duel, and keeps
     Materials out of it.
