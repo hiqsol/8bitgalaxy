@@ -51,7 +51,10 @@ scope: meta
 	2. `Depleted`, `Damaged`, `Hidden`: `b2p Depleted`
 4. A card nobody knows yet is written by its back: `Hidden Unit`,
    `Hidden Structure`
-5. Forms:
+5. A card in [[Hand]] gives one [[End]], what it gives shows which:
+   `s2m@Hand|Sci1` is s2m on its weak end
+6. A one-ended card has only its end: `Ship-1m`, short `s1m`
+7. Forms:
 
 Full                 |short | normal  | alternative
 ---------------------|------|---------|--------
@@ -96,12 +99,27 @@ Homeworld-2a/1n      | hw2c | hw2c/1n | hw2c1n
 	11. The outcome follows `;`: the other changes, [[Deplete]]
 	    included
 	12. `into` becomes: `c2s into c4s`
+	13. A [[Technology]] is its flavour name: `|Recon`, `|Survey`,
+	    `|Academy`, `|Shipyard`, `|Grow`, `|Recover`
+	14. A [[Prerequisites]] pair is a Level and a Class: the card
+	    gives `|2m`, the requirement lists the pairs: `Pre=1c,2m`
+	15. Every group has its own total, the totals add up:
+	    `S01[s2m@u1|Mil1,Range2 = Mil1,Range2]
+	    + S00[c2m@s4|Mil2 = Mil2]`
+	16. Direct participants in the destination are a group of their
+	    own, with no Range: `+ S01[h1m@u3|Grow,Cul1]`
+	17. A Hand card that gives its Range to a remote group is in
+	    that group: `+ S00[s2s@Hand|Range2 + h1m@u4|Recon,Range1]`
+	18. A Structure that depletes is written `Depleted`, a Unit that
+	    depletes goes `->Discard`
 5. Values are a word and a number:
 	1. [[Power]]: `Mil`, `Cul`, `Prod`, `Sci`
 	2. Properties: `Range`, `Size`, `Def`, `Price`, `Cost`
 6. A long play breaks into indented lines
 7. An [[ImmediateAction]] starts with `Immediate`
-8. Examples:
+8. `#` starts a comment, e.g. a play taken back:
+   `# taken back: Create c2p, it lies under c4c`
+9. Examples:
 
 ```text
 Move, a Colony as cargo:
@@ -117,7 +135,7 @@ S21[s2s@Hand|Sci2 + c2s@s1|Sci2 = Sci4] Research(c4s@Laboratory1|Price=Sci4) -> 
 
 Upgrade:
 S21[s2c@Hand|Cul2 = Cul2] Upgrade(c2s@s2 into c4s|Cost=Cul2) -> S21s2;
-  c2s->Factory1; s2c->Discard
+  c4s Depleted; c2s->Factory1; s2c->Discard
 
 Settle:
 S01[s1c@Hand|Cul1 + s2c@u1|Settle,Cul2 = Cul3] Create(c2c|Price=Cul2) -> S01s1;
@@ -126,6 +144,28 @@ S01[s1c@Hand|Cul1 + s2c@u1|Settle,Cul2 = Cul3] Create(c2c|Price=Cul2) -> S01s1;
 Manage:
 S00[s1m@Hand|Mil1 = Mil1] Manage(rotate s2m@u1|Cost=Mil1) -> S00;
   s2m weak; s1m->Discard
+
+Manage, a swap of two Structures:
+S00[s1s@Hand|Sci1+1e = Sci2] Manage(shift c4m@s2->s4, c2c@s4->s2|Cost=Sci2) -> S00;
+  s1s->Discard
+
+Research between Laboratory piles:
+S21[s2m@Hand|Sci1 = Sci1] Research(s4p@Laboratory1|Cost=Sci1) -> Laboratory3;
+  s2m->Discard
+
+Create an Actor, it goes to the Discard:
+S21[s2s@Hand|Prod1 + b2p@s3|Shipyard + s1p@u1|Prod1 + s2p@u2|Prod1+2e = Prod5]
+  Create(s4m|Price=Prod5) -> Discard; s2s,s1p,s2p->Discard; b2p Depleted
+
+Upgrade in another Star, the hub in the source:
+S00[s1c@Hand|Range1 + s1p@Hand|Range1 + c2c@s2|Academy = Range2]
+  + S01[h1m@u3|Grow,Cul1+1e = Cul2]
+  Upgrade(c2s@S01s1 into c4s|Cost=Cul2) -- Range2 -> S01s1;
+  s1c,s1p,h1m->Discard; c2c,c4s Depleted; c2s->Factory3
+
+Recover:
+S21[h1p@Hand|Recover + s2p@Hand|Prod1 = Prod1] Recover(s1m@u1|Cost=Prod1) -> S21;
+  h1p,s2p->Discard; s1m Enabled
 ```
 
 ## Combat
@@ -138,7 +178,10 @@ S00[s1m@Hand|Mil1 = Mil1] Manage(rotate s2m@u1|Cost=Mil1) -> S00;
    winner and the **Advantage**
 4. Then `Outcome`, as for any action: saved cards, [[Damaged]] cards,
    moves into the destination, Deplete
-5. Example:
+5. [[Alien]]s defend as `a?` until the reveal, then by their
+   [[Defense]]: `-> S01[a?]`, `Reveal: s2c, a3`, they go
+   `a3->AlienDeck`
+6. Example:
 
 ```text
 S00[s2m@Hand|Mil2 + s1m@u1|Mil1,Range1 + h2m@u2|Mil2,Range2 = Mil5,Range3] Attack -- Range2 -> S01[s1p@u2|Def1]
@@ -152,28 +195,47 @@ S00[s2m@Hand|Mil2 + s1m@u1|Mil1,Range1 + h2m@u2|Mil2,Range2 = Mil5,Range3] Attac
     s2m,h1m->Discard; h2c->B:Discard
 ```
 
+7. Example against [[Alien]]s:
+
+```text
+S00[s2c@Hand|Mil1+1e Hidden + s2m@Hand|Mil1 Hidden + s1m@u3|Mil1,Range1 + h1m@u4|Mil1,Range1 = Mil5,Range2]
+    Attack -- Range2 -> S01[a?]
+  Reveal: s2c, s2m, a3
+  Total: Mil5 against Def3, attacker wins, Advantage 2
+  Outcome: s1m,h1m saved; s1m->S01u1; h1m->S01u3; a3->AlienDeck; s2c,s2m->Discard
+```
+
 ## Game
 
 1. A game record starts with a header, one item per line: `Game`,
    the [[Scenario]], then each `Player` with its [[Faction]] and home
    Star
-2. A [[Turn]] starts with its round and player: `Round 3, A`
+	1. `Stars:` the Stars with their kind and split, as known at the
+	   end
+	2. `Setup A:` the Structures each player starts with
+2. A [[Turn]] starts with its round, player and [[Energy]]:
+   `Round 3, A, Energy 2`
 3. Then its phases as words, `Play`, `Check`, `Draw`, `Restore`, each
    with its plays, one per line
 	1. A phase without a change is not written
-	2. `Draw with Shuffle`: the [[Reserve]] ran out, see
+	2. `Takeoff: s2m -> S00u2` in `Play`
+	3. `Draw with Shuffle`: the [[Reserve]] ran out, see
 	   [[DeckBuilding]]
+	4. `Draw: s2s,s1m -> Discard`: the Hand cards not used
+	5. `Check: Singularity: c4m@S00s4, c4c@S00s3, c4s@S01s1,
+	   s4p@Hand`, see [[Singularity]]
 4. A player who can't move: `A can not make a move`, see [[Goal]]
 5. The record ends with the result: `Result: A wins by Military`,
    `Result: draw`
-6. Example:
+6. A comment names the ruling it follows: `# RG1-5: ...`
+7. Example:
 
 ```text
 Game: First duel
 Player A: Human, home S00
 Player B: Human, home S21
 
-Round 3, A
+Round 3, A, Energy 1
   Play:
     Takeoff: s2m -> S00u2
     S00[s2s@Hand|Survey + c2s@s1|Sci2 = Sci2] Explore(Price=Sci2) -> S00o3; ...
