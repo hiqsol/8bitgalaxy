@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: duel
 ---
 
 1. **MegaYard** is [[Production]] [[Hub]]: a full **Industrial hub**,

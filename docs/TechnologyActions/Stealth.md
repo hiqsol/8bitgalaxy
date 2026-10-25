@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: duel
 ---
 
 1. **Stealth** is [[Military]] [[TechnologyAction]]
@@ -13,5 +13,6 @@ scope: core
 
 #### Notes
 
-1. Stealth makes hidden moves on the [[Field]] possible, [[Explore]]
+1. **Stealth** is the only way to hide a card on the [[Field]], at
+   [[Takeoff]] or later: it makes hidden moves possible, [[Explore]]
    counters it

@@ -11,12 +11,11 @@ aliases: [Disabled, Exhausted]
 3. Card becomes **damaged** in [[Combat]], when the winner doesn't
    save it
 4. **Damaged** is opposite to [[Enabled]]
-5. [[Recover]] makes card [[Enabled]]
-6. A Damaged card that becomes Damaged again is [[Destroy]]ed
-7. A **Damaged** card stays on the [[Field]] until it is
-   [[Destroy]]ed or [[Recover]]ed
-8. Anyone may look at a **Damaged** card: a wreck is no secret
-9. [[Attack]] destroys **Damaged** cards: the attacker selects them in
+5. A Damaged card that becomes Damaged again is [[Destroy]]ed
+6. A **Damaged** card stays on the [[Field]] until it is
+   [[Destroy]]ed or [[Enabled]] again
+7. Anyone may look at a **Damaged** card: a wreck is no secret
+8. [[Attack]] destroys **Damaged** cards: the attacker selects them in
    the target [[Star]] as defending participants, each with
    [[Defense]] 1
 

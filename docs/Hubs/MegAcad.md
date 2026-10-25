@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: duel
 ---
 
 1. **MegAcad** is [[Culture]] [[Hub]]: a full **Social hub**, for

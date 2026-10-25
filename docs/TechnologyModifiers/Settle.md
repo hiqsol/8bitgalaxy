@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: duel
 ---
 
 1. **Settle** is [[Culture]] and [[Production]] [[TechnologyModifier]]
@@ -21,3 +21,4 @@ scope: core
    [[Academy]] or the [[Shipyard]]
 2. The source is usually the same Star, at [[Distance]] 0, the Ship
    there gives control of it
+3. A rival **Settle** in a controlled [[Star]] can be [[Intercept]]ed

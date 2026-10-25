@@ -22,5 +22,5 @@ scope: core
 
 1. Moving in is not a free win: the controller answers at once, at the
    rival's [[Turn]], with own cards in the Star and from [[Hand]]
-2. A rival [[Move]], [[Create]] or [[Settle]] into a controlled Star
-   can be intercepted, a rival [[Takeoff]] can't come there
+2. A rival [[Move]] or [[Create]] into a controlled Star can be
+   intercepted, a rival [[Takeoff]] can't come there

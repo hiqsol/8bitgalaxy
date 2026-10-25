@@ -10,7 +10,7 @@ scope: core
 	1. Moving - can move on itself, **Range** > 0: [[Ship]], [[Hero]]
 	2. Carried - can't move on itself but can be cargo of a [[Move]],
 	   **Range** = 0: [[Base]], [[Colony]]
-	3. Immovable - can not be moved: [[Hyperstructure]]
+	3. Immovable - can not be moved: [[World]]
 4. Default value:
 	1. Current [[Level]] for moving cards
 	2. 0 for [[Structure]]

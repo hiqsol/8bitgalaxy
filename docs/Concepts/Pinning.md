@@ -9,8 +9,8 @@ scope: core
 	2. The rival can allow the group to pass
 2. **Pinning** stops moving cards only, on every route through Stars:
    [[Move]] and [[Attack]]
-	1. Other [[Range]] checks ignore it: [[Explore]] reach, a remote
-	   [[Support]] group, [[Create]] placement
+	1. Other [[Range]] checks ignore it, e.g. a remote [[Support]]
+	   group, [[Create]] placement
 3. [[Hidden]] cards neither pin nor get pinned
 4. A player can reveal own [[Hidden]] cards in a Star a rival group is
    passing: revealed [[Military]] [[Actor]]s pin it

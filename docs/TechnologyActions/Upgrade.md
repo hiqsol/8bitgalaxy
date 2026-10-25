@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: duel
 ---
 
 1. **Upgrade** is [[Culture]] and [[Production]] [[TechnologyAction]]
@@ -24,6 +24,7 @@ scope: core
 	5. **Enhance** pays any End: its Level can be greater, equal or
 	   lower than the current Level of the old card, a downgrade is
 	   allowed
+	6. The **hub** for the card, as for [[Create]], see [[Hub]]
 6. **Cost**: [[Price]] of the paid End **minus** the current [[Level]]
    of the old card, at least 1
 7. **Outcome**:
@@ -38,11 +39,12 @@ scope: core
 2. A [[Structure]] paid on its strong End comes [[Ready]], an
    **Upgrade** restores a Depleted one, on its weak End it comes
    [[Depleted]] and costs 1 less; a [[Ship]]'s Ends cost the same
-3. One Level at a time slows the [[Social]] cards: from a strong End
-   a **Grow** lands on the weak End of the next tier, a rotation
-   brings the strong End, [[Restore]] for a [[Colony]], [[Manage]]
-   for a [[Hero]]. A Social card takes three **Grows** and three
-   rotations from Level 2 to its crown, a [[Ship]] or a [[Base]] one
-   **Enhance**
+3. A higher [[Social]] card comes only by **Grow** of a created one,
+   see [[Create]]. One Level at a time slows the Social cards: from a
+   strong End a **Grow** lands on the weak End of the next tier, a
+   rotation brings the strong End, [[Restore]] for a [[Colony]],
+   [[Manage]] for a [[Hero]]. A Social card takes three **Grows** and
+   three rotations from Level 2 to its crown, a [[Ship]] or a [[Base]]
+   one **Enhance**
 4. An upgraded Actor stays on the Field and acts in the same
    [[Turn]]

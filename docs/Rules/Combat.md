@@ -8,18 +8,14 @@ scope: core
 	1. selects **attacking participants** and supporters
 	2. selects **defending participants**: direct participants from
 	   the defender's cards in the target [[Star]]
-	3. When the target [[Star]] has an [[Academy]] [[ControlledBy]]
-	   the defender, defending participants can also be selected from
-	   the defender's [[Discard]], [[Reserve]] or [[Hand]]
 3. Then the **defender** chooses to pass or add more participants and
    supporters
 4. More players can join the **combat**:
 	1. On any side
 	2. They must have active [[Military]] [[Actor]]s in the Star
 5. Cards from [[Hand]] join as supporters, also at rival's [[Turn]].
-   Parties can bluff by adding [[Hidden]] cards from [[Hand]]:
-	1. Hidden card can be revealed by its player at any time
-	2. Player can reveal rival's hidden cards with [[Explore]]
+   Parties can bluff by adding [[Hidden]] cards from [[Hand]], a
+   hidden card can be revealed by its player at any time
 6. Parties can [[Boost]] with cards at the moment when they add the
    card, not later
 7. At following rounds parties continue to pass or add more
@@ -43,13 +39,11 @@ scope: core
 
 1. Combat has no random resolution, but hidden commitments keep the
    result from being predetermined.
-2. Multiple rounds make [[Hidden]] cards and [[Explore]] relevant.
+2. Multiple rounds make [[Hidden]] cards relevant.
 3. Players make decisions, take risks, prepare surprises and bluff.
-4. Attacking the [[Academy]] reaches [[Hero]]es in the deck, so
-   leaders can be defeated, see [[Goal]]
-5. Direct participants hold ground like chess pieces: survivors stay
+4. Direct participants hold ground like chess pieces: survivors stay
    or move in
-6. Both sides can add any cards, but a non-[[Military]] card has no
+5. Both sides can add any cards, but a non-[[Military]] card has no
    [[AttackPower]]: it attacks with 0, though it can [[Boost]], and
    defends with 1, see [[Defense]]. It joins an attack for its
    technologies, Range and Capacity, or to move in

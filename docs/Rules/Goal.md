@@ -29,12 +29,10 @@ scope: core
    the game that reaches [[Twilight]]
 3. Culture points count the current state: a lost Colony stops
    counting, like temples in Kemet
-4. Losing all [[Hero]]es is inspired by checkmate in Chess:
-	1. Like check: a player whose last Hero got [[Damaged]] has one
-	   turn to [[Recover]] it, the check comes at **Check** phase of
-	   own Turn
-	2. Heroes in the deck are reached by attacking the [[Academy]],
-	   see [[Combat]]
+4. Losing all [[Hero]]es is inspired by checkmate in Chess. Like
+   check: a player whose last Hero got [[Damaged]] has one turn to
+   make it [[Enabled]] again, the check comes at **Check** phase of
+   own Turn
 5. Losing the home [[Star]] is a heavy loss by intention, a goal for
    rivals, but it doesn't end the game, neither does losing the
    [[Hub|hubs]]: the faction still moves and can defeat the rival
@@ -44,5 +42,4 @@ scope: core
    for [[Takeoff]] and no source for an action from [[Hand]]
 7. An empty [[Hand]] at the start of own [[Turn]] can end the game
    too, like an unexpected checkmate: spending the whole Hand on
-   defense in [[Combat]] or losing it to [[ForceDiscard]] is a real
-   risk
+   defense in [[Combat]] is a real risk

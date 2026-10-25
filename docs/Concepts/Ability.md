@@ -11,4 +11,4 @@ scope: core
 	1. Card print: [[PrimaryAbility]], [[SecondaryAbility]]
 	2. Card [[Level]]: [[Range]], [[Capacity]] and [[Level]] with
 	   [[Class]] for [[Prerequisites]]
-	3. [[Space]]: its Type, e.g. [[Asteroids]] allow [[Extract]]
+	3. [[Space]]: given by its Type

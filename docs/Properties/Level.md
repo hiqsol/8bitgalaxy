@@ -17,5 +17,3 @@ scope: core
 
 1. After [[Takeoff]] the other End is inside the pocket of the
    [[Slot]]: a card shows one Level, so it gives one Level everywhere
-2. Tiers shape the [[Deck]]: from tier II each tier holds half the
-   cards of the tier below

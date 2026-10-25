@@ -10,39 +10,7 @@ scope: core
 	2. Game mode: solo, co-op, competitive
 	3. [[Field]] layout: its shape, home [[Star]]s and [[Void]]s
 	4. [[GalaxyDeck]] composition, see [[Galaxy]]
-3. **First duel**:
-	1. 2 players, competitive, no [[GalaxyDeck]]
-	2. [[Field]]: 7 Stars in rows of 2, 3 and 2: `00 01`, `10 11 12`,
-	   `20 21`
-	3. Home Stars in opposite corners: `00` and `21`
-	4. Every [[Space]] has length 1, [[Void]]s are placed as in
-	   `game.png`
-	5. Home [[Star]]s: a [[Hyperstructure|Homeworld]], its [[Ability]]
-	   gives 1 [[Energy]]. Other Stars are [[Wild]]
-	6. [[Alien]] deck: 12 Aliens, [[Defense]] 1, 2 and 3, four of
-	   each
-	7. Setup: [[StartDraw]]
-	8. Field schematic: hex is a [[Star]], `[ ]` home Star, each side
-	   has 2 [[Space]] tiles, one per symbol:
-```
-		     ╱ ╲   ╱ ╲
-		    ╱   ╲ ╱   ╲
-		   │[00] │ 01  │
-		   │     │     │
-		  ╱ ╲   ╱ ╲   ╱ ╲
-		 ╱   ╲ ╱   ╲ ╱   ╲
-		│ 10  │ 11  │ 12  │
-		│     │     │     │
-		 ╲   ╱ ╲   ╱ ╲   ╱
-		  ╲ ╱   ╲ ╱   ╲ ╱
-		   │ 20  │[21] │
-		   │     │     │
-		    ╲   ╱ ╲   ╱
-		     ╲ ╱   ╲ ╱
-```
-
-#### Notes
-
-1. First duel layout is shown in `game.png`, see [[index]]
-2. [[Void]]s keep the home Stars apart: there is no short route
-   between them
+	5. **Alien deck** and **World deck**, see [[Alien]], [[World]]
+	6. Starting [[Home]] piles
+3. Scenarios:
+	1. [[Duel]]

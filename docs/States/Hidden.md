@@ -19,15 +19,12 @@ scope: core
 	1. When it takes part in any action other than [[Move]], in
 	   [[Combat]] at the reveal, not at the start
 	2. By its player at any time of own [[Turn]], for free
-	3. By rival's [[Explore]], if the rival chooses so
-	4. By its player when a rival group passes its [[Star]], to pin
+	3. By its player when a rival group passes its [[Star]], to pin
 	   the group, see [[Pinning]]
 
 #### Notes
 
 1. A hidden card moves with minimal values because the rival can't
    know or check what card it is
-2. Cards get hidden on the [[Field]] only by [[Stealth]]: at
-   [[Takeoff]] or later
-3. Range 1 doesn't reach the next [[Star]]: a hidden card leaves with
+2. Range 1 doesn't reach the next [[Star]]: a hidden card leaves with
    [[Support]] or inside a group, whose [[Range]] is the sum

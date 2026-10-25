@@ -30,7 +30,6 @@ scope: core
    [[Depleted]], it gives its abilities as a participant, [[Restore]]
    turns it back
 2. A World is [[ActiveFor|active]] for its controller, so it
-   counts for the controller's [[Goal]] paths, but its Level stays
-   below the Level 8 crowns of [[Singularity]], see [[Deck]]
+   counts for the controller's [[Goal]] paths
 3. In a [[Disputed]] Star nobody controls the World: nobody uses
    it and it counts for nobody

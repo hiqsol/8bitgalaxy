@@ -19,14 +19,13 @@ aliases: [InterStellar Space]
 	   along the edges
 4. **Space** tiles are hidden (turned face down) at the beginning of
    the game
-5. They can be revealed with [[Explore]] action
-6. Cards can't stop in a **Space**, they only pass a revealed one
-7. **Space** tiles have multiple properties:
-	1. **Price**: the Cost to [[Explore]]
+5. Cards can't stop in a **Space**, they only pass a revealed one
+6. **Space** tiles have multiple properties:
+	1. [[Price]]
 	2. **Type**
 	3. **Length** - independent of Type, shown on the back side
 	4. [[Ability]] - given by its Type
-8. Types of space:
+7. Types of space:
 	1. Normal
 	2. [[Asteroids]]
 	3. Nebula
@@ -37,4 +36,4 @@ aliases: [InterStellar Space]
 #### Notes
 
 1. The back shows the **Length**: a hint at the Price, while Type and
-   Price stay hidden until [[Explore]]
+   Price stay hidden until the tile is revealed

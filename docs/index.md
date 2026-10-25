@@ -13,8 +13,8 @@ scope: core
 3. These docs are the source of truth for the rules
 4. Game is played by 1+ players with different options, see
    [[Scenario]]
-5. First focus: minimal playable duel without the [[GalaxyDeck]],
-   playable with AI
+5. First focus: the [[Duel]], minimal playable game without the
+   [[GalaxyDeck]], playable with AI
 
 #### Inspiration
 
@@ -29,15 +29,18 @@ scope: core
 
 Every page states its `scope` in frontmatter:
 
-1. `core` - minimal playable game
-2. `advanced` - more technologies and rules on top of core
-3. Extensions:
+1. `core` - streamlined rules, independent of a faction deck, a
+   technology and a scenario
+2. `duel` - minimal playable game on top of core: the [[Duel]]
+   setup, the Human [[Deck]] and its technologies
+3. `advanced` - more technologies and rules on top of duel
+4. Extensions:
 	1. `galaxy` - [[Galaxy]] deck: [[Event]]s, [[Alien]]s,
 	   [[Derelict]]s
 	2. `objectives` - [[Objective]]s and victory points
 	3. `politics` - [[Politics]]
-4. `meta` - [[Backlog]] and documentation support
-5. `idea` - out of the rules, kept in `ideas/` for later
+5. `meta` - [[Backlog]] and documentation support
+6. `idea` - out of the rules, kept in `ideas/` for later
 
 #### Status
 

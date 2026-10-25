@@ -29,6 +29,10 @@ mention the cases that change it: the specific page states its
 exception on its own, e.g. Distance doesn't mention Void, the Void
 page says a route can't pass it; Turn doesn't mention Trade, the
 Trade page says the partner's Hand cards join at the starter's Turn.
+Same for scopes: a `core` page doesn't depend on the Human Deck, a
+specific technology or the first duel setup, those live on `duel`
+pages, e.g. Combat doesn't mention Explore, Explore says it reveals
+Hidden cards in a Combat. A catalog may list pages of any scope.
 Indent nested rules with tabs.
 Don't miss my input, organize it all into rules/notes.
 

@@ -37,7 +37,8 @@ from a played game, not from a review.
 
 ## Next step
 
-1. Play the first duel, on paper or AI-vs-AI from the `core` notes
+1. Play the first duel, on paper or AI-vs-AI from the `core` and
+   `duel` notes
 2. Note every rule that stopped play or was read two ways
 3. Only those notes become review items
 
@@ -259,7 +260,7 @@ The first duel keeps Spaces of length 1.
 	  keeps length 1: tier I and II cards still cross the map.
 	- b) Lengthen when tier III and IV cards are in play, after
 	  playtests of the 56-card Deck.
-- [ ] **P35. First duel Space set** in [[Scenario]], after P24,
+- [ ] **P35. First duel Space set** in [[Duel]], after P24,
   replacing "every Space has length 1":
 	- a) 24 tiles on the inner sides, shuffled and placed face down.
 	  Outer sides stay empty: the edge of the galaxy.
@@ -308,7 +309,7 @@ The first duel keeps Spaces of length 1.
 	- c) [[Tactics]] to [[Standby]] in the [[Technology]] table have
 	  no cards yet.
 	- d) All are `advanced`, [[Legacy]] is `objectives`: should some
-	  go to `core`?
+	  go to `duel`?
 
 ### Economy
 

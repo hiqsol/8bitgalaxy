@@ -27,5 +27,4 @@ scope: core
    word: every rival has exactly one Turn to answer, and Culture
    counts the current state, so the last move is strong
 6. **Twilight** is far by intention, a long game like Twilight
-   Imperium: the [[Laboratory]] starts with 28 cards, see
-   [[StartDraw]], and [[Singularity]] usually comes first
+   Imperium: [[Singularity]] usually comes first

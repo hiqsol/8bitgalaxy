@@ -5,11 +5,10 @@ scope: core
 
 1. **Hub** is a kind of [[Technology]] that provides the [[Create]]
    [[TechnologyAction]] for cards of one [[Origin]]
-2. **Hubs** are:
-	1. **Industrial hub**: [[Shipyard]], [[MegaYard]]
-	2. **Social hub**: [[Academy]], [[MegAcad]]
-3. [[Create]] and [[Upgrade]] require the **hub** for the card and are
-   paid in its [[Class]]
+2. **Hubs** are **Industrial hubs** and **Social hubs**, by their
+   [[Origin]], the list is in [[Technology]]
+3. [[Create]] requires the **hub** for the card and is paid in its
+   [[Class]]
 
 #### Notes
 

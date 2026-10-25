@@ -18,19 +18,19 @@ scope: core
 
 | Technology | Kind | Class | Scope | Cards |
 |------------|------|-------|-------|-------|
-| [[Academy]] | Hub | C | core | Colony 2C, Base 4C |
-| [[MegAcad]] | Hub | C | core | - |
-| [[Shipyard]] | Hub | P | core | Base 2P |
-| [[MegaYard]] | Hub | P | core | Colony 4P |
-| [[Upgrade]] | Action | C, P | core | Hero 2M weak, Hero 2C weak, Hero 4M weak, Hero 4C strong, Hero 4P strong, Hero 4S weak, Ship 4C strong, Ship 4P strong |
-| [[Recover]] | Action | C, P | core | Hero 2C strong, Hero 2P strong, Hero 4M weak, Hero 4C strong |
-| [[Retreat]] | Action | M | core | Ship 2M strong |
-| [[Explore]] | Action | M, S | core | Ship 2S strong, Colony 2S, Hero 2M strong, Hero 2S weak, Colony 2M |
-| [[Express]] | Modifier | C | core | - |
-| [[ForceDiscard]] | Action | M | core | - |
-| [[Stealth]] | Action | M | core | Hero 4M strong, Hero 4P weak, Base 4M |
-| [[Navigation]] | Modifier | S | core | Hero 4C weak, Hero 4S strong, Base 4S |
-| [[Settle]] | Modifier | C, P | core | - |
+| [[Academy]] | Hub | C | duel | Colony 2C, Base 4C |
+| [[MegAcad]] | Hub | C | duel | - |
+| [[Shipyard]] | Hub | P | duel | Base 2P |
+| [[MegaYard]] | Hub | P | duel | Colony 4P |
+| [[Upgrade]] | Action | C, P | duel | Hero 2M weak, Hero 2C weak, Hero 4M weak, Hero 4C strong, Hero 4P strong, Hero 4S weak, Ship 4C strong, Ship 4P strong |
+| [[Recover]] | Action | C, P | duel | Hero 2C strong, Hero 2P strong, Hero 4M weak, Hero 4C strong |
+| [[Retreat]] | Action | M | duel | Ship 2M strong |
+| [[Explore]] | Action | M, S | duel | Ship 2S strong, Colony 2S, Hero 2M strong, Hero 2S weak, Colony 2M |
+| [[Express]] | Modifier | C | duel | - |
+| [[ForceDiscard]] | Action | M | duel | - |
+| [[Stealth]] | Action | M | duel | Hero 4M strong, Hero 4P weak, Base 4M |
+| [[Navigation]] | Modifier | S | duel | Hero 4C weak, Hero 4S strong, Base 4S |
+| [[Settle]] | Modifier | C, P | duel | - |
 | [[Militarization]] | Modifier | M | advanced | Base 2M, Colony 4M |
 | [[Smuggle]] | Action | M | advanced | Ship 4M strong |
 | [[Trade]] | Action | C | advanced | Ship 2C strong, Base 2C |

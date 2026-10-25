@@ -20,7 +20,7 @@ scope: core
 
 #### Notes
 
-1. Stars need no [[Explore]], so movement is fast: a Star is
-   conquered only to use it
+1. Stars are open tiles, so movement is fast: a Star is conquered
+   only to use it
 2. A **wild** Star can be [[ControlledBy]] a faction: control comes
    from cards, conquest gives the World

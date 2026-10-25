@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: duel
 ---
 
 1. **Navigation** is [[Science]] [[TechnologyModifier]]

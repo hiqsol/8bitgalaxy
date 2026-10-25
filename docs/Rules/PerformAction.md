@@ -19,8 +19,7 @@ scope: core
 		2. **Supporters**: the starter from Hand, selected cards from
 		   Hand and from other IPSs, see [[Support]]
 	5. **Targets**: cards the action works on, e.g. the cargo of
-	   [[Move]] or the card to [[Recover]]: targets are not
-	   participants
+	   [[Move]]: targets are not participants
 2. **Direct participants** use all of their abilities, **supporters**
    only one
 3. Total requirements of the action, used technologies included, must
@@ -36,7 +35,7 @@ scope: core
 	   Range check
 5. Action can be extended (increased list of participants and used
    abilities) gradually with revealed information. For example for
-   [[Explore]] or [[Combat]]
+   [[Combat]]
 6. **After action** participants [[Deplete]]
 
 #### Notes

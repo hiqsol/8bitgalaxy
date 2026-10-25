@@ -29,8 +29,7 @@ scope: core
    defense are missing at your own turn.
 3. Drawing at the end of turn speeds the game up: player sees the next
    hand and plans it during rivals' turns
-4. Allows Star Realms mechanics: draw a card (`+Draw` [[Plus]]), rival
-   discards ([[ForceDiscard]])
+4. Allows Star Realms mechanics, e.g. draw a card: `+Draw` [[Plus]]
 5. Every turn shows the player is alive
 6. **Restore** comes after **Draw**: player sees the next [[Hand]] and
    restores the [[Structure]]s it needs

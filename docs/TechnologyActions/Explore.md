@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: duel
 ---
 
 1. **Explore** is [[Military]] and [[Science]] [[TechnologyAction]]
@@ -28,6 +28,8 @@ scope: core
     looks at that rival's [[Hand]]:
 	1. The [[Academy]] card is the target: in reach as a Hidden card,
 	   the Cost is its [[Price]]
+11. In a [[Combat]] a player can reveal a rival's [[Hidden]] cards
+    with **Explore**
 
 #### Notes
 
@@ -38,4 +40,4 @@ scope: core
    back of a [[Space]] already hints at it
 4. The [[Academy]] is where a faction's leaders come from, so
    **Recon** of it opens the way to the faction's deck, see also
-   [[Combat]]
+   [[Academy]]

@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: duel
 ---
 
 1. **Deck** lists the cards of the Human [[Faction]], one row per
@@ -158,7 +158,8 @@ scope: core
 	   ends have different classes
 	2. [[Structure]]s: Primary is technology or a non-power [[Plus]]
 	   at both ends, Secondary is power at strong end only, both ends
-	   have the same class
+	   have the same class: a [[Depleted]] structure keeps the
+	   technology but gives no [[Power]]
 	3. [[Ship]] ends have equal Level + ExtraPrice, so [[Size]]
 	   doesn't change with rotation
 	4. [[Ship]] Primary is half the strong Level, [[Hero]] Primary
@@ -185,7 +186,8 @@ scope: core
    and 2.8
 6. The crowns are the cards of [[Singularity]]: one of each Type, so
    it takes both [[Origin]]s and both [[Hub]]s, Social crowns come
-   only by [[Upgrade]], see [[Create]]
+   only by [[Upgrade]], see [[Create]]. A [[World]], at most Level 6,
+   stays below them
 7. Starting cards and [[Tool]]s are like Scouts and Vipers of Star
    Realms: the Ships 1/0 with Ship 2M, 2C, 2P, 2S are the 8 Ships of
    tier I. The Tools are in the Deck: with the same back as the other
