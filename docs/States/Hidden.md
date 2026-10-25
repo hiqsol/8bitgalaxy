@@ -17,14 +17,11 @@ scope: core
 	4. Can be attacked
 	5. Doesn't [[Pinning|pin]] and doesn't get pinned
 	6. Doesn't trigger an [[Intercept]] and can't be selected in it
-	7. Is [[ActiveFor|active]], it is revealed to count for the
-	   [[Goal]] paths
+	7. Counts for the [[Goal]] paths only when revealed
 5. **Hidden** card on [[Field]] is revealed:
 	1. When it takes part in any action other than [[Move]], in
 	   [[Combat]] at the reveal, not at the start
-	2. By its player at any time of own [[Turn]], for free
-	3. By its player when a rival group passes its [[Star]], to pin
-	   the group, see [[Pinning]]
+	2. By its player at any time, for free
 
 #### Notes
 
@@ -32,3 +29,5 @@ scope: core
    know or check what card it is
 2. Range 1 doesn't reach the next [[Star]]: a hidden card leaves with
    [[Support]] or inside a group, whose [[Range]] is the sum
+3. Revealed when a rival group passes its [[Star]], a [[Military]]
+   [[Actor]] pins the group, see [[Pinning]]

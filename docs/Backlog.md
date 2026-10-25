@@ -110,7 +110,6 @@ answers.
   P28
 	- a) The attacker selects defending participants.
 	- b) There is no pass order.
-	- c) Hidden cards may be revealed "at any time".
 - [ ] **P28. Combat sequence** in [[Combat]]:
 	- a) The defending participants are all the defender's Enabled and
 	  [[Hidden]] cards in the target [[IPS]].
@@ -122,8 +121,9 @@ answers.
   gives a special bluff to "Hidden cards from Hand", although Hand is
   already secret and Hidden is otherwise a Field state:
 	- a) Every Combat supporter from Hand is committed face down.
-	- b) Reveal all commitments only at resolution, as in P28; remove
-	  voluntary reveal-at-any-time and the special Hidden-Hand rule.
+	- b) Reveal the Hand commitments only at resolution, as in P28;
+	  remove the special Hidden-Hand rule. A [[Hidden]] card is still
+	  revealed by its player at any time.
 	- c) Bluffing stays, with one commitment procedure and no state
 	  change.
 - [ ] **I83. Defending power.** [[Combat]] 8.2 adds a defending
@@ -159,9 +159,8 @@ answers.
 	  specified Home pile directly to [[Factory]], instead of making
 	  it a defending participant. Choose top, random or
 	  attacker-selected after Recon.
-	- c) The leader check becomes: a Hero in Hand, Reserve or Discard,
-	  or an Enabled Hero on the Field. This resolves I76 a-d with one
-	  rule instead of four pile exceptions.
+	- c) This resolves I76 a-d with one rule instead of four pile
+	  exceptions.
 - [ ] **I92. Groups.** [[PerformAction]] 4 forms one group per
   [[IPS]], each reaching the destination with its own [[Range]]:
 	- a) [[Range]] 4 adds "Range from Support" to a group: with
@@ -735,7 +734,8 @@ One batch after the playtest, only for pages that confused play.
 - [ ] **S47. One Home pile table.** Ten pile pages state visibility
   and entry in different words, some not at all:
 	- a) [[Factory]], [[Laboratory]] and [[History]] don't say who
-	  sees them.
+	  sees them. The leader check of [[Goal]] counts the Heroes in
+	  Factory and Laboratory: recommended open, like [[Discard]].
 	- b) [[Destroy]], [[Recall]], [[Express]] and [[MinusDeplete]] put
 	  a card on top, [[Upgrade]] 7.2 and [[Research]] 2.1 don't say
 	  where in [[Factory]].

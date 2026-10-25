@@ -14,8 +14,7 @@ scope: core
 	1. On any side
 	2. They must have active [[Military]] [[Actor]]s in the Star
 5. Cards from [[Hand]] join as supporters, also at rival's [[Turn]].
-   Parties can bluff by adding [[Hidden]] cards from [[Hand]], a
-   hidden card can be revealed by its player at any time
+   Parties can bluff by adding [[Hidden]] cards from [[Hand]]
 6. Parties can [[Boost]] with cards at the moment when they add the
    card, not later
 7. At following rounds parties continue to pass or add more

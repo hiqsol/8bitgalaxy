@@ -18,9 +18,9 @@ scope: core
 	4. [[Science]]: [[Singularity]]
 4. A [[Faction]] is over when one of:
 	1. **Can not make a move**, see [[Turn]]
-	2. **Has no leader**: at **Check** phase of own [[Turn]] has no
-	   [[Enabled]] [[Hero]] on [[Field]], [[Hand]], [[Reserve]] or
-	   [[Discard]]
+	2. **Has no leader**: at **Check** phase of own [[Turn]] every
+	   [[Hero]] of its faction deck is [[Damaged]], in its [[Factory]]
+	   or in its [[Laboratory]]
 
 #### Notes
 
@@ -29,14 +29,17 @@ scope: core
    counting, like temples in Kemet
 3. Losing all [[Hero]]es is inspired by checkmate in Chess. Like
    check: a player whose last Hero got [[Damaged]] has one turn to
-   make it [[Enabled]] again
-4. Losing the home [[Star]] is a heavy loss by intention, a goal for
+   get a Hero back
+4. The leader check counts the dead Heroes: the others are alive
+   wherever they are, nobody reveals a Hand, the Reserve or a
+   [[Hidden]] card
+5. Losing the home [[Star]] is a heavy loss by intention, a goal for
    rivals, but it doesn't end the game, neither does losing the
    [[Hub|hubs]]: the faction still moves and can defeat the rival
    leader. The captor gets the hubs, like taking the queen in Chess
-5. Losing the last Star does end the game: a faction with no [[Star]]
+6. Losing the last Star does end the game: a faction with no [[Star]]
    [[ActiveFor|active]] for it can not make a move, it has no place
    for [[Takeoff]] and no source for an action from [[Hand]]
-6. An empty [[Hand]] at the start of own [[Turn]] can end the game
+7. An empty [[Hand]] at the start of own [[Turn]] can end the game
    too, like an unexpected checkmate: spending the whole Hand on
    defense in [[Combat]] is a real risk
