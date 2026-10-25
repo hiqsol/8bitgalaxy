@@ -1,6 +1,6 @@
 ---
 date: 2026-10-10
-updated: 2026-10-24
+updated: 2026-10-25
 status: WIP
 scope: meta
 ---
@@ -424,6 +424,214 @@ All `advanced`.
 	  or an own Enabled card in that Star provide it. Does the
 	  providing card Deplete as in [[ImmediateAction]]?
 
+## Core streamlining
+
+Proposals of the 2026-10-25 review of `core`: each removes an
+exception, a concept or a page. Plain duplicates are already removed.
+RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
+
+- [ ] **S53. Deplete by Role.** [[Deplete]] spares direct
+  participants that moved or fought, card by card: a fighting
+  [[Structure]] never depletes, a free reusable +2 (RG2-7), while
+  Units waiting at a [[Move]] destination, which pull the group in, go
+  to [[Discard]]:
+	- a) A Structure participant always becomes [[Depleted]].
+	- b) A [[Unit]] direct participant of a Move or a [[Combat]] holds
+	  its Slot, every other Unit goes to Discard.
+	- c) Move 6 and Combat 9.4 state b), Deplete keeps only the two
+	  outcomes. Recommended: yes.
+- [ ] **S54. Act from an active Star.** [[Takeoff]] goes to a Star
+  [[ActiveFor]] the player, a [[Disputed]] one too, but an action
+  needs a controlled source, and [[Intercept]] patches it with "even
+  if the Star is Disputed now" (F1, RG1-10):
+	- a) [[PerformAction]] source: the [[IPS]] of a Star ActiveFor the
+	  player.
+	- b) Intercept drops "even if…"; Disputed note 1 becomes "a front:
+	  the tied factions take off and act there".
+	- c) Lost: a front as dead ground. Gained: a faction fights back
+	  from its Disputed home.
+- [ ] **S55. Control by Unit, one ControlledBy rule.** [[Control]]
+  ranks [[Actor]] over [[Structure]], but a card back shows only Unit
+  or Structure, [[ControlledBy]] doesn't cover an Enabled [[Tool]],
+  and a Disputed Star leaves other factions' Structures out of
+  control:
+	- a) Control levels: none, Structure, **Unit**.
+	- b) ControlledBy: a card is controlled by its [[Faction]], but a
+	  Structure or a [[Damaged]] card in a Star a rival controls is
+	  that rival's. ControlledBy 4 and [[Disputed]] 3 go, "out of
+	  control" goes.
+	- c) Control merges into ControlledBy, one page less.
+	- d) Optional: Unit replaces Actor in core, Actor goes, Tool says
+	  it starts no action.
+- [ ] **S56. Class handles only Structures as cargo.** [[Move]] 5.2
+  needs a Ship whose [[Class]] handles each cargo card, then [[Hero]]
+  8, [[Tool]] 8 and [[Materials]] 3 let any Ship carry theirs:
+	- a) Only a [[Structure]] needs a Ship whose Class handles it.
+	  Hero 8, Tool 8 and "by any Ship" go.
+	- b) Or no Class for cargo and [[Manage]]: Manage is paid in the
+	  starter's power on any card, Class 5 and Move note 1 go. Lost:
+	  colony ships, Science as the universal manager.
+	- c) Recommended: a.
+- [ ] **S57. One weight, one price.** [[Size]] is Level +
+  [[ExtraPrice]] except a Hero's, and ExtraPrice has an "at least 1"
+  clamp that no card triggers:
+	- a) Size = current Level for every card: Hero 6 and the Size
+	  lines go. Bases and Colonies weigh 1 less.
+	- b) Or each End prints its [[Price]] instead of ExtraPrice: cargo
+	  weighs the Price of its End in use, ExtraPrice and Size go.
+	  Heroes weigh 1 more unless Hero keeps "weighs its Level".
+	- c) Either way, drop negative ExtraPrice and its clamp: no card
+	  has one.
+- [ ] **S58. Rules no card needs in core.**
+	- a) `X+Y` power, [[PrimaryAbility]] 3: no [[Deck]] value has it.
+	  Delete it and the `+Y` of [[GameBalance]] 2.2, this answers
+	  I19 c.
+	- b) Level tiers, [[Level]] 3, shape only the [[Deck]]: move them
+	  there, [[World]] 8 says "at most 6".
+	- c) [[Create]] 4, a Social card only with lower Level 1, depends
+	  on the Deck's Levels and conflicts with [[Hyperstructure]] 9.1:
+	  move it to [[Social]], or make it "Create makes only cards with
+	  a Level 1 End" for both Origins, so higher cards come by
+	  [[Upgrade]], which slows the race of F2.
+- [ ] **S59. Destroy returns a card to its supply.** [[Destroy]] sends
+  a card to the [[Factory]], but a [[World]] goes under the World
+  deck, [[Alien]]s to their discard and a [[Tool]] out of the game:
+	- a) Destroy: a faction card to the top of a Factory pile of the
+	  player's choice, a card of no player under its deck.
+	- b) World 13 and the Alien discard with its reshuffle go, Tool
+	  keeps its own exception.
+- [ ] **S60. Conquest without loops.** A conquest draws Worlds until
+  one meets the participants' [[Prerequisites]], then as many
+  [[Alien]] cards as its Price; Aliens take no Slot, print their own
+  Defense, never get Damaged, need a discard and a reshuffle. All
+  Combats of the AI duels were against Aliens, won by the attacker:
+	- a) Aliens are a number: they defend with N × the World's
+	  [[Price]], no Alien deck, the playtest sets N.
+	- b) Lighter: keep the Alien deck, the Aliens defend with their
+	  total and go under the deck after the Combat.
+	- c) The attacker takes the top World: Worlds have no
+	  Prerequisites, P36 gives them none.
+	- d) Or the [[Scenario]] deals a face-down World into the World
+	  slot of every Wild Star, an [[Attack]] reveals it and a won one
+	  turns it Ready: the World deck and its draw go, [[Explore]] can
+	  scout a World.
+- [ ] **S61. Attack is a Move that must win.** [[Intercept]] is a
+  Combat that is "not an Attack": no starter, no Military Actor, the
+  newcomers defend; [[Combat]] 9.3 is a second move rule:
+	- a) [[Attack]] is a [[Military]] [[Move]] that must win a Combat
+	  in its destination, the source Star too; a Move to another Star
+	  with rival Enabled cards is an Attack.
+	- b) If the attacker wins, the surviving moving cards arrive with
+	  their cargo, the others stay.
+	- c) Intercept, Combat 9.3 and [[Pinning]]'s "it can finish there"
+	  go; a Move of only [[Hidden]] cards is no Attack.
+	- d) Lost: entering a rival Star in peace, the free answer to a
+	  rival Create. Intercept was chosen for F1: test, don't default.
+- [ ] **S62. Move within a Star for every card.** [[Move]] needs Range
+  above 0, though [[Distance]] within a Star is 0, and [[Manage]]
+  Shift patches it for Structures:
+	- a) Move: any card to another Slot of its row in the same Star,
+	  cards with Range above 0 to another Star.
+	- b) Manage Shift between Slots goes: a rearrangement costs a
+	  starter instead of 1 power per card (RG3-3).
+- [ ] **S63. One way to move a Laboratory card.** [[Research]] 2.2
+  moves cards between [[Laboratory]] piles like a Science [[Manage]]
+  Shift, and Laboratory 4 makes both cost 1 per card:
+	- a) Research 2.2 and Laboratory 4 go. The only change: a
+	  non-Science starter moves only the cards its Class handles.
+	- b) Also no Shift between piles: piles keep their order, the
+	  setup order steers the tech tree, F2 found the lever too strong.
+- [ ] **S64. Energy as open wild power.** [[Energy]] tokens are "in
+  Hand", but don't count to its size, stay at Draw, lie open and have
+  their own cap; [[Boost]] caps each card by Capacity; [[Resource]]
+  exists to say "stockable":
+	- a) Energy lies open in the player's stock beside [[Home]]:
+	  Energy 5-6 and "in Hand" go.
+	- b) 1 Energy pays 1 power of any Class in an action the player
+	  starts or joins, no card cap and no Hand cap: Boost and Resource
+	  go. The cap was never reached and Energy was marginal.
+	- c) Lost: channelling Energy through cards, the hoarding limit.
+- [ ] **S65. Range and Capacity aren't the one Ability.** [[Ability]]
+  3 lists [[Range]] and [[Capacity]], then [[Support]] 1.2 and PR-11
+  exempt reaching and boosting from a supporter's one Ability:
+	- a) A card's Range and Capacity count for its own group, they are
+	  not the one Ability. Support 1.2's clause goes.
+	- b) Or a Hand card gives no Range or Capacity: Support 2.3-2.4
+	  and the Range from Support in Range 4 go, I92 a is moot. Lost:
+	  reaching with Hand cards.
+	- c) An alternative to S42 a.
+- [ ] **S66. Destination cards add Range to any action.** Only in a
+  [[Move]] (4.1) do the direct participants in the destination add
+  their Range to the moving group:
+	- a) [[PerformAction]] 4.3: the cards in the destination add their
+	  Range to the source group, Move 4.1 keeps only Capacity.
+	- b) A garrison helps every action reach it: an Attack from two
+	  sides, Explore, Create.
+- [ ] **S67. Immediate is a technology, not an action.**
+  [[ImmediateAction]] is an Action without a starter, a Direction, a
+  Cost or other participants, though every action has a starter:
+	- a) An **Immediate** technology works when its card is shown,
+	  then the card [[Deplete]]s, at own Turn or in a Combat.
+	- b) ImmediateAction 2-4 go, six [[Technology]] rows change Kind.
+	  A lone Immediate is no move for [[Turn]] 3.
+- [ ] **S68. Hidden in one rule, in `duel`.** Only [[Stealth]] makes a
+  card [[Hidden]] (Settled 3), yet core carries its rules:
+	- a) A Hidden card counts as a Level 1 card of its [[Role]], a
+	  Unit as a Ship: Range 1, Capacity 1, Size 1. Hidden 4.1-4.4
+	  become one rule.
+	- b) Hidden and the Hidden clauses of [[Combat]] move to `duel`,
+	  core keeps the back ends of [[End]] and [[Side]].
+- [ ] **S69. Derived Defense.** With P62, [[Damaged]] 7's "each with
+  Defense 1" and [[Combat]] note 3's "defends with 1" follow from
+  [[Defense]]: delete them. An alternative to P62 a: every card adds
+  its AttackPower on both sides, a defender also its Plus Defense,
+  wrecks add 0 as PR-17 played.
+- [ ] **S70. One sealed Combat round.** An alternative to P28 b-c:
+  the attacker names the direct participants, then every side commits
+  its supporters and Energy at once, face down, other factions with
+  Actors there pick a side; reveal, a tie goes to the defender. No
+  pass order (I51 b), no Boost timing ([[Combat]] 6). Lost: answering
+  a rival's additions.
+- [ ] **S71. Distance counts Spaces only.** [[Distance]] sums all
+  tiles but the first, a Star as 1 and a Space as its length, and
+  Spaces link along hex edges:
+	- a) A route alternates Star and Space, its Distance is the sum of
+	  its Spaces' lengths.
+	- b) Every Space prints its length 1 higher, the duel's become 2,
+	  Star to Star Distances stay. Edge routes go, PR-3 dropped them.
+- [ ] **S72. Two Turn phases.** **Play**, then **End**: check the
+  [[Goal]], discard, Draw, [[Restore]] 3. About ten "X phase"
+  references become "end of own Turn".
+- [ ] **S73. Fewer pages and terms**, no rule changes:
+	- a) One table in [[Card]]: Type, Role, Origin, Range, cargo, and
+	  "Size and Capacity are the current Level unless the card's page
+	  says otherwise". The property lines of the card pages go,
+	  checkdocs `check_templates` changes.
+	- b) One table in [[State]]: Side and End of each state, the "is:
+	  Side up, End up" lists go.
+	- c) The four Power pages and [[Resource]] fold into [[Class]] and
+	  [[Power]].
+	- d) [[IPS]] goes, rules say Star: this also settles whether the
+	  World slot is in the IPS, so a [[World]] is a direct
+	  participant.
+	- e) [[Enabled]] goes, rules say "face up".
+	- f) [[Direction]] and [[Action]] fold into [[PerformAction]].
+	- g) [[Agenda]] moves to an extension scope, [[World]] and
+	  [[Alien]] have no Faction, [[Faction]] 4 goes: core stops naming
+	  the [[Galaxy]].
+	- h) The Cards column of [[Technology]] goes, [[Deck]] holds the
+	  assignments, checkdocs drops the cross-check.
+- [ ] **S74. Bigger cuts, speculative.**
+	- a) Restore every Structure at **Restore**: Plus Restore and the
+	  throttle of [[GameBalance]] 5 go.
+	- b) A card that loses a Combat is Destroyed at once: Damaged,
+	  [[Recover]] and the Chess check go.
+	- c) [[Pinning]] and [[Intercept]] as one contact rule: a group
+	  entering a Star with rival Military Actors stops, the rival may
+	  fight it at once.
+	- d) No cargo: Range 0 cards move inside a group; Size, the cargo
+	  half of Capacity and the Class table go. Lost: logistics.
+
 ## Editorial
 
 One batch after the playtest, only for pages that confused play.
@@ -488,6 +696,10 @@ One batch after the playtest, only for pages that confused play.
 	- d) What it changes: an Actor is built only with cards at the hub
 	  as direct participants, not at another source Star, and a hub in
 	  a Disputed Star builds nothing.
+	- e) An action on a [[Home]] card is directed to a hub of the
+	  card's [[Origin]]: said once in [[Hub]], [[Research]] 3,
+	  [[Manage]] 2.2.2 and Create 6.1 go; "corresponding Hub" is
+	  defined nowhere (RG2-1, RG3-7, RG1-10).
 - [ ] **S41. End of a face-down card.** [[End]] 6 sets the end in use:
   in a [[Slot]] the visible end, elsewhere the selected end. A
   face-down card shows no Level, though [[Recover]] costs the current
