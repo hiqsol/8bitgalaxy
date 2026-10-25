@@ -8,8 +8,6 @@ scope: core
    highest [[Control]] in it
 3. Nobody controls a **disputed** Star, the tied factions control only
    their own cards, see [[ControlledBy]]
-4. [[Structure]]s and [[Damaged]] cards of other factions are out of
-   control: nobody can use them
 
 #### Notes
 

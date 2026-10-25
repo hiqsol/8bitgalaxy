@@ -11,10 +11,8 @@ scope: core
 	2. Starts an [[Action]] as its **starter**, see [[PerformAction]]
 	3. Joins an [[Action]] as a [[Support]]er
 3. Player can't pass: makes at least one [[Takeoff]] or [[Action]],
-   then may end **Play**. A player who can't **can not make a move**:
-   the [[Faction]] is over, see [[Goal]]
-4. **Check**: the [[Goal]] is checked, then player scores one
-   [[Objective]], with the `objectives` extension
+   then may end **Play**
+4. **Check**: the [[Goal]] is checked
 5. **Draw**: unused cards from [[Hand]] go to [[Discard]], then player
    [[DeckBuilding|Draw]]s a full [[Hand]]
 6. **Restore**: [[Restore]] 3 [[Structure]]s [[ControlledBy]] the

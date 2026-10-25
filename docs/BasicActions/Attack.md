@@ -5,10 +5,9 @@ scope: core
 
 1. **Attack** is [[Military]] [[BasicAction]]
 2. **Attack** action starts [[Combat]]
-3. **Direction**: [[Star]] to [[Star]]
-4. **Requirements**:
-	1. At least one direct participant is a [[Military]] [[Actor]]
-	2. The source Star can be the target
+3. **Direction**: [[Star]] to [[Star]], the source Star too
+4. **Requirements**: at least one direct participant is a [[Military]]
+   [[Actor]]
 
 #### Notes
 

@@ -7,6 +7,6 @@ scope: core
 2. **Ship** represents a star ship
 3. [[Role]] = [[Actor]]
 4. [[Origin]] = [[Industrial]]
-5. [[Range]] = current [[Level]] - can [[Move]] and carry cargo
+5. [[Range]] = current [[Level]]
 6. [[Size]] = current [[Level]] + [[ExtraPrice]]
 7. [[Capacity]] = current [[Level]]

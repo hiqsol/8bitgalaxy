@@ -19,5 +19,3 @@ scope: core
 	2. Want to exterminate all newcomers
 4. New civilizations have to survive and prosper, and choose to ally
    with each other or fight for dominance
-
-### Artistic description

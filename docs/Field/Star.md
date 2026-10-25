@@ -5,16 +5,12 @@ scope: core
 
 1. **Star** is a [[Field]] tile, see [[Component]]
 2. **Star** represents star system with planets
-3. **Star** contains [[IPS]] - Interplanetary Space
-4. **Star** tile properties:
-	1. **Slots** - the main property: total number of [[Slot]]s in its
-	   [[IPS]], 7 to 10
-	2. **Split** of the Slots between [[Unit]] and [[Structure]] rows,
-	   see [[IPS]]
-5. Below its rows a **Star** has one more slot, shaped as a Structure
-   slot, for its [[World]]
-6. The World gives the **Star** its [[Class]] and
-   [[Ability|abilities]], a **Star** without one is [[Wild]]
+3. **Star** contains its [[IPS]]: 7 to 10 [[Slot]]s, the main
+   property, split between the [[Unit]] and [[Structure]] rows
+4. Below its rows a **Star** has the **World slot**, shaped as a
+   Structure slot, for its [[World]]
+5. The card in the World slot gives the **Star** its [[Class]] and
+   [[Ability|abilities]], a **Star** with an empty one is [[Wild]]
 
 #### Notes
 

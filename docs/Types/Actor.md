@@ -7,6 +7,3 @@ scope: core
 2. **Actor** is subtype of [[Unit]] role
 3. An **Actor** from [[Hand]] can be the **starter** of an [[Action]],
    see [[PerformAction]]
-4. List:
-	1. [[Ship]]
-	2. [[Hero]]

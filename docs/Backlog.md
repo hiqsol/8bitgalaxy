@@ -164,7 +164,7 @@ answers.
 	  rule instead of four pile exceptions.
 - [ ] **I92. Groups.** [[PerformAction]] 4 forms one group per
   [[IPS]], each reaching the destination with its own [[Range]]:
-	- a) [[Range]] 5 adds "Range from Support" to a group: with
+	- a) [[Range]] 4 adds "Range from Support" to a group: with
 	  several groups, which one gets a [[Hand]] supporter's Range?
 	  Recommended: one group of the player's choice.
 
@@ -185,7 +185,7 @@ Questions a played game answers better than a review.
   the end's [[Level]], but [[Military]] cards defend with their
   [[AttackPower]]: revise the values?
 - [ ] **P66. Weak Structure ends.** Weak ends can provide abilities,
-  just weaker ([[End]] 8), but every weak Structure end in the
+  just weaker ([[End]] 7), but every weak Structure end in the
   [[Deck]] has no [[SecondaryAbility]]:
 	- a) Weak end Secondary is one less than the strong end's: Colony
 	  2x +1, Base 4x +2, Colony 4x +3, Base 2x stays without.
@@ -403,8 +403,8 @@ All `advanced`.
 	  top Heroes (TI).
 	- b) `Consumable`: [[Destroy]] after use: probes, mines,
 	  missiles, Galaxy [[Tool]]s.
-	- c) `Immovable`: can't move or be cargo, replaces the third
-	  mobility type in [[Range]], for Hyperstructures.
+	- c) `Immovable`: can't move or be cargo, replaces "cannot be
+	  cargo" of [[World]] and [[Hyperstructure]].
 	- d) Card orientations are all taken (strong and weak front,
 	  Damaged and Hidden back), so new states should come from
 	  position, like [[ActiveFor]] and [[Pinning]], not markers.
@@ -488,7 +488,7 @@ One batch after the playtest, only for pages that confused play.
 	- d) What it changes: an Actor is built only with cards at the hub
 	  as direct participants, not at another source Star, and a hub in
 	  a Disputed Star builds nothing.
-- [ ] **S41. End of a face-down card.** [[End]] 7 sets the end in use:
+- [ ] **S41. End of a face-down card.** [[End]] 6 sets the end in use:
   in a [[Slot]] the visible end, elsewhere the selected end. A
   face-down card shows no Level, though [[Recover]] costs the current
   [[Level]] of a [[Damaged]] card:

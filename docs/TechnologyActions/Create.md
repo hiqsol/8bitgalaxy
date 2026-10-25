@@ -18,4 +18,4 @@ scope: core
 8. **Cost**: card's [[Price]]
 9. **Outcome**:
 	1. [[Actor]] - goes to [[Discard]]
-	2. [[Structure]] - goes to a selected free slot in [[Star]]
+	2. [[Structure]] - goes into the [[Star]]

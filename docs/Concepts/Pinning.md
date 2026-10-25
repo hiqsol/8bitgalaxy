@@ -11,9 +11,6 @@ scope: core
    [[Move]] and [[Attack]]
 	1. Other [[Range]] checks ignore it, e.g. a remote [[Support]]
 	   group, [[Create]] placement
-3. [[Hidden]] cards neither pin nor get pinned
-4. A player can reveal own [[Hidden]] cards in a Star a rival group is
-   passing: revealed [[Military]] [[Actor]]s pin it
 
 #### Notes
 

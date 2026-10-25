@@ -18,8 +18,7 @@ scope: duel
 10. List:
 	1. **Homeworld**:
 		1. Lies in the World slot of its [[Star]], not in a Structure
-		   [[Slot]]: it gives the Star its [[Class]] and
-		   [[Ability|abilities]], the Star is not [[Wild]]
+		   [[Slot]], see [[Star]]
 		2. The [[Scenario]] sets its [[Ability]]
 	2. `advanced`, one per [[Class]]:
 		1. **Citadel** - [[Military]]: +3 [[Defense]] to the

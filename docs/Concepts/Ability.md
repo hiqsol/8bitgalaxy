@@ -4,9 +4,7 @@ scope: core
 ---
 
 1. **Ability** is what a card or a tile provides, see [[Component]]
-2. **Ability** comes in two kinds:
-	1. [[Plus]] - a number, shown as `+N`
-	2. [[Technology]] - a named rule, present or not
+2. **Ability** is a [[Plus]] or a [[Technology]]
 3. **Abilities** come from:
 	1. Card print: [[PrimaryAbility]], [[SecondaryAbility]]
 	2. Card [[Level]]: [[Range]], [[Capacity]] and [[Level]] with

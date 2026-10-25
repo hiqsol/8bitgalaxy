@@ -17,24 +17,16 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
           ╰──────╨─╨──╯               ╰───────────╯
 ```
 
-1. Card properties are:
-	1. [[Side]] and [[End]]
-	2. [[Faction]] - always visible
-	3. [[Class]], which implies [[Defense]]
-	4. [[Level]], which implies [[Capacity]] and [[Range]]
-	5. [[ExtraPrice]], which implies [[Price]] and [[Size]]
-	6. [[Type]], which implies [[Role]], always visible, and
+1. Card properties by kind:
+	1. **physical**: [[Side]], [[End]]
+	2. **explicit**, printed on the card: [[Faction]], [[Class]],
+	   [[Level]], [[ExtraPrice]], [[Type]], [[PrimaryAbility]],
+	   [[SecondaryAbility]], [[Trait]], [[Prerequisites]],
+	   [[CulturePoints]]
+	3. **implicit**, derived from other properties: [[Defense]],
+	   [[Capacity]], [[Range]], [[Price]], [[Size]], [[Role]],
 	   [[Origin]]
-	7. [[PrimaryAbility]]
-	8. [[SecondaryAbility]]
-	9. [[Trait]]
-	10. [[Prerequisites]]
-	11. [[CulturePoints]]
-2. Kinds of properties:
-	1. **explicit** - printed on the card
-	2. **implicit** - derived from other properties
-	3. **physical** - [[Side]] and [[End]]
-3. [[Component]] properties, of cards and tiles: [[Side]], [[Price]]
+2. [[Component]] properties, of cards and tiles: [[Side]], [[Price]]
 
 #### Notes
 

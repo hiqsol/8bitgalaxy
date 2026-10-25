@@ -25,21 +25,18 @@ scope: core
 #### Notes
 
 1. Four paths like the four victories of Civilization
-2. Military and Singularity win as soon as reached, Culture decides
-   the game that reaches [[Twilight]]
-3. Culture points count the current state: a lost Colony stops
+2. Culture points count the current state: a lost Colony stops
    counting, like temples in Kemet
-4. Losing all [[Hero]]es is inspired by checkmate in Chess. Like
+3. Losing all [[Hero]]es is inspired by checkmate in Chess. Like
    check: a player whose last Hero got [[Damaged]] has one turn to
-   make it [[Enabled]] again, the check comes at **Check** phase of
-   own Turn
-5. Losing the home [[Star]] is a heavy loss by intention, a goal for
+   make it [[Enabled]] again
+4. Losing the home [[Star]] is a heavy loss by intention, a goal for
    rivals, but it doesn't end the game, neither does losing the
    [[Hub|hubs]]: the faction still moves and can defeat the rival
    leader. The captor gets the hubs, like taking the queen in Chess
-6. Losing the last Star does end the game: a faction with no [[Star]]
+5. Losing the last Star does end the game: a faction with no [[Star]]
    [[ActiveFor|active]] for it can not make a move, it has no place
    for [[Takeoff]] and no source for an action from [[Hand]]
-7. An empty [[Hand]] at the start of own [[Turn]] can end the game
+6. An empty [[Hand]] at the start of own [[Turn]] can end the game
    too, like an unexpected checkmate: spending the whole Hand on
    defense in [[Combat]] is a real risk

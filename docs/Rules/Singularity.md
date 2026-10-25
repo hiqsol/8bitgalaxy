@@ -8,8 +8,7 @@ scope: core
    [[Turn]], when for every [[Class]] it has
    an [[ActiveFor|active]] card that provides that Class at the
    highest [[Level]] of that Class in its faction deck
-3. One card per Class, see [[Level]]
-4. The faction that reaches **Singularity** wins at once
+3. The faction that reaches **Singularity** wins at once
 
 #### Notes
 

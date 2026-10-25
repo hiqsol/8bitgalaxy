@@ -27,6 +27,4 @@ scope: core
    so more **Aliens** guard it
 3. Neutral resistance without the [[GalaxyDeck]]: [[Military]] has a
    job before the rivals meet
-4. Every attack meets new **Aliens**: they stay unknown until the
-   [[Combat]] reveal
-5. As many as the Price is a first guess, playtests set the number
+4. As many as the Price is a first guess, playtests set the number

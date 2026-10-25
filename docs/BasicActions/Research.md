@@ -9,6 +9,6 @@ scope: core
 	2. Between piles of own [[Laboratory]], like [[Manage]] Shift: the
 	   player has options, the Cost is set by [[Laboratory]]
 3. **Direction**: any [[Star]] to corresponding [[Hub]]
-4. **Requirements**: to [[Factory]], all [[Prerequisites]] of the card
-   are provided by the action's participants
-5. **Cost**: the card's [[Price]] of [[SciencePower]] to [[Factory]]
+4. **Requirements**: to [[Factory]], the participants provide the
+   card's [[Prerequisites]]
+5. **Cost**: to [[Factory]], the card's [[Price]] of [[SciencePower]]

@@ -15,8 +15,6 @@ scope: core
 	   [[Actor]] needed, that Star is the source and the target
 	3. The attacker selects defending participants from the cards
 	   that came in
-3. [[Hidden]] cards that come in neither trigger an **Intercept** nor
-   can be selected in it
 
 #### Notes
 

@@ -4,10 +4,8 @@ scope: core
 ---
 
 1. **Technology** is a kind of [[Ability]]: a named rule
-2. **Technologies** come in three kinds:
-	1. [[TechnologyAction]] is a new action, it works alone
-	2. [[TechnologyModifier]] changes an action or a rule for better
-	3. [[Hub]] provides [[Create]]
+2. **Technologies** come in three kinds: [[TechnologyAction]],
+   [[TechnologyModifier]] and [[Hub]]
 3. The table below is the only catalog of technologies:
 	1. **Class** is the [[Class]] of the card [[End]]s that carry the
 	   technology

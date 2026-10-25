@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Combat** starts when player performs [[Attack]] action
+1. **Combat** is a fight in a [[Star]], an attacker against a defender
 2. First **attacker**:
 	1. selects **attacking participants** and supporters
 	2. selects **defending participants**: direct participants from
@@ -31,19 +31,17 @@ scope: core
 	   sum of levels **not more** than the advantage
 	2. All other direct participants become [[Damaged]].
 	3. If the attacker wins, the attacker may move surviving attacking
-	   [[Unit]]s to free [[Slot]]s of the destination [[Star]],
-	   keeping their [[End]]. The others stay in the source.
-	4. Then [[Deplete]]
+	   [[Unit]]s into the destination [[Star]], the others stay in the
+	   source
+	4. Then [[Deplete]], but not the direct participants
 
 #### Notes
 
-1. Combat has no random resolution, but hidden commitments keep the
-   result from being predetermined.
-2. Multiple rounds make [[Hidden]] cards relevant.
-3. Players make decisions, take risks, prepare surprises and bluff.
-4. Direct participants hold ground like chess pieces: survivors stay
+1. No dice: multiple rounds and hidden commitments bring decisions,
+   risks, surprises and bluff, the result isn't predetermined
+2. Direct participants hold ground like chess pieces: survivors stay
    or move in
-5. Both sides can add any cards, but a non-[[Military]] card has no
+3. Both sides can add any cards, but a non-[[Military]] card has no
    [[AttackPower]]: it attacks with 0, though it can [[Boost]], and
    defends with 1, see [[Defense]]. It joins an attack for its
    technologies, Range and Capacity, or to move in

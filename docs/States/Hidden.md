@@ -15,6 +15,10 @@ scope: core
 	2. Moves as a minimal [[Ship]]: [[Range]] 1, [[Capacity]] 1
 	3. A hidden [[Structure]] doesn't move
 	4. Can be attacked
+	5. Doesn't [[Pinning|pin]] and doesn't get pinned
+	6. Doesn't trigger an [[Intercept]] and can't be selected in it
+	7. Is [[ActiveFor|active]], it is revealed to count for the
+	   [[Goal]] paths
 5. **Hidden** card on [[Field]] is revealed:
 	1. When it takes part in any action other than [[Move]], in
 	   [[Combat]] at the reveal, not at the start
