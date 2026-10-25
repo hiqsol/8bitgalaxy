@@ -11,16 +11,17 @@ scope: core
 5. [[Range]] = 0 and cannot be cargo of a [[Move]]
 6. [[Size]] = current [[Level]] + [[ExtraPrice]]
 7. [[Capacity]] = current [[Level]]
-8. [[Faction]] = [[Galaxy]]
-9. **World** lies in the World slot of its [[Star]], not in a
-   Structure [[Slot]], and never leaves it
-10. **World** gives no [[Control]], it is [[ControlledBy]] the
+8. [[Level]] is at most 6: tier III
+9. [[Faction]] = [[Galaxy]]
+10. **World** lies in the World slot of its [[Star]], not in a
+    Structure [[Slot]], and never leaves it
+11. **World** gives no [[Control]], it is [[ControlledBy]] the
     faction that controls its Star
-11. **Worlds** form the **World deck**, face down beside the
+12. **Worlds** form the **World deck**, face down beside the
     [[Field]], the [[Scenario]] composes it
-12. **World** comes into a [[Wild]] Star when an [[Attack]]
+13. **World** comes into a [[Wild]] Star when an [[Attack]]
     conquers it: its [[Prerequisites]] and [[Price]] set the conquest
-13. A [[Destroy]]ed **World** goes under the **World deck**: its
+14. A [[Destroy]]ed **World** goes under the **World deck**: its
     Star becomes [[Wild]]
 
 #### Notes
@@ -29,7 +30,7 @@ scope: core
    [[Depleted]], it gives its abilities as a participant, [[Restore]]
    turns it back
 2. A World is [[ActiveFor|active]] for its controller, so it
-   counts for the controller's [[Goal]] paths: a Level 4 World
-   counts for [[Singularity]]
+   counts for the controller's [[Goal]] paths, but its Level stays
+   below the Level 8 crowns of [[Singularity]], see [[Deck]]
 3. In a [[Disputed]] Star nobody controls the World: nobody uses
    it and it counts for nobody

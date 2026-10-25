@@ -22,21 +22,21 @@ scope: core
 | [[MegAcad]] | Hub | C | core | - |
 | [[Shipyard]] | Hub | P | core | Base 2P |
 | [[MegaYard]] | Hub | P | core | Colony 4P |
-| [[Upgrade]] | Action | C, P | core | Hero 1M weak, Hero 2C weak, Hero 3M weak, Hero 3C strong, Hero 4M weak, Hero 4C strong, Ship 4C strong, Ship 4P strong |
-| [[Recover]] | Action | C, P | core | Hero 1P strong, Hero 2C strong, Hero 4M weak, Hero 4C strong |
+| [[Upgrade]] | Action | C, P | core | Hero 2M weak, Hero 2C weak, Hero 4M weak, Hero 4C strong, Hero 4P strong, Hero 4S weak, Ship 4C strong, Ship 4P strong |
+| [[Recover]] | Action | C, P | core | Hero 2C strong, Hero 2P strong, Hero 4M weak, Hero 4C strong |
 | [[Retreat]] | Action | M | core | Ship 2M strong |
-| [[Explore]] | Action | M, S | core | Ship 2S strong, Colony 2S, Hero 1M strong, Hero 2M strong, Colony 2M |
+| [[Explore]] | Action | M, S | core | Ship 2S strong, Colony 2S, Hero 2M strong, Hero 2S weak, Colony 2M |
 | [[Express]] | Modifier | C | core | - |
 | [[ForceDiscard]] | Action | M | core | - |
-| [[Stealth]] | Action | M | core | Hero 3M strong, Hero 4M strong, Base 4M |
-| [[Navigation]] | Modifier | S | core | Hero 3C weak, Hero 4C weak, Base 4S |
+| [[Stealth]] | Action | M | core | Hero 4M strong, Hero 4P weak, Base 4M |
+| [[Navigation]] | Modifier | S | core | Hero 4C weak, Hero 4S strong, Base 4S |
 | [[Settle]] | Modifier | C, P | core | - |
 | [[Militarization]] | Modifier | M | advanced | Base 2M, Colony 4M |
 | [[Smuggle]] | Action | M | advanced | Ship 4M strong |
 | [[Trade]] | Action | C | advanced | Ship 2C strong, Base 2C |
 | [[Export]] | Action | C | advanced | Colony 4C |
 | [[Extract]] | Action | P | advanced | Ship 2P strong, Colony 2P |
-| [[Recycle]] | Action | S | advanced | Hero 1P weak, Hero 2M weak, Base 2S |
+| [[Recycle]] | Action | S | advanced | Hero 2P weak, Hero 2S strong, Base 2S |
 | [[Exhaust]] | Modifier | S | advanced | Ship 4S strong |
 | [[MinusDeplete]] | Modifier | C | advanced | - |
 | [[Starter]] | Modifier | C | advanced | - |

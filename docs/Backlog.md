@@ -1,6 +1,6 @@
 ---
 date: 2026-10-10
-updated: 2026-10-21
+updated: 2026-10-24
 status: WIP
 scope: meta
 ---
@@ -200,7 +200,7 @@ Questions a played game answers better than a review.
   just weaker ([[End]] 8), but every weak Structure end in the
   [[Deck]] has no [[SecondaryAbility]]:
 	- a) Weak end Secondary is one less than the strong end's: Colony
-	  2x +1, Base 4x and Colony 4x +2, Base 2x stays without.
+	  2x +1, Base 4x +2, Colony 4x +3, Base 2x stays without.
 	- b) A [[Depleted]] Structure then still gives some [[Power]], so
 	  [[Restore]] matters less: an alternative to a) is +1 on 4x weak
 	  ends only.
@@ -265,6 +265,13 @@ The first duel keeps Spaces of length 1.
 	- **[[Supernova]]**: a) impassable, can't be explored, only from
 	  an [[Event]] (current). b) also gives +1 [[Power]] of any class
 	  to actions started in a bordering Star.
+- [ ] **P67. Longer Space for high Range.** [[Range]] grows up to 8
+  with the [[Deck]] tiers, a big Range is fine; Spaces get longer
+  later:
+	- a) Only outer Spaces get longer, a Space between neighbour Stars
+	  keeps length 1: tier I and II cards still cross the map.
+	- b) Lengthen when tier III and IV cards are in play, after
+	  playtests of the 56-card Deck.
 - [ ] **P35. First duel Space set** in [[Scenario]], after P24,
   replacing "every Space has length 1":
 	- a) 24 tiles on the inner sides, shuffled and placed face down.
@@ -292,15 +299,17 @@ The first duel keeps Spaces of length 1.
 - [ ] **I19. Deck review.** → P25
 	- a) Core technologies [[Express]], [[ForceDiscard]], [[Settle]]
 	  and `+Draw` [[Plus]] have no cards.
-	- b) Redo the decks up to [[Level]] 8, planned: [[Singularity]]
-	  takes the highest Level from the faction deck.
 	- c) [[Actor]] Primary power values as `X+Y`, see
 	  [[PrimaryAbility]].
 	- d) More [[Hub|hubs]], planned: a faction that lost its home Star
 	  can rebuild.
+	- e) The 12 cards of tiers III and IV are TBD in the [[Deck]]:
+	  technologies and Structure Primary. They are homes for a) and
+	  P25: a value per Price stays about flat, a value per card grows
+	  with Level.
 - [ ] **P25. Core technologies on cards** (replacing duplicates):
-	- a) [[ForceDiscard]] on Hero 2M strong, instead of [[Explore]]
-	  (Recon stays on Hero 1M and Colony 2M).
+	- a) [[ForceDiscard]] on Hero 2S weak, instead of [[Explore]]
+	  (Recon stays on Hero 2M and Colony 2M).
 	- b) [[Express]] on Colony 4C, instead of [[Export]] (Materials
 	  are `advanced`).
 	- c) `+Draw` [[Plus]] on Hero 4C strong, instead of [[Recover]],
@@ -344,6 +353,17 @@ All `advanced`.
 
 ### Victory and extensions
 
+- [ ] **I95. Culture finish.** [[Twilight]] is far by intention and
+  [[Singularity]] usually comes first, but the [[Culture]] path of
+  [[Goal]] decides only at Twilight, and only [[Research]] brings it
+  closer: a Culture leader can't end the game.
+	- a) Threshold: a faction with N Culture points at **Check** of
+	  own [[Turn]] wins at once, like Singularity; Twilight stays the
+	  backstop.
+	- b) Trigger: N Culture points trigger Twilight, every rival gets
+	  its last Turn to answer.
+	- c) Keep: Culture decides only at Twilight, a Culture leader
+	  stops the others by force.
 - [ ] **I78. Production path** ([[Goal]] 3.3) is TBD. → P60
 - [ ] **P60. Production path** for [[Goal]] 3, pick one or more:
 	- a) Production, Wealth: stock 12 [[Energy]] (Civilization's

@@ -26,3 +26,6 @@ scope: core
 5. The triggering player picks the timing, the rivals get the last
    word: every rival has exactly one Turn to answer, and Culture
    counts the current state, so the last move is strong
+6. **Twilight** is far by intention, a long game like Twilight
+   Imperium: the [[Laboratory]] starts with 28 cards, see
+   [[StartDraw]], and [[Singularity]] usually comes first

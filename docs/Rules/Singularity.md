@@ -14,10 +14,13 @@ scope: core
 #### Notes
 
 1. The highest Level is taken from the faction deck, so the path fits
-   any deck. In the Human [[Deck]] it takes four active Level 4 cards,
-   one per Class
+   any deck. In the Human [[Deck]] it takes the four Level 8 crowns,
+   one of each Class, each of another [[Type]]
 2. The race against [[Twilight]]: [[Research]] leads both to
-   **Singularity** and to an empty [[Laboratory]], which triggers
-   Twilight
+   **Singularity** and, much later, to an empty [[Laboratory]], which
+   triggers Twilight
 3. Unused cards in [[Hand]] count, they are active: the check comes
    before they go to [[Discard]], see [[Turn]]
+4. A crown that [[Deplete]]s in the Turn doesn't count at **Check**: a
+   [[Structure]] shows its weak end, Level 7, an [[Actor]] is in
+   [[Discard]]. The crowns are held, not used
