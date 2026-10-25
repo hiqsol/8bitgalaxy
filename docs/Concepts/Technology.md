@@ -57,6 +57,7 @@ scope: core
 | [[Forecast]] | Action | S | advanced | - |
 | [[Jump]] | Modifier | S | advanced | - |
 | [[MinusRequirement]] | Modifier | S | advanced | - |
+| [[Standby]] | Modifier | S | advanced | - |
 | [[PlusHero]] | Action | TBD | advanced | - |
 
 #### Notes

@@ -305,8 +305,8 @@ The first duel keeps Spaces of length 1.
   data are settled: annotate both ends, ExtraPrice, Prerequisites and
   the technology name.
 - [ ] **I79 c, d. New technologies.**
-	- c) [[Tactics]] to [[MinusRequirement]] in the [[Technology]]
-	  table have no cards yet.
+	- c) [[Tactics]] to [[Standby]] in the [[Technology]] table have
+	  no cards yet.
 	- d) All are `advanced`, [[Legacy]] is `objectives`: should some
 	  go to `core`?
 
