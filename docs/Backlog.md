@@ -11,7 +11,8 @@ Open items of the rules, design and simplification reviews, aimed at
 a **minimal playable duel**: 2 players, no [[GalaxyDeck]], playable
 with an AI from the notes alone. Items keep their review numbers:
 issues `I<n>`, proposals `P<n>` and simplifications `S<n>`. Other
-games are compared in [[ComparisonReview]].
+games are compared in [[ComparisonReview]]. [[ReviewProcess]] sets
+when an item opens and closes.
 
 Answer by number and letter, e.g. "P27 a, c", "S41 no".
 
