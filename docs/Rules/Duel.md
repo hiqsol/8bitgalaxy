@@ -15,8 +15,13 @@ scope: duel
 7. Home [[Star]]s: a [[Hyperstructure|Homeworld]], its [[Ability]]
    gives 1 [[Energy]]. Other Stars are [[Wild]]
 8. [[Ancient]] deck: 12 Ancients, [[Defense]] 1, 2 and 3, four of each
-9. Setup: [[StartDraw]]
-10. Field schematic: hex is a [[Star]], `[ ]` home Star, each side
+9. World deck: every [[World]] card, shuffled
+10. 20 Culture points trigger [[Twilight]], see [[Goal]]
+11. A [[Technology]] printed on a [[Deck]] card is played by its page,
+    an `advanced` one too, with the `advanced` rules it needs, e.g.
+    [[Materials]]
+12. Setup: [[StartDraw]]
+13. Field schematic: hex is a [[Star]], `[ ]` home Star, each side
     has 2 [[Space]] tiles, one per symbol:
 ```
 		     ╱ ╲   ╱ ╲

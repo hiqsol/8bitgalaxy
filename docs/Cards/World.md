@@ -10,14 +10,15 @@ scope: core
 5. [[Range]] = 0 and cannot be cargo of a [[Move]]
 6. [[Size]] = current [[Level]] + [[ExtraPrice]]
 7. [[Capacity]] = current [[Level]]
-8. [[Level]] is at most 6: tier III
+8. [[Level]] is at most 6
 9. [[Faction]] = [[Galaxy]]
-10. **World** lies in the World slot of its [[Star]], not in a
+10. **World** prints one [[Ability]], like a [[Structure]]
+11. **World** lies in the World slot of its [[Star]], not in a
     Structure [[Slot]], and never leaves it
-11. **World** gives no [[Control]]
-12. **Worlds** form the **World deck**, face down beside the
+12. **World** gives no [[Control]]
+13. **Worlds** form the **World deck**, face down beside the
     [[Field]], a conquest draws from it, see [[Wild]]
-13. A [[Destroy]]ed **World** goes under the **World deck**
+14. A [[Destroy]]ed **World** goes under the **World deck**
 
 #### Notes
 

@@ -43,3 +43,5 @@ scope: core
 7. An empty [[Hand]] at the start of own [[Turn]] can end the game
    too, like an unexpected checkmate: spending the whole Hand on
    defense in [[Combat]] is a real risk
+8. A Culture leader ends the game by reaching the Culture points that
+   trigger [[Twilight]]: the rivals get one last Turn to answer

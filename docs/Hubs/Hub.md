@@ -12,5 +12,5 @@ scope: core
 1. Actions on [[Home]] cards go through a **hub** on the [[Field]]:
    the [[Distance]] to it and its importance put pressure, a lost hub
    stops them, a captured one serves the captor
-2. Planned: a global **hub** for both [[Origin]]s as a [[Faction]]
-   feature
+2. A faction without a **hub** of an [[Origin]] builds no card of it
+   until it captures one: no global hub off the [[Field]]

@@ -10,23 +10,9 @@ the recommended answers. Edit any answer, then apply.
 
 ## Blocks the first duel
 
-G1. I5 d, P27 e, f - yes.
-G2. I60 - in the first duel a printed technology that is not `duel`
-    or is a stub is blank. This covers P59 for the duel, and keeps
-    Materials out of it.
-G3. I57, P36 - World deck for the first duel is P36 i, abilities as
-    P36 a, b, d, e.
-G4. I50, P34, S20 - yes: action template, an invalid action is taken
-    back and nothing is spent. Price is printed on the back of Spaces
-    (S20 a, b), remove Explore 7-8.
-G5. I51, P28, S26 - yes: combat sequence by P28, every Hand card is
-    committed face down and revealed at resolution.
-G6. I83, P62 - yes: Defense = AttackPower, at least 1. A defending
-    supporter adds its Defense.
-G7. I76 - Academy 2 (defenders from Home piles at an Academy) goes
-    to `advanced`. First duel: Heroes are hit only on the Field.
-    Revisit with S25 b after the playtest.
-G8. I92 a - yes, one group of the player's choice.
+G1. P27 e - yes.
+G5. S26 - yes: every Hand card is committed face down and revealed
+    at resolution.
 G9. A combined print is one Ability: "Recover, Upgrade" of Hero 4M
     weak and Hero 4C strong, "Militarization, +1 Defense" of Base 2M.
 

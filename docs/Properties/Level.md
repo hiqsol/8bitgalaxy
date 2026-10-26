@@ -5,11 +5,9 @@ scope: core
 
 1. **Level** is explicit card [[Property]]
 2. **Level** is number from 1 to 8
-3. Levels form four **tiers** of two Levels: I 1-2, II 3-4, III 5-6,
-   IV 7-8; a card's tier is the tier of its strong [[End]]
-4. Card can have two levels: **higher** and **lower**, one at each
-   [[End]]
-5. A card provides one **Level**, the **current** one: the level of
+3. A card has a **strong** and a **weak** [[End]], each with its own
+   Level
+4. A card provides one **Level**, the **current** one: the level of
    its [[End]] in use, with its [[Class]], e.g. for [[Prerequisites]]
    and [[Singularity]]
 

@@ -18,3 +18,5 @@ scope: advanced
 #### Notes
 
 1. Performer can be from different [[Faction]] than the colonies
+2. In a duel the other party is the rival: **Export** needs its
+   consent, a [[Smuggle]] doesn't

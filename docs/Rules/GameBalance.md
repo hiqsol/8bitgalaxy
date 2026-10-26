@@ -10,7 +10,7 @@ scope: core
 	1. A Field card takes about twice the effort: [[Takeoff]] and
 	   then a **starter** from [[Hand]]
 	2. So a Field card as a direct participant uses all abilities
-	   and its `+Y` power, a Hand card only one, see
+	   and its `+Y` power if printed, a Hand card only one, see
 	   [[PerformAction]] and [[PrimaryAbility]]
 	3. No other bonuses for playing from [[Hand]]
 3. Taking cards to [[Field]] thins the deck, that's intended: no scrap

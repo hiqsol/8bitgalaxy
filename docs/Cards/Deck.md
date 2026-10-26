@@ -17,12 +17,12 @@ scope: duel
 	5. **Prerequisites** - [[Prerequisites]] as level and class pairs,
 	   same for both ends
 3. Card name is [[Type]] with strong end level and class
-4. **Deck** holds 56 cards, counted by the tier of the strong end,
-   see [[Level]]: of tier I 8 Ships, 8 [[Tool]]s and 4 of each other
-   [[Type]], then of each Type but Tool 4 of tier II, 2 of tier III
-   and 1 of tier IV
-5. A two-ended card of tier T has Level 2T on its strong End and
-   2T − 1 on its weak End: 2/1, 4/3, 6/5, 8/7
+4. **Deck** holds 56 cards, counted by the [[Level]] of the strong
+   End: up to Level 2, 8 Ships, 8 [[Tool]]s and 4 of each other
+   [[Type]]; then of each Type but Tool 4 of Level 4, 2 of Level 6
+   and 1 of Level 8
+5. A two-ended card has an even Level on its strong End and one less
+   on its weak End: 2/1, 4/3, 6/5, 8/7
 6. Every [[Class]] has as many ends at each Level as any other Class:
    7 at Level 1, 4 at Levels 2 to 4, 2 at 5 and 6, 1 at 7 and 8
 7. Every Class has one Level 8 card, its **crown**, each crown of
@@ -153,7 +153,8 @@ scope: duel
 1. Cards without TBD are imported from the legacy code
    (`src/legacy/js/Model/Decks/Human.js`), to be reviewed, except the
    Ships 1/0 and the values set by the patterns; TBD is a value still
-   to design
+   to design, the TBD ends are for the `+Draw` [[Plus]] and planned
+   technologies, see [[Technology]]
 2. Patterns:
 	1. [[Actor]]s: Primary is power, Secondary is `+1` or technology,
 	   ends have different classes
@@ -165,25 +166,25 @@ scope: duel
 	   doesn't change with rotation
 	4. [[Ship]] Primary is half the strong Level, [[Hero]] Primary
 	   one more, at both ends
-	5. [[Prerequisites]] below the crowns: none in tier I, then the
-	   strong Level − 2 of the strong end's Class, plus for an
+	5. [[Prerequisites]] below the crowns: none up to Level 2, then
+	   the strong Level − 2 of the strong end's Class, plus for an
 	   [[Actor]] the strong Level − 3 of the weak end's Class
 	6. A crown needs Level 6 of its Class and Level 4 of two other
 	   Classes: three participants
-	7. [[Price]] of a card of tier T is 2T + 1: 3, 5, 7, 9
-	8. [[Base]] Secondary is 2T − 1: +1, +3, +5, +7, [[Colony]]
-	   Secondary one more: +2, +4, +6, +8
-3. From tier II each tier holds half the cards of the tier below,
-   like the Trade Deck of Star Realms above cost 2: big cards are
-   few, decisive and contested. Tier I adds 4 Ships and 8 Tools for
-   the starting deck
+	7. [[Price]] of a card is its strong Level + 1: 3, 5, 7, 9
+	8. [[Base]] Secondary is the strong Level − 1: +1, +3, +5, +7,
+	   [[Colony]] Secondary one more: +2, +4, +6, +8
+3. From Level 4 each strong Level holds half the cards of the one
+   below, like the Trade Deck of Star Realms above cost 2: big cards
+   are few, decisive and contested. The cards 1/0, 4 Ships and 8
+   Tools, are added for the starting deck
 4. Ends balance the Classes, not strong ends: an [[Actor]] gives a
    Level of its weak end's Class too, for [[Prerequisites]] and
    [[Singularity]]
 5. Every Type climbs to Level 8: [[Upgrade]] keeps the Type, not the
-   Class, so a ladder needs no card of its Class in every tier. A
+   Class, so a ladder needs no card of its Class at every Level. A
    [[Social]] card climbs one Level at a time, so it gives 1 more
-   [[Power]] than the [[Industrial]] card of its tier: patterns 2.4
+   [[Power]] than the [[Industrial]] card of its Level: patterns 2.4
    and 2.8
 6. The crowns are the cards of [[Singularity]]: one of each Type, so
    it takes both [[Origin]]s and both [[Hub]]s, Social crowns come
@@ -191,11 +192,12 @@ scope: duel
    stays below them
 7. Starting cards and [[Tool]]s are like Scouts and Vipers of Star
    Realms: the Ships 1/0 with Ship 2M, 2C, 2P, 2S are the 8 Ships of
-   tier I. The Tools are in the Deck: with the same back as the other
-   cards of the [[Faction]] a shuffle doesn't tell them apart
+   the starting deck, see [[StartDraw]]. The Tools are in the Deck:
+   with the same back as the other cards of the [[Faction]] a shuffle
+   doesn't tell them apart
 8. The legacy Heroes take Levels like the other cards, each keeps its
-   ends and abilities, the strong end gives each tier one strong end
-   of each Class: legacy Hero 1M is 2M, 1P is 2P, 2M is 2S, 2C is 2C,
+   ends and abilities, the strong ends give Levels 2 and 4 one of
+   each Class: legacy Hero 1M is 2M, 1P is 2P, 2M is 2S, 2C is 2C,
    3M is 4P, 3C is 4S, 4M is 4M, 4C is 4C; Primary and Prerequisites
    follow the patterns
 9. Technology classes and scopes are in [[Technology]]

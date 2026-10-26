@@ -35,16 +35,17 @@ scope: duel
 
 1. The Field shows the Cost: the end in use sets the Level, the paid
    End sets the Price. In the [[Deck]] every **Grow** costs 2, an
-   **Enhance** from a strong end one tier up 3, two tiers 5
+   **Enhance** from a strong end to a strong end 2 Levels up 3, 4
+   Levels up 5
 2. A [[Structure]] paid on its strong End comes [[Ready]], an
    **Upgrade** restores a Depleted one, on its weak End it comes
    [[Depleted]] and costs 1 less; a [[Ship]]'s Ends cost the same
 3. A higher [[Social]] card comes only by **Grow** of a created one,
    see [[Create]]. One Level at a time slows the Social cards: from a
-   strong End a **Grow** lands on the weak End of the next tier, a
-   rotation brings the strong End, [[Restore]] for a [[Colony]],
-   [[Manage]] for a [[Hero]]. A Social card takes three **Grows** and
-   three rotations from Level 2 to its crown, a [[Ship]] or a [[Base]]
-   one **Enhance**
+   strong End a **Grow** lands on the weak End of a bigger card, e.g.
+   from 2 to the 3 of a 4/3, a rotation brings the strong End,
+   [[Restore]] for a [[Colony]], [[Manage]] for a [[Hero]]. A Social
+   card takes three **Grows** and three rotations from Level 2 to its
+   crown, a [[Ship]] or a [[Base]] one **Enhance**
 4. An upgraded Actor stays on the Field and acts in the same
    [[Turn]]

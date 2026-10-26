@@ -23,19 +23,28 @@ scope: core
 2. **Direct participants** use all of their abilities, **supporters**
    only one
 3. Total requirements of the action, used technologies included, must
-   be satisfied with abilities provided by participants. Else action
-   is not successful and doesn't yield result but resources are spent.
+   be satisfied with abilities provided by participants. Else the
+   action **fails**: it yields no result and all its participants
+   [[Deplete]]
 4. [[Range]] is always a requirement, building included:
 	1. The selected participants from one IPS other than the
 	   destination form a **group**: the source group and remote
 	   [[Support]] groups
-	2. Every group must reach the destination: the [[Distance]] from
+	2. The starter goes with the source group, every remote group
+	   needs an [[Actor]] from its IPS or from [[Hand]]
+	3. A supporter from Hand joins one group of the player's choice,
+	   its Range counts there
+	4. Every group must reach the destination: the [[Distance]] from
 	   its IPS must be within the group's Range, see [[Range]]
-	3. Cards in the destination are direct participants without a
+	5. Cards in the destination are direct participants without a
 	   Range check
-5. Action can be extended (increased list of participants and used
-   abilities) gradually with revealed information. For example for
-   [[Combat]]
+5. Every action goes in steps:
+	1. **Declare** the starter, the action and its Direction
+	2. **Commit** participants and their abilities gradually, as
+	   information is revealed, e.g. in a [[Combat]]
+	3. **Check** the requirements when the player stops committing,
+	   before anything resolves or is spent
+	4. **Resolve** the result
 6. **After action** participants [[Deplete]]
 
 #### Notes
@@ -46,3 +55,6 @@ scope: core
    help with one ability each. Their abilities must cover the
    requirements. Then the used cards deplete, except those that moved
    or fought; the starter always does.
+2. A failed action costs all its cards: the player usually knows the
+   Cost before starting, e.g. the [[Price]] of a card to [[Create]],
+   but not of every action

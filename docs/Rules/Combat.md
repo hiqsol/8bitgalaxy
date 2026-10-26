@@ -8,19 +8,20 @@ scope: core
 	1. selects **attacking participants** and supporters
 	2. selects **defending participants**: direct participants from
 	   the defender's cards in the target [[Star]]
-3. Then the **defender** chooses to pass or add more participants and
-   supporters
+3. Then **rounds** follow, in each round:
+	1. The **defender** adds any number of own participants and
+	   supporters, or passes
+	2. Then the **attacker** does the same
 4. More players can join the **combat**:
-	1. On any side
+	1. On any side, they add cards or pass after that side's attacker
+	   or defender
 	2. They must have active [[Military]] [[Actor]]s in the Star
 5. Cards from [[Hand]] join as supporters, also at rival's [[Turn]].
    Parties can bluff by adding [[Hidden]] cards from [[Hand]]
 6. Parties can [[Boost]] with cards at the moment when they add the
    card, not later
-7. At following rounds parties continue to pass or add more
-   participants and supporters
-8. After all parties have passed reveal hidden cards, count total
-   powers and determine winner:
+7. **Combat** resolves when every party passes in one round
+8. Then reveal hidden cards, count total powers and determine winner:
 	1. An attacking card adds its [[AttackPower]]
 	2. A defending card adds its [[Defense]]
 	3. A tie goes to the defender

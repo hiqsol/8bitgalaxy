@@ -165,7 +165,7 @@ def check_technologies(pages):
             report(catalog.path, f'{tech}: missing {card} {end} from Deck')
 
         used = set(actual.values())
-        if actual and cls != 'TBD' and {c.strip() for c in cls.split(',')} != used:
+        if actual and cls != 'TBD' and not used <= {c.strip() for c in cls.split(',')}:
             report(catalog.path, f'{tech} class {cls}, Deck ends are {", ".join(sorted(used))}')
 
     for tech in sorted(assigned):

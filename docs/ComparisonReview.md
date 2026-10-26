@@ -108,8 +108,8 @@ distinctive and what to take from others.
 | Imperium: Classics | Reshuffle is the progress tick: gain or develop a card. History pile: cards out of the deck still score. Game ends when a supply runs out. | [[Twilight]], [[Legacy]] |
 | Twilight Imperium | Ships can't pass systems with enemy ships. Planets exhaust and ready every round. Home system has a space dock. Mecatol Rex is a prize in the center. | [[Pinning]], [[Restore]], [[Backlog]] ideas |
 | Eclipse | Pinning. Sector tier is printed on the tile back (already: [[Space]] Length). Ancients guard the good hexes. | [[Ancient]], [[Pinning]] |
-| Star Realms | Authority is the clock. Outposts must be destroyed first. One cost curve for every faction, thinning toward the top, a single card of cost 8 each (already: [[Deck]] tiers and crowns). | [[Guard]], [[Deck]] |
-| Mage Knight | Deck building, hex exploration and diceless combat in one game. Wounds go to the deck and clog the hand. | [[Backlog]] I76 c |
+| Star Realms | Authority is the clock. Outposts must be destroyed first. One cost curve for every faction, thinning toward the top, a single card of cost 8 each (already: [[Deck]] Levels and crowns). | [[Guard]], [[Deck]] |
+| Mage Knight | Deck building, hex exploration and diceless combat in one game. Wounds go to the deck and clog the hand: not taken, a Damaged card from a pile goes to the Field. | [[Academy]] |
 | Tyrants of the Underdark | Deck building with area control. Promoting a card takes it out of the deck for points. | [[Legacy]] |
 | Kemet | Diceless battle cards. Points for holding temples are lost with the temples. | [[Goal]] |
 

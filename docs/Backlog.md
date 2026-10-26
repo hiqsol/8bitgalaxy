@@ -11,8 +11,9 @@ Open items of the rules, design and simplification reviews, aimed at
 a **minimal playable duel**: 2 players, no [[GalaxyDeck]], playable
 with an AI from the notes alone. Items keep their review numbers:
 issues `I<n>`, proposals `P<n>` and simplifications `S<n>`. Other
-games are compared in [[ComparisonReview]]. [[ReviewProcess]] sets
-when an item opens and closes.
+games are compared in [[ComparisonReview]]. [[Diagnostic]] tests each
+issue with one multiple-choice question. [[ReviewProcess]] sets when
+an item opens and closes.
 
 Answer by number and letter, e.g. "P27 a, c", "S41 no".
 
@@ -35,6 +36,31 @@ from a played game, not from a review.
    from the card that provides it
 7. **Field start**: a Field card starts an action only with
    [[Starter]], `advanced`
+8. **Failed action**: it costs all its participants, a take-back
+   (P34) and a visible Explore Price (S20) were rejected, see
+   [[PerformAction]]
+9. **World deck**: every [[World]] card, not a picked set (P36 i),
+   see [[Duel]]
+10. **Combat order**: the attacker selects the first defenders, then
+    rounds of any number of cards; all defenders at once, one card at
+    a time (P28) and one sealed round (S70) were rejected, see
+    [[Combat]]
+11. **Defense**: a [[Military]] card defends with its Level, not its
+    AttackPower (P62, S69), see [[Defense]]
+12. **Academy defenders** stay in `duel`; a Hero sent to the Factory
+    (S25 b) and wounds cycling in the deck (I76 c) were rejected, see
+    [[Academy]]
+13. **Technologies without cards** go on the TBD ends of the cards
+    6/5 and 8/7, not in place of duplicates on low cards (P25), see
+    [[Technology]]
+14. **`X+Y` power** stays, though no card prints `+Y` yet (S58 a),
+    see [[PrimaryAbility]]
+15. **Hubs**: a faction without a hub builds nothing until it
+    captures one, no global hub (I19 d), see [[Hub]]
+16. **Trade between factions**: [[Export]], [[Smuggle]] and [[Sell]]
+    work in a duel with the rival, not only in [[Politics]] (P57 e)
+17. **Culture finish**: Culture points trigger [[Twilight]], not an
+    instant win (I95 a)
 
 ## Next step
 
@@ -50,23 +76,15 @@ answers.
 
 ### Setup
 
-- [ ] **I5 d. First player.** [[StartDraw]] has no first player
-  rule. → P27
 - [ ] **P27. First duel setup** in [[StartDraw]], from the [[Deck]]:
 	- e) One pile per [[Type]], lowest [[Level]] on top.
-	- f) First player is random.
-- [ ] **I60. Advanced technologies in the first duel.** They are not
-  ignored, so the first duel needs their rules or must avoid their
-  cards: e.g. the [[StartDraw]] Reserve has Ship 2C ([[Trade]]), Ship
-  2P ([[Extract]]), and Hero 2P weak ([[Recycle]]) if chosen.
 
 ### World deck
 
-- [ ] **I57. World deck.** [[World]]s come from the World
-  deck, but: → P36
-	- a) There is no Ability list.
-	- b) There is no first duel deck.
-- [ ] **P36. World deck** in [[World]]:
+- [ ] **I57. World cards.** The first duel shuffles every [[World]]
+  card into the World deck, each prints one [[Ability]], but there
+  are no World cards yet: to prepare. → P36
+- [ ] **P36. World Abilities** for the World cards:
 	- a) [[Ability]]: +1 [[Power]] of its [[Class]] to one action
 	  started there.
 	- b) Ability: +1 [[Energy]].
@@ -79,94 +97,18 @@ answers.
 	  Materials 2, Energy and Technology 3, Draw 4, and so the number
 	  of [[Ancient]]s guarding it. Energy is above Power: any class,
 	  anywhere, kept between Turns.
-	- i) First duel deck: 5 Worlds: Energy (ExtraPrice 3),
-	  Military Power (2), Science Power (2), Defense (1), [[Shipyard]]
-	  (3).
-
-### Action sequence
-
-- [ ] **I50. Action sequence.** [[PerformAction]] doesn't define a
-  complete sequence: → P34
-	- a) Legality is checked late.
-	- b) Failed actions spend unspecified resources.
-	- c) Actions have no common template.
-- [ ] **P34. Action template** in [[PerformAction]]: declare
-  (starter, action, direction), commit participants and abilities,
-  validate, resolve, [[Deplete]]. An invalid action is taken back and
-  nothing is spent, instead of "resources are spent".
-- [ ] **S20. Visible Explore cost.** [[Explore]] reveals the Price
-  only after cards are spent, while P34 validates every action before
-  resolution and takes an invalid action back:
-	- a) Print the [[Price]] on the back of every [[Space]], beside
-	  its Length. Type and Ability stay hidden.
-	- b) Validate before revealing, like every other action. Remove
-	  Explore 7-8 and the Explore exception from [[PerformAction]] 5.
-	- c) This removes failure and refund rules without removing a
-	  choice: the player still chooses which unknown tile is worth its
-	  visible Price.
 
 ### Combat
 
-- [ ] **I51. Combat sequence.** [[Combat]] isn't deterministic: →
-  P28
-	- a) The attacker selects defending participants.
-	- b) There is no pass order.
-- [ ] **P28. Combat sequence** in [[Combat]]:
-	- a) The defending participants are all the defender's Enabled and
-	  [[Hidden]] cards in the target [[IPS]].
-	- b) After the attacker's commit, sides alternate starting with
-	  the defender: add one card or pass.
-	- c) Combat resolves when both sides pass in a row. Hidden cards
-	  are revealed then.
 - [ ] **S26. All Combat cards from Hand are face down.** [[Combat]]
   gives a special bluff to "Hidden cards from Hand", although Hand is
   already secret and Hidden is otherwise a Field state:
 	- a) Every Combat supporter from Hand is committed face down.
-	- b) Reveal the Hand commitments only at resolution, as in P28;
-	  remove the special Hidden-Hand rule. A [[Hidden]] card is still
-	  revealed by its player at any time.
+	- b) Reveal the Hand commitments only at resolution, with the
+	  Hidden cards; remove the special Hidden-Hand rule. A [[Hidden]]
+	  card is still revealed by its player at any time.
 	- c) Bluffing stays, with one commitment procedure and no state
 	  change.
-- [ ] **I83. Defending power.** [[Combat]] 8.2 adds a defending
-  card's [[Defense]], but Defense is a property, not an [[Ability]],
-  and a supporter adds one Ability ([[Support]] 2): → P62
-	- a) What a defending supporter from [[Hand]] or a remote [[IPS]]
-	  adds: its Defense or its Primary power.
-	- b) A [[Military]] card without power has Defense 0, below
-	  non-Military 1: every Depleted Military [[Structure]] (Base 2M,
-	  4M, Colony 2M, 4M weak ends) defends with 0.
-- [ ] **P62. Defense** in [[Defense]] and [[Combat]]:
-	- a) Defense = [[AttackPower]], at least 1, for every card.
-	- b) A defending supporter adds its Defense as its one
-	  [[Ability]].
-- [ ] **I76. Academy attack details** ([[Combat]] 2.3):
-	- a) [[Reserve]] is face down: the attacker picks blindly or takes
-	  from the top?
-	- b) [[Hand]] is hidden: picked blindly, or by name after Recon
-	  ([[Explore]])?
-	- c) Where a Damaged card from a pile goes: it stays Damaged in
-	  its pile and cycles as a dead card until [[Recover]]ed (Mage
-	  Knight wounds)?
-	- d) Cards selected from piles are defending participants, so they
-	  add their power to the defense: intended?
-- [ ] **S25. Home cards have no Field state.** A card back means
-  [[Hidden]] or [[Damaged]], but [[Reserve]] is face down as a pile;
-  [[Combat]] 2.3 can also Damage cards selected from Hand, Reserve or
-  Discard:
-	- a) In [[Home]], the pile determines visibility and cards are
-	  usable unless they are in Factory or Laboratory. Side and End
-	  states apply only to cards individually on the Field.
-	- b) Winning Combat at a rival [[Academy]] sends one Hero from a
-	  specified Home pile directly to [[Factory]], instead of making
-	  it a defending participant. Choose top, random or
-	  attacker-selected after Recon.
-	- c) This resolves I76 a-d with one rule instead of four pile
-	  exceptions.
-- [ ] **I92. Groups.** [[PerformAction]] 4 forms one group per
-  [[IPS]], each reaching the destination with its own [[Range]]:
-	- a) [[Range]] 4 adds "Range from Support" to a group: with
-	  several groups, which one gets a [[Hand]] supporter's Range?
-	  Recommended: one group of the player's choice.
 
 ## Watch in playtest
 
@@ -183,7 +125,7 @@ Questions a played game answers better than a review.
 - [ ] **I75 f. Militarization Defense.** In the [[Deck]] the [[Plus]]
   Defense of [[Militarization]] cards was set to raise Defense 1 to
   the end's [[Level]], but [[Military]] cards defend with their
-  [[AttackPower]]: revise the values?
+  Level, see [[Defense]]: revise the values?
 - [ ] **P66. Weak Structure ends.** Weak ends can provide abilities,
   just weaker ([[End]] 7), but every weak Structure end in the
   [[Deck]] has no [[SecondaryAbility]]:
@@ -207,7 +149,6 @@ Questions a played game answers better than a review.
 	  loss: the winner Damages own direct participants of total
 	  [[Level]] at least the loser's direct total, chosen by the
 	  winner.
-	- e) Depends on I76 c: where a Damaged card from Hand goes.
 
 ## After the first duel
 
@@ -254,11 +195,11 @@ The first duel keeps Spaces of length 1.
 	  an [[Event]] (current). b) also gives +1 [[Power]] of any class
 	  to actions started in a bordering Star.
 - [ ] **P67. Longer Space for high Range.** [[Range]] grows up to 8
-  with the [[Deck]] tiers, a big Range is fine; Spaces get longer
+  with the [[Deck]] Levels, a big Range is fine; Spaces get longer
   later:
 	- a) Only outer Spaces get longer, a Space between neighbour Stars
-	  keeps length 1: tier I and II cards still cross the map.
-	- b) Lengthen when tier III and IV cards are in play, after
+	  keeps length 1: cards up to 4/3 still cross the map.
+	- b) Lengthen when cards 6/5 and 8/7 are in play, after
 	  playtests of the 56-card Deck.
 - [ ] **P35. First duel Space set** in [[Duel]], after P24,
   replacing "every Space has length 1":
@@ -284,43 +225,21 @@ The first duel keeps Spaces of length 1.
 
 ### Deck
 
-- [ ] **I19. Deck review.** → P25
-	- a) Core technologies [[Express]], [[ForceDiscard]], [[Settle]]
-	  and `+Draw` [[Plus]] have no cards.
-	- c) [[Actor]] Primary power values as `X+Y`, see
-	  [[PrimaryAbility]].
-	- d) More [[Hub|hubs]], planned: a faction that lost its home Star
-	  can rebuild.
-	- e) The 12 cards of tiers III and IV are TBD in the [[Deck]]:
-	  technologies and Structure Primary. They are homes for a) and
-	  P25: a value per Price stays about flat, a value per card grows
-	  with Level.
-- [ ] **P25. Core technologies on cards** (replacing duplicates):
-	- a) [[ForceDiscard]] on Hero 2S weak, instead of [[Explore]]
-	  (Recon stays on Hero 2M and Colony 2M).
-	- b) [[Express]] on Colony 4C, instead of [[Export]] (Materials
-	  are `advanced`).
-	- c) `+Draw` [[Plus]] on Hero 4C strong, instead of [[Recover]],
-	  [[Upgrade]] (both stay on other Heroes).
+- [ ] **I19. Deck review.**
+	- e) The 12 cards 6/5 and 8/7 are TBD in the [[Deck]]:
+	  technologies and Structure Primary, to design before the next
+	  playtest. Their TBD ends carry [[Express]], [[ForceDiscard]],
+	  [[Settle]], the `+Draw` [[Plus]] and the technologies from
+	  [[Tactics]] to [[Standby]], see [[Technology]]: a value per
+	  Price stays about flat, a value per card grows with Level.
 - [ ] **I47. Images.** Update `card.png` after the rules and card
   data are settled: annotate both ends, ExtraPrice, Prerequisites and
   the technology name.
-- [ ] **I79 c, d. New technologies.**
-	- c) [[Tactics]] to [[Standby]] in the [[Technology]] table have
-	  no cards yet.
-	- d) All are `advanced`, [[Legacy]] is `objectives`: should some
-	  go to `duel`?
 
 ### Economy
 
 All `advanced`.
 
-- [ ] **I74. Economy overlap.** → P57
-	- a) [[Recycle]] and [[Dismantle]] both turn cards into
-	  [[Materials]].
-	- b) [[Export]] and [[Smuggle]] need a rival's Colony: dead in a
-	  duel.
-	- c) [[Sell]] is a stub.
 - [ ] **P57. Economy roles.** One job per stockable resource
   (Eclipse, TtA: materials build, money is the wildcard):
 	- a) [[Materials]] pay [[Create]], [[Upgrade]] and [[Recover]]
@@ -329,29 +248,15 @@ All `advanced`.
 	- b) [[Energy]] [[Boost]]s any action (already in `core`).
 	- c) [[Trade]] turns power into Energy between two own Colonies: a
 	  trade route.
-	- d) [[Dismantle]] merges into [[Recycle]].
-	- e) [[Export]], [[Smuggle]] and [[Sell]] move to [[Politics]] as
-	  trade between factions.
-- [ ] **S39. One conversion outcome.** [[Extract]] and [[Recycle]]
-  have the same outcome text, [[Trade]] half of it:
+- [ ] **S39. One conversion outcome.** [[Extract]] and [[Trade]] both
+  convert power to [[Materials]] one to one:
 	- a) Define **conversion** once in [[Materials]]: the action's
 	  power becomes Materials one to one in the source [[Star]].
-	- b) The pages keep only what they convert: [[Asteroids]], a card,
-	  a trade route, unless P57 c turns Trade into Energy.
+	- b) The pages keep only what they convert: [[Asteroids]], a trade
+	  route, unless P57 c turns Trade into Energy.
 
 ### Victory and extensions
 
-- [ ] **I95. Culture finish.** [[Twilight]] is far by intention and
-  [[Singularity]] usually comes first, but the [[Culture]] path of
-  [[Goal]] decides only at Twilight, and only [[Research]] brings it
-  closer: a Culture leader can't end the game.
-	- a) Threshold: a faction with N Culture points at **Check** of
-	  own [[Turn]] wins at once, like Singularity; Twilight stays the
-	  backstop.
-	- b) Trigger: N Culture points trigger Twilight, every rival gets
-	  its last Turn to answer.
-	- c) Keep: Culture decides only at Twilight, a Culture leader
-	  stops the others by force.
 - [ ] **I78. Production path** ([[Goal]] 3.3) is TBD. → P60
 - [ ] **P60. Production path** for [[Goal]] 3, pick one or more:
 	- a) Production, Wealth: stock 12 [[Energy]] (Civilization's
@@ -412,7 +317,6 @@ All `advanced`.
 ### Stubs and underdescribed
 
 - [ ] **P59. Stubs** (`status: stub`):
-	- b) [[Dismantle]], [[Sell]]: by P57.
 	- c) [[PlusHero]]: remove, [[Create]] of Heroes covers it.
 - [ ] **I94. Underdescribed technologies.** Their pages don't say
   enough to play them, stubs are in P59:
@@ -483,12 +387,7 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	- c) Either way, drop negative ExtraPrice and its clamp: no card
 	  has one.
 - [ ] **S58. Rules no card needs in core.**
-	- a) `X+Y` power, [[PrimaryAbility]] 3: no [[Deck]] value has it.
-	  Delete it and the `+Y` of [[GameBalance]] 2.2, this answers
-	  I19 c.
-	- b) Level tiers, [[Level]] 3, shape only the [[Deck]]: move them
-	  there, [[World]] 8 says "at most 6".
-	- c) [[Create]] 4, a Social card only with lower Level 1, depends
+	- c) [[Create]] 4, a Social card only with weak Level 1, depends
 	  on the Deck's Levels and conflicts with [[Hyperstructure]] 9.1:
 	  move it to [[Social]], or make it "Create makes only cards with
 	  a Level 1 End" for both Origins, so higher cards come by
@@ -498,7 +397,7 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
   deck, [[Ancient]]s to their discard and a [[Tool]] out of the game:
 	- a) Destroy: a faction card to the top of a Factory pile of the
 	  player's choice, a card of no player under its deck.
-	- b) World 13 and the Ancient discard with its reshuffle go, Tool
+	- b) World 14 and the Ancient discard with its reshuffle go, Tool
 	  keeps its own exception.
 - [ ] **S60. Conquest without loops.** A conquest draws Worlds until
   one meets the participants' [[Prerequisites]], then as many
@@ -557,8 +456,8 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	- a) A card's Range and Capacity count for its own group, they are
 	  not the one Ability. Support 1.2's clause goes.
 	- b) Or a Hand card gives no Range or Capacity: Support 2.3-2.4
-	  and the Range from Support in Range 4 go, I92 a is moot. Lost:
-	  reaching with Hand cards.
+	  and the Range from Support in Range 4 go. Lost: reaching with
+	  Hand cards.
 	- c) An alternative to S42 a.
 - [ ] **S66. Destination cards add Range to any action.** Only in a
   [[Move]] (4.1) do the direct participants in the destination add
@@ -581,17 +480,6 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  become one rule.
 	- b) Hidden and the Hidden clauses of [[Combat]] move to `duel`,
 	  core keeps the back ends of [[End]] and [[Side]].
-- [ ] **S69. Derived Defense.** With P62, [[Damaged]] 7's "each with
-  Defense 1" and [[Combat]] note 3's "defends with 1" follow from
-  [[Defense]]: delete them. An alternative to P62 a: every card adds
-  its AttackPower on both sides, a defender also its Plus Defense,
-  wrecks add 0 as PR-17 played.
-- [ ] **S70. One sealed Combat round.** An alternative to P28 b-c:
-  the attacker names the direct participants, then every side commits
-  its supporters and Energy at once, face down, other factions with
-  Actors there pick a side; reveal, a tie goes to the defender. No
-  pass order (I51 b), no Boost timing ([[Combat]] 6). Lost: answering
-  a rival's additions.
 - [ ] **S71. Distance counts Spaces only.** [[Distance]] sums all
   tiles but the first, a Star as 1 and a Space as its length, and
   Spaces link along hex edges:
@@ -664,6 +552,11 @@ One batch after the playtest, only for pages that confused play.
 	- c) A timed Ability resolves at its named [[Turn]] step. Remove
 	  passive and timed effects from the rule that participant Pluses
 	  sum.
+- [ ] **S25. Home cards have no Field state.** A card back means
+  [[Hidden]] or [[Damaged]], but [[Reserve]] is face down as a pile:
+	- a) In [[Home]], the pile determines visibility and cards are
+	  usable unless they are in Factory or Laboratory. Side and End
+	  states apply only to cards individually on the Field.
 - [ ] **S31. One verb for each build action.** Raise/Produce and
   Heal/Fix are four flavour names of [[Create]] and [[Recover]],
   listed on their pages; Upgrade's Grow/Enhance carry rules:
@@ -715,8 +608,8 @@ One batch after the playtest, only for pages that confused play.
 	  all, a supporter one.
 	- b) Support 2 and Plus 3.5-3.6 link it; a Range Plus adds to any
 	  group.
-	- c) It answers I83 a and whether a supporter's Level is its one
-	  Ability for [[Prerequisites]]. Recommended: yes.
+	- c) It answers whether a supporter's Level is its one Ability for
+	  [[Prerequisites]]. Recommended: yes.
 - [ ] **S43. Control by own cards.** [[Control]] 2 counts a faction's
   cards in a Star: does a captured rival [[Structure]],
   [[ControlledBy]] the faction, count?

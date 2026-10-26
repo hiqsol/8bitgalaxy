@@ -10,7 +10,7 @@ scope: duel
 5. [[Range]] = 0 and cannot be cargo of a [[Move]]
 6. [[Size]] = current [[Level]] + [[ExtraPrice]]
 7. [[Capacity]] = current [[Level]]
-8. [[Level]] is at most 6: tier III
+8. [[Level]] is at most 6
 9. **Hyperstructure** is built by two [[Create]]s in one [[Star]]:
 	1. First as a [[Social]] card, for its [[Price]]
 	2. Then as an [[Industrial]] card, for the [[Level]] +

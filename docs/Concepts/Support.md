@@ -18,5 +18,5 @@ scope: core
 
 1. Support is local: positions on the [[Field]] matter
 2. A [[Structure]] has Range 0: from another IPS it supports only in a
-   group with [[Actor]]s from its [[Star]], and they become supporters
-   too
+   group with an [[Actor]] from its [[Star]] or from [[Hand]], see
+   [[PerformAction]]
