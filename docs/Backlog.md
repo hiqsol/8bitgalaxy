@@ -1,6 +1,6 @@
 ---
 date: 2026-10-10
-updated: 2026-10-25
+updated: 2026-10-26
 status: WIP
 scope: meta
 ---
@@ -46,7 +46,7 @@ from a played game, not from a review.
     a time (P28) and one sealed round (S70) were rejected, see
     [[Combat]]
 11. **Defense**: a [[Military]] card defends with its Level, not its
-    AttackPower (P62, S69), see [[Defense]]
+    [[MilitaryPower]] (P62, S69), see [[Defense]]
 12. **Academy defenders** stay in `duel`; a Hero sent to the Factory
     (S25 b) and wounds cycling in the deck (I76 c) were rejected, see
     [[Academy]]
@@ -59,8 +59,13 @@ from a played game, not from a review.
     captures one, no global hub (I19 d), see [[Hub]]
 16. **Trade between factions**: [[Export]], [[Smuggle]] and [[Sell]]
     work in a duel with the rival, not only in [[Politics]] (P57 e)
-17. **Culture finish**: Culture points trigger [[Twilight]], not an
-    instant win (I95 a)
+17. **Game finish**: [[Military]] wins immediately; [[Singularity]],
+    7 possessed [[Hyperstructure]]s or
+    [[GalacticDiaspora|Galactic Diaspora]] trigger [[Twilight]]. The
+    most achievements in the current state wins, then
+    [[VictoryPoints]] break a tie (I77, I78, I95 a)
+18. **Victory points**: the current Levels of non-Damaged cards on the
+    Field controlled by the faction; [[Objective]]s can add points
 
 ## Next step
 
@@ -227,11 +232,12 @@ The first duel keeps Spaces of length 1.
 
 - [ ] **I19. Deck review.**
 	- e) The 12 cards 6/5 and 8/7 are TBD in the [[Deck]]:
-	  technologies and Structure Primary, to design before the next
-	  playtest. Their TBD ends carry [[Express]], [[ForceDiscard]],
-	  [[Settle]], the `+Draw` [[Plus]] and the technologies from
-	  [[Tactics]] to [[Standby]], see [[Technology]]: a value per
-	  Price stays about flat, a value per card grows with Level.
+	  technologies and Hyperstructure Primary, to design before the
+	  next playtest. Their TBD ends carry [[Express]],
+	  [[ForceDiscard]], [[Settle]], the `+Draw` [[Plus]] and the
+	  technologies from [[Tactics]] to [[Standby]], see
+	  [[Technology]]: a value per Price stays about flat, a value per
+	  card grows with Level.
 - [ ] **I47. Images.** Update `card.png` after the rules and card
   data are settled: annotate both ends, ExtraPrice, Prerequisites and
   the technology name.
@@ -257,28 +263,10 @@ All `advanced`.
 
 ### Victory and extensions
 
-- [ ] **I78. Production path** ([[Goal]] 3.3) is TBD. → P60
-- [ ] **P60. Production path** for [[Goal]] 3, pick one or more:
-	- a) Production, Wealth: stock 12 [[Energy]] (Civilization's
-	  economic victory).
-	- b) Production, Industry: total [[Level]] of own [[Base]]s on the
-	  [[Field]], the mirror of the Culture path.
-	- c) Production, Fleet: total Level of own [[Ship]]s, in the deck
-	  and on the Field.
-	- d) Production, Stock: total [[Materials]] stored in own Stars, a
-	  logistics race.
-	- e) Production, Built out: own [[Factory]] and [[Laboratory]] are
-	  empty, the mirror of Science.
-	- f) Production, Wonders: 3 completed [[Hyperstructure]]s, the
-	  Homeworld included.
-- [ ] **I77. Hyperstructure count and build.**
-	- a) How many in a game, one copy of each?
-	- b) A shared row, the first to complete one takes it?
-	- c) How an unfinished one lies in its [[Slot]] between its two
-	  [[Create]]s.
 - [ ] **I43. Objectives details.** [[Objective]] (`objectives`):
 	- a) The list of objectives.
-	- b) The number of victory points to win.
+	- b) Whether Objective points can win before [[Twilight]], and at
+	  what threshold.
 	- c) Whether a public objective gives more than 1 point.
 - [ ] **I44. Politics details.**
 	- a) [[StrategyCard]]: the list of roles.
@@ -298,8 +286,7 @@ All `advanced`.
 	- d) [[Event]] note 3.3 moves a "warp storm", which is defined
 	  nowhere.
 - [ ] **I80. Event catch-up measure.** [[Event]] notes give less to
-  stronger factions, but greatness is now the four paths of [[Goal]]:
-  which measure says who is stronger, Culture points?
+  stronger factions: do [[VictoryPoints]] measure strength?
 
 ### Additions
 
@@ -320,13 +307,8 @@ All `advanced`.
 	- c) [[PlusHero]]: remove, [[Create]] of Heroes covers it.
 - [ ] **I94. Underdescribed technologies.** Their pages don't say
   enough to play them, stubs are in P59:
-	- a) [[Militarization]]: what [[Manage]] does to an enemy card.
-	- b) [[Invent]]: which pile and the Cost.
 	- c) [[PlusPile]]: the Cost, the limit and how an extra pile
 	  works.
-	- d) [[Stealth]] at [[Takeoff]]: Stealth 4 lets the card itself
-	  or an own Enabled card in that Star provide it. Does the
-	  providing card Deplete as in [[ImmediateAction]]?
 
 ## Core streamlining
 
@@ -524,14 +506,6 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 
 One batch after the playtest, only for pages that confused play.
 
-- [ ] **I75 c, d. Naming.**
-	- c) [[AttackPower]] → `MilitaryPower`, like the other three
-	  powers.
-	- d) [[Militarization]] cards are [[Military]] already, they don't
-	  militarize. The technology is [[Manage]] of enemy cards, which
-	  lowers their [[Defense]] before an [[Attack]]: `Suppression`
-	  fits best, also `Sabotage`, `Disruption`. Its Defense part is a
-	  [[Plus]].
 - [ ] **S23. Separate usable cards from scoring cards.** [[ActiveFor]]
   includes [[History]], whose cards are out of play, then says active
   cards are action participants:
@@ -614,17 +588,6 @@ One batch after the playtest, only for pages that confused play.
   cards in a Star: does a captured rival [[Structure]],
   [[ControlledBy]] the faction, count?
 	- a) Only own cards count: a captured Structure gives no Control.
-- [ ] **S45. One Culture count.** [[Goal]] 3.2 makes two sums:
-  [[Colony]] Levels on the [[Field]] and [[CulturePoints]] of active
-  cards. The first counts Damaged Colonies, which stay
-  [[ControlledBy]] the Star's controller; no [[Deck]] card prints
-  CulturePoints:
-	- a) A Colony's CulturePoints default to its current Level, other
-	  cards 0.
-	- b) The Culture path sums CulturePoints of [[ActiveFor|active]]
-	  cards, or of cards that count for goals with S23 b: Damaged
-	  Colonies stop counting.
-	- c) Goal 3.2.1 goes, CulturePoints gets used in core.
 - [ ] **S47. One Home pile table.** Ten pile pages state visibility
   and entry in different words, some not at all:
 	- a) [[Factory]], [[Laboratory]] and [[History]] don't say who

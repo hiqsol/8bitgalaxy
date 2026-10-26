@@ -21,8 +21,7 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	1. **physical**: [[Side]], [[End]]
 	2. **explicit**, printed on the card: [[Faction]], [[Class]],
 	   [[Level]], [[ExtraPrice]], [[Type]], [[PrimaryAbility]],
-	   [[SecondaryAbility]], [[Trait]], [[Prerequisites]],
-	   [[CulturePoints]]
+	   [[SecondaryAbility]], [[Trait]], [[Prerequisites]]
 	3. **implicit**, derived from other properties: [[Defense]],
 	   [[Capacity]], [[Range]], [[Price]], [[Size]], [[Role]],
 	   [[Origin]]

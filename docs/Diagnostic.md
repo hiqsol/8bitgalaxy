@@ -128,45 +128,13 @@ order.
 
 ### Victory and extensions
 
-- **Q43. Production path** (I78). How does a faction win by the
-  [[Production]] path of [[Goal]]?
-	- [ ] a) It stocks 12 [[Energy]].
-	- [ ] b) The total Level of own [[Base]]s on the Field, like the
-	  Culture path.
-	- [ ] c) The total Level of own [[Ship]]s, in the deck and on the
-	  Field.
-	- [ ] d) The total Materials stored in own Stars.
-	- [ ] e) Own [[Factory]] and Laboratory are empty.
-	- [ ] f) Three completed [[Hyperstructure]]s, the Homeworld
-	  included.
-	- [ ] g) The notes don't decide.
-- **Q44. Hyperstructure copies** (I77 a). In an `advanced` game, how
-  many Senates can be built?
-	- [ ] a) One in the whole game.
-	- [ ] b) One per faction.
-	- [ ] c) Any number.
-	- [ ] d) The notes don't decide.
-- **Q45. Where a Hyperstructure comes from** (I77 b). Two factions
-  both want the Dyson Sphere. Where does its card come from?
-	- [ ] a) Each faction's own Factory.
-	- [ ] b) Each faction's own Laboratory, by [[Research]].
-	- [ ] c) A shared row beside the Field: the first to complete it
-	  takes it.
-	- [ ] d) The notes don't decide.
-- **Q46. A half-built Hyperstructure** (I77 c). A faction made the
-  first, [[Social]] Create of a Citadel in a Star, not yet the second.
-  How does the card lie in its Slot?
-	- [ ] a) Face up on its strong end, its effect working.
-	- [ ] b) Face up on its weak end, no effect until the second
-	  Create.
-	- [ ] c) Face down, like a Damaged card, until the second Create.
-	- [ ] d) The notes don't decide.
-- **Q47. Victory points to win** (I43 b). In a duel with
-  [[Objective]]s, how many victory points win?
-	- [ ] a) 5.
-	- [ ] b) 6.
-	- [ ] c) 8.
-	- [ ] d) The notes don't decide.
+- **Q47. Objective victory** (I43 b). In a game with [[Objective]]s,
+  can their scored points win before [[Twilight]]?
+	- [ ] a) No: they only add to [[VictoryPoints]] at Twilight.
+	- [ ] b) Yes, at 5 Objective points.
+	- [ ] c) Yes, at 6 Objective points.
+	- [ ] d) Yes, at 8 Objective points.
+	- [ ] e) The notes don't decide.
 - **Q48. Points of a public objective** (I43 c). A player scores a
   public Objective. How many victory points does it give?
 	- [ ] a) 1, like a secret one.
@@ -227,56 +195,9 @@ order.
 - **Q57. Who is stronger for an Event** (I80). An Event gives less to
   stronger factions. Which measure says who is stronger?
 	- [ ] a) The number of controlled Stars.
-	- [ ] b) The total Level of active cards on the Field.
-	- [ ] c) Culture points.
-	- [ ] d) Victory points of Objectives.
-	- [ ] e) The notes don't decide.
-
-### Underdescribed technologies
-
-- **Q58. Militarization on an enemy card** (I94 a). A player's
-  [[Manage]], with a Science starter and an own Colony 4M giving
-  [[Militarization]], targets a rival's Ready Base 4S in the same
-  Star. What can it do to the Base?
-	- [ ] a) Shift it to another Slot only.
-	- [ ] b) Rotate it to its weak end only.
-	- [ ] c) Either: Rotate or Shift.
+	- [ ] b) [[VictoryPoints]].
+	- [ ] c) The number of non-Military [[Goal]] achievements.
 	- [ ] d) The notes don't decide.
-- **Q59. Invent: which card** (I94 b). With [[Invent]], which card can
-  a [[Research]] take?
-	- [ ] a) Only the second card of a Laboratory pile, right below
-	  the top.
-	- [ ] b) Any card of any own Laboratory pile.
-	- [ ] c) The notes don't decide.
-- **Q60. Invent: the Cost** (I94 b). With Invent, a Research takes a
-  card that has two cards above it in its Laboratory pile. What does
-  it cost?
-	- [ ] a) The card's Price, as without Invent.
-	- [ ] b) The card's Price plus 1 per card above it.
-	- [ ] c) The card's Price plus 1.
-	- [ ] d) The notes don't decide.
-- **Q61. Stealth at Takeoff** (I94 d). At [[Takeoff]] a Ship comes in
-  Hidden, because an own Ready Base 4M in that Star provides
-  [[Stealth]]. Does the Base 4M [[Deplete]]?
-	- [ ] a) No: Stealth at Takeoff is free.
-	- [ ] b) Yes, like the shown card of an [[ImmediateAction]].
-	- [ ] c) The notes don't decide.
-
-## Editorial
-
-- **Q62. Name of Military power** (I75 c). What is the [[Power]] of
-  [[Military]] cards called?
-	- [ ] a) MilitaryPower, like the other three powers.
-	- [ ] b) AttackPower.
-	- [ ] c) The notes don't decide.
-- **Q63. Name of Militarization** (I75 d). The technology that lets
-  [[Manage]] work on enemy cards, which lowers their Defense before an
-  [[Attack]], is called:
-	- [ ] a) Disruption.
-	- [ ] b) Militarization.
-	- [ ] c) Sabotage.
-	- [ ] d) Suppression.
-	- [ ] e) The notes don't decide.
 
 ## Not in the test
 

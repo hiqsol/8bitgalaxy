@@ -18,15 +18,18 @@ scope: duel
 	   same for both ends
 3. Card name is [[Type]] with strong end level and class
 4. **Deck** holds 56 cards, counted by the [[Level]] of the strong
-   End: up to Level 2, 8 Ships, 8 [[Tool]]s and 4 of each other
-   [[Type]]; then of each Type but Tool 4 of Level 4, 2 of Level 6
-   and 1 of Level 8
+   End:
+	1. Up to Level 2: 8 Ships, 8 [[Tool]]s and 4 each of Hero, Base
+	   and Colony
+	2. Level 4: 4 each of Ship, Hero, Base and Colony
+	3. Level 6: 2 each of Ship and Hero, and 4 Hyperstructures
+	4. Level 8: 1 each of Ship and Hero, and 2 Hyperstructures
 5. A two-ended card has an even Level on its strong End and one less
    on its weak End: 2/1, 4/3, 6/5, 8/7
 6. Every [[Class]] has as many ends at each Level as any other Class:
    7 at Level 1, 4 at Levels 2 to 4, 2 at 5 and 6, 1 at 7 and 8
-7. Every Class has one Level 8 card, its **crown**, each crown of
-   another Type: Ship 8M, Hero 8S, Base 8P, Colony 8C
+7. Every Class has one Level 8 card, its **crown**: Ship 8M, Hero 8S,
+   Hyperstructure 8P and Hyperstructure 8C
 8. **Starting cards** are 4 one-ended Ships 1/0, one of each Class,
    the weak End blank: Level 1, Primary 1, nothing else, see
    [[StartDraw]]
@@ -103,12 +106,6 @@ scope: duel
 |  | weak | 3+1 | P | +1 Capacity | - |  |
 | Base 4S | strong | 4+1 | S | [[Navigation]] | +3 | 2S |
 |  | weak | 3+1 | S | [[Navigation]] | - |  |
-| Base 6C | strong | 6+1 | C | TBD | +5 | 4C |
-|  | weak | 5+1 | C | TBD | - |  |
-| Base 6S | strong | 6+1 | S | TBD | +5 | 4S |
-|  | weak | 5+1 | S | TBD | - |  |
-| Base 8P | strong | 8+1 | P | TBD | +7 | 4C, 4S, 6P |
-|  | weak | 7+1 | P | TBD | - |  |
 | Colony 2M | strong | 2+1 | M | [[Explore]] | +2 | - |
 |  | weak | 1+1 | M | [[Explore]] | - |  |
 | Colony 2C | strong | 2+1 | C | [[Academy]] | +2 | - |
@@ -125,12 +122,18 @@ scope: duel
 |  | weak | 3+1 | P | [[MegaYard]] | - |  |
 | Colony 4S | strong | 4+1 | S | +3 Range | +4 | 2S |
 |  | weak | 3+1 | S | +1 Range | - |  |
-| Colony 6M | strong | 6+1 | M | TBD | +6 | 4M |
+| Hyperstructure 6M | strong | 6+1 | M | TBD | +6 | 4M |
 |  | weak | 5+1 | M | TBD | - |  |
-| Colony 6P | strong | 6+1 | P | TBD | +6 | 4P |
+| Hyperstructure 6P | strong | 6+1 | P | TBD | +6 | 4P |
 |  | weak | 5+1 | P | TBD | - |  |
-| Colony 8C | strong | 8+1 | C | TBD | +8 | 4M, 4P, 6C |
+| Hyperstructure 6C | strong | 6+1 | C | TBD | +5 | 4C |
+|  | weak | 5+1 | C | TBD | - |  |
+| Hyperstructure 6S | strong | 6+1 | S | TBD | +5 | 4S |
+|  | weak | 5+1 | S | TBD | - |  |
+| Hyperstructure 8C | strong | 8+1 | C | TBD | +8 | 4M, 4P, 6C |
 |  | weak | 7+1 | C | TBD | - |  |
+| Hyperstructure 8P | strong | 8+1 | P | TBD | +7 | 4C, 4S, 6P |
+|  | weak | 7+1 | P | TBD | - |  |
 | Tool 1M | strong | 1 | M | 1 | - | - |
 |  | weak | - | - | - | - |  |
 | Tool 1M | strong | 1 | M | 1 | - | - |
@@ -172,8 +175,8 @@ scope: duel
 	6. A crown needs Level 6 of its Class and Level 4 of two other
 	   Classes: three participants
 	7. [[Price]] of a card is its strong Level + 1: 3, 5, 7, 9
-	8. [[Base]] Secondary is the strong Level − 1: +1, +3, +5, +7,
-	   [[Colony]] Secondary one more: +2, +4, +6, +8
+	8. [[Base]] Secondary is the strong Level − 1 and [[Colony]]
+	   Secondary equals the strong Level
 3. From Level 4 each strong Level holds half the cards of the one
    below, like the Trade Deck of Star Realms above cost 2: big cards
    are few, decisive and contested. The cards 1/0, 4 Ships and 8
@@ -181,15 +184,12 @@ scope: duel
 4. Ends balance the Classes, not strong ends: an [[Actor]] gives a
    Level of its weak end's Class too, for [[Prerequisites]] and
    [[Singularity]]
-5. Every Type climbs to Level 8: [[Upgrade]] keeps the Type, not the
-   Class, so a ladder needs no card of its Class at every Level. A
-   [[Social]] card climbs one Level at a time, so it gives 1 more
-   [[Power]] than the [[Industrial]] card of its Level: patterns 2.4
-   and 2.8
-6. The crowns are the cards of [[Singularity]]: one of each Type, so
-   it takes both [[Origin]]s and both [[Hub]]s, Social crowns come
-   only by [[Upgrade]], see [[Create]]. A [[World]], at most Level 6,
-   stays below them
+5. Ship and Hero climb to Level 8 by [[Upgrade]]. Base and Colony end
+   at Level 4; the six Structure cards at Levels 6 and 8 are
+   [[Hyperstructure]]s built by their own rule
+6. The crowns are the cards of [[Singularity]]. Reaching all four
+   takes both [[Origin]]s and both [[Hub]]s. A [[World]], at most
+   Level 6, stays below them
 7. Starting cards and [[Tool]]s are like Scouts and Vipers of Star
    Realms: the Ships 1/0 with Ship 2M, 2C, 2P, 2S are the 8 Ships of
    the starting deck, see [[StartDraw]]. The Tools are in the Deck:

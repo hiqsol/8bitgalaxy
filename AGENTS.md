@@ -46,7 +46,7 @@ Write a page like the best existing page of its kind:
 - Card type: `docs/Cards/Ship.md`
 - Property: `docs/Properties/Range.md`
 - State: `docs/States/Damaged.md`
-- Power: `docs/Resources/AttackPower.md`
+- Power: `docs/Resources/MilitaryPower.md`
 - Class, Origin, Role: `docs/Types/Social.md`
 - Home pile: `docs/Home/Hand.md`
 - Space type: `docs/Field/Asteroids.md`

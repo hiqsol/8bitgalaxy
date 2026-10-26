@@ -22,7 +22,7 @@ scope: core
    card, not later
 7. **Combat** resolves when every party passes in one round
 8. Then reveal hidden cards, count total powers and determine winner:
-	1. An attacking card adds its [[AttackPower]]
+	1. An attacking card adds its [[MilitaryPower]]
 	2. A defending card adds its [[Defense]]
 	3. A tie goes to the defender
 	4. **Advantage** = winner total − loser total
@@ -42,6 +42,6 @@ scope: core
 2. Direct participants hold ground like chess pieces: survivors stay
    or move in
 3. Both sides can add any cards, but a non-[[Military]] card has no
-   [[AttackPower]]: it attacks with 0, though it can [[Boost]], and
+   [[MilitaryPower]]: it attacks with 0, though it can [[Boost]], and
    defends with 1, see [[Defense]]. It joins an attack for its
    technologies, Range and Capacity, or to move in

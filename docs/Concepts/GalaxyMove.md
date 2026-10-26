@@ -16,7 +16,8 @@ scope: galaxy
 	4. Other cards: as the card says
 2. **Galaxy move** is mandatory every [[Turn]] when the [[Galaxy]] is
    present
-3. When the [[GalaxyDeck]] runs out, [[Twilight]] is triggered
+3. When the [[GalaxyDeck]] runs out, [[Twilight]] is triggered; at
+   its end, the player faction with the most [[VictoryPoints]] wins
 
 #### Notes
 

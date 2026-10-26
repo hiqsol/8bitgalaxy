@@ -12,6 +12,5 @@ scope: core
 	4. [[GalaxyDeck]] composition, see [[Galaxy]]
 	5. **Ancient deck** and **World deck**, see [[Ancient]], [[World]]
 	6. Starting [[Home]] piles
-	7. Culture points that trigger [[Twilight]]
 3. Scenarios:
 	1. [[Duel]]

@@ -67,9 +67,13 @@ reward the bold). You don't fight *against* the universe — you
 
 Become the greatest civilization by one of four paths:
 - Military: defeat every rival leader
-- Culture: the most Culture points at Twilight
-- Production: to be defined
+- Culture: live throughout the universe in a Galactic Diaspora
+- Production: possess at least 7 Hyperstructures
 - Singularity (Science): top-level cards of every class
+
+Military wins immediately. Each other achievement starts Twilight;
+the faction with the most current achievements wins, with victory
+points breaking a tie.
 
 A faction falls when it loses all leaders or can't make a move.
 

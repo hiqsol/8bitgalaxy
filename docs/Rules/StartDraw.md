@@ -14,12 +14,13 @@ scope: duel
 3. Home Star:
 	1. 1 [[Academy]] Colony 2/1
 	2. 1 [[Shipyard]] Base 2/1
-	3. 1 [[Hyperstructure|Homeworld]], built
+	3. 1 [[Homeworld]] Hyperstructure, built
 4. [[Factory]]: the other cards 2/1 of the [[Deck]]
 	1. 2 Heroes
 	2. 3 Bases
 	3. 3 Colonies
-5. [[Laboratory]]: the cards 4/3, 6/5 and 8/7, 28 cards
+5. [[Laboratory]]: the cards 4/3, 6/5 and 8/7, 28 cards, including
+   the faction's 6 [[Hyperstructure]]s
 
 #### Notes
 
@@ -29,5 +30,3 @@ scope: duel
    rarely until the player thins the deck, see [[Tool]]
 3. The choice of Heroes sets the opening, the other two can be
    [[Create]]d at the Academy
-4. The [[Laboratory]] is the clock of [[Twilight]]: its 28 cards keep
-   Twilight far

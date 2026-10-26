@@ -15,7 +15,7 @@ scope: meta
 3. `h1` - Hero-1
 4. `s1` - Ship-1 / `1s` - 1 science
 5. `hs1` - Hyperstructure-1
-6. `hw1` - Homeworld-1
+6. `hw1` - Homeworld Hyperstructure-1
 7. `t1` - Tool-1
 8. `w1` - World-1
 9. `a2` - Ancient with Defense 2, `a?` - Ancient not revealed
@@ -62,9 +62,9 @@ Ship-2m/1c           |  s2m |  s2m/1c |  s2m1c
 Hero-2c/1p           |  h2c |  h2c/1p |  h2c1p
 Base-2p/1s           |  b2p |  b2p/1s |  b2p1s
 Colony-2s/1m         |  c2s |  c2s/1m |  c2s1m
-World-2p/1n          |  w2p |  w2p/1n |  w2p1n
+Colony World-2p/1n   |  w2p |  w2p/1n |  w2p1n
 Hyperstructure-2a/1n | hs2s | hs2s/1n | hs2s1n
-Homeworld-2a/1n      | hw2c | hw2c/1n | hw2c1n
+Hyperstructure Homeworld-2a/1n | hw2c | hw2c/1n | hw2c1n
 
 ## Actions
 

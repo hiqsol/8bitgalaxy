@@ -44,8 +44,11 @@ scope: duel
    see [[Create]]. One Level at a time slows the Social cards: from a
    strong End a **Grow** lands on the weak End of a bigger card, e.g.
    from 2 to the 3 of a 4/3, a rotation brings the strong End,
-   [[Restore]] for a [[Colony]], [[Manage]] for a [[Hero]]. A Social
-   card takes three **Grows** and three rotations from Level 2 to its
-   crown, a [[Ship]] or a [[Base]] one **Enhance**
-4. An upgraded Actor stays on the Field and acts in the same
+   [[Restore]] for a [[Colony]], [[Manage]] for a [[Hero]]. A Hero
+   takes three **Grows** and three rotations from Level 2 to its
+   crown; a Colony ends at Level 4
+4. A [[Ship]] can **Enhance** to its crown and a [[Base]] ends at
+   Level 4. A [[Hyperstructure]] is built by its own rule, not by
+   upgrading a Base or Colony
+5. An upgraded Actor stays on the Field and acts in the same
    [[Turn]]

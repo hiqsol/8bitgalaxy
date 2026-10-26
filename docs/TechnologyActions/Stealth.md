@@ -10,6 +10,8 @@ scope: duel
 4. At [[Takeoff]] a card can be placed with its [[Hidden]] [[End]] up
    when **Stealth** is provided by the card itself or by an own
    [[Enabled]] card in that [[Star]]
+5. A card providing **Stealth** at Takeoff [[Deplete]]s, as for any
+   [[ImmediateAction]]
 
 #### Notes
 

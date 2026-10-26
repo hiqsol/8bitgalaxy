@@ -4,4 +4,4 @@ scope: core
 ---
 
 1. **Military** is a [[Class]]
-2. Provides [[AttackPower]] and **Military** technologies
+2. Provides [[MilitaryPower]] and **Military** technologies

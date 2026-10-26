@@ -1,6 +1,6 @@
 ---
 date: 2026-10-19
-updated: 2026-10-24
+updated: 2026-10-26
 status: WIP
 scope: meta
 ---
@@ -101,6 +101,7 @@ distinctive and what to take from others.
 
 | Game | What to take | Where |
 |------|--------------|-------|
+| 7 Wonders | A naming nod rather than a copied mechanism: possessing seven wonders starts the endgame. | [[Hyperstructure]], [[Twilight]] |
 | Through the Ages | Discover with science then build, upgrade pays the difference (already: [[Research]], [[Create]], [[Upgrade]]). Wonders. Players seed future events (already: [[FutureEvents]]). Game ends when the Age III deck runs out. Tactics reward a mixed army. | [[Twilight]], [[Hyperstructure]], [[Tactics]] |
 | Civilization (2010) | Four victories: capture a capital, culture, economy, technology. Tech pyramid instead of printed prerequisites. | [[Goal]] |
 | Civilization: A New Dawn | Focus row 1-5: a used card drops to slot 1 and recharges over time. Trade tokens boost a card (already: [[Boost]]). Unique wonders. | [[Restore]], [[Hyperstructure]] |

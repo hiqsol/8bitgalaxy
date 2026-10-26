@@ -5,7 +5,7 @@ scope: core
 
 1. **Class** is explicit card [[Property]]
 2. Each **class** corresponds to the [[Power]] and color:
-	1. 🔴 [[Military]] - [[AttackPower]]
+	1. 🔴 [[Military]] - [[MilitaryPower]]
 	2. 🟢 [[Culture]] - [[CulturePower]]
 	3. 🟡 [[Production]] - [[ProductionPower]]
 	4. 🔵 [[Science]] - [[SciencePower]]
