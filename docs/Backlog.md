@@ -12,8 +12,8 @@ a **minimal playable duel**: 2 players, no [[GalaxyDeck]], playable
 with an AI from the notes alone. Items keep their review numbers:
 issues `I<n>`, proposals `P<n>` and simplifications `S<n>`. Other
 games are compared in [[ComparisonReview]]. [[Diagnostic]] tests each
-issue with one multiple-choice question. [[ReviewProcess]] sets when
-an item opens and closes.
+independent point of an issue with an atomic multiple-choice
+question. [[ReviewProcess]] sets when an item opens and closes.
 
 Answer by number and letter, e.g. "P27 a, c", "S41 no".
 
@@ -65,7 +65,19 @@ from a played game, not from a review.
     most achievements in the current state wins, then
     [[VictoryPoints]] break a tie (I77, I78, I95 a)
 18. **Victory points**: the current Levels of non-Damaged cards on the
-    Field controlled by the faction; [[Objective]]s can add points
+    Field controlled by the faction; [[Objective]]s can add points,
+    a win by Objective points before [[Twilight]] was rejected
+    (I43 b)
+19. **Space length**: a Space counts its printed Length whatever its
+    Type; a Black hole of length 0 (P24 Black hole a and the length
+    of b) and a Void of length 2 with Navigation (P24 Void b) were
+    rejected, see [[Space]], [[Distance]]
+20. **Void**: a route can't pass it, a [[Move]] with [[Navigation]]
+    can; a Void never passable (P24 Void c) was rejected, see [[Void]]
+21. **Asteroids**: only [[Extract]]; cover, narrow and rough (P24
+    Asteroids b-d) were rejected, see [[Asteroids]]
+22. **Duel Space tiles**: every Space position holds a tile, the outer
+    sides too; empty outer sides (P35 a) were rejected, see [[Duel]]
 
 ## Next step
 
@@ -121,7 +133,10 @@ Questions a played game answers better than a review.
 
 - [ ] **I46. Deck thinning by Takeoff.** A player can take off weak
   cards, the [[Tool]]s first, and cycle only strong ones. Free
-  [[Slot]]s limit it. To be worked out in [[GameBalance]].
+  [[Slot]]s limit it. To be worked out in [[GameBalance]]. Seen in
+  game 3 of the first duel playtest: the Turtle took off every other
+  card to keep its Discard small and drew the new Ship 4P at the next
+  Shuffle.
 - [ ] **I79 b. Legacy thins the deck** like I46: keep [[Legacy]] in
   `objectives` or drop it?
 - [ ] **I75 a. Actions per Turn.** [[GameBalance]] expects about 5
@@ -163,32 +178,22 @@ The first duel keeps Spaces of length 1.
 
 - [ ] **I49. Space types.** → P24, P35
 	- a) [[Space]] types Nebula and Black hole have no behavior.
-	- b) [[Asteroids]] and [[Void]] are thin, HyperPass is an idea.
+	- b) HyperPass is an idea for an extension.
 	- c) The first duel has no Space tile set.
 - [ ] **P24. Space type behaviors.** No dice: every effect is
   deterministic. Better types cost more to [[Explore]]. Pick one or
   more variants per type, e.g. "P24 Nebula a, c":
 	- **Normal** (Price 2): a) plain, length 1. b) length 1 or 2,
 	  longer is cheaper (Price 1).
-	- **[[Asteroids]]** (Price 3, resource): a) [[Extract]]
-	  [[Materials]] from a bordering Star (current). b) cover: a
-	  [[Hidden]] card passing it stays Hidden even if it took part in
-	  an action. c) narrow: only groups of total [[Capacity]] ≤ 2
-	  pass. d) rough: length +1 for all but [[Military]] [[Ship]]s.
 	- **Nebula** (Price 1, obstacle, TI-like): a) a group entering it
 	  must stop at the next Star, it can't go further this action. b)
 	  blind: [[Explore]] can't look past it. c) shroud: cards passing
 	  it may become [[Hidden]] for free. d) static: no [[Support]]
 	  from the [[Field]] through it.
-	- **Black hole** (Price 3, shortcut): a) slingshot: length 0. b)
-	  gravity well: length 0, but each passing group [[Deplete]]s its
-	  weakest card. c) one-way: passable only away from the nearest
-	  home Star. d) lab: Science actions started in a bordering Star
-	  get +1 [[SciencePower]].
-	- **[[Void]]** (Price 1, wall): a) impassable without
-	  [[Navigation]] (current). b) with Navigation length 2, without
-	  impassable. c) never passable, but no Explore cost, its back
-	  shows it (a known wall).
+	- **Black hole** (Price 3): b) gravity well: each passing group
+	  [[Deplete]]s its weakest card. c) one-way: passable only away
+	  from the nearest home Star. d) lab: Science actions started in
+	  a bordering Star get +1 [[SciencePower]].
 	- **HyperPass** (Price 4, best, a Space type): a) length 0. b)
 	  wormhole pair: two HyperPass tiles anywhere are adjacent to each
 	  other. c) highway: length 0 and [[Move]] cargo Capacity +1.
@@ -208,8 +213,6 @@ The first duel keeps Spaces of length 1.
 	  playtests of the 56-card Deck.
 - [ ] **P35. First duel Space set** in [[Duel]], after P24,
   replacing "every Space has length 1":
-	- a) 24 tiles on the inner sides, shuffled and placed face down.
-	  Outer sides stay empty: the edge of the galaxy.
 	- b) 12 Normal, 2 [[Asteroids]], 2 Nebula, 2 Black hole, 2
 	  [[Void]], 2 HyperPass, 2 Relic.
 	- c) Types whose chosen variants need `advanced` rules are
@@ -265,28 +268,45 @@ All `advanced`.
 
 - [ ] **I43. Objectives details.** [[Objective]] (`objectives`):
 	- a) The list of objectives.
-	- b) Whether Objective points can win before [[Twilight]], and at
-	  what threshold.
 	- c) Whether a public objective gives more than 1 point.
 - [ ] **I44. Politics details.**
 	- a) [[StrategyCard]]: the list of roles.
 	- b) [[PromissoryNote]]: what each side gets.
 	- c) [[PromissoryNote]]: whether the card returns to its owner.
 - [ ] **I45. Derelict details.** [[Derelict]] (`galaxy`):
-	- a) Where they come from: setup or a [[GalaxyMove]], which
-	  [[Star]].
+	- a) Which [[Star]] a [[GalaxyMove]] puts a Derelict into.
 	- b) The recruit cost.
-- [ ] **I89. Galaxy flow.** [[Galaxy]] (`galaxy`):
+- [ ] **I89. Galaxy flow.** [[Galaxy]] (`galaxy`): → P68
 	- a) [[Turn]] has no step for the [[GalaxyMove]]: when in the
 	  Turn, by whom.
 	- b) When a card in [[FutureEvents]] is evaluated.
 	- c) [[CurrentEvents]] is never used and holds [[Hidden]] cards,
 	  though an evaluated [[Event]] is revealed. Nothing puts cards to
 	  [[GalaxyScrap]].
-	- d) [[Event]] note 3.3 moves a "warp storm", which is defined
-	  nowhere.
-- [ ] **I80. Event catch-up measure.** [[Event]] notes give less to
-  stronger factions: do [[VictoryPoints]] measure strength?
+- [ ] **P68. Galaxy events like Through the Ages.** In TtA players
+  seed future events and resolve current ones, one in, one out. The
+  Galaxy piles map to its decks: [[FutureEvents]] the prepared
+  events, [[CurrentEvents]] the face-down deck to resolve,
+  [[GalaxyScrap]] the past events:
+	- a) Setup: the [[Scenario]] puts some [[Event]]s face down into
+	  CurrentEvents, e.g. players + 2.
+	- b) The [[GalaxyMove]] opens each [[Turn]], before **Play**, and
+	  the player whose Turn it is makes it: the Hand is played knowing
+	  the event.
+	- c) Prepare: the player takes the top card of the
+	  [[GalaxyDeck]]; an Event goes face down on FutureEvents, only
+	  that player knows it; other kinds are played as today.
+	- d) Reveal: after an Event is prepared, the top card of
+	  CurrentEvents is revealed and resolved by its text, the player
+	  decides what the text leaves open ([[Event]] 6).
+	- e) Refill: when CurrentEvents is empty at a reveal, FutureEvents
+	  is shuffled and becomes CurrentEvents.
+	- f) An Event resolves at once and goes face up to GalaxyScrap. A
+	  lasting effect stays on the [[Field]] as a tile, e.g.
+	  [[Supernova]], [[WarpStorm]], never as a card in play.
+	- g) Choice, like the TtA hand: the player takes the top two
+	  Galaxy cards, plays one and puts the other under the
+	  GalaxyDeck.
 
 ### Additions
 

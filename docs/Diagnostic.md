@@ -1,43 +1,48 @@
 ---
 date: 2026-10-25
+updated: 2026-10-26
 status: WIP
 scope: meta
 ---
 
 # Diagnostic
 
-One multiple-choice question per open issue of the [[Backlog]]: a game
-situation the issue leaves open. A question tests one issue, stands
-alone and leads to no other question: answer all or some, in any
-order.
+Atomic multiple-choice questions for the open issues of the
+[[Backlog]] that matter for the [[Duel]]. Each question tests one rule
+point, stands alone and leads to no other question. An issue with
+several independent points has several questions. Answer all or some,
+in any order. Questions on extensions and `advanced` rules wait in
+[[DeferredDiagnostic]].
 
 1. A **reader**, a playtester or an AI, answers from the notes alone,
    not from the [[Backlog]] or [[Guidance]]; a question on a played
    game from its record
 2. The **designer** answers with the intended rule
-3. One option per question: tick its box, or name it, e.g. "Q20 b"; if
-   none fits, a few words
+3. Pick one option per question: tick its box, or name it, e.g.
+   "Q20 b"; if none fits, add a few words
 4. An issue is **closed** when every reader picks the designer's
    option, else it stays open; "the notes don't decide" always means
    open
 5. A resolved issue takes its question with it, the other numbers stay
 
+## First duel
+
+- **Q75. World cards exist** (I57). Can the first [[Duel]] build the
+  World deck from actual [[World]] cards that each print one
+  [[Ability]]?
+	- [ ] a) Yes, every required World card exists.
+	- [ ] b) No, the rules describe World cards but none exist.
+	- [ ] c) Some exist, but not a complete World deck.
+	- [ ] d) The notes don't decide.
+
 ## Watch in playtest
 
-- **Q17. Deck thinning by Takeoff** (I46). In a played game, did a
-  player take weak cards off to the Field, the [[Tool]]s first, to
-  cycle only strong ones?
-	- [ ] a) No player did it.
-	- [ ] b) A player tried, free [[Slot]]s stopped it.
-	- [ ] c) Yes, without deciding the game.
-	- [ ] d) Yes, and it decided the game.
-	- [ ] e) The record doesn't show.
-- **Q18. Deck thinning by Legacy** (I79 b). In a played game with
-  `objectives`, did a player thin the deck by moving cards to
-  [[History]] with [[Legacy]]?
-	- [ ] a) No player did it.
-	- [ ] b) Yes, without deciding the game.
-	- [ ] c) Yes, and it decided the game.
+- **Q17. Deck thinning by Takeoff** (I46). In a played game, did
+  using [[Takeoff]] to leave weak cards on the Field materially
+  improve that player's later draws?
+	- [ ] a) Yes.
+	- [ ] b) No.
+	- [ ] c) No player tried it.
 	- [ ] d) The record doesn't show.
 - **Q19. Actions per Turn** (I75 a). In a played game, how many
   actions, Takeoffs not counted, did a typical [[Turn]] hold?
@@ -78,136 +83,58 @@ order.
 
 ### Space types
 
-- **Q23. Nebula** (I49 a). What does a revealed Nebula [[Space]] do?
-	- [ ] a) Nothing but its length.
-	- [ ] b) A group entering it stops at the next Star, it can't go
-	  further this action.
-	- [ ] c) [[Explore]] can't look past it.
-	- [ ] d) Cards passing it may become [[Hidden]] for free.
-	- [ ] e) No [[Support]] from the Field reaches through it.
-	- [ ] f) The notes don't decide.
-- **Q24. Black hole** (I49 a). What does a revealed Black hole Space
-  do?
-	- [ ] a) Nothing but its length.
-	- [ ] b) Length 0.
-	- [ ] c) Length 0, but each passing group Depletes its weakest
-	  card.
-	- [ ] d) It is passable only away from the nearest home Star.
-	- [ ] e) Science actions started in a bordering Star get +1
-	  [[SciencePower]].
-	- [ ] f) The notes don't decide.
-- **Q25. Asteroids** (I49 b). What does a revealed [[Asteroids]] Space
-  do besides allowing [[Extract]]?
-	- [ ] a) Nothing.
-	- [ ] b) A Hidden card passing it stays Hidden, even after taking
-	  part in an action.
-	- [ ] c) Only groups of total [[Capacity]] 2 or less pass it.
-	- [ ] d) It counts length +1 for every card but Military Ships.
-	- [ ] e) The notes don't decide.
-- **Q26. Void** (I49 b). A group with [[Navigation]] reaches a
-  revealed [[Void]] on its route. What happens?
-	- [ ] a) It can't pass: no group passes a Void, whose back shows
-	  it, so it needs no Explore.
-	- [ ] b) It passes, the Void counts its printed length.
-	- [ ] c) It passes, the Void counts length 2.
-	- [ ] d) The notes don't decide.
-- **Q27. HyperPass** (I49 b). What does a HyperPass tile do?
-	- [ ] a) Nothing: it is an idea, not in the game.
-	- [ ] b) Length 0.
-	- [ ] c) Length 0, and [[Move]] cargo Capacity +1.
-	- [ ] d) Two HyperPass tiles anywhere are adjacent to each other.
-	- [ ] e) The notes don't decide.
-- **Q28. First duel Spaces** (I49 c). Setting up the first [[Duel]]:
-  which Space tiles lie face down on the Field?
-	- [ ] a) Normal tiles of length 1 and Price 2, the Voids where
-	  `game.png` shows them.
-	- [ ] b) 24 shuffled tiles on the inner sides, the outer sides
-	  empty: 12 Normal and two each of Asteroids, Nebula, Black hole,
-	  Void, HyperPass and Relic.
+- **Q23. Nebula stop** (I49 a). A group passes a revealed Nebula and
+  reaches the next [[Star]]. May it continue in the same action?
+	- [ ] a) Yes.
+	- [ ] b) No, it must stop in that Star.
+	- [ ] c) The notes don't decide.
+- **Q64. Nebula sight** (I49 a). Can [[Explore]] reveal a Space past
+  a revealed Nebula?
+	- [ ] a) Yes.
+	- [ ] b) No.
+	- [ ] c) The notes don't decide.
+- **Q65. Nebula shroud** (I49 a). May a card passing a revealed
+  Nebula become [[Hidden]] without using another Ability?
+	- [ ] a) Yes.
+	- [ ] b) No.
+	- [ ] c) The notes don't decide.
+- **Q66. Nebula Support** (I49 a). Can a Field card [[Support]] an
+  action through a revealed Nebula?
+	- [ ] a) Yes.
+	- [ ] b) No.
+	- [ ] c) The notes don't decide.
+- **Q67. Black hole depletion** (I49 a). A group passes a revealed
+  Black hole. Must its weakest card [[Deplete]]?
+	- [ ] a) Yes.
+	- [ ] b) No.
+	- [ ] c) The notes don't decide.
+- **Q68. Black hole direction** (I49 a). May a group pass a revealed
+  Black hole toward its nearest home Star?
+	- [ ] a) Yes.
+	- [ ] b) No.
+	- [ ] c) The notes don't decide.
+- **Q69. Black hole laboratory** (I49 a). Does a Science action
+  started in a Star bordering a revealed Black hole gain +1
+  [[SciencePower]]?
+	- [ ] a) Yes.
+	- [ ] b) No.
+	- [ ] c) The notes don't decide.
+- **Q74. First duel Space mix** (I49 c). Which face-down Space tiles
+  are prepared for the first Duel?
+	- [ ] a) Normal length-1 tiles and the fixed Voids in `game.png`.
+	- [ ] b) 12 Normal tiles and two each of Asteroids, Nebula, Black
+	  hole, Void, HyperPass and Relic.
 	- [ ] c) The notes don't decide.
 
-### Victory and extensions
+### Deck
 
-- **Q47. Objective victory** (I43 b). In a game with [[Objective]]s,
-  can their scored points win before [[Twilight]]?
-	- [ ] a) No: they only add to [[VictoryPoints]] at Twilight.
-	- [ ] b) Yes, at 5 Objective points.
-	- [ ] c) Yes, at 6 Objective points.
-	- [ ] d) Yes, at 8 Objective points.
-	- [ ] e) The notes don't decide.
-- **Q48. Points of a public objective** (I43 c). A player scores a
-  public Objective. How many victory points does it give?
-	- [ ] a) 1, like a secret one.
-	- [ ] b) 2.
-	- [ ] c) As many as the card prints.
-	- [ ] d) The notes don't decide.
-- **Q49. A played Promissory note** (I44 c). A rival plays a player's
-  [[PromissoryNote]]. Where does the card go then?
-	- [ ] a) To the rival's Discard: it keeps cycling in the rival's
-	  deck.
-	- [ ] b) Back to its owner's Discard.
-	- [ ] c) Out of the game.
-	- [ ] d) The notes don't decide.
-- **Q50. Where Derelicts come from** (I45 a). How does a [[Derelict]]
-  come into a Star?
-	- [ ] a) Dealt face up into the Wild Stars at setup.
-	- [ ] b) By a [[GalaxyMove]], into any Star the player making the
-	  move chooses.
-	- [ ] c) By a Galaxy move, into a Wild Star the player making the
-	  move chooses.
-	- [ ] d) The notes don't decide.
-- **Q51. Derelict recruit cost** (I45 b). A player recruits a Derelict
-  Ship 4M, Price 5, with Culture power. What does it cost?
-	- [ ] a) 4, its current Level.
-	- [ ] b) 5, its Price.
+- **Q76. High-level card ends** (I19 e). Does the [[Deck]] define
+  both ends of all 12 cards at Levels 6/5 and 8/7?
+	- [ ] a) Yes.
+	- [ ] b) No, at least one end is TBD.
 	- [ ] c) The notes don't decide.
-- **Q52. When the Galaxy moves** (I89 a). In a game with the
-  [[Galaxy]], when is the Galaxy move made?
-	- [ ] a) At the start of each player's Turn, before **Play**.
-	- [ ] b) At the end of each player's Turn, after **Restore**.
-	- [ ] c) Once per round, after every player had a Turn.
-	- [ ] d) The notes don't decide.
-- **Q53. Who makes the Galaxy move** (I89 a). In a game with the
-  Galaxy, who takes the top card of the [[GalaxyDeck]] and plays it?
-	- [ ] a) The next player.
-	- [ ] b) The player whose Turn it is.
+- **Q77. Card images** (I47). Does `card.png` show the current rule
+  data for every card?
+	- [ ] a) Yes.
+	- [ ] b) No, at least one card image is missing or out of date.
 	- [ ] c) The notes don't decide.
-- **Q54. When a future Event resolves** (I89 b). A Galaxy move puts an
-  [[Event]] into [[FutureEvents]]. When is it evaluated?
-	- [ ] a) After every player had one Turn.
-	- [ ] b) At the next Galaxy move, before its new card.
-	- [ ] c) When FutureEvents holds a set number of cards, the oldest
-	  first.
-	- [ ] d) The notes don't decide.
-- **Q55. An evaluated Event** (I89 c). An Event from FutureEvents was
-  evaluated and revealed. Where does its card go?
-	- [ ] a) To [[GalaxyScrap]] at once.
-	- [ ] b) To [[CurrentEvents]] face down.
-	- [ ] c) To CurrentEvents face up while its effect lasts, then to
-	  GalaxyScrap.
-	- [ ] d) The notes don't decide.
-- **Q56. Warp storm** (I89 d). An Event moves a warp storm. What is a
-  warp storm?
-	- [ ] a) A [[Supernova]] tile.
-	- [ ] b) A marker on a Space that routes can't pass.
-	- [ ] c) Nothing: no Event moves a warp storm.
-	- [ ] d) The notes don't decide.
-- **Q57. Who is stronger for an Event** (I80). An Event gives less to
-  stronger factions. Which measure says who is stronger?
-	- [ ] a) The number of controlled Stars.
-	- [ ] b) [[VictoryPoints]].
-	- [ ] c) The number of non-Military [[Goal]] achievements.
-	- [ ] d) The notes don't decide.
-
-## Not in the test
-
-Issues whose open point is a design to write, not a choice between
-options:
-
-1. I19 e: the 12 cards 6/5 and 8/7 of the [[Deck]]
-2. I43 a: the list of [[Objective]]s
-3. I44 a: the list of [[StrategyCard]]s
-4. I44 b: what a [[PromissoryNote]] gives each side
-5. I47: the card images
-6. I57: the [[World]] cards, each with one [[Ability]]
-7. I94 c: the Cost, the limit and the behavior of [[PlusPile]]

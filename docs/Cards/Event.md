@@ -21,6 +21,8 @@ scope: galaxy
 	2. [[Culture]] - positive for players, related to growth
 	3. [[Production]] - positive for all, related to development
 	4. [[Science]] - negative for all, global disasters
+8. An **event** that treats factions by strength names its own
+   measure, e.g. **Peace Treaty**
 
 #### Notes
 
@@ -34,7 +36,8 @@ scope: galaxy
 3. Events can affect:
 	1. Cards: add, remove, move, hide or reveal
 	2. Resources: add or remove reserves
-	3. [[Field]]: hide or reveal Space, or move a warp storm
+	3. [[Field]]: hide or reveal Space, or move a
+	   [[WarpStorm|warp storm]]
 
 ### Event Examples
 
@@ -46,3 +49,6 @@ scope: galaxy
    bordering Star and attack where possible
 4. **Ancient production**: Ancients produce 2 [[Materials]] in every
    [[Star]] [[ControlledBy]] them
+5. **Peace Treaty**: the player factions with the highest Military
+   Level each lose one [[ActiveFor|active]] [[Military]] card of
+   their choice
