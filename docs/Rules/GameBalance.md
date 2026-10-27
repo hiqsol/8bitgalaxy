@@ -5,7 +5,8 @@ scope: core
 
 1. Contest is even, like in Chess:
 	1. Asymmetric [[Faction]] means asymmetric deck
-	2. For an even contest players get even decks
+	2. For an even contest players get even decks: symmetric
+	   [[Faction]]s
 2. Playing a card from [[Field]] is stronger than from [[Hand]]:
 	1. A Field card takes about twice the effort: [[Takeoff]] and
 	   then a **starter** from [[Hand]]

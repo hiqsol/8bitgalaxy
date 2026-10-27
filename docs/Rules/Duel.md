@@ -47,5 +47,6 @@ scope: duel
 3. The `duel` scope is what this game adds to the `core` rules: this
    setup, the [[Deck]] and its technologies, see [[Technology]]
 4. Human and Alien are like white and black in chess: two young
-   civilizations with the same cards, the Faction tells the decks
-   apart. The [[Ancient]]s guard the Wild Stars, see [[Lore]]
+   civilizations with the same cards, only the color and design of the
+   Faction tell the decks apart. The [[Ancient]]s guard the Wild
+   Stars, see [[Lore]]

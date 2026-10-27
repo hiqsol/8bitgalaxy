@@ -4,8 +4,8 @@ scope: duel
 ---
 
 1. **Deck** lists the cards of the Human and the Alien [[Faction]],
-   one row per [[End]]: both have the same cards, only the printed
-   Faction differs
+   one row per [[End]]: the two are symmetric, the same cards by
+   values, only the color and design of the Faction differ
 2. Columns:
 	1. **Level** - [[Level]] + [[ExtraPrice]], as printed on the card
 	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P
@@ -202,3 +202,6 @@ scope: duel
    follow the patterns
 9. Technology classes and scopes are in [[Technology]]
 10. [[Explore]] on a [[Military]] end is printed as **Recon**
+11. Human and Alien are for even, symmetric games: every technology
+    of the Deck serves both. Later Factions will be asymmetric, with
+    decks and technologies of their own

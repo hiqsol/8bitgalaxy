@@ -6,64 +6,184 @@ scope: core
 1. **Technology** is a kind of [[Ability]]: a named rule
 2. **Technologies** come in three kinds: [[TechnologyAction]],
    [[TechnologyModifier]] and [[Hub]]
-3. The table below is the only catalog of technologies:
-	1. **Class** is the [[Class]] of the card [[End]]s that carry the
-	   technology, a Class without such an End yet is planned
-	2. **Cards** lists the [[Deck]] cards and ends that carry it,
-	   their levels are in the [[Deck]]
-	3. Technology pages name their kind and **Class** in the first
-	   rule, as in the table, and describe behavior, without level
+3. The list below is the only catalog of technologies, an item per
+   technology: `Name: LevelClasses - Kind - Types - Factions - Scope`,
+   then a short description:
+	1. **LevelClasses**: the [[Level]] of each [[Deck]] card that
+	   carries the technology, as in the card name, with the
+	   [[Class]]es of the carrying [[End]]s, e.g. `2cp 4cp`
+	2. **Kind**: Action, Modifier, or a Hub with its [[Origin]]; the
+	   description of an [[ImmediateAction]] starts with "Immediate"
+	3. **Types**: the [[Type]]s of the carrying cards
+	4. **Factions**: Player for every symmetric player [[Faction]] or
+	   [[Galaxy]]; a technology of an asymmetric Faction only names it
+	5. Values without a carrying card yet are intended, e.g. all
+	   values of a planned technology
+	6. Technology pages name their kind and **Class** in the first
+	   rule, as in the list, and describe behavior, without level
 
-| Technology | Kind | Class | Scope | Cards |
-|------------|------|-------|-------|-------|
-| [[Academy]] | Hub | C | duel | Colony 2C, Base 4C |
-| [[MegAcad]] | Hub | C | duel | - |
-| [[Shipyard]] | Hub | P | duel | Base 2P |
-| [[MegaYard]] | Hub | P | duel | Colony 4P |
-| [[Upgrade]] | Action | C, P | duel | Hero 2M weak, Hero 2C weak, Hero 4M weak, Hero 4C strong, Hero 4P strong, Hero 4S weak, Ship 4C strong, Ship 4P strong |
-| [[Recover]] | Action | C, P | duel | Hero 2C strong, Hero 2P strong, Hero 4M weak, Hero 4C strong |
-| [[Retreat]] | Action | M | duel | Ship 2M strong |
-| [[Explore]] | Action | M, S | duel | Ship 2S strong, Colony 2S, Hero 2M strong, Hero 2S weak, Colony 2M |
-| [[Express]] | Modifier | C | duel | - |
-| [[ForceDiscard]] | Action | M | duel | - |
-| [[Stealth]] | Action | M | duel | Hero 4M strong, Hero 4P weak, Base 4M |
-| [[Navigation]] | Modifier | S | duel | Hero 4C weak, Hero 4S strong, Base 4S |
-| [[Settle]] | Modifier | C, P | duel | - |
-| [[Militarization]] | Modifier | M | advanced | Base 2M, Colony 4M |
-| [[Smuggle]] | Action | M | advanced | Ship 4M strong |
-| [[Trade]] | Action | C | advanced | Ship 2C strong, Base 2C |
-| [[Export]] | Action | C | advanced | Colony 4C |
-| [[Extract]] | Action | P | advanced | Ship 2P strong, Colony 2P |
-| [[Recycle]] | Action | P, S | advanced | Hero 2P weak, Hero 2S strong, Base 2S |
-| [[Exhaust]] | Modifier | S | advanced | Ship 4S strong |
-| [[MinusDeplete]] | Modifier | C | advanced | - |
-| [[Starter]] | Modifier | C | advanced | - |
-| [[Sell]] | Action | C | advanced | - |
-| [[PlusPile]] | Action | P, S | advanced | - |
-| [[Invent]] | Action | S | advanced | - |
-| [[Tactics]] | Modifier | M | advanced | - |
-| [[Ambush]] | Modifier | M | advanced | - |
-| [[Jamming]] | Modifier | M | advanced | - |
-| [[Raid]] | Action | M | advanced | - |
-| [[Recall]] | Action | C | advanced | - |
-| [[Legacy]] | Action | C | objectives | - |
-| [[Guard]] | Modifier | P | advanced | - |
-| [[Salvage]] | Modifier | P | advanced | - |
-| [[EfficientUpgrade]] | Modifier | P | advanced | - |
-| [[Scan]] | Modifier | S | advanced | - |
-| [[Forecast]] | Action | S | advanced | - |
-| [[Jump]] | Modifier | S | advanced | - |
-| [[MinusRequirement]] | Modifier | S | advanced | - |
-| [[Standby]] | Modifier | S | advanced | - |
-| [[PlusHero]] | Action | TBD | advanced | - |
+#### List
+
+1. [[Explore]]: 2ms - Action - Ship, Hero, Colony - Player - duel
+   Reveals a hidden Space or a Hidden card, the Cost shows only after
+   the start
+2. [[Retreat]]: 2m - Action - Ship - Player - duel
+   Immediate: escapes a Combat, own participants only Deplete
+3. [[Stealth]]: 4m - Action - Hero, Base - Player - duel
+   Immediate: makes another own card on the Field Hidden
+4. [[ForceDiscard]]: 6m - Action - Hero - Player - duel
+   Immediate: a rival discards a card of its choice from Hand
+5. [[Academy]]: 2c 4c - Social Hub - Colony, Base - Player - duel
+   Building facility for social cards
+6. [[Recover]]: 2cp 4cp - Action - Hero - Player - duel
+   Flips a Damaged card back to Enabled
+7. [[Upgrade]]: 2cp 4cp - Action - Hero, Ship - Player - duel
+   Replaces a card on the Field with a higher card of its Type
+8. [[MegAcad]]: 4c - Social Hub - Base - Player - duel
+   An Academy that also heals
+9. [[Express]]: 6c - Modifier - Hero - Player - duel
+   Create puts new Actors on top of the Reserve
+10. [[Settle]]: 6cp - Modifier - Ship - Player - duel
+    A Ship turns itself into a Colony or a Base where it is
+11. [[Shipyard]]: 2p - Industrial Hub - Base - Player - duel
+    Building facility for industrial cards
+12. [[MegaYard]]: 4p - Industrial Hub - Colony - Player - duel
+    A Shipyard that also repairs
+13. [[Navigation]]: 4s - Modifier - Hero, Base - Player - duel
+    A Move passes a Void
+14. [[Militarization]]: 2m 4m - Modifier - Base, Colony - Player -
+    advanced
+    Manage rotates or shifts rival cards
+15. [[Scuttle]]: 4m - Action - Base - Player - advanced
+    Immediate: destroys a Structure of own Faction, a captured one
+    too
+16. [[Smuggle]]: 4m - Action - Ship - Player - advanced
+    A Trade without the other party
+17. [[Ambush]]: 6m - Modifier - Hero - Player - advanced
+    Each own Hidden defender adds +1 when revealed
+18. [[Cloak]]: 6m - Modifier - Ship - Player - advanced
+    A group is pinned only by two or more rival Military Actors
+19. [[Counterintelligence]]: 6m - Action - Hero - Player - advanced
+    Immediate: cancels a rival Immediate action, also at the rival's
+    Turn
+20. [[Inhibitor]]: 6m - Modifier - Hyperstructure - Player - advanced
+    No rival route passes its Star, for every Range check
+21. [[Jamming]]: 6m - Modifier - Ship - Player - advanced
+    Own Actors stop rival Range through their Star, not only moving
+    groups
+22. [[Occupation]]: 6m - Modifier - Ship - Player - advanced
+    An own Military Actor gives a Control level above Actor
+23. [[Raid]]: 6m - Action - Ship - Player - advanced
+    An Attack whose winners stay home: takes the Materials or
+    Depletes the Structures
+24. [[Tactics]]: 6m - Modifier - Ship - Player - advanced
+    +1 Military power when a Hero and a Ship attack together
+25. [[Decapitation]]: 8m - Action - Ship - Player - advanced
+    An Attack on one rival Hero, the other cards of its Star can't
+    defend it
+26. [[Recall]]: 1c - Action - Tool - Player - advanced
+    Immediate: a card from the Discard goes on top of the Reserve
+27. [[Trade]]: 2c - Action - Ship, Base - Player - advanced
+    Two factions turn power into Materials together
+28. [[Debt]]: 4c - Action - Ship - Player - advanced
+    Immediate: Energy equal to the card's Level, then the card is
+    Destroyed
+29. [[Export]]: 4c - Action - Colony - Player - advanced
+    Materials carried to a rival Colony turn into Energy
+30. [[MinusDeplete]]: 4c - Modifier - Colony - Player - advanced
+    One participant doesn't Deplete
+31. [[PlusHero]]: 4c - Action - Colony - Player - advanced
+    Creates a new Level 1 Hero
+32. [[Sell]]: 4c - Action - Ship - Player - advanced
+    A Trade over a card: its Price turns into Materials, the card is
+    Destroyed
+33. [[Assimilate]]: 6c - Action - Hero - Player - advanced
+    Replaces a rival Colony in a Star the player controls with an own
+    one
+34. [[Contact]]: 6c - Action - Hero - Player - advanced
+    Conquers a Wild Star without Ancients, for twice the World's
+    Price
+35. [[Emulate]]: 6c - Modifier - Hero - Player - advanced
+    Uses a Technology printed on the top card of a rival's Discard
+36. [[Envoy]]: 6c - Modifier - Hero - Player - advanced
+    Gives no Control, doesn't pin and can't be Intercepted
+37. [[Festival]]: 6c - Modifier - Hyperstructure - Player - advanced
+    Restores every own Structure in its Star at each Restore phase
+38. [[Mentor]]: 6c - Modifier - Hero - Player - advanced
+    A Grow in its Star needs no Hub
+39. [[Starter]]: 6c - Modifier - Hero - Player - advanced
+    A Field card starts an action from its own IPS
+40. [[Heritage]]: 8c - Modifier - Hyperstructure - Player - advanced
+    Own Damaged cards count for Galactic Diaspora
+41. [[Extract]]: 2p - Action - Ship, Colony - Player - advanced
+    Turns power into Materials at Asteroids
+42. [[EfficientUpgrade]]: 4p - Modifier - Base - Player - advanced
+    Upgrade costs 1 less
+43. [[Guard]]: 4p - Modifier - Base - Player - advanced
+    A Structure pins like a Military Actor
+44. [[Logistics]]: 4p - Modifier - Base - Player - advanced
+    An action spends Materials of the Stars of all its groups
+45. [[PlusPile]]: 4ps - Action - Base - Player - advanced
+    Adds a Factory or a Laboratory pile
+46. [[Salvage]]: 4p - Modifier - Ship - Player - advanced
+    1 Materials for each rival card Damaged in the action
+47. [[FieldRepair]]: 6p - Modifier - Hero - Player - advanced
+    A Restore can flip a Damaged Industrial card back to Enabled
+48. [[FloatingFactory]]: 6p - Industrial Hub - Ship - Player -
+    advanced
+    A Shipyard on a Ship, it moves with the Ship
+49. [[Retool]]: 6p - Modifier - Hero - Player - advanced
+    Enhance turns a Tool on the Field into a Ship
+50. [[StellarForge]]: 8p - Modifier - Hyperstructure - Player -
+    advanced
+    The Social half of a Hyperstructure is built at an Industrial
+    hub, paid in Production
+51. [[Forecast]]: 1s - Action - Tool - Player - advanced
+    Immediate: looks at the top 3 cards of the Reserve, puts them back
+    in any order
+52. [[Recycle]]: 2s 4p - Action - Hero, Base - Player - advanced
+    Converts a card to Materials, the card is Destroyed
+53. [[Exhaust]]: 4s - Modifier - Ship - Player - advanced
+    Overloads a card: all its abilities as a supporter, then it is
+    Destroyed or Damaged
+54. [[Scan]]: 4s - Modifier - Ship - Player - advanced
+    Explore also reveals a hidden tile bordering the target
+55. [[Standby]]: 4s - Modifier - Base - Player - advanced
+    One unused card stays in Hand at Draw
+56. [[Xenoarchaeology]]: 4s - Modifier - Colony - Galaxy - advanced
+    A conquest picks its World among the top 3 of the World deck
+57. [[Barrier]]: 6s - Action - Ship - Player - advanced
+    Turns a revealed Space next to the source face down again
+58. [[Espionage]]: 6s - Modifier - Tool - Player - advanced
+    Use a rival's technology in the same Star, paying its Cost in
+    Science power
+59. [[GreatLibrary]]: 6s - Modifier - Hyperstructure - Player -
+    advanced
+    Research ignores the Prerequisites of a card a rival has on the
+    Field
+60. [[Invent]]: 6s - Action - Hero - Player - advanced
+    Research takes any card from any own Laboratory pile
+61. [[Jump]]: 6s - Modifier - Ship - Player - advanced
+    A Move passes one hidden Space and reveals it
+62. [[MinusRequirement]]: 6s - Modifier - Hero - Player - advanced
+    Research ignores one pair of Prerequisites
+63. [[SensorArray]]: 6s - Modifier - Hero - Player - advanced
+    Rival cards in its Star can't stay Hidden
+64. [[UnifiedTheory]]: 8s - Modifier - Hero - Player - advanced
+    Its card provides its Level in one more Class too
+65. [[Legacy]]: 4c - Action - Colony - Player - objectives
+    Immediate: a card from the Discard goes to History
+66. [[NovaBomb]]: 8m - Action - Ship - Galaxy - galaxy
+    Destroys every card in a Star for their total Level, its own card
+    too
 
 #### Notes
 
 1. Technologies without cards are planned, they need cards to be
    playable
 2. The TBD ends of the cards 6/5 and 8/7 in the [[Deck]] are for
-   [[Express]], [[ForceDiscard]], [[Settle]] and the technologies from
-   [[Tactics]] to [[Standby]] in the table: one of the latter goes to
-   `duel` with its card, the others stay `advanced`
+   [[Express]], [[ForceDiscard]], [[Settle]] and planned `advanced`
+   technologies: one of the latter goes to `duel` with its card, the
+   others stay `advanced`
 3. Design idea: stronger technologies sit on higher levels, the
    maximal ones on the highest [[Hero]]es

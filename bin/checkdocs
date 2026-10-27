@@ -27,7 +27,13 @@ KEYS = {'status', 'scope', 'aliases', 'date', 'updated'}
 CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
 TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')
 TECH_BASES = {'TechnologyAction', 'TechnologyModifier', 'Hub'}
-KIND_TECH = {'Action': 'TechnologyAction', 'Modifier': 'TechnologyModifier', 'Hub': 'Hub'}
+KIND_TECH = {'Action': 'TechnologyAction', 'Modifier': 'TechnologyModifier',
+             'Social Hub': 'Hub', 'Industrial Hub': 'Hub'}
+FACTIONS = {'Player', 'Galaxy'}
+# catalog item: Name: LevelClasses - Kind - Types - Factions - Scope, then a description
+TECH_ITEM = re.compile(r'[^:]+: (?P<levels>.+?) - (?P<kind>.+?) - (?P<types>.+?)'
+                       r' - (?P<factions>.+?) - (?P<scope>\S+)(?: |$)')
+LEVEL_CLASSES = re.compile(r'(\d+)([mcps]+)$')
 # folder: kind pages the first rule links
 KINDS = {
     'BasicActions': {'BasicAction'},
@@ -64,11 +70,15 @@ class Page:
         """Rows of the first table as lists of cells, without header."""
         return [list(tr) for tr in self.tree.iter('tr')][1:]
 
-    def section(self, heading):
-        """Code values of the list under a heading."""
+    def items(self, heading):
+        """Top-level items of the numbered list under a heading."""
         children = list(self.tree)
         start = next(i for i, e in enumerate(children) if ''.join(e.itertext()) == heading)
-        return {c.text for c in next(e for e in children[start:] if e.tag == 'ol').iter('code')}
+        return next(e for e in children[start:] if e.tag == 'ol').findall('li')
+
+    def section(self, heading):
+        """Code values of the list under a heading."""
+        return {c.text for li in self.items(heading) for c in li.iter('code')}
 
 
 def text(element):
@@ -129,53 +139,69 @@ def deck_assignments(deck):
     return result
 
 
+def card_types(pages):
+    """Card Types: the Cards pages whose first rule links Type."""
+    return {p.path.stem for p in pages.values() if p.path.parent.name == 'Cards'
+            and 'Type' in links(next(iter(top_rules(p)), ET.Element('li')))}
+
+
 def check_technologies(pages):
     catalog, deck = pages['Technology'], pages['Deck']
     assigned = deck_assignments(deck)
+    types = card_types(pages)
     # Hub actions (Create) are technologies via the hub
     cataloged = set(links(pages['Hub'].tree))
 
-    for row in catalog.table():
-        if not links(row[0]):
-            continue  # unnamed placeholders
-        tech, kind, cls, scope, cards = text(row[0]), *map(text, row[1:])
+    for item in catalog.items('List'):
+        tech, line = next(iter(links(item)), None), ' '.join(text(item).split())
+        match = TECH_ITEM.match(line)
+        if not tech or not match:
+            report(catalog.path, f'not "Name: LevelClasses - Kind - Types - Factions - Scope": {line[:40]}')
+            continue
         cataloged.add(tech)
 
+        levels = set()
+        for token in match['levels'].split():
+            level = LEVEL_CLASSES.match(token)
+            if level:
+                levels |= {(int(level[1]), c.upper()) for c in level[2]}
+            else:
+                report(catalog.path, f'{tech}: LevelClasses like 2cp, not {token}')
+        kind = KIND_TECH.get(match['kind'])
+        if not kind:
+            report(catalog.path, f'{tech}: kind {match["kind"]} not in {", ".join(KIND_TECH)}')
+        listed_types = set(match['types'].split(', '))
+        for name in sorted(listed_types - types):
+            report(catalog.path, f'{tech}: {name} is not a card Type')
+        for name in sorted(set(match['factions'].split(', ')) - FACTIONS):
+            report(catalog.path, f'{tech}: {name} not in {", ".join(sorted(FACTIONS))}')
+
         page = pages.get(tech)
-        if page and page.meta.get('scope') != scope:
-            report(catalog.path, f'{tech} scope {scope}, its page says {page.meta.get("scope")}')
+        if page and page.meta.get('scope') != match['scope']:
+            report(catalog.path, f'{tech} scope {match["scope"]}, its page says {page.meta.get("scope")}')
         first = top_rules(page)[:1] if page else []
-        if first:
+        if first and kind:
             named = set(links(first[0]))
-            want = set() if cls == 'TBD' else {CLASSES[c.strip()] for c in cls.split(',')}
-            if KIND_TECH[kind] not in named or named & set(CLASSES.values()) != want:
-                report(page.path, f'first rule must name {cls} {KIND_TECH[kind]}, as in [[Technology]]')
+            want = {CLASSES[c] for _, c in levels}
+            if kind not in named or named & set(CLASSES.values()) != want:
+                report(page.path, f'first rule must name {", ".join(sorted(want))} {kind}, as in [[Technology]]')
 
-        listed = set()
-        for item in (c.strip() for c in cards.split(',')):
-            card, _, end = item.rpartition(' ')
-            if end in ('strong', 'weak'):
-                listed.add((card, end))
-            elif item != '-':
-                listed |= {(item, 'strong'), (item, 'weak')}
-        actual = assigned.pop(tech, {})
-        for card, end in sorted(listed - actual.keys()):
-            report(catalog.path, f'{tech}: {card} {end} not in Deck')
-        for card, end in sorted(actual.keys() - listed):
-            report(catalog.path, f'{tech}: missing {card} {end} from Deck')
-
-        used = set(actual.values())
-        if actual and cls != 'TBD' and not used <= {c.strip() for c in cls.split(',')}:
-            report(catalog.path, f'{tech} class {cls}, Deck ends are {", ".join(sorted(used))}')
+        # Deck cards must be listed, listed values without a card are intended
+        for (card, end), cls in sorted(assigned.pop(tech, {}).items()):
+            card_type, level = card.split()[0], int(re.search(r'\d+', card)[0])
+            if (level, cls) not in levels:
+                report(catalog.path, f'{tech}: missing {level}{cls.lower()} of {card} {end} from Deck')
+            if card_type not in listed_types:
+                report(catalog.path, f'{tech}: missing {card_type} of {card} {end} from Deck')
 
     for tech in sorted(assigned):
-        report(deck.path, f'technology not in Technology table: {tech}')
+        report(deck.path, f'technology not in Technology list: {tech}')
 
     for page in pages.values():
         if page not in (catalog, deck) and CLASS_TECH.search(page.text):
             report(page.path, 'technology class or level belongs in [[Technology]] only')
         if page.path.parent.name in TECH_DIRS and page.path.stem not in TECH_BASES | cataloged:
-            report(page.path, 'technology missing from [[Technology]] table')
+            report(page.path, 'technology missing from [[Technology]] list')
 
 
 def main():

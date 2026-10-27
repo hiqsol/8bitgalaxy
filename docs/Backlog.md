@@ -78,6 +78,10 @@ from a played game, not from a review.
     Asteroids b-d) were rejected, see [[Asteroids]]
 22. **Duel Space tiles**: every Space position holds a tile, the outer
     sides too; empty outer sides (P35 a) were rejected, see [[Duel]]
+23. **Symmetric Human and Alien**: the same [[Deck]] by card values,
+    only color and design differ; Human or Alien technologies and a
+    faction card on mirrored decks (Ideas: Asymmetry) were rejected,
+    asymmetry is for later [[Faction]]s, see [[Faction]]
 
 ## Next step
 
@@ -649,5 +653,6 @@ Not for answering now, kept for later.
   Explore actions, at the price of a single route between two Stars.
 - **Drones** (TI fighters): Range 0 Military Units carried by ships,
   if [[Capacity]] needs more use.
-- **Asymmetry**: one faction card with a single rule change on top of
-  mirrored decks (TI faction abilities), keeps [[GameBalance]] even.
+- **Asymmetry** for later [[Faction]]s: one faction card with a single
+  rule change on top of a mirrored deck (TI faction abilities),
+  lighter than a deck of its own.
