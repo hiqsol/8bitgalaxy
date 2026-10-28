@@ -39,7 +39,7 @@ scope: core
 	5. Cards in the destination are direct participants without a
 	   Range check
 5. Every action goes in steps:
-	1. **Declare** the starter, the action and its Direction
+	1. **Declare** the starter, the action and its **Direction**
 	2. **Commit** participants and their abilities gradually, as
 	   information is revealed, e.g. in a [[Combat]]
 	3. **Check** the requirements when the player stops committing,

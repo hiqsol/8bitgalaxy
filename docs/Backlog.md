@@ -64,10 +64,10 @@ from a played game, not from a review.
     [[GalacticDiaspora|Galactic Diaspora]] trigger [[Twilight]]. The
     most achievements in the current state wins, then
     [[VictoryPoints]] break a tie (I77, I78, I95 a)
-18. **Victory points**: the current Levels of non-Damaged cards on the
-    Field controlled by the faction; [[Objective]]s can add points,
-    a win by Objective points before [[Twilight]] was rejected
-    (I43 b)
+18. **Victory points**: the current Levels of non-Damaged Social
+    cards on the Field controlled by the faction; [[Objective]]s can
+    add points, a win by Objective points before [[Twilight]] was
+    rejected (I43 b)
 19. **Space length**: a Space counts its printed Length whatever its
     Type; a Black hole of length 0 (P24 Black hole a and the length
     of b) and a Void of length 2 with Navigation (P24 Void b) were

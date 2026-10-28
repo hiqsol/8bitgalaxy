@@ -5,8 +5,8 @@ aliases: [VP, VPs]
 ---
 
 1. A faction's **victory points** are the sum of the current
-   [[Level]]s of its non-[[Damaged]] cards on the [[Field]]
-   [[ControlledBy]] it
+   [[Level]]s of its non-[[Damaged]] [[Social]] cards on the
+   [[Field]] [[ControlledBy]] it
 2. At [[Twilight]], current achievements are counted before
    [[Hidden]] cards are revealed to count their Levels
 3. A rule can add victory points
@@ -16,3 +16,5 @@ aliases: [VP, VPs]
 #### Notes
 
 1. Victory points value the living empire on the current board
+2. Only [[Social]] cards score: their advantage over [[Industrial]]
+   cards
