@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .obsidian
+.zettel-notes
 
 # Editor directories and files
 .vscode/*
