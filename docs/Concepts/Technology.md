@@ -12,33 +12,36 @@ scope: core
 	1. **LevelClasses**: the [[Level]] of each [[Deck]] card that
 	   carries the technology, as in the card name, with the
 	   [[Class]]es of the carrying [[End]]s, e.g. `2cp 4cp`
-	2. **Kind**: Action, Modifier, or a Hub with its [[Origin]]; the
-	   description of an [[ImmediateAction]] starts with "Immediate"
+	2. **Kind**: Action, Modifier, or a Hub with its [[Origin]]
 	3. **Types**: the [[Type]]s of the carrying cards
 	4. **Factions**: Player for every symmetric player [[Faction]] or
 	   [[Galaxy]]; a technology of an asymmetric Faction only names it
-	5. Values without a carrying card yet are intended, e.g. all
+	5. **Description** starts with a **label** when one expresses the
+	   technology: the term it adds or removes, e.g. `+Control`; then
+	   "Immediate" for an [[ImmediateAction]], then a colon
+	6. Values without a carrying card yet are intended, e.g. all
 	   values of a planned technology
-	6. Technology pages name their kind and **Class** in the first
+	7. Technology pages name their kind and **Class** in the first
 	   rule, as in the list, and describe behavior, without level
 
 #### List
 
 1. [[Explore]]: 2ms - Action - Ship, Hero, Colony - Player - duel
-   Reveals a hidden Space or a Hidden card, the Cost shows only after
-   the start
+   -Hidden: reveals a hidden Space or a Hidden card, the Cost shows
+   only after the start
 2. [[Retreat]]: 2m - Action - Ship - Player - duel
    Immediate: escapes a Combat, own participants only Deplete
 3. [[Stealth]]: 4m - Action - Hero, Base - Player - duel
-   Immediate: makes another own card on the Field Hidden
+   +Hidden, Immediate: makes another own card on the Field Hidden
 4. [[ForceDiscard]]: 6m - Action - Hero - Player - duel
    Immediate: a rival discards a card of its choice from Hand
 5. [[Academy]]: 2c 4c - Social Hub - Colony, Base - Player - duel
    Building facility for social cards
 6. [[Recover]]: 2cp 4cp - Action - Hero - Player - duel
-   Flips a Damaged card back to Enabled
+   -Damaged: flips a Damaged card back to Enabled
 7. [[Upgrade]]: 2cp 4cp - Action - Hero, Ship - Player - duel
-   Replaces a card on the Field with a higher card of its Type
+   +Level: replaces a card on the Field with a higher card of its
+   Type
 8. [[MegAcad]]: 4c - Social Hub - Base - Player - duel
    An Academy that also heals
 9. [[Express]]: 6c - Modifier - Hero - Player - duel
@@ -60,9 +63,9 @@ scope: core
 16. [[Smuggle]]: 4m - Action - Ship - Player - advanced
     A Trade without the other party
 17. [[Ambush]]: 6m - Modifier - Hero - Player - advanced
-    Each own Hidden defender adds +1 when revealed
+    +Defense: each own Hidden defender adds 1 when revealed
 18. [[Cloak]]: 6m - Modifier - Ship - Player - advanced
-    A group is pinned only by two or more rival Military Actors
+    -Pin: a group is pinned only by two or more rival Military Actors
 19. [[Counterintelligence]]: 6m - Action - Hero - Player - advanced
     Immediate: cancels a rival Immediate action, also at the rival's
     Turn
@@ -72,12 +75,12 @@ scope: core
     Own Actors stop rival Range through their Star, not only moving
     groups
 22. [[Occupation]]: 6m - Modifier - Ship - Player - advanced
-    An own Military Actor gives a Control level above Actor
+    +Control: an own Military Actor gives a Control level above Actor
 23. [[Raid]]: 6m - Action - Ship - Player - advanced
     An Attack whose winners stay home: takes the Materials or
     Depletes the Structures
 24. [[Tactics]]: 6m - Modifier - Ship - Player - advanced
-    +1 Military power when a Hero and a Ship attack together
+    +Military: 1 more power when a Hero and a Ship attack together
 25. [[Decapitation]]: 8m - Action - Ship - Player - advanced
     An Attack on one rival Hero, the other cards of its Star can't
     defend it
@@ -91,9 +94,9 @@ scope: core
 29. [[Export]]: 4c - Action - Colony - Player - advanced
     Materials carried to a rival Colony turn into Energy
 30. [[MinusDeplete]]: 4c - Modifier - Colony - Player - advanced
-    One participant doesn't Deplete
+    -Deplete: one participant doesn't Deplete
 31. [[PlusHero]]: 4c - Action - Colony - Player - advanced
-    Creates a new Level 1 Hero
+    +Hero: creates a new Level 1 Hero
 32. [[Sell]]: 4c - Action - Ship - Player - advanced
     A Trade over a card: its Price turns into Materials, the card is
     Destroyed
@@ -108,27 +111,29 @@ scope: core
 36. [[Envoy]]: 6c - Modifier - Hero - Player - advanced
     Gives no Control, doesn't pin and can't be Intercepted
 37. [[Festival]]: 6c - Modifier - Hyperstructure - Player - advanced
-    Restores every own Structure in its Star at each Restore phase
+    +Restore: restores every own Structure in its Star at each
+    Restore phase
 38. [[Mentor]]: 6c - Modifier - Hero - Player - advanced
-    A Grow in its Star needs no Hub
+    -Hub: a Grow in its Star needs no Hub
 39. [[Starter]]: 6c - Modifier - Hero - Player - advanced
     A Field card starts an action from its own IPS
 40. [[Heritage]]: 8c - Modifier - Hyperstructure - Player - advanced
     Own Damaged cards count for Galactic Diaspora
 41. [[Extract]]: 2p - Action - Ship, Colony - Player - advanced
-    Turns power into Materials at Asteroids
+    +Materials: turns power into Materials at Asteroids
 42. [[EfficientUpgrade]]: 4p - Modifier - Base - Player - advanced
-    Upgrade costs 1 less
+    -Cost: Upgrade costs 1 less
 43. [[Guard]]: 4p - Modifier - Base - Player - advanced
-    A Structure pins like a Military Actor
+    +Pin: a Structure pins like a Military Actor
 44. [[Logistics]]: 4p - Modifier - Base - Player - advanced
     An action spends Materials of the Stars of all its groups
 45. [[PlusPile]]: 4ps - Action - Base - Player - advanced
-    Adds a Factory or a Laboratory pile
+    +Pile: adds a Factory or a Laboratory pile
 46. [[Salvage]]: 4p - Modifier - Ship - Player - advanced
-    1 Materials for each rival card Damaged in the action
+    +Materials: 1 for each rival card Damaged in the action
 47. [[FieldRepair]]: 6p - Modifier - Hero - Player - advanced
-    A Restore can flip a Damaged Industrial card back to Enabled
+    -Damaged: a Restore can flip a Damaged Industrial card back to
+    Enabled
 48. [[FloatingFactory]]: 6p - Industrial Hub - Ship - Player -
     advanced
     A Shipyard on a Ship, it moves with the Ship
@@ -153,26 +158,27 @@ scope: core
 56. [[Xenoarchaeology]]: 4s - Modifier - Colony - Galaxy - advanced
     A conquest picks its World among the top 3 of the World deck
 57. [[Barrier]]: 6s - Action - Ship - Player - advanced
-    Turns a revealed Space next to the source face down again
+    +Hidden: turns a revealed Space next to the source face down
+    again
 58. [[Espionage]]: 6s - Modifier - Tool - Player - advanced
     Use a rival's technology in the same Star, paying its Cost in
     Science power
 59. [[GreatLibrary]]: 6s - Modifier - Hyperstructure - Player -
     advanced
-    Research ignores the Prerequisites of a card a rival has on the
-    Field
+    -Prerequisites: Research ignores them for a card a rival has on
+    the Field
 60. [[Invent]]: 6s - Action - Hero - Player - advanced
     Research takes any card from any own Laboratory pile
 61. [[Jump]]: 6s - Modifier - Ship - Player - advanced
     A Move passes one hidden Space and reveals it
 62. [[MinusRequirement]]: 6s - Modifier - Hero - Player - advanced
-    Research ignores one pair of Prerequisites
+    -Prerequisites: Research ignores one pair of them
 63. [[SensorArray]]: 6s - Modifier - Hero - Player - advanced
-    Rival cards in its Star can't stay Hidden
+    -Hidden: rival cards in its Star can't stay Hidden
 64. [[UnifiedTheory]]: 8s - Modifier - Hero - Player - advanced
-    Its card provides its Level in one more Class too
+    +Class: its card provides its Level in one more Class too
 65. [[Legacy]]: 4c - Action - Colony - Player - objectives
-    Immediate: a card from the Discard goes to History
+    +History, Immediate: a card from the Discard goes to History
 66. [[NovaBomb]]: 8m - Action - Ship - Galaxy - galaxy
     Destroys every card in a Star for their total Level, its own card
     too
