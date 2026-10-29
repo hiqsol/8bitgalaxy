@@ -1,10 +1,11 @@
 ---
 status: draft
 scope: core
-aliases: [Pocket]
+aliases: [Pocket, Warp Orbit]
 ---
 
-1. **Slot** aka **pocket** is a place for one card in [[IPS]]
+1. **Slot** aka **pocket** is a **Warp orbit**, a place for one card
+   in [[IPS]]
 2. Card in a **slot** shows only the [[End]] that is up, the other end
    is inside the pocket
 3. **Slots** are shared by all players
@@ -19,5 +20,8 @@ aliases: [Pocket]
 
 #### Notes
 
-1. Overlap is a new mechanic, not seen in other board games: cards
+1. A Warp orbit is not a gravitational orbit, a Star has countless
+   of those. Warp tears space-time, so a Star holds only a few Warp
+   orbits: that's why the number of Slots is limited
+2. Overlap is a new mechanic, not seen in other board games: cards
    naturally get one under another
