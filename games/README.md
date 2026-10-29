@@ -9,10 +9,10 @@ notation of [docs/Notation.md](../docs/Notation.md).
 | [2](game2.md) | Brute (Haiku) | Scholar (Opus) | 0-1 by Singularity | 16 |
 | [3](game3.md) | Turtle (Sonnet) | Gambler (Sonnet) | 1-0 by Singularity | 25 |
 
-- The old records stay as they were: the report `FirstDuelPlaytest.md`
-  and the playtest folder named at its top, with `RULES.md`,
-  `NOTATION.md`, the 8BGN logs and the rulings `RG<game>-<n>` that the
-  comments name.
+- The report [FirstDuelPlaytest.md](../FirstDuelPlaytest.md) sums the
+  games up and lists the rulings `RG<game>-<n>` that the comments
+  name. The old records stay in the playtest folder named at its top:
+  `RULES.md`, `NOTATION.md` and the 8BGN logs.
 
 ## How to read
 

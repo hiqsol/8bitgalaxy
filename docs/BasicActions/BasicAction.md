@@ -9,3 +9,4 @@ scope: core
 	2. [[Manage]]
 	3. [[Research]]
 	4. [[Attack]]
+	5. [[Receive]]

@@ -478,9 +478,7 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  Side up, End up" lists go.
 	- c) The four Power pages and [[Resource]] fold into [[Class]] and
 	  [[Power]].
-	- d) [[IPS]] goes, rules say Star: this also settles whether the
-	  World slot is in the IPS, so a [[World]] is a direct
-	  participant.
+	- d) [[IPS]] goes, rules say Star.
 	- e) [[Enabled]] goes, rules say "face up".
 	- f) [[Direction]] and [[Action]] fold into [[PerformAction]].
 	- g) [[Agenda]] moves to an extension scope, [[World]] and
@@ -503,6 +501,8 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 
 One batch after the playtest, only for pages that confused play.
 
+- [ ] **I96. Archive is a working name.** The Research [[Hub]] of the
+  [[Homeworld]] is called [[Archive]] for now: rename it later.
 - [ ] **S23. Separate usable cards from scoring cards.** [[ActiveFor]]
   includes [[History]], whose cards are out of play, then says active
   cards are action participants:
@@ -557,10 +557,6 @@ One batch after the playtest, only for pages that confused play.
 	  requirements, Cost and outcome.
 	- d) What it changes: an Actor is built only with cards at the hub
 	  as direct participants, not at another source Star.
-	- e) An action on a [[Home]] card is directed to a hub of the
-	  card's [[Origin]]: said once in [[Hub]], [[Research]] 3,
-	  [[Manage]] 2.2.2 and Create 6.1 go; "corresponding Hub" is
-	  defined nowhere (RG2-1, RG3-7, RG1-10).
 - [ ] **S41. End of a face-down card.** [[End]] 6 sets the end in use:
   in a [[Slot]] the visible end, elsewhere the selected end. A
   face-down card shows no Level, though [[Recover]] costs the current

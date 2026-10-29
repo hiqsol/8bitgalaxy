@@ -85,7 +85,7 @@ Base-2p/1p           |  B2p |  B2p/1p |  B2p1p
 Colony-2s/1s         |  C2s |  C2s/1s |  C2s1s
 Colony World-2p/1n   |  W2p |  W2p/1n |  W2p1n
 Hyperstructure-6s/5s | HS6s | HS6s/5s | HS6s5s
-Homeworld-2c/1n      | HW2c | HW2c/1n | HW2c1n
+Homeworld-2s/1s      | HW2s | HW2s/1s | HW2s1s
 
 ## Actions
 
@@ -135,11 +135,11 @@ Explore space:
    S2s,S3m->Discard, C2s=>C1s
 ```
 
-Research:
+Research, the Energy of the Homeworld boosts it at once:
 ```text
-4. Research: C4s@Lab1 -> Fac2 << 5s,*2s
-   S2s@Hand|1s+2e + C2s@S21s1|2s,*2s = 5s,*2s
-   S2s->Discard, C2s=>C1s
+4. Research at Archive: C4s@Lab1 -> Fac2 << 5s,*2s
+   S2s@Hand|1s+2e + S21[C2s@s1|2s,*2s + HW2s@w|Archive,+1e] = 5s,*2s
+   S2s->Discard, C2s=>C1s, HW2s=>HW1s
 ```
 
 Upgrade:
@@ -169,8 +169,8 @@ Manage, a swap of two Structures:
 
 Research between Laboratory piles:
 ```text
-9. Research: S4p@Lab1 -> Lab3 << 1s
-   S1s@Hand|1s = 1s; S1s->Discard
+9. Research at Archive: S4p@Lab1 -> Lab3 << 1s
+   S1s@Hand|1s + HW1s@S00w|Archive = 1s; S1s->Discard
 ```
 
 Create an Actor, it goes to the Discard:
@@ -193,6 +193,12 @@ Recover:
     Hand[H2p|Fix + S1p|1p] = 1p; H2p,S1p->Discard
 ```
 
+Receive, the Homeworld pays its Energy:
+```text
+13. Receive: +1e
+    S2s@Hand + HW2s@S00w|+1e = +1e; S2s->Discard, HW2s=>HW1s
+```
+
 ## Combat
 
 1. An [[Attack]] writes the defending participants the attacker
@@ -205,9 +211,9 @@ Recover:
    winner and the **Advantage**
 4. Then `Outcome`, as for any action: saved cards, [[Damaged]] cards,
    moves into the destination, Deplete
-5. [[Ancient]]s defend as `A?` until the reveal, then by their
-   [[Defense]]: `-> S01[A?]`, `Reveal: S2m, A3`, they go
-   `A3->AncientDiscard`
+5. [[Ancient]]s come face up before the first round, the
+   destination names them by their [[Defense]]: `-> S01[A1,A3]`, they
+   go `A1,A3->AncientDiscard`
 6. Example:
 
 ```text
@@ -223,10 +229,9 @@ Recover:
 7. Example against [[Ancient]]s:
 
 ```text
-9c. Attack: S00 -> S01[A?] << 2r
+9c. Attack: S00 -> S01[A3] << 2r
     Hand[S2m|1m+1e + S1m|1m] + S00[H1m@u3|1r2m + S1s@u4|1r]
     = 2r5m
-    Reveal: A3
     Total: 5m against 3d, attacker wins, Advantage 2
     Outcome: H1m,S1s saved; H1m->S01u1, S1s->S01u2; A3->AncientDiscard
       S2m,S1m->Discard

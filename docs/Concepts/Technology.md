@@ -12,7 +12,8 @@ scope: core
 	1. **LevelClasses**: the [[Level]] of each [[Deck]] card that
 	   carries the technology, as in the card name, with the
 	   [[Class]]es of the carrying [[End]]s, e.g. `2cp 4cp`
-	2. **Kind**: Action, Modifier, or a Hub with its [[Origin]]
+	2. **Kind**: Action, Modifier, or a Hub with its [[Origin]] or
+	   Research
 	3. **Types**: the [[Type]]s of the carrying cards
 	4. **Factions**: Player for every symmetric player [[Faction]] or
 	   [[Galaxy]]; a technology of an asymmetric Faction only names it
@@ -54,132 +55,134 @@ scope: core
     A Shipyard that also repairs
 13. [[Navigation]]: 4s - Modifier - Hero, Base - Player - duel
     A Move passes a Void
-14. [[Militarization]]: 2m 4m - Modifier - Base, Colony - Player -
+14. [[Archive]]: 2s - Research Hub - Hyperstructure - Player - duel
+    Research facility for Laboratory cards
+15. [[Militarization]]: 2m 4m - Modifier - Base, Colony - Player -
     advanced
     Manage rotates or shifts rival cards
-15. [[Scuttle]]: 4m - Action - Base - Player - advanced
+16. [[Scuttle]]: 4m - Action - Base - Player - advanced
     Immediate: destroys a Structure of own Faction, a captured one
     too
-16. [[Smuggle]]: 4m - Action - Ship - Player - advanced
+17. [[Smuggle]]: 4m - Action - Ship - Player - advanced
     A Trade without the other party
-17. [[Ambush]]: 6m - Modifier - Hero - Player - advanced
+18. [[Ambush]]: 6m - Modifier - Hero - Player - advanced
     +Defense: each own Hidden defender adds 1 when revealed
-18. [[Cloak]]: 6m - Modifier - Ship - Player - advanced
+19. [[Cloak]]: 6m - Modifier - Ship - Player - advanced
     -Pin: a group is pinned only by two or more rival Military Actors
-19. [[Counterintelligence]]: 6m - Action - Hero - Player - advanced
+20. [[Counterintelligence]]: 6m - Action - Hero - Player - advanced
     Immediate: cancels a rival Immediate action, also at the rival's
     Turn
-20. [[Inhibitor]]: 6m - Modifier - Hyperstructure - Player - advanced
+21. [[Inhibitor]]: 6m - Modifier - Hyperstructure - Player - advanced
     No rival route passes its Star, for every Range check
-21. [[Jamming]]: 6m - Modifier - Ship - Player - advanced
+22. [[Jamming]]: 6m - Modifier - Ship - Player - advanced
     Own Actors stop rival Range through their Star, not only moving
     groups
-22. [[Occupation]]: 6m - Modifier - Ship - Player - advanced
+23. [[Occupation]]: 6m - Modifier - Ship - Player - advanced
     +Control: an own Military Actor gives a Control level above Actor
-23. [[Raid]]: 6m - Action - Ship - Player - advanced
+24. [[Raid]]: 6m - Action - Ship - Player - advanced
     An Attack whose winners stay home: takes the Goods or
     Depletes the Structures
-24. [[Tactics]]: 6m - Modifier - Ship - Player - advanced
+25. [[Tactics]]: 6m - Modifier - Ship - Player - advanced
     +Military: 1 more power when a Hero and a Ship attack together
-25. [[Decapitation]]: 8m - Action - Ship - Player - advanced
+26. [[Decapitation]]: 8m - Action - Ship - Player - advanced
     An Attack on one rival Hero, the other cards of its Star can't
     defend it
-26. [[Recall]]: 1c - Action - Tool - Player - advanced
+27. [[Recall]]: 1c - Action - Tool - Player - advanced
     Immediate: a card from the Discard goes on top of the Reserve
-27. [[Trade]]: 2c - Action - Ship, Base - Player - advanced
+28. [[Trade]]: 2c - Action - Ship, Base - Player - advanced
     Two factions turn power into Goods together
-28. [[Debt]]: 4c - Action - Ship - Player - advanced
+29. [[Debt]]: 4c - Action - Ship - Player - advanced
     Immediate: Energy equal to the card's Level, then the card is
     Destroyed
-29. [[Export]]: 4c - Action - Colony - Player - advanced
+30. [[Export]]: 4c - Action - Colony - Player - advanced
     Goods carried to a rival Colony turn into Energy
-30. [[MinusDeplete]]: 4c - Modifier - Colony - Player - advanced
+31. [[MinusDeplete]]: 4c - Modifier - Colony - Player - advanced
     -Deplete: one participant doesn't Deplete
-31. [[PlusHero]]: 4c - Action - Colony - Player - advanced
+32. [[PlusHero]]: 4c - Action - Colony - Player - advanced
     +Hero: creates a new Level 1 Hero
-32. [[Sell]]: 4c - Action - Ship - Player - advanced
+33. [[Sell]]: 4c - Action - Ship - Player - advanced
     A Trade over a card: its Price turns into Goods, the card is
     Destroyed
-33. [[Assimilate]]: 6c - Action - Hero - Player - advanced
+34. [[Assimilate]]: 6c - Action - Hero - Player - advanced
     Replaces a rival Colony in a Star the player controls with an own
     one
-34. [[Contact]]: 6c - Action - Hero - Player - advanced
+35. [[Contact]]: 6c - Action - Hero - Player - advanced
     Conquers a Wild Star without Ancients, for twice the World's
     Price
-35. [[Emulate]]: 6c - Modifier - Hero - Player - advanced
+36. [[Emulate]]: 6c - Modifier - Hero - Player - advanced
     Uses a Technology printed on the top card of a rival's Discard
-36. [[Envoy]]: 6c - Modifier - Hero - Player - advanced
+37. [[Envoy]]: 6c - Modifier - Hero - Player - advanced
     Gives no Control, doesn't pin and can't be Intercepted
-37. [[Festival]]: 6c - Modifier - Hyperstructure - Player - advanced
+38. [[Festival]]: 6c - Modifier - Hyperstructure - Player - advanced
     +Restore: restores every own Structure in its Star at each
     Restore phase
-38. [[Mentor]]: 6c - Modifier - Hero - Player - advanced
+39. [[Mentor]]: 6c - Modifier - Hero - Player - advanced
     -Hub: a Grow in its Star needs no Hub
-39. [[Starter]]: 6c - Modifier - Hero - Player - advanced
+40. [[Starter]]: 6c - Modifier - Hero - Player - advanced
     A Field card starts an action from its own IPS
-40. [[Heritage]]: 8c - Modifier - Hyperstructure - Player - advanced
+41. [[Heritage]]: 8c - Modifier - Hyperstructure - Player - advanced
     Own Damaged cards count for Galactic Diaspora
-41. [[Extract]]: 2p - Action - Ship, Colony - Player - advanced
+42. [[Extract]]: 2p - Action - Ship, Colony - Player - advanced
     +Goods: turns power into Goods at Asteroids
-42. [[EfficientUpgrade]]: 4p - Modifier - Base - Player - advanced
+43. [[EfficientUpgrade]]: 4p - Modifier - Base - Player - advanced
     -Cost: Upgrade costs 1 less
-43. [[Guard]]: 4p - Modifier - Base - Player - advanced
+44. [[Guard]]: 4p - Modifier - Base - Player - advanced
     +Pin: a Structure pins like a Military Actor
-44. [[Logistics]]: 4p - Modifier - Base - Player - advanced
+45. [[Logistics]]: 4p - Modifier - Base - Player - advanced
     An action spends Goods of the Stars of all its groups
-45. [[PlusPile]]: 4ps - Action - Base - Player - advanced
+46. [[PlusPile]]: 4ps - Action - Base - Player - advanced
     +Pile: adds a Factory or a Laboratory pile
-46. [[Salvage]]: 4p - Modifier - Ship - Player - advanced
+47. [[Salvage]]: 4p - Modifier - Ship - Player - advanced
     +Goods: 1 for each rival card Damaged in the action
-47. [[FieldRepair]]: 6p - Modifier - Hero - Player - advanced
+48. [[FieldRepair]]: 6p - Modifier - Hero - Player - advanced
     -Damaged: a Restore can flip a Damaged Industrial card back to
     Enabled
-48. [[FloatingFactory]]: 6p - Industrial Hub - Ship - Player -
+49. [[FloatingFactory]]: 6p - Industrial Hub - Ship - Player -
     advanced
     A Shipyard on a Ship, it moves with the Ship
-49. [[Retool]]: 6p - Modifier - Hero - Player - advanced
+50. [[Retool]]: 6p - Modifier - Hero - Player - advanced
     Enhance turns a Tool on the Field into a Ship
-50. [[StellarForge]]: 8p - Modifier - Hyperstructure - Player -
+51. [[StellarForge]]: 8p - Modifier - Hyperstructure - Player -
     advanced
     The Social half of a Hyperstructure is built at an Industrial
     hub, paid in Production
-51. [[Forecast]]: 1s - Action - Tool - Player - advanced
+52. [[Forecast]]: 1s - Action - Tool - Player - advanced
     Immediate: looks at the top 3 cards of the Reserve, puts them back
     in any order
-52. [[Recycle]]: 2s 4p - Action - Hero, Base - Player - advanced
+53. [[Recycle]]: 2s 4p - Action - Hero, Base - Player - advanced
     Converts a card to Goods, the card is Destroyed
-53. [[Exhaust]]: 4s - Modifier - Ship - Player - advanced
+54. [[Exhaust]]: 4s - Modifier - Ship - Player - advanced
     Overloads a card: all its abilities as a supporter, then it is
     Destroyed or Damaged
-54. [[Scan]]: 4s - Modifier - Ship - Player - advanced
+55. [[Scan]]: 4s - Modifier - Ship - Player - advanced
     Explore also reveals a hidden tile bordering the target
-55. [[Standby]]: 4s - Modifier - Base - Player - advanced
+56. [[Standby]]: 4s - Modifier - Base - Player - advanced
     One unused card stays in Hand at Draw
-56. [[Xenoarchaeology]]: 4s - Modifier - Colony - Galaxy - advanced
+57. [[Xenoarchaeology]]: 4s - Modifier - Colony - Galaxy - advanced
     A conquest picks its World among the top 3 of the World deck
-57. [[Barrier]]: 6s - Action - Ship - Player - advanced
+58. [[Barrier]]: 6s - Action - Ship - Player - advanced
     +Hidden: turns a revealed Space next to the source face down
     again
-58. [[Espionage]]: 6s - Modifier - Tool - Player - advanced
+59. [[Espionage]]: 6s - Modifier - Tool - Player - advanced
     Use a rival's technology in the same Star, paying its Cost in
     Science power
-59. [[GreatLibrary]]: 6s - Modifier - Hyperstructure - Player -
+60. [[GreatLibrary]]: 6s - Modifier - Hyperstructure - Player -
     advanced
     -Prerequisites: Research ignores them for a card a rival has on
     the Field
-60. [[Invent]]: 6s - Action - Hero - Player - advanced
+61. [[Invent]]: 6s - Action - Hero - Player - advanced
     Research takes any card from any own Laboratory pile
-61. [[Jump]]: 6s - Modifier - Ship - Player - advanced
+62. [[Jump]]: 6s - Modifier - Ship - Player - advanced
     A Move passes one hidden Space and reveals it
-62. [[MinusRequirement]]: 6s - Modifier - Hero - Player - advanced
+63. [[MinusRequirement]]: 6s - Modifier - Hero - Player - advanced
     -Prerequisites: Research ignores one pair of them
-63. [[SensorArray]]: 6s - Modifier - Hero - Player - advanced
+64. [[SensorArray]]: 6s - Modifier - Hero - Player - advanced
     -Hidden: rival cards in its Star can't stay Hidden
-64. [[UnifiedTheory]]: 8s - Modifier - Hero - Player - advanced
+65. [[UnifiedTheory]]: 8s - Modifier - Hero - Player - advanced
     +Class: its card provides its Level in one more Class too
-65. [[Legacy]]: 4c - Action - Colony - Player - objectives
+66. [[Legacy]]: 4c - Action - Colony - Player - objectives
     +History, Immediate: a card from the Discard goes to History
-66. [[NovaBomb]]: 8m - Action - Ship - Galaxy - galaxy
+67. [[NovaBomb]]: 8m - Action - Ship - Galaxy - galaxy
     Destroys every card in a Star for their total Level, its own card
     too
 

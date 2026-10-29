@@ -28,7 +28,7 @@ CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
 TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')
 TECH_BASES = {'TechnologyAction', 'TechnologyModifier', 'Hub'}
 KIND_TECH = {'Action': 'TechnologyAction', 'Modifier': 'TechnologyModifier',
-             'Social Hub': 'Hub', 'Industrial Hub': 'Hub'}
+             'Social Hub': 'Hub', 'Industrial Hub': 'Hub', 'Research Hub': 'Hub'}
 FACTIONS = {'Player', 'Galaxy'}
 # catalog item: Name: LevelClasses - Kind - Types - Factions - Scope, then a description
 TECH_ITEM = re.compile(r'[^:]+: (?P<levels>.+?) - (?P<kind>.+?) - (?P<types>.+?)'

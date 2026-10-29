@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: advanced
+scope: core
 ---
 
 1. **Goods** is stockable [[Resource]]

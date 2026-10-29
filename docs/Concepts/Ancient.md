@@ -10,8 +10,7 @@ scope: core
 3. When an [[Attack]] conquers a [[Wild]] Star, **Ancients** come from
    the top of the **Ancient deck**:
 	1. As many as the [[Price]] of the drawn [[World]]
-	2. Face down: nobody knows them until they are revealed, see
-	   [[Hidden]]
+	2. Face up, before the first round of the [[Combat]]
 	3. They take no [[Slot]]
 4. All **Ancients** of the Star defend together, each with its printed
    [[Defense]], nobody adds more
@@ -28,3 +27,5 @@ scope: core
 3. Neutral resistance without the [[GalaxyDeck]]: [[Military]] has a
    job before the rivals meet
 4. As many as the Price is a first guess, playtests set the number
+5. The attacker sees the defense before committing more and can
+   [[Retreat]] in time

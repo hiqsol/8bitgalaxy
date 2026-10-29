@@ -19,3 +19,5 @@ scope: core
 	    **Restore** phase of own [[Turn]]
 	11. Victory points for [[Objective]]s
 	12. Votes for [[Politics]]
+4. A [[Resource]] **Plus**, [[Energy]] or [[Goods]], works only in an
+   action of its card's [[Class]], see [[Action]]
