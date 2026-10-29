@@ -22,6 +22,6 @@ scope: duel
    [[Field]]
 2. The player thins them out: [[Takeoff]] parks a **Tool** in a
    Unit [[Slot]] until a Ship carries it away, [[Recycle]] turns it
-   into [[Materials]], [[Combat]] takes it as a loss
+   into [[Goods]], [[Combat]] takes it as a loss
 3. A **Tool** gives its Level and Class like any card, e.g. for
    [[Prerequisites]]

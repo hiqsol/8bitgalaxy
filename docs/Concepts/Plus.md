@@ -7,7 +7,7 @@ scope: core
 2. **Plus** of all participants sums up
 3. **Plus** can add:
 	1. [[Power]] - plain `+N` is power of the end's [[Class]]
-	2. [[Materials]]
+	2. [[Goods]]
 	3. [[Energy]]
 	4. [[Defense]]
 	5. [[Range]] - to the group in [[Move]]

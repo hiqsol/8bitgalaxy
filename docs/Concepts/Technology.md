@@ -77,7 +77,7 @@ scope: core
 22. [[Occupation]]: 6m - Modifier - Ship - Player - advanced
     +Control: an own Military Actor gives a Control level above Actor
 23. [[Raid]]: 6m - Action - Ship - Player - advanced
-    An Attack whose winners stay home: takes the Materials or
+    An Attack whose winners stay home: takes the Goods or
     Depletes the Structures
 24. [[Tactics]]: 6m - Modifier - Ship - Player - advanced
     +Military: 1 more power when a Hero and a Ship attack together
@@ -87,18 +87,18 @@ scope: core
 26. [[Recall]]: 1c - Action - Tool - Player - advanced
     Immediate: a card from the Discard goes on top of the Reserve
 27. [[Trade]]: 2c - Action - Ship, Base - Player - advanced
-    Two factions turn power into Materials together
+    Two factions turn power into Goods together
 28. [[Debt]]: 4c - Action - Ship - Player - advanced
     Immediate: Energy equal to the card's Level, then the card is
     Destroyed
 29. [[Export]]: 4c - Action - Colony - Player - advanced
-    Materials carried to a rival Colony turn into Energy
+    Goods carried to a rival Colony turn into Energy
 30. [[MinusDeplete]]: 4c - Modifier - Colony - Player - advanced
     -Deplete: one participant doesn't Deplete
 31. [[PlusHero]]: 4c - Action - Colony - Player - advanced
     +Hero: creates a new Level 1 Hero
 32. [[Sell]]: 4c - Action - Ship - Player - advanced
-    A Trade over a card: its Price turns into Materials, the card is
+    A Trade over a card: its Price turns into Goods, the card is
     Destroyed
 33. [[Assimilate]]: 6c - Action - Hero - Player - advanced
     Replaces a rival Colony in a Star the player controls with an own
@@ -120,17 +120,17 @@ scope: core
 40. [[Heritage]]: 8c - Modifier - Hyperstructure - Player - advanced
     Own Damaged cards count for Galactic Diaspora
 41. [[Extract]]: 2p - Action - Ship, Colony - Player - advanced
-    +Materials: turns power into Materials at Asteroids
+    +Goods: turns power into Goods at Asteroids
 42. [[EfficientUpgrade]]: 4p - Modifier - Base - Player - advanced
     -Cost: Upgrade costs 1 less
 43. [[Guard]]: 4p - Modifier - Base - Player - advanced
     +Pin: a Structure pins like a Military Actor
 44. [[Logistics]]: 4p - Modifier - Base - Player - advanced
-    An action spends Materials of the Stars of all its groups
+    An action spends Goods of the Stars of all its groups
 45. [[PlusPile]]: 4ps - Action - Base - Player - advanced
     +Pile: adds a Factory or a Laboratory pile
 46. [[Salvage]]: 4p - Modifier - Ship - Player - advanced
-    +Materials: 1 for each rival card Damaged in the action
+    +Goods: 1 for each rival card Damaged in the action
 47. [[FieldRepair]]: 6p - Modifier - Hero - Player - advanced
     -Damaged: a Restore can flip a Damaged Industrial card back to
     Enabled
@@ -147,7 +147,7 @@ scope: core
     Immediate: looks at the top 3 cards of the Reserve, puts them back
     in any order
 52. [[Recycle]]: 2s 4p - Action - Hero, Base - Player - advanced
-    Converts a card to Materials, the card is Destroyed
+    Converts a card to Goods, the card is Destroyed
 53. [[Exhaust]]: 4s - Modifier - Ship - Player - advanced
     Overloads a card: all its abilities as a supporter, then it is
     Destroyed or Damaged

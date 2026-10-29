@@ -3,8 +3,8 @@ status: draft
 scope: advanced
 ---
 
-1. **Materials** is stockable [[Resource]]
-2. **Materials** is a token in a [[Star]], the same token in [[Hand]]
+1. **Goods** is stockable [[Resource]]
+2. **Goods** is a token in a [[Star]], the same token in [[Hand]]
    is [[Energy]], see [[Component]]
 3. Carried as cargo of a [[Move]] by any [[Ship]], a token weighs 1
 4. Can be used to [[Boost]] action
@@ -12,12 +12,12 @@ scope: advanced
    finishing there
 6. **Star Capacity** is the sum of the [[Capacity|Capacities]] of the
    [[Structure]]s in the Star:
-	1. A Star can't hold more **materials** than its Capacity
-	2. When the Star Capacity drops below its **materials**, the
+	1. A Star can't hold more **goods** than its Capacity
+	2. When the Star Capacity drops below its **goods**, the
 	   excess is lost
 7. At [[Takeoff]] an [[Actor]] can carry [[Energy]] tokens from
    [[Hand]] as cargo, within its [[Capacity]]: in the Star they become
-   **materials**, up to the Star Capacity, and take no [[Slot]]
+   **goods**, up to the Star Capacity, and take no [[Slot]]
 
 #### Notes
 

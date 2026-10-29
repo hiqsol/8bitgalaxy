@@ -109,13 +109,13 @@ answers.
 	- a) [[Ability]]: +1 [[Power]] of its [[Class]] to one action
 	  started there.
 	- b) Ability: +1 [[Energy]].
-	- c) Ability: +1 [[Materials]] stored there.
+	- c) Ability: +1 [[Goods]] stored there.
 	- d) Ability: +1 [[Defense]] to own defenders there.
 	- e) Ability: a [[Technology]] for own cards there, e.g.
 	  [[Shipyard]], [[Academy]], [[Explore]].
 	- f) Ability: [[DeckBuilding|Draw]] 1 card, rare.
 	- g) [[ExtraPrice]] grows with the Ability: Defense 1, Power and
-	  Materials 2, Energy and Technology 3, Draw 4, and so the number
+	  Goods 2, Energy and Technology 3, Draw 4, and so the number
 	  of [[Ancient]]s guarding it. Energy is above Power: any class,
 	  anywhere, kept between Turns.
 
@@ -255,16 +255,16 @@ All `advanced`.
 
 - [ ] **P57. Economy roles.** One job per stockable resource
   (Eclipse, TtA: materials build, money is the wildcard):
-	- a) [[Materials]] pay [[Create]], [[Upgrade]] and [[Recover]]
+	- a) [[Goods]] pay [[Create]], [[Upgrade]] and [[Recover]]
 	  costs at a [[Hub]] in the Star where they are: [[Extract]] at
 	  [[Asteroids]], carried to the Shipyard.
 	- b) [[Energy]] [[Boost]]s any action (already in `core`).
 	- c) [[Trade]] turns power into Energy between two own Colonies: a
 	  trade route.
 - [ ] **S39. One conversion outcome.** [[Extract]] and [[Trade]] both
-  convert power to [[Materials]] one to one:
-	- a) Define **conversion** once in [[Materials]]: the action's
-	  power becomes Materials one to one in the source [[Star]].
+  convert power to [[Goods]] one to one:
+	- a) Define **conversion** once in [[Goods]]: the action's
+	  power becomes Goods one to one in the source [[Star]].
 	- b) The pages keep only what they convert: [[Asteroids]], a trade
 	  route, unless P57 c turns Trade into Energy.
 
@@ -375,7 +375,7 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  it starts no action.
 - [ ] **S56. Class handles only Structures as cargo.** [[Move]] 5.2
   needs a Ship whose [[Class]] handles each cargo card, then [[Hero]]
-  8, [[Tool]] 8 and [[Materials]] 3 let any Ship carry theirs:
+  8, [[Tool]] 8 and [[Goods]] 3 let any Ship carry theirs:
 	- a) Only a [[Structure]] needs a Ship whose Class handles it.
 	  Hero 8, Tool 8 and "by any Ship" go.
 	- b) Or no Class for cargo and [[Manage]]: Manage is paid in the

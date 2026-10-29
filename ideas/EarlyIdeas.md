@@ -119,7 +119,7 @@ Ideas of the first design notes that neither the rules nor the
 1. **Ages**: the [[GalaxyDeck]] comes in Ages, like Through the Ages.
    First Age events are windfalls for every faction, threats come
    later:
-	1. 2 [[Materials]] or a free Ship, Base or Colony
+	1. 2 [[Goods]] or a free Ship, Base or Colony
 	2. A free [[Research]] of one card
 	3. A Warp jump: a Ship moves to a near Star
 	4. Reveal or move one Ancient
@@ -175,7 +175,7 @@ Ideas of the first design notes that neither the rules nor the
 	6. A card's Level is its total value: a program can check the
 	   balance
 2. **Only cards**: no tokens, nothing stored between Turns, all that
-   plays is visible; [[Energy]] and Materials break it, see Backlog
+   plays is visible; [[Energy]] and Goods break it, see Backlog
    S64
 3. **Questions the game answers**: what matters more, military or
    science, expansion or economy, people or machines, growth or

@@ -47,7 +47,7 @@ scope: galaxy
    Ancient in it
 3. **Ancient Invasion**: add 1 Ancient [[Unit]] openly to every
    bordering Star and attack where possible
-4. **Ancient production**: Ancients produce 2 [[Materials]] in every
+4. **Ancient production**: Ancients produce 2 [[Goods]] in every
    [[Star]] [[ControlledBy]] them
 5. **Peace Treaty**: the player factions with the highest Military
    Level each lose one [[ActiveFor|active]] [[Military]] card of

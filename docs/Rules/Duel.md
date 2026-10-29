@@ -18,7 +18,7 @@ scope: duel
 9. World deck: every [[World]] card, shuffled
 10. A [[Technology]] printed on a [[Deck]] card is played by its page,
     an `advanced` one too, with the `advanced` rules it needs, e.g.
-    [[Materials]]
+    [[Goods]]
 11. Setup: [[StartDraw]]
 12. Field schematic: hex is a [[Star]], `[ ]` home Star, each side
     has 2 [[Space]] tiles, one per symbol:

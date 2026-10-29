@@ -7,7 +7,7 @@ scope: advanced
 2. **Raid** is an [[Attack]] whose winning attackers don't move to the
    destination
 3. **Outcome** of a won **Raid**, one of:
-	1. [[Materials]] of the target [[Star]] move to the source Star
+	1. [[Goods]] of the target [[Star]] move to the source Star
 	2. Rival [[Structure]]s in the target Star become [[Depleted]]
 
 #### Notes
