@@ -31,6 +31,9 @@ Every page states its `scope` in frontmatter:
 
 1. `core` - streamlined rules, independent of a faction deck, a
    technology and a scenario
+	1. Core is an extensible framework: it gives core numbers, e.g.
+	   the [[Hand]] size, and a faction or any card can change any
+	   rule, the change lives on its own page
 2. `duel` - minimal playable game on top of core: the [[Duel]]
    setup, the Human and Alien [[Deck]] and its technologies
 3. `advanced` - more technologies and rules on top of duel

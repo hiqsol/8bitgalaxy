@@ -2,11 +2,13 @@
 
 First duel playtest, 2026-10-22, seed 202. B wins 0-1 by Singularity
 in Turn 16: all four Classes at Level 4, never leaving home. No
-contact between the rivals: the only Combat is A against three Ancients.
+contact between the rivals: the only Combat is A against three
+Ancients.
 
 ## Score
 
-One line per turn, only what happened. `!` good, `!!` decisive, `?!` dubious,
+One line per turn, only what happened. `!` good, `!!` decisive, `?!`
+dubious,
 `!?` interesting, as in chess.
 
 ```text

@@ -7,7 +7,8 @@ wins.
 
 ## Score
 
-One line per turn, only what happened. `!` good, `!!` decisive, `?!` dubious,
+One line per turn, only what happened. `!` good, `!!` decisive, `?!`
+dubious,
 `!?` interesting, as in chess.
 
 ```text

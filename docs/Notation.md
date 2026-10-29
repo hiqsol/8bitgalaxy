@@ -33,8 +33,10 @@ scope: meta
 	10. `1n` - 1 None
 	11. `1*` - 1 any Class: a pattern for a set of cards
 3. Stars:
-	1. `S+0+0` - Star at `[0,0]`, when possible shortens to `S00`, `S11`
-		1. Star could get negative coordinates: `S-1-1` is at `[-1,-1]`
+	1. `S+0+0` - Star at `[0,0]`, when possible shortens to `S00`,
+	   `S11`
+		1. Star could get negative coordinates: `S-1-1` is at
+		   `[-1,-1]`
 	2. `S00u1` - unit slot 1 at S00
 	3. `S-1-1s2` - structure slot 2 at Star at `[-1,-1]`
 	4. `S00w` - World slot at S00
@@ -46,10 +48,12 @@ scope: meta
 	7. `@u1` - at unit slot-1
 	8. `@w` - at the World slot
 4. Other:
-	1. [[Home]] piles are words: `Hand`, `Reserve`, `Discard`, `History`
+	1. [[Home]] piles are words: `Hand`, `Reserve`, `Discard`,
+	   `History`
 		1. A pile of a row adds its number: `Fac2`, `Lab1`
 		2. A rival's pile adds the player: `B:Hand`
-	2. Decks beside the [[Field]] are words: `WorldDeck`, `AncientDeck`,
+	2. Decks beside the [[Field]] are words: `WorldDeck`,
+	   `AncientDeck`,
 		`AncientDiscard`
 	3. `S1c|1c` - Ship-1c provides 1c
 	4. `a << b` - a required b
@@ -196,7 +200,7 @@ Recover:
    [[Combat]]
 2. Then one line per Combat round, numbered after its play, the
    additions and passes in [[Combat]] order:
-   `7b1. Defender adds H2c@Hand|1d Hidden; Attacker passes`
+   `7b1. Defender adds H2c@Hand|1d; Attacker passes`
 3. Then `Reveal` the [[Hidden]] cards, the `Total` of both sides, the
    winner and the **Advantage**
 4. Then `Outcome`, as for any action: saved cards, [[Damaged]] cards,
@@ -209,9 +213,8 @@ Recover:
 ```text
 7b. Attack: S00 -> S01[S1p@u2|1d] << 2r
     S2m@Hand|1m + S00[S1m@u1|1r1m + H2m@u2|2r2m] = 3r4m
-    7b1. Defender adds H2c@Hand|1d Hidden; Attacker adds H1m@Hand|2m Hidden
+    7b1. Defender adds H2c@Hand|1d; Attacker adds H1m@Hand|2m
     7b2. Defender passes; Attacker passes
-    Reveal: H2c, H1m
     Total: 6m against 2d, attacker wins, Advantage 4
     Outcome: S1m,H2m saved, S1p Damaged; S1m->S01u1, H2m->S01u3
       S2m,H1m->Discard, H2c->B:Discard
@@ -221,9 +224,9 @@ Recover:
 
 ```text
 9c. Attack: S00 -> S01[A?] << 2r
-    Hand[S2m|1m+1e Hidden + S1m|1m Hidden] + S00[H1m@u3|1r2m + S1s@u4|1r]
+    Hand[S2m|1m+1e + S1m|1m] + S00[H1m@u3|1r2m + S1s@u4|1r]
     = 2r5m
-    Reveal: S2m, S1m, A3
+    Reveal: A3
     Total: 5m against 3d, attacker wins, Advantage 2
     Outcome: H1m,S1s saved; H1m->S01u1, S1s->S01u2; A3->AncientDiscard
       S2m,S1m->Discard

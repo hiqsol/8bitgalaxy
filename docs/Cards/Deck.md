@@ -205,3 +205,6 @@ scope: duel
 11. Human and Alien are for even, symmetric games: every technology
     of the Deck serves both. Later Factions will be asymmetric, with
     decks and technologies of their own
+12. A combined print is one [[Ability]]: "Recover, Upgrade" of Hero
+    4M weak and Hero 4C strong, "Militarization, +1 Defense" of Base
+    2M

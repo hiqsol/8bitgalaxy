@@ -9,8 +9,8 @@ scope: core
 	   [[Power]], [[Range]], [[Capacity]]
 	3. **Direction**: from the **source** to the **destination**, see
 	   [[Direction]]:
-		1. **Source**: the [[IPS]] of any [[Star]] [[ControlledBy]]
-		   the player
+		1. **Source**: the [[IPS]] of any [[Star]] [[ActiveFor]] the
+		   player
 		2. **Destination**: a [[Star]] or a [[Space]]
 	4. **Participants**: cards [[ActiveFor]] the player that give
 	   their [[Ability|abilities]], [[Technology]] included:
@@ -50,11 +50,11 @@ scope: core
 #### Notes
 
 1. In short: to act, play a starter from Hand. Pick a source Star you
-   control and a destination. Your cards at both places take part with
-   all abilities; cards from Hand, and from other Stars within Range,
-   help with one ability each. Their abilities must cover the
-   requirements. Then the used cards deplete, except those that moved
-   or fought; the starter always does.
+   control or dispute and a destination. Your cards at both places
+   take part with all abilities; cards from Hand, and from other Stars
+   within Range, help with one ability each. Their abilities must
+   cover the requirements. Then the used cards deplete, except those
+   that moved or fought; the starter always does.
 2. A failed action costs all its cards: the player usually knows the
    Cost before starting, e.g. the [[Price]] of a card to [[Create]],
    but not of every action

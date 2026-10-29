@@ -40,9 +40,10 @@ scope: core
    rivals, but it doesn't end the game, neither does losing the
    [[Hub|hubs]]: the faction still moves and can defeat the rival
    leader. The captor gets the hubs, like taking the queen in Chess
-7. Losing the last Star does end the game: a faction with no [[Star]]
-   [[ActiveFor|active]] for it can not make a move, it has no place
-   for [[Takeoff]] and no source for an action from [[Hand]]
+7. Losing the last [[Star]] [[ActiveFor|active]] for a faction does
+   end the game: it has no place for [[Takeoff]] and no source for an
+   action from [[Hand]]. Losing control is not enough: a [[Disputed]]
+   Star is not lost, the faction takes off and acts there
 8. An empty [[Hand]] at the start of own [[Turn]] can end the game
    too, like an unexpected checkmate: spending the whole Hand on
    defense in [[Combat]] is a real risk

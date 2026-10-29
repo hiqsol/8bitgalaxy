@@ -16,7 +16,7 @@ scope: core
 
 #### Notes
 
-1. In a [[Disputed]] Star nobody controls the World: nobody uses it
-   and it counts for nobody
+1. In a [[Disputed]] Star the World stays the [[Galaxy]]'s: no player
+   faction uses it and it counts for nobody
 2. A World does not count toward a player faction's
    [[GalacticDiaspora|Galactic Diaspora]]

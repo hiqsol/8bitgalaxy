@@ -8,16 +8,18 @@ scope: core
 	1. selects **attacking participants** and supporters
 	2. selects **defending participants**: direct participants from
 	   the defender's cards in the target [[Star]]
-3. Then **rounds** follow, in each round:
-	1. The **defender** adds any number of own participants and
-	   supporters, or passes
-	2. Then the **attacker** does the same
-4. More players can join the **combat**:
-	1. On any side, they add cards or pass after that side's attacker
-	   or defender
-	2. They must have active [[Military]] [[Actor]]s in the Star
-5. Cards from [[Hand]] join as supporters, also at rival's [[Turn]].
-   Parties can bluff by adding [[Hidden]] cards from [[Hand]]
+3. Then **rounds** follow, in each round every party adds any number
+   of own participants and supporters, or passes, in [[Turn]] order
+   starting with the **defender**: with two players the defender,
+   then the **attacker**
+4. More players can join the **combat** on any side:
+	1. They must have active [[Military]] [[Actor]]s in the Star
+	2. Their cards follow the [[Range]] requirements, see
+	   [[PerformAction]]
+	3. They keep their [[Turn]] order in the rounds: e.g. with the
+	   Turn order A, C, B, when A attacks B, C goes after A and
+	   before B
+5. Cards from [[Hand]] join as supporters, also at rival's [[Turn]]
 6. Parties can [[Boost]] with cards at the moment when they add the
    card, not later
 7. **Combat** resolves when every party passes in one round
@@ -37,8 +39,9 @@ scope: core
 
 #### Notes
 
-1. No dice: multiple rounds and hidden commitments bring decisions,
-   risks, surprises and bluff, the result isn't predetermined
+1. No dice: multiple rounds, gradual commitments and [[Hidden]]
+   cards bring decisions, risks, surprises and bluff, the result isn't
+   predetermined
 2. Direct participants hold ground like chess pieces: survivors stay
    or move in
 3. Both sides can add any cards, but a non-[[Military]] card has no

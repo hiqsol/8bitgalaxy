@@ -9,8 +9,7 @@ scope: core
    a [[Combat]], the faction that [[ControlledBy|controlled]] it
    before can **intercept** them right after the action that brought
    them:
-	1. It starts a [[Combat]] in that Star as the attacker, even if
-	   the Star is [[Disputed]] now
+	1. It starts a [[Combat]] in that Star as the attacker
 	2. It is not an [[Attack]]: no starter and no [[Military]]
 	   [[Actor]] needed, that Star is the source and the target
 	3. The attacker selects defending participants from the cards

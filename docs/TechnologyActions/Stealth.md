@@ -18,3 +18,5 @@ scope: duel
 1. **Stealth** is the only way to hide a card on the [[Field]], at
    [[Takeoff]] or later: it makes hidden moves possible, [[Explore]]
    counters it
+2. A card from [[Hand]] joins a [[Combat]] face up: a bluff in a
+   Combat needs Hidden cards on the Field, so it needs **Stealth**

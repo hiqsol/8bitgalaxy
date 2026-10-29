@@ -1,6 +1,6 @@
 ---
 date: 2026-10-10
-updated: 2026-10-26
+updated: 2026-10-29
 status: WIP
 scope: meta
 ---
@@ -27,9 +27,13 @@ from a played game, not from a review.
    only for groups outside the destination, see [[Range]],
    [[PerformAction]]
 3. **Hidden**: only by [[Stealth]], moves with Range 1 and Capacity 1,
-   revealed at the [[Combat]] reveal, see [[Hidden]]
+   revealed at the [[Combat]] reveal; a Hand card joins a Combat face
+   up, all Hand commitments face down (S26) were rejected, see
+   [[Hidden]]
 4. **Control**: strictly the highest [[Control]] controls a Star, a
-   tie makes it [[Disputed]], see [[ControlledBy]]
+   tie makes it [[Disputed]], see [[ControlledBy]]; a faction takes
+   off and acts in a Star where nobody outranks it, a Disputed front
+   as dead ground was dropped (S54), see [[ActiveFor]]
 5. **Explore**: one technology, Recon and Survey are its flavour
    names, see [[Explore]]
 6. **Build**: [[Create]], [[Upgrade]] at a [[Hub]]; [[Recover]]
@@ -82,6 +86,10 @@ from a played game, not from a review.
     only color and design differ; Human or Alien technologies and a
     faction card on mirrored decks (Ideas: Asymmetry) were rejected,
     asymmetry is for later [[Faction]]s, see [[Faction]]
+24. **Piles**: the order of [[Factory]] and [[Laboratory]] piles is a
+    subgame, players move cards between them thinking ahead; one pile
+    per Type with the lowest Level on top (P27 e) was rejected, see
+    [[Laboratory]]
 
 ## Next step
 
@@ -92,13 +100,7 @@ from a played game, not from a review.
 
 ## First duel
 
-Items that block the first duel, [[Guidance]] has the recommended
-answers.
-
-### Setup
-
-- [ ] **P27. First duel setup** in [[StartDraw]], from the [[Deck]]:
-	- e) One pile per [[Type]], lowest [[Level]] on top.
+Items that block the first duel.
 
 ### World deck
 
@@ -118,18 +120,6 @@ answers.
 	  Goods 2, Energy and Technology 3, Draw 4, and so the number
 	  of [[Ancient]]s guarding it. Energy is above Power: any class,
 	  anywhere, kept between Turns.
-
-### Combat
-
-- [ ] **S26. All Combat cards from Hand are face down.** [[Combat]]
-  gives a special bluff to "Hidden cards from Hand", although Hand is
-  already secret and Hidden is otherwise a Field state:
-	- a) Every Combat supporter from Hand is committed face down.
-	- b) Reveal the Hand commitments only at resolution, with the
-	  Hidden cards; remove the special Hidden-Hand rule. A [[Hidden]]
-	  card is still revealed by its player at any time.
-	- c) Bluffing stays, with one commitment procedure and no state
-	  change.
 
 ## Watch in playtest
 
@@ -350,26 +340,9 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  its Slot, every other Unit goes to Discard.
 	- c) Move 6 and Combat 9.4 state b), Deplete keeps only the two
 	  outcomes. Recommended: yes.
-- [ ] **S54. Act from an active Star.** [[Takeoff]] goes to a Star
-  [[ActiveFor]] the player, a [[Disputed]] one too, but an action
-  needs a controlled source, and [[Intercept]] patches it with "even
-  if the Star is Disputed now" (F1, RG1-10):
-	- a) [[PerformAction]] source: the [[IPS]] of a Star ActiveFor the
-	  player.
-	- b) Intercept drops "even if…"; Disputed note 1 becomes "a front:
-	  the tied factions take off and act there".
-	- c) Lost: a front as dead ground. Gained: a faction fights back
-	  from its Disputed home.
-- [ ] **S55. Control by Unit, one ControlledBy rule.** [[Control]]
-  ranks [[Actor]] over [[Structure]], but a card back shows only Unit
-  or Structure, [[ControlledBy]] doesn't cover an Enabled [[Tool]],
-  and a Disputed Star leaves other factions' Structures out of
-  control:
-	- a) Control levels: none, Structure, **Unit**.
-	- b) ControlledBy: a card is controlled by its [[Faction]], but a
-	  Structure or a [[Damaged]] card in a Star a rival controls is
-	  that rival's. ControlledBy 4 and [[Disputed]] 3 go, "out of
-	  control" goes.
+- [ ] **S55. Control by Unit.** [[Control]] ranks [[Actor]] over
+  [[Structure]], but a card back shows only Unit or Structure:
+	- a) Control levels: Structure, **Unit**.
 	- c) Control merges into ControlledBy, one page less.
 	- d) Optional: Unit replaces Actor in core, Actor goes, Tool says
 	  it starts no action.
@@ -574,9 +547,7 @@ One batch after the playtest, only for pages that confused play.
 	- b) No rule changes; the shorter description avoids promising a
 	  mechanic the game does not have.
 - [ ] **S35. One build direction.** [[Create]] 6 defines two
-  directions, [[Upgrade]] 4 one, [[Settle]] adds a third; today a
-  hub in a [[Disputed]] Star still creates Actors (it is the
-  destination) but not Structures (it is the source):
+  directions, [[Upgrade]] 4 one, [[Settle]] adds a third:
 	- a) The source is the hub's [[Star]], the destination is the Star
 	  of the card: where a [[Structure]] is or goes, as Upgrade 4
 	  has it; a card in [[Home]] has the hub's Star as both ends,
@@ -585,8 +556,7 @@ One batch after the playtest, only for pages that confused play.
 	- c) State it once, in [[Hub]]; the three action pages keep only
 	  requirements, Cost and outcome.
 	- d) What it changes: an Actor is built only with cards at the hub
-	  as direct participants, not at another source Star, and a hub in
-	  a Disputed Star builds nothing.
+	  as direct participants, not at another source Star.
 	- e) An action on a [[Home]] card is directed to a hub of the
 	  card's [[Origin]]: said once in [[Hub]], [[Research]] 3,
 	  [[Manage]] 2.2.2 and Create 6.1 go; "corresponding Hub" is
@@ -608,10 +578,6 @@ One batch after the playtest, only for pages that confused play.
 	  group.
 	- c) It answers whether a supporter's Level is its one Ability for
 	  [[Prerequisites]]. Recommended: yes.
-- [ ] **S43. Control by own cards.** [[Control]] 2 counts a faction's
-  cards in a Star: does a captured rival [[Structure]],
-  [[ControlledBy]] the faction, count?
-	- a) Only own cards count: a captured Structure gives no Control.
 - [ ] **S47. One Home pile table.** Ten pile pages state visibility
   and entry in different words, some not at all:
 	- a) [[Factory]], [[Laboratory]] and [[History]] don't say who
