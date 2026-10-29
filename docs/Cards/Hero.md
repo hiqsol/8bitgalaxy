@@ -15,3 +15,5 @@ scope: core
 #### Notes
 
 1. **Hero** is a strong figure: its [[Capacity]] can help a group much
+2. **Hero** is a living being upgraded with Warp, see [[Lore]]: that's
+   why it takes a [[Slot]] and is as potent as a huge [[Ship]]
