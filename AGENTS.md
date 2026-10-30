@@ -14,7 +14,7 @@ Write the points of an issue or proposal as lettered bullets
 Run `make check` (`bin/checkdocs`) and `make lint` (markdownlint)
 after editing docs.
 Lines are at most 70 characters (tab counts as 4), tables and code
-blocks excepted, `make wrap` (`bin/wrapmd`) rewraps longer lines.
+blocks excepted, `make wrap` (`uwiki wrap`) rewraps longer lines.
 The pre-commit hook runs both, enable it with `make hooks`.
 Docs must contain only actual, current information.
 Do not keep legacy or historical information in docs.
