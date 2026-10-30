@@ -16,6 +16,7 @@ after editing docs.
 Lines are at most 70 characters (tab counts as 4), tables and code
 blocks excepted, `make wrap` (`uwiki wrap`) rewraps longer lines.
 The pre-commit hook runs both, enable it with `make hooks`.
+`make view` builds the docs into `build/docs.html` and opens it.
 Docs must contain only actual, current information.
 Do not keep legacy or historical information in docs.
 Delete obsolete information, resolved issues and resolved proposals.
