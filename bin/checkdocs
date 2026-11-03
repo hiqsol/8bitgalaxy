@@ -1,25 +1,25 @@
 #!/usr/bin/env -S uv run --script
 # /// script
-# dependencies = ["markdown", "uwiki @ git+https://github.com/hiqsol/uwiki@v0.2.0"]
+# requires-python = ">=3.11"
+# dependencies = ["markdown"]
 # ///
-"""Check the docs wiki: generic checks by uwiki, then frontmatter, numbered rules, technology catalog.
+"""Check the docs wiki rules uwiki does not know: numbered rules, technology catalog, page templates,
+and that the uwiki.toml schema allows the status and scope values docs/index.md documents.
 
-Usage: bin/checkdocs  (exits 1 on problems, uv installs dependencies)
+Usage: bin/checkdocs  (exits 1 on problems, uv installs dependencies), make check runs uwiki check first
 """
 
-import os
 import re
 import sys
+import tomllib
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import markdown
-import uwiki
 
 ROOT = Path(__file__).resolve().parent.parent
 PATHS = ['docs', 'ideas']
 FILES = sorted(f for p in PATHS for f in (ROOT / p).glob('**/*.md'))
-KEYS = {'status', 'scope', 'aliases', 'date', 'updated'}
 CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
 TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')
 TECH_BASES = {'TechnologyAction', 'TechnologyModifier', 'Hub'}
@@ -115,12 +115,17 @@ def check_templates(pages):
                     report(page.path, f'card type needs a rule "{prefix} ..."')
 
 
-def check_page(page, statuses, scopes):
-    for key in page.meta.keys() - KEYS:
-        report(page.path, f'unknown frontmatter key: {key}')
-    for key, allowed in (('status', statuses), ('scope', scopes)):
-        if page.meta.get(key) not in allowed:
-            report(page.path, f'{key} not in docs/index.md: {page.meta.get(key)}')
+def check_schema(index):
+    """uwiki.toml schema allows exactly the status and scope values index documents."""
+    schema = tomllib.loads((ROOT / 'uwiki.toml').read_text())['schema']
+    for key, heading in (('status', 'Status'), ('scope', 'Scopes')):
+        allowed, documented = set(schema[f'{key}!']), index.section(heading)
+        if allowed != documented:
+            diff = ', '.join(sorted(allowed ^ documented))
+            report(index.path, f'{heading} differs from uwiki.toml schema {key}: {diff}')
+
+
+def check_page(page):
     if page.meta.get('scope') != 'meta' and page.meta.get('status') != 'stub' and page.tree.find('ol') is None:
         report(page.path, 'no numbered rules')
 
@@ -201,14 +206,10 @@ def check_technologies(pages):
 
 
 def main():
-    os.chdir(ROOT)
-    problems.extend(uwiki.check(PATHS))  # links, images, frontmatter syntax, list numbering
     pages = {path.stem: Page(path) for path in FILES}
-    statuses = pages['index'].section('Status')
-    scopes = pages['index'].section('Scopes')
-
+    check_schema(pages['index'])
     for page in pages.values():
-        check_page(page, statuses, scopes)
+        check_page(page)
     check_technologies(pages)
     check_templates(pages)
 

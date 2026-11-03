@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # Played games
 
 The three first duel playtest games of 2026-10-22/23, rewritten in the

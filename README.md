@@ -1,3 +1,19 @@
+---
+status: draft
+scope: meta
+---
+
+# 8-bit Galaxy
+
+## Docs
+
+1. [PITCH.md](PITCH.md) - the game pitch
+2. [docs/](docs/index.md) - the rules, the source of truth
+3. [ideas/](ideas/README.md) - ideas out of the rules
+4. [lore/](lore/LoreVariants.md) - lore variants and their stories
+5. [games/](games/README.md) - played games and the playtest report
+6. [AGENTS.md](AGENTS.md) - how to write and check the docs
+
 ## Install dependencies
 
 Install dependencies with npm:

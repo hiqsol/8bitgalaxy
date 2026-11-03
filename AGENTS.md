@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # 8-bit galaxy
 
 Docs are organized as Obsidian compatible wiki
@@ -11,12 +16,21 @@ Backlog holds all open review items: issues `I<n>`, proposals `P<n>`
 and simplifications `S<n>`; an item keeps its number when it moves.
 Write the points of an issue or proposal as lettered bullets
 `- a) ...`, so they can be referred to as `P24 a`.
-Run `make check` (`bin/checkdocs`) and `make lint` (markdownlint)
-after editing docs.
+Run `make check` (`uwiki check`, `bin/checkdocs`) and `make lint`
+(markdownlint, `uwiki wrap --check`) after editing docs.
 Lines are at most 70 characters (tab counts as 4), tables and code
 blocks excepted, `make wrap` (`uwiki wrap`) rewraps longer lines.
 The pre-commit hook runs both, enable it with `make hooks`.
-`make view` builds the docs into `build/docs.html` and opens it.
+The repo is one wiki: checks, lint and the build take every
+markdown file, every page must be reachable by links from
+`README.md`.
+`uwiki.toml` holds uwiki defaults and the frontmatter schema,
+its `status` and `scope` values are the ones `docs/index.md` lists.
+Move or rename a page with `uwiki mv <from> <to>`, it rewrites
+every link to it and moves it with `git mv`.
+`make links` checks external links, `make stats` counts pages.
+`make view` builds the wiki into `build/8bitgalaxy.html` and opens
+it, `make serve` serves it rebuilding on change.
 Docs must contain only actual, current information.
 Do not keep legacy or historical information in docs.
 Delete obsolete information, resolved issues and resolved proposals.

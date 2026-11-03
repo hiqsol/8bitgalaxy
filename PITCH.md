@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # 8-Bit Galaxy — Game Pitch
 
 ## One-liner

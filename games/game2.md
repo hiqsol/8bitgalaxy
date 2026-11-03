@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # Game 2: Brute 0-1 Scholar
 
 First duel playtest, 2026-10-22, seed 202. B wins 0-1 by Singularity

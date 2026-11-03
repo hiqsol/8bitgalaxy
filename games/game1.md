@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # Game 1: Warlord 1-0 Architect
 
 First duel playtest, 2026-10-22, seed 101. A wins 1-0 by Military in

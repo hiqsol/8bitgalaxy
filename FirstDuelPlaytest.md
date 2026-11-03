@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # 8-bit Galaxy: first duel playtest report
 
 3 AI-vs-AI duels on the `core` rules, 2026-10-22/23. The game records,

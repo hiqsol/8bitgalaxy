@@ -1,0 +1,17 @@
+# uwiki defaults: make check, lint, docs and stats take the same pages
+exclude = ["build"]
+
+[build]
+title = "8bitgalaxy"
+
+[check]
+orphans = true
+
+# status and scope values are documented in docs/index.md,
+# bin/checkdocs keeps them the same
+[schema]
+"status!" = ["stub", "draft", "stable", "WIP"]
+"scope!" = ["core", "duel", "advanced", "galaxy", "objectives", "politics", "meta", "idea", "lore"]
+aliases = "list"
+date = "date"
+updated = "date"

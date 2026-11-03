@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # Game 3: Turtle 1-0 Gambler
 
 First duel playtest, 2026-10-23, seed 303. A wins 1-0 by Singularity

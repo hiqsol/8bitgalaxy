@@ -1,24 +1,30 @@
-.PHONY: upgit docs view check stats lint wrap hooks
+.PHONY: docs view serve check stats lint wrap links hooks
 
+# uwiki.toml holds uwiki defaults: excluded build/, checks, schema
 MDLINT ?= npx --yes markdownlint-cli2@0.23.3
-MD ?= "docs/**/*.md" "ideas/**/*.md" "*.md"
 BUILD ?= build
+MD ?= $(shell uwiki ls .)
 OPEN ?= $(shell command -v local-open || command -v xdg-open || echo open)
 
-upgit:
-	rm -rf  ~/prj/Sync/8bitgalaxy/.git
-	cp -r ~/prj/hiqsol/8bitgalaxy/.git .git
 docs:
-	uwiki build docs -o $(BUILD)
+	uwiki build . -o $(BUILD)/
 view: docs
-	$(OPEN) $(BUILD)/docs.html
+	$(OPEN) $(BUILD)/8bitgalaxy.html
+serve:
+	uwiki serve . --open
 check:
+	uwiki check .
 	bin/checkdocs
 stats:
-	uwiki stats docs ideas
+	uwiki stats .
+	uwiki stats . --by status --top 0
+	uwiki stats . --by scope --top 0
 lint:
-	$(MDLINT) $(MD)
+	@$(MDLINT) $(MD)
+	@echo uwiki wrap --check; uwiki wrap --check $(MD)
 wrap:
-	git ls-files "*.md" | xargs uwiki wrap
+	@echo uwiki wrap; uwiki wrap $(MD)
+links:
+	uwiki ls --external . | lychee -
 hooks:
 	git config core.hooksPath .githooks
