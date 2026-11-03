@@ -119,7 +119,7 @@ def check_schema(index):
     """uwiki.toml schema allows exactly the status and scope values index documents."""
     schema = tomllib.loads((ROOT / 'uwiki.toml').read_text())['schema']
     for key, heading in (('status', 'Status'), ('scope', 'Scopes')):
-        allowed, documented = set(schema[f'{key}!']), index.section(heading)
+        allowed, documented = set(schema[key]), index.section(heading)
         if allowed != documented:
             diff = ', '.join(sorted(allowed ^ documented))
             report(index.path, f'{heading} differs from uwiki.toml schema {key}: {diff}')

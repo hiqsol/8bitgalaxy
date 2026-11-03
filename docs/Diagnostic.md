@@ -1,6 +1,4 @@
 ---
-date: 2026-10-25
-updated: 2026-10-26
 status: WIP
 scope: meta
 ---

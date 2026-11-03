@@ -10,8 +10,7 @@ orphans = true
 # status and scope values are documented in docs/index.md,
 # bin/checkdocs keeps them the same
 [schema]
-"status!" = ["stub", "draft", "stable", "WIP"]
-"scope!" = ["core", "duel", "advanced", "galaxy", "objectives", "politics", "meta", "idea", "lore"]
+_required = ["scope", "status"]
+scope = ["core", "duel", "advanced", "galaxy", "objectives", "politics", "meta", "idea", "lore"]
+status = ["stub", "draft", "stable", "WIP"]
 aliases = "list"
-date = "date"
-updated = "date"
