@@ -19,7 +19,7 @@ scope: duel
    on both Ends, [[Archive]] on both, the strong End's Secondary is +1
    [[Energy]]. Other Stars are [[Wild]]
 8. [[Ancient]] deck: 12 Ancients, [[Defense]] 1, 2 and 3, four of each
-9. World deck: every [[World]] card, shuffled
+9. World deck: the [[World]] cards of [[WorldDeck]], shuffled
 10. A [[Technology]] printed on a [[Deck]] card is played by its page,
     an `advanced` one too, with the `advanced` rules it needs
 11. Setup: [[StartDraw]]

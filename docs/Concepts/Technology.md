@@ -34,8 +34,9 @@ scope: core
    Immediate: escapes a Combat, own participants only Deplete
 3. [[Stealth]]: 4m - Action - Hero, Base - Player - duel
    +Hidden, Immediate: makes another own card on the Field Hidden
-4. [[ForceDiscard]]: 6m - Action - Hero - Player - duel
-   Immediate: a rival discards a card of its choice from Hand
+4. [[ForceDiscard]]: 6m - Action - Hero, Colony - Player, Galaxy -
+   duel
+   -Card, Immediate: a rival discards a card of its choice from Hand
 5. [[Academy]]: 2c 4c - Social Hub - Colony, Base - Player - duel
    Building facility for social cards
 6. [[Recover]]: 2cp 4cp - Action - Hero - Player - duel

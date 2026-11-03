@@ -5,14 +5,13 @@ scope: core
 
 1. A **World** is a [[Colony]] card of the [[Galaxy]] [[Faction]]
 2. **World** represents the planets of a [[Star]]
-3. [[Level]] is at most 6
-4. **World** prints one [[Ability]]
-5. **World** lies in the World slot of its Star, not in a Structure
+3. **World** prints one [[Ability]]
+4. **World** lies in the World slot of its Star, not in a Structure
    [[Slot]], and never leaves it
-6. **World** gives no [[Control]]
-7. **Worlds** form the **World deck**, face down beside the [[Field]];
+5. **World** gives no [[Control]]
+6. **Worlds** form the **World deck**, face down beside the [[Field]];
    a conquest draws from it, see [[Wild]]
-8. A [[Destroy]]ed **World** goes under the World deck
+7. A [[Destroy]]ed **World** goes under the World deck
 
 #### Notes
 

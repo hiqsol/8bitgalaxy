@@ -7,11 +7,7 @@ scope: meta
 
 3 AI-vs-AI duels on the `core` rules, 2026-10-22/23. The game records,
 rewritten in the notation of [docs/Notation.md](docs/Notation.md), are
-in [games/](games/README.md). The raw files:
-`/tmp/claude-1001/-home-sol-Sync-8bitgalaxy/0dddadee-ec87-45f3-983e-11db80e35d23/scratchpad/playtest/`
-(`RULES.md` digest, `NOTATION.md`, `gameN/log.8bgn`,
-`gameN/rulings.md`,
-`gameN/report.md` where written).
+in [games/](games/README.md).
 
 ## 1. Results
 
@@ -80,6 +76,9 @@ Depleted Colony). The cap of 40 Turns was never reached.
   nothing to do against a rival, except the home dispute.
 
 ## 2. How it was played
+
+The procedure, revised after this round, is in
+[docs/Playtest.md](docs/Playtest.md).
 
 - **One referee subagent per game** (Opus) kept the authoritative
   state in files, shuffled with a seeded RNG, validated every play
@@ -202,7 +201,8 @@ make a move.
 - **A Structure that fights never depletes** (RG2-7, RG3-5): S53.
 - **Ancients are weak**, 6 of 6 Combats won by the attacker: S60;
   Star Prices dropped, Ancients come by the World's Price (Ancient 3).
-- **Energy is marginal**, the cap 5 never reached: S64, P36 b.
+- **Energy is marginal**, the cap 5 never reached: S64, Energy
+  Worlds in WorldDeck.
 
 ### 4.4 Rule gaps the referees decided
 
@@ -218,7 +218,7 @@ All are stated in the rules now or open in the Backlog.
 | RG1-6, RG2-4, RG3-2 | the old card of an Upgrade goes on top of a Factory pile | Upgrade 7.2 |
 | RG1-7, RG2-2 | a card that fought, a Structure just created, acts again | nothing tracks cards per Turn: Deplete note 1, Takeoff 3 |
 | RG1-8 | reaching uses no one Ability | Support 1.2, S65 |
-| RG1-9 | a Star's power bonus counts for any own action | P36 a |
+| RG1-9 | a Star's power bonus counts for any own action | a World's +1 is a Plus of a participant, WorldDeck |
 | RG1-10 | the source must be own | PerformAction 1.3.1 |
 | RG2-1 | the hub of Research is the destination, not a participant | Research 3, Hub 3 |
 | RG2-3 | an Explored Space reveals nothing | I49, P24 |

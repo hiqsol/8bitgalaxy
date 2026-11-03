@@ -44,7 +44,7 @@ from a played game, not from a review.
    (P34) and a visible Explore Price (S20) were rejected, see
    [[PerformAction]]
 9. **World deck**: every [[World]] card, not a picked set (P36 i),
-   see [[Duel]]
+   see [[WorldDeck]]
 10. **Combat order**: the attacker selects the first defenders, then
     rounds of any number of cards; all defenders at once, one card at
     a time (P28) and one sealed round (S70) were rejected, see
@@ -90,6 +90,9 @@ from a played game, not from a review.
     subgame, players move cards between them thinking ahead; one pile
     per Type with the lowest Level on top (P27 e) was rejected, see
     [[Laboratory]]
+25. **Black hole**: passable both ways; one-way, only away from the
+    nearest home Star (P24 Black hole c), was rejected, see
+    [[BlackHole]]
 
 ## Next step
 
@@ -97,29 +100,6 @@ from a played game, not from a review.
    `duel` notes
 2. Note every rule that stopped play or was read two ways
 3. Only those notes become review items
-
-## First duel
-
-Items that block the first duel.
-
-### World deck
-
-- [ ] **I57. World cards.** The first duel shuffles every [[World]]
-  card into the World deck, each prints one [[Ability]], but there
-  are no World cards yet: to prepare. → P36
-- [ ] **P36. World Abilities** for the World cards:
-	- a) [[Ability]]: +1 [[Power]] of its [[Class]] to one action
-	  started there.
-	- b) Ability: +1 [[Energy]].
-	- c) Ability: +1 [[Goods]] stored there.
-	- d) Ability: +1 [[Defense]] to own defenders there.
-	- e) Ability: a [[Technology]] for own cards there, e.g.
-	  [[Shipyard]], [[Academy]], [[Explore]].
-	- f) Ability: [[DeckBuilding|Draw]] 1 card, rare.
-	- g) [[ExtraPrice]] grows with the Ability: Defense 1, Power and
-	  Goods 2, Energy and Technology 3, Draw 4, and so the number
-	  of [[Ancient]]s guarding it. Energy is above Power: any class,
-	  anywhere, kept between Turns.
 
 ## Watch in playtest
 
@@ -171,7 +151,7 @@ Questions a played game answers better than a review.
 The first duel keeps Spaces of length 1.
 
 - [ ] **I49. Space types.** → P24, P35
-	- a) [[Space]] types Nebula and Black hole have no behavior.
+	- a) [[Space]] type Nebula has no behavior.
 	- b) HyperPass is an idea for an extension.
 	- c) The first duel has no Space tile set.
 - [ ] **P24. Space type behaviors.** No dice: every effect is
@@ -184,10 +164,7 @@ The first duel keeps Spaces of length 1.
 	  blind: [[Explore]] can't look past it. c) shroud: cards passing
 	  it may become [[Hidden]] for free. d) static: no [[Support]]
 	  from the [[Field]] through it.
-	- **Black hole** (Price 3): b) gravity well: each passing group
-	  [[Deplete]]s its weakest card. c) one-way: passable only away
-	  from the nearest home Star. d) lab: Science actions started in
-	  a bordering Star get +1 [[SciencePower]].
+	- **[[BlackHole|Black hole]]** (Price 3): only the Price is open.
 	- **HyperPass** (Price 4, best, a Space type): a) length 0. b)
 	  wormhole pair: two HyperPass tiles anywhere are adjacent to each
 	  other. c) highway: length 0 and [[Move]] cargo Capacity +1.
@@ -388,7 +365,7 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	- b) Lighter: keep the Ancient deck, the Ancients defend with
 	  their total and go under the deck after the Combat.
 	- c) The attacker takes the top World: Worlds have no
-	  Prerequisites, P36 gives them none.
+	  Prerequisites.
 	- d) Or the [[Scenario]] deals a face-down World into the World
 	  slot of every Wild Star, an [[Attack]] reveals it and a won one
 	  turns it Ready: the World deck and its draw go, [[Explore]] can

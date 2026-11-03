@@ -11,3 +11,4 @@ Ideas out of the rules, kept for later, nothing here is a rule.
    rules nor the [[Backlog]] hold
 2. [[HyperPass]] - a [[Space]] type with no [[Distance]] through it
 3. [[OuterSpace]] - a pile inside every [[Star]] outside the [[IPS]]
+4. [[TechnologyIdeas]] - proposals for new technologies

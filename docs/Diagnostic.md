@@ -25,16 +25,6 @@ in any order. Questions on extensions and `advanced` rules wait in
    open
 5. A resolved issue takes its question with it, the other numbers stay
 
-## First duel
-
-- **Q75. World cards exist** (I57). Can the first [[Duel]] build the
-  World deck from actual [[World]] cards that each print one
-  [[Ability]]?
-	- [ ] a) Yes, every required World card exists.
-	- [ ] b) No, the rules describe World cards but none exist.
-	- [ ] c) Some exist, but not a complete World deck.
-	- [ ] d) The notes don't decide.
-
 ## Watch in playtest
 
 - **Q17. Deck thinning by Takeoff** (I46). In a played game, did
@@ -100,22 +90,6 @@ in any order. Questions on extensions and `advanced` rules wait in
 	- [ ] c) The notes don't decide.
 - **Q66. Nebula Support** (I49 a). Can a Field card [[Support]] an
   action through a revealed Nebula?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-- **Q67. Black hole depletion** (I49 a). A group passes a revealed
-  Black hole. Must its weakest card [[Deplete]]?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-- **Q68. Black hole direction** (I49 a). May a group pass a revealed
-  Black hole toward its nearest home Star?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-- **Q69. Black hole laboratory** (I49 a). Does a Science action
-  started in a Star bordering a revealed Black hole gain +1
-  [[SciencePower]]?
 	- [ ] a) Yes.
 	- [ ] b) No.
 	- [ ] c) The notes don't decide.

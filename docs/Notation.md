@@ -30,8 +30,7 @@ scope: meta
 	7. `2r` - 2 Range
 	8. `1l` - 1 Load (Capacity)
 	9. `1d` - 1 Defense
-	10. `1n` - 1 None
-	11. `1*` - 1 any Class: a pattern for a set of cards
+	10. `1*` - 1 any Class: a pattern for a set of cards
 3. Stars:
 	1. `S+0+0` - Star at `[0,0]`, when possible shortens to `S00`,
 	   `S11`
@@ -83,7 +82,7 @@ Ship-2m/1s           |  S2m |  S2m/1s |  S2m1s
 Hero-2c/1p           |  H2c |  H2c/1p |  H2c1p
 Base-2p/1p           |  B2p |  B2p/1p |  B2p1p
 Colony-2s/1s         |  C2s |  C2s/1s |  C2s1s
-Colony World-2p/1n   |  W2p |  W2p/1n |  W2p1n
+World-2p/1p          |  W2p |  W2p/1p |  W2p1p
 Hyperstructure-6s/5s | HS6s | HS6s/5s | HS6s5s
 Homeworld-2s/1s      | HW2s | HW2s/1s | HW2s1s
 

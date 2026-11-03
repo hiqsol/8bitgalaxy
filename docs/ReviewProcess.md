@@ -22,7 +22,7 @@ when it closes and when review stops. [[Backlog]] holds the items,
 3. **Round** of clarification, repeated until a game needs no new
    ruling:
 	1. Play the frozen version, on paper or AI-vs-AI, from the `core`
-	   and `duel` notes
+	   and `duel` notes, see [[Playtest]]
 	2. Record every ruling the referee makes where the notes are
 	   silent or read two ways
 	3. Each ruling becomes an issue `I<n>`, answered in [[Guidance]]

@@ -50,7 +50,7 @@ The games follow the playtest digest `RULES.md`, not today's docs:
    revealed Star shows its kind and its Unit+Structure split, and as
    many Ancients appear in it as its ExtraPrice:
    `S01 => Defense|3+1 with A?`. Today a
-   [World](../docs/Concepts/World.md) card gives a Star its kind.
+   [World](../docs/Galaxy/World.md) card gives a Star its kind.
 2. Star kinds: Defense (+1 Defense), Military (+1 Military power),
    Science (+1 Science power), Shipyard (a hub), Energy (+1 Energy).
    Home Stars have 4+4 slots.

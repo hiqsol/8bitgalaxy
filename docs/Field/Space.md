@@ -29,7 +29,7 @@ aliases: [InterStellar Space]
 	1. Normal
 	2. [[Asteroids]]
 	3. Nebula
-	4. Black hole
+	4. [[BlackHole|Black hole]]
 	5. [[Void]]
 	6. [[Supernova]]
 

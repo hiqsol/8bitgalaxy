@@ -188,8 +188,7 @@ scope: duel
    at Level 4; the six Structure cards at Levels 6 and 8 are
    [[Hyperstructure]]s built by their own rule
 6. The crowns are the cards of [[Singularity]]. Reaching all four
-   takes both [[Origin]]s and both [[Hub]]s. A [[World]], at most
-   Level 6, stays below them
+   takes both [[Origin]]s and both [[Hub]]s
 7. Starting cards and [[Tool]]s are like Scouts and Vipers of Star
    Realms: the Ships 1/0 with Ship 2M, 2C, 2P, 2S are the 8 Ships of
    the starting deck, see [[StartDraw]]. The Tools are in the Deck:
