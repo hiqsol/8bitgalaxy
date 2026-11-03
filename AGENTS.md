@@ -16,6 +16,12 @@ Backlog holds all open review items: issues `I<n>`, proposals `P<n>`
 and simplifications `S<n>`; an item keeps its number when it moves.
 Write the points of an issue or proposal as lettered bullets
 `- a) ...`, so they can be referred to as `P24 a`.
+Cite a rule as an item link: `[[Upgrade#7.2]]` is rule 7.2 of
+Upgrade, `[[Upgrade#Notes#2]]` its note 2, `make check` reports a
+link to a missing item. Rules pages link pages, items are cited
+mostly from meta, game and lore pages: inserting or deleting a rule
+renumbers the ones after it, so fix the links to them, references
+in the editor (`uwiki lsp`) list them.
 Run `make check` (`uwiki check`, `bin/checkdocs`) and `make lint`
 (markdownlint, `uwiki wrap --check`) after editing docs.
 Lines are at most 70 characters (tab counts as 4), tables and code

@@ -56,18 +56,18 @@ support all three:
    [[Homeworld]] goes on top of a [[Factory]] pile, and two Creates in
    one Turn rebuild it in any [[Wild]] Star, with no Ancients rising,
    since only an [[Attack]] conquest calls them. Losing the home Star
-   doesn't end the game ([[Goal]] note 6). The old home becomes Wild
+   doesn't end the game ([[Goal#Notes#6]]). The old home becomes Wild
    once its World slot is empty, so the Ancients guard it against its
    captors too.
 2. **Captured hero**: a [[Damaged]] Hero in a rival-controlled Star is
-   controlled by the rival ([[ControlledBy]] 3). The rival can execute
+   controlled by the rival ([[ControlledBy#3]]). The rival can execute
    it with an Attack or render it with [[Recycle]]. Its faction can
    rescue it with [[Recover]] from Range: [[Pinning]] doesn't stop a
    Recover, and no [[Intercept]] follows, because the Hero never came
    into the Star. Healed, the Hero turns the prison into a
    [[Disputed]] front.
 3. **Captured Structures**: every Structure in a Star serves whoever
-   controls the Star ([[ControlledBy]] 3). The captor raises its own
+   controls the Star ([[ControlledBy#3]]). The captor raises its own
    leaders at your [[Academy]], and your Colonies score for it
    ([[VictoryPoints]]).
 4. **Great battles**: [[Combat]] (on hold) already gives rounds,

@@ -119,14 +119,14 @@ Questions a played game answers better than a review.
   the end's [[Level]], but [[Military]] cards defend with their
   Level, see [[Defense]]: revise the values?
 - [ ] **P66. Weak Structure ends.** Weak ends can provide abilities,
-  just weaker ([[End]] 7), but every weak Structure end in the
+  just weaker ([[End#7]]), but every weak Structure end in the
   [[Deck]] has no [[SecondaryAbility]]:
 	- a) Weak end Secondary is one less than the strong end's: Colony
 	  2x +1, Base 4x +2, Colony 4x +3, Base 2x stays without.
 	- b) A [[Depleted]] Structure then still gives some [[Power]], so
 	  [[Restore]] matters less: an alternative to a) is +1 on 4x weak
 	  ends only.
-- [ ] **I81. Combat damage, to brainstorm.** [[Combat]] 9.1-2 Damage
+- [ ] **I81. Combat damage, to brainstorm.** [[Combat#9.1]]-2 Damage
   every direct participant the winner doesn't save by the advantage,
   on both sides; supporters only [[Deplete]]:
 	- a) Exploit: one cheap [[Military]] ship plus [[Hand]] supporters
@@ -189,7 +189,7 @@ The first duel keeps Spaces of length 1.
 - [ ] **S38. Route details where they belong.** [[Distance]] defines a
   route, [[Void]] says a route can't pass it. Other tile rules speak
   of moving cards, so it's unclear which [[Range]] checks they bind:
-	- a) [[Space]] 6: a route can't pass a hidden Space.
+	- a) [[Space#6]]: a route can't pass a hidden Space.
 	- b) [[Supernova]]: a route can't pass Supernova; today only Ships
 	  are stopped and Heroes pass, keep "Ships" if that is intended.
 	- c) [[Navigation]]: the route of a group with Navigation can pass
@@ -267,7 +267,7 @@ All `advanced`.
 	  that player knows it; other kinds are played as today.
 	- d) Reveal: after an Event is prepared, the top card of
 	  CurrentEvents is revealed and resolved by its text, the player
-	  decides what the text leaves open ([[Event]] 6).
+	  decides what the text leaves open ([[Event#6]]).
 	- e) Refill: when CurrentEvents is empty at a reveal, FutureEvents
 	  is shuffled and becomes CurrentEvents.
 	- f) An Event resolves at once and goes face up to GalaxyScrap. A
@@ -313,22 +313,22 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	- a) A Structure participant always becomes [[Depleted]].
 	- b) A [[Unit]] direct participant of a Move or a [[Combat]] holds
 	  its Slot, every other Unit goes to Discard.
-	- c) Move 6 and Combat 9.4 state b), Deplete keeps only the two
-	  outcomes. Recommended: yes.
+	- c) Move 6 and [[Combat#9.4]] state b), Deplete keeps only the
+	  two outcomes. Recommended: yes.
 - [ ] **S55. Control by Unit.** [[Control]] ranks [[Actor]] over
   [[Structure]], but a card back shows only Unit or Structure:
 	- a) Control levels: Structure, **Unit**.
 	- c) Control merges into ControlledBy, one page less.
 	- d) Optional: Unit replaces Actor in core, Actor goes, Tool says
 	  it starts no action.
-- [ ] **S56. Class handles only Structures as cargo.** [[Move]] 5.2
+- [ ] **S56. Class handles only Structures as cargo.** [[Move#5.2]]
   needs a Ship whose [[Class]] handles each cargo card, then [[Hero]]
   8, [[Tool]] 8 and [[Goods]] 3 let any Ship carry theirs:
 	- a) Only a [[Structure]] needs a Ship whose Class handles it.
-	  Hero 8, Tool 8 and "by any Ship" go.
+	  [[Hero#8]], [[Tool#8]] and "by any Ship" go.
 	- b) Or no Class for cargo and [[Manage]]: Manage is paid in the
-	  starter's power on any card, Class 5 and Move note 1 go. Lost:
-	  colony ships, Science as the universal manager.
+	  starter's power on any card, Class 5 and [[Move#Notes#1]] go.
+	  Lost: colony ships, Science as the universal manager.
 	- c) Recommended: a.
 - [ ] **S57. One weight, one price.** [[Size]] is Level +
   [[ExtraPrice]] except a Hero's, and ExtraPrice has an "at least 1"
@@ -341,8 +341,8 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	- c) Either way, drop negative ExtraPrice and its clamp: no card
 	  has one.
 - [ ] **S58. Rules no card needs in core.**
-	- c) [[Create]] 4, a Social card only with weak Level 1, depends
-	  on the Deck's Levels and conflicts with [[Hyperstructure]] 9.1:
+	- c) [[Create#4]], a Social card only with weak Level 1, depends
+	  on the Deck's Levels and conflicts with [[Hyperstructure#9.1]]:
 	  move it to [[Social]], or make it "Create makes only cards with
 	  a Level 1 End" for both Origins, so higher cards come by
 	  [[Upgrade]], which slows the race of F2.
@@ -370,14 +370,14 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  scout a World.
 - [ ] **S61. Attack is a Move that must win.** [[Intercept]] is a
   Combat that is "not an Attack": no starter, no Military Actor, the
-  newcomers defend; [[Combat]] 9.3 is a second move rule:
+  newcomers defend; [[Combat#9.3]] is a second move rule:
 	- a) [[Attack]] is a [[Military]] [[Move]] that must win a Combat
 	  in its destination, the source Star too; a Move to another Star
 	  with rival Enabled cards is an Attack.
 	- b) If the attacker wins, the surviving moving cards arrive with
 	  their cargo, the others stay.
-	- c) Intercept, Combat 9.3 and [[Pinning]]'s "it can finish there"
-	  go; a Move of only [[Hidden]] cards is no Attack.
+	- c) Intercept, [[Combat#9.3]] and [[Pinning]]'s "it can finish
+	  there" go; a Move of only [[Hidden]] cards is no Attack.
 	- d) Lost: entering a rival Star in peace, the free answer to a
 	  rival Create. Intercept was chosen for F1: test, don't default.
 - [ ] **S62. Move within a Star for every card.** [[Move]] needs Range
@@ -387,10 +387,10 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  cards with Range above 0 to another Star.
 	- b) Manage Shift between Slots goes: a rearrangement costs a
 	  starter instead of 1 power per card (RG3-3).
-- [ ] **S63. One way to move a Laboratory card.** [[Research]] 2.2
+- [ ] **S63. One way to move a Laboratory card.** [[Research#2.2]]
   moves cards between [[Laboratory]] piles like a Science [[Manage]]
-  Shift, and Laboratory 4 makes both cost 1 per card:
-	- a) Research 2.2 and Laboratory 4 go. The only change: a
+  Shift, and [[Laboratory#4]] makes both cost 1 per card:
+	- a) [[Research#2.2]] and [[Laboratory#4]] go. The only change: a
 	  non-Science starter moves only the cards its Class handles.
 	- b) Also no Shift between piles: piles keep their order, the
 	  setup order steers the tech tree, F2 found the lever too strong.
@@ -405,19 +405,19 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  go. The cap was never reached and Energy was marginal.
 	- c) Lost: channelling Energy through cards, the hoarding limit.
 - [ ] **S65. Range and Capacity aren't the one Ability.** [[Ability]]
-  3 lists [[Range]] and [[Capacity]], then [[Support]] 1.2 and PR-11
+  3 lists [[Range]] and [[Capacity]], then [[Support#1.2]] and PR-11
   exempt reaching and boosting from a supporter's one Ability:
 	- a) A card's Range and Capacity count for its own group, they are
-	  not the one Ability. Support 1.2's clause goes.
-	- b) Or a Hand card gives no Range or Capacity: Support 2.3-2.4
-	  and the Range from Support in Range 4 go. Lost: reaching with
-	  Hand cards.
+	  not the one Ability. [[Support#1.2]]'s clause goes.
+	- b) Or a Hand card gives no Range or Capacity:
+	  [[Support#2.3]]-2.4 and the Range from Support in Range 4 go.
+	  Lost: reaching with Hand cards.
 	- c) An alternative to S42 a.
 - [ ] **S66. Destination cards add Range to any action.** Only in a
   [[Move]] (4.1) do the direct participants in the destination add
   their Range to the moving group:
-	- a) [[PerformAction]] 4.3: the cards in the destination add their
-	  Range to the source group, Move 4.1 keeps only Capacity.
+	- a) [[PerformAction#4.3]]: the cards in the destination add their
+	  Range to the source group, [[Move#4.1]] keeps only Capacity.
 	- b) A garrison helps every action reach it: an Attack from two
 	  sides, Explore, Create.
 - [ ] **S67. Immediate is a technology, not an action.**
@@ -425,12 +425,12 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
   Cost or other participants, though every action has a starter:
 	- a) An **Immediate** technology works when its card is shown,
 	  then the card [[Deplete]]s, at own Turn or in a Combat.
-	- b) ImmediateAction 2-4 go, six [[Technology]] rows change Kind.
-	  A lone Immediate is no move for [[Turn]] 3.
+	- b) [[ImmediateAction#2]]-4 go, six [[Technology]] rows change
+	  Kind. A lone Immediate is no move for [[Turn#3]].
 - [ ] **S68. Hidden in one rule, in `duel`.** Only [[Stealth]] makes a
   card [[Hidden]] (Settled 3), yet core carries its rules:
 	- a) A Hidden card counts as a Level 1 card of its [[Role]], a
-	  Unit as a Ship: Range 1, Capacity 1, Size 1. Hidden 4.1-4.4
+	  Unit as a Ship: Range 1, Capacity 1, Size 1. [[Hidden#4.1]]-4.4
 	  become one rule.
 	- b) Hidden and the Hidden clauses of [[Combat]] move to `duel`,
 	  core keeps the back ends of [[End]] and [[Side]].
@@ -457,13 +457,13 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	- e) [[Enabled]] goes, rules say "face up".
 	- f) [[Direction]] and [[Action]] fold into [[PerformAction]].
 	- g) [[Agenda]] moves to an extension scope, [[World]] and
-	  [[Ancient]] have no Faction, [[Faction]] 4 goes: core stops
+	  [[Ancient]] have no Faction, [[Faction#4]] goes: core stops
 	  naming the [[Galaxy]].
 	- h) The Cards column of [[Technology]] goes, [[Deck]] holds the
 	  assignments, checkdocs drops the cross-check.
 - [ ] **S74. Bigger cuts, speculative.**
 	- a) Restore every Structure at **Restore**: Plus Restore and the
-	  throttle of [[GameBalance]] 5 go.
+	  throttle of [[GameBalance#5]] go.
 	- b) A card that loses a Combat is Destroyed at once: Damaged,
 	  [[Recover]] and the Chess check go.
 	- c) [[Pinning]] and [[Intercept]] as one contact rule: a group
@@ -521,10 +521,10 @@ One batch after the playtest, only for pages that confused play.
 	  engine building** everywhere.
 	- b) No rule changes; the shorter description avoids promising a
 	  mechanic the game does not have.
-- [ ] **S35. One build direction.** [[Create]] 6 defines two
-  directions, [[Upgrade]] 4 one, [[Settle]] adds a third:
+- [ ] **S35. One build direction.** [[Create#6]] defines two
+  directions, [[Upgrade#4]] one, [[Settle]] adds a third:
 	- a) The source is the hub's [[Star]], the destination is the Star
-	  of the card: where a [[Structure]] is or goes, as Upgrade 4
+	  of the card: where a [[Structure]] is or goes, as [[Upgrade#4]]
 	  has it; a card in [[Home]] has the hub's Star as both ends,
 	  [[Distance]] 0.
 	- b) Settle: the Ship's Star is both ends, no hub.
@@ -532,21 +532,21 @@ One batch after the playtest, only for pages that confused play.
 	  requirements, Cost and outcome.
 	- d) What it changes: an Actor is built only with cards at the hub
 	  as direct participants, not at another source Star.
-- [ ] **S41. End of a face-down card.** [[End]] 6 sets the end in use:
+- [ ] **S41. End of a face-down card.** [[End#6]] sets the end in use:
   in a [[Slot]] the visible end, elsewhere the selected end. A
   face-down card shows no Level, though [[Recover]] costs the current
   [[Level]] of a [[Damaged]] card:
 	- a) The end in use of a face-down card is its weak end.
-- [ ] **S42. One list of what a card gives.** [[Ability]] 3 lists
+- [ ] **S42. One list of what a card gives.** [[Ability#3]] lists
   Primary, Secondary, [[Range]], [[Capacity]] and Level with Class;
-  [[Support]] 2 lets a supporter pick one of four, without Level;
-  [[Combat]] adds [[Defense]]; [[Plus]] 3.5 limits a Range Plus to
+  [[Support#2]] lets a supporter pick one of four, without Level;
+  [[Combat]] adds [[Defense]]; [[Plus#3.5]] limits a Range Plus to
   [[Move]], though Range is checked in every action:
 	- a) One list in Ability: Primary, Secondary, Range, Capacity,
 	  Level with Class, Defense in Combat. A direct participant gives
 	  all, a supporter one.
-	- b) Support 2 and Plus 3.5-3.6 link it; a Range Plus adds to any
-	  group.
+	- b) Support 2 and [[Plus#3.5]]-3.6 link it; a Range Plus adds to
+	  any group.
 	- c) It answers whether a supporter's Level is its one Ability for
 	  [[Prerequisites]]. Recommended: yes.
 - [ ] **S47. One Home pile table.** Ten pile pages state visibility
@@ -555,7 +555,7 @@ One batch after the playtest, only for pages that confused play.
 	  sees them. The leader check of [[Goal]] counts the Heroes in
 	  Factory and Laboratory: recommended open, like [[Discard]].
 	- b) [[Destroy]], [[Recall]], [[Express]] and [[MinusDeplete]] put
-	  a card on top, [[Upgrade]] 7.2 and [[Research]] 2.1 don't say
+	  a card on top, [[Upgrade#7.2]] and [[Research#2.1]] don't say
 	  where in [[Factory]].
 	- c) Galaxy piles and secret [[Objective]]s use the Field state
 	  [[Hidden]] for face down.

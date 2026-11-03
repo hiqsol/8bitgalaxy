@@ -438,46 +438,46 @@ That is why we sing the hold before we sing the chord.
 
 | Scene | Rule |
 |---|---|
-| Four eighths held at the Listening | [[Singularity]] 2, [[Deck]] 7 |
-| A struck note falls, the chord is held, not struck | [[Singularity]] note 4, [[Depleted]] |
-| The Great Horn bends space: few places per star | [[LoreRequirements]] 1 |
-| Ione raised at the first note, grown step by step | [[Create]] 4, [[Upgrade]] 5.4 |
+| Four eighths held at the Listening | [[Singularity#2]], [[Deck#7]] |
+| A struck note falls, the chord is held, not struck | [[Singularity#Notes#4]], [[Depleted]] |
+| The Great Horn bends space: few places per star | [[LoreRequirements#1]] |
+| Ione raised at the first note, grown step by step | [[Create#4]], [[Upgrade#5.4]] |
 | Ione's low note is the Low seventh | [[Deck]] Hero 8S |
-| The Bell sing the same intervals | [[Faction]] 5.1 |
+| The Bell sing the same intervals | [[Faction#5.1]] |
 | Silence around the inner stars | [[Void]], [[Navigation]] |
-| Tamas catches every passing song | [[Pinning]] 1 |
-| The Great Horn would need a margin of eight | [[Combat]] 9.1, on hold |
-| A turned Ione is no High eighth | [[End]] 6, [[Level]] 4 |
-| The Coda: one last verse for each other people | [[Twilight]], [[Goal]] 5, 6 |
-| An Organ in a taken star would sound for them | [[ControlledBy]] 3, [[Hyperstructure]] 10 |
-| Drawing breath: five, no chosen order | [[Turn]] 5, [[Hand]] 3, [[DeckBuilding]] |
-| Breath spent in defense on the rival's verse | [[Turn]] note 2, [[Combat]] 5 |
-| Three tunings | [[Turn]] 6, [[Restore]] |
+| Tamas catches every passing song | [[Pinning#1]] |
+| The Great Horn would need a margin of eight | [[Combat#9.1]], on hold |
+| A turned Ione is no High eighth | [[End#6]], [[Level#4]] |
+| The Coda: one last verse for each other people | [[Twilight]], [[Goal#5]], [[Goal#6]] |
+| An Organ in a taken star would sound for them | [[ControlledBy#3]], [[Hyperstructure#10]] |
+| Drawing breath: five, no chosen order | [[Turn#5]], [[Hand#3]], [[DeckBuilding]] |
+| Breath spent in defense on the rival's verse | [[Turn#Notes#2]], [[Combat#5]] |
+| Three tunings | [[Turn#6]], [[Restore]] |
 | Singing out into Cinder, acting at once | [[Takeoff]] |
-| Standing voices sing with everything, breath lends one note | [[PerformAction]] 2, [[GameBalance]] 2 |
-| Every song begins with a voice from breath | [[PerformAction]] 1.1, [[Actor]] 3 |
-| Hask names the ground's voices | [[Combat]] 2.2 |
-| A war voice answers at its harmonic, others with one | [[Defense]] 3 |
-| The ground adds first in each round | [[Combat]] 3 |
-| Help from Ember isn't caught | [[Pinning]] 2.1, [[Support]] 1.2 |
-| The *Wren* and the rattle sung out hushed under the tower | [[Stealth]] 4, 5 |
-| A note lent from breath is heard by all | [[Combat]] 5, [[Stealth]] note 2 |
-| The hushed are named and unhushed at the weighing | [[Hidden]] 4.4, 5.1, [[Combat]] 8 |
-| The Hush-tower answers at its harmonic | [[Defense]] 3, [[Deck]] Base 4M |
+| Standing voices sing with everything, breath lends one note | [[PerformAction#2]], [[GameBalance#2]] |
+| Every song begins with a voice from breath | [[PerformAction#1.1]], [[Actor#3]] |
+| Hask names the ground's voices | [[Combat#2.2]] |
+| A war voice answers at its harmonic, others with one | [[Defense#3]] |
+| The ground adds first in each round | [[Combat#3]] |
+| Help from Ember isn't caught | [[Pinning#2.1]], [[Support#1.2]] |
+| The *Wren* and the rattle sung out hushed under the tower | [[Stealth#4]], [[Stealth#5]] |
+| A note lent from breath is heard by all | [[Combat#5]], [[Stealth#Notes#2]] |
+| The hushed are named and unhushed at the weighing | [[Hidden#4.4]], [[Hidden#5.1]], [[Combat#8]] |
+| The Hush-tower answers at its harmonic | [[Defense#3]], [[Deck]] Base 4M |
 | Charge poured in, up to what each voice carries | [[Boost]] |
-| No turning over in another people's verse | [[Manage]], [[Turn]] 2 |
-| Ione could lend one note, and would go to rest | [[Support]], [[Defense]] 3, [[Deplete]] 1.1 |
-| A margin of one would shield the *Wren* | [[Combat]] 9.1, on hold |
-| Twenty-six against twenty-six, the tie to the ground | [[Combat]] 8.3, on hold |
-| No margin, no shield: all who answered are silenced | [[Combat]] 9.1, 9.2, on hold |
-| Silenced Tamas catches nothing | [[Pinning]] 1, Enabled only |
-| The count of a held breath is seen, not its voices | [[Hand]] 2, assumed |
-| Survivors would move in and begin a second song | [[Combat]] 9.3, on hold |
-| No war voice in reach, the last breath can't lead | [[Attack]] 4, [[PerformAction]] 1.4 |
-| Cinder full of the silenced, no place to sing out | [[Slot]] 6, [[Damaged]] 5 |
-| Unsung breaths sink into the Rest | [[Turn]] 5 |
-| Cinder holds at most five war voices | [[IPS]] 2 |
-| The last Listening decides | [[Twilight]] 4, [[Goal]] 6 |
+| No turning over in another people's verse | [[Manage]], [[Turn#2]] |
+| Ione could lend one note, and would go to rest | [[Support]], [[Defense#3]], [[Deplete#1.1]] |
+| A margin of one would shield the *Wren* | [[Combat#9.1]], on hold |
+| Twenty-six against twenty-six, the tie to the ground | [[Combat#8.3]], on hold |
+| No margin, no shield: all who answered are silenced | [[Combat#9.1]], [[Combat#9.2]], on hold |
+| Silenced Tamas catches nothing | [[Pinning#1]], Enabled only |
+| The count of a held breath is seen, not its voices | [[Hand#2]], assumed |
+| Survivors would move in and begin a second song | [[Combat#9.3]], on hold |
+| No war voice in reach, the last breath can't lead | [[Attack#4]], [[PerformAction#1.4]] |
+| Cinder full of the silenced, no place to sing out | [[Slot#6]], [[Damaged#5]] |
+| Unsung breaths sink into the Rest | [[Turn#5]] |
+| Cinder holds at most five war voices | [[IPS#2]] |
+| The last Listening decides | [[Twilight#4]], [[Goal#6]] |
 
 **Combat:** the battle follows today's [[Combat]] page, which is on
 hold. If the save rule or the tie changes, part V changes with it.

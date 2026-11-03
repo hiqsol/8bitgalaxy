@@ -137,13 +137,13 @@ The Code numbers its articles in its own way. [[Habeas]] cites:
 | Article | Law | Rule |
 |---|---|---|
 | 8, halts | 5 | [[Pinning]] |
-| 9, the public Record | 3 | [[Lore]] 3 |
-| 12, five seats | trait 2 | [[Hand]] 3 |
+| 9, the public Record | 3 | [[Lore#3]] |
+| 12, five seats | trait 2 | [[Hand#3]] |
 | 13, posting | form | [[Takeoff]] |
 | 26, destroyed warrants | 8 | [[Destroy]] |
 | 28, petty warrants | trait 4 | [[Tool]] |
-| 29, standing | 6, 7 | [[Control]], [[Disputed]], [[ControlledBy]] 3 |
-| 30, the holder | 7 | [[ControlledBy]] 3 |
+| 29, standing | 6, 7 | [[Control]], [[Disputed]], [[ControlledBy#3]] |
+| 30, the holder | 7 | [[ControlledBy#3]] |
 
 ## Canon
 

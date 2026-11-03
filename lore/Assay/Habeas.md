@@ -447,30 +447,30 @@ I have marked the page.
 
 | Scene | Rule |
 |---|---|
-| The Record is public, a fallen warrant can be read | [[LoreRequirements]] 3, [[Damaged]] 6 |
-| Iver falls, the margin shields only the victor | [[Combat]] 9, on hold |
-| The winner's warship moves in, standing its ground | [[Combat]] 9.3, [[Deplete]] note 1 |
-| The holder holds the fallen | [[ControlledBy]] 3 |
+| The Record is public, a fallen warrant can be read | [[LoreRequirements#3]], [[Damaged#6]] |
+| Iver falls, the margin shields only the victor | [[Combat#9]], on hold |
+| The winner's warship moves in, standing its ground | [[Combat#9.3]], [[Deplete#Notes#1]] |
+| The holder holds the fallen | [[ControlledBy#3]] |
 | Rendering: the rank into goods, the warrant destroyed | [[Recycle]] |
-| A destroyed leader can't be issued again at rank | [[Destroy]], [[Create]] 4, [[Upgrade]] 5.4 |
-| Five seats, dealt at the end, unknown order | [[Hand]] 3, [[Turn]] 5, [[DeckBuilding]] |
-| The storm: a tie goes to the holder | [[Combat]] 8.3, on hold |
-| *Sparrow* would be answered on entering, before any other order | [[Intercept]] 2 |
+| A destroyed leader can't be issued again at rank | [[Destroy]], [[Create#4]], [[Upgrade#5.4]] |
+| Five seats, dealt at the end, unknown order | [[Hand#3]], [[Turn#5]], [[DeckBuilding]] |
+| The storm: a tie goes to the holder | [[Combat#8.3]], on hold |
+| *Sparrow* would be answered on entering, before any other order | [[Intercept#2]] |
 | No ransom of warrants | none: the rules have no card exchange |
-| A remedy is not halted | [[Pinning]] 2.1 |
-| A remedy goes to the fallen, fee is its rank | [[Recover]] 3 to 5 |
-| A leader is held by its own candidacy unless fallen | [[ControlledBy]] 3 |
+| A remedy is not halted | [[Pinning#2.1]] |
+| A remedy goes to the fallen, fee is its rank | [[Recover#3]] to 5 |
+| A leader is held by its own candidacy unless fallen | [[ControlledBy#3]] |
 | Posting to One-Zero, acting at once | [[Takeoff]] |
-| Noor works with everything, *Sparrow* lends one | [[PerformAction]] 2, [[Support]] 2 |
-| Reach two: one passage plus the post | [[Distance]] 1, [[Range]] 3 |
-| The petty warrant lends its measure | [[Tool]], [[Support]] 2 |
-| Exercised warrants go to the Rest | [[Deplete]] 1.1 |
-| Equal standing: contested, nobody holds it, each keeps its own | [[Control]], [[Disputed]], [[ControlledBy]] 3 |
-| He didn't come in, nothing to answer | [[Intercept]] 2 |
-| Leaders in the Rest are alive | [[Goal]] 7.2 |
-| One order would bring him home from the contested post | [[PerformAction]] 1.3.1, [[ActiveFor]] 3 |
-| If he leaves, the holder holds the fallen again | [[ControlledBy]] 3, note 1 |
-| A contested post can be fought from inside | [[Attack]] 3, [[Disputed]] note 1 |
+| Noor works with everything, *Sparrow* lends one | [[PerformAction#2]], [[Support#2]] |
+| Reach two: one passage plus the post | [[Distance#1]], [[Range#3]] |
+| The petty warrant lends its measure | [[Tool]], [[Support#2]] |
+| Exercised warrants go to the Rest | [[Deplete#1.1]] |
+| Equal standing: contested, nobody holds it, each keeps its own | [[Control]], [[Disputed]], [[ControlledBy#3]] |
+| He didn't come in, nothing to answer | [[Intercept#2]] |
+| Leaders in the Rest are alive | [[Goal#7.2]] |
+| One order would bring him home from the contested post | [[PerformAction#1.3.1]], [[ActiveFor#3]] |
+| If he leaves, the holder holds the fallen again | [[ControlledBy#3]], [[ControlledBy#Notes#1]] |
+| A contested post can be fought from inside | [[Attack#3]], [[Disputed#Notes#1]] |
 
 **Assumptions the rules don't settle:** the [[Recover]] Cost is "the
 current Level of the target card", but a [[Damaged]] card lies on its

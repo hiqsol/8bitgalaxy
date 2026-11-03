@@ -174,33 +174,33 @@ make a move.
 
 - **F1. One Move into the rival's only Star wins** (game 1, RG1-5):
   fixed, a Disputed Star stays active, the owner takes off and acts
-  there (ActiveFor 3, Goal note 7), and Intercept answers a Move in;
-  S61 tests an Attack instead.
+  there ([[ActiveFor#3]], [[Goal#Notes#7]]), and Intercept answers a
+  Move in; S61 tests an Attack instead.
 - **F2. Singularity wins uncontested and swallows the Culture path**
   (RG2-6/10, RG3-6/8/9): fixed, it triggers Twilight, the rival gets
-  one Turn (Goal 5, Twilight 3), it takes the four Level 8 crowns
-  (Deck 7), Culture is Galactic Diaspora; the pile order stays a
-  subgame (Settled 24), S58 c, S63 b.
+  one Turn ([[Goal#5]], [[Twilight#3]]), it takes the four Level 8
+  crowns (Deck 7), Culture is Galactic Diaspora; the pile order stays
+  a subgame (Settled 24), S58 c, S63 b.
 - **F3. The Colony engine loop** (RG1-1/3/6, RG2-2/4/5, RG3-1/2):
   fixed, Grow goes one Level up and lands Depleted on the weak End of
-  a 4/3, no free Restore (Upgrade 5.4, note 2); typed Factory piles
-  rejected (Settled 24); the old card still goes back to a Factory
-  pile (Upgrade 7.2).
+  a 4/3, no free Restore ([[Upgrade#5.4]], [[Upgrade#Notes#2]]); typed
+  Factory piles rejected (Settled 24); the old card still goes back to
+  a Factory pile ([[Upgrade#7.2]]).
 - **F4. No interaction, zero rival Combats in 51 Turns**: Stars are
-  open tiles (Wild note 1), a taken Star captures the rival Structures
-  (ControlledBy 3), Singularity is far and answerable (F2); damage in
-  I81, a reward for a Space in P24.
+  open tiles ([[Wild#Notes#1]]), a taken Star captures the rival
+  Structures ([[ControlledBy#3]]), Singularity is far and answerable
+  (F2); damage in I81, a reward for a Space in P24.
 - **F5. Home Structure row, overlap and no exit**: Recycle frees a
   Slot; Manage swap in S62, weak End Secondary in P66; the overlap
   stays, every player liked it.
 - **Actions per Turn 1.3–2.0**, far below 5: I75 a.
 - **The 10-card deck too thin**, a Shuffle every 1–2 Turns: Reserve of
-  18 with 8 Tools (StartDraw 1).
+  18 with 8 Tools ([[StartDraw#1]]).
 - **Free unlimited Takeoff banks the Hand**, Turtle shrank its Discard
   to draw S4p: I46.
 - **A Structure that fights never depletes** (RG2-7, RG3-5): S53.
-- **Ancients are weak**, 6 of 6 Combats won by the attacker: S60;
-  Star Prices dropped, Ancients come by the World's Price (Ancient 3).
+- **Ancients are weak**, 6 of 6 Combats won by the attacker: S60; Star
+  Prices dropped, Ancients come by the World's Price ([[Ancient#3]]).
 - **Energy is marginal**, the cap 5 never reached: S64, Energy
   Worlds in WorldDeck.
 
@@ -210,64 +210,68 @@ All are stated in the rules now or open in the Backlog.
 
 | Id | Ruling taken | Now |
 |---|---|---|
-| RG1-1 | an upgraded Depleted Structure comes Ready | Upgrade note 2 |
-| RG1-2, RG3-4 | Ancients get no Star bonus; the winner picks whom to save | Ancient 4, Combat 9.1 |
+| RG1-1 | an upgraded Depleted Structure comes Ready | [[Upgrade#Notes#2]] |
+| RG1-2, RG3-4 | Ancients get no Star bonus; the winner picks whom to save | [[Ancient#4]], [[Combat#9.1]] |
 | RG1-3, RG2-5, RG3-1 | Research onto any Factory pile | Settled 24, S47 e |
-| RG1-4 | Ancients pin | obsolete: Ancients come only in an Attack, Ancient 3 |
+| RG1-4 | Ancients pin | obsolete: Ancients come only in an Attack, [[Ancient#3]] |
 | RG1-5 | a Move into the rival's only Star: it can not make a move | F1 |
-| RG1-6, RG2-4, RG3-2 | the old card of an Upgrade goes on top of a Factory pile | Upgrade 7.2 |
-| RG1-7, RG2-2 | a card that fought, a Structure just created, acts again | nothing tracks cards per Turn: Deplete note 1, Takeoff 3 |
-| RG1-8 | reaching uses no one Ability | Support 1.2, S65 |
+| RG1-6, RG2-4, RG3-2 | the old card of an Upgrade goes on top of a Factory pile | [[Upgrade#7.2]] |
+| RG1-7, RG2-2 | a card that fought, a Structure just created, acts again | nothing tracks cards per Turn: [[Deplete#Notes#1]], [[Takeoff#3]] |
+| RG1-8 | reaching uses no one Ability | [[Support#1.2]], S65 |
 | RG1-9 | a Star's power bonus counts for any own action | a World's +1 is a Plus of a participant, WorldDeck |
-| RG1-10 | the source must be own | PerformAction 1.3.1 |
-| RG2-1 | the hub of Research is the destination, not a participant | Research 3, Hub 3 |
+| RG1-10 | the source must be own | [[PerformAction#1.3.1]] |
+| RG2-1 | the hub of Research is the destination, not a participant | [[Research#3]], Hub 3 |
 | RG2-3 | an Explored Space reveals nothing | I49, P24 |
-| RG2-6, RG3-6 | a hub can't be the hub of its own Upgrade | Upgrade 5.2 |
+| RG2-6, RG3-6 | a hub can't be the hub of its own Upgrade | [[Upgrade#5.2]] |
 | RG2-7, RG3-5 | a fighting Structure never depletes | S53 |
-| RG2-8 | the attacker picks the survivors that move in | Combat 9.3, Slot 6 |
+| RG2-8 | the attacker picks the survivors that move in | [[Combat#9.3]], [[Slot#6]] |
 | RG3-3 | a Manage swap is 2 operations | S62 |
 | RG3-7 | a Laboratory pile shift needs no hub card | Hub 3, Laboratory 4, S63 |
-| RG3-8 | a Level 4 Ship in Hand counts for Singularity | Singularity note 3 |
-| RG3-9 | Check before Restore | Singularity note 4 |
+| RG3-8 | a Level 4 Ship in Hand counts for Singularity | [[Singularity#Notes#3]] |
+| RG3-9 | Check before Restore | [[Singularity#Notes#4]] |
 
 Unclear to players, settled since: Hand supporters join one group
-(PerformAction 4.3); a Structure channels Energy up to its Capacity
-(Boost 3); a Laboratory pile move is directed to a Research hub (Hub
-3); a Depleted Level 4 Structure at the Check (Singularity note 4); a
+([[PerformAction#4.3]]); a Structure channels Energy up to its
+Capacity
+([[Boost#3]]); a Laboratory pile move is directed to a Research hub
+(Hub
+3); a Depleted Level 4 Structure at the Check
+([[Singularity#Notes#4]]); a
 Colony into an Ancient Star is obsolete; Retreat works in any Combat,
 the Ancients come face up, so the attacker retreats in time (Ancient
-3, Retreat 2).
+3, [[Retreat#2]]).
 
 ## 5. My playtest rulings
 
 Made before play where the docs were silent, in `RULES.md` section 11:
 
-- PR-1 Voids face up: Duel 6 places them.
-- PR-2 a Normal Space has Length 1 and Price 2: Length in Duel 6,
+- PR-1 Voids face up: [[Duel#6]] places them.
+- PR-2 a Normal Space has Length 1 and Price 2: Length in [[Duel#6]],
   Price in P24.
 - PR-3 routes go Star–Space–Star only: S71.
 - PR-4 home Stars 8 Slots (4 Unit + 4 Structure), others 4: home
   Stars and S11 have 5+5, S10 and S12 5 Unit + 3 Structure, S01 and
-  S20 3 Unit + 5 Structure (Duel 4).
+  S20 3 Unit + 5 Structure ([[Duel#4]]).
 - PR-5 Factory and Laboratory open: S47 a.
 - PR-6 Energy income at the start of own Turn: the Homeworld pays
   +1e when it joins a Science action, Receive is the action for it
-  (Duel 7, Receive).
+  ([[Duel#7]], Receive).
 - PR-7 Militarization's `+N Defense` kept: Militarization is defined,
   the values in I75 f.
 - PR-8 starting Ships 1/1: one-ended Ships 1/0 (Deck 8).
-- PR-9 slot k is overlapped when slot k+1 holds a card: Slot 5.
+- PR-9 slot k is overlapped when slot k+1 holds a card: [[Slot#5]].
 - PR-10 a supporter's Level and Class as its one Ability for a
   Prerequisite: S42 c.
 - PR-11 Boosting doesn't use the one Ability: S65.
 - PR-12 an action from Hand still needs Range from its source:
-  PerformAction 4.2.
+  [[PerformAction#4.2]].
 - PR-13 Research onto any Factory pile: Settled 24, S47 e.
-- PR-14 Explore Range to the target tile: Explore 5.
-- PR-15 an upgraded Structure comes Ready: Upgrade note 2.
-- PR-16 Recover costs the Level of the damaged End: Recover 5, S41.
+- PR-14 Explore Range to the target tile: [[Explore#5]].
+- PR-15 an upgraded Structure comes Ready: [[Upgrade#Notes#2]].
+- PR-16 Recover costs the Level of the damaged End: [[Recover#5]],
+  S41.
 - PR-17 a defender's Damaged cards fight with Defense 0 and are
-  Destroyed: Damaged 7, with Defense 1.
+  Destroyed: [[Damaged#7]], with Defense 1.
 - PR-18 cap at 40 Turns: playtest only.
 
 Also used: Guidance G1–G9 as then drafted.
@@ -278,7 +282,8 @@ Open:
 
 - **Q11.** Run a second round of 3 games on the current rules?
 
-Answered: Q1–Q3 by F1–F3; Q4, Stars open and Spaces hidden (Space 4);
+Answered: Q1–Q3 by F1–F3; Q4, Stars open and Spaces hidden
+([[Space#4]]);
 Q5 by PR-4; Q6 by PR-8; Q7 by PR-17; Q8, Takeoff stays free, I46
 watches it; Q9 by PR-6; Q10, Notation is in `meta/`, the Backlog cites
 RG, PR and F.
