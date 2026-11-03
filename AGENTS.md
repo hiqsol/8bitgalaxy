@@ -25,7 +25,7 @@ The repo is one wiki: checks, lint and the build take every
 markdown file, every page must be reachable by links from
 `README.md`.
 `uwiki.toml` holds uwiki defaults and the frontmatter schema,
-its `status` and `scope` values are the ones `docs/index.md` lists.
+its `status` and `scope` values are the ones `rules/index.md` lists.
 Move or rename a page with `uwiki mv <from> <to>`, it rewrites
 every link to it and moves it with `git mv`.
 `make links` checks external links, `make stats` counts pages.
@@ -55,13 +55,13 @@ Don't miss my input, organize it all into rules/notes.
 
 Write a page like the best existing page of its kind:
 
-- Basic action: `docs/BasicActions/Attack.md`
-- Technology action: `docs/TechnologyActions/Upgrade.md`
-- Technology modifier: `docs/TechnologyModifiers/Ambush.md`
-- Card type: `docs/Cards/Ship.md`
-- Property: `docs/Properties/Range.md`
-- State: `docs/States/Damaged.md`
-- Power: `docs/Resources/MilitaryPower.md`
-- Class, Origin, Role: `docs/Types/Social.md`
-- Home pile: `docs/Home/Hand.md`
-- Space type: `docs/Field/Asteroids.md`
+- Basic action: `rules/BasicActions/Attack.md`
+- Technology action: `rules/TechnologyActions/Upgrade.md`
+- Technology modifier: `rules/TechnologyModifiers/Ambush.md`
+- Card type: `rules/Cards/Ship.md`
+- Property: `rules/Properties/Range.md`
+- State: `rules/States/Damaged.md`
+- Power: `rules/Resources/MilitaryPower.md`
+- Class, Origin, Role: `rules/Types/Social.md`
+- Home pile: `rules/Home/Hand.md`
+- Space type: `rules/Field/Asteroids.md`

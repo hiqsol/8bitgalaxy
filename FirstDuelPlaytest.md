@@ -6,7 +6,7 @@ scope: meta
 # 8-bit Galaxy: first duel playtest report
 
 3 AI-vs-AI duels on the `core` rules, 2026-10-22/23. The game records,
-rewritten in the notation of [docs/Notation.md](docs/Notation.md), are
+rewritten in the notation of [meta/Notation.md](meta/Notation.md), are
 in [games/](games/README.md).
 
 ## 1. Results
@@ -78,7 +78,7 @@ Depleted Colony). The cap of 40 Turns was never reached.
 ## 2. How it was played
 
 The procedure, revised after this round, is in
-[docs/Playtest.md](docs/Playtest.md).
+[meta/Playtest.md](meta/Playtest.md).
 
 - **One referee subagent per game** (Opus) kept the authoritative
   state in files, shuffled with a seeded RNG, validated every play
@@ -110,7 +110,7 @@ The procedure, revised after this round, is in
 The referees logged the games in 8BGN, chess algebraic notation with
 PGN tags: all three logged complete games and players wrote their
 plays in it, 0 notation-caused errors. [games/](games/README.md)
-holds them rewritten in [docs/Notation.md](docs/Notation.md), which
+holds them rewritten in [meta/Notation.md](meta/Notation.md), which
 also covers the 8BGN gaps: pile moves `S4p@Lab1 -> Lab3`, the setup
 line `Setup A:` and a Turn's Energy `9. A, Energy 1`.
 
@@ -280,5 +280,5 @@ Open:
 
 Answered: Q1–Q3 by F1–F3; Q4, Stars open and Spaces hidden (Space 4);
 Q5 by PR-4; Q6 by PR-8; Q7 by PR-17; Q8, Takeoff stays free, I46
-watches it; Q9 by PR-6; Q10, Notation is in `docs/`, the Backlog cites
+watches it; Q9 by PR-6; Q10, Notation is in `meta/`, the Backlog cites
 RG, PR and F.

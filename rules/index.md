@@ -43,7 +43,7 @@ Every page states its `scope` in frontmatter:
 	2. `objectives` - [[Objective]]s and victory points
 	3. `politics` - [[Politics]]
 5. `meta` - [[Backlog]] and documentation support, e.g.
-   [[Pseudographics]]
+   [[Pseudographics]], kept in [meta/](../meta/Backlog.md)
 6. `idea` - out of the rules, kept in [ideas/](../ideas/README.md)
    for later
 7. `lore` - the setting, kept in [lore/](../lore/LoreVariants.md)

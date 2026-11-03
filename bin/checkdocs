@@ -4,7 +4,7 @@
 # dependencies = ["markdown"]
 # ///
 """Check the docs wiki rules uwiki does not know: numbered rules, technology catalog, page templates,
-and that the uwiki.toml schema allows the status and scope values docs/index.md documents.
+and that the uwiki.toml schema allows the status and scope values rules/index.md documents.
 
 Usage: bin/checkdocs  (exits 1 on problems, uv installs dependencies), make check runs uwiki check first
 """
@@ -18,7 +18,7 @@ from pathlib import Path
 import markdown
 
 ROOT = Path(__file__).resolve().parent.parent
-PATHS = ['docs', 'ideas']
+PATHS = ['rules', 'meta', 'ideas']
 FILES = sorted(f for p in PATHS for f in (ROOT / p).glob('**/*.md'))
 CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
 TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')

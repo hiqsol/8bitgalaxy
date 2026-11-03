@@ -7,7 +7,7 @@ title = "8bitgalaxy"
 [check]
 orphans = true
 
-# status and scope values are documented in docs/index.md,
+# status and scope values are documented in rules/index.md,
 # bin/checkdocs keeps them the same
 [schema]
 _required = ["scope", "status"]

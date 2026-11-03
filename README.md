@@ -8,11 +8,13 @@ scope: meta
 ## Docs
 
 1. [PITCH.md](PITCH.md) - the game pitch
-2. [docs/](docs/index.md) - the rules, the source of truth
-3. [ideas/](ideas/README.md) - ideas out of the rules
-4. [lore/](lore/LoreVariants.md) - lore variants and their stories
-5. [games/](games/README.md) - played games and the playtest report
-6. [AGENTS.md](AGENTS.md) - how to write and check the docs
+2. [rules/](rules/index.md) - the rules, the source of truth
+3. [meta/](meta/Backlog.md) - the backlog, reviews and playtest
+   procedure
+4. [ideas/](ideas/README.md) - ideas out of the rules
+5. [lore/](lore/LoreVariants.md) - lore variants and their stories
+6. [games/](games/README.md) - played games and the playtest report
+7. [AGENTS.md](AGENTS.md) - how to write and check the docs
 
 ## Install dependencies
 

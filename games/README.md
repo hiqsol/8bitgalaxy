@@ -6,7 +6,7 @@ scope: meta
 # Played games
 
 The three first duel playtest games of 2026-10-22/23, rewritten in the
-notation of [docs/Notation.md](../docs/Notation.md).
+notation of [meta/Notation.md](../meta/Notation.md).
 
 | Game | A, home S00 | B, home S21 | Result | Turns |
 |---|---|---|---|---|
@@ -39,18 +39,18 @@ shows both ends, the upper first: `S1c/1p` is the Ship-1p/1c on its
 weak end. A place is a Star and a slot: `S00u4` is Unit slot 4,
 `S00s1` Structure slot 1, `S00o3` the Space tile at 3 o'clock. `#`
 starts a comment, `RG1-5` names a ruling of the referee. The rest is
-in [docs/Notation.md](../docs/Notation.md).
+in [meta/Notation.md](../meta/Notation.md).
 
 ## Rules of that day
 
 The games follow the playtest digest `RULES.md`, not today's docs:
 
 1. Stars and Spaces start face down,
-   [Explore](../docs/TechnologyActions/Explore.md) reveals them. A
+   [Explore](../rules/TechnologyActions/Explore.md) reveals them. A
    revealed Star shows its kind and its Unit+Structure split, and as
    many Ancients appear in it as its ExtraPrice:
    `S01 => Defense|3+1 with A?`. Today a
-   [World](../docs/Galaxy/World.md) card gives a Star its kind.
+   [World](../rules/Galaxy/World.md) card gives a Star its kind.
 2. Star kinds: Defense (+1 Defense), Military (+1 Military power),
    Science (+1 Science power), Shipyard (a hub), Energy (+1 Energy).
    Home Stars have 4+4 slots.
