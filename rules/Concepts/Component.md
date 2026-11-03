@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: core
+aliases: [Tile, Token]
 ---
 
 1. **Component** is a physical piece of the game
@@ -12,4 +13,4 @@ scope: core
 
 #### Notes
 
-1. Tokens provide no ability, they are only counted
+1. **Tokens** provide no [[Ability]], they are only counted

@@ -5,15 +5,15 @@ scope: meta
 
 # Game 3: Turtle 1-0 Gambler
 
-First duel playtest, 2026-10-23, seed 303. A wins 1-0 by Singularity
-in Turn 25: three Level-4 Colonies Ready and S4p in Hand. A Colony
-race, both players reach four Level-4 Colonies. The first full Check
-wins.
+First duel playtest, 2026-10-23, seed 303. A wins 1-0 by
+[[Singularity]] in [[Turn]] 25: three [[Level]]-4 [[Colony|Colonies]]
+[[Ready]] and S4p in [[Hand]]. A [[Colony]] race, both players reach
+four [[Level]]-4 [[Colony|Colonies]]. The first full [[Check]] wins.
 
 ## Score
 
-One line per turn, only what happened. `!` good, `!!` decisive, `?!`
-dubious,
+One line per [[Turn]], only what happened. `!` good, `!!` decisive,
+`?!` dubious,
 `!?` interesting, as in chess.
 
 ```text
@@ -55,11 +55,11 @@ Setup A: B2p@S00s1, C2c@S00s4
 Setup B: B2p@S21s2, C2c@S21s4
 ```
 
-Both reordered their Factory Colony piles.
+Both reordered their [[Factory]] [[Colony]] piles.
 
 ### Turns 1 and 2
 
-Both raise a C2m at home. B explores S12o7.
+Both [[Raise]] a C2m at home. B [[Explore]]s S12o7.
 
 ```text
 1. A, Energy 1
@@ -87,8 +87,8 @@ Both raise a C2m at home. B explores S12o7.
 
 ### Turns 3 and 4
 
-A raises C2s: its home Structure row is full. B researches C4c onto
-its Colony pile and buries C2p under it.
+A [[Raise]]s C2s: its home [[Structure]] row is full. B [[Research]]es
+C4c onto its [[Colony]] pile and buries C2p under it.
 
 ```text
 3. A, Energy 2
@@ -115,8 +115,9 @@ its Colony pile and buries C2p under it.
 
 ### Turns 5 and 6
 
-A researches C4m and grows C2m into it. B grows C2m into C4c and
-raises the returned C2m again.
+A [[Research]]es C4m and [[Grow]]s C2m into it. B [[Grow]]s C2m into
+C4c and
+[[Raise]]s the returned C2m again.
 
 ```text
 5. A, Energy 3
@@ -150,8 +151,9 @@ raises the returned C2m again.
 
 ### Turns 7 and 8
 
-The mirror goes on: A grows C2s into C4c, B grows C2m into C4s. 10
-Culture points each.
+The mirror goes on: A [[Grow]]s C2s into C4c, B [[Grow]]s C2m into
+C4s. 10
+[[Culture]] points each.
 
 ```text
 7. A, Energy 2
@@ -184,8 +186,8 @@ Culture points each.
 
 ### Turns 9 and 10
 
-Both swap their best Colony into the last Structure slot, where
-nothing overlaps it.
+Both swap their best [[Colony]] into the last [[Structure]] [[Slot]],
+where nothing overlaps it.
 
 ```text
 9. A, Energy 1
@@ -210,8 +212,10 @@ nothing overlaps it.
 
 ### Turns 11 and 12
 
-A finds the Military Star S01. B finds the Defense Star S20, beats its
-Ancient, moves S2m in and raises a C2m there, all in one turn.
+A finds the [[Military]] [[Star]] S01. B finds the [[Defense]]
+[[Star]] S20, beats its
+[[Ancient]], moves S2m in and [[Raise]]s a C2m there, all in one
+[[Turn]].
 
 ```text
 11. A, Energy 1
@@ -248,8 +252,8 @@ Ancient, moves S2m in and raises a C2m there, all in one turn.
 
 ### Turns 13 and 14
 
-A beats the two Ancients of S01 and holds it with S1m/2c. B explores
-towards S10.
+A beats the two [[Ancient]]s of S01 and holds it with S1m/2c. B
+[[Explore]]s towards S10.
 
 ```text
 13. A, Energy 1
@@ -279,8 +283,8 @@ towards S10.
 
 ### Turns 15 and 16
 
-A raises C2s at S01. B finds the Science Star S10 at distance 4, beats
-its Ancients 9:3 and sits next to A's home.
+A [[Raise]]s C2s at S01. B finds the [[Science]] [[Star]] S10 at
+[[Distance]] 4, beats its [[Ancient]]s 9:3 and sits next to A's home.
 
 ```text
 15. A, Energy 1
@@ -313,8 +317,9 @@ its Ancients 9:3 and sits next to A's home.
 
 ### Turns 17 and 18
 
-A researches C4s and grows its S01 Colony into it. B raises two
-Colonies at S10 from home.
+A [[Research]]es C4s and [[Grow]]s its S01 [[Colony]] into it. B
+[[Raise]]s two
+[[Colony|Colonies]] at S10 from home.
 
 ```text
 17. A, Energy 2
@@ -345,7 +350,8 @@ Colonies at S10 from home.
 
 ### Turns 19 and 20
 
-A researches C4p: it has M4, C4 and S4 Ready. B researches C4m with a
+A [[Research]]es C4p: it has M4, C4 and S4 [[Ready]]. B [[Research]]es
+C4m with a
 Prerequisite from S20.
 
 ```text
@@ -375,7 +381,8 @@ Prerequisite from S20.
 
 ### Turns 21 and 22
 
-A digs S4p out of its Laboratory and researches it. B grows its S10
+A digs S4p out of its [[Laboratory]] and [[Research]]es it. B
+[[Grow]]s its S10
 C2s into C4m.
 
 ```text
@@ -413,8 +420,10 @@ C2s into C4m.
 
 ### Turns 23 and 24
 
-A produces S4p into a tiny Discard and draws it. B has all four C4
-Colonies on the Field, but used C4s for Range: Level 3 at the Check.
+A [[Produce]]s S4p into a tiny [[Discard]] and [[Draw]]s it. B has all
+four C4
+[[Colony|Colonies]] on the [[Field]], but used C4s for [[Range]]:
+[[Level]] 3 at the [[Check]].
 
 ```text
 23. A, Energy 3
@@ -445,7 +454,7 @@ Colonies on the Field, but used C4s for Range: Level 3 at the Check.
 
 ### Turn 25
 
-A takes off one card and keeps S4p in Hand: Singularity.
+A takes off one [[Card]] and keeps S4p in [[Hand]]: [[Singularity]].
 
 ```text
 25. A, Energy 1

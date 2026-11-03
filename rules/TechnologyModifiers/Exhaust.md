@@ -4,8 +4,8 @@ scope: advanced
 ---
 
 1. **Exhaust** is [[Science]] [[TechnologyModifier]]
-2. **Exhaust** overloads a card: it uses all its abilities as a
-   [[Support]]er
+2. **Exhaust** overloads a [[Card]]: it uses all its
+   [[Ability|Abilities]] as a [[Support]]er
 3. **Outcome**:
-	1. A card from [[Hand]] is [[Destroy]]ed
-	2. A card in a [[Star]] becomes [[Damaged]]
+	1. A [[Card]] from [[Hand]] is [[Destroy]]ed
+	2. A [[Card]] in a [[Star]] becomes [[Damaged]]

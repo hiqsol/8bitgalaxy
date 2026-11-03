@@ -4,7 +4,7 @@ scope: advanced
 ---
 
 1. **Cloak** is [[Military]] [[TechnologyModifier]]
-2. A group with **Cloak** in [[Move]] or [[Attack]] is stopped by
+2. A [[Group]] with **Cloak** in [[Move]] or [[Attack]] is stopped by
    [[Pinning]] only in a [[Star]] with two or more rival [[Enabled]]
    [[Military]] [[Actor]]s
 

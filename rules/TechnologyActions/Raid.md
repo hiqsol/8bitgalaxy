@@ -4,11 +4,12 @@ scope: advanced
 ---
 
 1. **Raid** is [[Military]] [[TechnologyAction]]
-2. **Raid** is an [[Attack]] whose winning attackers don't move to the
-   destination
+2. **Raid** is an [[Attack]] whose winning [[Attacker]]s don't move to
+   the [[Destination]]
 3. **Outcome** of a won **Raid**, one of:
-	1. [[Goods]] of the target [[Star]] move to the source Star
-	2. Rival [[Structure]]s in the target Star become [[Depleted]]
+	1. [[Goods]] of the target [[Star]] move to the [[Source]]
+	   [[Star]]
+	2. Rival [[Structure]]s in the target [[Star]] become [[Depleted]]
 
 #### Notes
 

@@ -5,15 +5,17 @@ scope: meta
 
 # Game 1: Warlord 1-0 Architect
 
-First duel playtest, 2026-10-22, seed 101. A wins 1-0 by Military in
-Turn 10: B can not make a move. The decisive Turn is 9, A's: Attack,
-Explore and Move in one turn, without a single Combat against the
-rival.
+First duel playtest, 2026-10-22, seed 101. A wins 1-0 by [[Military]]
+in
+[[Turn]] 10: B can not make a move. The decisive [[Turn]] is 9, A's:
+[[Attack]],
+[[Explore]] and [[Move]] in one [[Turn]], without a single [[Combat]]
+against the rival.
 
 ## Score
 
-One line per turn, only what happened. `!` good, `!!` decisive, `?!`
-dubious,
+One line per [[Turn]], only what happened. `!` good, `!!` decisive,
+`?!` dubious,
 `!?` interesting, as in chess.
 
 ```text
@@ -40,13 +42,13 @@ Setup A: C2c@S00s1, B2p@S00s3
 Setup B: B2p@S21s1, C2c@S21s4
 ```
 
-B reordered its piles: Colony Factory C2s on top, Laboratory C4s, C4m
-on top.
+B reordered its piles: [[Colony]] [[Factory]] C2s on top,
+[[Laboratory]] C4s, C4m on top.
 
 ### Turns 1 and 2
 
-Both open with a home Colony: A a C2m for Recon and Military, B a C2s
-for Survey.
+Both open with a home [[Colony]]: A a C2m for [[Recon]] and
+[[Military]], B a C2s for [[Survey]].
 
 ```text
 1. A, Energy 1
@@ -76,8 +78,10 @@ for Survey.
 
 ### Turns 3 and 4
 
-A finds the Defense Star at S01 with one Ancient. B researches C4s and
-grows its fresh C2s into it at once, then finds the Science Star at
+A finds the [[Defense]] [[Star]] at S01 with one [[Ancient]]. B
+[[Research]]es C4s and
+[[Grow]]s its fresh C2s into it at once, then finds the [[Science]]
+[[Star]] at
 S20.
 
 ```text
@@ -111,9 +115,11 @@ S20.
 
 ### Turns 5 and 6
 
-A beats the Ancient and holds S01. B researches C4m and grows a second
-C2s into it: two Level-4 Colonies at home, but no Actor left on its
-Field.
+A beats the [[Ancient]] and holds S01. B [[Research]]es C4m and
+[[Grow]]s a second
+C2s into it: two [[Level]]-4 [[Colony|Colonies]] at home, but no
+[[Actor]] left on its
+[[Field]].
 
 ```text
 5. A, Energy 1
@@ -153,8 +159,8 @@ Field.
 
 ### Turns 7 and 8
 
-A finds the Military Star S12, next to B's home. B only takes off
-three Ships.
+A finds the [[Military]] [[Star]] S12, next to B's home. B only takes
+off three [[Ship]]s.
 
 ```text
 7. A, Energy 1
@@ -179,9 +185,9 @@ three Ships.
 
 ### Turns 9 and 10
 
-A takes S12, explores the last Space with the Hero that just fought
-and moves one S1m into the last free slot of S21. S21 is Disputed, B
-controls no Star.
+A takes S12, [[Explore]]s the last [[Space]] with the [[Hero]] that
+just fought and moves one S1m into the last free [[Slot]] of S21. S21
+is [[Disputed]], B controls no [[Star]].
 
 ```text
 9. A, Energy 1

@@ -6,7 +6,7 @@ scope: core
 ![game](../public/images/game.png)
 
 1. 4X strategy with:
-	1. Deck building
+	1. [[DeckBuilding|Deck building]]
 	2. Worker placement
 	3. Engine building
 2. Main game rule is [[PerformAction]], start with it
@@ -21,7 +21,7 @@ scope: core
 1. **Star Realms**: deck building and [[Turn]], but more complex: plus
    a [[Field]]
 2. **Twilight Imperium**: 4X on a [[Field]], but faster: simpler
-   turns, politics as an extension
+   [[Turn]]s, politics as an extension
 3. **Chess**: even contest, no luck in [[Combat]], see
    [[GameBalance]]; losing all [[Hero]]es is checkmate, see [[Goal]]
 
@@ -29,18 +29,20 @@ scope: core
 
 Every page states its `scope` in frontmatter:
 
-1. `core` - streamlined rules, independent of a faction deck, a
-   technology and a scenario
+1. `core` - streamlined rules, independent of a [[Faction]] deck, a
+   [[Technology]] and a [[Scenario]]
 	1. Core is an extensible framework: it gives core numbers, e.g.
-	   the [[Hand]] size, and a faction or any card can change any
-	   rule, the change lives on its own page
-2. `duel` - minimal playable game on top of core: the [[Duel]]
-   setup, the Human and Alien [[Deck]] and its technologies
-3. `advanced` - more technologies and rules on top of duel
+	   the [[Hand]] size, and a [[Faction]] or any [[Card]] can change
+	   any rule, the change lives on its own page
+2. `duel` - minimal playable game on top of core: the [[Duel]] setup,
+   the Human and Alien [[Deck]] and its [[Technology|Technologies]]
+3. `advanced` - more [[Technology|Technologies]] and rules on top of
+   duel
 4. Extensions:
 	1. `galaxy` - [[Galaxy]] deck: [[Event]]s, [[Ancient]]s,
 	   [[Derelict]]s
-	2. `objectives` - [[Objective]]s and victory points
+	2. `objectives` - [[Objective]]s and
+	   [[VictoryPoints|Victory points]]
 	3. `politics` - [[Politics]]
 5. `meta` - [[Backlog]] and documentation support, e.g.
    [[Pseudographics]], kept in [meta/](../meta/Backlog.md)

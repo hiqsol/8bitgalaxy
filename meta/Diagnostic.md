@@ -25,88 +25,95 @@ in any order. Questions on extensions and `advanced` rules wait in
 
 ## Watch in playtest
 
-- **Q17. Deck thinning by Takeoff** (I46). In a played game, did
-  using [[Takeoff]] to leave weak cards on the Field materially
-  improve that player's later draws?
+- **Q17. Deck thinning by Takeoff** (I46). In a played game, did using
+  [[Takeoff]] to leave weak [[Card]]s on the [[Field]] materially
+  improve that player's later [[Draw]]s?
 	- [ ] a) Yes.
 	- [ ] b) No.
 	- [ ] c) No player tried it.
 	- [ ] d) The record doesn't show.
 - **Q19. Actions per Turn** (I75 a). In a played game, how many
-  actions, Takeoffs not counted, did a typical [[Turn]] hold?
+  [[Action]]s, [[Takeoff]]s not counted, did a typical [[Turn]] hold?
 	- [ ] a) 1.
 	- [ ] b) 2 or 3.
 	- [ ] c) 4 to 6.
 	- [ ] d) 7 or more.
 	- [ ] e) The record doesn't show.
-- **Q20. Militarization Defense** (I75 f). A Ready Colony 4M, not
-  overlapped, shows its strong end: [[Militarization]], +3 Defense,
-  Secondary +4. It defends alone. What is its [[Defense]]?
-	- [ ] a) 3: the printed Defense.
-	- [ ] b) 4: the +3 raises Defense 1 to its Level.
-	- [ ] c) 7: its Level 4 plus 3.
+- **Q20. Militarization Defense** (I75 f). A [[Ready]] [[Colony]] 4M,
+  not overlapped, shows its [[Strong]] [[End]]: [[Militarization]], +3
+  [[Defense]], Secondary +4. It defends alone. What is its
+  [[Defense]]?
+	- [ ] a) 3: the printed [[Defense]].
+	- [ ] b) 4: the +3 raises [[Defense]] 1 to its [[Level]].
+	- [ ] c) 7: its [[Level]] 4 plus 3.
 	- [ ] d) The notes don't decide.
-- **Q21. Damage in a tie** (I81 a). The attacker's only direct
-  participant is a Ship 2M, its supporters from Hand bring the totals
-  to a tie. The defender's direct participants are a Hero 2M, a Ship
-  2M and a Ready Base 2M. Which cards become Damaged?
-	- [ ] a) Only the attacker's Ship 2M.
-	- [ ] b) The attacker's Ship 2M, and defending cards of total
-	  Level at least 2, chosen by the defender.
-	- [ ] c) All four direct participants.
-	- [ ] d) All four direct participants and the attacker's
-	  supporters from Hand.
+- **Q21. Damage in a tie** (I81 a). The [[Attacker]]'s only direct
+  participant is a [[Ship]] 2M, its [[Supporter]]s from [[Hand]] bring
+  the totals to a tie. The [[Defender]]'s [[Direct participant]]s are
+  a [[Hero]] 2M, a [[Ship]] 2M and a [[Ready]] [[Base]] 2M. Which
+  [[Card]]s become [[Damaged]]?
+	- [ ] a) Only the [[Attacker]]'s [[Ship]] 2M.
+	- [ ] b) The [[Attacker]]'s [[Ship]] 2M, and defending [[Card]]s
+	  of total [[Level]] at least 2, chosen by the [[Defender]].
+	- [ ] c) All four [[Direct participant]]s.
+	- [ ] d) All four [[Direct participant]]s and the [[Attacker]]'s
+	  [[Supporter]]s from [[Hand]].
 	- [ ] e) The notes don't decide.
-- **Q22. Damage of a winning garrison** (I81 b). The defender's five
-  direct participants are Level 2 cards, the attacker's only direct
-  participant is a Ship 2M. The defender wins by 2. How many of the
-  defender's cards become Damaged?
+- **Q22. Damage of a winning garrison** (I81 b). The [[Defender]]'s
+  five [[Direct participant]]s are [[Level]] 2 [[Card]]s, the
+  [[Attacker]]'s only direct participant is a [[Ship]] 2M. The
+  [[Defender]] wins by 2. How many of the [[Defender]]'s [[Card]]s
+  become [[Damaged]]?
 	- [ ] a) None.
-	- [ ] b) One, chosen by the defender: total Level at least the
-	  attacker's direct total, 2.
-	- [ ] c) Four: the advantage of 2 saves one Level 2 card.
+	- [ ] b) One, chosen by the [[Defender]]: total [[Level]] at least
+	  the [[Attacker]]'s direct total, 2.
+	- [ ] c) Four: the [[Advantage]] of 2 saves one [[Level]] 2
+	  [[Card]].
 	- [ ] d) The notes don't decide.
 
 ## After the first duel
 
 ### Space types
 
-- **Q23. Nebula stop** (I49 a). A group passes a revealed Nebula and
-  reaches the next [[Star]]. May it continue in the same action?
+- **Q23. Nebula stop** (I49 a). A [[Group]] passes a revealed Nebula
+  and reaches the next [[Star]]. May it continue in the same
+  [[Action]]?
 	- [ ] a) Yes.
-	- [ ] b) No, it must stop in that Star.
+	- [ ] b) No, it must stop in that [[Star]].
 	- [ ] c) The notes don't decide.
-- **Q64. Nebula sight** (I49 a). Can [[Explore]] reveal a Space past
-  a revealed Nebula?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-- **Q65. Nebula shroud** (I49 a). May a card passing a revealed
-  Nebula become [[Hidden]] without using another Ability?
+- **Q64. Nebula sight** (I49 a). Can [[Explore]] reveal a [[Space]]
+  past a revealed Nebula?
 	- [ ] a) Yes.
 	- [ ] b) No.
 	- [ ] c) The notes don't decide.
-- **Q66. Nebula Support** (I49 a). Can a Field card [[Support]] an
-  action through a revealed Nebula?
+- **Q65. Nebula shroud** (I49 a). May a [[Card]] passing a revealed
+  Nebula become [[Hidden]] without using another [[Ability]]?
 	- [ ] a) Yes.
 	- [ ] b) No.
 	- [ ] c) The notes don't decide.
-- **Q74. First duel Space mix** (I49 c). Which face-down Space tiles
-  are prepared for the first Duel?
-	- [ ] a) Normal length-1 tiles and the fixed Voids in `game.png`.
-	- [ ] b) 12 Normal tiles and two each of Asteroids, Nebula, Black
-	  hole, Void, HyperPass and Relic.
+- **Q66. Nebula Support** (I49 a). Can a [[Field]] [[Card]]
+  [[Support]] an [[Action]] through a revealed Nebula?
+	- [ ] a) Yes.
+	- [ ] b) No.
+	- [ ] c) The notes don't decide.
+- **Q74. First duel Space mix** (I49 c). Which face-down [[Space]]
+  [[Tile]]s are prepared for the first [[Duel]]?
+	- [ ] a) Normal [[Length]]-1 [[Tile]]s and the fixed [[Void]]s in
+	  `game.png`.
+	- [ ] b) 12 Normal [[Tile]]s and two each of [[Asteroids]],
+	  Nebula, [[BlackHole|Black hole]], [[Void]], HyperPass and Relic.
 	- [ ] c) The notes don't decide.
 
 ### Deck
 
 - **Q76. High-level card ends** (I19 e). Does the [[Deck]] define
-  both ends of all 12 cards at Levels 6/5 and 8/7?
+  both [[End]]s of all 12 [[Card]]s at [[Level]]s 6/5 and 8/7?
 	- [ ] a) Yes.
-	- [ ] b) No, at least one end is TBD.
+	- [ ] b) No, at least one [[End]] is TBD.
 	- [ ] c) The notes don't decide.
 - **Q77. Card images** (I47). Does `card.png` show the current rule
-  data for every card?
+  data for every [[Card]]?
 	- [ ] a) Yes.
-	- [ ] b) No, at least one card image is missing or out of date.
+	- [ ] b) No, at least one [[Card]] image is missing or out of
+	  date.
 	- [ ] c) The notes don't decide.

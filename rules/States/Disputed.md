@@ -9,5 +9,6 @@ scope: core
 
 #### Notes
 
-1. A disputed Star is a front: nobody controls it, each tied faction
-   takes off and acts there with its own cards, see [[ActiveFor]]
+1. A **Disputed** [[Star]] is a front: nobody controls it, each tied
+   [[Faction]] takes off and acts there with its own [[Card]]s, see
+   [[ActiveFor]]

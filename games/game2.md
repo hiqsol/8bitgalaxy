@@ -5,15 +5,16 @@ scope: meta
 
 # Game 2: Brute 0-1 Scholar
 
-First duel playtest, 2026-10-22, seed 202. B wins 0-1 by Singularity
-in Turn 16: all four Classes at Level 4, never leaving home. No
-contact between the rivals: the only Combat is A against three
-Ancients.
+First duel playtest, 2026-10-22, seed 202. B wins 0-1 by
+[[Singularity]] in [[Turn]] 16: all four [[Class]]es at [[Level]] 4,
+never leaving home. No contact between the rivals: the only [[Combat]]
+is A against three
+[[Ancient]]s.
 
 ## Score
 
-One line per turn, only what happened. `!` good, `!!` decisive, `?!`
-dubious,
+One line per [[Turn]], only what happened. `!` good, `!!` decisive,
+`?!` dubious,
 `!?` interesting, as in chess.
 
 ```text
@@ -46,13 +47,15 @@ Setup A: C2c@S00s1, B2p@S00s3
 Setup B: C2c@S21s1, B2p@S21s3
 ```
 
-B reordered its piles: Laboratory C4s, B4p, S4m on top, Colony Factory
+B reordered its piles: [[Laboratory]] C4s, B4p, S4m on top, [[Colony]]
+[[Factory]]
 C2s on top.
 
 ### Turns 1 and 2
 
-A has no Explore in a 3-card Hand and takes off three Ships. B raises
-C2s and uses it at once to research C4s.
+A has no [[Explore]] in a 3-[[Card]] [[Hand]] and takes off three
+[[Ship]]s. B [[Raise]]s
+C2s and uses it at once to [[Research]] C4s.
 
 ```text
 1. A, Energy 1
@@ -76,8 +79,9 @@ C2s and uses it at once to research C4s.
 
 ### Turns 3 and 4
 
-B grows C2s into C4s for 2 Culture: +3 Science for every later
-Research. A explores S00o3 and raises C2m.
+B [[Grow]]s C2s into C4s for 2 [[Culture]]: +3 [[Science]] for every
+later
+[[Research]]. A [[Explore]]s S00o3 and [[Raise]]s C2m.
 
 ```text
 3. A, Energy 2
@@ -107,8 +111,8 @@ Research. A explores S00o3 and raises C2m.
 
 ### Turns 5 and 6
 
-B researches and produces S4m in one turn. A explores S00o4 and fills
-its home Structure row with B2m.
+B [[Research]]es and [[Produce]]s S4m in one [[Turn]]. A [[Explore]]s
+S00o4 and fills its home [[Structure]] row with B2m.
 
 ```text
 5. A, Energy 1
@@ -139,8 +143,9 @@ its home Structure row with B2m.
 
 ### Turns 7 and 8
 
-A pays 7 to find the Shipyard Star at S01, three Ancients. B produces
-B4p: P4 on the Field.
+A pays 7 to find the [[Shipyard]] [[Star]] at S01, three [[Ancient]]s.
+B [[Produce]]s
+B4p: P4 on the [[Field]].
 
 ```text
 7. A, Energy 1
@@ -168,8 +173,8 @@ B4p: P4 on the Field.
 
 ### Turns 9 and 10
 
-B shifts S4p in the Laboratory and researches S4c; S4m takes off: M4
-on the Field. A explores both Spaces to S10.
+B [[Shift]]s S4p in the [[Laboratory]] and [[Research]]es S4c; S4m
+takes off: M4 on the [[Field]]. A [[Explore]]s both [[Space]]s to S10.
 
 ```text
 9. A, Energy 1
@@ -202,8 +207,9 @@ on the Field. A explores both Spaces to S10.
 
 ### Turns 11 and 12
 
-A beats the three Ancients 9:3 and holds the Shipyard Star. B produces
-S4c, the last Level-4 card, into its Discard.
+A beats the three [[Ancient]]s 9:3 and holds the [[Shipyard]]
+[[Star]]. B [[Produce]]s
+S4c, the last [[Level]]-4 [[Card]], into its [[Discard]].
 
 ```text
 11. A, Energy 2
@@ -231,8 +237,8 @@ S4c, the last Level-4 card, into its Discard.
 
 ### Turns 13 and 14
 
-A explores S01o5. B makes a spare Research only to have a move and
-keeps its set.
+A [[Explore]]s S01o5. B makes a spare [[Research]] only to have a move
+and keeps its set.
 
 ```text
 13. A, Energy 1
@@ -254,8 +260,9 @@ keeps its set.
 
 ### Turns 15 and 16
 
-A finds the Military Star S12, still two hidden tiles from S21. B
-draws S4c and takes it off: Singularity.
+A finds the [[Military]] [[Star]] S12, still two [[Hidden]] [[Tile]]s
+from S21. B
+[[Draw]]s S4c and takes it off: [[Singularity]].
 
 ```text
 15. A, Energy 1

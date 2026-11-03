@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Colony** is a card [[Type]]
+1. **Colony** is a [[Card]] [[Type]]
 2. **Colony** represents a populated planet
 3. [[Role]] = [[Structure]]
 4. [[Origin]] = [[Social]]

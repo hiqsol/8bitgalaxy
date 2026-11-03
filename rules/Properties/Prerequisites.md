@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Prerequisites** is explicit card [[Property]]
+1. **Prerequisites** is [[Explicit]] [[Card]] [[Property]]
 2. **Prerequisites** specify several pairs of [[Level]] and [[Class]]
-   required to [[Research]] the card
+   required to [[Research]] the [[Card]]
 3. Each pair is provided by a separate participant, see [[Level]]

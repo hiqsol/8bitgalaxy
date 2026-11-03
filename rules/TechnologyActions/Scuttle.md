@@ -12,4 +12,4 @@ scope: advanced
 
 1. Scorched earth: a [[Hub]] or a [[Hyperstructure]] about to fall,
    or already captured, stops serving the captor, see [[Goal]]
-2. The card goes to the player's [[Factory]]: it can be rebuilt
+2. The [[Card]] goes to the player's [[Factory]]: it can be rebuilt

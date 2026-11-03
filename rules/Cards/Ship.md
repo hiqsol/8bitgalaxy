@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Ship** is a card [[Type]]
+1. **Ship** is a [[Card]] [[Type]]
 2. **Ship** represents a star ship
 3. [[Role]] = [[Actor]]
 4. [[Origin]] = [[Industrial]]

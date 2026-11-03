@@ -14,11 +14,12 @@ scene are listed at the end.
 The notice came at the end of the Black Seal's sitting, delivered by
 an Assayer, which they never needed to do.
 
-I have read the Code of the Assay every day for nineteen years, and I
-can tell you that it requires no notice of anything. The Record is
-public. Every warrant either candidacy exercises is entered there the
-moment it is exercised, and anyone may read it. Article 9: *the Assay
-is public*. The Black Seal had no need to tell us what they intended.
+I have read the Code of the [[Assay]] every day for nineteen years,
+and I can tell you that it requires no notice of anything. The Record
+is public. Every warrant either candidacy exercises is entered there
+the moment it is exercised, and anyone may read it. Article 9: *the
+[[Assay]] is public*. The Black Seal had no need to tell us what they
+intended.
 We would have read it in the Record the moment they did it.
 
 They told us anyway. A small grey Assayer appeared at the foot of the
@@ -28,18 +29,18 @@ below, and it waited with the terrible patience of its kind until the
 Speaker took it.
 
 *The candidacy of the Black Seal gives notice that at its next sitting
-it intends to render the fallen warrant of Leader Iver Castellan, now
-held at Post One-One, into goods.*
+it intends to render the fallen warrant of Leader Iver Castellan,
+now held at Post One-One, into goods.*
 
 The Speaker read it aloud. Nobody said anything for a long time.
 
 Iver Castellan was the best of us. That is not my opinion. It was the
-opinion of the Academy that raised him from a child warrant at the
+opinion of the [[Academy]] that raised him from a child warrant at the
 lowest rank, and of the three sittings that promoted him, rank by
 rank, to the fourth. It was also the opinion of the Black Seal, who
 had spent most of the last sitting trying to bring him down and
 succeeded at the end. He had held One-One, the post at the center of
-the Assay ground, against the whole of their Contest. When the
+the [[Assay]] ground, against the whole of their Contest. When the
 warrants were turned up at the close, they had won by a margin of
 three. A victor may shield its own warrants only up to its margin, and
 a defender who loses shields none. Iver fell. Two of our vessels fell
@@ -79,15 +80,16 @@ The Assayers shuffle. Nobody chooses. You get used to that, or you
 leave the Council.
 
 That sitting's Deal lay before us. Before the Speaker lay the warrant
-of Leader Noor Abadi, a Rank 2 leader whose full reading is culture
-and whose endorsement is the remedy. She was a physician before she
-was a leader, and in a sense she was still one. Before the Treasurer
-lay the courier *Sparrow*, a Rank 1 culture vessel, the least ship in
-the Allotment. Before the Marshal lay a Rank 2 survey vessel. Before
-me lay two petty warrants, one of culture and one of war, the kind the
+of Leader Noor Abadi, a Rank 2 leader whose full reading is
+culture and whose endorsement is the remedy. She was a physician
+before she was a leader, and in a sense she was still one. Before the
+Treasurer lay the courier *Sparrow*, a Rank 1 culture vessel, the
+least ship in the Allotment. Before the Marshal lay a Rank 2 survey
+vessel. Before me lay two petty warrants, one of culture and one of
+war, the kind the
 Allotment is padded with. They lend a single measure and do nothing
-else. Article 28: *the Assay watches how a candidacy rids itself of
-the petty*. We had not yet rid ourselves of ours.
+else. Article 28: *the [[Assay]] watches how a candidacy rids itself
+of the petty*. We had not yet rid ourselves of ours.
 
 One seat was empty. It was Iver's.
 
@@ -151,8 +153,9 @@ the Black Seal's paper:
 
 That night I went back to the Code.
 
-The Code of the Assay runs to some forty articles and a little over
-three hundred Rulings. The Rulings are the case law, edge cases the
+The Code of the [[Assay]] runs to some forty articles and a little
+over three hundred Rulings. The Rulings are the case law, edge cases
+the
 Assayers settled when a candidacy found a gap. A Reader is supposed
 to know all of it. In practice you know the articles by heart and the
 Rulings by the index, and you pray. That night I did not pray. I took
@@ -260,7 +263,7 @@ The Speaker looked at the Council. The Council looked at the Deal.
 
 "Post Leader Abadi to One-Zero," the Speaker said.
 
-There is a courtesy of the Assay that no candidacy has ever
+There is a courtesy of the [[Assay]] that no candidacy has ever
 understood: the posting. A warrant goes from its seat to its post in
 no time at all, by no passage the Record can show. One moment Noor's
 warrant lay face up before the Speaker's seat. The next it was in a
@@ -301,7 +304,7 @@ The Black Seal appealed, of course.
 
 Their Reader was a tall careful person whom I had never met and had
 corresponded with for nineteen years. Their appeal arrived before our
-sitting ended, which they were entitled to do. The Assay keeps an
+sitting ended, which they were entitled to do. The [[Assay]] keeps an
 open door for appeals between the turns of the Record. It was a good
 appeal. I would have written it myself.
 
@@ -356,7 +359,7 @@ leader: not as goods, but as bait.*
 *I did not tell them I had read the article on remedies too. I
 didn't know if you had. I wanted to see.*
 
-*You will say this was disloyal. It was not. The Assay is not
+*You will say this was disloyal. It was not. The [[Assay]] is not
 admitting the stronger of us. I have believed that for years,
 and tonight I am nearly certain. I think you are nearly certain too,
 or you would not have read the long clause.*
@@ -368,7 +371,7 @@ or you would not have read the long clause.*
 It was not signed. Signatures are for warrants.
 
 I read it four times. Then I did what the Code requires of a Reader
-who receives a document bearing on the Assay. I entered it in the
+who receives a document bearing on the [[Assay]]. I entered it in the
 Minutes in full, where the Black Seal could read it, because the
 Record is public and the Minutes are part of the Record. I like to
 think their Reader expected that. I like to think they wrote it for
@@ -407,8 +410,8 @@ as always. We'll see what the Assayers give us."
 
 "Then my defense is in your seats," he said, "and none of you knows
 what it is yet." He laughed, and it was a good laugh. It was the laugh
-the Academy had raised him for and the three promotions had not
-spoiled. "That's the Assay for you."
+the [[Academy]] had raised him for and the three promotions had not
+spoiled. "That's the [[Assay]] for you."
 
 The Deal came. Five warrants face down in front of five seats, his
 among them, because the Assayers deal to the seats and not to the
@@ -419,9 +422,9 @@ I will tell you what I found that night, when everyone else had gone
 and I went back to the Admissions Roll, as Readers do in the small
 hours.
 
-The Admissions Roll lists every Assay held in this part of the
+The Admissions Roll lists every [[Assay]] held in this part of the
 galaxy. Each line names the two candidacies, the mark the admitted one
-claimed, and the length of the Assay in sittings. There are eleven
+claimed, and the length of the [[Assay]] in sittings. There are eleven
 lines. Eleven candidacies were admitted. Next to each, in the column
 where the other candidacy is named, the Roll has a second column.
 Every Reader notices it eventually. It has a heading in the Code's
@@ -429,9 +432,9 @@ typeface and nothing beneath it, all the way down.
 
 The heading says *Disposition*.
 
-I used to think the Assay tested whether we could fight. Then I
+I used to think the [[Assay]] tested whether we could fight. Then I
 thought it tested whether we could build. Tonight I think the
-Assayers have spent eleven Assays watching young candidacies hold
+Assayers have spent eleven [[Assay]]s watching young candidacies hold
 their Code, a book that says exactly what it means and nothing else,
 and waiting to see which of them would read it.
 
@@ -456,7 +459,7 @@ I have marked the page.
 | Five seats, dealt at the end, unknown order | [[Hand#3]], [[Turn#5]], [[DeckBuilding]] |
 | The storm: a tie goes to the holder | [[Combat#8.3]], on hold |
 | *Sparrow* would be answered on entering, before any other order | [[Intercept#2]] |
-| No ransom of warrants | none: the rules have no card exchange |
+| No ransom of warrants | none: the rules have no [[Card]] exchange |
 | A remedy is not halted | [[Pinning#2.1]] |
 | A remedy goes to the fallen, fee is its rank | [[Recover#3]] to 5 |
 | A leader is held by its own candidacy unless fallen | [[ControlledBy#3]] |
@@ -467,14 +470,15 @@ I have marked the page.
 | Exercised warrants go to the Rest | [[Deplete#1.1]] |
 | Equal standing: contested, nobody holds it, each keeps its own | [[Control]], [[Disputed]], [[ControlledBy#3]] |
 | He didn't come in, nothing to answer | [[Intercept#2]] |
-| Leaders in the Rest are alive | [[Goal#7.2]] |
+| [[Leader]]s in the Rest are alive | [[Goal#7.2]] |
 | One order would bring him home from the contested post | [[PerformAction#1.3.1]], [[ActiveFor#3]] |
 | If he leaves, the holder holds the fallen again | [[ControlledBy#3]], [[ControlledBy#Notes#1]] |
 | A contested post can be fought from inside | [[Attack#3]], [[Disputed#Notes#1]] |
 
-**Assumptions the rules don't settle:** the [[Recover]] Cost is "the
-current Level of the target card", but a [[Damaged]] card lies on its
-back, and the rules don't say what its current Level is. The story
-uses the Level it fell with. Recover doesn't say which Class pays, so
-the story pays a Heal in Culture, like Grow. It doesn't say which End
-comes up either. See the questions in [[LoreVariants]].
+**Assumptions the rules don't settle:** the [[Recover]] [[Cost]] is
+"the current [[Level]] of the target [[Card]]", but a [[Damaged]]
+[[Card]] lies on its back, and the rules don't say what its current
+[[Level]] is. The story uses the [[Level]] it fell with. [[Recover]]
+doesn't say which [[Class]] pays, so the story pays a [[Heal]] in
+[[Culture]], like [[Grow]]. It doesn't say which [[End]] comes up
+either. See the questions in [[LoreVariants]].

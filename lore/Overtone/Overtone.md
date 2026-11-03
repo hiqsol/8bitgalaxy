@@ -15,8 +15,8 @@ Story: [[TheHeldChord]], a great battle at the end of the game.
 ## Name
 
 **OVERTONE**. The [[Deck]] already sounds like the overtone series.
-Levels 1 to 8 are its first eight harmonics. The two Ends of every
-card are neighboring harmonics: 2/1, 4/3, 6/5 and 8/7 are the
+[[Level]]s 1 to 8 are its first eight harmonics. The two [[End]]s of
+every card are neighboring harmonics: 2/1, 4/3, 6/5 and 8/7 are the
 octave, the fourth, the minor third and the septimal tone. The 1/0
 starting cards are single notes. The name also keeps a trace of the
 8-bit heritage, since chiptune is music built from a few pure tones.
@@ -41,41 +41,42 @@ the physics stays exact. Resonance is the hard SF here.
 1. **Resonance**: matter and travel answer to pitch. Only the first
    few harmonics are stable; above them, sound breaks into noise.
 2. **Intervals**: every made thing sounds an interval, its high note
-   (the strong End) and its low note (the weak End). A thing turned
-   over sounds its other note. The least things sound a single note.
-3. **Four voices**: Low (Military, red), Hearth (Culture, green),
-   Forge (Production, yellow), High (Science, blue).
-4. **Voices and instruments**: the living are voices (Social) and the
-   made are instruments (Industrial). A Great Organ is both, a choir
-   and a pipe.
+   (the [[Strong]] [[End]]) and its low note (the [[Weak]] [[End]]). A
+   thing turned over sounds its other note. The least things sound a
+   single note.
+3. **Four voices**: Low ([[Military]], red), Hearth ([[Culture]],
+   green), Forge ([[Production]], yellow), High ([[Science]], blue).
+4. **Voices and instruments**: the living are voices ([[Social]]) and
+   the made are instruments ([[Industrial]]). A Great Organ is both, a
+   choir and a pipe.
 5. **Song carries between stars**: every song is heard everywhere.
    The great hulls are huge, and their songs bend space-time, so a
    star can hold only a few of them before space tears into noise.
 6. **The Breath**: a people holds a few voices in its breath, ready
    to sing out in any star that hears its song.
-7. **The Drone** is the Ancients: an old sustained chord in the wild
-   stars. Its voices are unheard until they rise, and when silenced
-   they sink back into the Drone and rise elsewhere.
+7. **The Drone** is the [[Ancient]]s: an old sustained chord in the
+   wild stars. Its voices are unheard until they rise, and when
+   silenced they sink back into the Drone and rise elsewhere.
 
 ## Glossary
 
-| Rule term | Overtone term |
+| Rule term | **Overtone** term |
 |---|---|
 | [[Faction]] | People: the Reed (Human), the Bell (Alien) |
 | [[Turn]] | Verse |
-| Check | the Listening |
+| [[Check]] | the Listening |
 | [[Restore]] | the Tuning |
 | [[Hand]] | the Breath |
 | [[Reserve]] | the Waiting Choir |
 | [[Discard]] | the Rest |
-| Draw | Drawing breath |
-| Shuffle | the Rising |
+| [[Draw]] | Drawing breath |
+| [[Shuffle]] | the Rising |
 | [[Takeoff]] | Singing out |
 | [[Factory]] | the Scores |
-| [[Laboratory]] | the Archive of Scores |
+| [[Laboratory]] | the [[Archive]] of Scores |
 | [[History]] | the Remembered |
 | [[Level]] | Harmonic |
-| Strong / weak [[End]] | high note / low note |
+| [[Strong]] / [[Weak]] [[End]] | high note / low note |
 | [[Class]] | Voice: Low, Hearth, Forge, High |
 | [[Social]] / [[Industrial]] | voices / instruments |
 | [[Hero]] | Cantor |
@@ -125,7 +126,8 @@ The Hymnal numbers its verses in its own way.
 
 ## Human and Alien traits
 
-Optional facts of today's Deck. In Overtone they are the scale the
+Optional facts of today's [[Deck]]. In **Overtone** they are the scale
+the
 Reed and the Bell happen to share:
 
 1. **The same scale**: 2:1 is 2:1 under every sun, so both peoples
@@ -134,7 +136,7 @@ Reed and the Bell happen to share:
    the octave, the fourth, the minor third and the septimal tone.
 3. **Harmonics 1 to 8**.
 4. **Five voices in breath**, and three tunings a verse.
-5. **Rattles**: the Tools.
+5. **Rattles**: the [[Tool]]s.
 
 ## Canon
 
@@ -164,13 +166,13 @@ Reed and the Bell happen to share:
 
 ## Strains
 
-1. **Built on a deck pattern**: the intervals come from today's Deck,
-   which is optional. The resonance itself is general, since any
-   Level is a harmonic and any two Ends are two harmonics. An
-   asymmetric faction with other Levels keeps the physics and loses
-   only the neat pairs. The same scale for both peoples also reads as
-   a fixed set of designs, while a people builds what it wants, see
-   [[LoreRequirements]].
+1. **Built on a deck pattern**: the intervals come from today's
+   [[Deck]], which is optional. The resonance itself is general, since
+   any [[Level]] is a harmonic and any two [[End]]s are two harmonics.
+   An [[Asymmetric]] [[Faction]] with other [[Level]]s keeps the
+   physics and loses only the neat pairs. The same scale for both
+   peoples also reads as a fixed set of designs, while a people builds
+   what it wants, see [[LoreRequirements]].
 2. **Fantasy drift**: song as physics can read as magic. It has to
    stay resonance, with numbers, to remain science fiction.
 3. **Soft battles**: a contest of songs can sound gentle, so the

@@ -4,9 +4,9 @@ scope: advanced
 ---
 
 1. **Heritage** is [[Culture]] [[TechnologyModifier]]
-2. While the player has an [[ActiveFor|active]] card with
-   **Heritage**, the [[Damaged]] cards of its [[Faction]] count for
-   [[GalacticDiaspora|Galactic Diaspora]]
+2. While the player has an [[ActiveFor|Active]] [[Card]] with
+   **Heritage**, the [[Damaged]] [[Card]]s of its [[Faction]] count
+   for [[GalacticDiaspora|Galactic Diaspora]]
 
 #### Notes
 

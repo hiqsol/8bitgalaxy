@@ -5,7 +5,7 @@ scope: meta
 
 # Review process
 
-How the rule review converges on a clear duel: when an item opens,
+How the rule review converges on a clear [[Duel]]: when an item opens,
 when it closes and when review stops. [[Backlog]] holds the items,
 [[Guidance]] the answers, [[Diagnostic]] tests them.
 
@@ -20,8 +20,8 @@ when it closes and when review stops. [[Backlog]] holds the items,
 	3. A batch makes a new version, its clarity is measured again
 3. **Round** of clarification, repeated until a game needs no new
    ruling:
-	1. Play the frozen version, on paper or AI-vs-AI, from the `core`
-	   and `duel` notes, see [[Playtest]]
+	1. [[Play]] the frozen version, on paper or AI-vs-AI, from the
+	   `core` and `duel` notes, see [[Playtest]]
 	2. Record every ruling the referee makes where the notes are
 	   silent or read two ways
 	3. Each ruling becomes an issue `I<n>`, answered in [[Guidance]]
@@ -37,11 +37,11 @@ when it closes and when review stops. [[Backlog]] holds the items,
    proposal: what was considered, reopen only with evidence from a
    played game
 7. **Joins**: an answered question that combines two pages becomes an
-   example note on the more specific page, e.g. an Upgrade of a
-   Depleted Structure on [[Upgrade]]
+   example note on the more specific page, e.g. an [[Upgrade]] of a
+   [[Depleted]] [[Structure]] on [[Upgrade]]
 8. **Measures** per round:
 	1. Rulings per playtest game, falling round by round
-	2. Diagnostic agreement: the share of questions where every
+	2. [[Diagnostic]] agreement: the share of questions where every
 	   reader picks the designer's option
 	3. Not a measure: the number of review findings, it follows how
 	   hard the review looks

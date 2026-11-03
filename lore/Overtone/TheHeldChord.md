@@ -442,7 +442,7 @@ That is why we sing the hold before we sing the chord.
 | A struck note falls, the chord is held, not struck | [[Singularity#Notes#4]], [[Depleted]] |
 | The Great Horn bends space: few places per star | [[LoreRequirements#1]] |
 | Ione raised at the first note, grown step by step | [[Create#4]], [[Upgrade#5.4]] |
-| Ione's low note is the Low seventh | [[Deck]] Hero 8S |
+| Ione's low note is the Low seventh | [[Deck]] [[Hero]] 8S |
 | The Bell sing the same intervals | [[Faction#5.1]] |
 | Silence around the inner stars | [[Void]], [[Navigation]] |
 | Tamas catches every passing song | [[Pinning#1]] |
@@ -463,14 +463,14 @@ That is why we sing the hold before we sing the chord.
 | The *Wren* and the rattle sung out hushed under the tower | [[Stealth#4]], [[Stealth#5]] |
 | A note lent from breath is heard by all | [[Combat#5]], [[Stealth#Notes#2]] |
 | The hushed are named and unhushed at the weighing | [[Hidden#4.4]], [[Hidden#5.1]], [[Combat#8]] |
-| The Hush-tower answers at its harmonic | [[Defense#3]], [[Deck]] Base 4M |
+| The Hush-tower answers at its harmonic | [[Defense#3]], [[Deck]] [[Base]] 4M |
 | Charge poured in, up to what each voice carries | [[Boost]] |
 | No turning over in another people's verse | [[Manage]], [[Turn#2]] |
 | Ione could lend one note, and would go to rest | [[Support]], [[Defense#3]], [[Deplete#1.1]] |
 | A margin of one would shield the *Wren* | [[Combat#9.1]], on hold |
 | Twenty-six against twenty-six, the tie to the ground | [[Combat#8.3]], on hold |
 | No margin, no shield: all who answered are silenced | [[Combat#9.1]], [[Combat#9.2]], on hold |
-| Silenced Tamas catches nothing | [[Pinning#1]], Enabled only |
+| Silenced Tamas catches nothing | [[Pinning#1]], [[Enabled]] only |
 | The count of a held breath is seen, not its voices | [[Hand#2]], assumed |
 | Survivors would move in and begin a second song | [[Combat#9.3]], on hold |
 | No war voice in reach, the last breath can't lead | [[Attack#4]], [[PerformAction#1.4]] |

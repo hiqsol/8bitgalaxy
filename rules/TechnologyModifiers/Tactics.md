@@ -5,7 +5,7 @@ scope: advanced
 
 1. **Tactics** is [[Military]] [[TechnologyModifier]]
 2. **Tactics** adds +1 [[MilitaryPower]] when the direct attacking
-   participants include a [[Hero]] and a [[Ship]]
+   [[Participants]] include a [[Hero]] and a [[Ship]]
 
 #### Notes
 

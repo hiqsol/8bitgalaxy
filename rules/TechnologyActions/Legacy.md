@@ -5,7 +5,8 @@ scope: objectives
 
 1. **Legacy** is [[Culture]] [[TechnologyAction]]
 2. **Legacy** is an [[ImmediateAction]]
-3. **Legacy** moves a card from [[Discard]] to the [[History]] pile
+3. **Legacy** moves a [[Card]] from [[Discard]] to the [[History]]
+   pile
 
 #### Notes
 

@@ -6,14 +6,14 @@ scope: advanced
 1. **Decapitation** is [[Military]] [[TechnologyAction]]
 2. **Decapitation** is an [[Attack]] on one rival [[Enabled]]
    [[Hero]] in the target [[Star]]
-3. The attacker selects that Hero as the only defending direct
+3. The [[Attacker]] selects that [[Hero]] as the only defending direct
    participant, see [[Combat]]
-4. The defender adds no direct participants from the target Star,
-   only supporters
+4. The [[Defender]] adds no [[Direct participant]]s from the target
+   [[Star]], only [[Supporter]]s
 
 #### Notes
 
-1. A strike at the leader through its guard, toward the [[Military]]
-   victory, see [[Goal]]
-2. Supporters still defend: [[Hand]] cards and remote groups, see
-   [[Support]]
+1. A strike at the [[Leader]] through its guard, toward the
+   [[Military]] victory, see [[Goal]]
+2. [[Supporter]]s still defend: [[Hand]] [[Card]]s and remote
+   [[Group]]s, see [[Support]]

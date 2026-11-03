@@ -3,7 +3,7 @@ status: draft
 scope: core
 ---
 
-1. **Base** is a card [[Type]]
+1. **Base** is a [[Card]] [[Type]]
 2. **Base** represents an orbital station
 3. [[Role]] = [[Structure]]
 4. [[Origin]] = [[Industrial]]

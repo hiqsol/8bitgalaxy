@@ -12,5 +12,5 @@ scope: core
 	4. [[GalaxyDeck]] composition, see [[Galaxy]]
 	5. **Ancient deck** and **World deck**, see [[Ancient]], [[World]]
 	6. Starting [[Home]] piles
-3. Scenarios:
+3. **Scenarios**:
 	1. [[Duel]]

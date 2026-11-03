@@ -1,54 +1,58 @@
 ---
 status: draft
 scope: duel
+aliases: [Grow, Enhance, Paid End]
 ---
 
 1. **Upgrade** is [[Culture]] and [[Production]] [[TechnologyAction]]
    of [[Hub]]
 2. **Upgrade** comes in two flavours:
-	1. **Grow**: only for [[Social]] cards, paid in [[Culture]]
-	2. **Enhance**: only for [[Industrial]] cards, paid in
+	1. **Grow**: only for [[Social]] [[Card]]s, paid in [[Culture]]
+	2. **Enhance**: only for [[Industrial]] [[Card]]s, paid in
 	   [[Production]]
-3. **Upgrade** replaces a card on the [[Field]] with another card of
-   the same type, the player selects the **paid End** of the new
-   card, see [[End]]
-4. **Direction**: [[Hub]] to the old card's [[Star]]
+3. **Upgrade** replaces a [[Card]] on the [[Field]] with another
+   [[Card]] of the same [[Type]], the player selects the **paid End**
+   of the new [[Card]], see [[End]]
+4. **Direction**: [[Hub]] to the old [[Card]]'s [[Star]]
 5. **Requirements**:
-	1. Old card is face up in a [[Slot]]: a [[Damaged]] or [[Hidden]]
-	   card can't be upgraded
-	2. Old card is the target, not a participant, see
+	1. Old [[Card]] is face up in a [[Slot]]: a [[Damaged]] or
+	   [[Hidden]] [[Card]] can't be upgraded
+	2. Old [[Card]] is the target, not a participant, see
 	   [[PerformAction]]
-	3. New card must be available at [[Factory]]
-	4. **Grow** goes strictly one [[Level]] up: the paid End has the
-	   current Level of the old card + 1
-	5. **Enhance** pays any End: its Level can be greater, equal or
-	   lower than the current Level of the old card, a downgrade is
-	   allowed
-	6. The **hub** for the card, as for [[Create]], see [[Hub]]
-6. **Cost**: [[Price]] of the paid End **minus** the current [[Level]]
-   of the old card, at least 1
+	3. New [[Card]] must be available at [[Factory]]
+	4. **Grow** goes strictly one [[Level]] up: the **Paid End** has
+	   the current [[Level]] of the old [[Card]] + 1
+	5. **Enhance** pays any [[End]]: its [[Level]] can be greater,
+	   equal or lower than the current [[Level]] of the old [[Card]],
+	   a downgrade is allowed
+	6. The **hub** for the [[Card]], as for [[Create]], see [[Hub]]
+6. **Cost**: [[Price]] of the **Paid End** **minus** the current
+   [[Level]] of the old [[Card]], at least 1
 7. **Outcome**:
-	1. New card substitutes the old card in its Slot, the paid End up
-	2. Old card goes to a selected [[Factory]] pile
+	1. New [[Card]] substitutes the old [[Card]] in its [[Slot]], the
+	   **Paid End** up
+	2. Old [[Card]] goes to a selected [[Factory]] pile
 
 #### Notes
 
-1. The Field shows the Cost: the end in use sets the Level, the paid
-   End sets the Price. In the [[Deck]] every **Grow** costs 2, an
-   **Enhance** from a strong end to a strong end 2 Levels up 3, 4
-   Levels up 5
-2. A [[Structure]] paid on its strong End comes [[Ready]], an
-   **Upgrade** restores a Depleted one, on its weak End it comes
-   [[Depleted]] and costs 1 less; a [[Ship]]'s Ends cost the same
-3. A higher [[Social]] card comes only by **Grow** of a created one,
-   see [[Create]]. One Level at a time slows the Social cards: from a
-   strong End a **Grow** lands on the weak End of a bigger card, e.g.
-   from 2 to the 3 of a 4/3, a rotation brings the strong End,
-   [[Restore]] for a [[Colony]], [[Manage]] for a [[Hero]]. A Hero
-   takes three **Grows** and three rotations from Level 2 to its
-   crown; a Colony ends at Level 4
-4. A [[Ship]] can **Enhance** to its crown and a [[Base]] ends at
-   Level 4. A [[Hyperstructure]] is built by its own rule, not by
-   upgrading a Base or Colony
-5. An upgraded Actor stays on the Field and acts in the same
+1. The [[Field]] shows the [[Cost]]: the [[End]] in use sets the
+   [[Level]], the paid [[End]] sets the [[Price]]. In the [[Deck]]
+   every **Grow** costs 2, an **Enhance** from a [[Strong]] [[End]] to
+   a [[Strong]] [[End]] 2 [[Level]]s up 3, 4 [[Level]]s up 5
+2. A [[Structure]] paid on its [[Strong]] [[End]] comes [[Ready]], an
+   **Upgrade** [[Restore]]s a [[Depleted]] one, on its [[Weak]]
+   [[End]] it comes [[Depleted]] and costs 1 less; a [[Ship]]'s
+   [[End]]s cost the same
+3. A higher [[Social]] [[Card]] comes only by **Grow** of a created
+   one, see [[Create]]. One [[Level]] at a time slows the [[Social]]
+   [[Card]]s: from a [[Strong]] [[End]] a **Grow** lands on the
+   [[Weak]] [[End]] of a bigger [[Card]], e.g. from 2 to the 3 of a
+   4/3, a rotation brings the [[Strong]] [[End]], [[Restore]] for a
+   [[Colony]], [[Manage]] for a [[Hero]]. A [[Hero]] takes three
+   **Grows** and three rotations from [[Level]] 2 to its [[Crown]]; a
+   [[Colony]] ends at [[Level]] 4
+4. A [[Ship]] can **Enhance** to its [[Crown]] and a [[Base]] ends at
+   [[Level]] 4. A [[Hyperstructure]] is built by its own rule, not by
+   upgrading a [[Base]] or [[Colony]]
+5. An upgraded [[Actor]] stays on the [[Field]] and acts in the same
    [[Turn]]

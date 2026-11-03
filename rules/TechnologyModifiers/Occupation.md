@@ -10,6 +10,6 @@ scope: advanced
 
 #### Notes
 
-1. A warship holds a Star against a lone [[Hero]] or a civil
-   [[Ship]]: the Star is the occupier's, not [[Disputed]]
-2. Two occupiers tie as usual: the Star is [[Disputed]]
+1. A warship holds a [[Star]] against a lone [[Hero]] or a civil
+   [[Ship]]: the [[Star]] is the occupier's, not [[Disputed]]
+2. Two occupiers tie as usual: the [[Star]] is [[Disputed]]

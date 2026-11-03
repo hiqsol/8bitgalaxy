@@ -1,4 +1,4 @@
-.PHONY: docs view serve check stats lint wrap links hooks
+.PHONY: docs view serve check stats lint wrap link links hooks
 
 # uwiki.toml holds uwiki defaults: excluded build/, checks, schema
 MDLINT ?= npx --yes markdownlint-cli2@0.23.3
@@ -24,6 +24,8 @@ lint:
 	@echo uwiki wrap --check; uwiki wrap --check $(MD)
 wrap:
 	@echo uwiki wrap; uwiki wrap $(MD)
+link:
+	uwiki link .
 links:
 	uwiki ls --external . | lychee -
 hooks:

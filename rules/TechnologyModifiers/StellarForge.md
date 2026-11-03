@@ -10,5 +10,6 @@ scope: advanced
 
 #### Notes
 
-1. Production raises wonders alone on its way to seven, see [[Goal]]
+1. [[Production]] raises wonders alone on its way to seven, see
+   [[Goal]]
 2. Like Engineering Genius of Through the Ages

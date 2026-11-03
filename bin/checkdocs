@@ -44,7 +44,10 @@ KINDS = {
     'Home': {'Home'},
 }
 KIND_PAGES = {'BasicAction', 'TechnologyAction', 'TechnologyModifier', 'Hub', 'Card', 'Deck', 'Property', 'Resource', 'State', 'Home'}
-CLASS_TECH = re.compile(r'\[\[(%s)\]\] technolog|technology Level' % '|'.join(CLASSES.values()))
+CLASS_TECH = re.compile(r'\[\[(%s)\]\] (?:technolog|\[\[Technology\]\])|(?:technology|\[\[Technology\]\]) \[?\[?Level'
+                        % '|'.join(CLASSES.values()))
+# [[Page|text]], [[Page#3]], escaped [[Page\|text]] in tables: the markdown wikilinks extension takes only [[Page]]
+WIKILINK = re.compile(r'\[\[([^\]|#]*)(#[^\]|]*)?(?:\\?\|([^\]]*))?\]\]')
 
 problems = []
 
@@ -59,7 +62,8 @@ class Page:
                                extension_configs={'wikilinks': {'build_url': lambda label, base, end: label}})
         self.path = path
         self.text = path.read_text()
-        self.tree = ET.fromstring(f'<div>{md.convert(self.text)}</div>')
+        html = md.convert(WIKILINK.sub(lambda m: f'<a href="{m[1]}">{m[3] or m[1] + (m[2] or "")}</a>', self.text))
+        self.tree = ET.fromstring(f'<div>{html}</div>')
         self.meta = {k: ' '.join(v) for k, v in md.Meta.items()}
 
     def table(self):
@@ -130,12 +134,14 @@ def check_page(page):
         report(page.path, 'no numbered rules')
 
 
-def deck_assignments(deck):
-    """Map technology -> {(card, end): class} from the Deck table."""
+def deck_assignments(deck, pages):
+    """Map technology -> {(card, end): class} from the Deck table, other links in it are no technologies."""
     result, card = {}, None
     for row in deck.table():
         card = text(row[0]) or card
         for tech in links(row[4]) + links(row[5]):
+            if tech in pages and pages[tech].path.parent.name not in TECH_DIRS:
+                continue
             result.setdefault(tech, {})[(card, text(row[1]))] = text(row[3])
     return result
 
@@ -148,7 +154,7 @@ def card_types(pages):
 
 def check_technologies(pages):
     catalog, deck = pages['Technology'], pages['Deck']
-    assigned = deck_assignments(deck)
+    assigned = deck_assignments(deck, pages)
     types = card_types(pages)
     # Hub actions (Create) are technologies via the hub
     cataloged = set(links(pages['Hub'].tree))
