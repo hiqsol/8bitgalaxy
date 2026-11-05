@@ -1,5 +1,5 @@
 ---
-status: draft
+status: polish
 scope: core
 ---
 
@@ -39,22 +39,30 @@ Every page states its `scope` in frontmatter:
 3. `advanced` - more [[Technology|Technologies]] and rules on top of
    duel
 4. Extensions:
-	1. `galaxy` - [[Galaxy]] deck: [[Event]]s, [[Ancient]]s,
-	   [[Derelict]]s
-	2. `objectives` - [[Objective]]s and
-	   [[VictoryPoints|Victory points]]
+	1. `events` - the [[Galaxy]] plays its [[GalaxyDeck]]:
+	   [[Event]]s, [[Derelict]]s, [[WarpStorm|Warp storm]]s
+	2. `objectives` - [[Objective]]s, [[History]] and [[Legacy]]
 	3. `politics` - [[Politics]]
-5. `meta` - [[Backlog]] and documentation support, e.g.
+5. `meta` - [[Backlog]], review and documentation support, e.g.
    [[Pseudographics]], kept in [meta/](../meta/Backlog.md)
-6. `idea` - out of the rules, kept in [ideas/](../ideas/README.md)
+6. `playtest` - [[Playtest]] procedure, [[Notation]] and played
+   games, kept in [games/](../games/README.md)
+7. `idea` - out of the rules, kept in [ideas/](../ideas/README.md)
    for later
-7. `lore` - the setting, kept in [lore/](../lore/LoreVariants.md)
+8. `lore` - the setting, kept in [lore/](../lore/LoreVariants.md)
 
 #### Status
 
 Every page states its `status` in frontmatter:
 
-1. `stub` - empty or unfinished
-2. `draft` - written, not approved
-3. `stable` - approved
-4. `WIP` - active review
+1. `stub` - a name or an idea, not enough to play or read
+2. `draft` - written and playable as read, not reviewed yet
+3. `issues` - has a known issue: an open issue or proposal of the
+   [[Backlog]], or a blocker in [[Guidance]]
+4. `polish` - almost stable: works as written, only a
+   simplification or a question to watch in playtest is open
+5. `stable` - approved by the designer: played or reviewed and
+   nothing open cites it, reopened only by evidence from a played
+   game
+6. `living` - a working meta page that never finishes, e.g.
+   [[Backlog]], [[Guidance]]

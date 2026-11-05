@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: galaxy
+scope: events
 aliases: [Develop, Expand]
 ---
 

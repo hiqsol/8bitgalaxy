@@ -1,5 +1,5 @@
 ---
-status: WIP
+status: polish
 scope: meta
 ---
 

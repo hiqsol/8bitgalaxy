@@ -1,5 +1,5 @@
 ---
-status: draft
+status: issues
 scope: core
 aliases: [Star Capacity]
 ---

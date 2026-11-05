@@ -1,5 +1,5 @@
 ---
-status: draft
+status: stable
 scope: core
 aliases: [Not-alive]
 ---

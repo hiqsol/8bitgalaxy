@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: galaxy
+scope: events
 ---
 
 1. **Galaxy scrap** is a pile in [[Galaxy]] [[Home]]

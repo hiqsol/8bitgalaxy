@@ -1,5 +1,5 @@
 ---
-status: draft
+status: issues
 scope: politics
 aliases: [Politics Round]
 ---

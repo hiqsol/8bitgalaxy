@@ -1,6 +1,6 @@
 ---
-status: draft
-scope: galaxy
+status: issues
+scope: events
 aliases: [Ancient Outbreak, Ancient Invasion, Ancient production, Peace Treaty]
 ---
 

@@ -1,5 +1,5 @@
 ---
-status: WIP
+status: draft
 scope: meta
 ---
 

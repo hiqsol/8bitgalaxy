@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: core
+scope: lore
 ---
 
 ### Technical description

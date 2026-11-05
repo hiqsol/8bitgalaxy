@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: meta
+scope: playtest
 ---
 
 # Game 3: Turtle 1-0 Gambler

@@ -19,6 +19,6 @@ mentions-ignore = ["Star Realms", "Twilight Imperium", "Star Wars", "Forbidden S
 # bin/checkdocs keeps them the same
 [schema]
 _required = ["scope", "status"]
-scope = ["core", "duel", "advanced", "galaxy", "objectives", "politics", "meta", "idea", "lore"]
-status = ["stub", "draft", "stable", "WIP"]
+scope = ["core", "duel", "advanced", "events", "objectives", "politics", "meta", "playtest", "idea", "lore"]
+status = ["stub", "draft", "issues", "polish", "stable", "living"]
 aliases = "list"

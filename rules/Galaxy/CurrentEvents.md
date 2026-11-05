@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: galaxy
+scope: events
 ---
 
 1. **Current events** is a pile in [[Galaxy]] [[Home]]

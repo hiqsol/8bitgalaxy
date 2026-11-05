@@ -39,6 +39,16 @@ markdown file, every page must be reachable by links from
 `README.md`.
 `uwiki.toml` holds uwiki defaults and the frontmatter schema,
 its `status` and `scope` values are the ones `rules/index.md` lists.
+The folder sets the scope: `rules/` takes the rule scopes, `meta/`
+`meta` or `playtest`, `games/` `playtest`, `ideas/` `idea`, `lore/`
+`lore`.
+A page is `issues` while an open issue or proposal of the [[Backlog]]
+or a blocker in [[Guidance]] is about it, `polish` while only a
+simplification or a question to watch in playtest is, the item cites
+its rule by item link. When the last one closes, set the page
+`draft`, or `stable` only when I approve it. `make check` reports a
+`stable` page that an open item cites and a `polish` page that an
+issue cites.
 [[Move]] or rename a page with `uwiki mv <from> <to>`, it rewrites
 every link to it and moves it with `git mv`.
 `make links` checks external links, `make stats` counts pages.

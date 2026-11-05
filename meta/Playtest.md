@@ -1,6 +1,6 @@
 ---
-status: WIP
-scope: meta
+status: draft
+scope: playtest
 ---
 
 # Playtest

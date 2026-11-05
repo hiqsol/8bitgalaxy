@@ -1,5 +1,5 @@
 ---
-status: draft
+status: issues
 scope: duel
 aliases: [Crown, Starting cards]
 ---

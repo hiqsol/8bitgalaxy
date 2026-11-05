@@ -1,5 +1,5 @@
 ---
-status: draft
+status: polish
 scope: duel
 aliases: [Recon, Survey]
 ---

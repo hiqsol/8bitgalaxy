@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: meta
+scope: playtest
 ---
 
 # Game 2: Brute 0-1 Scholar

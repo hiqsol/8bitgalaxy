@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: galaxy
+scope: events
 ---
 
 1. **Warp storm** is a reddish marker tile of the [[Galaxy]]

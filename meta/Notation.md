@@ -1,6 +1,6 @@
 ---
-status: WIP
-scope: meta
+status: draft
+scope: playtest
 ---
 
 1. **Notation** writes [[Card]]s, places and plays as text: rules

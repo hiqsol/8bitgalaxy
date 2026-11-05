@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: meta
+scope: playtest
 ---
 
 # Game 1: Warlord 1-0 Architect

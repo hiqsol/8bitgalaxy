@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: meta
+scope: playtest
 ---
 
 # 8-bit Galaxy: first duel playtest report

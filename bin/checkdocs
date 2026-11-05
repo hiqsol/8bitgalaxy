@@ -4,12 +4,14 @@
 # dependencies = ["markdown"]
 # ///
 """Check the docs wiki rules uwiki does not know: numbered rules, technology catalog, page templates,
-and that the uwiki.toml schema allows the status and scope values rules/index.md documents.
+that the uwiki.toml schema allows the status and scope values rules/index.md documents,
+that the folder of every page allows its scope, and that no open Backlog or Guidance item cites a stable page and no issue cites a polish page.
 
 Usage: bin/checkdocs  (exits 1 on problems, uv installs dependencies), make check runs uwiki check first
 """
 
 import re
+import subprocess
 import sys
 import tomllib
 import xml.etree.ElementTree as ET
@@ -20,6 +22,12 @@ import markdown
 ROOT = Path(__file__).resolve().parent.parent
 PATHS = ['rules', 'meta', 'ideas']
 FILES = sorted(f for p in PATHS for f in (ROOT / p).glob('**/*.md'))
+# folder: allowed scopes, rules/ takes every scope the others don't, '' is the repo root
+FOLDER_SCOPES = {'meta': {'meta', 'playtest'}, 'games': {'playtest'}, 'ideas': {'idea'}, 'lore': {'lore'},
+                 '': {'meta', 'playtest'}}
+FRONTMATTER = re.compile(r'---\n(.*?)\n---\n', re.S)
+# an open Backlog item: from "- [ ] **I1" to the next line that is not indented
+OPEN_ITEM = re.compile(r'^- \[ \] \*\*[IPS]\d.*(?:\n[ \t]+.*)*', re.M)
 CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
 TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')
 TECH_BASES = {'TechnologyAction', 'TechnologyModifier', 'Hub'}
@@ -129,8 +137,63 @@ def check_schema(index):
             report(index.path, f'{heading} differs from uwiki.toml schema {key}: {diff}')
 
 
+def frontmatter(path):
+    """Frontmatter keys of a page, lists like aliases as lists."""
+    match = FRONTMATTER.match(path.read_text())
+    meta = dict(re.findall(r'^(\w+):\s*(.*)$', match[1], re.M)) if match else {}
+    if 'aliases' in meta:
+        meta['aliases'] = [a.strip() for a in meta['aliases'].strip('[]').split(',')]
+    return meta
+
+
+def all_pages():
+    """Frontmatter of every markdown page of the repo by path."""
+    out = subprocess.run(['git', 'ls-files', '*.md'], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+    return {ROOT / f: frontmatter(ROOT / f) for f in out.split()}
+
+
+def check_scopes(metas):
+    """The folder allows the scope, rules/ takes the rule scopes, living is for meta pages."""
+    schema = set(tomllib.loads((ROOT / 'uwiki.toml').read_text())['schema']['scope'])
+    rule_scopes = schema - set().union(*FOLDER_SCOPES.values())
+    for path, meta in metas.items():
+        parts = path.relative_to(ROOT).parts
+        folder = parts[0] if len(parts) > 1 else ''
+        allowed = rule_scopes if folder == 'rules' else FOLDER_SCOPES.get(folder)
+        if allowed is not None and meta.get('scope') not in allowed:
+            report(path, f'scope {meta.get("scope")} not allowed in {folder or "the root"}: {", ".join(sorted(allowed))}')
+        if meta.get('status') == 'living' and meta.get('scope') != 'meta':
+            report(path, 'status living is for meta pages only')
+
+
+def open_items():
+    """Open items as (source, kind, text): kind issue, or polish for a simplification or a question to watch."""
+    backlog = (ROOT / 'meta/Backlog.md').read_text()
+    for section in re.split(r'^## ', backlog, flags=re.M):
+        watch = section.startswith('Watch in playtest')
+        for item in OPEN_ITEM.findall(section):
+            kind = 'polish' if watch or item.startswith('- [ ] **S') else 'issue'
+            yield 'meta/Backlog.md', kind, item
+    yield 'meta/Guidance.md', 'issue', (ROOT / 'meta/Guidance.md').read_text()
+
+
+def check_cited(metas):
+    """No open item cites a stable page by item link, no issue cites a polish page."""
+    names = {}
+    for path, meta in metas.items():
+        for name in [path.stem] + meta.get('aliases', []):
+            names[name] = path
+    for source, kind, item in open_items():
+        for name, anchor in sorted({m[:2] for m in WIKILINK.findall(item)}):
+            path = names.get(name)
+            status = path and metas[path].get('status')
+            if anchor and (status == 'stable' or status == 'polish' and kind == 'issue'):
+                label = item.split('**')[1] if item.count('**') > 1 else item[:40]
+                report(path, f'{status}, but {source} cites [[{name}{anchor}]] in {kind} {label}')
+
+
 def check_page(page):
-    if page.meta.get('scope') != 'meta' and page.meta.get('status') != 'stub' and page.tree.find('ol') is None:
+    if page.meta.get('scope') not in ('meta', 'playtest') and page.meta.get('status') != 'stub' and page.tree.find('ol') is None:
         report(page.path, 'no numbered rules')
 
 
@@ -214,6 +277,9 @@ def check_technologies(pages):
 def main():
     pages = {path.stem: Page(path) for path in FILES}
     check_schema(pages['index'])
+    metas = all_pages()
+    check_scopes(metas)
+    check_cited(metas)
     for page in pages.values():
         check_page(page)
     check_technologies(pages)

@@ -1,6 +1,6 @@
 ---
-status: draft
-scope: galaxy
+status: issues
+scope: events
 ---
 
 1. **Derelict** is a neutral [[Card]] lying in a [[Star]]

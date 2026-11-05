@@ -1,5 +1,5 @@
 ---
-status: draft
+status: polish
 scope: core
 ---
 
@@ -198,7 +198,7 @@ scope: core
 66. [[Legacy]]: 4c - [[Action]] - [[Colony]] - Player - objectives
     +[[History]], Immediate: a [[Card]] from the [[Discard]] goes to
     [[History]]
-67. [[NovaBomb]]: 8m - [[Action]] - [[Ship]] - [[Galaxy]] - galaxy
+67. [[NovaBomb]]: 8m - [[Action]] - [[Ship]] - [[Galaxy]] - events
     [[Destroy]]s every [[Card]] in a [[Star]] for their total
     [[Level]], its own [[Card]] too
 

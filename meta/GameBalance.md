@@ -1,6 +1,6 @@
 ---
-status: draft
-scope: core
+status: polish
+scope: meta
 ---
 
 1. Contest is even, like in Chess:

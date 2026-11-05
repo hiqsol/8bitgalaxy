@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: galaxy
+scope: events
 ---
 
 1. **Galaxy deck** is a pile in [[Galaxy]] [[Home]]

@@ -1,6 +1,6 @@
 ---
-status: draft
-scope: galaxy
+status: issues
+scope: events
 aliases: [Campaign, Dangerous, Resourceful, Citadel, Senate, Dyson Sphere, Warp Gate]
 ---
 

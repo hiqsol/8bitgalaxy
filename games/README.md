@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: meta
+scope: playtest
 ---
 
 # Played games

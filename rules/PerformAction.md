@@ -1,5 +1,5 @@
 ---
-status: draft
+status: polish
 scope: core
 aliases: [Participants, Direct participant, Targets, Group, Requirements, Declare, Commit, Resolve]
 ---

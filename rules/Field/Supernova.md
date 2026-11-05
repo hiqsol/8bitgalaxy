@@ -1,5 +1,5 @@
 ---
-status: draft
+status: polish
 scope: advanced
 aliases: [Supernova event]
 ---

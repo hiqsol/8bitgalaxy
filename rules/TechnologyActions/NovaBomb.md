@@ -1,6 +1,6 @@
 ---
 status: draft
-scope: galaxy
+scope: events
 ---
 
 1. **Nova Bomb** is [[Military]] [[TechnologyAction]]

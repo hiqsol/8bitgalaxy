@@ -1,5 +1,5 @@
 ---
-status: WIP
+status: living
 scope: meta
 ---
 
@@ -258,10 +258,10 @@ All `advanced`.
 	- b) [[PromissoryNote]]: what each side gets.
 	- c) [[PromissoryNote]]: whether the [[Card]] returns to its
 	  owner.
-- [ ] **I45. Derelict details.** [[Derelict]] (`galaxy`):
+- [ ] **I45. Derelict details.** [[Derelict]] (`events`):
 	- a) Which [[Star]] a [[GalaxyMove]] puts a [[Derelict]] into.
 	- b) The recruit [[Cost]].
-- [ ] **I89. Galaxy flow.** [[Galaxy]] (`galaxy`): → P68
+- [ ] **I89. Galaxy flow.** [[Galaxy]] (`events`): → P68
 	- a) [[Turn]] has no step for the [[GalaxyMove]]: when in the
 	  [[Turn]], by whom.
 	- b) When a [[Card]] in [[FutureEvents]] is evaluated.

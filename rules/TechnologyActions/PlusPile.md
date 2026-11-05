@@ -1,5 +1,5 @@
 ---
-status: draft
+status: stub
 scope: advanced
 ---
 
