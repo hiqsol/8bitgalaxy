@@ -29,7 +29,7 @@ Read a story first, then its variant page.
 | Tone | Hard SF, documentary | Kafka with starships, legal puzzle | Myth, lyrical |
 | Story | [[Homefall]]: comeback after the homeworld falls | [[Habeas]]: a captured hero | [[TheHeldChord]]: a great battle in [[Twilight]] |
 | Story form | Literary story in Ukrainian, few epigraphs | Asimov edge case | A tale told to children |
-| Explains best | The tear, visibility, [[Space]] | Presence, the fallen, leaders as legal facts | The tear as sound, held versus spent |
+| Explains best | The tear, visibility, [[Space]] | Presence, the struck, leaders as legal facts | The tear as sound, held versus spent |
 | Weakest point | The [[Ancient]]s' projections need saying | Everything by fiat, so it tests nothing | Built on a deck pattern, can drift into fantasy |
 
 ## Recommendation
@@ -56,8 +56,8 @@ support all three:
    goes on top of a [[Factory]] pile, and two [[Create]]s in one
    [[Turn]] rebuild it in any [[Wild]] [[Star]], with no [[Ancient]]s
    rising, since only an [[Attack]] conquest calls them. Losing the
-   home [[Star]] doesn't end the game ([[Goal#Notes#6]]). The old home
-   becomes [[Wild]] once its [[World slot]] is empty, so the
+   home [[Star]] doesn't end the game ([[PaxGalactica#Notes#4]]). The
+   old home becomes [[Wild]] once its [[World slot]] is empty, so the
    [[Ancient]]s guard it against its captors too.
 2. **Captured hero**: a [[Damaged]] [[Hero]] in a rival-controlled
    [[Star]] is [[ControlledBy|Controlled by]] the rival
@@ -90,29 +90,23 @@ not in the [[Backlog]] yet:
 
 1. **Homeworld Level**: [[Homeworld]] prints no [[Level]] or
    [[Price]], so [[Homefall]] doesn't name the cost of rebuilding it.
-2. **Recover Cost**: "the current [[Level]] of the target", but a
-   [[Damaged]] [[Card]] lies on its [[Back]]. Which [[Level]] counts,
-   which [[Class]] pays a [[Heal]] or a [[Fix]], and which [[End]]
-   comes up afterward?
-3. **Recover on a captive**: today's text allows a [[Recover]] of a
-   [[Card]] [[ControlledBy|Controlled by]] a rival. Is that intended?
-   It is the best captured hero mechanic so far, so it may be worth
-   keeping.
-4. **No exchange**: there is no ransom, prisoner exchange or [[Card]]
+2. **Recover Class**: which [[Class]] pays a [[Heal]] or a [[Fix]],
+   and which [[End]] comes up afterward?
+3. **No exchange**: there is no ransom, prisoner exchange or [[Card]]
    trade between [[Faction]]s. [[EarlyIdeas]] has the Prisoner and
    Convoy seeds.
-5. **Carrying the fallen**: can a [[Damaged]] [[Card]] be the
+4. **Carrying the wrecked**: can a [[Damaged]] [[Card]] be the
    [[Cargo]] of a [[Move]], and can a [[Faction]] move a [[Card]] it
    doesn't control?
-6. **Create across a hidden Space**: does a [[Create]] placement route
+5. **Create across a hidden Space**: does a [[Create]] placement route
    need revealed [[Tile]]s? [[Homefall]] surveyed the lane first, to
    be safe.
-7. **Hand count**: is the number of [[Card]]s in a rival's [[Hand]]
+6. **Hand count**: is the number of [[Card]]s in a rival's [[Hand]]
    public? [[TheHeldChord]] assumes it is.
-8. **Damaged keeps its Slot**: a [[Damaged]] [[Card]] blocks a
+7. **Damaged keeps its Slot**: a [[Damaged]] [[Card]] blocks a
    [[Slot]] until it is Destroyed or [[Enabled]]. The ending of
    [[TheHeldChord]] depends on that. Is it intended?
-9. **Twilight and the Hand**: [[Singularity]] counts [[Hand]]
+8. **Twilight and the Hand**: [[Singularity]] counts [[Hand]]
    [[Card]]s at [[Check]], but the final comparison of [[Twilight]]
    comes after [[Draw]]. Which state counts?
 

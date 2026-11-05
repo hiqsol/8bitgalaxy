@@ -15,4 +15,4 @@ scope: duel
 #### Notes
 
 1. A possessed **Homeworld** counts toward the 7 [[Hyperstructure]]s
-   that trigger [[Twilight]]
+   of [[KardashevAscension|Kardashev Ascension]]

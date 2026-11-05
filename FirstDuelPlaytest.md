@@ -185,8 +185,9 @@ of B's home. B can not make a move.
 
 - **F1. One Move into the rival's only Star wins** (game 1, RG1-5):
   fixed, a [[Disputed]] [[Star]] stays active, the owner takes off and
-  acts there ([[ActiveFor#3]], [[Goal#Notes#7]]), and [[Intercept]]
-  answers a [[Move]] in; S61 tests an [[Attack]] instead.
+  acts there ([[ActiveFor#3]], [[PaxGalactica#Notes#5]]), and
+  [[Intercept]] answers a [[Move]] in; S61 tests an [[Attack]]
+  instead.
 - **F2. Singularity wins uncontested and swallows the Culture path**
   (RG2-6/10, RG3-6/8/9): fixed, it triggers [[Twilight]], the rival
   gets one [[Turn]] ([[Goal#5]], [[Twilight#3]]), it takes the four

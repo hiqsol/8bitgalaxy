@@ -29,7 +29,7 @@ below, and it waited with the terrible patience of its kind until the
 Speaker took it.
 
 *The candidacy of the Black Seal gives notice that at its next sitting
-it intends to render the fallen warrant of Leader Iver Castellan,
+it intends to render the struck warrant of Leader Iver Castellan,
 now held at Post One-One, into goods.*
 
 The Speaker read it aloud. Nobody said anything for a long time.
@@ -43,14 +43,14 @@ succeeded at the end. He had held One-One, the post at the center of
 the [[Assay]] ground, against the whole of their Contest. When the
 warrants were turned up at the close, they had won by a margin of
 three. A victor may shield its own warrants only up to its margin, and
-a defender who loses shields none. Iver fell. Two of our vessels fell
-with him. A warship of the Black Seal, a Rank 2 that had fought and so
-stood its ground, moved into the berth beside him.
+a defender who loses shields none. Iver was struck. Two of our vessels
+were struck with him. A warship of the Black Seal, a Rank 2 that had
+fought and so stood its ground, moved into the berth beside him.
 
 Now he lay in One-One with his warrant face down and its dashed end
-up, the way a fallen warrant lies. Anyone may read a fallen warrant,
+up, the way a struck warrant lies. Anyone may read a struck warrant,
 and anyone was reading his. The holder of a post holds every work and
-every fallen warrant in it. That is Article 30, and I had never hated
+every struck warrant in it. That is Article 30, and I had never hated
 an article before. The Black Seal held One-One, so they held Iver.
 
 To render a warrant is to turn it into goods. The Code permits it of
@@ -122,7 +122,7 @@ on board and comes home."
 once. The Code allows the holder of a post to answer anything that
 comes into its berths, right after the order that brought it. That is
 a Contest with *Sparrow* alone against the Black Seal's warship and
-seats. She falls beside him, and then they hold two of ours."
+seats. She is struck beside him, and then they hold two of ours."
 
 "Then she comes back out before—"
 
@@ -177,28 +177,28 @@ A remedy is not moving.
 The second was the article on remedies. It is the shortest article
 in the Code, and the oldest.
 
-*A remedy goes from the warrant that provides it to the fallen
-warrant. Its fee is the rank of the fallen.* That is all it says. It
-says the fallen warrant. It does not say a fallen warrant of the
-remedier's candidacy, or a fallen warrant in a post the remedier
+*A remedy goes from the warrant that provides it to the struck
+warrant. Its fee is the full price of the struck.* That is all it
+says. It says the struck warrant. It does not say a struck warrant of
+the remedier's candidacy, or a struck warrant in a post the remedier
 holds. A remedy reaches like any other order: it needs the reach to
 get there, and it pays the fee. It is not halted by warriors, because
-a remedy doesn't move. And it doesn't care who holds the fallen.
+a remedy doesn't move. And it doesn't care who holds the struck.
 
 The third was the article on holding. That one I had hated since the
 notice arrived. I read it now with my breath held.
 
-*The holder of a post holds every work and every fallen warrant in
+*The holder of a post holds every work and every struck warrant in
 it.* And, in the article before it, Article 29, which I had read ten
 thousand times and never heard: *A leader is held by its own
-candidacy, unless fallen.*
+candidacy, unless struck.*
 
-Unless fallen.
+Unless struck.
 
-The Black Seal held Iver because he had fallen, and only because he
-had fallen. A leader who stood was held by his own candidacy,
-wherever he stood. If he rose, they would not hold him. They could
-not render what they did not hold.
+The Black Seal held Iver because he had been struck, and only because
+he had been struck. A leader who stood was held by his own candidacy,
+wherever he stood. If he rose, they would not hold him. They could not
+render what they did not hold.
 
 I sat in the empty Council chamber with the Code open in front of me
 and the Deal still face up on the table where the Council had left
@@ -217,7 +217,7 @@ could post her to One-Zero at once; Article 13 lets a seated warrant
 go to any post where its candidacy has standing, and act the moment it
 arrives.
 
-The fee was Iver's rank, four.
+The fee was Iver's full price: his rank and one more, five.
 
 Noor gave two. Someone has to give the order. The order would come
 from a seat, and the warrant that gives it always lapses, so it might
@@ -229,7 +229,15 @@ There was a petty warrant of culture lying in front of my own seat.
 It lends a single measure and does nothing else. Article 28 had
 watched us carry it for eleven sittings.
 
-That made four.
+That made four, and the fee was five.
+
+The Treasurer said nothing. She only turned her hand over on the
+table. One scrip lay open beside her seat, left from an earlier
+sitting, because scrip outlasts the Deal. Scrip adds a measure of any
+power to any order, as much as the warrant that takes it can hold.
+Noor was Rank 2. She could hold two.
+
+That made five.
 
 ## The Remedy
 
@@ -239,8 +247,8 @@ The Marshal heard me out with his arms folded. When I finished he
 said, "And when he rises? He's standing in their post next to their
 warship."
 
-"He is held by his own candidacy," I said, "unless fallen. He won't
-be fallen. Their warship stands in One-One, and so will he. Standing
+"He is held by his own candidacy," I said, "unless struck. He won't
+be struck. Their warship stands in One-One, and so will he. Standing
 is equal. Article 29: where standing is equal, the post is contested.
 Nobody holds it, and each candidacy keeps its own."
 
@@ -274,22 +282,24 @@ of our warships lying dark in its berths, and one of theirs, and
 Iver.
 
 The order went out from *Sparrow*'s seat. *Sparrow* lent her measure.
-The petty warrant lent its measure, the first useful thing it had
-done in eleven sittings. Noor gave her two, her reach and her remedy,
-and the order crossed the passage to One-One and was not halted,
-because a remedy is not moving.
+The petty warrant lent its measure, the first useful thing it had done
+in eleven sittings. The Treasurer's scrip went to Noor. Noor gave her
+two and the scrip's one, her reach and her remedy, and the order
+crossed the passage to One-One and was not halted, because a remedy is
+not moving.
 
 The Record took it down in the Code's typeface for anyone to read:
 
-*Remedy: Leader Abadi, One-Zero, to the fallen warrant of Leader
-Castellan, One-One. Reach two, sufficient. Fee four, paid in culture.*
+*Remedy: Leader Abadi, One-Zero, to the struck warrant of Leader
+Castellan, One-One. Reach two, sufficient. Fee five, paid in culture.*
 
 And beneath it:
 
 *Leader Castellan, One-One: risen.*
 
 Iver's warrant turned over in its berth. Noor, *Sparrow* and the
-petty warrant went to the Rest, as exercised warrants do. Noor was
+petty warrant went to the Rest, as exercised warrants do, and the
+scrip was spent. Noor was
 still alive in the Rest, as everyone is alive there, and annoyed to be
 out of the sitting when she wanted to see his face.
 
@@ -325,7 +335,7 @@ in them. He rose. Nothing came in. There is nothing to answer."
 It paused, and I swear by the Code it looked at me.
 
 "Ruling," it said again. "The remedy is not a passage. The Code says
-the fallen warrant. It means the fallen warrant."
+the struck warrant. It means the struck warrant."
 
 Then both Assayers were gone, and the Rulings had one more entry. The
 Black Seal's Reader would find it in the index under R for *remedy*.
@@ -353,7 +363,7 @@ blotted once in the middle, where the writer had paused too long.
 the Black Seal wanted the rendering done at once, at the end of our
 sitting, before you could answer. I told them the Code allowed us to
 give notice, and that if we did, you might storm One-One with
-whatever you held. I told them it was the better use of a fallen
+whatever you held. I told them it was the better use of a struck
 leader: not as goods, but as bait.*
 
 *I did not tell them I had read the article on remedies too. I
@@ -393,7 +403,7 @@ order from it would bring Iver home to One-Zero.
 "Yes."
 
 "And our two warships?" He was standing beside them. "If I leave,
-One-One is theirs again, with everything fallen in it."
+One-One is theirs again, with everything struck in it."
 
 I didn't answer. He had read Article 30 as often as I had.
 
@@ -440,9 +450,9 @@ and waiting to see which of them would read it.
 
 I don't know what the blank column means. I know that a remedy is not
 a passage. I know that a leader is held by his own candidacy unless he
-has fallen. And I know that tomorrow, at One-One, the best of us will
-stand in a contested post with whatever five warrants the Assayers
-have dealt us, and the Black Seal will come.
+has been struck. And I know that tomorrow, at One-One, the best of us
+will stand in a contested post with whatever five warrants the
+Assayers have dealt us, and the Black Seal will come.
 
 I have marked the page.
 
@@ -450,10 +460,10 @@ I have marked the page.
 
 | Scene | Rule |
 |---|---|
-| The Record is public, a fallen warrant can be read | [[LoreRequirements#3]], [[Damaged#6]] |
-| Iver falls, the margin shields only the victor | [[Combat#9]], on hold |
+| The Record is public, a struck warrant can be read | [[LoreRequirements#3]], [[Damaged#6]] |
+| Iver is struck, the margin shields only the victor | [[Combat#9]], on hold |
 | The winner's warship moves in, standing its ground | [[Combat#9.3]], [[Deplete#Notes#1]] |
-| The holder holds the fallen | [[ControlledBy#3]] |
+| The holder holds the struck | [[ControlledBy#3]] |
 | Rendering: the rank into goods, the warrant destroyed | [[Recycle]] |
 | A destroyed leader can't be issued again at rank | [[Destroy]], [[Create#4]], [[Upgrade#5.4]] |
 | Five seats, dealt at the end, unknown order | [[Hand#3]], [[Turn#5]], [[DeckBuilding]] |
@@ -461,24 +471,22 @@ I have marked the page.
 | *Sparrow* would be answered on entering, before any other order | [[Intercept#2]] |
 | No ransom of warrants | none: the rules have no [[Card]] exchange |
 | A remedy is not halted | [[Pinning#2.1]] |
-| A remedy goes to the fallen, fee is its rank | [[Recover#3]] to 5 |
-| A leader is held by its own candidacy unless fallen | [[ControlledBy#3]] |
+| A remedy goes to the struck, fee is its full price | [[Recover#3]] to 5 |
+| A leader is held by its own candidacy unless struck | [[ControlledBy#3]] |
 | Posting to One-Zero, acting at once | [[Takeoff]] |
 | Noor works with everything, *Sparrow* lends one | [[PerformAction#2]], [[Support#2]] |
 | Reach two: one passage plus the post | [[Distance#1]], [[Range#3]] |
 | The petty warrant lends its measure | [[Tool]], [[Support#2]] |
+| The scrip outlasts the Deal and adds a measure, Noor holds it | [[Energy#4]], [[Energy#5]], [[Boost#2]], [[Boost#3]] |
 | Exercised warrants go to the Rest | [[Deplete#1.1]] |
 | Equal standing: contested, nobody holds it, each keeps its own | [[Control]], [[Disputed]], [[ControlledBy#3]] |
 | He didn't come in, nothing to answer | [[Intercept#2]] |
-| [[Leader]]s in the Rest are alive | [[Goal#7.2]] |
+| [[Leader]]s in the Rest are alive | [[PaxGalactica#3.2]] |
 | One order would bring him home from the contested post | [[PerformAction#1.3.1]], [[ActiveFor#3]] |
-| If he leaves, the holder holds the fallen again | [[ControlledBy#3]], [[ControlledBy#Notes#1]] |
+| If he leaves, the holder holds the struck again | [[ControlledBy#3]], [[ControlledBy#Notes#1]] |
 | A contested post can be fought from inside | [[Attack#3]], [[Disputed#Notes#1]] |
 
-**Assumptions the rules don't settle:** the [[Recover]] [[Cost]] is
-"the current [[Level]] of the target [[Card]]", but a [[Damaged]]
-[[Card]] lies on its back, and the rules don't say what its current
-[[Level]] is. The story uses the [[Level]] it fell with. [[Recover]]
-doesn't say which [[Class]] pays, so the story pays a [[Heal]] in
-[[Culture]], like [[Grow]]. It doesn't say which [[End]] comes up
-either. See the questions in [[LoreVariants]].
+**Assumptions the rules don't settle:** [[Recover]] doesn't say which
+[[Class]] pays, so the story pays a [[Heal]] in [[Culture]], like
+[[Grow]]. It doesn't say which [[End]] comes up either. See the
+questions in [[LoreVariants]].

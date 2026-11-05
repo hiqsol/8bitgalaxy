@@ -4,7 +4,7 @@ scope: core
 ---
 
 1. **Twilight** is the end of the game when no [[Faction]] has won by
-   [[Military]], see [[Goal]]
+   [[PaxGalactica|Pax Galactica]], see [[Goal]]
 2. **Twilight** is triggered when an end condition says so
 3. After the [[Turn]] of the trigger every other player makes one
    last [[Turn]]

@@ -24,6 +24,6 @@ scope: duel
    is [[ActiveFor]] the [[Faction]] that controls it, see
    [[ControlledBy]]
 2. Attacking the **Academy** reaches [[Hero]]es in the deck, so
-   [[Leader]]s can be defeated, see [[Goal]]
+   [[Leader]]s can be defeated, see [[PaxGalactica|Pax Galactica]]
 3. A pile shows no [[Damaged]] [[State]]: the [[Discard]] is face up,
    a [[Damaged]] [[Card]] in it would need a mark

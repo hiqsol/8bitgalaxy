@@ -90,7 +90,7 @@ right one.
 | [[Wild]] | Unclaimed |
 | [[Ancient]] | Assayer |
 | [[Hidden]] | Face down |
-| [[Damaged]] | Fallen |
+| [[Damaged]] | Struck |
 | [[Depleted]] | Reduced |
 | [[Control]] | Standing |
 | [[Disputed]] | Contested |
@@ -113,9 +113,9 @@ rule page stays the source of truth.
 | 4 | The Assayers post the length of every passage, never its nature. |
 | 5 | Warrants acting together reach as far as their sum. A vessel reaches as far as its rank, and a work doesn't reach at all. Where warriors stand, moving warrants must halt. A remedy, an endorsement or an issue is not moving. |
 | 6 | A post is held by the candidacy whose warrants there can act; works alone don't hold a post against vessels. Where standing is equal, the post is contested: nobody holds it, and each candidacy keeps its own warrants there and issues orders from it. |
-| 7 | The holder of a post holds every work and every fallen warrant in it. A leader is held by its own candidacy, unless fallen. |
+| 7 | The holder of a post holds every work and every struck warrant in it. A leader is held by its own candidacy, unless struck. |
 | 8 | Living warrants are issued at an [[Academy]], machine warrants at a Yard, and a Great Work at both. Every leader begins as a child: a living warrant is issued only at the lowest rank. A destroyed warrant returns to the Stores. In the final reckoning only living warrants are counted. |
-| 9 | A candidacy lives while it has a living leader. A leader warrant is a living being upgraded with warp, so it is posted and ranked like a vessel. The Assayers count only the fallen, the unissued and the sealed. |
+| 9 | A candidacy lives while it has a living leader. A leader warrant is a living being upgraded with warp, so it is posted and ranked like a vessel. The Assayers count only the struck, the unissued and the sealed. |
 | 10 | A candidacy is not its home. It fails when no post is left where it could exercise a warrant. |
 | 11 | The Assayers guard the unclaimed posts and examine every claimant, with more examiners for a better world. An examiner is never wounded and returns to the pool. A claimant is awarded the world it is qualified for. |
 | 12 | There are four marks of admission. Conquest ends the **Assay** at once. Diaspora, the Seven Works and [[Singularity]] each call for the Reply, a single sitting for every other candidacy. The Assayers count what a candidacy holds, not what it has spent. |
@@ -163,8 +163,8 @@ The Code numbers its articles in its own way. [[Habeas]] cites:
 
 1. **The Petty Warrant**: a junk [[Tool]] turns out to be the one
    warrant that completes a Prerequisite pair.
-2. **The Child**: the last leader has fallen, and the Council has one
-   sitting to issue a child warrant from the Stores. The child is
+2. **The Child**: the last leader has been struck, and the Council has
+   one sitting to issue a child warrant from the Stores. The child is
    buried under a warrant that no [[Academy]] can issue.
 3. **The Reply**: one sitting to answer a claimed mark.
 4. **The Blank Column**: a clerk tries to learn what happened to the

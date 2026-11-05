@@ -73,10 +73,11 @@ reward the bold). You don't fight *against* the universe — you
 ## Victory
 
 Become the greatest civilization by one of four paths:
-- [[Military]]: defeat every rival [[Leader]]
+- [[Military]]: [[PaxGalactica|Pax Galactica]], every rival fallen
 - [[Culture]]: live throughout the universe in a
   [[GalacticDiaspora|Galactic Diaspora]]
-- [[Production]]: possess at least 7 [[Hyperstructure]]s
+- [[Production]]: [[KardashevAscension|Kardashev Ascension]], seven
+  wonders across the galaxy
 - [[Singularity]] ([[Science]]): top-level cards of every class
 
 [[Military]] wins immediately. Each other achievement starts
@@ -84,7 +85,8 @@ Become the greatest civilization by one of four paths:
 with victory points breaking a tie.
 
 A [[Faction]] falls when it loses all [[Leader]]s or can't make a
-move.
+move. With more rivals it can stand again, even a lost [[Leader]]
+comes back when a rival heals him.
 
 ## Tech Stack
 

@@ -78,7 +78,7 @@ their Laws tables by number.
    nobody holds it, each side keeps its own [[Card]]s and acts there.
 	1. Follows: the controller answers rival [[Card]]s that come in,
 	   [[Intercept]]
-7. **The ground holds the fallen**. [[ControlledBy#3]]. The
+7. **The ground holds the wrecked**. [[ControlledBy#3]]. The
    [[Structure]]s and [[Damaged]] [[Card]]s in a [[Star]] belong to
    whoever controls the [[Star]], a front captures nothing.
 	1. Follows: every captured [[Structure]] serves its captor, a
@@ -99,18 +99,22 @@ their Laws tables by number.
 	   who act, and [[Science]] anything
 	3. Follows: what is destroyed can be built again, [[Destroy]]
 	4. Follows: only the living score, [[VictoryPoints]]
-9. **Leaders**. [[Goal#7]], [[Hero]]. A [[Faction]] lives while one of
-   its [[Hero]]es lives. [[Hero]]es are its [[Leader]]s, and a
-   [[Hero]] is as potent as a huge ship: it takes a [[Slot]], reaches
-   and acts like one. Author's idea: [[Hero]]es are living beings
-   upgraded with Warp.
+9. **Leaders**. [[PaxGalactica#3]], [[Hero]]. A [[Faction]] lives
+   while one of its [[Hero]]es lives. [[Hero]]es are its [[Leader]]s,
+   and a [[Hero]] is as potent as a huge ship: it takes a [[Slot]],
+   reaches and acts like one. Author's idea: [[Hero]]es are living
+   beings upgraded with Warp. A [[Faction]] without a living leader
+   falls, but it stands again when one of its [[Hero]]es is
+   [[Enabled]] again, by a rival too: [[Recover#Notes#2]].
 	1. Follows: the dead are counted, not the living: [[Damaged]], not
-	   yet built, not yet researched, [[Goal#Notes#5]]
-10. **Home is not everything**. [[Goal#Notes#6]], [[Goal#Notes#7]],
-    [[ActiveFor#3]]. A [[Faction]] lives while it has a [[Star]] to
-    [[Takeoff]] into and act from: one it controls, or a [[Disputed]]
-    one where it is among the tied. Losing the home [[Star]] doesn't
-    end a [[Faction]], but losing the last such [[Star]] does.
+	   yet built, not yet researched, [[PaxGalactica#Notes#3]]
+10. **Home is not everything**. [[PaxGalactica#Notes#4]],
+    [[PaxGalactica#Notes#5]], [[ActiveFor#3]]. A [[Faction]] lives
+    while it has a [[Star]] to [[Takeoff]] into and act from: one it
+    controls, or a [[Disputed]] one where it is among the tied. Losing
+    the home [[Star]] doesn't end a [[Faction]], but losing the last
+    such [[Star]] makes it fall, until its remaining [[Card]]s regain
+    one, [[PaxGalactica#Notes#7]].
 11. **Guardians of the wild Stars**. [[Ancient]], [[Wild]].
     [[Ancient]]s guard the [[Wild]] [[Star]]s, more of them for a
     better [[World]]. They are never [[Damaged]], and they come back.

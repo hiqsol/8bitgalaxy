@@ -24,4 +24,4 @@ scope: core
 #### Notes
 
 1. Wonders like in Through the Ages and Civilization
-2. Seven wonders nods to 7 Wonders, see [[ComparisonReview]]
+2. Seven of them make [[KardashevAscension|Kardashev Ascension]]

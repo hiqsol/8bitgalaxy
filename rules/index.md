@@ -23,7 +23,8 @@ scope: core
 2. **Twilight Imperium**: 4X on a [[Field]], but faster: simpler
    [[Turn]]s, politics as an extension
 3. **Chess**: even contest, no luck in [[Combat]], see
-   [[GameBalance]]; losing all [[Hero]]es is checkmate, see [[Goal]]
+   [[GameBalance]]; losing all [[Hero]]es is checkmate, see
+   [[PaxGalactica|Pax Galactica]]
 
 #### Scopes
 

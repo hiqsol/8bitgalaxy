@@ -62,8 +62,9 @@ evidence from a played game, not from a review.
     captures one, no global [[Hub]] (I19 d), see [[Hub]]
 16. **Trade between factions**: [[Export]], [[Smuggle]] and [[Sell]]
     work in a duel with the rival, not only in [[Politics]] (P57 e)
-17. **Game finish**: [[Military]] wins immediately; [[Singularity]],
-    7 possessed [[Hyperstructure]]s or
+17. **Game finish**: [[Military]] wins immediately by
+    [[PaxGalactica|Pax Galactica]]; [[Singularity]],
+    [[KardashevAscension|Kardashev Ascension]] or
     [[GalacticDiaspora|Galactic Diaspora]] trigger [[Twilight]]. The
     most achievements in the current state wins, then
     [[VictoryPoints]] break a tie (I77, I78, I95 a)
@@ -109,6 +110,10 @@ evidence from a played game, not from a review.
 
 Questions a played game answers better than a review.
 
+- [ ] **P69. Upgrade at full Price.** [[Upgrade#6]] costs the
+  [[Price]] of the **Paid End** minus the current [[Level]] of the old
+  [[Card]]. Is the difference good in play? The designer leans to the
+  full [[Price]], like [[Recover#5]].
 - [ ] **I46. Deck thinning by Takeoff.** A player can take off weak
   [[Card]]s, the [[Tool]]s first, and cycle only strong ones. Free
   [[Slot]]s limit it. To be worked out in [[GameBalance]]. Seen in
@@ -608,9 +613,10 @@ One batch after the playtest, only for pages that confused play.
 - [ ] **S47. One Home pile table.** Ten pile pages state visibility
   and entry in different words, some not at all:
 	- a) [[Factory]], [[Laboratory]] and [[History]] don't say who
-	  sees them. The [[Leader]] check of [[Goal]] counts the
-	  [[Hero]]es in [[Factory]] and [[Laboratory]]: recommended open,
-	  like [[Discard]].
+	  sees them. The [[Leader]] check of
+	  [[PaxGalactica|Pax Galactica]] counts the [[Hero]]es in
+	  [[Factory]] and [[Laboratory]]: recommended open, like
+	  [[Discard]].
 	- b) [[Destroy]], [[Recall]], [[Express]] and [[MinusDeplete]] put
 	  a [[Card]] on top, [[Upgrade#7.2]] and [[Research#2.1]] don't
 	  say where in [[Factory]].

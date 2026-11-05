@@ -14,6 +14,6 @@ scope: advanced
 #### Notes
 
 1. A strike at the [[Leader]] through its guard, toward the
-   [[Military]] victory, see [[Goal]]
+   [[Military]] victory, see [[PaxGalactica|Pax Galactica]]
 2. [[Supporter]]s still defend: [[Hand]] [[Card]]s and remote
    [[Group]]s, see [[Support]]
