@@ -58,7 +58,7 @@ scope: core
 12. [[MegaYard]]: 4p - [[Industrial Hub]] -
     [[Colony]] - Player - duel A [[Shipyard]] that also repairs
 13. [[Navigation]]: 4s - Modifier - [[Hero]], [[Base]] - Player - duel
-    A [[Move]] passes a [[Void]]
+    A route passes a [[Void]]
 14. [[Archive]]: 2s - [[Research Hub]] -
     [[Hyperstructure]] - Player - duel [[Research]] facility for
     [[Laboratory]] [[Card]]s

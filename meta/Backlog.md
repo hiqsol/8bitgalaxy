@@ -188,24 +188,6 @@ Questions a played game answers better than a review.
 
 ## After the first duel
 
-### Routes
-
-- [ ] **S38. Route details where they belong.** [[Distance]] defines a
-  route, [[Void]] says a route can't pass it. Other [[Tile]] rules
-  speak of moving [[Card]]s, so it's unclear which [[Range]] checks
-  they bind:
-	- a) [[Space#6]]: a route can't pass a [[Hidden]] [[Space]].
-	- b) [[Supernova]]: a route can't pass [[Supernova]]; today only
-	  [[Ship]]s are stopped and [[Hero]]es pass, keep "[[Ship]]s" if
-	  that is intended.
-	- c) [[Navigation]]: the route of a [[Group]] with [[Navigation]]
-	  can pass [[Void]]; [[Jump]]: one [[Hidden]] [[Space]], it gets
-	  revealed. Today both name only [[Move]].
-	- d) Then remote [[Support]], [[Explore]] reach and [[Create]]
-	  placement obey every [[Tile]] rule; only [[Pinning]], by its own
-	  words, binds moving [[Group]]s. Recommended: a-c, with "route"
-	  for [[Supernova]].
-
 ### Deck
 
 - [ ] **I19. Deck review.**

@@ -5,8 +5,7 @@ scope: idea
 
 # Early ideas
 
-[[Ideas]] of the first design notes that neither the rules nor
-the
+[[Ideas]] of the first design notes that neither the rules nor the
 [[Backlog]] hold. Kept for later, nothing here is a rule.
 
 ## For open items

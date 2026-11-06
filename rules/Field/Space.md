@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: core
 aliases: [InterStellar Space, Length, Space bag]
 ---
@@ -25,7 +25,8 @@ aliases: [InterStellar Space, Length, Space bag]
 	2. The other **Space** [[Tile]]s are in the **Space bag**
 	3. Revealing a [[Hidden]] **Space** lays a [[Tile]] drawn at
 	   random from the **Space bag**, the [[Scenario]] sets how
-5. [[Card]]s can't stop in a **Space**, they only pass a revealed one
+5. [[Card]]s can't stop in a **Space**, and a route can't pass a
+   [[Hidden]] one, see [[Distance]]
 6. **Space** [[Tile]]s have multiple [[Property|Properties]]:
 	1. [[ExtraPrice]] - printed on the [[Front]], the [[Price]] is
 	   **Length** + [[ExtraPrice]]

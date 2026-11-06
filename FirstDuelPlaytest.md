@@ -247,18 +247,13 @@ All are stated in the rules now or open in the [[Backlog]].
 | RG3-9 | [[Check]] before [[Restore]] | [[Singularity#Notes#4]] |
 
 Unclear to players, settled since: [[Hand]] [[Supporter]]s join one
-[[Group]]
-([[PerformAction#4.3]]); a [[Structure]] channels [[Energy]] up to its
-[[Capacity]]
-([[Boost#3]]); a [[Laboratory]] pile move is directed to a
-[[Research hub]]
-([[Hub]]
-3); a [[Depleted]] [[Level]] 4 [[Structure]] at the [[Check]]
-([[Singularity#Notes#4]]); a
-[[Colony]] into an [[Ancient]] [[Star]] is obsolete; [[Retreat]] works
-in any [[Combat]], the [[Ancient]]s come face up, so the [[Attacker]]
-[[Retreat]]s in time ([[Ancient]]
-3, [[Retreat#2]]).
+[[Group]] ([[PerformAction#4.3]]); a [[Structure]] channels [[Energy]]
+up to its [[Capacity]] ([[Boost#3]]); a [[Laboratory]] pile move is
+directed to a [[Research hub]] ([[Hub]] 3); a [[Depleted]] [[Level]] 4
+[[Structure]] at the [[Check]] ([[Singularity#Notes#4]]); a [[Colony]]
+into an [[Ancient]] [[Star]] is obsolete; [[Retreat]] works in any
+[[Combat]], the [[Ancient]]s come face up, so the [[Attacker]]
+[[Retreat]]s in time ([[Ancient]] 3, [[Retreat#2]]).
 
 ## 5. My playtest rulings
 

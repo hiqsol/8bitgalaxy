@@ -70,19 +70,3 @@ in any order. Questions on extensions and `advanced` rules wait in
 	- [ ] c) Four: the [[Advantage]] of 2 saves one [[Level]] 2
 	  [[Card]].
 	- [ ] d) The notes don't decide.
-
-## After the first duel
-
-### Deck
-
-- **Q76. High-level card ends** (I19 e). Does the [[Deck]] define
-  both [[End]]s of all 12 [[Card]]s at [[Level]]s 6/5 and 8/7?
-	- [ ] a) Yes.
-	- [ ] b) No, at least one [[End]] is TBD.
-	- [ ] c) The notes don't decide.
-- **Q77. Card images** (I47). Does `card.png` show the current rule
-  data for every [[Card]]?
-	- [ ] a) Yes.
-	- [ ] b) No, at least one [[Card]] image is missing or out of
-	  date.
-	- [ ] c) The notes don't decide.
