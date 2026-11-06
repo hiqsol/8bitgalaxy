@@ -1,19 +1,16 @@
-# uwiki defaults: make check, lint, docs and stats take the same pages
+# uwiki defaults: top level ones for every command taking them, make link and check alike
 exclude = ["build"]
-
-[build]
-title = "8bitgalaxy"
+# a page's own terms are bold, not linked
+mentions-self-bold = true
+# names that contain terms: game titles, ranks in lore
+mentions-ignore = ["Star Realms", "Twilight Imperium", "Star Wars", "Forbidden Stars", "A Handful of Stars",
+    "Trade Deck", "Leader Noor Abadi", "Leader Abadi", "Leader Iver Castellan", "Leader Castellan"]
 
 [check]
 orphans = true
 # warn about every plain mention of a page name or alias, make link links them
 mentions = true
 mentions-every = true
-# a page's own terms are bold, not linked
-mentions-self-bold = true
-# names that contain terms: game titles, ranks in lore
-mentions-ignore = ["Star Realms", "Twilight Imperium", "Star Wars", "Forbidden Stars", "A Handful of Stars",
-    "Trade Deck", "Leader Noor Abadi", "Leader Abadi", "Leader Iver Castellan", "Leader Castellan"]
 
 # status and scope values are documented in rules/index.md,
 # bin/checkdocs keeps them the same
