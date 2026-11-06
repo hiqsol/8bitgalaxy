@@ -4,11 +4,12 @@ scope: core
 aliases: [Cost]
 ---
 
-1. **Price** is [[Implicit]] [[Component]] [[Property]] derived from
-   [[ExtraPrice]]
+1. **Price** is [[Implicit]] [[Component]] [[Property]]: its
+   [[Level]] + its [[ExtraPrice]]
 2. **Price** of an [[End]] = its [[Level]] + its [[ExtraPrice]]
 3. [[Card]] **Price** = **Price** of its [[Strong]] [[End]]
-4. [[Space]] **Price** is printed on its [[Front]]
+4. [[Space]] **Price** = its [[Length]] + its [[ExtraPrice]], see
+   [[Space]]
 
 #### Notes
 

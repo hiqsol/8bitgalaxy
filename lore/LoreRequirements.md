@@ -61,9 +61,9 @@ their Laws tables by number.
 	1. Follows: hiding takes a [[Technology]], today [[Stealth]]
 	2. Follows: a [[Hidden]] [[Card]] moves as a minimal [[Ship]],
 	   because what can't be seen can't be checked, [[Hidden#Notes#1]]
-4. **Known distance, unknown contents**. [[Space#4]],
-   [[Space#Notes#1]]. A [[Space]]'s [[Length]] is known from afar. Its
-   [[Type]] and [[Price]] stay [[Hidden]] until it is explored.
+4. **Unknown until explored**. [[Space#4]], [[Space#Notes#1]]. A
+   [[Space]] nobody has explored is unknown, its [[Length]] too.
+   Exploring finds its [[Length]], [[Type]] and [[Price]] together.
 	1. Follows: [[Space]] types are features found by exploring, e.g.
 	   a [[Void]] can't be passed, [[Asteroids]] yield [[Goods]]
 5. **A group reaches farther**. [[Range#4]]. A [[Group]]'s [[Range]]

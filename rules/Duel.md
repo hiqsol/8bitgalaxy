@@ -1,5 +1,5 @@
 ---
-status: issues
+status: draft
 scope: duel
 ---
 
@@ -15,8 +15,17 @@ scope: duel
 	2. `10` and `12`: 5 [[Unit]] and 3 [[Structure]] [[Slot]]s
 	3. `01` and `20`: 3 [[Unit]] and 5 [[Structure]] [[Slot]]s
 5. [[Home]] [[Star]]s in opposite corners: `00` and `21`
-6. Every [[Space]] has [[Length]] 1, [[Void]]s are placed as in
-   `game.png`
+6. [[Space]]s:
+	1. The 8 [[Void]]s of [[Length]] 1 around `11`, at 1, 4, 5, 6, 7,
+	   10, 11 and 12 o'clock, are placed as in `game.png`, the other
+	   52 [[Space]]s are [[Hidden]]
+	2. The [[Space bag]] holds 52 [[Tile]]s, halving by [[Type]] and
+	   by [[Length]], see the table below; their [[Type]] pages are
+	   played, `advanced` ones too
+	3. Revealing a [[Hidden]] [[Space]] draws 2 [[Tile]]s from the
+	   [[Space bag]], the last one if only one is left: the player
+	   picks one to lay, its [[Price]] is the [[Cost]] of an
+	   [[Explore]], the other goes back into the bag
 7. [[Home]] [[Star]]s: a [[Homeworld]] [[Hyperstructure]] 2/1,
    [[Science]] on both [[End]]s, [[Archive]] on both, the [[Strong]]
    [[End]]'s Secondary is +1 [[Energy]]. Other [[Star]]s are [[Wild]]
@@ -45,6 +54,15 @@ scope: duel
 		    ╲   ╱ ╲   ╱
 		     ╲ ╱   ╲ ╱
 ```
+
+| [[Type]] | [[ExtraPrice]] | [[Tile]]s | [[Length]] 1 | 2 | 3 | 4 | 5 | 6 |
+|------|-----|----|----|----|---|---|---|---|
+| Normal | 1 | 26 | 12 | 7 | 3 | 2 | 2 | - |
+| [[Asteroids]] | 1 on 7, 2 on 6 | 13 | 7 | 3 | 2 | 1 | - | - |
+| [[Void]] | 0 | 7 | 4 | 2 | 1 | - | - | - |
+| [[BlackHole\|Black hole]] | 2 | 4 | 1 | 1 | 1 | - | - | 1 |
+| [[HyperPass\|Hyper pass]] | 4 | 2 | 2 | - | - | - | - | - |
+| All | | 52 | 26 | 13 | 7 | 3 | 2 | 1 |
 
 #### Notes
 

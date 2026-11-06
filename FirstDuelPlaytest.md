@@ -203,7 +203,8 @@ of B's home. B can not make a move.
 - **F4. No interaction, zero rival Combats in 51 Turns**: [[Star]]s
   are open [[Tile]]s ([[Wild#Notes#1]]), a taken [[Star]] captures the
   rival [[Structure]]s ([[ControlledBy#3]]), [[Singularity]] is far
-  and answerable (F2); damage in I81, a reward for a [[Space]] in P24.
+  and answerable (F2); damage in I81, a reward for a [[Space]] in
+  [[Relic]].
 - **F5. Home Structure row, overlap and no exit**: [[Recycle]] frees a
   [[Slot]]; [[Manage]] swap in S62, [[Weak]] [[End]] Secondary in P66;
   the overlap stays, every player liked it.
@@ -236,7 +237,7 @@ All are stated in the rules now or open in the [[Backlog]].
 | RG1-9 | a [[Star]]'s [[Power]] bonus counts for any own [[Action]] | a [[World]]'s +1 is a [[Plus]] of a participant, WorldDeck |
 | RG1-10 | the [[Source]] must be own | [[PerformAction#1.3.1]] |
 | RG2-1 | the [[Hub]] of [[Research]] is the [[Destination]], not a participant | [[Research#3]], [[Hub]] 3 |
-| RG2-3 | an Explored [[Space]] reveals nothing | I49, P24 |
+| RG2-3 | an Explored [[Space]] reveals nothing | [[Duel#6]], [[Relic]] |
 | RG2-6, RG3-6 | a [[Hub]] can't be the [[Hub]] of its own [[Upgrade]] | [[Upgrade#5.2]] |
 | RG2-7, RG3-5 | a fighting [[Structure]] never [[Deplete]]s | S53 |
 | RG2-8 | the [[Attacker]] picks the survivors that move in | [[Combat#9.3]], [[Slot#6]] |
@@ -265,8 +266,9 @@ Made before play where the docs were silent, in `RULES.md` section 11:
 
 - PR-1 [[Void]]s face up: [[Duel#6]] places them.
 - PR-2 a Normal [[Space]] has [[Length]] 1 and [[Price]] 2: [[Length]]
-  in [[Duel#6]], [[Price]] in P24.
-- PR-3 routes go [[Star]]–[[Space]]–[[Star]] only: S71.
+  in [[Duel#6]], [[Price]] in [[Price#4]].
+- PR-3 routes go [[Star]]–[[Space]]–[[Star]] only: rejected,
+  [[Backlog]] Settled 26.
 - PR-4 home [[Star]]s 8 [[Slot]]s (4 [[Unit]] + 4 [[Structure]]),
   others 4: home [[Star]]s and S11 have 5+5, S10 and S12 5 [[Unit]] +
   3 [[Structure]], S01 and S20 3 [[Unit]] + 5 [[Structure]]

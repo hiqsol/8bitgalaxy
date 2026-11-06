@@ -12,6 +12,8 @@ aliases: [World slot]
    [[Structure]] [[Slot]], for its [[World]]
 5. The [[Card]] in the **World slot** gives the **Star** its [[Class]]
    and [[Ability|Abilities]], a **Star** with an empty one is [[Wild]]
+6. A **Star** has [[Level]] 1, a [[Scenario]] may set another: a
+   route passing the **Star** counts it, see [[Distance]]
 
 #### Notes
 

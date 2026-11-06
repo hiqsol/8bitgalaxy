@@ -110,7 +110,7 @@ rule page stays the source of truth.
 | 1 | A warrant is exercised only in a berth, and a star's well can cradle only a few great hulls before space-time tears. An exercised warrant gives way: a vessel lapses to the Rest, and a work is endorsed "reduced". A lapse is a movement, and it is never free. A warrant in a lower berth covers the endorsement of the one above. |
 | 2 | The dark between the posts belongs to the Assayers. A warrant may cross it but may not rest in it. |
 | 3 | The **Assay** is public: every warrant exercised enters the open Record. The Code assumes the least of any warrant it cannot read, and only a [[Stealth]] warrant may be exercised face down. |
-| 4 | The Assayers post the length of every passage, never its nature. |
+| 4 | No Assayer posts a passage before a warrant opens it: its length and its nature enter the Record together. |
 | 5 | Warrants acting together reach as far as their sum. A vessel reaches as far as its rank, and a work doesn't reach at all. Where warriors stand, moving warrants must halt. A remedy, an endorsement or an issue is not moving. |
 | 6 | A post is held by the candidacy whose warrants there can act; works alone don't hold a post against vessels. Where standing is equal, the post is contested: nobody holds it, and each candidacy keeps its own warrants there and issues orders from it. |
 | 7 | The holder of a post holds every work and every struck warrant in it. A leader is held by its own candidacy, unless struck. |

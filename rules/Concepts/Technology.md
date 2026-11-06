@@ -78,127 +78,124 @@ scope: core
 20. [[Counterintelligence]]: 6m - [[Action]] - [[Hero]] - Player -
     advanced Immediate: cancels a rival
     [[ImmediateAction|Immediate action]], also at the rival's [[Turn]]
-21. [[Inhibitor]]: 6m - Modifier - [[Hyperstructure]] - Player -
-    advanced No rival route passes its [[Star]], for every [[Range]]
-    check
-22. [[Jamming]]: 6m - Modifier - [[Ship]] - Player - advanced Own
-    [[Actor]]s stop rival [[Range]] through their [[Star]], not only
-    moving [[Group]]s
-23. [[Occupation]]: 6m - Modifier - [[Ship]] - Player - advanced
+21. [[Jamming]]: 6m - Modifier - [[Ship]], [[Hyperstructure]] -
+    Player - advanced No rival route passes its [[Star]] or goes
+    around it, for every [[Range]] check
+22. [[Occupation]]: 6m - Modifier - [[Ship]] - Player - advanced
     +[[Control]]: an own [[Military]] [[Actor]] gives a [[Control]]
     level above [[Actor]]
-24. [[Raid]]: 6m - [[Action]] - [[Ship]] - Player - advanced
+23. [[Raid]]: 6m - [[Action]] - [[Ship]] - Player - advanced
     An [[Attack]] whose winners stay home: takes the [[Goods]] or
     [[Deplete]]s the [[Structure]]s
-25. [[Tactics]]: 6m - Modifier - [[Ship]] - Player - advanced
+24. [[Tactics]]: 6m - Modifier - [[Ship]] - Player - advanced
     +[[Military]]: 1 more [[Power]] when a [[Hero]] and a [[Ship]]
     attack together
-26. [[Decapitation]]: 8m - [[Action]] - [[Ship]] - Player - advanced
+25. [[Decapitation]]: 8m - [[Action]] - [[Ship]] - Player - advanced
     An [[Attack]] on one rival [[Hero]], the other [[Card]]s of its
     [[Star]] can't defend it
-27. [[Recall]]: 1c - [[Action]] - [[Tool]] - Player - advanced
+26. [[Recall]]: 1c - [[Action]] - [[Tool]] - Player - advanced
     Immediate: a [[Card]] from the [[Discard]] goes on top of the
     [[Reserve]]
-28. [[Trade]]: 2c - [[Action]] - [[Ship]], [[Base]] - Player -
+27. [[Trade]]: 2c - [[Action]] - [[Ship]], [[Base]] - Player -
     advanced Two [[Faction]]s turn [[Power]] into [[Goods]] together
-29. [[Debt]]: 4c - [[Action]] - [[Ship]] - Player - advanced
+28. [[Debt]]: 4c - [[Action]] - [[Ship]] - Player - advanced
     Immediate: [[Energy]] equal to the [[Card]]'s [[Level]], then the
     [[Card]] is Destroyed
-30. [[Export]]: 4c - [[Action]] - [[Colony]] - Player - advanced
+29. [[Export]]: 4c - [[Action]] - [[Colony]] - Player - advanced
     [[Goods]] carried to a rival [[Colony]] turn into [[Energy]]
-31. [[MinusDeplete]]: 4c - Modifier - [[Colony]] - Player - advanced
+30. [[MinusDeplete]]: 4c - Modifier - [[Colony]] - Player - advanced
     -[[Deplete]]: one participant doesn't [[Deplete]]
-32. [[PlusHero]]: 4c - [[Action]] - [[Colony]] - Player - advanced
+31. [[PlusHero]]: 4c - [[Action]] - [[Colony]] - Player - advanced
     +[[Hero]]: creates a new [[Level]] 1 [[Hero]]
-33. [[Sell]]: 4c - [[Action]] - [[Ship]] - Player - advanced A
+32. [[Sell]]: 4c - [[Action]] - [[Ship]] - Player - advanced A
     [[Trade]] over a [[Card]]: its [[Price]] turns into [[Goods]], the
     [[Card]] is Destroyed
-34. [[Assimilate]]: 6c - [[Action]] - [[Hero]] - Player - advanced
+33. [[Assimilate]]: 6c - [[Action]] - [[Hero]] - Player - advanced
     Replaces a rival [[Colony]] in a [[Star]] the player controls with
     an own one
-35. [[Contact]]: 6c - [[Action]] - [[Hero]] - Player - advanced
+34. [[Contact]]: 6c - [[Action]] - [[Hero]] - Player - advanced
     Conquers a [[Wild]] [[Star]] without [[Ancient]]s, for twice the
     [[World]]'s [[Price]]
-36. [[Emulate]]: 6c - Modifier - [[Hero]] - Player - advanced Uses a
+35. [[Emulate]]: 6c - Modifier - [[Hero]] - Player - advanced Uses a
     **Technology** printed on the top [[Card]] of a rival's
     [[Discard]]
-37. [[Envoy]]: 6c - Modifier - [[Hero]] - Player - advanced
+36. [[Envoy]]: 6c - Modifier - [[Hero]] - Player - advanced
     Gives no [[Control]], doesn't pin and can't be Intercepted
-38. [[Festival]]: 6c - Modifier - [[Hyperstructure]] - Player -
+37. [[Festival]]: 6c - Modifier - [[Hyperstructure]] - Player -
     advanced +[[Restore]]: [[Restore]]s every own [[Structure]] in its
     [[Star]] at each [[Restore]] phase
-39. [[Mentor]]: 6c - Modifier - [[Hero]] - Player - advanced
+38. [[Mentor]]: 6c - Modifier - [[Hero]] - Player - advanced
     -[[Hub]]: a [[Grow]] in its [[Star]] needs no [[Hub]]
-40. [[Starter]]: 6c - Modifier - [[Hero]] - Player - advanced
+39. [[Starter]]: 6c - Modifier - [[Hero]] - Player - advanced
     A [[Field]] [[Card]] starts an [[Action]] from its own [[IPS]]
-41. [[Heritage]]: 8c - Modifier - [[Hyperstructure]] - Player -
+40. [[Heritage]]: 8c - Modifier - [[Hyperstructure]] - Player -
     advanced Own [[Damaged]] [[Card]]s count for
     [[GalacticDiaspora|Galactic Diaspora]]
-42. [[Extract]]: 2p - [[Action]] - [[Ship]], [[Colony]] - Player -
+41. [[Extract]]: 2p - [[Action]] - [[Ship]], [[Colony]] - Player -
     advanced +[[Goods]]: turns [[Power]] into [[Goods]] at
     [[Asteroids]]
-43. [[EfficientUpgrade]]: 4p - Modifier - [[Base]] - Player - advanced
+42. [[EfficientUpgrade]]: 4p - Modifier - [[Base]] - Player - advanced
     -[[Cost]]: [[Upgrade]] costs 1 less
-44. [[Guard]]: 4p - Modifier - [[Base]] - Player - advanced
+43. [[Guard]]: 4p - Modifier - [[Base]] - Player - advanced
     +Pin: a [[Structure]] pins like a [[Military]] [[Actor]]
-45. [[Logistics]]: 4p - Modifier - [[Base]] - Player - advanced An
+44. [[Logistics]]: 4p - Modifier - [[Base]] - Player - advanced An
     [[Action]] spends [[Goods]] of the [[Star]]s of all its [[Group]]s
-46. [[PlusPile]]: 4ps - [[Action]] - [[Base]] - Player - advanced
+45. [[PlusPile]]: 4ps - [[Action]] - [[Base]] - Player - advanced
     +Pile: adds a [[Factory]] or a [[Laboratory]] pile
-47. [[Salvage]]: 4p - Modifier - [[Ship]] - Player - advanced
+46. [[Salvage]]: 4p - Modifier - [[Ship]] - Player - advanced
     +[[Goods]]: 1 for each rival [[Card]] [[Damaged]] in the
     [[Action]]
-48. [[FieldRepair]]: 6p - Modifier - [[Hero]] - Player - advanced
+47. [[FieldRepair]]: 6p - Modifier - [[Hero]] - Player - advanced
     -[[Damaged]]: a [[Restore]] can [[Flip]] a [[Damaged]]
     [[Industrial]] [[Card]] back to [[Enabled]]
-49. [[FloatingFactory]]: 6p - [[Industrial Hub]] -
+48. [[FloatingFactory]]: 6p - [[Industrial Hub]] -
     [[Ship]] - Player - advanced A [[Shipyard]] on a [[Ship]], it
     moves with the [[Ship]]
-50. [[Retool]]: 6p - Modifier - [[Hero]] - Player - advanced
+49. [[Retool]]: 6p - Modifier - [[Hero]] - Player - advanced
     [[Enhance]] turns a [[Tool]] on the [[Field]] into a [[Ship]]
-51. [[StellarForge]]: 8p - Modifier - [[Hyperstructure]] - Player -
+50. [[StellarForge]]: 8p - Modifier - [[Hyperstructure]] - Player -
     advanced The [[Social]] half of a [[Hyperstructure]] is built at
     an [[Industrial]] [[Hub]], paid in [[Production]]
-52. [[Forecast]]: 1s - [[Action]] - [[Tool]] - Player - advanced
+51. [[Forecast]]: 1s - [[Action]] - [[Tool]] - Player - advanced
     Immediate: looks at the top 3 [[Card]]s of the [[Reserve]], puts
     them back in any order
-53. [[Recycle]]: 2s 4p - [[Action]] - [[Hero]], [[Base]] - Player -
+52. [[Recycle]]: 2s 4p - [[Action]] - [[Hero]], [[Base]] - Player -
     advanced Converts a [[Card]] to [[Goods]], the [[Card]] is
     Destroyed
-54. [[Exhaust]]: 4s - Modifier - [[Ship]] - Player - advanced
+53. [[Exhaust]]: 4s - Modifier - [[Ship]] - Player - advanced
     Overloads a [[Card]]: all its [[Ability|Abilities]] as a
     [[Supporter]], then it is Destroyed or [[Damaged]]
-55. [[Scan]]: 4s - Modifier - [[Ship]] - Player - advanced [[Explore]]
+54. [[Scan]]: 4s - Modifier - [[Ship]] - Player - advanced [[Explore]]
     also reveals a [[Hidden]] [[Tile]] bordering the target
-56. [[Standby]]: 4s - Modifier - [[Base]] - Player - advanced
+55. [[Standby]]: 4s - Modifier - [[Base]] - Player - advanced
     One unused [[Card]] stays in [[Hand]] at [[Draw]]
-57. [[Xenoarchaeology]]: 4s - Modifier - [[Colony]] - [[Galaxy]] -
+56. [[Xenoarchaeology]]: 4s - Modifier - [[Colony]] - [[Galaxy]] -
     advanced A conquest picks its [[World]] among the top 3 of the
     [[WorldDeck|World deck]]
-58. [[Barrier]]: 6s - [[Action]] - [[Ship]] - Player - advanced
+57. [[Barrier]]: 6s - [[Action]] - [[Ship]] - Player - advanced
     +[[Hidden]]: turns a revealed [[Space]] next to the [[Source]]
     face down again
-59. [[Espionage]]: 6s - Modifier - [[Tool]] - Player - advanced Use a
+58. [[Espionage]]: 6s - Modifier - [[Tool]] - Player - advanced Use a
     rival's **Technology** in the same [[Star]], paying its [[Cost]]
     in [[SciencePower|Science power]]
-60. [[GreatLibrary]]: 6s - Modifier - [[Hyperstructure]] - Player -
+59. [[GreatLibrary]]: 6s - Modifier - [[Hyperstructure]] - Player -
     advanced -[[Prerequisites]]: [[Research]] ignores them for a
     [[Card]] a rival has on the [[Field]]
-61. [[Invent]]: 6s - [[Action]] - [[Hero]] - Player - advanced
+60. [[Invent]]: 6s - [[Action]] - [[Hero]] - Player - advanced
     [[Research]] takes any [[Card]] from any own [[Laboratory]] pile
-62. [[Jump]]: 6s - Modifier - [[Ship]] - Player - advanced
+61. [[Jump]]: 6s - Modifier - [[Ship]] - Player - advanced
     A [[Move]] passes one [[Hidden]] [[Space]] and reveals it
-63. [[MinusRequirement]]: 6s - Modifier - [[Hero]] - Player - advanced
+62. [[MinusRequirement]]: 6s - Modifier - [[Hero]] - Player - advanced
     -[[Prerequisites]]: [[Research]] ignores one pair of them
-64. [[SensorArray]]: 6s - Modifier - [[Hero]] - Player - advanced
+63. [[SensorArray]]: 6s - Modifier - [[Hero]] - Player - advanced
     -[[Hidden]]: rival [[Card]]s in its [[Star]] can't stay [[Hidden]]
-65. [[UnifiedTheory]]: 8s - Modifier - [[Hero]] - Player - advanced
+64. [[UnifiedTheory]]: 8s - Modifier - [[Hero]] - Player - advanced
     +[[Class]]: its [[Card]] provides its [[Level]] in one more
     [[Class]] too
-66. [[Legacy]]: 4c - [[Action]] - [[Colony]] - Player - objectives
+65. [[Legacy]]: 4c - [[Action]] - [[Colony]] - Player - objectives
     +[[History]], Immediate: a [[Card]] from the [[Discard]] goes to
     [[History]]
-67. [[NovaBomb]]: 8m - [[Action]] - [[Ship]] - [[Galaxy]] - events
+66. [[NovaBomb]]: 8m - [[Action]] - [[Ship]] - [[Galaxy]] - events
     [[Destroy]]s every [[Card]] in a [[Star]] for their total
     [[Level]], its own [[Card]] too
 

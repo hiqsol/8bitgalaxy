@@ -73,37 +73,6 @@ in any order. Questions on extensions and `advanced` rules wait in
 
 ## After the first duel
 
-### Space types
-
-- **Q23. Nebula stop** (I49 a). A [[Group]] passes a revealed Nebula
-  and reaches the next [[Star]]. May it continue in the same
-  [[Action]]?
-	- [ ] a) Yes.
-	- [ ] b) No, it must stop in that [[Star]].
-	- [ ] c) The notes don't decide.
-- **Q64. Nebula sight** (I49 a). Can [[Explore]] reveal a [[Space]]
-  past a revealed Nebula?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-- **Q65. Nebula shroud** (I49 a). May a [[Card]] passing a revealed
-  Nebula become [[Hidden]] without using another [[Ability]]?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-- **Q66. Nebula Support** (I49 a). Can a [[Field]] [[Card]]
-  [[Support]] an [[Action]] through a revealed Nebula?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-- **Q74. First duel Space mix** (I49 c). Which face-down [[Space]]
-  [[Tile]]s are prepared for the first [[Duel]]?
-	- [ ] a) Normal [[Length]]-1 [[Tile]]s and the fixed [[Void]]s in
-	  `game.png`.
-	- [ ] b) 12 Normal [[Tile]]s and two each of [[Asteroids]],
-	  Nebula, [[BlackHole|Black hole]], [[Void]], HyperPass and Relic.
-	- [ ] c) The notes don't decide.
-
 ### Deck
 
 - **Q76. High-level card ends** (I19 e). Does the [[Deck]] define

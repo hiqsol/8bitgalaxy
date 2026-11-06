@@ -27,7 +27,7 @@ Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
 	   [[Capacity]], [[Range]], [[Price]], [[Size]], [[Role]],
 	   [[Origin]]
 2. [[Component]] **Properties**, of [[Card]]s and [[Tile]]s: [[Side]],
-   [[Price]]
+   [[Level]], [[ExtraPrice]], [[Price]]
 
 #### Notes
 

@@ -37,8 +37,7 @@ aliases: [Recon, Survey]
 2. Better [[Tile]]s cost more, so running out of [[Power]] hints at a
    good one
 3. Learning the [[Cost]] and stopping at once is a cheap look, the
-   [[Action]] fails and costs only its [[Starter]], that's fine: the
-   [[Back]] of a [[Space]] already hints at it
+   [[Action]] fails and costs only its [[Starter]], that's fine
 4. The [[Academy]] is where a [[Faction]]'s [[Leader]]s come from, so
    **Recon** of it opens the way to the [[Faction]]'s deck, see also
    [[Academy]]

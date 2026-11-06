@@ -83,9 +83,9 @@ evidence from a played game, not from a review.
     [[Void]]
 21. **Asteroids**: only [[Extract]]; cover, narrow and rough (P24
     [[Asteroids]] b-d) were rejected, see [[Asteroids]]
-22. **Duel Space tiles**: every [[Space]] position holds a [[Tile]],
-    the outer sides too; empty outer sides (P35 a) were rejected, see
-    [[Duel]]
+22. **Duel Space tiles**: every [[Space]] position takes a [[Tile]]
+    when revealed, the outer sides too; empty outer sides (P35 a) were
+    rejected, see [[Duel]]
 23. **Symmetric Human and Alien**: the same [[Deck]] by [[Card]]
     values, only color and design differ; Human or Alien
     [[Technology|Technologies]] and a [[Faction]] [[Card]] on mirrored
@@ -98,6 +98,36 @@ evidence from a played game, not from a review.
 25. **Black hole**: passable both ways; one-way, only away from the
     nearest home [[Star]] (P24 [[BlackHole|Black hole]] c), was
     rejected, see [[BlackHole]]
+26. **Routes**: [[Tile]]s connect where they touch, at an edge or a
+    corner point, and a route may go around a [[Star]]; routes only
+    [[Star]]–[[Space]]–[[Star]] and a [[Distance]] of [[Space]]
+    [[Length]]s alone (S71) were rejected, see [[Space]], [[Distance]]
+27. **Distance**: the sum of all [[Tile]]s but the first, a [[Star]]
+    by its [[Level]], 1 unless the [[Scenario]] sets another;
+    counting the first [[Tile]] too and a [[Star]] [[Level]] by size
+    were rejected, see [[Distance]], [[Star]]
+28. **Space Length** goes up to 8 now, the [[Scenario]] sets the
+    [[Space bag]]; longer only outer [[Space]]s (P67 a) and longer
+    [[Space]]s later (P67 b) were rejected, see [[Space]]
+29. **Space Price**: [[Length]], the [[Space]]'s [[Level]], plus the
+    [[ExtraPrice]] printed on its [[Front]]; a longer Normal cheaper
+    (P24 Normal b) was rejected, see [[Price]], [[Space]]
+30. **No Space Class**: a [[Class]] for [[Space]]s and [[Star]] pads,
+    for the [[Explore]] [[Cost]] or [[Type]] families, was rejected:
+    it complicates the rules without benefit, a [[Star]] takes its
+    [[World]]'s, see [[Space]], [[Star]]
+31. **Jamming**: one modifier on any [[Enabled]] [[Card]] stops rival
+    routes through and around its [[Star]]; two modifiers, split by
+    carrier or by kind, were rejected, the name Inhibitor is free for
+    another inhibition, see [[Jamming]]
+32. **Space types**: [[HyperPass|Hyper pass]] is a wormhole pair, a
+    [[Relic]] draws an [[Event]], a [[Supernova]] gives +1 [[Power]]
+    beside it; [[HyperPass|Hyper pass]] [[Length]] 0 and highway (P24
+    HyperPass a, c), a [[Relic]] giving a [[Laboratory]] [[Card]] or 2
+    [[Energy]] (P24 [[Relic]] a, b) were rejected
+33. **Duel Space bag**: halving by [[Type]] and by [[Length]], see
+    [[Duel]]; the P35 b mix and Normal replacing `advanced` types
+    (P35 c) were rejected
 
 ## Next step
 
@@ -158,51 +188,8 @@ Questions a played game answers better than a review.
 
 ## After the first duel
 
-### Space types
+### Routes
 
-The first [[Duel]] keeps [[Space]]s of [[Length]] 1.
-
-- [ ] **I49. Space types.** → P24, P35
-	- a) [[Space]] type Nebula has no behavior.
-	- b) HyperPass is an idea for an extension.
-	- c) The first [[Duel]] has no [[Space]] [[Tile]] set.
-- [ ] **P24. Space type behaviors.** No dice: every effect is
-  deterministic. Better types cost more to [[Explore]]. Pick one or
-  more variants per type, e.g. "P24 Nebula a, c":
-	- **Normal** ([[Price]] 2): a) plain, [[Length]] 1. b) [[Length]]
-	  1 or 2, longer is cheaper ([[Price]] 1).
-	- **Nebula** ([[Price]] 1, obstacle, TI-like): a) a [[Group]]
-	  entering it must stop at the next [[Star]], it can't go further
-	  this [[Action]]. b) blind: [[Explore]] can't look past it. c)
-	  shroud: [[Card]]s passing it may become [[Hidden]] for free. d)
-	  static: no [[Support]] from the [[Field]] through it.
-	- **[[BlackHole|Black hole]]** ([[Price]] 3): only the [[Price]]
-	  is open.
-	- **HyperPass** ([[Price]] 4, best, a [[Space]] type): a)
-	  [[Length]] 0. b) wormhole pair: two HyperPass [[Tile]]s anywhere
-	  are adjacent to each other. c) highway: [[Length]] 0 and
-	  [[Move]] [[Cargo]] [[Capacity]] +1.
-	- **Relic** ([[Price]] 4, new type, like Eclipse discovery tiles):
-	  a) the first explorer takes the top [[Card]] of a [[Laboratory]]
-	  pile to [[Factory]]. b) the first explorer gains 2 [[Energy]].
-	  Then it's Normal.
-	- **[[Supernova]]**: a) impassable, can't be explored, only from
-	  an [[Event]] (current). b) also gives +1 [[Power]] of any
-	  [[Class]] to [[Action]]s started in a bordering [[Star]].
-- [ ] **P67. Longer Space for high Range.** [[Range]] grows up to 8
-  with the [[Deck]] [[Level]]s, a big [[Range]] is fine; [[Space]]s
-  get longer later:
-	- a) Only outer Spaces get longer, a [[Space]] between neighbour
-	  [[Star]]s keeps [[Length]] 1: [[Card]]s up to 4/3 still cross
-	  the map.
-	- b) Lengthen when [[Card]]s 6/5 and 8/7 are in play, after
-	  playtests of the 56-[[Card]] [[Deck]].
-- [ ] **P35. First duel Space set** in [[Duel]], after P24,
-  replacing "every [[Space]] has [[Length]] 1":
-	- b) 12 Normal, 2 [[Asteroids]], 2 Nebula, 2
-	  [[BlackHole|Black hole]], 2 [[Void]], 2 HyperPass, 2 Relic.
-	- c) [[Type]]s whose chosen variants need `advanced` rules are
-	  replaced with Normal.
 - [ ] **S38. Route details where they belong.** [[Distance]] defines a
   route, [[Void]] says a route can't pass it. Other [[Tile]] rules
   speak of moving [[Card]]s, so it's unclear which [[Range]] checks
@@ -481,14 +468,6 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  [[Size]] 1. [[Hidden#4.1]]-4.4 become one rule.
 	- b) [[Hidden]] and the [[Hidden]] clauses of [[Combat]] move to
 	  `duel`, core keeps the back ends of [[End]] and [[Side]].
-- [ ] **S71. Distance counts Spaces only.** [[Distance]] sums all
-  [[Tile]]s but the first, a [[Star]] as 1 and a [[Space]] as its
-  [[Length]], and [[Space]]s link along hex edges:
-	- a) A route alternates [[Star]] and [[Space]], its [[Distance]]
-	  is the sum of its [[Space]]s' [[Length]]s.
-	- b) Every [[Space]] prints its [[Length]] 1 higher, the
-	  [[Duel]]'s become 2, [[Star]] to [[Star]] [[Distance]]s stay.
-	  Edge routes go, PR-3 dropped them.
 - [ ] **S72. Two Turn phases.** **Play**, then **End**: check the
   [[Goal]], [[Discard]], [[Draw]], [[Restore]] 3. About ten "X phase"
   references become "end of own [[Turn]]".

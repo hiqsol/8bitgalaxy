@@ -114,7 +114,7 @@ The Hymnal numbers its verses in its own way.
 | 1 | Great hulls are huge, and their songs bend space-time: a star rings with only a few songs before space tears into noise. A thing that has sung gives way, so a voice goes to rest and a hearth or instrument falls to its low note. Going to rest is a song too, and no song is free. A lower sound masks the overtone of the one above it. |
 | 2 | The dark between the stars carries song but gives no rest. A song that leaves a star must end in a star, and every star it passes through takes one beat. |
 | 3 | Every song is heard by everyone. Only the Hush can silence a song that stands in a star, and a hushed song is thin: it carries one step and one load. |
-| 4 | Every lane echoes. From home you hear its length; its nature you learn by singing into it. |
+| 4 | An unsung lane is silent. Its length and its nature you learn together, by singing into it. |
 | 5 | Voices in unison carry farther than any one voice. A voice carries as far as its harmonic, and a standing sound doesn't carry at all. War voices catch a passing song, but an echo sent to help is not caught. |
 | 6 | A star sings the song of whoever sings in it, not of whoever built there. Where two songs are equal, the star is in discord: both songs begin there, and neither takes the other's instruments. |
 | 7 | In a star that sings another people's song, the standing instruments and the silenced voices sound for that people, until a silenced voice is healed and sings its own song again. |

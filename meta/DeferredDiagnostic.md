@@ -22,24 +22,6 @@ scope: meta
 	- [ ] c) No player tried it.
 	- [ ] d) The record doesn't show.
 
-## HyperPass
-
-- **Q27. HyperPass length** (I49 b). In a game that includes
-  HyperPass, what [[Length]] does a HyperPass contribute to a route?
-	- [ ] a) 0.
-	- [ ] b) Its printed [[Length]].
-	- [ ] c) The notes don't decide.
-- **Q72. HyperPass pair** (I49 b). In a game that includes
-  HyperPass, are any two HyperPass [[Tile]]s adjacent to each other?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-- **Q73. HyperPass cargo** (I49 b). Does a [[Group]] passing a
-  HyperPass gain +1 [[Cargo]] [[Capacity]] for its [[Move]]?
-	- [ ] a) Yes.
-	- [ ] b) No.
-	- [ ] c) The notes don't decide.
-
 ## Objectives
 
 - **Q78. Objective list** (I43 a). Do the notes define every
