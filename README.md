@@ -16,7 +16,9 @@ scope: meta
    their stories
 6. [games/](games/README.md) - [[games|Played games]] and the playtest
    report
-7. [AGENTS.md](AGENTS.md) - how to write and check the docs
+7. [[Docs]] - how the docs are kept: frontmatter, scopes, statuses
+   and review items
+8. [AGENTS.md](AGENTS.md) - how to write and check the docs
 
 ## Install dependencies
 

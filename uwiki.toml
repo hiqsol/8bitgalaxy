@@ -12,7 +12,7 @@ orphans = true
 mentions = true
 mentions-every = true
 
-# status and scope values are documented in rules/index.md,
+# status and scope values are documented in meta/Docs.md and rules/index.md,
 # bin/checkdocs keeps them the same
 [schema]
 _required = ["scope", "status"]

@@ -4,7 +4,7 @@
 # dependencies = ["markdown"]
 # ///
 """Check the docs wiki rules uwiki does not know: numbered rules, technology catalog, page templates,
-that the uwiki.toml schema allows the status and scope values rules/index.md documents,
+that the uwiki.toml schema allows the status and scope values meta/Docs.md and rules/index.md document,
 that the folder of every page allows its scope, and that no open Backlog or Guidance item cites a stable page and no issue cites a polish page.
 
 Usage: bin/checkdocs  (exits 1 on problems, uv installs dependencies), make check runs uwiki check first
@@ -85,8 +85,9 @@ class Page:
         return next(e for e in children[start:] if e.tag == 'ol').findall('li')
 
     def section(self, heading):
-        """Code values of the list under a heading."""
-        return {c.text for li in self.items(heading) for c in li.iter('code')}
+        """Values of the list under a heading: the code each item, nested ones too, starts with."""
+        found = (li.find('code') for top in self.items(heading) for li in top.iter('li'))
+        return {c.text for c in found if c is not None}
 
 
 def text(element):
@@ -127,14 +128,15 @@ def check_templates(pages):
                     report(page.path, f'card type needs a rule "{prefix} ..."')
 
 
-def check_schema(index):
-    """uwiki.toml schema allows exactly the status and scope values index documents."""
+def check_schema(docs, index):
+    """uwiki.toml schema allows exactly the status values Docs and the scopes Docs and the rules index document."""
     schema = tomllib.loads((ROOT / 'uwiki.toml').read_text())['schema']
-    for key, heading in (('status', 'Status'), ('scope', 'Scopes')):
-        allowed, documented = set(schema[key]), index.section(heading)
+    for key, documented in (('status', docs.section('Status')),
+                            ('scope', docs.section('Scopes') | index.section('Modules'))):
+        allowed = set(schema[key])
         if allowed != documented:
             diff = ', '.join(sorted(allowed ^ documented))
-            report(index.path, f'{heading} differs from uwiki.toml schema {key}: {diff}')
+            report(docs.path, f'{key} values differ from uwiki.toml schema: {diff}')
 
 
 def frontmatter(path):
@@ -276,7 +278,7 @@ def check_technologies(pages):
 
 def main():
     pages = {path.stem: Page(path) for path in FILES}
-    check_schema(pages['index'])
+    check_schema(pages['Docs'], pages['index'])
     metas = all_pages()
     check_scopes(metas)
     check_cited(metas)

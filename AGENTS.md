@@ -6,7 +6,7 @@ scope: meta
 # 8-bit galaxy
 
 An Obsidian style wiki: a page has frontmatter, numbered rules and
-numbered notes, nested ones indented with tabs; `rules/index.md`
+numbered notes, nested ones indented with tabs; [[Docs]]
 defines the `scope` and `status` values.
 
 1. Organize all my input into concise rules and notes

@@ -1,5 +1,5 @@
 ---
-status: draft
+status: polish
 scope: core
 aliases: [InterStellar Space, Length, Space bag]
 ---
