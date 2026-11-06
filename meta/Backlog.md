@@ -13,7 +13,8 @@ games are compared in [[ComparisonReview]]. [[Diagnostic]] tests each
 independent point of an issue with an atomic multiple-choice
 question. [[ReviewProcess]] sets when an item opens and closes.
 
-Answer by number and letter, e.g. "P27 a, c", "S41 no".
+Write the points of an item as lettered bullets `- a) ...`. Answer
+by number and letter, e.g. "P27 a, c", "S41 no".
 
 ## Settled
 
