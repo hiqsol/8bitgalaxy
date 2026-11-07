@@ -1,6 +1,6 @@
 ---
 status: polish
-scope: advanced
+scope: duel
 ---
 
 1. **Starter** is [[Culture]] [[TechnologyModifier]]

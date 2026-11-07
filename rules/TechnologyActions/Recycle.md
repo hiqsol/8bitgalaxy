@@ -13,3 +13,8 @@ scope: advanced
 	   to one
 	2. [[Goods]] go to the [[Destination]] [[Star]]
 	3. The selected [[Card]] is [[Destroy]]ed
+
+#### Notes
+
+1. A captured wreck is [[ControlledBy]] the captor: **Recycle** turns
+   a rival's wreck into [[Goods]], see [[Damaged]]

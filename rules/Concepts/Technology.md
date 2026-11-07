@@ -51,83 +51,83 @@ scope: core
    duel An [[Academy]] that also [[Heal]]s
 9. [[Express]]: 6c - Modifier - [[Hero]] - Player - duel
    [[Create]] puts new [[Actor]]s on top of the [[Reserve]]
-10. [[Settle]]: 6cp - Modifier - [[Ship]] - Player - duel A [[Ship]]
+10. [[Starter]]: 6c - Modifier - [[Hero]] - Player - duel
+    A [[Field]] [[Card]] starts an [[Action]] from its own [[IPS]]
+11. [[Settle]]: 6cp - Modifier - [[Ship]] - Player - duel A [[Ship]]
     turns itself into a [[Colony]] or a [[Base]] where it is
-11. [[Shipyard]]: 2p - [[Industrial Hub]] - [[Base]] -
+12. [[Shipyard]]: 2p - [[Industrial Hub]] - [[Base]] -
     Player - duel Building facility for [[Industrial]] [[Card]]s
-12. [[MegaYard]]: 4p - [[Industrial Hub]] -
+13. [[MegaYard]]: 4p - [[Industrial Hub]] -
     [[Colony]] - Player - duel A [[Shipyard]] that also repairs
-13. [[Navigation]]: 4s - Modifier - [[Hero]], [[Base]] - Player - duel
+14. [[Navigation]]: 4s - Modifier - [[Hero]], [[Base]] - Player - duel
     A route passes a [[Void]]
-14. [[Archive]]: 2s - [[Research Hub]] -
+15. [[Archive]]: 2s - [[Research Hub]] -
     [[Hyperstructure]] - Player - duel [[Research]] facility for
     [[Laboratory]] [[Card]]s
-15. [[Militarization]]: 2m 4m - Modifier - [[Base]], [[Colony]] -
+16. [[Militarization]]: 2m 4m - Modifier - [[Base]], [[Colony]] -
     Player - advanced [[Manage]] [[Rotate]]s or shifts rival [[Card]]s
-16. [[Scuttle]]: 4m - [[Action]] - [[Base]] - Player - advanced
+17. [[Scuttle]]: 4m - [[Action]] - [[Base]] - Player - advanced
     Immediate: [[Destroy]]s a [[Structure]] of own [[Faction]], a
     captured one too
-17. [[Smuggle]]: 4m - [[Action]] - [[Ship]] - Player - advanced
+18. [[Smuggle]]: 4m - [[Action]] - [[Ship]] - Player - advanced
     A [[Trade]] without the other party
-18. [[Ambush]]: 6m - Modifier - [[Hero]] - Player - advanced
+19. [[Ambush]]: 6m - Modifier - [[Hero]] - Player - advanced
     +[[Defense]]: each own [[Hidden]] [[Defender]] adds 1 when
     revealed
-19. [[Cloak]]: 6m - Modifier - [[Ship]] - Player - advanced -Pin: a
+20. [[Cloak]]: 6m - Modifier - [[Ship]] - Player - advanced -Pin: a
     [[Group]] is pinned only by two or more rival [[Military]]
     [[Actor]]s
-20. [[Counterintelligence]]: 6m - [[Action]] - [[Hero]] - Player -
+21. [[Counterintelligence]]: 6m - [[Action]] - [[Hero]] - Player -
     advanced Immediate: cancels a rival
     [[ImmediateAction|Immediate action]], also at the rival's [[Turn]]
-21. [[Jamming]]: 6m - Modifier - [[Ship]], [[Hyperstructure]] -
+22. [[Jamming]]: 6m - Modifier - [[Ship]], [[Hyperstructure]] -
     Player - advanced No rival route passes its [[Star]] or goes
     around it, for every [[Range]] check
-22. [[Occupation]]: 6m - Modifier - [[Ship]] - Player - advanced
+23. [[Occupation]]: 6m - Modifier - [[Ship]] - Player - advanced
     +[[Control]]: an own [[Military]] [[Actor]] gives a [[Control]]
     level above [[Actor]]
-23. [[Raid]]: 6m - [[Action]] - [[Ship]] - Player - advanced
+24. [[Raid]]: 6m - [[Action]] - [[Ship]] - Player - advanced
     An [[Attack]] whose winners stay home: takes the [[Goods]] or
     [[Deplete]]s the [[Structure]]s
-24. [[Tactics]]: 6m - Modifier - [[Ship]] - Player - advanced
+25. [[Tactics]]: 6m - Modifier - [[Ship]] - Player - advanced
     +[[Military]]: 1 more [[Power]] when a [[Hero]] and a [[Ship]]
     attack together
-25. [[Decapitation]]: 8m - [[Action]] - [[Ship]] - Player - advanced
+26. [[Decapitation]]: 8m - [[Action]] - [[Ship]] - Player - advanced
     An [[Attack]] on one rival [[Hero]], the other [[Card]]s of its
     [[Star]] can't defend it
-26. [[Recall]]: 1c - [[Action]] - [[Tool]] - Player - advanced
+27. [[Recall]]: 1c - [[Action]] - [[Tool]] - Player - advanced
     Immediate: a [[Card]] from the [[Discard]] goes on top of the
     [[Reserve]]
-27. [[Trade]]: 2c - [[Action]] - [[Ship]], [[Base]] - Player -
+28. [[Trade]]: 2c - [[Action]] - [[Ship]], [[Base]] - Player -
     advanced Two [[Faction]]s turn [[Power]] into [[Goods]] together
-28. [[Debt]]: 4c - [[Action]] - [[Ship]] - Player - advanced
+29. [[Debt]]: 4c - [[Action]] - [[Ship]] - Player - advanced
     Immediate: [[Energy]] equal to the [[Card]]'s [[Level]], then the
     [[Card]] is Destroyed
-29. [[Export]]: 4c - [[Action]] - [[Colony]] - Player - advanced
+30. [[Export]]: 4c - [[Action]] - [[Colony]] - Player - advanced
     [[Goods]] carried to a rival [[Colony]] turn into [[Energy]]
-30. [[MinusDeplete]]: 4c - Modifier - [[Colony]] - Player - advanced
+31. [[MinusDeplete]]: 4c - Modifier - [[Colony]] - Player - advanced
     -[[Deplete]]: one participant doesn't [[Deplete]]
-31. [[PlusHero]]: 4c - [[Action]] - [[Colony]] - Player - advanced
+32. [[PlusHero]]: 4c - [[Action]] - [[Colony]] - Player - advanced
     +[[Hero]]: creates a new [[Level]] 1 [[Hero]]
-32. [[Sell]]: 4c - [[Action]] - [[Ship]] - Player - advanced A
+33. [[Sell]]: 4c - [[Action]] - [[Ship]] - Player - advanced A
     [[Trade]] over a [[Card]]: its [[Price]] turns into [[Goods]], the
     [[Card]] is Destroyed
-33. [[Assimilate]]: 6c - [[Action]] - [[Hero]] - Player - advanced
+34. [[Assimilate]]: 6c - [[Action]] - [[Hero]] - Player - advanced
     Replaces a rival [[Colony]] in a [[Star]] the player controls with
     an own one
-34. [[Contact]]: 6c - [[Action]] - [[Hero]] - Player - advanced
+35. [[Contact]]: 6c - [[Action]] - [[Hero]] - Player - advanced
     Conquers a [[Wild]] [[Star]] without [[Ancient]]s, for twice the
     [[World]]'s [[Price]]
-35. [[Emulate]]: 6c - Modifier - [[Hero]] - Player - advanced Uses a
+36. [[Emulate]]: 6c - Modifier - [[Hero]] - Player - advanced Uses a
     **Technology** printed on the top [[Card]] of a rival's
     [[Discard]]
-36. [[Envoy]]: 6c - Modifier - [[Hero]] - Player - advanced
+37. [[Envoy]]: 6c - Modifier - [[Hero]] - Player - advanced
     Gives no [[Control]], doesn't pin and can't be Intercepted
-37. [[Festival]]: 6c - Modifier - [[Hyperstructure]] - Player -
+38. [[Festival]]: 6c - Modifier - [[Hyperstructure]] - Player -
     advanced +[[Restore]]: [[Restore]]s every own [[Structure]] in its
     [[Star]] at each [[Restore]] phase
-38. [[Mentor]]: 6c - Modifier - [[Hero]] - Player - advanced
+39. [[Mentor]]: 6c - Modifier - [[Hero]] - Player - advanced
     -[[Hub]]: a [[Grow]] in its [[Star]] needs no [[Hub]]
-39. [[Starter]]: 6c - Modifier - [[Hero]] - Player - advanced
-    A [[Field]] [[Card]] starts an [[Action]] from its own [[IPS]]
 40. [[Heritage]]: 8c - Modifier - [[Hyperstructure]] - Player -
     advanced Own [[Damaged]] [[Card]]s count for
     [[GalacticDiaspora|Galactic Diaspora]]
@@ -144,7 +144,7 @@ scope: core
     +Pile: adds a [[Factory]] or a [[Laboratory]] pile
 46. [[Salvage]]: 4p - Modifier - [[Ship]] - Player - advanced
     +[[Goods]]: 1 for each rival [[Card]] [[Damaged]] in the
-    [[Action]]
+    [[Combat]], winner or loser
 47. [[FieldRepair]]: 6p - Modifier - [[Hero]] - Player - advanced
     -[[Damaged]]: a [[Restore]] can [[Flip]] a [[Damaged]]
     [[Industrial]] [[Card]] back to [[Enabled]]

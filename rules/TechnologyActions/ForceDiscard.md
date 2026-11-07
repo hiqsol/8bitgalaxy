@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: duel
 aliases: [Rival Discards]
 ---
@@ -16,5 +16,6 @@ aliases: [Rival Discards]
    [[Turn]]
 2. Like Star Realms: the rival's [[Hand]] is drawn at the end of
    its [[Turn]], so it waits to be hit
-3. An empty [[Hand]] at the start of own [[Turn]] can end the game,
-   see [[Goal]]: **Force Discard** makes it a real risk
+3. An empty [[Hand]] at the start of own [[Turn]] leaves only a
+   [[Field]] [[Starter]] to make a move, see [[Goal]]: **Force
+   Discard** makes it a real risk

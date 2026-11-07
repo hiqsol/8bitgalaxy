@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: core
 aliases: [Disabled, Exhausted]
 ---
@@ -15,13 +15,17 @@ aliases: [Disabled, Exhausted]
 5. A **Damaged** [[Card]] stays on the [[Field]] until it is
    [[Destroy]]ed or [[Enabled]] again
 6. Anyone may look at a **Damaged** [[Card]]: a wreck is no secret
-7. [[Attack]] [[Destroy]]s **Damaged** [[Card]]s: the [[Attacker]]
-   selects them in the target [[Star]] as defending [[Participants]],
-   each with [[Defense]] 1
+7. A **Damaged** [[Card]] is no [[Participants|Participant]] of any
+   [[Action]] until [[Enabled]] again: it doesn't fight, support or
+   act
+8. [[Attack]] [[Destroy]]s **Damaged** [[Card]]s in a separate
+   [[Combat]]: the [[Attacker]] selects only **Damaged** [[Card]]s in
+   the target [[Star]], nobody defends them, each 1 [[MilitaryPower]]
+   [[Destroy]]s one of them
 
 #### Notes
 
 1. **Disabled**, **Exhausted** are the same [[State]],
    indistinguishable
-2. Wrecks are cleared by force: three **Damaged** [[Card]]s defend
-   with 3, an [[Attack]] of 3 is a tie and loses, see [[Combat]]
+2. Wrecks are cleared by force, in their own [[Combat]], not in a
+   fight for the [[Star]]: three wrecks take 3 [[MilitaryPower]]

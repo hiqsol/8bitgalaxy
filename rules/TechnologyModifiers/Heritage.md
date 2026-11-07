@@ -11,4 +11,4 @@ scope: advanced
 #### Notes
 
 1. A culture outlives its ruins: a rival breaks the Diaspora only by
-   [[Destroy]], a second Damage, see [[Damaged]]
+   [[Destroy]], an [[Attack]] on the wrecks, see [[Damaged]]

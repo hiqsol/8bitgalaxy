@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: duel
 aliases: [Grow, Enhance, Paid End]
 ---
@@ -26,8 +26,7 @@ aliases: [Grow, Enhance, Paid End]
 	   equal or lower than the current [[Level]] of the old [[Card]],
 	   a downgrade is allowed
 	6. The **hub** for the [[Card]], as for [[Create]], see [[Hub]]
-6. **Cost**: [[Price]] of the **Paid End** **minus** the current
-   [[Level]] of the old [[Card]], at least 1
+6. **Cost**: half the [[Price]] of the **Paid End**, rounded up
 7. **Outcome**:
 	1. New [[Card]] substitutes the old [[Card]] in its [[Slot]], the
 	   **Paid End** up
@@ -35,10 +34,10 @@ aliases: [Grow, Enhance, Paid End]
 
 #### Notes
 
-1. The [[Field]] shows the [[Cost]]: the [[End]] in use sets the
-   [[Level]], the paid [[End]] sets the [[Price]]. In the [[Deck]]
-   every **Grow** costs 2, an **Enhance** from a [[Strong]] [[End]] to
-   a [[Strong]] [[End]] 2 [[Level]]s up 3, 4 [[Level]]s up 5
+1. Only the **Paid End** sets the [[Cost]], not the old [[Card]]. In
+   the [[Deck]] a **Grow** to [[Level]] 2 or 3 costs 2, to 4 or 5
+   costs 3, to 6 or 7 costs 4, to 8 costs 5; an **Enhance** to a
+   [[Level]] 4, 6 or 8 [[Card]] costs 3, 4 or 5
 2. A [[Structure]] paid on its [[Strong]] [[End]] comes [[Ready]], an
    **Upgrade** [[Restore]]s a [[Depleted]] one, on its [[Weak]]
    [[End]] it comes [[Depleted]] and costs 1 less; a [[Ship]]'s

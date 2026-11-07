@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: duel
 aliases: [Heal, Fix]
 ---
@@ -11,7 +11,7 @@ aliases: [Heal, Fix]
 3. **Recover** [[Flip]]s a [[Damaged]] [[Card]] to [[Enabled]]
 4. **Direction**: from the [[Card]] that provides **Recover** to the
    target [[Card]]
-5. **Cost**: [[Price]] of the target [[Card]]
+5. **Cost**: half the [[Price]] of the target [[Card]], rounded up
 
 #### Notes
 
@@ -21,4 +21,5 @@ aliases: [Heal, Fix]
 2. **Recover** takes any [[Damaged]] [[Card]], a rival's too: a
    **Heal** of a captured [[Hero]] of a [[Fallen]] [[Faction]] brings
    that [[Faction]] back
-3. The full [[Price]]: a repair costs as much as a new [[Card]]
+3. Half the [[Price]]: a repair costs about half of a new [[Card]],
+   a [[Damaged]] [[Card]] is worth fighting over

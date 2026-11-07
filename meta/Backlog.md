@@ -5,13 +5,15 @@ scope: meta
 
 # Backlog
 
-Open items of the rules, design and simplification reviews, aimed at
-a **minimal playable duel**: 2 players, no [[GalaxyDeck]], playable
-with an AI from the notes alone. Items keep their review numbers:
-issues `I<n>`, proposals `P<n>` and simplifications `S<n>`. Other
-games are compared in [[ComparisonReview]]. [[Diagnostic]] tests each
-independent point of an issue with an atomic multiple-choice
-question. [[ReviewProcess]] sets when an item opens and closes.
+Open items of the rules, design and simplification reviews, aimed at a
+**minimal playable duel**: 2 players, no [[GalaxyDeck]], playable with
+an AI from the notes alone. Items keep their review numbers: issues
+`I<n>`, proposals `P<n>` and simplifications `S<n>`. Other games are
+compared in [[ComparisonReview]]. [[Diagnostic]] tests each
+independent point of an issue with an atomic multiple-choice question.
+[[ReviewProcess]] sets when an item opens and closes. The [[Combat]]
+studies are [[CombatVariants]], [[WarEconomy]] and [[CombatPlaytest]],
+the designer's answers go to [[CombatGuidance]].
 
 Write the points of an item as lettered bullets `- a) ...`. Answer
 by number and letter, e.g. "P27 a, c", "S41 no".
@@ -39,7 +41,7 @@ evidence from a played game, not from a review.
 6. **Build**: [[Create]], [[Upgrade]] at a [[Hub]]; [[Recover]]
    from the [[Card]] that provides it
 7. **Field start**: a [[Field]] [[Card]] starts an [[Action]] only
-   with [[Starter]], `advanced`
+   with [[Starter]], `duel`
 8. **Failed action**: it costs all its [[Participants]], a take-back
    (P34) and a visible [[Explore]] [[Price]] (S20) were rejected, see
    [[PerformAction]]
@@ -141,10 +143,6 @@ evidence from a played game, not from a review.
 
 Questions a played game answers better than a review.
 
-- [ ] **P69. Upgrade at full Price.** [[Upgrade#6]] costs the
-  [[Price]] of the **Paid End** minus the current [[Level]] of the old
-  [[Card]]. Is the difference good in play? The designer leans to the
-  full [[Price]], like [[Recover#5]].
 - [ ] **I46. Deck thinning by Takeoff.** A player can take off weak
   [[Card]]s, the [[Tool]]s first, and cycle only strong ones. Free
   [[Slot]]s limit it. To be worked out in [[GameBalance]]. Seen in
@@ -169,23 +167,6 @@ Questions a played game answers better than a review.
 	- b) A [[Depleted]] [[Structure]] then still gives some [[Power]],
 	  so [[Restore]] matters less: an alternative to a) is +1 on 4x
 	  [[Weak]] [[End]]s only.
-- [ ] **I81. Combat damage, to brainstorm.** [[Combat#9.1]]-2 Damage
-  every [[Direct participant]] the winner doesn't save by the
-  [[Advantage]], on both sides; [[Supporter]]s only [[Deplete]]:
-	- a) Exploit: one cheap [[Military]] [[Ship]] plus [[Hand]]
-	  [[Supporter]]s aiming at a tie. [[Advantage]] 0 saves nothing,
-	  so the [[Defender]]'s whole garrison is [[Damaged]] for a
-	  [[Level]]-2 [[Ship]].
-	- b) Garrisons are a liability: the more [[Defender]]s in a
-	  [[Star]], the more a narrow win costs.
-	- c) Option: the loser's [[Supporter]]s get [[Damaged]] too, the
-	  winner's only [[Direct participant]]s. Fighting from [[Hand]]
-	  stops being free, but a narrow win still costs the winner the
-	  garrison.
-	- d) Option: the loser's [[Direct participant]]s set the winner's
-	  loss: the winner Damages own [[Direct participant]]s of total
-	  [[Level]] at least the loser's direct total, chosen by the
-	  winner.
 
 ## After the first duel
 
@@ -195,10 +176,11 @@ Questions a played game answers better than a review.
 	- e) The 12 [[Card]]s 6/5 and 8/7 are TBD in the [[Deck]]:
 	  [[Technology|Technologies]] and [[Hyperstructure]] Primary, to
 	  design before the next playtest. Their TBD [[End]]s carry
-	  [[Express]], [[ForceDiscard]], [[Settle]], the `+Draw` [[Plus]]
-	  and the [[Technology|Technologies]] from [[Tactics]] to
-	  [[Standby]], see [[Technology]]: a value per [[Price]] stays
-	  about flat, a value per [[Card]] grows with [[Level]].
+	  [[Express]], [[Starter]], [[ForceDiscard]], [[Settle]], the
+	  `+Draw` [[Plus]] and the [[Technology|Technologies]] from
+	  [[Tactics]] to [[Standby]], see [[Technology]]: a value per
+	  [[Price]] stays about flat, a value per [[Card]] grows with
+	  [[Level]].
 - [ ] **I47. Images.** Update `card.png` after the rules and [[Card]]
   data are settled: annotate both [[End]]s, ExtraPrice,
   [[Prerequisites]] and the [[Technology]] name.

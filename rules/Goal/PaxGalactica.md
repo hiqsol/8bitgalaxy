@@ -41,11 +41,13 @@ aliases: [Pax Galactica, Fallen]
    [[Source]] for an [[Action]] from [[Hand]]. Losing [[Control]] is
    not enough: a [[Disputed]] [[Star]] is not lost, the [[Faction]]
    takes off and acts there
-6. An empty [[Hand]] at the start of own [[Turn]] makes a [[Faction]]
-   **Fallen** too, like an unexpected checkmate: spending the whole
-   [[Hand]] on defense in [[Combat]] is a real risk
+6. Not an empty [[Hand]] but no move makes a [[Faction]] **Fallen**:
+   the [[Attacker]] draws a full [[Hand]] at the end of own [[Turn]],
+   see [[Turn]], while a [[Defender]] who spends the whole [[Hand]] in
+   [[Combat]] may start own [[Turn]] with no move, like an unexpected
+   checkmate
 7. In a [[Duel]] the first fall ends the game. With more rivals a
-   **Fallen** [[Faction]] can come back: an empty [[Hand]] costs a
+   **Fallen** [[Faction]] can come back: no move costs a
    [[Turn]], a lost [[Star]] comes back when its remaining [[Card]]s
    regain one, a lost leader when its [[Hero]] is [[Enabled]] again
 8. A **Fallen** [[Faction]] can't bring back its own leaders: it skips
