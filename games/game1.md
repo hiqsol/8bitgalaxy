@@ -54,10 +54,10 @@ Both open with a home [[Colony]]: A a C2m for [[Recon]] and
 1. A, Energy 1
   Play:
     1a. Create at Academy: C2m@Fac3 -> S00s4 << 3c
-        S1c@Hand|1c + C2c@S00s1|Academy,2c = 3c
+        S1c@Hand:1c + C2c@S00s1:Academy+2c = 3c
         S1c->Discard, C2c=>C1c
-    1b. Explore with Recon: S00o3 => Space|1r << 1r2m
-        H1p@Hand|1r + C2m@S00s4|Recon,2m = 1r2m
+    1b. Explore with Recon: S00o3 => Space+1r << 1r2m
+        H1p@Hand:1r + C2m@S00s4:Recon+2m = 1r2m
         H1p->Discard, C2m=>C1m
     1c. Takeoff: H1m -> S00u4
   Restore: C1c=>C2c, C1m=>C2m
@@ -65,10 +65,10 @@ Both open with a home [[Colony]]: A a C2m for [[Recon]] and
 2. B, Energy 1
   Play:
     2a. Create at Academy: C2s@Fac3 -> S21s2 << 3c
-        S1c@Hand|1c + C2c@S21s4|Academy,2c = 3c
+        S1c@Hand:1c + C2c@S21s4:Academy+2c = 3c
         S1c->Discard, C2c=>C1c
-    2b. Explore with Survey: S20o3 => Space|1r << 1r2s
-        S1s@Hand|1r + C2s@S21s2|Survey,2s = 1r2s
+    2b. Explore with Survey: S20o3 => Space+1r << 1r2s
+        S1s@Hand:1r + C2s@S21s2:Survey+2s = 1r2s
         S1s->Discard, C2s=>C1s
     2c. Takeoff: S2c -> S21u1
     2d. Takeoff: S2s -> S21u2
@@ -87,8 +87,8 @@ S20.
 ```text
 3. A, Energy 2
   Play:
-    3a. Explore with Recon: S01 => Defense|3+1 with A? << 2r5m
-        Hand[S2p|2r+2e + S2m|1m] + C2m@S00s4|Recon,2m = 2r5m
+    3a. Explore with Recon: S01 => Defense 3+1 with A? << 2r5m
+        Hand[S2p:2r+2e + S2m:1m] + C2m@S00s4:Recon+2m = 2r5m
         S2p,S2m->Discard, C2m=>C1m
     3b. Takeoff: S1p -> S00u1
     3c. Takeoff: S2s -> S00u2
@@ -98,15 +98,15 @@ S20.
 
 4. B, Energy 2
   Play:
-    4a. Research: C4s@Lab4 -> Fac3 << 5s,*2s
-        Hand[S1s/1m|1s+1e + H1s/1p|1s] + C2s@S21s2|2s,*2s = 5s,*2s
+    4a. Research: C4s@Lab4 -> Fac3 << 5s *2s
+        Hand[S1s/1m:1s+1e + H1s/1p:1s] + C2s@S21s2:2s+*2s = 5s *2s
         S1s/1m,H1s/1p->Discard, C2s=>C1s
     4b. Upgrade with Grow at Academy: C1s@S21s2 => C4s << 2c
-        S1c/1p@Hand|1c + S21[C2c@s4|Academy,2c + H1c/1m@u4|Grow,1c] = 4c
+        S1c/1p@Hand:1c + S21[C2c@s4:Academy+2c + H1c/1m@u4:Grow+1c] = 4c
         S1c/1p,H1c/1m->Discard, C2c=>C1c, C1s->Fac3
     # RG1-1: the Depleted C2s is upgraded, C4s comes Ready
-    4c. Explore with Survey: S20 => Science|2+2 with A?,A? << 2r6s
-        S1s/2m@Hand|1s+1e + S21[S2s@u2|Survey,2r1s + C4s@s2|3r3s] = 5r6s
+    4c. Explore with Survey: S20 => Science 2+2 with A?,A? << 2r6s
+        S1s/2m@Hand:1s+1e + S21[S2s@u2:Survey+2r1s + C4s@s2:3r3s] = 5r6s
         S1s/2m,S2s->Discard, C4s=>C3s
     4d. Takeoff: S1c/2p -> S21u4
   Draw with Shuffle
@@ -125,15 +125,15 @@ C2s into it: two [[Level]]-4 [[Colony|Colonies]] at home, but no
 5. A, Energy 1
   Play:
     5a. Attack: S00 -> S01[A?] << 2r
-        Hand[S1m/2c|1m+1e Hidden + S2m|1m Hidden] + S00[S1m@u3|1r1m + H1m@u4|1r1m]
+        Hand[S1m/2c:1m+1e Hidden + S2m:1m Hidden] + S00[S1m@u3:1r1m + H1m@u4:1r1m]
         = 2r5m
         Reveal: S1m/2c, S2m, A3
         Total: 5m against 3d, attacker wins, Advantage 2
         Outcome: S1m,H1m saved; S1m->S01u1, H1m->S01u3; A3->AncientDeck
           S1m/2c,S2m->Discard
     # RG1-2: the Ancient gets no Defense Star bonus
-    5b. Explore with Recon: S01o5 => Space|1r << 3r2m
-        S1s@Hand|1r + S00[C2m@s4|Recon,2m + S2s@u2|2r] = 3r2m
+    5b. Explore with Recon: S01o5 => Space+1r << 3r2m
+        S1s@Hand:1r + S00[C2m@s4:Recon+2m + S2s@u2:2r] = 3r2m
         S1s,S2s->Discard, C2m=>C1m
     5c. Takeoff: S2p -> S00u2
     5d. Takeoff: H1p -> S00u4
@@ -142,15 +142,15 @@ C2s into it: two [[Level]]-4 [[Colony|Colonies]] at home, but no
 
 6. B, Energy 1
   Play:
-    6a. Research: C4m@Lab4 -> Fac2 << 5s,*2m
-        Hand[S1s|1s + S2m|*2m + S1s/1m|1s] + C4s@S21s2|3s = 5s,*2m
+    6a. Research: C4m@Lab4 -> Fac2 << 5s *2m
+        Hand[S1s:1s + S2m:*2m + S1s/1m:1s] + C4s@S21s2:3s = 5s *2m
         S1s,S2m,S1s/1m->Discard, C4s=>C3s
     # RG1-3: C4m goes onto the Base pile, so C2s stays on top of the Colony pile
     6b. Create at Academy: C2s@Fac3 -> S21s3 << 3c
-        H1p@Hand + S21[C2c@s4|Academy,2c + S2c@u1|1c] = 3c
+        H1p@Hand + S21[C2c@s4:Academy+2c + S2c@u1:1c] = 3c
         H1p,S2c->Discard, C2c=>C1c
     6c. Upgrade with Grow at Academy: C2s@S21s3 => C4m << 2c
-        H1c/1m@Hand|Grow + S21[C1c@s4|Academy + S1c/2p@u4|2c] = 2c
+        H1c/1m@Hand:Grow + S21[C1c@s4:Academy + S1c/2p@u4:2c] = 2c
         H1c/1m,S1c/2p->Discard, C2s->Fac3
     # C4m comes from the Base pile
   Draw with Shuffle
@@ -165,9 +165,9 @@ off three [[Ship]]s.
 ```text
 7. A, Energy 1
   Play:
-    7a. Explore with Recon: S12 => Military|3+1 with A?,A? << 4r6m
-        Hand[S2m|1m + S1m/2c|1m + S1m/1c|1m]
-        + S00[C2m@s4|Recon,2m+1e + S2p@u2|2r + S1p@u1|1r + H1p@u4|1r] = 4r6m
+    7a. Explore with Recon: S12 => Military 3+1 with A?,A? << 4r6m
+        Hand[S2m:1m + S1m/2c:1m + S1m/1c:1m]
+        + S00[C2m@s4:Recon+2m+1e + S2p@u2:2r + S1p@u1:1r + H1p@u4:1r] = 4r6m
         S2m,S1m/2c,S1m/1c,S2p,S1p,H1p->Discard, C2m=>C1m
     # RG1-4: Ancients pin a passing group
     7b. Takeoff: S1s -> S00u2
@@ -193,20 +193,20 @@ is [[Disputed]], B controls no [[Star]].
 9. A, Energy 1
   Play:
     9a. Attack: S01 -> S12[A?,A?] << 2r
-        S01[S2m@Hand|1m Hidden + S1m/2c@Hand|1m+1e Hidden + S1m@u1|1r1m
-          + H1m@u3|1r1m] = 2r5m
-        + S00[S1p@Hand|1r Hidden + C2m@s4|2m + S2s@u4|2r + S1s@u2|1r] = 4r2m
+        S01[S2m@Hand:1m Hidden + S1m/2c@Hand:1m+1e Hidden + S1m@u1:1r1m
+          + H1m@u3:1r1m] = 2r5m
+        + S00[S1p@Hand:1r Hidden + C2m@s4:2m + S2s@u4:2r + S1s@u2:1r] = 4r2m
         Reveal: S2m, S1m/2c, S1p, A1, A3
         Total: 7m against 4d, attacker wins, Advantage 3
         Outcome: S1m,H1m saved; S1m->S12u1, H1m->S12u3; A1,A3->AncientDeck
           S2m,S1m/2c,S1p,S2s,S1s->Discard, C2m=>C1m
     # RG1-8: the remote group reaches with its own Range, C2m gives 2m
-    9b. Explore with Recon: S12o7 => Space|1r << 1r2m
-        S1m/1c@Hand|1m + H1m@S12u3|Recon,1r1m = 1r2m
+    9b. Explore with Recon: S12o7 => Space+1r << 1r2m
+        S1m/1c@Hand:1m + H1m@S12u3:Recon+1r1m = 1r2m
         S1m/1c,H1m->Discard
     # RG1-7: H1m fought and acts again
     9c. Move: S1m@S12u1 -> S21u4 << 2r
-        S2p@Hand|2r + S1m@S12u1|1r = 3r; S2p->Discard, S21 Disputed
+        S2p@Hand:2r + S1m@S12u1:1r = 3r; S2p->Discard, S21 Disputed
   Draw with Shuffle
   Restore: C1m=>C2m
 

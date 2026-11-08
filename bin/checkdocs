@@ -55,6 +55,10 @@ KIND_PAGES = {'BasicAction', 'TechnologyAction', 'TechnologyModifier', 'Hub', 'C
 CLASS_TECH = re.compile(r'\[\[(%s)\]\] (?:technolog|\[\[Technology\]\])|(?:technology|\[\[Technology\]\]) \[?\[?Level'
                         % '|'.join(CLASSES.values()))
 # [[Page|text]], [[Page#3]], escaped [[Page\|text]] in tables: the markdown wikilinks extension takes only [[Page]]
+# Deck card line: [2× ]S4+1m/3+2c: 2m Smuggle / 2c +1c << *1c *2m
+CARD_TYPES = {'S': 'Ship', 'H': 'Hero', 'B': 'Base', 'C': 'Colony', 'HS': 'Hyperstructure', 'T': 'Tool'}
+DECK_LINE = re.compile(r'(?:\d+× )?(?P<type>HS|[SHBCT])(?P<level>\d+)[+-]\d+(?P<cls>[mcps])/\d+[+-]\d+(?P<wcls>[mcps]):'
+                       r' +(?P<strong>.*?) +/ +(?P<weak>.*?)(?: +<<.*)?$')
 WIKILINK = re.compile(r'\[\[([^\]|#]*)(#[^\]|]*)?(?:\\?\|([^\]]*))?\]\]')
 
 problems = []
@@ -200,14 +204,18 @@ def check_page(page):
 
 
 def deck_assignments(deck, pages):
-    """Map technology -> {(card, end): class} from the Deck table, other links in it are no technologies."""
-    result, card = {}, None
-    for row in deck.table():
-        card = text(row[0]) or card
-        for tech in links(row[4]) + links(row[5]):
-            if tech in pages and pages[tech].path.parent.name not in TECH_DIRS:
-                continue
-            result.setdefault(tech, {})[(card, text(row[1]))] = text(row[3])
+    """Map technology -> {(card, end): class} from the Deck card lines, other names in them are no technologies."""
+    result = {}
+    for line in deck.text.splitlines():
+        spec = DECK_LINE.match(line)
+        if not spec:
+            continue
+        card = f'{CARD_TYPES[spec["type"]]} {spec["level"]}{spec["cls"].upper()}'
+        for end, cls, gives in (('Strong', spec['cls'], spec['strong']), ('Weak', spec['wcls'], spec['weak'])):
+            for tech in re.findall(r'[A-Z][A-Za-z]+', gives):
+                if tech == 'TBD' or tech in pages and pages[tech].path.parent.name not in TECH_DIRS:
+                    continue
+                result.setdefault(tech, {})[(card, end)] = cls.upper()
     return result
 
 

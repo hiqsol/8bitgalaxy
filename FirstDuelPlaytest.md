@@ -126,20 +126,20 @@ The decisive [[Turn]] of game 1:
 9. A, Energy 1
   Play:
     9a. Attack: S01 -> S12[A?,A?] << 2r
-        S01[S2m@Hand|1m Hidden + S1m/2c@Hand|1m+1e Hidden + S1m@u1|1r1m
-          + H1m@u3|1r1m] = 2r5m
-        + S00[S1p@Hand|1r Hidden + C2m@s4|2m + S2s@u4|2r + S1s@u2|1r] = 4r2m
+        S01[S2m@Hand:1m Hidden + S1m/2c@Hand:1m+1e Hidden + S1m@u1:1r1m
+          + H1m@u3:1r1m] = 2r5m
+        + S00[S1p@Hand:1r Hidden + C2m@s4:2m + S2s@u4:2r + S1s@u2:1r] = 4r2m
         Reveal: S2m, S1m/2c, S1p, A1, A3
         Total: 7m against 4d, attacker wins, Advantage 3
         Outcome: S1m,H1m saved; S1m->S12u1, H1m->S12u3; A1,A3->AncientDeck
           S2m,S1m/2c,S1p,S2s,S1s->Discard, C2m=>C1m
     # RG1-8: the remote group reaches with its own Range, C2m gives 2m
-    9b. Explore with Recon: S12o7 => Space|1r << 1r2m
-        S1m/1c@Hand|1m + H1m@S12u3|Recon,1r1m = 1r2m
+    9b. Explore with Recon: S12o7 => Space+1r << 1r2m
+        S1m/1c@Hand:1m + H1m@S12u3:Recon+1r1m = 1r2m
         S1m/1c,H1m->Discard
     # RG1-7: H1m fought and acts again
     9c. Move: S1m@S12u1 -> S21u4 << 2r
-        S2p@Hand|2r + S1m@S12u1|1r = 3r; S2p->Discard, S21 Disputed
+        S2p@Hand:2r + S1m@S12u1:1r = 3r; S2p->Discard, S21 Disputed
   Draw with Shuffle
   Restore: C1m=>C2m
 ```
@@ -274,7 +274,8 @@ Made before play where the docs were silent, in `RULES.md` section 11:
   [[Receive]] is the [[Action]] for it ([[Duel#7]], [[Receive]]).
 - PR-7 [[Militarization]]'s `+N Defense` kept: [[Militarization]] is
   defined, the values in I75 f.
-- PR-8 starting [[Ship]]s 1/1: one-ended [[Ship]]s 1/0 ([[Deck]] 8).
+- PR-8 starting [[Ship]]s 1/1: [[Ship]]s 1/0, the [[Weak]] [[End]]
+  [[Level]] 0 of another [[Class]] ([[Deck]] 8).
 - PR-9 [[Slot]] k is overlapped when [[Slot]] k+1 holds a [[Card]]:
   [[Slot#5]].
 - PR-10 a [[Supporter]]'s [[Level]] and [[Class]] as its one

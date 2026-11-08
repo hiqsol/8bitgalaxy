@@ -18,23 +18,29 @@ scope: duel
 	3. [[Prerequisites]]: none at [[Level]] 2, else the [[Strong]]
 	   [[Level]] − 2 of its [[Class]]
 3. A [[World]] prints one [[Ability]], the Primary of its [[Strong]]
-   [[End]], on the [[Weak]] [[End]] too where the table says both
-4. A weak [[Ability]] comes in many copies, a strong one is rare:
+   [[End]], on the [[Weak]] [[End]] too where its line gives it, `-`
+   gives nothing; a line is the [[Card]] in [[Notation]], as in the
+   [[Deck]]
+4. [[World]] 4M gives its +2 [[Defense]] to its controller's
+   [[Defender]]s in its [[Star]]
+5. A weak [[Ability]] comes in many copies, a strong one is rare:
 
-| [[Card]] | Copies | [[Level]] | [[Ability]] | [[End]]s | [[Prerequisites]] |
-|------|--------|-------|---------|------|---------------|
-| [[World]] 2M | 2 | 2+1/1+1 | +1 | both | - |
-| [[World]] 2C | 2 | 2+1/1+1 | +1 | both | - |
-| [[World]] 2P | 2 | 2+1/1+1 | +1 | both | - |
-| [[World]] 2S | 2 | 2+1/1+1 | +1 | both | - |
-| [[World]] 4M | 2 | 4+1/3+1 | +2 [[Defense]] to its controller's [[Defender]]s in its [[Star]] | both | 2M |
-| [[World]] 4C | 2 | 4+1/3+1 | +1 [[Goods]] | [[Strong]] | 2C |
-| [[World]] 4P | 2 | 4+1/3+1 | +2 [[Capacity]] | both | 2P |
-| [[World]] 4S | 2 | 4+1/3+1 | +2 [[Range]] | both | 2S |
-| [[World]] 6M | 1 | 6+1/5+1 | -1 [[Card]]: [[ForceDiscard]] | [[Strong]] | 4M |
-| [[World]] 6C | 1 | 6+1/5+1 | +1 [[Draw]] | [[Strong]] | 4C |
-| [[World]] 6P | 1 | 6+1/5+1 | TBD | [[Strong]] | 4P |
-| [[World]] 6S | 1 | 6+1/5+1 | +1 [[Energy]] | [[Strong]] | 4S |
+```text
+2× W2+1m/1+1m: +1m          / +1m
+2× W2+1c/1+1c: +1c          / +1c
+2× W2+1p/1+1p: +1p          / +1p
+2× W2+1s/1+1s: +1s          / +1s
+
+2× W4+1m/3+1m: +2d          / +2d << *2m
+2× W4+1c/3+1c: +1g          / -   << *2c
+2× W4+1p/3+1p: +2l          / +2l << *2p
+2× W4+1s/3+1s: +2r          / +2r << *2s
+
+W6+1m/5+1m:    ForceDiscard / -   << *4m
+W6+1c/5+1c:    +1Draw       / -   << *4c
+W6+1p/5+1p:    TBD          / -   << *4p
+W6+1s/5+1s:    +1e          / -   << *4s
+```
 
 #### Notes
 
@@ -45,6 +51,6 @@ scope: duel
    [[World]]s, the strong ones wait for developed [[Faction]]s
 3. [[Energy]] is above [[Power]]: an [[Energy]] [[Token]] [[Boost]]s
    an [[Action]] of any [[Class]] anywhere and stays between [[Turn]]s
-4. +1 [[Draw]] is the [[Draw]] [[Plus]], see [[DeckBuilding]]
+4. `+1Draw` is the [[Draw]] [[Plus]], see [[DeckBuilding]]
 5. No [[World]] reaches [[Level]] 8, the [[Level]] of the [[Crown]]s:
    a [[World]] never gives a [[Faction]] [[Singularity]]

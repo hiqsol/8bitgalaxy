@@ -23,7 +23,7 @@ The three first duel playtest games of 2026-10-22/23, rewritten in the
 
 ```text
 1a. Create at Academy: C2m@Fac3 -> S00s4 << 3c
-    S1c@Hand|1c + C2c@S00s1|Academy,2c = 3c
+    S1c@Hand:1c + C2c@S00s1:Academy+2c = 3c
     S1c->Discard, C2c=>C1c
 ```
 
@@ -53,7 +53,7 @@ The games follow the playtest digest `RULES.md`, not today's docs:
    [Explore](../rules/TechnologyActions/Explore.md) reveals them. A
    revealed [[Star]] shows its kind and its [[Unit]]+[[Structure]]
    split, and as many [[Ancient]]s appear in it as its ExtraPrice:
-   `S01 => Defense|3+1 with A?`. Today a
+   `S01 => Defense 3+1 with A?`. Today a
    [World](../rules/Galaxy/World.md) [[Card]] gives a [[Star]] its
    kind.
 2. [[Star]] kinds: [[Defense]] (+1 [[Defense]]), [[Military]] (+1
@@ -61,7 +61,7 @@ The games follow the playtest digest `RULES.md`, not today's docs:
    [[SciencePower|Science power]]), [[Shipyard]] (a [[Hub]]),
    [[Energy]] (+1 [[Energy]]). [[Home]] [[Star]]s have 4+4 [[Slot]]s.
 3. Every [[Space]] [[Tile]] is Normal, [[Length]] 1, [[Price]] 2:
-   `S00o3 => Space|1r`. A [[Tile]] is named by the o'clock bearing of
+   `S00o3 => Space+1r`. A [[Tile]] is named by the o'clock bearing of
    a [[Star]], as in the playtest table: `S00o3` lies between S00 and
    S01.
 4. At the start of an own [[Turn]] a player gets 1 [[Energy]], at most
@@ -79,46 +79,55 @@ The games follow the playtest digest `RULES.md`, not today's docs:
 
 ## Cards
 
-Full name, then each [[End]]: its [[Level]] and [[Class]], then
-Primary /
-Secondary. A [[Technology]] is its flavour name, a blank one is in
-parentheses.
+A line per [[Card]], a spec of
+[meta/Notation.md](../meta/Notation.md): the full name, then what each
+[[End]] gives, Primary then Secondary, the [[End]]s apart by `/`, then
+`<<` the [[Prerequisites]]. A [[Technology]] is its flavour name, a
+blank one is in parentheses. The [[Price]] is the [[Strong]] [[End]]'s
+[[Level]] + [[ExtraPrice]].
 
-| [[Card]] | Full name | [[Strong]] [[End]] | [[Weak]] [[End]] | [[Price]] | [[Prerequisites]] |
-|---|---|---|---|---|---|
-| `S1m` | `Ship-1m/1s` | `1m` 1 | `1s` 1 | 1 |  |
-| `S1c` | `Ship-1c/1m` | `1c` 1 | `1m` 1 | 1 |  |
-| `S1p` | `Ship-1p/1c` | `1p` 1 | `1c` 1 | 1 |  |
-| `S1s` | `Ship-1s/1p` | `1s` 1 | `1p` 1 | 1 |  |
-| `S2m` | `Ship-2+1m/1+2s` | `2+1m` 1 / [[Retreat]] | `1+2s` 1 / +1 | 3 |  |
-| `S2c` | `Ship-2+1c/1+2m` | `2+1c` 1 / ([[Trade]]) | `1+2m` 1 / +1 | 3 |  |
-| `S2p` | `Ship-2+1p/1+2c` | `2+1p` 1 / ([[Extract]]) | `1+2c` 1 / +1 | 3 |  |
-| `S2s` | `Ship-2+1s/1+2p` | `2+1s` 1 / [[Survey]] | `1+2p` 1 / +1 | 3 |  |
-| `H1m` | `Hero-1+1m/1+1c` | `1+1m` 1 / [[Recon]] | `1+1c` 1 / [[Grow]] | 2 |  |
-| `H1p` | `Hero-1+1p/1+1s` | `1+1p` 1 / [[Recover]] | `1+1s` 1 / ([[Recycle]]) | 2 |  |
-| `H2m` | `Hero-2+1m/2+1s` | `2+1m` 2 / [[Recon]] | `2+1s` 2 / ([[Recycle]]) | 3 |  |
-| `H2c` | `Hero-2+1c/2+1p` | `2+1c` 2 / [[Recover]] | `2+1p` 2 / [[Enhance]] | 3 |  |
-| `B2m` | `Base-2+1m/1+1m` | `2+1m` +1 [[Defense]] / +1 | `1+1m`  | 3 |  |
-| `B2c` | `Base-2+1c/1+1c` | `2+1c` +1 | `1+1c`  | 3 |  |
-| `B2s` | `Base-2+1s/1+1s` | `2+1s` +1 | `1+1s`  | 3 |  |
-| `B2p` | `Base-2+1p/1+1p` | `2+1p` [[Shipyard]] / +1 | `1+1p` [[Shipyard]] | 3 |  |
-| `C2c` | `Colony-2+1c/1+1c` | `2+1c` [[Academy]] / +2 | `1+1c` [[Academy]] | 3 |  |
-| `C2m` | `Colony-2+1m/1+1m` | `2+1m` [[Recon]] / +2 | `1+1m` [[Recon]] | 3 |  |
-| `C2p` | `Colony-2+1p/1+1p` | `2+1p` +2 | `1+1p`  | 3 |  |
-| `C2s` | `Colony-2+1s/1+1s` | `2+1s` [[Survey]] / +2 | `1+1s` [[Survey]] | 3 |  |
-| `S4m` | `Ship-4+1m/3+2c` | `4+1m` 2 / ([[Smuggle]]) | `3+2c` 2 / +1 | 5 | `*1c,*2m` |
-| `S4c` | `Ship-4+1c/3+2m` | `4+1c` 2 / [[Grow]] | `3+2m` 2 / +1 | 5 | `*1m,*2c` |
-| `S4p` | `Ship-4+1p/3+2s` | `4+1p` 2 / [[Enhance]] | `3+2s` 2 / +1 | 5 | `*1s,*2p` |
-| `S4s` | `Ship-4+1s/3+2p` | `4+1s` 2 / ([[Exhaust]]) | `3+2p` 2 / +1 | 5 | `*1p,*2s` |
-| `H3m` | `Hero-3+1m/3+1p` | `3+1m` 2 / [[Stealth]] | `3+1p` 2 / [[Enhance]] | 4 | `*1m,*1p` |
-| `H3c` | `Hero-3+1c/3+1s` | `3+1c` 2 / [[Grow]] | `3+1s` 2 / [[Navigation]] | 4 | `*1c,*1s` |
-| `H4m` | `Hero-4+1m/4+1p` | `4+1m` 3 / [[Stealth]] | `4+1p` 3 / [[Recover]], [[Enhance]] | 5 | `*2m,*2p` |
-| `H4c` | `Hero-4+1c/4+1s` | `4+1c` 3 / [[Recover]], [[Grow]] | `4+1s` 3 / [[Navigation]] | 5 | `*2c,*2s` |
-| `B4m` | `Base-4+1m/3+1m` | `4+1m` [[Stealth]] / +3 | `3+1m` [[Stealth]] | 5 | `*2m` |
-| `B4c` | `Base-4+1c/3+1c` | `4+1c` [[Academy]] / +3 | `3+1c` [[Academy]] | 5 | `*2c` |
-| `B4p` | `Base-4+1p/3+1p` | `4+1p` +3 [[Capacity]] / +3 | `3+1p` +1 [[Capacity]] | 5 | `*2p` |
-| `B4s` | `Base-4+1s/3+1s` | `4+1s` [[Navigation]] / +3 | `3+1s` [[Navigation]] | 5 | `*2s` |
-| `C4m` | `Colony-4+1m/3+1m` | `4+1m` +3 [[Defense]] / +3 | `3+1m` +2 [[Defense]] | 5 | `*2m` |
-| `C4c` | `Colony-4+1c/3+1c` | `4+1c` +3 | `3+1c`  | 5 | `*2c` |
-| `C4p` | `Colony-4+1p/3+1p` | `4+1p` MegaYard / +3 | `3+1p` MegaYard | 5 | `*2p` |
-| `C4s` | `Colony-4+1s/3+1s` | `4+1s` +3 [[Range]] / +3 | `3+1s` +1 [[Range]] | 5 | `*2s` |
+```text
+S1m/1s:     1m              / 1s
+S1c/1m:     1c              / 1m
+S1p/1c:     1p              / 1c
+S1s/1p:     1s              / 1p
+S2+1m/1+2s: 1m Retreat      / 1s +1s
+S2+1c/1+2m: 1c (Trade)      / 1m +1m
+S2+1p/1+2c: 1p (Extract)    / 1c +1c
+S2+1s/1+2p: 1s Survey       / 1p +1p
+
+H1+1m/1+1c: 1m Recon        / 1c Grow
+H1+1p/1+1s: 1p Recover      / 1s (Recycle)
+H2+1m/2+1s: 2m Recon        / 2s (Recycle)
+H2+1c/2+1p: 2c Recover      / 2p Enhance
+
+B2+1m/1+1m: +1d +1m         / -
+B2+1c/1+1c: +1c             / -
+B2+1s/1+1s: +1s             / -
+B2+1p/1+1p: Shipyard +1p    / Shipyard
+
+C2+1c/1+1c: Academy +2c     / Academy
+C2+1m/1+1m: Recon +2m       / Recon
+C2+1p/1+1p: +2p             / -
+C2+1s/1+1s: Survey +2s      / Survey
+
+S4+1m/3+2c: 2m (Smuggle)    / 2c +1c             << *1c *2m
+S4+1c/3+2m: 2c Grow         / 2m +1m             << *1m *2c
+S4+1p/3+2s: 2p Enhance      / 2s +1s             << *1s *2p
+S4+1s/3+2p: 2s (Exhaust)    / 2p +1p             << *1p *2s
+
+H3+1m/3+1p: 2m Stealth      / 2p Enhance         << *1m *1p
+H3+1c/3+1s: 2c Grow         / 2s Navigation      << *1c *1s
+H4+1m/4+1p: 3m Stealth      / 3p Recover+Enhance << *2m *2p
+H4+1c/4+1s: 3c Recover+Grow / 3s Navigation      << *2c *2s
+
+B4+1m/3+1m: Stealth +3m     / Stealth            << *2m
+B4+1c/3+1c: Academy +3c     / Academy            << *2c
+B4+1p/3+1p: +3l +3p         / +1l                << *2p
+B4+1s/3+1s: Navigation +3s  / Navigation         << *2s
+
+C4+1m/3+1m: +3d +3m         / +2d                << *2m
+C4+1c/3+1c: +3c             / -                  << *2c
+C4+1p/3+1p: MegaYard +3p    / MegaYard           << *2p
+C4+1s/3+1s: +3r +3s         / +1r                << *2s
+```

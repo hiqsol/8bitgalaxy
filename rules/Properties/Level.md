@@ -5,7 +5,7 @@ scope: core
 
 1. **Level** is [[Explicit]] [[Component]] [[Property]], of a [[Card]]
    [[End]], a [[Star]] or a [[Space]]
-2. **Level** is number from 1 to 8
+2. **Level** is number from 0 to 8
 3. A [[Card]] has a **strong** and a **weak** [[End]], each with its
    own **Level**
 4. A [[Card]] provides one **Level**, the **current** one: the

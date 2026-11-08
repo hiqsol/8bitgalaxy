@@ -5,21 +5,21 @@ aliases: [Crown, Starting cards]
 ---
 
 1. **Deck** lists the [[Card]]s of the Human and the Alien
-   [[Faction]], one row per [[End]]: the two are symmetric, the same
+   [[Faction]], one line per [[Card]]: the two are symmetric, the same
    [[Card]]s by values, only the color and design of the [[Faction]]
    differ
-2. Columns:
-	1. **Level** - [[Level]] + [[ExtraPrice]], as printed on the
-	   [[Card]]
-	2. **Class** - [[Class]]: M [[Military]], C [[Culture]], P
-	   [[Production]], S [[Science]]
-	3. **Primary** - [[PrimaryAbility]]: [[Power]] of the [[End]]'s
-	   [[Class]], `X+Y` for [[Actor]]s, other [[Plus]] or
-	   [[Technology]]
-	4. **Secondary** - [[SecondaryAbility]]: [[Plus]] [[Power]] `+N`
-	   or [[Technology]]
-	5. **Prerequisites** - [[Prerequisites]] as [[Level]] and
-	   [[Class]] pairs, same for both [[End]]s
+2. A line is the [[Card]] in [[Notation]]:
+	1. Full name: [[Type]] letter, then each [[End]], [[Strong]]
+	   first, as printed: [[Level]] + [[ExtraPrice]] and [[Class]]
+	   letter, m [[Military]], c [[Culture]], p [[Production]], s
+	   [[Science]]
+	2. Then what each [[End]] gives, apart by `/`: [[PrimaryAbility]],
+	   then [[SecondaryAbility]]; [[Power]] `2m`, [[Plus]] `+1m`,
+	   `+1d` [[Defense]], `+1r` [[Range]], `+1l` [[Capacity]],
+	   [[Technology]] by name, a combined [[Ability]] joined by `+`
+	3. Then `<<` the [[Prerequisites]] as [[Level]] and [[Class]]
+	   pairs, `*2m`, same for both [[End]]s
+	4. `2×` - two copies
 3. [[Card]] name is [[Type]] with [[Strong]] [[End]] [[Level]] and
    [[Class]]
 4. **Deck** holds 56 [[Card]]s, counted by the [[Level]] of the
@@ -32,134 +32,81 @@ aliases: [Crown, Starting cards]
 	   [[Hyperstructure]]s
 	4. [[Level]] 8: 1 each of [[Ship]] and [[Hero]], and 2
 	   [[Hyperstructure]]s
-5. A two-ended [[Card]] has an even [[Level]] on its [[Strong]]
-   [[End]] and one less on its [[Weak]] [[End]]: 2/1, 4/3, 6/5, 8/7
+5. A [[Card]] has its [[Weak]] [[End]] one [[Level]] below its
+   [[Strong]] [[End]]: 1/0, 2/1, 4/3, 6/5, 8/7
 6. Every [[Class]] has as many [[End]]s at each [[Level]] as any other
-   [[Class]]: 7 at [[Level]] 1, 4 at [[Level]]s 2 to 4, 2 at 5 and 6,
-   1 at 7 and 8
+   [[Class]]: 3 at [[Level]] 0, 7 at [[Level]] 1, 4 at [[Level]]s 2 to
+   4, 2 at 5 and 6, 1 at 7 and 8
 7. Every [[Class]] has one [[Level]] 8 [[Card]], its **crown**:
    [[Ship]] 8M, [[Hero]] 8S, [[Hyperstructure]] 8P and
    [[Hyperstructure]] 8C
-8. **Starting cards** are 4 one-ended [[Ship]]s 1/0, one of each
-   [[Class]], the [[Weak]] [[End]] blank: [[Level]] 1, Primary 1,
-   nothing else, see [[StartDraw]]
-9. **Tools** are 8 one-ended [[Card]]s 1/0, two of each [[Class]],
-   made like the **Starting cards**, see [[Tool]]
+8. **Starting cards** are 4 [[Ship]]s 1/0, one of each [[Class]]:
+   [[Level]] 1, Primary 1, nothing else; the [[Weak]] [[End]] is
+   `0+1`, Primary 0, of the [[Class]] of the [[Weak]] [[End]] of the
+   [[Ship]] 2/1: 1M/0S, 1C/0M, 1P/0C, 1S/0P, see [[StartDraw]]
+9. **Tools** are 8 [[Card]]s 1/0, two of each [[Class]], made like the
+   **Starting cards** with both [[End]]s of one [[Class]], see
+   [[Tool]]
 
-| [[Card]] | [[End]] | [[Level]] | [[Class]] | Primary | Secondary | [[Prerequisites]] |
-|------|-----|-------|-------|---------|-----------|---------------|
-| [[Ship]] 1M | [[Strong]] | 1 | M | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Ship]] 1C | [[Strong]] | 1 | C | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Ship]] 1P | [[Strong]] | 1 | P | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Ship]] 1S | [[Strong]] | 1 | S | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Ship]] 2M | [[Strong]] | 2+1 | M | 1 | [[Retreat]] | - |
-|  | [[Weak]] | 1+2 | S | 1 | +1 |  |
-| [[Ship]] 2C | [[Strong]] | 2+1 | C | 1 | [[Trade]] | - |
-|  | [[Weak]] | 1+2 | M | 1 | +1 |  |
-| [[Ship]] 2P | [[Strong]] | 2+1 | P | 1 | [[Extract]] | - |
-|  | [[Weak]] | 1+2 | C | 1 | +1 |  |
-| [[Ship]] 2S | [[Strong]] | 2+1 | S | 1 | [[Explore]] | - |
-|  | [[Weak]] | 1+2 | P | 1 | +1 |  |
-| [[Ship]] 4M | [[Strong]] | 4+1 | M | 2 | [[Smuggle]] | 1C, 2M |
-|  | [[Weak]] | 3+2 | C | 2 | +1 |  |
-| [[Ship]] 4C | [[Strong]] | 4+1 | C | 2 | [[Upgrade]] | 1M, 2C |
-|  | [[Weak]] | 3+2 | M | 2 | +1 |  |
-| [[Ship]] 4P | [[Strong]] | 4+1 | P | 2 | [[Upgrade]] | 1S, 2P |
-|  | [[Weak]] | 3+2 | S | 2 | +1 |  |
-| [[Ship]] 4S | [[Strong]] | 4+1 | S | 2 | [[Exhaust]] | 1P, 2S |
-|  | [[Weak]] | 3+2 | P | 2 | +1 |  |
-| [[Ship]] 6M | [[Strong]] | 6+1 | M | 3 | TBD | 3S, 4M |
-|  | [[Weak]] | 5+2 | S | 3 | +1 |  |
-| [[Ship]] 6P | [[Strong]] | 6+1 | P | 3 | TBD | 3C, 4P |
-|  | [[Weak]] | 5+2 | C | 3 | +1 |  |
-| [[Ship]] 8M | [[Strong]] | 8+1 | M | 4 | TBD | 4C, 4S, 6M |
-|  | [[Weak]] | 7+2 | S | 4 | +1 |  |
-| [[Hero]] 2M | [[Strong]] | 2+1 | M | 2 | [[Explore]] | - |
-|  | [[Weak]] | 1+1 | C | 2 | [[Upgrade]] |  |
-| [[Hero]] 2C | [[Strong]] | 2+1 | C | 2 | [[Recover]] | - |
-|  | [[Weak]] | 1+1 | P | 2 | [[Upgrade]] |  |
-| [[Hero]] 2P | [[Strong]] | 2+1 | P | 2 | [[Recover]] | - |
-|  | [[Weak]] | 1+1 | S | 2 | [[Recycle]] |  |
-| [[Hero]] 2S | [[Strong]] | 2+1 | S | 2 | [[Recycle]] | - |
-|  | [[Weak]] | 1+1 | M | 2 | [[Explore]] |  |
-| [[Hero]] 4M | [[Strong]] | 4+1 | M | 3 | [[Stealth]] | 1P, 2M |
-|  | [[Weak]] | 3+1 | P | 3 | [[Recover]], [[Upgrade]] |  |
-| [[Hero]] 4C | [[Strong]] | 4+1 | C | 3 | [[Recover]], [[Upgrade]] | 1S, 2C |
-|  | [[Weak]] | 3+1 | S | 3 | [[Navigation]] |  |
-| [[Hero]] 4P | [[Strong]] | 4+1 | P | 3 | [[Upgrade]] | 1M, 2P |
-|  | [[Weak]] | 3+1 | M | 3 | [[Stealth]] |  |
-| [[Hero]] 4S | [[Strong]] | 4+1 | S | 3 | [[Navigation]] | 1C, 2S |
-|  | [[Weak]] | 3+1 | C | 3 | [[Upgrade]] |  |
-| [[Hero]] 6C | [[Strong]] | 6+1 | C | 4 | TBD | 3M, 4C |
-|  | [[Weak]] | 5+1 | M | 4 | TBD |  |
-| [[Hero]] 6S | [[Strong]] | 6+1 | S | 4 | TBD | 3P, 4S |
-|  | [[Weak]] | 5+1 | P | 4 | TBD |  |
-| [[Hero]] 8S | [[Strong]] | 8+1 | S | 5 | TBD | 4M, 4P, 6S |
-|  | [[Weak]] | 7+1 | M | 5 | TBD |  |
-| [[Base]] 2M | [[Strong]] | 2+1 | M | [[Militarization]], +1 [[Defense]] | +1 | - |
-|  | [[Weak]] | 1+1 | M | [[Militarization]] | - |  |
-| [[Base]] 2C | [[Strong]] | 2+1 | C | [[Trade]] | +1 | - |
-|  | [[Weak]] | 1+1 | C | [[Trade]] | - |  |
-| [[Base]] 2P | [[Strong]] | 2+1 | P | [[Shipyard]] | +1 | - |
-|  | [[Weak]] | 1+1 | P | [[Shipyard]] | - |  |
-| [[Base]] 2S | [[Strong]] | 2+1 | S | [[Recycle]] | +1 | - |
-|  | [[Weak]] | 1+1 | S | [[Recycle]] | - |  |
-| [[Base]] 4M | [[Strong]] | 4+1 | M | [[Stealth]] | +3 | 2M |
-|  | [[Weak]] | 3+1 | M | [[Stealth]] | - |  |
-| [[Base]] 4C | [[Strong]] | 4+1 | C | [[Academy]] | +3 | 2C |
-|  | [[Weak]] | 3+1 | C | [[Academy]] | - |  |
-| [[Base]] 4P | [[Strong]] | 4+1 | P | +3 [[Capacity]] | +3 | 2P |
-|  | [[Weak]] | 3+1 | P | +1 [[Capacity]] | - |  |
-| [[Base]] 4S | [[Strong]] | 4+1 | S | [[Navigation]] | +3 | 2S |
-|  | [[Weak]] | 3+1 | S | [[Navigation]] | - |  |
-| [[Colony]] 2M | [[Strong]] | 2+1 | M | [[Explore]] | +2 | - |
-|  | [[Weak]] | 1+1 | M | [[Explore]] | - |  |
-| [[Colony]] 2C | [[Strong]] | 2+1 | C | [[Academy]] | +2 | - |
-|  | [[Weak]] | 1+1 | C | [[Academy]] | - |  |
-| [[Colony]] 2P | [[Strong]] | 2+1 | P | [[Extract]] | +2 | - |
-|  | [[Weak]] | 1+1 | P | [[Extract]] | - |  |
-| [[Colony]] 2S | [[Strong]] | 2+1 | S | [[Explore]] | +2 | - |
-|  | [[Weak]] | 1+1 | S | [[Explore]] | - |  |
-| [[Colony]] 4M | [[Strong]] | 4+1 | M | [[Militarization]], +3 [[Defense]] | +4 | 2M |
-|  | [[Weak]] | 3+1 | M | [[Militarization]], +2 [[Defense]] | - |  |
-| [[Colony]] 4C | [[Strong]] | 4+1 | C | [[Export]] | +4 | 2C |
-|  | [[Weak]] | 3+1 | C | [[Export]] | - |  |
-| [[Colony]] 4P | [[Strong]] | 4+1 | P | [[MegaYard]] | +4 | 2P |
-|  | [[Weak]] | 3+1 | P | [[MegaYard]] | - |  |
-| [[Colony]] 4S | [[Strong]] | 4+1 | S | +3 [[Range]] | +4 | 2S |
-|  | [[Weak]] | 3+1 | S | +1 [[Range]] | - |  |
-| [[Hyperstructure]] 6M | [[Strong]] | 6+1 | M | TBD | +6 | 4M |
-|  | [[Weak]] | 5+1 | M | TBD | - |  |
-| [[Hyperstructure]] 6P | [[Strong]] | 6+1 | P | TBD | +6 | 4P |
-|  | [[Weak]] | 5+1 | P | TBD | - |  |
-| [[Hyperstructure]] 6C | [[Strong]] | 6+1 | C | TBD | +5 | 4C |
-|  | [[Weak]] | 5+1 | C | TBD | - |  |
-| [[Hyperstructure]] 6S | [[Strong]] | 6+1 | S | TBD | +5 | 4S |
-|  | [[Weak]] | 5+1 | S | TBD | - |  |
-| [[Hyperstructure]] 8C | [[Strong]] | 8+1 | C | TBD | +8 | 4M, 4P, 6C |
-|  | [[Weak]] | 7+1 | C | TBD | - |  |
-| [[Hyperstructure]] 8P | [[Strong]] | 8+1 | P | TBD | +7 | 4C, 4S, 6P |
-|  | [[Weak]] | 7+1 | P | TBD | - |  |
-| [[Tool]] 1M | [[Strong]] | 1 | M | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Tool]] 1M | [[Strong]] | 1 | M | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Tool]] 1C | [[Strong]] | 1 | C | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Tool]] 1C | [[Strong]] | 1 | C | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Tool]] 1P | [[Strong]] | 1 | P | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Tool]] 1P | [[Strong]] | 1 | P | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Tool]] 1S | [[Strong]] | 1 | S | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
-| [[Tool]] 1S | [[Strong]] | 1 | S | 1 | - | - |
-|  | [[Weak]] | - | - | - | - |  |
+```text
+S1+0m/0+1s:    1m                    / 0s
+S1+0c/0+1m:    1c                    / 0m
+S1+0p/0+1c:    1p                    / 0c
+S1+0s/0+1p:    1s                    / 0p
+S2+1m/1+2s:    1m Retreat            / 1s +1s
+S2+1c/1+2m:    1c Trade              / 1m +1m
+S2+1p/1+2c:    1p Extract            / 1c +1c
+S2+1s/1+2p:    1s Explore            / 1p +1p
+S4+1m/3+2c:    2m Smuggle            / 2c +1c             << *1c *2m
+S4+1c/3+2m:    2c Upgrade            / 2m +1m             << *1m *2c
+S4+1p/3+2s:    2p Upgrade            / 2s +1s             << *1s *2p
+S4+1s/3+2p:    2s Exhaust            / 2p +1p             << *1p *2s
+S6+1m/5+2s:    3m TBD                / 3s +1s             << *3s *4m
+S6+1p/5+2c:    3p TBD                / 3c +1c             << *3c *4p
+S8+1m/7+2s:    4m TBD                / 4s +1s             << *4c *4s *6m
+
+H2+1m/1+1c:    2m Explore            / 2c Upgrade
+H2+1c/1+1p:    2c Recover            / 2p Upgrade
+H2+1p/1+1s:    2p Recover            / 2s Recycle
+H2+1s/1+1m:    2s Recycle            / 2m Explore
+H4+1m/3+1p:    3m Stealth            / 3p Recover+Upgrade << *1p *2m
+H4+1c/3+1s:    3c Recover+Upgrade    / 3s Navigation      << *1s *2c
+H4+1p/3+1m:    3p Upgrade            / 3m Stealth         << *1m *2p
+H4+1s/3+1c:    3s Navigation         / 3c Upgrade         << *1c *2s
+H6+1c/5+1m:    4c TBD                / 4m TBD             << *3m *4c
+H6+1s/5+1p:    4s TBD                / 4p TBD             << *3p *4s
+H8+1s/7+1m:    5s TBD                / 5m TBD             << *4m *4p *6s
+
+B2+1m/1+1m:    Militarization+1d +1m / Militarization
+B2+1c/1+1c:    Trade +1c             / Trade
+B2+1p/1+1p:    Shipyard +1p          / Shipyard
+B2+1s/1+1s:    Recycle +1s           / Recycle
+B4+1m/3+1m:    Stealth +3m           / Stealth            << *2m
+B4+1c/3+1c:    Academy +3c           / Academy            << *2c
+B4+1p/3+1p:    +3l +3p               / +1l                << *2p
+B4+1s/3+1s:    Navigation +3s        / Navigation         << *2s
+
+C2+1m/1+1m:    Explore +2m           / Explore
+C2+1c/1+1c:    Academy +2c           / Academy
+C2+1p/1+1p:    Extract +2p           / Extract
+C2+1s/1+1s:    Explore +2s           / Explore
+C4+1m/3+1m:    Militarization+3d +4m / Militarization+2d  << *2m
+C4+1c/3+1c:    Export +4c            / Export             << *2c
+C4+1p/3+1p:    MegaYard +4p          / MegaYard           << *2p
+C4+1s/3+1s:    +3r +4s               / +1r                << *2s
+
+HS6+1m/5+1m:   TBD +6m               / TBD                << *4m
+HS6+1p/5+1p:   TBD +6p               / TBD                << *4p
+HS6+1c/5+1c:   TBD +5c               / TBD                << *4c
+HS6+1s/5+1s:   TBD +5s               / TBD                << *4s
+HS8+1c/7+1c:   TBD +8c               / TBD                << *4m *4p *6c
+HS8+1p/7+1p:   TBD +7p               / TBD                << *4c *4s *6p
+
+2× T1+0m/0+1m: 1m                    / 0m
+2× T1+0c/0+1c: 1c                    / 0c
+2× T1+0p/0+1p: 1p                    / 0p
+2× T1+0s/0+1s: 1s                    / 0s
+```
 
 #### Notes
 
@@ -179,7 +126,7 @@ aliases: [Crown, Starting cards]
 	3. [[Ship]] [[End]]s have equal [[Level]] + ExtraPrice, so
 	   [[Size]] doesn't change with rotation
 	4. [[Ship]] Primary is half the [[Strong]] [[Level]], [[Hero]]
-	   Primary one more, at both [[End]]s
+	   Primary one more, at both [[End]]s, above 1/0
 	5. [[Prerequisites]] below the **Crowns**: none up to [[Level]] 2,
 	   then the [[Strong]] [[Level]] − 2 of the [[Strong]] [[End]]'s
 	   [[Class]], plus for an [[Actor]] the [[Strong]] [[Level]] − 3
@@ -187,7 +134,7 @@ aliases: [Crown, Starting cards]
 	6. A **Crown** needs [[Level]] 6 of its [[Class]] and [[Level]] 4
 	   of two other [[Class]]es: three [[Participants]]
 	7. [[Price]] of a [[Card]] is its [[Strong]] [[Level]] + 1: 3, 5,
-	   7, 9
+	   7, 9; a [[Card]] 1/0 costs 1
 	8. [[Base]] Secondary is the [[Strong]] [[Level]] − 1 and
 	   [[Colony]] Secondary equals the [[Strong]] [[Level]]
 3. From [[Level]] 4 each [[Strong]] [[Level]] holds half the [[Card]]s
@@ -221,6 +168,12 @@ aliases: [Crown, Starting cards]
     [[Technology]] of the **Deck** serves both. Later [[Faction]]s
     will be [[Asymmetric]], with decks and [[Technology|Technologies]]
     of their own
-12. A combined print is one [[Ability]]: "[[Recover]], [[Upgrade]]" of
+12. A combined print is one [[Ability]]: `Recover+Upgrade` of
     [[Hero]] 4M [[Weak]] and [[Hero]] 4C [[Strong]],
-    "[[Militarization]], +1 [[Defense]]" of [[Base]] 2M
+    `Militarization+1d` of [[Base]] 2M
+13. The [[Weak]] [[End]] `0+1` of a [[Card]] 1/0 tells its
+    [[Strong]] [[End]]: one [[Level]] more, and for a [[Ship]] the
+    same [[Size]] 1, see the patterns. [[Level]] 0 meets no
+    [[Prerequisites]], but its [[Class]] lets a **Starting card**
+    start an [[Action]] of another [[Class]], e.g. a [[Manage]] in
+    [[Science]]
