@@ -11,7 +11,7 @@ scope: events
    target [[Star]], [[Hidden]] ones included: the player learns it
    after the start, as for [[Explore]]
 5. **Outcome**: the [[Card]]s are Destroyed, the [[Card]] that
-   provides **Nova Bomb** leaves the game, like a destroyed [[Tool]]
+   provides **Nova Bomb** leaves the game
 
 #### Notes
 

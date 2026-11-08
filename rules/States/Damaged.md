@@ -17,7 +17,7 @@ aliases: [Disabled, Exhausted]
 6. Anyone may look at a **Damaged** [[Card]]: a wreck is no secret
 7. A **Damaged** [[Card]] is no [[Participants|Participant]] of any
    [[Action]] until [[Enabled]] again: it doesn't fight, support or
-   act
+   act, and its [[Ability|Abilities]] and effects don't work
 8. [[Attack]] [[Destroy]]s **Damaged** [[Card]]s in a separate
    [[Combat]]: the [[Attacker]] selects only **Damaged** [[Card]]s in
    the target [[Star]], nobody defends them, each 1 [[MilitaryPower]]

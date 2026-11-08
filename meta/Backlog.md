@@ -13,7 +13,7 @@ compared in [[ComparisonReview]]. [[Diagnostic]] tests each
 independent point of an issue with an atomic multiple-choice question.
 [[ReviewProcess]] sets when an item opens and closes. The [[Combat]]
 studies are [[CombatVariants]], [[WarEconomy]] and [[CombatPlaytest]],
-the designer's answers go to [[CombatGuidance]].
+the designer's answers go to [[Guidance]].
 
 Write the points of an item as lettered bullets `- a) ...`. Answer
 by number and letter, e.g. "P27 a, c", "S41 no".
@@ -131,6 +131,15 @@ evidence from a played game, not from a review.
 33. **Duel Space bag**: halving by [[Type]] and by [[Length]], see
     [[Duel]]; the P35 b mix and Normal replacing `advanced` types
     (P35 c) were rejected
+34. **Conquest**: the [[Ancient deck]] stays, as many [[Ancient]]s as
+    the [[World]]'s [[Price]] defend with their printed [[Defense]],
+    then go to the [[Ancient discard]], reshuffled into a new deck; a
+    number instead of [[Card]]s, [[World]]s without
+    [[Prerequisites]] and [[World]]s dealt face down (S60) were
+    rejected, see [[Ancient]], [[Wild]]
+35. **Destroy**: a player [[Card]], a [[Tool]] too, goes to the top
+    of a [[Factory]] pile, any other [[Card]] under its deck; a
+    [[Tool]] leaving the game (S59 b) was rejected, see [[Destroy]]
 
 ## Next step
 
@@ -180,7 +189,8 @@ Questions a played game answers better than a review.
 	  `+Draw` [[Plus]] and the [[Technology|Technologies]] from
 	  [[Tactics]] to [[Standby]], see [[Technology]]: a value per
 	  [[Price]] stays about flat, a value per [[Card]] grows with
-	  [[Level]].
+	  [[Level]]. Four variants and eight played games are in
+	  [[DeckVariants]].
 - [ ] **I47. Images.** Update `card.png` after the rules and [[Card]]
   data are settled: annotate both [[End]]s, ExtraPrice,
   [[Prerequisites]] and the [[Technology]] name.
@@ -328,32 +338,6 @@ RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
 	  "[[Create]] makes only [[Card]]s with a [[Level]] 1 [[End]]" for
 	  both [[Origin]]s, so higher [[Card]]s come by [[Upgrade]], which
 	  slows the race of F2.
-- [ ] **S59. Destroy returns a card to its supply.** [[Destroy]] sends
-  a [[Card]] to the [[Factory]], but a [[World]] goes under the
-  [[World]] deck, [[Ancient]]s to their discard and a [[Tool]] out of
-  the game:
-	- a) [[Destroy]]: a [[Faction]] [[Card]] to the top of a
-	  [[Factory]] pile of the player's choice, a [[Card]] of no player
-	  under its deck.
-	- b) [[World]] 14 and the [[Ancient discard]] with its reshuffle
-	  go, [[Tool]] keeps its own exception.
-- [ ] **S60. Conquest without loops.** A conquest draws [[World]]s
-  until one meets the [[Participants]]' [[Prerequisites]], then as
-  many [[Ancient]] [[Card]]s as its [[Price]]; [[Ancient]]s take no
-  [[Slot]], print their own [[Defense]], never get [[Damaged]], need a
-  discard and a reshuffle. All [[Combat]]s of the AI duels were
-  against [[Ancient]]s, won by the [[Attacker]]:
-	- a) [[Ancient]]s are a number: they defend with N × the
-	  [[World]]'s [[Price]], no [[Ancient deck]], the playtest sets N.
-	- b) Lighter: keep the [[Ancient deck]], the [[Ancient]]s defend
-	  with their total and go under the deck after the [[Combat]].
-	- c) The [[Attacker]] takes the top [[World]]: [[World]]s have no
-	  [[Prerequisites]].
-	- d) Or the [[Scenario]] deals a face-down [[World]] into the
-	  [[World]] [[Slot]] of every [[Wild]] [[Star]], an [[Attack]]
-	  reveals it and a won one turns it [[Ready]]: the
-	  [[WorldDeck|World deck]] and its draw go, [[Explore]] can scout
-	  a [[World]].
 - [ ] **S61. Attack is a Move that must win.** [[Intercept]] is a
   [[Combat]] that is "not an [[Attack]]": no [[Starter]], no
   [[Military]] [[Actor]], the newcomers defend; [[Combat#9.3]] is a

@@ -18,7 +18,8 @@ aliases: [Grow, Enhance, Paid End]
 	1. Old [[Card]] is face up in a [[Slot]]: a [[Damaged]] or
 	   [[Hidden]] [[Card]] can't be upgraded
 	2. Old [[Card]] is the target, not a participant, see
-	   [[PerformAction]]
+	   [[PerformAction]], and the new one takes part only once
+	   created: a [[Hub]] doesn't **Upgrade** itself
 	3. New [[Card]] must be available at [[Factory]]
 	4. **Grow** goes strictly one [[Level]] up: the **Paid End** has
 	   the current [[Level]] of the old [[Card]] + 1

@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: core
 ---
 
@@ -9,9 +9,12 @@ scope: core
 4. **World** lies in the [[World slot]] of its [[Star]], not in a
    [[Structure]] [[Slot]], and never leaves it
 5. **World** gives no [[Control]]
-6. **Worlds** form the **World deck**, face down beside the [[Field]];
+6. In a [[Star]] [[ControlledBy]] a player [[Faction]] the **World**
+   is that [[Faction]]'s like its [[Structure]]s, see
+   [[ControlledBy#3]]: its [[Ability]] works for it and it defends
+   the [[Star]]
+7. **Worlds** form the **World deck**, face down beside the [[Field]];
    a conquest draws from it, see [[Wild]]
-7. A [[Destroy]]ed **World** goes under the [[WorldDeck|World deck]]
 
 #### Notes
 

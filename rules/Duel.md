@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: duel
 ---
 
@@ -25,7 +25,8 @@ scope: duel
 	3. Revealing a [[Hidden]] [[Space]] draws 2 [[Tile]]s from the
 	   [[Space bag]], the last one if only one is left: the player
 	   picks one to lay, its [[Price]] is the [[Cost]] of an
-	   [[Explore]], the other goes back into the bag
+	   [[Explore]], the other goes back into the bag; a failed
+	   [[Explore]] lays none, both go back
 7. [[Home]] [[Star]]s: a [[Homeworld]] [[Hyperstructure]] 2/1,
    [[Science]] on both [[End]]s, [[Archive]] on both, the [[Strong]]
    [[End]]'s Secondary is +1 [[Energy]]. Other [[Star]]s are [[Wild]]

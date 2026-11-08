@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: duel
 ---
 
@@ -10,10 +10,8 @@ scope: duel
 4. [[Origin]] = [[Industrial]]
 5. [[Range]] = 0, can't [[Move]]
 6. [[Size]] = current [[Level]] + [[ExtraPrice]]
-7. [[Capacity]] = 0, can't carry [[Cargo]]
+7. [[Capacity]] = 0, can't carry [[Cargo]] or [[Boost]]
 8. Carried as [[Cargo]] of a [[Move]] by any [[Ship]]
-9. A destroyed **Tool** leaves the game, it doesn't go to the
-   [[Factory]], see [[Destroy]]
 
 #### Notes
 

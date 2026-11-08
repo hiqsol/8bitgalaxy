@@ -6,8 +6,6 @@ scope: advanced
 1. **Retool** is [[Production]] [[TechnologyModifier]]
 2. With **Retool** an **Enhance** [[Upgrade]] can replace a [[Tool]]
    on the [[Field]] with a [[Ship]]
-3. The [[Tool]] leaves the game, as a destroyed [[Tool]], instead of
-   going to the [[Factory]]
 
 #### Notes
 

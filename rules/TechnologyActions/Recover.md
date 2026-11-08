@@ -8,10 +8,13 @@ aliases: [Heal, Fix]
 2. Flavour names:
 	1. **Heal** for [[Social]]
 	2. **Fix** for [[Industrial]]
-3. **Recover** [[Flip]]s a [[Damaged]] [[Card]] to [[Enabled]]
+3. **Recover** [[Flip]]s a [[Damaged]] [[Card]] to [[Enabled]], its
+   [[Weak]] [[End]] up, or its [[Strong]] [[End]] up for 1 [[Power]]
+   more
 4. **Direction**: from the [[Card]] that provides **Recover** to the
    target [[Card]]
-5. **Cost**: half the [[Price]] of the target [[Card]], rounded up
+5. **Cost**: half the [[Price]] of the target [[Card]], rounded up,
+   +1 for the [[Strong]] [[End]]
 
 #### Notes
 

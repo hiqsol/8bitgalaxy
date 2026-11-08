@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: core
 aliases: [Rotate, Shift]
 ---
@@ -11,6 +11,8 @@ aliases: [Rotate, Shift]
 		1. A [[Structure]] to another [[Slot]] of its [[IPS]]
 		2. A [[Card]] to another pile of its [[Laboratory]] or
 		   [[Factory]] row, directed to a [[Hub]] that takes it
-3. **Cost**: 1 [[Power]] of the [[Starter]]'s [[Class]] per [[Card]]
-4. **Manage** works only on [[Card]]s the [[Starter]]'s [[Class]]
+3. **Direction**: any [[Star]] to the [[Card]]'s [[Star]], or to a
+   [[Hub]] for a [[Card]] in a pile
+4. **Cost**: 1 [[Power]] of the [[Starter]]'s [[Class]] per [[Card]]
+5. **Manage** works only on [[Card]]s the [[Starter]]'s [[Class]]
    handles, see [[Class]]

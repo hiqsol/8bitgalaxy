@@ -1,5 +1,5 @@
 ---
-status: polish
+status: draft
 scope: core
 aliases: [Raise, Produce]
 ---
@@ -16,8 +16,11 @@ aliases: [Raise, Produce]
 6. **Direction**:
 	1. For [[Actor]]: any [[Star]] to [[Hub]]
 	2. For [[Structure]]: [[Hub]] to [[Star]] where created
-7. **Requirements**: target [[Card]] has to be available at
-   [[Factory]]
+7. **Requirements**:
+	1. Target [[Card]] has to be available at [[Factory]]
+	2. A [[Structure]] is created only into a [[Star]] [[ActiveFor]]
+	   the player: [[ControlledBy]] the player or [[Disputed]] with
+	   them
 8. **Cost**: [[Card]]'s [[Price]]
 9. **Outcome**:
 	1. [[Actor]] - goes to [[Discard]]
