@@ -3,7 +3,7 @@ status: draft
 scope: lore
 ---
 
-### Technical description
+# Lore
 
 1. Civilizations invent Warp technology that allows:
 	1. Travel and communication between stars with faster than light
