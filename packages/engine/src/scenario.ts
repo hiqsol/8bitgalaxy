@@ -1,6 +1,6 @@
 // First duel [[Scenario]]: field, Star deck and [[StartDraw]].
 // Values the docs don't set yet are marked ASSUMPTION, change them here.
-import type { CardDef, CardType, StarDef } from './types';
+import type { CardType, StarDef } from './types';
 
 /** Field rows of Star ids, see [[Scenario]] 3.2 */
 export const FIELD_ROWS = [
@@ -42,33 +42,38 @@ export const STAR_DECK: StarDef[] = [
   { name: 'Shipyard', klass: 'P', units: 2, structures: 2, extraCost: 3, ability: { kind: 'tech', tech: 'Shipyard' } },
 ];
 
-/**
- * Starting cards: technology-free, level 1/1, Primary 1, one per Class,
- * see RulesReview P27 a, Guidance G1. ASSUMPTION: Ships with ExtraCost 0.
- */
-export const STARTING_CARDS: CardDef[] = (['M', 'C', 'P', 'S'] as const).map((klass) => {
-  const end = { level: 1, extraCost: 0, klass, primary: [{ kind: 'power' as const, base: 1, field: 0 }], secondary: [] };
-  return { id: `Ship 1${klass}`, type: 'Ship', strong: end, weak: end, prerequisites: [], culturePoints: 0 };
-});
+/** **Starting cards** of [[Deck]]: Ships 1/0, one per Class */
+export const STARTING_CARDS = ['Ship 1M', 'Ship 1C', 'Ship 1P', 'Ship 1S'];
 
-/** [[StartDraw]] by RulesReview P27, Guidance G1 */
+/**
+ * [[StartDraw]] by RulesReview P27, Guidance G1, Heroes renamed by [[Deck]] Notes 8.
+ * ASSUMPTION: no Tools, Hyperstructures and Level 6-8 cards yet.
+ */
 export const START = {
-  reserve: ['Ship 2M', 'Ship 2C', 'Ship 2P', 'Ship 2S', 'Hero 1M', 'Hero 1P', ...STARTING_CARDS.map((c) => c.id)],
+  reserve: ['Ship 2M', 'Ship 2C', 'Ship 2P', 'Ship 2S', 'Hero 2M', 'Hero 2P', ...STARTING_CARDS],
   homeStar: ['Colony 2C', 'Base 2P'],
   /** one pile per Type, top card last */
   factory: {
     Ship: [],
-    Hero: ['Hero 2C', 'Hero 2M'],
+    Hero: ['Hero 2C', 'Hero 2S'],
     Base: ['Base 2S', 'Base 2C', 'Base 2M'],
     Colony: ['Colony 2S', 'Colony 2P', 'Colony 2M'],
-  } as Record<CardType, string[]>,
-  /** all level 3-4 cards, lowest Level on top */
+  } as Partial<Record<CardType, string[]>>,
+  /** all Level 4 cards */
   laboratory: {
     Ship: ['Ship 4S', 'Ship 4P', 'Ship 4C', 'Ship 4M'],
-    Hero: ['Hero 4C', 'Hero 4M', 'Hero 3C', 'Hero 3M'],
+    Hero: ['Hero 4C', 'Hero 4M', 'Hero 4S', 'Hero 4P'],
     Base: ['Base 4S', 'Base 4P', 'Base 4C', 'Base 4M'],
     Colony: ['Colony 4S', 'Colony 4P', 'Colony 4C', 'Colony 4M'],
-  } as Record<CardType, string[]>,
+  } as Partial<Record<CardType, string[]>>,
   handSize: 5,
   firstHand: 3,
 };
+
+/** Every card a faction is dealt by [[StartDraw]] */
+export const dealtCards = (): string[] => [
+  ...START.reserve,
+  ...START.homeStar,
+  ...Object.values(START.factory).flat(),
+  ...Object.values(START.laboratory).flat(),
+];

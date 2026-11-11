@@ -94,7 +94,7 @@ function onLeave() {
     <span class="Back1" />
     <span class="Back2" />
     <div class="Image">
-      <div class="Klass lni" :class="def ? `lni-${TYPE_IMAGES[def.type]}` : ''">
+      <div class="Klass lni" :class="def && TYPE_IMAGES[def.type] ? `lni-${TYPE_IMAGES[def.type]}` : ''">
         <template v-if="show">
           <div v-for="(n, i) in NOTES.Type" :key="i" :class="n.cls" :style="n.pos"><div class="Line" :style="n.line" /><div class="Text" :style="n.label">{{ n.text }}</div></div>
         </template>

@@ -71,7 +71,7 @@ const title = computed(() => {
       <div v-if="def" class="back-name">{{ def.id }}</div>
     </template>
     <template v-else>
-      <svg class="image" viewBox="0 0 144 144"><path transform="translate(0 128) scale(1 -1)" :d="TYPE_ICONS[def!.type]" /></svg>
+      <svg class="image" viewBox="0 0 144 144"><path transform="translate(0 128) scale(1 -1)" :d="TYPE_ICONS[def!.type] ?? ''" /></svg>
       <div v-for="end in ends" :key="end" class="end" :class="look === 'hand' && end === 'weak' ? 'down' : 'up'">
         <div class="level" :class="`lv-${def![end].klass}`">{{ def![end].level }}</div>
         <div v-if="def![end].extraCost" class="extra">{{ def![end].extraCost > 0 ? '+' : '' }}{{ def![end].extraCost }}</div>

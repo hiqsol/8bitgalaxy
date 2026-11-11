@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # ADR 0001: Pure rules engine, Vue client, Colyseus server
 
 - Status: accepted
@@ -13,7 +18,7 @@
   notation, class letters, Home piles
 - Goals: a hot-seat duel MVP, then remote play, then a game portal
   with accounts and ratings
-- Rules still change, see `docs/Decisions.md`
+- Rules still change, see `meta/Backlog.md`
 
 ## Decision
 
@@ -25,7 +30,7 @@
 	3. `viewFor(state, player)` hides rival hands, deck order and
 	   Hidden cards
 	4. Undo and the log are part of the engine
-	5. Cards are loaded from `docs/Cards/Deck.md`
+	5. Cards are loaded from `rules/Cards/Deck.md`
 3. `packages/client`: Vue 3 + Vite, renders a view, sends moves;
    hot-seat calls the engine directly, no server
 4. `packages/server`: Colyseus (0.18 now), one Room per match:

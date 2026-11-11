@@ -1,3 +1,8 @@
+---
+status: draft
+scope: meta
+---
+
 # ADR 0002: Appearance: the legacy look pixel perfect, then proposals
 
 - Status: proposed

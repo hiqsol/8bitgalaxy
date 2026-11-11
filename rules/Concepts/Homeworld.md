@@ -1,0 +1,18 @@
+---
+status: stable
+scope: duel
+---
+
+1. **Homeworld** is a [[Hyperstructure]] [[Card]]
+2. **Homeworld** lies in the [[World slot]] of its [[Star]], not in a
+   [[Structure]] [[Slot]], see [[Star]]
+3. The [[Scenario]] sets the **Homeworld's** [[End]]s: [[Level]],
+   [[Class]] and [[Ability|Abilities]]
+4. A [[Destroy]]ed **Homeworld** goes to its [[Faction]]'s [[Factory]]
+5. **Homeworld** is rebuilt by the [[Hyperstructure]] rule into the
+   [[World]] [[Slot]] of any [[Wild]] [[Star]]
+
+#### Notes
+
+1. A possessed **Homeworld** counts toward the 7 [[Hyperstructure]]s
+   of [[KardashevAscension|Kardashev Ascension]]

@@ -31,7 +31,7 @@ async function importFile(e: Event) {
 <template>
   <div class="lobby">
     <h1>8-bit Galaxy</h1>
-    <p class="muted">First duel: 2 players, core rules, see docs/. The rules engine checks every move, the Table mode handles the rest.</p>
+    <p class="muted">First duel: 2 players, core rules, see rules/. The rules engine checks every move, the Table mode handles the rest.</p>
     <p class="muted">
       Looks: <a class="legacy" href="/legacy/">legacy</a> prototype, <a class="legacy" href="/pp/">pixel perfect</a> legacy look,
       <a class="legacy" href="/">new</a> look, see adr/0002-appearance.md

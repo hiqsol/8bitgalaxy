@@ -1,33 +1,43 @@
-#!/usr/bin/env python3
-"""Check the docs wiki: generic checks by uwiki, then frontmatter, numbered rules, technology catalog.
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.11"
+# dependencies = ["markdown"]
+# ///
+"""Check the docs wiki rules uwiki does not know: numbered rules, technology catalog, page templates,
+that the uwiki.toml schema allows the status and scope values meta/Docs.md and rules/index.md document,
+that the folder of every page allows its scope, and that no open Backlog or Guidance item cites a stable page and no issue cites a polish page.
 
-Usage: bin/checkdocs  (exits 1 on problems; UWIKI env var points to uwiki.py, default: uwiki on PATH)
-Needs the markdown package, same as uwiki.
+Usage: bin/checkdocs  (exits 1 on problems, uv installs dependencies), make check runs uwiki check first
 """
 
-import os
 import re
-import shutil
+import subprocess
 import sys
+import tomllib
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-try:
-    import markdown
-except ImportError:
-    sys.exit('markdown not found: pip3 install markdown')
+import markdown
 
 ROOT = Path(__file__).resolve().parent.parent
-PATHS = ['docs', 'ideas']
+PATHS = ['rules', 'meta', 'ideas']
 FILES = sorted(f for p in PATHS for f in (ROOT / p).glob('**/*.md'))
-UWIKI = os.environ.get('UWIKI') or shutil.which('uwiki') or sys.exit('uwiki not found, set UWIKI to uwiki.py path')
-sys.path.insert(0, os.path.dirname(os.path.realpath(UWIKI)))
-import uwiki  # noqa: E402
-KEYS = {'status', 'scope', 'aliases', 'date', 'updated'}
+# folder: allowed scopes, rules/ takes every scope the others don't, '' is the repo root
+FOLDER_SCOPES = {'meta': {'meta', 'playtest'}, 'games': {'playtest'}, 'ideas': {'idea'}, 'lore': {'lore'},
+                 '': {'meta', 'playtest'}}
+FRONTMATTER = re.compile(r'---\n(.*?)\n---\n', re.S)
+# an open Backlog item: from "- [ ] **I1" to the next line that is not indented
+OPEN_ITEM = re.compile(r'^- \[ \] \*\*[IPS]\d.*(?:\n[ \t]+.*)*', re.M)
 CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
 TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')
 TECH_BASES = {'TechnologyAction', 'TechnologyModifier', 'Hub'}
-KIND_TECH = {'Action': 'TechnologyAction', 'Modifier': 'TechnologyModifier', 'Hub': 'Hub'}
+KIND_TECH = {'Action': 'TechnologyAction', 'Modifier': 'TechnologyModifier',
+             'Social Hub': 'Hub', 'Industrial Hub': 'Hub', 'Research Hub': 'Hub'}
+FACTIONS = {'Player', 'Galaxy'}
+# catalog item: Name: LevelClasses - Kind - Types - Factions - Scope, then a description
+TECH_ITEM = re.compile(r'[^:]+: (?P<levels>.+?) - (?P<kind>.+?) - (?P<types>.+?)'
+                       r' - (?P<factions>.+?) - (?P<scope>\S+)(?: |$)')
+LEVEL_CLASSES = re.compile(r'(\d+)([mcps]+)$')
 # folder: kind pages the first rule links
 KINDS = {
     'BasicActions': {'BasicAction'},
@@ -42,7 +52,14 @@ KINDS = {
     'Home': {'Home'},
 }
 KIND_PAGES = {'BasicAction', 'TechnologyAction', 'TechnologyModifier', 'Hub', 'Card', 'Deck', 'Property', 'Resource', 'State', 'Home'}
-CLASS_TECH = re.compile(r'\[\[(%s)\]\] technolog|technology Level' % '|'.join(CLASSES.values()))
+CLASS_TECH = re.compile(r'\[\[(%s)\]\] (?:technolog|\[\[Technology\]\])|(?:technology|\[\[Technology\]\]) \[?\[?Level'
+                        % '|'.join(CLASSES.values()))
+# [[Page|text]], [[Page#3]], escaped [[Page\|text]] in tables: the markdown wikilinks extension takes only [[Page]]
+# Deck card line: [2× ]S4+1m/3+2c: 2m Smuggle / 2c +1c << *1c *2m
+CARD_TYPES = {'S': 'Ship', 'H': 'Hero', 'B': 'Base', 'C': 'Colony', 'HS': 'Hyperstructure', 'T': 'Tool'}
+DECK_LINE = re.compile(r'(?:\d+× )?(?P<type>HS|[SHBCT])(?P<level>\d+)[+-]\d+(?P<cls>[mcps])/\d+[+-]\d+(?P<wcls>[mcps]):'
+                       r' +(?P<strong>.*?) +/ +(?P<weak>.*?)(?: +<<.*)?$')
+WIKILINK = re.compile(r'\[\[([^\]|#]*)(#[^\]|]*)?(?:\\?\|([^\]]*))?\]\]')
 
 problems = []
 
@@ -57,18 +74,24 @@ class Page:
                                extension_configs={'wikilinks': {'build_url': lambda label, base, end: label}})
         self.path = path
         self.text = path.read_text()
-        self.tree = ET.fromstring(f'<div>{md.convert(self.text)}</div>')
+        html = md.convert(WIKILINK.sub(lambda m: f'<a href="{m[1]}">{m[3] or m[1] + (m[2] or "")}</a>', self.text))
+        self.tree = ET.fromstring(f'<div>{html}</div>')
         self.meta = {k: ' '.join(v) for k, v in md.Meta.items()}
 
     def table(self):
         """Rows of the first table as lists of cells, without header."""
         return [list(tr) for tr in self.tree.iter('tr')][1:]
 
-    def section(self, heading):
-        """Code values of the list under a heading."""
+    def items(self, heading):
+        """Top-level items of the numbered list under a heading."""
         children = list(self.tree)
         start = next(i for i, e in enumerate(children) if ''.join(e.itertext()) == heading)
-        return {c.text for c in next(e for e in children[start:] if e.tag == 'ol').iter('code')}
+        return next(e for e in children[start:] if e.tag == 'ol').findall('li')
+
+    def section(self, heading):
+        """Values of the list under a heading: the code each item, nested ones too, starts with."""
+        found = (li.find('code') for top in self.items(heading) for li in top.iter('li'))
+        return {c.text for c in found if c is not None}
 
 
 def text(element):
@@ -109,84 +132,166 @@ def check_templates(pages):
                     report(page.path, f'card type needs a rule "{prefix} ..."')
 
 
-def check_page(page, statuses, scopes):
-    for key in page.meta.keys() - KEYS:
-        report(page.path, f'unknown frontmatter key: {key}')
-    for key, allowed in (('status', statuses), ('scope', scopes)):
-        if page.meta.get(key) not in allowed:
-            report(page.path, f'{key} not in docs/index.md: {page.meta.get(key)}')
-    if page.meta.get('scope') != 'meta' and page.meta.get('status') != 'stub' and page.tree.find('ol') is None:
+def check_schema(docs, index):
+    """uwiki.toml schema allows exactly the status values Docs and the scopes Docs and the rules index document."""
+    schema = tomllib.loads((ROOT / 'uwiki.toml').read_text())['schema']
+    for key, documented in (('status', docs.section('Status')),
+                            ('scope', docs.section('Scopes') | index.section('Modules'))):
+        allowed = set(schema[key])
+        if allowed != documented:
+            diff = ', '.join(sorted(allowed ^ documented))
+            report(docs.path, f'{key} values differ from uwiki.toml schema: {diff}')
+
+
+def frontmatter(path):
+    """Frontmatter keys of a page, lists like aliases as lists."""
+    match = FRONTMATTER.match(path.read_text())
+    meta = dict(re.findall(r'^(\w+):\s*(.*)$', match[1], re.M)) if match else {}
+    if 'aliases' in meta:
+        meta['aliases'] = [a.strip() for a in meta['aliases'].strip('[]').split(',')]
+    return meta
+
+
+def all_pages():
+    """Frontmatter of every markdown page of the repo by path."""
+    out = subprocess.run(['git', 'ls-files', '*.md'], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+    return {ROOT / f: frontmatter(ROOT / f) for f in out.split()}
+
+
+def check_scopes(metas):
+    """The folder allows the scope, rules/ takes the rule scopes, living is for meta pages."""
+    schema = set(tomllib.loads((ROOT / 'uwiki.toml').read_text())['schema']['scope'])
+    rule_scopes = schema - set().union(*FOLDER_SCOPES.values())
+    for path, meta in metas.items():
+        parts = path.relative_to(ROOT).parts
+        folder = parts[0] if len(parts) > 1 else ''
+        allowed = rule_scopes if folder == 'rules' else FOLDER_SCOPES.get(folder)
+        if allowed is not None and meta.get('scope') not in allowed:
+            report(path, f'scope {meta.get("scope")} not allowed in {folder or "the root"}: {", ".join(sorted(allowed))}')
+        if meta.get('status') == 'living' and meta.get('scope') != 'meta':
+            report(path, 'status living is for meta pages only')
+
+
+def open_items():
+    """Open items as (source, kind, text): kind issue, or polish for a simplification or a question to watch."""
+    backlog = (ROOT / 'meta/Backlog.md').read_text()
+    for section in re.split(r'^## ', backlog, flags=re.M):
+        watch = section.startswith('Watch in playtest')
+        for item in OPEN_ITEM.findall(section):
+            kind = 'polish' if watch or item.startswith('- [ ] **S') else 'issue'
+            yield 'meta/Backlog.md', kind, item
+    yield 'meta/Guidance.md', 'issue', (ROOT / 'meta/Guidance.md').read_text()
+
+
+def check_cited(metas):
+    """No open item cites a stable page by item link, no issue cites a polish page."""
+    names = {}
+    for path, meta in metas.items():
+        for name in [path.stem] + meta.get('aliases', []):
+            names[name] = path
+    for source, kind, item in open_items():
+        for name, anchor in sorted({m[:2] for m in WIKILINK.findall(item)}):
+            path = names.get(name)
+            status = path and metas[path].get('status')
+            if anchor and (status == 'stable' or status == 'polish' and kind == 'issue'):
+                label = item.split('**')[1] if item.count('**') > 1 else item[:40]
+                report(path, f'{status}, but {source} cites [[{name}{anchor}]] in {kind} {label}')
+
+
+def check_page(page):
+    if page.meta.get('scope') not in ('meta', 'playtest') and page.meta.get('status') != 'stub' and page.tree.find('ol') is None:
         report(page.path, 'no numbered rules')
 
 
-def deck_assignments(deck):
-    """Map technology -> {(card, end): class} from the Deck table."""
-    result, card = {}, None
-    for row in deck.table():
-        card = text(row[0]) or card
-        for tech in links(row[4]) + links(row[5]):
-            result.setdefault(tech, {})[(card, text(row[1]))] = text(row[3])
+def deck_assignments(deck, pages):
+    """Map technology -> {(card, end): class} from the Deck card lines, other names in them are no technologies."""
+    result = {}
+    for line in deck.text.splitlines():
+        spec = DECK_LINE.match(line)
+        if not spec:
+            continue
+        card = f'{CARD_TYPES[spec["type"]]} {spec["level"]}{spec["cls"].upper()}'
+        for end, cls, gives in (('Strong', spec['cls'], spec['strong']), ('Weak', spec['wcls'], spec['weak'])):
+            for tech in re.findall(r'[A-Z][A-Za-z]+', gives):
+                if tech == 'TBD' or tech in pages and pages[tech].path.parent.name not in TECH_DIRS:
+                    continue
+                result.setdefault(tech, {})[(card, end)] = cls.upper()
     return result
+
+
+def card_types(pages):
+    """Card Types: the Cards pages whose first rule links Type."""
+    return {p.path.stem for p in pages.values() if p.path.parent.name == 'Cards'
+            and 'Type' in links(next(iter(top_rules(p)), ET.Element('li')))}
 
 
 def check_technologies(pages):
     catalog, deck = pages['Technology'], pages['Deck']
-    assigned = deck_assignments(deck)
+    assigned = deck_assignments(deck, pages)
+    types = card_types(pages)
     # Hub actions (Create) are technologies via the hub
     cataloged = set(links(pages['Hub'].tree))
 
-    for row in catalog.table():
-        if not links(row[0]):
-            continue  # unnamed placeholders
-        tech, kind, cls, scope, cards = text(row[0]), *map(text, row[1:])
+    for item in catalog.items('List'):
+        tech, line = next(iter(links(item)), None), ' '.join(text(item).split())
+        match = TECH_ITEM.match(line)
+        if not tech or not match:
+            report(catalog.path, f'not "Name: LevelClasses - Kind - Types - Factions - Scope": {line[:40]}')
+            continue
         cataloged.add(tech)
 
+        levels = set()
+        for token in match['levels'].split():
+            level = LEVEL_CLASSES.match(token)
+            if level:
+                levels |= {(int(level[1]), c.upper()) for c in level[2]}
+            else:
+                report(catalog.path, f'{tech}: LevelClasses like 2cp, not {token}')
+        kind = KIND_TECH.get(match['kind'])
+        if not kind:
+            report(catalog.path, f'{tech}: kind {match["kind"]} not in {", ".join(KIND_TECH)}')
+        listed_types = set(match['types'].split(', '))
+        for name in sorted(listed_types - types):
+            report(catalog.path, f'{tech}: {name} is not a card Type')
+        for name in sorted(set(match['factions'].split(', ')) - FACTIONS):
+            report(catalog.path, f'{tech}: {name} not in {", ".join(sorted(FACTIONS))}')
+
         page = pages.get(tech)
-        if page and page.meta.get('scope') != scope:
-            report(catalog.path, f'{tech} scope {scope}, its page says {page.meta.get("scope")}')
+        if page and page.meta.get('scope') != match['scope']:
+            report(catalog.path, f'{tech} scope {match["scope"]}, its page says {page.meta.get("scope")}')
         first = top_rules(page)[:1] if page else []
-        if first:
+        if first and kind:
             named = set(links(first[0]))
-            want = set() if cls == 'TBD' else {CLASSES[c.strip()] for c in cls.split(',')}
-            if KIND_TECH[kind] not in named or named & set(CLASSES.values()) != want:
-                report(page.path, f'first rule must name {cls} {KIND_TECH[kind]}, as in [[Technology]]')
+            want = {CLASSES[c] for _, c in levels}
+            if kind not in named or named & set(CLASSES.values()) != want:
+                report(page.path, f'first rule must name {", ".join(sorted(want))} {kind}, as in [[Technology]]')
 
-        listed = set()
-        for item in (c.strip() for c in cards.split(',')):
-            card, _, end = item.rpartition(' ')
-            if end in ('strong', 'weak'):
-                listed.add((card, end))
-            elif item != '-':
-                listed |= {(item, 'strong'), (item, 'weak')}
-        actual = assigned.pop(tech, {})
-        for card, end in sorted(listed - actual.keys()):
-            report(catalog.path, f'{tech}: {card} {end} not in Deck')
-        for card, end in sorted(actual.keys() - listed):
-            report(catalog.path, f'{tech}: missing {card} {end} from Deck')
-
-        used = set(actual.values())
-        if actual and cls != 'TBD' and {c.strip() for c in cls.split(',')} != used:
-            report(catalog.path, f'{tech} class {cls}, Deck ends are {", ".join(sorted(used))}')
+        # Deck cards must be listed, listed values without a card are intended
+        for (card, end), cls in sorted(assigned.pop(tech, {}).items()):
+            card_type, level = card.split()[0], int(re.search(r'\d+', card)[0])
+            if (level, cls) not in levels:
+                report(catalog.path, f'{tech}: missing {level}{cls.lower()} of {card} {end} from Deck')
+            if card_type not in listed_types:
+                report(catalog.path, f'{tech}: missing {card_type} of {card} {end} from Deck')
 
     for tech in sorted(assigned):
-        report(deck.path, f'technology not in Technology table: {tech}')
+        report(deck.path, f'technology not in Technology list: {tech}')
 
     for page in pages.values():
         if page not in (catalog, deck) and CLASS_TECH.search(page.text):
             report(page.path, 'technology class or level belongs in [[Technology]] only')
         if page.path.parent.name in TECH_DIRS and page.path.stem not in TECH_BASES | cataloged:
-            report(page.path, 'technology missing from [[Technology]] table')
+            report(page.path, 'technology missing from [[Technology]] list')
 
 
 def main():
-    os.chdir(ROOT)
-    problems.extend(uwiki.Checker(PATHS).check())  # links, images, frontmatter syntax, list numbering
     pages = {path.stem: Page(path) for path in FILES}
-    statuses = pages['index'].section('Status')
-    scopes = pages['index'].section('Scopes')
-
+    check_schema(pages['Docs'], pages['index'])
+    metas = all_pages()
+    check_scopes(metas)
+    check_cited(metas)
     for page in pages.values():
-        check_page(page, statuses, scopes)
+        check_page(page)
     check_technologies(pages)
     check_templates(pages)
 

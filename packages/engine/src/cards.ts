@@ -1,6 +1,5 @@
 // Card definitions and derived [[Property]]s.
 import deck from './data/deck.json';
-import { STARTING_CARDS } from './scenario';
 import type { Ability, Card, CardDef, CardType, EndDef, EndName, Klass, TechScope } from './types';
 
 /** Placeholders for cards a viewer doesn't know: only the Role is seen, see view.ts */
@@ -12,7 +11,7 @@ const unknown = (id: string, type: CardType): CardDef => {
 };
 
 const DEFS: Record<string, CardDef> = {};
-for (const def of [...(deck.cards as CardDef[]), ...STARTING_CARDS, unknown(UNKNOWN_UNIT, 'Ship'), unknown(UNKNOWN_STRUCTURE, 'Base')]) {
+for (const def of [...(deck.cards as CardDef[]), unknown(UNKNOWN_UNIT, 'Ship'), unknown(UNKNOWN_STRUCTURE, 'Base')]) {
   DEFS[def.id] = def;
 }
 export const isUnknown = (id: string) => id.startsWith('?');
@@ -28,8 +27,9 @@ export function cardDef(id: string): CardDef {
 export const allCardDefs = (): CardDef[] => Object.values(DEFS).filter((d) => !isUnknown(d.id));
 
 export const isActorType = (type: CardType) => type === 'Ship' || type === 'Hero';
-export const isStructureType = (type: CardType) => type === 'Base' || type === 'Colony';
-export const isSocialType = (type: CardType) => type === 'Hero' || type === 'Colony';
+export const isStructureType = (type: CardType) => type === 'Base' || type === 'Colony' || type === 'Hyperstructure';
+/** [[Social]] [[Origin]], a [[Hyperstructure]] is both Social and Industrial */
+export const isSocialType = (type: CardType) => type === 'Hero' || type === 'Colony' || type === 'Hyperstructure';
 
 /** [[Origin]] hub technology: [[Academy]] for Social, [[Shipyard]] for Industrial */
 export const hubTech = (type: CardType) => (isSocialType(type) ? 'Academy' : 'Shipyard');
@@ -69,15 +69,29 @@ export function capacityOf(card: Card, end: EndName = card.end): number {
 }
 
 /**
- * A printed technology that is not `core` is blank in the first duel,
- * see Guidance G2.
+ * A printed technology out of the `core` and `duel` scopes is blank in
+ * the first duel, see [[Duel]].
  */
 export function isPlayable(ability: Ability): boolean {
-  return ability.kind !== 'tech' || TECH_SCOPES[ability.tech] === 'core';
+  if (ability.kind !== 'tech') return true;
+  const scope = TECH_SCOPES[ability.tech];
+  return scope === 'core' || scope === 'duel';
 }
 
+/** A full [[Hub]] that also provides other technologies: [[MegaYard]], [[MegAcad]] */
+const PROVIDES: Record<string, string[]> = {
+  MegaYard: ['Shipyard', 'Recover'],
+  MegAcad: ['Academy', 'Recover'],
+};
+
+/** Playable technologies of the abilities, with what they provide */
 export function techsOf(abilities: Ability[]): string[] {
-  return abilities.filter((a) => a.kind === 'tech' && isPlayable(a)).map((a) => (a as { tech: string }).tech);
+  return abilities
+    .filter((a) => a.kind === 'tech' && isPlayable(a))
+    .flatMap((a) => {
+      const tech = (a as { tech: string }).tech;
+      return [tech, ...(PROVIDES[tech] ?? [])];
+    });
 }
 
 /** Does any End of the card print the technology */

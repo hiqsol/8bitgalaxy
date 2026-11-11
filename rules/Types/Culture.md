@@ -1,0 +1,8 @@
+---
+status: stable
+scope: core
+---
+
+1. **Culture** is a [[Class]]
+2. Provides [[CulturePower]] and **Culture**
+   [[Technology|Technologies]]

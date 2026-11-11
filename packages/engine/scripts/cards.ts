@@ -2,11 +2,11 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { parseDeck, parseTechScopes } from '../src/deck/parse.ts';
 
-const docs = new URL('../../../docs/', import.meta.url);
+const docs = new URL('../../../rules/', import.meta.url);
 const read = (path: string) => readFileSync(new URL(path, docs), 'utf8');
 
 const data = {
-  source: 'docs/Cards/Deck.md, docs/Concepts/Technology.md',
+  source: 'rules/Cards/Deck.md, rules/Concepts/Technology.md',
   cards: parseDeck(read('Cards/Deck.md')),
   techScopes: parseTechScopes(read('Concepts/Technology.md')),
 };

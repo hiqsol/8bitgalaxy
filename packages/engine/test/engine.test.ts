@@ -16,7 +16,7 @@ import { spaceAt } from '../src/field';
 import { STAR_DECK } from '../src/scenario';
 import { action, clearHands, err, game, ok, put, revealBetween, toHand, toSlot, uid } from './helpers';
 
-const docs = (path: string) => readFileSync(new URL(`../../../docs/${path}`, import.meta.url), 'utf8');
+const docs = (path: string) => readFileSync(new URL(`../../../rules/${path}`, import.meta.url), 'utf8');
 
 describe('cards', () => {
   it('deck.json is in sync with docs, run `npm run cards` after editing them', () => {
@@ -32,9 +32,24 @@ describe('cards', () => {
       { kind: 'tech', tech: 'Upgrade' },
     ]);
     expect(hero.prerequisites).toEqual([
+      { level: 1, klass: 'P' },
       { level: 2, klass: 'M' },
-      { level: 2, klass: 'P' },
     ]);
+  });
+
+  it('parses Plus letters, combined prints, TBD and copies', () => {
+    const cards = parseDeck(docs('Cards/Deck.md'));
+    const card = (id: string) => cards.find((c) => c.id === id)!;
+    expect(card('Base 2M').strong.primary).toEqual([
+      { kind: 'tech', tech: 'Militarization' },
+      { kind: 'plus', what: 'defense', n: 1 },
+    ]);
+    expect(card('Base 4P').strong.primary).toEqual([{ kind: 'plus', what: 'capacity', n: 3 }]);
+    expect(card('Base 4P').strong.secondary).toEqual([{ kind: 'plus', what: 'power', n: 3 }]);
+    expect(card('Ship 1M').weak).toMatchObject({ level: 0, extraCost: 1, klass: 'S' });
+    expect(card('Hyperstructure 8C').strong.primary).toEqual([]);
+    expect(card('Tool 1P').copies).toBe(2);
+    expect(cards.reduce((n, c) => n + (c.copies ?? 1), 0)).toBe(56);
   });
 });
 
@@ -148,7 +163,7 @@ function duel(): State {
 describe('Explore', () => {
   it('reveals a Space bordering the source for its Cost', () => {
     let s = duel();
-    const hero = toHand(s, 'p1', 'Hero 1M');
+    const hero = toHand(s, 'p1', 'Hero 2M');
     const ship = toHand(s, 'p1', 'Ship 2M');
     const space = spaceAt(s, '21', 1)!;
     const explore = action({
@@ -173,7 +188,7 @@ describe('Explore', () => {
     revealBetween(s, '21', [1]);
     const scout = toSlot(s, 'p1', 'Ship 2S', '21');
     const starter = toHand(s, 'p1', 'Ship 1S');
-    const helper = toHand(s, 'p1', 'Hero 1P');
+    const helper = toHand(s, 'p1', 'Hero 2P');
     s.homes.p1.energy = 3;
     const explore = action({
       kind: 'explore',
@@ -216,7 +231,7 @@ describe('Move', () => {
     const freighter = toSlot(s, 'p1', 'Ship 2P', '21');
     const move2 = action({ kind: 'move', starter, source: '21', destination: '12', participants: [{ card: freighter }], cargo: [base] });
     expect(err(s, 'p1', move2)).toMatch(/cargo Size 3 is over the group Capacity 2/);
-    const hero = toSlot(s, 'p1', 'Hero 1M', '21');
+    const hero = toSlot(s, 'p1', 'Hero 2M', '21');
     if (move2.type === 'action') move2.action.participants.push({ card: hero });
     s = ok(s, 'p1', move2);
     expect(s.stars['12'].units.filter(Boolean)).toEqual([freighter, hero]);
@@ -232,7 +247,7 @@ describe('Move', () => {
     for (const sp of Object.values(s.spaces)) sp.revealed = true;
     for (const st of Object.values(s.stars)) st.revealed = true;
     toSlot(s, 'p2', 'Ship 2M', '12');
-    const ship = toSlot(s, 'p1', 'Hero 2M', '21');
+    const ship = toSlot(s, 'p1', 'Hero 2S', '21');
     s.homes.p1.factory[1].cards = s.homes.p1.factory[1].cards.filter((u) => u !== ship);
     const starter = toHand(s, 'p1', 'Ship 1C');
     s.cards[ship].end = 'strong';
@@ -284,7 +299,8 @@ describe('Research, Create, Upgrade', () => {
     const academy = uid(s, 'p1', 'Colony 2C');
     const create = (pile: number) =>
       action({ kind: 'create', starter, source: '21', destination: '21', participants: [{ card: academy }], create: { piles: [pile] } });
-    expect(err(s, 'p1', create(1))).toMatch(/Hero 2M comes only by Upgrade/);
+    put(s, 'p1', 'Hero 4S', { zone: 'factory', player: 'p1', pile: 1 });
+    expect(err(s, 'p1', create(1))).toMatch(/Hero 4S comes only by Upgrade/);
     s = ok(s, 'p1', create(3));
     const colony = uid(s, 'p1', 'Colony 2M');
     expect(locate(s, colony)).toEqual({ zone: 'slot', star: '21', row: 'structures', index: 1 });
@@ -293,9 +309,10 @@ describe('Research, Create, Upgrade', () => {
 
   it('upgrades a Hero in Discard with Upgrade and the Academy', () => {
     let s = duel();
-    const old = put(s, 'p1', 'Hero 1P', { zone: 'discard', player: 'p1' });
-    const starter = toHand(s, 'p1', 'Hero 1M');
+    const old = put(s, 'p1', 'Hero 2P', { zone: 'discard', player: 'p1' });
+    const starter = toHand(s, 'p1', 'Hero 2M');
     const academy = uid(s, 'p1', 'Colony 2C');
+    put(s, 'p1', 'Hero 4S', { zone: 'factory', player: 'p1', pile: 1 });
     s = ok(
       s,
       'p1',
@@ -310,8 +327,8 @@ describe('Research, Create, Upgrade', () => {
         upgrade: { old, pile: 1 },
       }),
     );
-    const hero2m = uid(s, 'p1', 'Hero 2M');
-    expect(s.homes.p1.discard).toEqual(expect.arrayContaining([hero2m, starter]));
+    const hero4s = uid(s, 'p1', 'Hero 4S');
+    expect(s.homes.p1.discard).toEqual(expect.arrayContaining([hero4s, starter]));
     expect(locate(s, old)).toEqual({ zone: 'factory', player: 'p1', pile: 1 });
   });
 });
@@ -324,7 +341,7 @@ describe('Combat', () => {
     const ship = toSlot(s, 'p1', 'Ship 2M', '21');
     const defender = toSlot(s, 'p2', 'Ship 2S', '12');
     const starter = toHand(s, 'p1', 'Ship 1M');
-    const hero = toHand(s, 'p1', 'Hero 1M');
+    const hero = toHand(s, 'p1', 'Hero 2M');
     return { s, ship, defender, starter, hero };
   }
 
@@ -350,7 +367,7 @@ describe('Combat', () => {
     expect(err(s, 'p1', { type: 'combatPass' })).toMatch(/not your move/);
     s = ok(s, 'p2', { type: 'combatPass' });
     s = ok(s, 'p1', { type: 'combatPass' });
-    expect(s.combat!.result).toEqual({ winner: 'p1', attack: 3, defense: 1, advantage: 2 });
+    expect(s.combat!.result).toEqual({ winner: 'p1', attack: 4, defense: 1, advantage: 3 });
     expect(s.combat!.phase).toBe('save');
     s = ok(s, 'p1', { type: 'combatSave', cards: [f.ship] });
     expect(s.combat).toBeNull();
@@ -389,10 +406,10 @@ describe('view', () => {
 
   it('a Hidden card on the Field shows only its owner and Role', () => {
     const s = duel();
-    const hero = toSlot(s, 'p2', 'Hero 3M', '00');
+    const hero = toSlot(s, 'p2', 'Hero 4P', '00');
     s.cards[hero].face = 'hidden';
     expect(viewFor(s, 'p1').cards[hero]).toMatchObject({ def: '?Unit', owner: 'p2' });
-    expect(viewFor(s, 'p2').cards[hero].def).toBe('Hero 3M');
+    expect(viewFor(s, 'p2').cards[hero].def).toBe('Hero 4P');
   });
 });
 
@@ -419,7 +436,7 @@ describe('more rules', () => {
     let s = duel();
     const ship = toSlot(s, 'p1', 'Ship 2M', '21');
     s.cards[ship].face = 'damaged';
-    const starter = toHand(s, 'p1', 'Hero 1P'); // strong: Recover
+    const starter = toHand(s, 'p1', 'Hero 2P'); // strong: Recover
     const yard = uid(s, 'p1', 'Base 2P'); // Shipyard, +1 P
     const decl = action({ kind: 'recover', starter, starterUse: 'secondary', source: '21', destination: '21', participants: [{ card: yard }], recover: { card: ship } });
     expect(err(s, 'p1', decl)).toMatch(/Recover costs 2 P power, the participants give 1/);
@@ -449,7 +466,7 @@ describe('more rules', () => {
     revealBetween(s, '21', [1]);
     s.stars['12'].revealed = true;
     const ship = toSlot(s, 'p1', 'Ship 2M', '21'); // strong: Retreat
-    const rival = toSlot(s, 'p2', 'Hero 2M', '12');
+    const rival = toSlot(s, 'p2', 'Hero 2S', '12');
     const starter = toHand(s, 'p1', 'Ship 1M');
     s = ok(s, 'p1', action({ kind: 'attack', starter, source: '21', destination: '12', participants: [{ card: ship }] }));
     s = ok(s, 'p2', { type: 'combatPass' });
@@ -461,7 +478,7 @@ describe('more rules', () => {
 
   it('a Hidden takeoff needs Stealth, the rival sees a hidden Unit, Explore reveals it', () => {
     let s = duel();
-    const hero = toHand(s, 'p2', 'Hero 3M'); // strong: Stealth
+    const hero = toHand(s, 'p2', 'Hero 4M'); // strong: Stealth
     s.turn.player = 'p2';
     s = ok(s, 'p2', { type: 'takeoff', card: hero, star: '00', end: 'strong', hidden: true });
     expect(s.log.at(-1)!.text).toBe('takes off a hidden card at 00');
@@ -470,11 +487,12 @@ describe('more rules', () => {
     s.turn.player = 'p1';
     revealBetween(s, '00', [3]);
     s.stars['01'].revealed = true;
+    const sage = toSlot(s, 'p1', 'Hero 2S', '01'); // S power 2, the Hero's Price is 5
     toSlot(s, 'p1', 'Ship 2S', '01'); // Explore, S power 1, Range 2
     const scout = uid(s, 'p1', 'Ship 2S');
     const starter = toHand(s, 'p1', 'Ship 1S');
-    s.homes.p1.energy = 2;
-    s = ok(s, 'p1', action({ kind: 'explore', starter, source: '01', destination: '00', participants: [{ card: scout }], target: { kind: 'card', card: hero, reveal: true }, boost: { S: 2 } }));
+    s.homes.p1.energy = 1;
+    s = ok(s, 'p1', action({ kind: 'explore', starter, source: '01', destination: '00', participants: [{ card: scout }, { card: sage }], target: { kind: 'card', card: hero, reveal: true }, boost: { S: 1 } }));
     expect(s.cards[hero].face).toBe('front');
   });
 

@@ -75,8 +75,8 @@ function setupHome(state: State, player: PlayerId, homeStar: string): void {
   const defs = [
     ...START.reserve,
     ...START.homeStar,
-    ...CARD_TYPES.flatMap((t) => START.factory[t]),
-    ...CARD_TYPES.flatMap((t) => START.laboratory[t]),
+    ...CARD_TYPES.flatMap((t) => START.factory[t] ?? []),
+    ...CARD_TYPES.flatMap((t) => START.laboratory[t] ?? []),
   ];
   const numbers = shuffle(
     state,
@@ -94,8 +94,8 @@ function setupHome(state: State, player: PlayerId, homeStar: string): void {
     hand: [],
     reserve: shuffle(state, START.reserve.map(id)),
     discard: [],
-    factory: CARD_TYPES.map((type) => ({ type, cards: START.factory[type].map(id) })),
-    laboratory: CARD_TYPES.map((type) => ({ type, cards: START.laboratory[type].map(id) })),
+    factory: CARD_TYPES.map((type) => ({ type, cards: (START.factory[type] ?? []).map(id) })),
+    laboratory: CARD_TYPES.map((type) => ({ type, cards: (START.laboratory[type] ?? []).map(id) })),
     energy: 0,
   };
   state.homes[player] = home;

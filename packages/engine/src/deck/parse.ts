@@ -1,114 +1,114 @@
-// Parses the card tables of the rules docs into card definitions.
+// Parses the Deck and the Technology catalog of the rules into card definitions.
 // Self-contained: run by plain node in scripts/cards.ts.
-import type { Ability, CardDef, CardType, EndDef, Klass, Prerequisite, TechScope } from '../types.ts';
+import type { Ability, CardDef, CardType, EndDef, Klass, PlusKind, Prerequisite, TechScope } from '../types.ts';
 
-const CLASSES = ['M', 'C', 'P', 'S'];
-const TYPES = ['Ship', 'Hero', 'Base', 'Colony'];
-const PLUS_KINDS: Record<string, string> = {
-  Defense: 'defense',
-  Capacity: 'capacity',
-  Range: 'range',
-  Draw: 'draw',
-  Restore: 'restore',
+/** [[Type]] letters of the card notation, see [[Notation]] */
+const TYPES: Record<string, CardType> = {
+  S: 'Ship',
+  H: 'Hero',
+  B: 'Base',
+  C: 'Colony',
+  HS: 'Hyperstructure',
+  T: 'Tool',
+};
+/** [[Plus]] letters besides a Class letter: power of that Class */
+const PLUS_KINDS: Record<string, PlusKind> = { d: 'defense', r: 'range', l: 'capacity' };
+const SCOPES: TechScope[] = ['core', 'duel', 'advanced', 'events', 'objectives', 'politics'];
+/** a value still to design, prints nothing yet */
+const TBD = 'TBD';
+
+const klassOf = (letter: string): Klass => {
+  if (!/^[mcps]$/.test(letter)) throw new Error(`bad class ${letter}`);
+  return letter.toUpperCase() as Klass;
 };
 
-/** Table rows of a markdown text: arrays of trimmed cells, header and separator excluded. */
-export function tableRows(md: string, header: string): string[][] {
-  const lines = md.split('\n');
-  const start = lines.findIndex((l) => l.startsWith('|') && l.includes(header));
-  if (start < 0) throw new Error(`no table with header ${header}`);
-  const rows: string[][] = [];
-  for (const line of lines.slice(start + 2)) {
-    if (!line.startsWith('|')) break;
-    rows.push(line.slice(1, -1).split('|').map((c) => c.trim()));
+/** Lines of the first ```text block after the heading-less rules: the Deck listing */
+function deckLines(md: string): string[] {
+  const m = md.match(/```text\n([\s\S]*?)```/);
+  if (!m) throw new Error('no text block with the Deck');
+  return m[1].split('\n').filter((l) => l.trim() !== '');
+}
+
+/** One printed item: `2m` Power, `+1m` Plus, `+1d` Defense, a Technology; `A+B` combines them */
+export function parseAbility(token: string, klass: Klass): Ability[] {
+  if (token === TBD) return [];
+  const power = token.match(/^(\d+)([mcps])$/);
+  if (power) {
+    if (klassOf(power[2]) !== klass) throw new Error(`power ${token} of another class than ${klass}`);
+    return [{ kind: 'power', base: Number(power[1]), field: 0 }];
   }
-  return rows;
+  const plus = token.match(/^\+(\d+)([a-z])$/);
+  if (plus) {
+    const n = Number(plus[1]);
+    if (PLUS_KINDS[plus[2]]) return [{ kind: 'plus', what: PLUS_KINDS[plus[2]], n }];
+    if (klassOf(plus[2]) !== klass) throw new Error(`plus ${token} of another class than ${klass}`);
+    return [{ kind: 'plus', what: 'power', n }];
+  }
+  // a combined print is one Ability: `Recover+Upgrade`, `Militarization+1d`
+  const parts = token.split(/\+(?=[A-Z\d])/);
+  if (parts.length > 1) return parts.flatMap((p, i) => parseAbility(i ? (/^\d/.test(p) ? `+${p}` : p) : p, klass));
+  if (/^[A-Z][A-Za-z]+$/.test(token)) return [{ kind: 'tech', tech: token }];
+  throw new Error(`can't parse ability ${token}`);
 }
 
-const unlink = (s: string) => s.replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1');
-
-export function parseAbilities(cell: string, isPrimary: boolean): Ability[] {
-  const text = cell.trim();
-  if (text === '-' || text === '') return [];
-  return text.split(',').map((raw) => {
-    const s = raw.trim();
-    const link = s.match(/^\[\[([^\]|]*)(?:\|[^\]]*)?\]\]$/);
-    if (link) return { kind: 'tech', tech: link[1] } as Ability;
-    const power = s.match(/^(\d+)(?:\+(\d+))?$/);
-    if (power && isPrimary) {
-      return { kind: 'power', base: Number(power[1]), field: Number(power[2] ?? 0) } as Ability;
-    }
-    const plus = s.match(/^\+(\d+)(?: (\w+))?$/);
-    if (plus) {
-      const what = plus[2] ? PLUS_KINDS[plus[2]] : 'power';
-      if (!what) throw new Error(`unknown plus ${s}`);
-      return { kind: 'plus', what, n: Number(plus[1]) } as Ability;
-    }
-    if (/^[a-z]+$/.test(s)) return { kind: 'tech', tech: s } as Ability;
-    throw new Error(`can't parse ability ${s}`);
-  });
-}
-
-function parseLevel(cell: string): { level: number; extraCost: number } {
-  const m = cell.match(/^(\d+)([+-]\d+)?$/);
-  if (!m) throw new Error(`bad level ${cell}`);
-  return { level: Number(m[1]), extraCost: Number(m[2] ?? 0) };
-}
-
-function parsePrerequisites(cell: string): Prerequisite[] {
-  if (cell === '-' || cell === '') return [];
-  return cell.split(',').map((p) => {
-    const m = p.trim().match(/^(\d+)([MCPS])$/);
-    if (!m) throw new Error(`bad prerequisite ${p}`);
-    return { level: Number(m[1]), klass: m[2] as Klass };
-  });
-}
-
-function parseEnd(row: string[]): EndDef {
-  const [, , level, klass, primary, secondary] = row;
-  if (!CLASSES.includes(klass)) throw new Error(`bad class ${klass}`);
+/** What an End gives: the first item is the Primary, the rest the Secondary */
+function parseGives(text: string, head: { level: number; extraCost: number; klass: Klass }): EndDef {
+  const [primary = '', ...secondary] = text.trim().split(/\s+/).filter(Boolean);
   return {
-    ...parseLevel(level),
-    klass: klass as Klass,
-    primary: parseAbilities(unlinkKeep(primary), true),
-    secondary: parseAbilities(unlinkKeep(secondary), false),
+    ...head,
+    primary: primary ? parseAbility(primary, head.klass) : [],
+    secondary: secondary.flatMap((t) => parseAbility(t, head.klass)),
   };
 }
 
-// Keep [[Tech]] links (they mark technologies), drop aliases only.
-const unlinkKeep = (s: string) => s.replace(/\[\[([^\]|]*)\|[^\]]*\]\]/g, '[[$1]]');
-
-/** Card definitions from docs/Cards/Deck.md */
+/** Card definitions from rules/Cards/Deck.md, a line per card in [[Notation]] */
 export function parseDeck(md: string): CardDef[] {
-  const rows = tableRows(md, '| Card |');
-  const cards: CardDef[] = [];
-  for (let i = 0; i < rows.length; i += 2) {
-    const strong = rows[i];
-    const weak = rows[i + 1];
-    if (strong[1] !== 'strong' || weak?.[1] !== 'weak') {
-      throw new Error(`expected strong/weak rows at ${strong.join('|')}`);
-    }
-    const name = unlink(strong[0]);
-    const type = name.split(' ')[0];
-    if (!TYPES.includes(type)) throw new Error(`bad type ${name}`);
-    cards.push({
-      id: name,
-      type: type as CardType,
-      strong: parseEnd(strong),
-      weak: parseEnd(weak),
-      prerequisites: parsePrerequisites(strong[6]),
+  return deckLines(md).map((line) => {
+    const m = line.match(/^(?:(\d+)× )?([A-Z]+)(\d+)([+-]\d+)([mcps])\/(\d+)([+-]\d+)([mcps]):\s+(.*?)\s*\/\s*(.*?)\s*(?:<<\s*(.*))?$/);
+    if (!m) throw new Error(`can't parse card ${line}`);
+    const [, copies, letter, sLevel, sExtra, sKlass, wLevel, wExtra, wKlass, sGives, wGives, prereqs] = m;
+    const type = TYPES[letter];
+    if (!type) throw new Error(`bad type ${letter} in ${line}`);
+    const strong = { level: Number(sLevel), extraCost: Number(sExtra), klass: klassOf(sKlass) };
+    const weak = { level: Number(wLevel), extraCost: Number(wExtra), klass: klassOf(wKlass) };
+    const def: CardDef = {
+      id: `${type} ${strong.level}${strong.klass}`,
+      type,
+      strong: parseGives(sGives, strong),
+      weak: parseGives(wGives, weak),
+      prerequisites: parsePrerequisites(prereqs ?? ''),
       culturePoints: 0,
-    });
-  }
-  return cards;
+    };
+    if (copies) def.copies = Number(copies);
+    return def;
+  });
 }
 
-/** Technology scopes from docs/Concepts/Technology.md */
+function parsePrerequisites(text: string): Prerequisite[] {
+  return text
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((p) => {
+      const m = p.match(/^\*(\d+)([mcps])$/);
+      if (!m) throw new Error(`bad prerequisite ${p}`);
+      return { level: Number(m[1]), klass: klassOf(m[2]) };
+    });
+}
+
+/** Technology scopes from the catalog list of rules/Concepts/Technology.md */
 export function parseTechScopes(md: string): Record<string, TechScope> {
+  const list = md.split(/^#### List\n/m)[1];
+  if (!list) throw new Error('no #### List of technologies');
+  // an item and its indented continuation lines
+  const items = list.split(/\n(?=\d+\. )/).map((item) => item.replace(/\n\s+/g, ' '));
   const scopes: Record<string, TechScope> = {};
-  for (const row of tableRows(md, '| Technology |')) {
-    const name = row[0].replace(/^\[\[|\]\]$/g, '').replace(/`/g, '');
-    scopes[name] = row[3] as TechScope;
+  for (const item of items) {
+    const m = item.match(/^\d+\. \[\[([^\]|]+)\]\]: .+? - .+? - .+? - .+? - (\w+)/);
+    if (!m) continue;
+    const scope = m[2] as TechScope;
+    if (!SCOPES.includes(scope)) throw new Error(`bad scope ${scope} of ${m[1]}`);
+    scopes[m[1]] = scope;
   }
+  if (!Object.keys(scopes).length) throw new Error('no technologies in the list');
   return scopes;
 }

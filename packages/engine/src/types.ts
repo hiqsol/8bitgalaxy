@@ -1,21 +1,23 @@
-// Domain model, names follow the rules docs (docs/), see ADR 0001.
+// Domain model, names follow the rules (rules/), see ADR 0001.
 
 /** [[Class]]: Military, Culture, Production, Science */
 export type Klass = 'M' | 'C' | 'P' | 'S';
 export const KLASSES: Klass[] = ['M', 'C', 'P', 'S'];
 
-export type CardType = 'Ship' | 'Hero' | 'Base' | 'Colony';
+export type CardType = 'Ship' | 'Hero' | 'Base' | 'Colony' | 'Hyperstructure' | 'Tool';
+/** Types of the first duel, a [[Factory]] and a [[Laboratory]] pile each */
 export const CARD_TYPES: CardType[] = ['Ship', 'Hero', 'Base', 'Colony'];
 
 export type PlusKind = 'power' | 'defense' | 'capacity' | 'range' | 'draw' | 'restore';
 
-/** [[Ability]]: a printed power `X+Y`, a [[Plus]] `+N` or a [[Technology]] */
+/** [[Ability]]: a printed [[Power]], a [[Plus]] or a [[Technology]] */
 export type Ability =
   | { kind: 'power'; base: number; field: number }
   | { kind: 'plus'; what: PlusKind; n: number }
   | { kind: 'tech'; tech: string };
 
-export type TechScope = 'core' | 'advanced' | 'TBD';
+/** `scope` of a [[Technology]] page */
+export type TechScope = 'core' | 'duel' | 'advanced' | 'events' | 'objectives' | 'politics';
 
 /** One [[End]] of a card as printed */
 export interface EndDef {
@@ -31,7 +33,7 @@ export interface Prerequisite {
   klass: Klass;
 }
 
-/** A card as printed, see docs/Cards/Deck.md */
+/** A card as printed, see rules/Cards/Deck.md */
 export interface CardDef {
   id: string;
   type: CardType;
@@ -39,6 +41,8 @@ export interface CardDef {
   weak: EndDef;
   prerequisites: Prerequisite[];
   culturePoints: number;
+  /** copies in the Deck, 1 when absent */
+  copies?: number;
 }
 
 export type EndName = 'strong' | 'weak';

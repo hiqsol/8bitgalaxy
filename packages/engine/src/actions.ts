@@ -41,6 +41,8 @@ export const MANAGE: Record<CardType, Klass[]> = {
   Colony: ['C', 'S'],
   Ship: ['M', 'P', 'S'],
   Hero: ['M', 'C', 'S'],
+  Hyperstructure: ['C', 'P', 'S'],
+  Tool: ['P', 'S'],
 };
 
 /** Common checks and the pool, without resolving: for validation and previews */

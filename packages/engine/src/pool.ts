@@ -1,6 +1,6 @@
 // What the participants of an action provide, see [[PerformAction]] and [[Support]].
 import { card, isActiveFor, isOverlapped, locate, starOf, starPower, starTechs } from './board';
-import { capacityOf, endOf, isActor, isPlayable, rangeOf } from './cards';
+import { capacityOf, endOf, isActor, isPlayable, rangeOf, techsOf } from './cards';
 import { RuleError } from './errors';
 import { type Ability, type ActionDecl, type EndName, KLASSES, type Klass, type PlayerId, type State, type SupportUse } from './types';
 
@@ -95,7 +95,7 @@ export function contribution(
     level: e.level,
     abilities,
     power: powerOf(abilities),
-    techs: abilities.filter((a) => a.kind === 'tech').map((a) => (a as { tech: string }).tech),
+    techs: techsOf(abilities),
     range: (direct || opts.use === 'range' ? rangeOf(virtual, end) : 0) + plusOf(abilities, 'range'),
     capacity: (direct || opts.use === 'capacity' ? capacityOf(virtual, end) : 0) + plusOf(abilities, 'capacity'),
     hidden: c.face === 'hidden',

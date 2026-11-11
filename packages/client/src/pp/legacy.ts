@@ -1,3 +1,4 @@
+import type { CardType } from '@8bitgalaxy/engine';
 // Positions of the legacy drawers (legacy/src/legacy/js/DivDrawer), in their unit of 50 board
 // pixels, the legacy CSS zooms the board to 0.3. Computed as the drawers do, so they match.
 
@@ -107,4 +108,5 @@ export function pileOffset(k: number, n: number, folded: boolean): number {
 }
 
 export const KLASS_NAMES = { M: 'Attack', C: 'Colonization', P: 'Production', S: 'Science' } as const;
-export const TYPE_IMAGES = { Hero: 'user', Ship: 'rocket', Base: 'codepen', Colony: 'world' } as const;
+/** no image yet for Hyperstructure and Tool, not dealt in the first duel */
+export const TYPE_IMAGES: Partial<Record<CardType, string>> = { Hero: 'user', Ship: 'rocket', Base: 'codepen', Colony: 'world' };

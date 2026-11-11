@@ -12,10 +12,10 @@ import {
   remove,
   starTechs,
 } from './board';
-import { allCardDefs, cardDef, endOf, isActor, isHero, printsTech, typeOf } from './cards';
+import { cardDef, endOf, isActor, isHero, printsTech, typeOf } from './cards';
 import { check } from './errors';
 import { randomInt, shuffle } from './rng';
-import { START, STARTING_CARDS } from './scenario';
+import { START, dealtCards } from './scenario';
 import { type EndName, KLASSES, type Klass, type PlayerId, type State, type Winner } from './types';
 
 const name = (state: State, player: PlayerId) => state.players.find((p) => p.id === player)!.name;
@@ -163,12 +163,11 @@ export function hasLeader(state: State, player: PlayerId): boolean {
   });
 }
 
-/** The highest Level of each Class in the faction deck, see [[Singularity]] */
+/** The highest Level of each Class among the cards dealt to a faction, see [[Singularity]] */
 export function topLevels(): Record<Klass, number> {
-  const starting = new Set(STARTING_CARDS.map((c) => c.id));
   const top: Record<Klass, number> = { M: 0, C: 0, P: 0, S: 0 };
-  for (const def of allCardDefs()) {
-    if (starting.has(def.id)) continue;
+  for (const id of dealtCards()) {
+    const def = cardDef(id);
     for (const e of [def.strong, def.weak]) top[e.klass] = Math.max(top[e.klass], e.level);
   }
   return top;
