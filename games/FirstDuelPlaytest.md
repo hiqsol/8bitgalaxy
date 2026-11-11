@@ -6,16 +6,16 @@ scope: playtest
 # 8-bit Galaxy: first duel playtest report
 
 3 AI-vs-AI duels on the `core` rules, 2026-10-22/23. The game records,
-rewritten in the [[Notation]] of [meta/Notation.md](meta/Notation.md),
-are in [games/](games/README.md).
+rewritten in the [[Notation]] of
+[../meta/Notation.md](../meta/Notation.md), are in [./](README.md).
 
 ## 1. Results
 
 | # | A, home S00, moves first | B, home S21 | Result | [[End]] | [[Turn]]s | Rival [[Combat]]s |
 |---|---|---|---|---|---|---|
-| [1](games/game1.md) | Warlord (Opus) | Architect (Opus) | **1-0** by [[Military]] | B can not make a move: S21 [[Disputed]] | 10 | 0 |
-| [2](games/game2.md) | Brute (Haiku) | Scholar (Opus) | **0-1** by [[Singularity]] | [[Takeoff]] S4c | 16 | 0 |
-| [3](games/game3.md) | Turtle (Sonnet) | Gambler (Sonnet) | **1-0** by [[Singularity]] | S4p held in [[Hand]] | 25 | 0 |
+| [1](game1.md) | Warlord (Opus) | Architect (Opus) | **1-0** by [[Military]] | B can not make a move: S21 [[Disputed]] | 10 | 0 |
+| [2](game2.md) | Brute (Haiku) | Scholar (Opus) | **0-1** by [[Singularity]] | [[Takeoff]] S4c | 16 | 0 |
+| [3](game3.md) | Turtle (Sonnet) | Gambler (Sonnet) | **1-0** by [[Singularity]] | S4p held in [[Hand]] | 25 | 0 |
 
 **No game had a single Combat between the rivals**: all 6 [[Combat]]s
 were against [[Ancient]]s, all won by the [[Attacker]], and 1 [[Card]]
@@ -83,7 +83,7 @@ was [[Damaged]] in 51 [[Turn]]s. Two of three games ended by
 ## 2. How it was played
 
 The procedure, revised after this round, is in
-[meta/Playtest.md](meta/Playtest.md).
+[../meta/Playtest.md](../meta/Playtest.md).
 
 - **One referee subagent per game** (Opus) kept the authoritative
   state in files, shuffled with a seeded RNG, validated every play and
@@ -106,7 +106,7 @@ The procedure, revised after this round, is in
   `Guidance.md` G1–G9 taken as accepted, plus my playtest rulings
   PR-1..18 (section 5). Referees recorded every further gap as
   `RG<game>-<n>` (section 4.4). The rules of that day are summed up
-  in [games/README.md](games/README.md#rules-of-that-day).
+  in [README.md](README.md#rules-of-that-day).
 - [[Twilight]] needs all 16 [[Laboratory]] [[Card]]s researched, so a
   **cap of 40 Turns** (PR-18) ended the game as at [[Twilight]], by
   [[Culture]] points.
@@ -115,10 +115,10 @@ The procedure, revised after this round, is in
 
 The referees logged the games in 8BGN, chess algebraic notation with
 PGN tags: all three logged complete games and players wrote their
-plays in it, 0 notation-caused errors. [games/](games/README.md)
-holds them rewritten in [meta/Notation.md](meta/Notation.md), which
-also covers the 8BGN gaps: pile moves `S4p@Lab1 -> Lab3`, the setup
-line `Setup A:` and a [[Turn]]'s [[Energy]] `9. A, Energy 1`.
+plays in it, 0 notation-caused errors. [./](README.md) holds them
+rewritten in [../meta/Notation.md](../meta/Notation.md), which also
+covers the 8BGN gaps: pile moves `S4p@Lab1 -> Lab3`, the setup line
+`Setup A:` and a [[Turn]]'s [[Energy]] `9. A, Energy 1`.
 
 The decisive [[Turn]] of game 1:
 
@@ -304,6 +304,6 @@ Open:
 Answered: Q1–Q3 by F1–F3; Q4, [[Star]]s open and [[Space]]s [[Hidden]]
 ([[Space#4]]);
 Q5 by PR-4; Q6 by PR-8; Q7 by PR-17; Q8, [[Takeoff]] stays free, I46
-watches it; Q9 by PR-6; Q10, [[Notation]] is in `meta/`, the
+watches it; Q9 by PR-6; Q10, [[Notation]] is in `../meta/`, the
 [[Backlog]] cites
 RG, PR and F.

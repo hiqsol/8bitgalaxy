@@ -5,584 +5,220 @@ scope: meta
 
 # Backlog
 
-Open items of the rules, design and simplification reviews, aimed at a
-**minimal playable duel**: 2 players, no [[GalaxyDeck]], playable with
-an AI from the notes alone. Items keep their review numbers: issues
-`I<n>`, proposals `P<n>` and simplifications `S<n>`. Other games are
-compared in [[ComparisonReview]]. [[Diagnostic]] tests each
-independent point of an issue with an atomic multiple-choice question.
-[[ReviewProcess]] sets when an item opens and closes. The [[Combat]]
-studies are [[CombatVariants]], [[WarEconomy]] and [[CombatPlaytest]],
-the designer's answers go to [[Guidance]].
-
-Write the points of an item as lettered bullets `- a) ...`. Answer
-by number and letter, e.g. "P27 a, c", "S41 no".
+Open items of the rules, aimed at a **minimal playable duel**: 2
+players, no [[GalaxyDeck]], playable with an AI from the notes alone.
+Items keep their review numbers: issues `I<n>`, proposals `P<n>`,
+simplifications `S<n>`, see [[Docs]]. [[Diagnostic]] tests them,
+[[Guidance]] holds the designer's answers, [[Studies]] the evidence.
 
 ## Settled
 
-[[Rules]] that kept coming back in reviews. Reopen one only with
-evidence from a played game, not from a review.
+Reopen one only with evidence from a played game, not from a review.
 
 1. No new review items before the first [[Duel]] is played
-2. **Range**: a [[Group]]'s [[Range]] is the sum of its [[Card]]s'
-   [[Range]]s, checked only for [[Group]]s outside the
-   [[Destination]], see [[Range]], [[PerformAction]]
-3. **Hidden**: only by [[Stealth]], moves with [[Range]] 1 and
-   [[Capacity]] 1, revealed at the [[Combat]] reveal; a [[Hand]]
-   [[Card]] joins a [[Combat]] face up, all [[Hand]] commitments face
-   down (S26) were rejected, see [[Hidden]]
-4. **Control**: strictly the highest [[Control]] controls a [[Star]],
-   a tie makes it [[Disputed]], see [[ControlledBy]]; a [[Faction]]
-   takes off and acts in a [[Star]] where nobody outranks it, a
-   [[Disputed]] front as dead ground was dropped (S54), see
-   [[ActiveFor]]
-5. **Explore**: one [[Technology]], [[Recon]] and [[Survey]] are its
-   flavour names, see [[Explore]]
-6. **Build**: [[Create]], [[Upgrade]] at a [[Hub]]; [[Recover]]
-   from the [[Card]] that provides it
+2. **Range**: a [[Group]]'s [[Range]] is the sum of its [[Card]]s',
+   checked only outside the [[Destination]], see [[PerformAction]]
+3. **Hidden**: only by [[Stealth]], revealed at the [[Combat]] reveal;
+   [[Hand]] commitments face down rejected (S26), see [[Hidden]]
+4. **Control**: strictly the highest controls, a tie is [[Disputed]],
+   see [[ControlledBy]], [[ActiveFor]]; dead ground rejected (S54)
+5. **Explore**: one [[Technology]] with flavour names, see [[Explore]]
+6. **Build**: [[Create]], [[Upgrade]] at a [[Hub]]; [[Recover]] from
+   the [[Card]] that provides it
 7. **Field start**: a [[Field]] [[Card]] starts an [[Action]] only
    with [[Starter]], `duel`
-8. **Failed action**: it costs all its [[Participants]], a take-back
-   (P34) and a visible [[Explore]] [[Price]] (S20) were rejected, see
-   [[PerformAction]]
-9. **World deck**: every [[World]] [[Card]], not a picked set (P36 i),
-   see [[WorldDeck]]
+8. **Failed action** costs all its [[Participants]]; a take-back (P34)
+   and a visible [[Explore]] [[Price]] (S20) rejected
+9. **World deck**: every [[World]] [[Card]] (P36 i), see [[WorldDeck]]
 10. **Combat order**: the [[Attacker]] selects the first
-    [[Defender]]s, then rounds of any number of [[Card]]s; all
-    [[Defender]]s at once, one [[Card]] at a time (P28) and one sealed
-    round (S70) were rejected, see [[Combat]]
-11. **Defense**: a [[Military]] [[Card]] defends with its [[Level]],
-    not its [[MilitaryPower]] (P62, S69), see [[Defense]]
-12. **Academy defenders** stay in `duel`; a [[Hero]] sent to the
-    [[Factory]] (S25 b) and wounds cycling in the deck (I76 c) were
-    rejected, see [[Academy]]
-13. **Technologies without cards** go on the TBD [[End]]s of the
-    [[Card]]s 6/5 and 8/7, not in place of duplicates on low [[Card]]s
-    (P25), see [[Technology]]
-14. **`X+Y` power** stays, though no [[Card]] prints `+Y` yet (S58 a),
-    see [[PrimaryAbility]]
-15. **Hubs**: a [[Faction]] without a [[Hub]] builds nothing until it
-    captures one, no global [[Hub]] (I19 d), see [[Hub]]
-16. **Trade between factions**: [[Export]], [[Smuggle]] and [[Sell]]
-    work in a duel with the rival, not only in [[Politics]] (P57 e)
-17. **Game finish**: [[Military]] wins immediately by
-    [[PaxGalactica|Pax Galactica]]; [[Singularity]],
-    [[KardashevAscension|Kardashev Ascension]] or
-    [[GalacticDiaspora|Galactic Diaspora]] trigger [[Twilight]]. The
-    most achievements in the current state wins, then
-    [[VictoryPoints]] break a tie (I77, I78, I95 a)
-18. **Victory points**: the current [[Level]]s of non-[[Damaged]]
-    [[Social]] [[Card]]s on the [[Field]]
-    [[ControlledBy|Controlled by]] the [[Faction]]; [[Objective]]s can
-    add points, a win by [[Objective]] points before [[Twilight]] was
-    rejected (I43 b)
-19. **Space length**: a [[Space]] counts its printed [[Length]]
-    whatever its [[Type]]; a [[BlackHole|Black hole]] of [[Length]] 0
-    (P24 [[BlackHole|Black hole]] a and the [[Length]] of b) and a
-    [[Void]] of [[Length]] 2 with [[Navigation]] (P24 [[Void]] b) were
-    rejected, see [[Space]], [[Distance]]
-20. **Void**: a route can't pass it, a [[Move]] with [[Navigation]]
-    can; a [[Void]] never passable (P24 [[Void]] c) was rejected, see
-    [[Void]]
-21. **Asteroids**: only [[Extract]]; cover, narrow and rough (P24
-    [[Asteroids]] b-d) were rejected, see [[Asteroids]]
-22. **Duel Space tiles**: every [[Space]] position takes a [[Tile]]
-    when revealed, the outer sides too; empty outer sides (P35 a) were
-    rejected, see [[Duel]]
-23. **Symmetric Human and Alien**: the same [[Deck]] by [[Card]]
-    values, only color and design differ; Human or Alien
-    [[Technology|Technologies]] and a [[Faction]] [[Card]] on mirrored
-    decks ([[Ideas]]: Asymmetry) were rejected, asymmetry is for
-    later [[Faction]]s, see [[Faction]]
-24. **Piles**: the order of [[Factory]] and [[Laboratory]] piles is a
-    subgame, players move [[Card]]s between them thinking ahead; one
-    pile per [[Type]] with the lowest [[Level]] on top (P27 e) was
-    rejected, see [[Laboratory]]
-25. **Black hole**: passable both ways; one-way, only away from the
-    nearest home [[Star]] (P24 [[BlackHole|Black hole]] c), was
-    rejected, see [[BlackHole]]
-26. **Routes**: [[Tile]]s connect where they touch, at an edge or a
-    corner point, and a route may go around a [[Star]]; routes only
-    [[Star]]–[[Space]]–[[Star]] and a [[Distance]] of [[Space]]
-    [[Length]]s alone (S71) were rejected, see [[Space]], [[Distance]]
-27. **Distance**: the sum of all [[Tile]]s but the first, a [[Star]]
-    by its [[Level]], 1 unless the [[Scenario]] sets another;
-    counting the first [[Tile]] too and a [[Star]] [[Level]] by size
-    were rejected, see [[Distance]], [[Star]]
-28. **Space Length** goes up to 8 now, the [[Scenario]] sets the
-    [[Space bag]]; longer only outer [[Space]]s (P67 a) and longer
-    [[Space]]s later (P67 b) were rejected, see [[Space]]
-29. **Space Price**: [[Length]], the [[Space]]'s [[Level]], plus the
-    [[ExtraPrice]] printed on its [[Front]]; a longer Normal cheaper
-    (P24 Normal b) was rejected, see [[Price]], [[Space]]
-30. **No Space Class**: a [[Class]] for [[Space]]s and [[Star]] pads,
-    for the [[Explore]] [[Cost]] or [[Type]] families, was rejected:
-    it complicates the rules without benefit, a [[Star]] takes its
-    [[World]]'s, see [[Space]], [[Star]]
-31. **Jamming**: one modifier on any [[Enabled]] [[Card]] stops rival
-    routes through and around its [[Star]]; two modifiers, split by
-    carrier or by kind, were rejected, the name Inhibitor is free for
-    another inhibition, see [[Jamming]]
-32. **Space types**: [[HyperPass|Hyper pass]] is a wormhole pair, a
-    [[Relic]] draws an [[Event]], a [[Supernova]] gives +1 [[Power]]
-    beside it; [[HyperPass|Hyper pass]] [[Length]] 0 and highway (P24
-    HyperPass a, c), a [[Relic]] giving a [[Laboratory]] [[Card]] or 2
-    [[Energy]] (P24 [[Relic]] a, b) were rejected
-33. **Duel Space bag**: halving by [[Type]] and by [[Length]], see
-    [[Duel]]; the P35 b mix and Normal replacing `advanced` types
-    (P35 c) were rejected
-34. **Conquest**: the [[Ancient deck]] stays, as many [[Ancient]]s as
-    the [[World]]'s [[Price]] defend with their printed [[Defense]],
-    then go to the [[Ancient discard]], reshuffled into a new deck; a
-    number instead of [[Card]]s, [[World]]s without
-    [[Prerequisites]] and [[World]]s dealt face down (S60) were
-    rejected, see [[Ancient]], [[Wild]]
-35. **Destroy**: a player [[Card]], a [[Tool]] too, goes to the top
-    of a [[Factory]] pile, any other [[Card]] under its deck; a
-    [[Tool]] leaving the game (S59 b) was rejected, see [[Destroy]]
+    [[Defender]]s, then rounds of any number of [[Card]]s; P28 and
+    S70 rejected, see [[Combat]]
+11. **Defense**: a [[Military]] [[Card]] defends with its [[Level]]
+    (P62, S69), see [[Defense]]
+12. **Academy defenders** stay in `duel` (S25 b, I76 c), see
+    [[Academy]]
+13. **Technologies without cards** go on the TBD [[End]]s of the 6/5
+    and 8/7 [[Card]]s (P25), see [[Technology]]
+14. **`X+Y` power** stays, though no [[Card]] prints `+Y` (S58 a)
+15. **Hubs**: no global [[Hub]], a [[Faction]] without one captures
+    one (I19 d), see [[Hub]]
+16. **Trade between factions** works in a [[Duel]] (P57 e)
+17. **Game finish**: [[PaxGalactica|Pax Galactica]] wins at once, the
+    other achievements trigger [[Twilight]], the most achievements
+    win, [[VictoryPoints]] break a tie (I77, I78, I95 a)
+18. **Victory points**: the current [[Level]]s of controlled
+    non-[[Damaged]] [[Social]] [[Card]]s; no win by [[Objective]]
+    points (I43 b)
+19. **Space length**: the printed [[Length]] whatever the [[Type]];
+    P24 [[BlackHole|Black hole]] a, b and [[Void]] b rejected, see
+    [[Distance]]
+20. **Void**: a route can't pass it, [[Navigation]] can (P24 [[Void]]
+    c), see [[Void]]
+21. **Asteroids**: only [[Extract]] (P24 [[Asteroids]] b-d)
+22. **Duel Space tiles**: every revealed position takes a [[Tile]]
+    (P35 a), see [[Duel]]
+23. **Symmetric Human and Alien** decks, asymmetry is for later
+    [[Faction]]s, see [[Faction]]
+24. **Piles**: their order is a subgame (P27 e), see [[Laboratory]]
+25. **Black hole**: passable both ways (P24 [[BlackHole|Black hole]]
+    c), see [[BlackHole]]
+26. **Routes**: [[Tile]]s connect at an edge or a corner, a route may
+    go around a [[Star]] (S71), see [[Space]]
+27. **Distance**: all [[Tile]]s but the first, a [[Star]] by its
+    [[Level]], see [[Distance]]
+28. **Space Length** up to 8, the [[Scenario]] sets the [[Space bag]]
+    (P67 a, b)
+29. **Space Price**: [[Length]] plus the printed [[ExtraPrice]] (P24
+    Normal b), see [[Price]]
+30. **No Space Class**: a [[Star]] takes its [[World]]'s, see
+    [[Space]]
+31. **Jamming**: one modifier stops rival routes through and around
+    its [[Star]], see [[Jamming]]
+32. **Space types**: [[HyperPass|Hyper pass]] a wormhole pair, a
+    [[Relic]] draws an [[Event]], a [[Supernova]] +1 [[Power]] beside
+    it (P24 HyperPass a, c, [[Relic]] a, b)
+33. **Duel Space bag**: halved by [[Type]] and [[Length]] (P35 b, c),
+    see [[Duel]]
+34. **Conquest**: the [[Ancient deck]], as many [[Ancient]]s as the
+    [[World]]'s [[Price]] (S60), see [[Ancient]]
+35. **Destroy**: a player [[Card]], a [[Tool]] too, to the top of a
+    [[Factory]] pile, any other under its deck (S59 b), see
+    [[Destroy]]
 
 ## Next step
 
-1. [[Play]] the first [[Duel]], on paper or AI-vs-AI from the `core`
-   and `duel` notes
-2. Note every rule that stopped play or was read two ways
-3. Only those notes become review items
+1. [[Play]] the first [[Duel]], see [[Playtest]]
+2. Only the rules that stopped play or were read two ways become items
 
 ## Watch in playtest
 
-Questions a played game answers better than a review.
-
-- [ ] **I46. Deck thinning by Takeoff.** A player can take off weak
-  [[Card]]s, the [[Tool]]s first, and cycle only strong ones. Free
-  [[Slot]]s limit it. To be worked out in [[GameBalance]]. Seen in
-  game 3 of the first duel playtest: the Turtle took off every other
-  [[Card]] to keep its [[Discard]] small and drew the new [[Ship]] 4P
-  at the next [[Shuffle]].
+- [ ] **I46. Deck thinning by Takeoff.** Taking off weak [[Card]]s to
+  cycle strong ones, limited by [[Slot]]s; seen in game 3 of
+  [[FirstDuelPlaytest]].
 - [ ] **I79 b. Legacy thins the deck** like I46: keep [[Legacy]] in
   `objectives` or drop it?
 - [ ] **I75 a. Actions per Turn.** [[GameBalance]] expects about 5
-  [[Action]]s per [[Turn]], but every [[Hand]] [[Action]] takes a
-  [[Starter]] and usually [[Supporter]]s: 2-3 is likelier.
-- [ ] **I75 f. Militarization Defense.** In the [[Deck]] the [[Plus]]
-  [[Defense]] of [[Militarization]] [[Card]]s was set to raise
-  [[Defense]] 1 to the [[End]]'s [[Level]], but [[Military]] [[Card]]s
-  defend with their [[Level]], see [[Defense]]: revise the values?
-- [ ] **P66. Weak Structure ends.** [[Weak]] [[End]]s can provide
-  [[Ability|Abilities]], just weaker ([[End#7]]), but every [[Weak]]
-  [[Structure]] [[End]] in the [[Deck]] has no [[SecondaryAbility]]:
-	- a) [[Weak]] [[End]] Secondary is one less than the [[Strong]]
-	  [[End]]'s: [[Colony]] 2x +1, [[Base]] 4x +2, [[Colony]] 4x +3,
-	  [[Base]] 2x stays without.
-	- b) A [[Depleted]] [[Structure]] then still gives some [[Power]],
-	  so [[Restore]] matters less: an alternative to a) is +1 on 4x
-	  [[Weak]] [[End]]s only.
+  [[Action]]s per [[Turn]], 2-3 is likelier.
+- [ ] **I75 f. Militarization Defense.** The [[Plus]] [[Defense]] of
+  [[Militarization]] [[Card]]s was set for [[Defense]] 1, but
+  [[Military]] [[Card]]s defend with their [[Level]]: revise the
+  values?
+- [ ] **P66. Weak Structure ends** have no [[SecondaryAbility]]:
+	- a) One less than the [[Strong]] [[End]]'s: [[Colony]] 2x +1,
+	  [[Base]] 4x +2, [[Colony]] 4x +3.
+	- b) Or +1 on 4x [[Weak]] [[End]]s only, so [[Restore]] still
+	  matters.
 
 ## After the first duel
 
-### Deck
+- [ ] **I19. Deck review.** The 12 [[Card]]s 6/5 and 8/7 are TBD in
+  the [[Deck]], see B4 in [[Guidance]]; the [[Deck]] study and its V4
+  proposal are in [[Studies]]:
+	- e) Apply V4 with the snowball fix, then play it: Act II,
+	  Industrialist against Warlord.
+	- f) The snowball: the Secondary in [[Energy]] (recommended), or a
+	  [[Hyperstructure]]'s [[Power]] can't pay a [[Hyperstructure]],
+	  or [[StellarForge]] needs an own [[Academy]], or
+	  [[KardashevAscension]] counts only [[Ready]] ones.
+	- g) [[Prerequisites]] of a [[Level]] 6 [[Card]]: [[Level]] 4 of
+	  its own [[Class]] only?
+	- h) [[Envoy]]: its whole moving [[Group]], or it can't be
+	  attacked while it gives no [[Control]], or [[GalacticDiaspora]]
+	  needs 6 of 7 [[Star]]s?
+	- i) [[Tool]]s: 4, 6 or 8?
+	- j) Siege: do [[Depleted]] [[Structure]]s defend 0?
+	- k) [[PaxGalactica|Pax]]: cheap 2/1 [[Hero]]es make "no leader"
+	  unreachable; fall by the home [[Star]], or raised [[Hero]]es
+	  cost more?
+- [ ] **I47. Images.** Update `card.png` once the [[Card]] data
+  settles.
+- [ ] **P57. Economy roles**, `advanced`: [[Goods]] pay builds at a
+  [[Hub]] where they are, [[Energy]] [[Boost]]s, [[Trade]] turns
+  [[Power]] into [[Energy]].
+- [ ] **S39. One conversion outcome**: [[Extract]] and [[Trade]]
+  define conversion once in [[Goods]].
+- [ ] **I43. Objectives details**: a) the list, c) points of a
+  [[Public objective]].
+- [ ] **I44. Politics details**: a) [[StrategyCard]] roles,
+  b) [[PromissoryNote]] gains, c) whether it returns.
+- [ ] **I45. Derelict details**: a) the [[Star]] it enters, b) the
+  recruit [[Cost]].
+- [ ] **I89. Galaxy flow**, see P68: a) when and by whom the
+  [[GalaxyMove]] is made, b) when [[FutureEvents]] are evaluated,
+  c) [[CurrentEvents]] and [[GalaxyScrap]] unused.
+- [ ] **P68. Galaxy events like Through the Ages**: the
+  [[GalaxyMove]] opens each [[Turn]]; the player prepares one
+  [[Event]] face down on [[FutureEvents]] and resolves the top one of
+  [[CurrentEvents]]; an empty CurrentEvents takes the shuffled
+  FutureEvents; resolved ones go to [[GalaxyScrap]], a lasting effect
+  stays as a [[Tile]].
+- [ ] **P58. Traits instead of new Types**: `Unique`, `Consumable`,
+  `Immovable`; new [[State]]s come from position, not markers.
+- [ ] **P59. Stubs**: c) [[PlusHero]] goes, [[Create]] covers it.
+- [ ] **I94. Underdescribed**: c) [[PlusPile]]'s [[Cost]], limit and
+  new pile.
 
-- [ ] **I19. Deck review.**
-	- e) The 12 [[Card]]s 6/5 and 8/7 are TBD in the [[Deck]]:
-	  [[Technology|Technologies]] and [[Hyperstructure]] Primary, to
-	  design before the next playtest. Their TBD [[End]]s carry
-	  [[Express]], [[Starter]], [[ForceDiscard]], [[Settle]], the
-	  `+Draw` [[Plus]] and the [[Technology|Technologies]] from
-	  [[Tactics]] to [[Standby]], see [[Technology]]: a value per
-	  [[Price]] stays about flat, a value per [[Card]] grows with
-	  [[Level]]. Four variants and eight played games are in
-	  [[DeckVariants]].
-- [ ] **I47. Images.** Update `card.png` after the rules and [[Card]]
-  data are settled: annotate both [[End]]s, ExtraPrice,
-  [[Prerequisites]] and the [[Technology]] name.
+## Simplifications
 
-### Economy
+From the 2026-10-25 review of `core`, parked until the first duel; the
+full text is in git. RG, PR and F numbers are of
+[[FirstDuelPlaytest]].
 
-All `advanced`.
-
-- [ ] **P57. Economy roles.** One job per stockable [[Resource]]
-  (Eclipse, TtA: materials build, money is the wildcard):
-	- a) [[Goods]] pay [[Create]], [[Upgrade]] and [[Recover]] costs
-	  at a [[Hub]] in the [[Star]] where they are: [[Extract]] at
-	  [[Asteroids]], carried to the [[Shipyard]].
-	- b) [[Energy]] [[Boost]]s any [[Action]] (already in `core`).
-	- c) [[Trade]] turns [[Power]] into [[Energy]] between two own
-	  [[Colony|Colonies]]: a trade route.
-- [ ] **S39. One conversion outcome.** [[Extract]] and [[Trade]] both
-  convert [[Power]] to [[Goods]] one to one:
-	- a) Define **conversion** once in [[Goods]]: the [[Action]]'s
-	  [[Power]] becomes [[Goods]] one to one in the [[Source]]
-	  [[Star]].
-	- b) The pages keep only what they convert: [[Asteroids]], a trade
-	  route, unless P57 c turns [[Trade]] into [[Energy]].
-
-### Victory and extensions
-
-- [ ] **I43. Objectives details.** [[Objective]] (`objectives`):
-	- a) The list of [[Objective]]s.
-	- c) Whether a [[Public objective]] gives more than 1 point.
-- [ ] **I44. Politics details.**
-	- a) [[StrategyCard]]: the list of roles.
-	- b) [[PromissoryNote]]: what each side gets.
-	- c) [[PromissoryNote]]: whether the [[Card]] returns to its
-	  owner.
-- [ ] **I45. Derelict details.** [[Derelict]] (`events`):
-	- a) Which [[Star]] a [[GalaxyMove]] puts a [[Derelict]] into.
-	- b) The recruit [[Cost]].
-- [ ] **I89. Galaxy flow.** [[Galaxy]] (`events`): → P68
-	- a) [[Turn]] has no step for the [[GalaxyMove]]: when in the
-	  [[Turn]], by whom.
-	- b) When a [[Card]] in [[FutureEvents]] is evaluated.
-	- c) [[CurrentEvents]] is never used and holds [[Hidden]]
-	  [[Card]]s, though an evaluated [[Event]] is revealed. Nothing
-	  puts [[Card]]s to [[GalaxyScrap]].
-- [ ] **P68. Galaxy events like Through the Ages.** In TtA players
-  seed [[FutureEvents|Future events]] and resolve current ones, one
-  in, one out. The [[Galaxy]] piles map to its decks: [[FutureEvents]]
-  the prepared [[Event]]s, [[CurrentEvents]] the face-down deck to
-  resolve, [[GalaxyScrap]] the past [[Event]]s:
-	- a) Setup: the [[Scenario]] puts some [[Event]]s face down into
-	  CurrentEvents, e.g. players + 2.
-	- b) The [[GalaxyMove]] opens each [[Turn]], before **Play**, and
-	  the player whose [[Turn]] it is makes it: the [[Hand]] is played
-	  knowing the [[Event]].
-	- c) Prepare: the player takes the top [[Card]] of the
-	  [[GalaxyDeck]]; an [[Event]] goes face down on FutureEvents,
-	  only that player knows it; other kinds are played as today.
-	- d) Reveal: after an [[Event]] is prepared, the top [[Card]] of
-	  CurrentEvents is revealed and resolved by its text, the player
-	  decides what the text leaves open ([[Event#6]]).
-	- e) Refill: when CurrentEvents is empty at a reveal, FutureEvents
-	  is shuffled and becomes CurrentEvents.
-	- f) An [[Event]] resolves at once and goes face up to
-	  GalaxyScrap. A lasting effect stays on the [[Field]] as a
-	  [[Tile]], e.g. [[Supernova]], [[WarpStorm]], never as a [[Card]]
-	  in play.
-	- g) Choice, like the TtA hand: the player takes the top two
-	  [[Galaxy]] [[Card]]s, plays one and puts the other under the
-	  GalaxyDeck.
-
-### Additions
-
-- [ ] **P58. Traits instead of new Types.** Variety via [[Trait]]s:
-	- a) `Unique`: one per [[Faction]] on the [[Field]], for flagships
-	  and top [[Hero]]es (TI).
-	- b) `Consumable`: [[Destroy]] after use: probes, mines,
-	  missiles, [[Galaxy]] [[Tool]]s.
-	- c) `Immovable`: can't move or be [[Cargo]], replaces "cannot be
-	  [[Cargo]]" of [[World]] and [[Hyperstructure]].
-	- d) [[Card]] orientations are all taken ([[Strong]] and [[Weak]]
-	  [[Front]], [[Damaged]] and [[Hidden]] [[Back]]), so new
-	  [[State]]s should come from position, like [[ActiveFor]] and
-	  [[Pinning]], not markers.
-
-### Stubs and underdescribed
-
-- [ ] **P59. Stubs** (`status: stub`):
-	- c) [[PlusHero]]: remove, [[Create]] of [[Hero]]es covers it.
-- [ ] **I94. Underdescribed technologies.** Their pages don't say
-  enough to play them, stubs are in P59:
-	- c) [[PlusPile]]: the [[Cost]], the limit and how an extra pile
-	  works.
-
-## Core streamlining
-
-Proposals of the 2026-10-25 review of `core`: each removes an
-exception, a concept or a page. Plain duplicates are already removed.
-RG, PR and F numbers refer to the AI duels in `FirstDuelPlaytest.md`.
-
-- [ ] **S53. Deplete by Role.** [[Deplete]] spares direct
-  [[Participants]] that moved or fought, [[Card]] by [[Card]]: a
-  fighting [[Structure]] never [[Deplete]]s, a free reusable +2
-  (RG2-7), while [[Unit]]s waiting at a [[Move]] [[Destination]],
-  which pull the [[Group]] in, go to [[Discard]]:
-	- a) A [[Structure]] participant always becomes [[Depleted]].
-	- b) A [[Unit]] [[Direct participant]] of a [[Move]] or a
-	  [[Combat]] holds its [[Slot]], every other [[Unit]] goes to
-	  [[Discard]].
-	- c) [[Move]] 6 and [[Combat#9.4]] state b), [[Deplete]] keeps
-	  only the two outcomes. Recommended: yes.
-- [ ] **S55. Control by Unit.** [[Control]] ranks [[Actor]] over
-  [[Structure]], but a [[Card]] [[Back]] shows only [[Unit]] or
-  [[Structure]]:
-	- a) [[Control]] levels: [[Structure]], **Unit**.
-	- c) [[Control]] merges into ControlledBy, one page less.
-	- d) Optional: [[Unit]] replaces [[Actor]] in core, [[Actor]]
-	  goes, [[Tool]] says it starts no [[Action]].
-- [ ] **S56. Class handles only Structures as cargo.** [[Move#5.2]]
-  needs a [[Ship]] whose [[Class]] handles each [[Cargo]] [[Card]],
-  then [[Hero]] 8, [[Tool]] 8 and [[Goods]] 3 let any [[Ship]] carry
-  theirs:
-	- a) Only a [[Structure]] needs a [[Ship]] whose [[Class]] handles
-	  it. [[Hero#8]], [[Tool#8]] and "by any [[Ship]]" go.
-	- b) Or no [[Class]] for [[Cargo]] and [[Manage]]: [[Manage]] is
-	  paid in the [[Starter]]'s [[Power]] on any [[Card]], [[Class]] 5
-	  and [[Move#Notes#1]] go. Lost: colony ships, [[Science]] as the
-	  universal manager.
-	- c) Recommended: a.
-- [ ] **S57. One weight, one price.** [[Size]] is [[Level]] +
-  [[ExtraPrice]] except a [[Hero]]'s, and ExtraPrice has an "at least
-  1" clamp that no [[Card]] triggers:
-	- a) [[Size]] = current [[Level]] for every [[Card]]: [[Hero]] 6
-	  and the [[Size]] lines go. [[Base]]s and [[Colony|Colonies]]
-	  weigh 1 less.
-	- b) Or each [[End]] prints its [[Price]] instead of ExtraPrice:
-	  [[Cargo]] weighs the [[Price]] of its [[End]] in use, ExtraPrice
-	  and [[Size]] go. [[Hero]]es weigh 1 more unless [[Hero]] keeps
-	  "weighs its [[Level]]".
-	- c) Either way, drop negative ExtraPrice and its clamp: no
-	  [[Card]] has one.
-- [ ] **S58. Rules no card needs in core.**
-	- c) [[Create#4]], a [[Social]] [[Card]] only with [[Weak]]
-	  [[Level]] 1, depends on the [[Deck]]'s [[Level]]s and conflicts
-	  with [[Hyperstructure#9.1]]: move it to [[Social]], or make it
-	  "[[Create]] makes only [[Card]]s with a [[Level]] 1 [[End]]" for
-	  both [[Origin]]s, so higher [[Card]]s come by [[Upgrade]], which
-	  slows the race of F2.
-- [ ] **S61. Attack is a Move that must win.** [[Intercept]] is a
-  [[Combat]] that is "not an [[Attack]]": no [[Starter]], no
-  [[Military]] [[Actor]], the newcomers defend; [[Combat#9.3]] is a
-  second move rule:
-	- a) [[Attack]] is a [[Military]] [[Move]] that must win a
-	  [[Combat]] in its [[Destination]], the [[Source]] [[Star]] too;
-	  a [[Move]] to another [[Star]] with rival [[Enabled]] [[Card]]s
-	  is an [[Attack]].
-	- b) If the [[Attacker]] wins, the surviving moving [[Card]]s
-	  arrive with their [[Cargo]], the others stay.
-	- c) [[Intercept]], [[Combat#9.3]] and [[Pinning]]'s "it can
-	  finish there" go; a [[Move]] of only [[Hidden]] [[Card]]s is no
-	  [[Attack]].
-	- d) Lost: entering a rival [[Star]] in peace, the free answer to
-	  a rival [[Create]]. [[Intercept]] was chosen for F1: test, don't
-	  default.
-- [ ] **S62. Move within a Star for every card.** [[Move]] needs
-  [[Range]] above 0, though [[Distance]] within a [[Star]] is 0, and
-  [[Manage]] [[Shift]] patches it for [[Structure]]s:
-	- a) [[Move]]: any [[Card]] to another [[Slot]] of its row in the
-	  same [[Star]], [[Card]]s with [[Range]] above 0 to another
-	  [[Star]].
-	- b) [[Manage]] [[Shift]] between [[Slot]]s goes: a rearrangement
-	  costs a [[Starter]] instead of 1 [[Power]] per [[Card]] (RG3-3).
-- [ ] **S63. One way to move a Laboratory card.** [[Research#2.2]]
-  moves [[Card]]s between [[Laboratory]] piles like a [[Science]]
-  [[Manage]] [[Shift]], and [[Laboratory#4]] makes both cost 1 per
-  [[Card]]:
-	- a) [[Research#2.2]] and [[Laboratory#4]] go. The only change: a
-	  non-[[Science]] [[Starter]] moves only the [[Card]]s its
-	  [[Class]] handles.
-	- b) Also no [[Shift]] between piles: piles keep their order, the
-	  setup order steers the tech tree, F2 found the lever too strong.
-- [ ] **S64. Energy as open wild power.** [[Energy]] [[Token]]s are
-  "in [[Hand]]", but don't count to its size, stay at [[Draw]], lie
-  open and have their own cap; [[Boost]] caps each [[Card]] by
-  [[Capacity]]; [[Resource]] exists to say "stockable":
-	- a) [[Energy]] lies open in the player's stock beside [[Home]]:
-	  [[Energy]] 5-6 and "in [[Hand]]" go.
-	- b) 1 [[Energy]] pays 1 [[Power]] of any [[Class]] in an
-	  [[Action]] the player starts or joins, no [[Card]] cap and no
-	  [[Hand]] cap: [[Boost]] and [[Resource]] go. The cap was never
-	  reached and [[Energy]] was marginal.
-	- c) Lost: channelling [[Energy]] through [[Card]]s, the hoarding
-	  limit.
-- [ ] **S65. Range and Capacity aren't the one Ability.** [[Ability]]
-  3 lists [[Range]] and [[Capacity]], then [[Support#1.2]] and PR-11
-  exempt reaching and boosting from a [[Supporter]]'s one [[Ability]]:
-	- a) A [[Card]]'s [[Range]] and [[Capacity]] count for its own
-	  [[Group]], they are not the one [[Ability]]. [[Support#1.2]]'s
-	  clause goes.
-	- b) Or a [[Hand]] [[Card]] gives no [[Range]] or [[Capacity]]:
-	  [[Support#2.3]]-2.4 and the [[Range]] from [[Support]] in
-	  [[Range]] 4 go. Lost: reaching with [[Hand]] [[Card]]s.
-	- c) An alternative to S42 a.
-- [ ] **S66. Destination cards add Range to any action.** Only in a
-  [[Move]] (4.1) do the [[Direct participant]]s in the [[Destination]]
-  add their [[Range]] to the moving [[Group]]:
-	- a) [[PerformAction#4.3]]: the [[Card]]s in the [[Destination]]
-	  add their [[Range]] to the [[Source]] [[Group]], [[Move#4.1]]
-	  keeps only [[Capacity]].
-	- b) A garrison helps every [[Action]] reach it: an [[Attack]]
-	  from two sides, [[Explore]], [[Create]].
-- [ ] **S67. Immediate is a technology, not an action.**
-  [[ImmediateAction]] is an [[Action]] without a [[Starter]], a
-  [[Direction]], a [[Cost]] or other [[Participants]], though every
-  [[Action]] has a [[Starter]]:
-	- a) An **Immediate** [[Technology]] works when its [[Card]] is
-	  shown, then the [[Card]] [[Deplete]]s, at own [[Turn]] or in a
-	  [[Combat]].
-	- b) [[ImmediateAction#2]]-4 go, six [[Technology]] rows change
-	  Kind. A lone Immediate is no move for [[Turn#3]].
-- [ ] **S68. Hidden in one rule, in `duel`.** Only [[Stealth]] makes a
-  [[Card]] [[Hidden]] (Settled 3), yet core carries its rules:
-	- a) A [[Hidden]] [[Card]] counts as a [[Level]] 1 [[Card]] of its
-	  [[Role]], a [[Unit]] as a [[Ship]]: [[Range]] 1, [[Capacity]] 1,
-	  [[Size]] 1. [[Hidden#4.1]]-4.4 become one rule.
-	- b) [[Hidden]] and the [[Hidden]] clauses of [[Combat]] move to
-	  `duel`, core keeps the back ends of [[End]] and [[Side]].
-- [ ] **S72. Two Turn phases.** **Play**, then **End**: check the
-  [[Goal]], [[Discard]], [[Draw]], [[Restore]] 3. About ten "X phase"
-  references become "end of own [[Turn]]".
-- [ ] **S73. Fewer pages and terms**, no rule changes:
-	- a) One table in [[Card]]: [[Type]], [[Role]], [[Origin]],
-	  [[Range]], [[Cargo]], and "[[Size]] and [[Capacity]] are the
-	  current [[Level]] unless the [[Card]]'s page says otherwise".
-	  The [[Property]] lines of the [[Card]] pages go, checkdocs
-	  `check_templates` changes.
-	- b) One table in [[State]]: [[Side]] and [[End]] of each
-	  [[State]], the "is: [[Side]] up, [[End]] up" lists go.
-	- c) The four [[Power]] pages and [[Resource]] fold into [[Class]]
-	  and [[Power]].
-	- d) [[IPS]] goes, rules say [[Star]].
-	- e) [[Enabled]] goes, rules say "face up".
-	- f) [[Direction]] and [[Action]] fold into [[PerformAction]].
-	- g) [[Agenda]] moves to an extension scope, [[World]] and
-	  [[Ancient]] have no [[Faction]], [[Faction#4]] goes: core stops
-	  naming the [[Galaxy]].
-	- h) The [[Card]]s column of [[Technology]] goes, [[Deck]] holds
-	  the assignments, checkdocs drops the cross-check.
-- [ ] **S74. Bigger cuts, speculative.**
-	- a) [[Restore]] every [[Structure]] at **Restore**: [[Plus]]
-	  [[Restore]] and the throttle of [[GameBalance#5]] go.
-	- b) A [[Card]] that loses a [[Combat]] is Destroyed at once:
-	  [[Damaged]], [[Recover]] and the Chess check go.
-	- c) [[Pinning]] and [[Intercept]] as one contact rule: a
-	  [[Group]] entering a [[Star]] with rival [[Military]] [[Actor]]s
-	  stops, the rival may fight it at once.
-	- d) No [[Cargo]]: [[Range]] 0 [[Card]]s move inside a [[Group]];
-	  [[Size]], the [[Cargo]] half of [[Capacity]] and the [[Class]]
-	  table go. Lost: logistics.
-
-## Editorial
-
-One batch after the playtest, only for pages that confused play.
-
-- [ ] **I96. Archive is a working name.** The [[Research]] [[Hub]] of
-  the [[Homeworld]] is called [[Archive]] for now: rename it later.
-- [ ] **S23. Separate usable cards from scoring cards.** [[ActiveFor]]
-  includes [[History]], whose [[Card]]s are out of play, then says
-  active [[Card]]s are [[Action]] [[Participants]]:
-	- a) [[Participants]] are own usable [[Card]]s in [[Hand]] or on
-	  the [[Field]], stated in [[PerformAction]] without ActiveFor.
-	- b) Replace ActiveFor with **counts for goals**: a
-	  non-[[Damaged]] [[Card]] on the [[Field]], in [[Hand]] or in
-	  [[History]] and [[ControlledBy]] the [[Faction]].
-	- c) This makes "out of play but active" unnecessary and prevents
-	  [[History]] from appearing to provide [[Action]]
-	  [[Ability|Abilities]].
-- [ ] **S24. One timing rule for passive abilities.** [[Plus]] says
-  bonuses sum from [[Participants]], but also lists [[Hand]] size,
-  end-of-[[Turn]] [[Restore]], [[VictoryPoints|Victory points]] and
-  votes, none of which has [[Participants]]:
-	- a) An [[Action]] [[Ability]] applies only when its [[Card]]
-	  participates.
-	- b) A passive [[Ability]] applies while its revealed [[Card]] is
-	  [[Enabled]] and ControlledBy the player on the [[Field]].
-	- c) A timed [[Ability]] resolves at its named [[Turn]] step.
-	  Remove passive and timed effects from the rule that participant
-	  [[Plus]]es sum.
-- [ ] **S25. Home cards have no Field state.** A [[Card]] [[Back]]
-  means [[Hidden]] or [[Damaged]], but [[Reserve]] is face down as a
-  pile:
-	- a) In [[Home]], the pile determines visibility and [[Card]]s are
-	  usable unless they are in [[Factory]] or [[Laboratory]].
-	  [[Side]] and [[End]] [[State]]s apply only to [[Card]]s
-	  individually on the [[Field]].
-- [ ] **S31. One verb for each build action.** [[Raise]]/[[Produce]]
-  and [[Heal]]/[[Fix]] are four flavour names of [[Create]] and
-  [[Recover]], listed on their pages; [[Upgrade]]'s
-  [[Grow]]/[[Enhance]] carry rules:
-	- a) Use [[Create]] and [[Recover]] in rules and [[Card]]s for
-	  both [[Origin]]s.
-	- b) Keep the flavour words in art or notes only, if wanted.
-	- c) This removes four terms without removing a rule or decision.
-- [ ] **S32. One meaning of starter.** **Starter** is both the role a
-  [[Card]] has in every [[Action]] and a [[Starter|Technology]]:
-	- a) Keep **starter** only for the [[Card]] selected to begin an
-	  [[Action]].
-	- b) Rename the [[Technology]] to **Field Start** or
-	  **Initiative**.
-- [ ] **S33. Drop worker placement from the genre.** [[index]] calls
-  the game worker placement, while [[ComparisonReview]] correctly says
-  [[Slot]]s limit presence and are not [[Action]] spaces:
-	- a) Use ComparisonReview's **card-driven spatial 4X with deck and
-	  engine building** everywhere.
-	- b) No rule changes; the shorter description avoids promising a
-	  mechanic the game does not have.
-- [ ] **S35. One build direction.** [[Create#6]] defines two
-  [[Direction]]s, [[Upgrade#4]] one, [[Settle]] adds a third:
-	- a) The [[Source]] is the [[Hub]]'s [[Star]], the [[Destination]]
-	  is the [[Star]] of the [[Card]]: where a [[Structure]] is or
-	  goes, as [[Upgrade#4]] has it; a [[Card]] in [[Home]] has the
-	  [[Hub]]'s [[Star]] as both ends, [[Distance]] 0.
-	- b) [[Settle]]: the [[Ship]]'s [[Star]] is both ends, no [[Hub]].
-	- c) [[State]] it once, in [[Hub]]; the three [[Action]] pages
-	  keep only [[Requirements]], [[Cost]] and outcome.
-	- d) What it changes: an [[Actor]] is built only with [[Card]]s at
-	  the [[Hub]] as [[Direct participant]]s, not at another
-	  [[Source]] [[Star]].
-- [ ] **S41. End of a face-down card.** [[End#6]] sets the [[End]] in
-  use: in a [[Slot]] the visible [[End]], elsewhere the selected
-  [[End]]. A face-down [[Card]] shows no [[Level]], though [[Recover]]
-  costs the current [[Level]] of a [[Damaged]] [[Card]]:
-	- a) The [[End]] in use of a face-down [[Card]] is its [[Weak]]
-	  [[End]].
-- [ ] **S42. One list of what a card gives.** [[Ability#3]] lists
-  Primary, Secondary, [[Range]], [[Capacity]] and [[Level]] with
-  [[Class]]; [[Support#2]] lets a [[Supporter]] pick one of four,
-  without [[Level]]; [[Combat]] adds [[Defense]]; [[Plus#3.5]] limits
-  a [[Range]] [[Plus]] to [[Move]], though [[Range]] is checked in
-  every [[Action]]:
-	- a) One list in [[Ability]]: Primary, Secondary, [[Range]],
-	  [[Capacity]], [[Level]] with [[Class]], [[Defense]] in
-	  [[Combat]]. A [[Direct participant]] gives all, a [[Supporter]]
-	  one.
-	- b) [[Support]] 2 and [[Plus#3.5]]-3.6 link it; a [[Range]]
-	  [[Plus]] adds to any [[Group]].
-	- c) It answers whether a [[Supporter]]'s [[Level]] is its one
-	  [[Ability]] for [[Prerequisites]]. Recommended: yes.
-- [ ] **S47. One Home pile table.** Ten pile pages state visibility
-  and entry in different words, some not at all:
-	- a) [[Factory]], [[Laboratory]] and [[History]] don't say who
-	  sees them. The [[Leader]] check of
-	  [[PaxGalactica|Pax Galactica]] counts the [[Hero]]es in
-	  [[Factory]] and [[Laboratory]]: recommended open, like
-	  [[Discard]].
-	- b) [[Destroy]], [[Recall]], [[Express]] and [[MinusDeplete]] put
-	  a [[Card]] on top, [[Upgrade#7.2]] and [[Research#2.1]] don't
-	  say where in [[Factory]].
-	- c) [[Galaxy]] piles and secret [[Objective]]s use the [[Field]]
-	  state [[Hidden]] for face down.
-	- d) One table in [[Home]]: pile, owner, face up or down, who sees
-	  it.
-	- e) One rule: a [[Card]] put into a pile goes on top; in a row of
-	  piles the player picks the pile.
-	- f) Piles are face up or face down, not [[Hidden]], as S25 a.
-	  Pile pages keep only their own behavior, e.g.
-	  [[DeckBuilding|Shuffle]] for [[Reserve]].
-- [ ] **S52. Traits in core.** [[Trait]] and [[NoSupport]] are `core`,
-  but no [[Card]] has a [[Trait]]:
-	- a) [[Trait]] and NoSupport go to `advanced`, or wait for P58.
-
-## Ideas
-
-Not for answering now, kept for later.
-
-- **Policies** (TtA governments, Civilization policies): one Policy
-  [[Card]] in [[Home]] giving a [[Plus]]: [[Hand]] size, [[Range]],
-  [[Energy]]. Changed by an [[Action]]. `advanced`.
-- **Energy as an extra action** (Voidfall trade tokens): spend 2
-  [[Energy]] to let a [[Field]] [[Card]] act without a [[Starter]]
-  from [[Hand]] ([[Starter]]). Alternative to [[Boost]].
-- **Center prize** (TI Mecatol Rex): [[Star]] 11 of the first [[Duel]]
-  has a fixed [[World]] with the best [[Ability]], e.g.
-  [[DeckBuilding|Draw]] 1.
-- **Derelict row** (TtA [[Card]] row): [[Derelict]]s get cheaper the
-  longer they wait.
-- **Upkeep at Shuffle** (Voidfall, Eclipse), only if the leader
-  snowballs in playtests: 1 [[Energy]] per [[Star]] beyond 3.
-- **One Space per side**: halves first-[[Duel]] [[Tile]]s (24 → 12)
-  and [[Explore]] [[Action]]s, at the price of a single route between
-  two [[Star]]s.
-- **Drones** (TI fighters): [[Range]] 0 [[Military]] [[Unit]]s carried
-  by [[Ship]]s, if [[Capacity]] needs more use.
-- **Asymmetry** for later [[Faction]]s: one [[Faction]] [[Card]] with
-  a single rule change on top of a mirrored deck (TI [[Faction]]
-  abilities), lighter than a deck of its own.
+- [ ] **S53. Deplete by Role**: a [[Structure]] participant always
+  [[Deplete]]s, a [[Unit]] [[Direct participant]] holds its [[Slot]],
+  other [[Unit]]s go to [[Discard]]. Recommended.
+- [ ] **S55. Control by Unit**: [[Control]] levels [[Structure]],
+  [[Unit]]; [[Control]] merges into [[ControlledBy]].
+- [ ] **S56. Class handles only Structures as cargo**, any [[Ship]]
+  carries the rest. Recommended.
+- [ ] **S57. One weight, one price**: [[Size]] is the current
+  [[Level]], or each [[End]] prints its [[Price]]; negative
+  [[ExtraPrice]] goes.
+- [ ] **S58 c.** [[Create]] makes only [[Card]]s with a [[Level]] 1
+  [[End]], higher ones come by [[Upgrade]].
+- [ ] **S61. Attack is a Move that must win**: [[Intercept]] and
+  [[Pinning]]'s finish go.
+- [ ] **S62. Move within a Star for every card**, [[Manage]]
+  [[Shift]] between [[Slot]]s goes.
+- [ ] **S63. One way to move a Laboratory card**: [[Research]]'s pile
+  move goes, or no [[Shift]] between piles at all.
+- [ ] **S64. Energy as open wild power**: [[Energy]] lies open, pays
+  any [[Power]], [[Boost]] and [[Resource]] go.
+- [ ] **S65. Range and Capacity aren't the one Ability** of a
+  [[Supporter]], or a [[Hand]] [[Card]] gives neither.
+- [ ] **S66. Destination cards add Range** to any [[Action]], not only
+  a [[Move]].
+- [ ] **S67. Immediate is a technology**, not an [[Action]].
+- [ ] **S68. Hidden in one rule, in `duel`**: a [[Hidden]] [[Card]]
+  counts as a [[Level]] 1 [[Card]] of its [[Role]].
+- [ ] **S72. Two Turn phases**: **Play**, then **End**.
+- [ ] **S73. Fewer pages and terms**: one table for [[Card]]
+  properties, one for [[State]]s; [[IPS]], [[Enabled]], [[Direction]],
+  [[Action]] and the [[Power]] pages fold in.
+- [ ] **S74. Bigger cuts**, speculative: [[Restore]] every
+  [[Structure]]; a lost [[Card]] is Destroyed at once; one contact
+  rule for [[Pinning]] and [[Intercept]]; no [[Cargo]].
+- [ ] **I96. Archive is a working name** for the [[Research]] [[Hub]]
+  of the [[Homeworld]].
+- [ ] **S23. Separate usable cards from scoring cards**: [[ActiveFor]]
+  becomes "counts for goals".
+- [ ] **S24. One timing rule for passive abilities**: an [[Action]]
+  [[Ability]] when its [[Card]] participates, a passive one while it
+  is [[Enabled]], a timed one at its step.
+- [ ] **S25. Home cards have no Field state**: in [[Home]] the pile
+  sets visibility.
+- [ ] **S31. One verb for each build action**: [[Create]] and
+  [[Recover]], flavour names in art only.
+- [ ] **S32. One meaning of starter**: rename the [[Starter]]
+  [[Technology]].
+- [ ] **S33. Drop worker placement from the genre** in [[index]], as
+  [[ComparisonReview]] says.
+- [ ] **S35. One build direction**: from the [[Hub]]'s [[Star]] to the
+  [[Card]]'s, stated once in [[Hub]].
+- [ ] **S41. End of a face-down card** is its [[Weak]] [[End]].
+- [ ] **S42. One list of what a card gives** in [[Ability]].
+  Recommended.
+- [ ] **S47. One Home pile table** in [[Home]]: owner, face up or
+  down, who sees it; a [[Card]] put into a pile goes on top.
+- [ ] **S52. Traits in core**: [[Trait]] and [[NoSupport]] to
+  `advanced`, or wait for P58.

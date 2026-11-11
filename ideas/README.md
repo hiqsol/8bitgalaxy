@@ -11,4 +11,6 @@ scope: idea
    rules nor the [[Backlog]] hold
 2. [[Nebula]] - ideas for an obstacle [[Space]] type
 3. [[OuterSpace]] - a pile inside every [[Star]] outside the [[IPS]]
-4. [[TechnologyIdeas]] - proposals for new [[Technology|Technologies]]
+4. [[ReviewIdeas]] - ideas from the rule reviews, borrowed from
+   other games
+5. [[TechnologyIdeas]] - proposals for new [[Technology|Technologies]]

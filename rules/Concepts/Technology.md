@@ -33,7 +33,9 @@ scope: core
    Player - duel -[[Hidden]]: reveals a [[Hidden]] [[Space]] or a
    [[Hidden]] [[Card]], the [[Cost]] shows only after the start
 2. [[Retreat]]: 2m - [[Action]] - [[Ship]] - Player - duel Immediate:
-   escapes a [[Combat]], own [[Participants]] only [[Deplete]]
+   escapes a [[Combat]], loses it as by a Rout, the winner takes no
+   damage, own [[Participants]] only [[Deplete]], a [[Defender]]'s
+   [[Unit]]s leave to [[Discard]]
 3. [[Stealth]]: 4m - [[Action]] - [[Hero]], [[Base]] - Player - duel
    +[[Hidden]], Immediate: makes another own [[Card]] on the [[Field]]
    [[Hidden]]

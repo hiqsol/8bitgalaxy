@@ -5,8 +5,7 @@ scope: meta
 
 # Docs
 
-How the wiki is kept. [[ReviewProcess]] sets when an item opens and
-closes.
+How the wiki is kept.
 
 1. Every page has frontmatter:
 	1. `status` - how far the page is, see Status below
@@ -20,14 +19,16 @@ closes.
 	3. It cites the rule it is about by item link, `[[Upgrade#7.2]]`
 	   or `[[Upgrade#Notes#2]]`
 3. The open items about a page set its `status`
+4. A study is a `draft` page in `meta/` until its decisions are
+   applied or rejected, then it shrinks to an entry in [[Studies]]
 
 ## Scopes
 
 A page in `rules/` takes the module it belongs to as its `scope`, see
 [[Rules]]. The other folders take a docs scope:
 
-1. `meta` - [[Backlog]], review and documentation support, e.g.
-   [[Pseudographics]], in `meta/` and the repo root
+1. `meta` - [[Backlog]], [[Studies]], review and documentation
+   support, in `meta/` and the repo root
 2. `playtest` - [[Playtest]] procedure, [[Notation]] and played games,
    in `games/`, `meta/` and the repo root
 3. `idea` - out of the rules, kept for later in `ideas/`

@@ -6,8 +6,7 @@ scope: playtest
 # Playtest
 
 How an AI-vs-AI [[Duel]] is played, logged and reported. A round of
-games is a step of [[ReviewProcess]]: it plays a frozen version and
-counts the rulings it needs.
+games plays a frozen version and counts the rulings it needs.
 
 1. **Version**: the games play a frozen version, e.g. git tag
    `duel-v1`:
@@ -40,8 +39,7 @@ counts the rulings it needs.
 6. **Cap**: about 40 [[Turn]]s, a capped game ends as at [[Twilight]]
 7. **Records**: one file per game in `games/`, games are numbered on
    across rounds, e.g. `game4.md` holds RG4-1
-8. **Report**: one per round in the repo root, like
-   `FirstDuelPlaytest.md`:
+8. **Report**: one per round in `games/`, like [[FirstDuelPlaytest]]:
 	1. Results: players, result, how it ended, [[Turn]]s, rival
 	   [[Combat]]s
 	2. The games in brief and how the personas played
@@ -49,7 +47,8 @@ counts the rulings it needs.
 	4. Every ruling and where the rules settle it now
 	5. The answers to the Watch in playtest questions of [[Backlog]]
 	   and [[Diagnostic]]
-9. The rulings become issues in [[Backlog]], see [[ReviewProcess]]
+9. The rulings become issues in [[Backlog]], answered in [[Guidance]]
+   and applied, then [[Diagnostic]] runs with 2-3 cold readers
 
 ## Notes
 

@@ -11,7 +11,8 @@ defines the `scope` and `status` values.
 
 1. Organize all my input into concise rules and notes
 2. Keep only current information: delete obsolete text and resolved
-   items, apply an accepted proposal to the rules first
+   items, apply an accepted proposal to the rules first; a study
+   shrinks to an entry in [[Studies]] once its decisions are made
 3. IMPORTANT: an exception lives only on its specific page, the
    general page doesn't mention it: [[Distance]] doesn't mention
    [[Void]], a `core` page doesn't depend on a `duel` one
