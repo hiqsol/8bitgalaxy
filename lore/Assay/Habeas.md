@@ -463,7 +463,7 @@ I have marked the page.
 | The Record is public, a struck warrant can be read | [[LoreRequirements#3]], [[Damaged#6]] |
 | Iver is struck, the margin shields only the victor | [[Combat#9]], on hold |
 | The winner's warship moves in, standing its ground | [[Combat#9.3]], [[Deplete#Notes#1]] |
-| The holder holds the struck | [[ControlledBy#3]] |
+| The holder holds the struck | [[ControlledBy#4]] |
 | Rendering: the rank into goods, the warrant destroyed | [[Recycle]] |
 | A destroyed leader can't be issued again at rank | [[Destroy]], [[Create#3]], [[Upgrade#5.4]] |
 | Five seats, dealt at the end, unknown order | [[Hand#3]], [[Turn#5]], [[DeckBuilding]] |
@@ -472,18 +472,18 @@ I have marked the page.
 | No ransom of warrants | none: the rules have no [[Card]] exchange |
 | A remedy is not halted | [[Pinning#2.1]] |
 | A remedy goes to the struck, fee is its full price | [[Recover#2]] to 4 |
-| A leader is held by its own candidacy unless struck | [[ControlledBy#3]] |
+| A leader is held by its own candidacy unless struck | [[ControlledBy#4]] |
 | Posting to One-Zero, acting at once | [[Takeoff]] |
 | Noor works with everything, *Sparrow* lends one | [[PerformAction#2]], [[Support#2]] |
 | Reach two: one passage plus the post | [[Distance#1]], [[Range#3]] |
 | The petty warrant lends its measure | [[Tool]], [[Support#2]] |
 | The scrip outlasts the Deal and adds a measure, Noor holds it | [[Energy#4]], [[Energy#5]], [[Boost#2]], [[Boost#3]] |
 | Exercised warrants go to the Rest | [[Deplete#1.1]] |
-| Equal standing: contested, nobody holds it, each keeps its own | [[Control]], [[Disputed]], [[ControlledBy#3]] |
+| Equal standing: contested, nobody holds it, each keeps its own | [[Control]], [[Disputed]], [[ControlledBy#4]] |
 | He didn't come in, nothing to answer | [[Intercept#2]] |
 | [[Leader]]s in the Rest are alive | [[PaxGalactica#3.2]] |
 | One order would bring him home from the contested post | [[PerformAction#1.3.1]], [[ActiveFor#3]] |
-| If he leaves, the holder holds the struck again | [[ControlledBy#3]], [[ControlledBy#Notes#1]] |
+| If he leaves, the holder holds the struck again | [[ControlledBy#4]], [[ControlledBy#Notes#3]] |
 | A contested post can be fought from inside | [[Attack#3]], [[Disputed#Notes#1]] |
 
 **Assumptions the rules don't settle:** [[Recover]] doesn't say which

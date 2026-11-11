@@ -61,14 +61,14 @@ support all three:
    [[Ancient]]s guard it against its captors too.
 2. **Captured hero**: a [[Damaged]] [[Hero]] in a rival-controlled
    [[Star]] is [[ControlledBy|Controlled by]] the rival
-   ([[ControlledBy#3]]). The rival can execute it with an [[Attack]]
+   ([[ControlledBy#4]]). The rival can execute it with an [[Attack]]
    or render it with [[Recycle]]. Its [[Faction]] can rescue it with
    [[Recover]] from [[Range]]: [[Pinning]] doesn't stop a [[Recover]],
    and no [[Intercept]] follows, because the [[Hero]] never came into
    the [[Star]]. Healed, the [[Hero]] turns the prison into a
    [[Disputed]] front.
 3. **Captured Structures**: every [[Structure]] in a [[Star]] serves
-   whoever controls the [[Star]] ([[ControlledBy#3]]). The captor
+   whoever controls the [[Star]] ([[ControlledBy#4]]). The captor
    [[Create|Raise]]s its own leaders at your [[Academy]], and your
    [[Colony|Colonies]] score for it ([[VictoryPoints]]).
 4. **Great battles**: [[Combat]] (on hold) already gives rounds,

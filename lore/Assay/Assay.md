@@ -144,8 +144,8 @@ The Code numbers its articles in its own way. [[Habeas]] cites:
 | 13, posting | form | [[Takeoff]] |
 | 26, destroyed warrants | 8 | [[Destroy]] |
 | 28, petty warrants | trait 4 | [[Tool]] |
-| 29, standing | 6, 7 | [[Control]], [[Disputed]], [[ControlledBy#3]] |
-| 30, the holder | 7 | [[ControlledBy#3]] |
+| 29, standing | 6, 7 | [[Control]], [[Disputed]], [[ControlledBy#4]] |
+| 30, the holder | 7 | [[ControlledBy#4]] |
 
 ## Canon
 

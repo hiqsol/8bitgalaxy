@@ -449,7 +449,7 @@ That is why we sing the hold before we sing the chord.
 | The Great Horn would need a margin of eight | [[Combat#9.1]], on hold |
 | A turned Ione is no High eighth | [[End#6]], [[Level#4]] |
 | The Coda: one last verse for each other people | [[Twilight]], [[Goal#5]], [[Goal#6]] |
-| An Organ in a taken star would sound for them | [[ControlledBy#3]], [[Hyperstructure#10]] |
+| An Organ in a taken star would sound for them | [[ControlledBy#4]], [[Hyperstructure#10]] |
 | Drawing breath: five, no chosen order | [[Turn#5]], [[Hand#3]], [[DeckBuilding]] |
 | Breath spent in defense on the rival's verse | [[Turn#Notes#2]], [[Combat#5]] |
 | Three tunings | [[Turn#6]], [[Restore]] |

@@ -78,7 +78,7 @@ their Laws tables by number.
    nobody holds it, each side keeps its own [[Card]]s and acts there.
 	1. Follows: the controller answers rival [[Card]]s that come in,
 	   [[Intercept]]
-7. **The ground holds the wrecked**. [[ControlledBy#3]]. The
+7. **The ground holds the wrecked**. [[ControlledBy#4]]. The
    [[Structure]]s and [[Damaged]] [[Card]]s in a [[Star]] belong to
    whoever controls the [[Star]], a front captures nothing.
 	1. Follows: every captured [[Structure]] serves its captor, a
@@ -87,7 +87,7 @@ their Laws tables by number.
 	   [[VictoryPoints#1]]
 	2. Follows: a [[Damaged]] [[Hero]] in a rival's [[Star]] is a
 	   captive, and once it is [[Enabled]] again it is its own
-	   [[Faction]]'s, [[ControlledBy#3]]
+	   [[Faction]]'s, [[ControlledBy#4]]
 8. **Alive and made**. [[Origin]], [[Hub]], [[Create#3]]. [[Social]]
    [[Card]]s are [[Alive]] and [[Industrial]] [[Card]]s are made, and
    each kind needs its own [[Hub]]. The living are created only at the
