@@ -12,13 +12,15 @@ scope: advanced
 	1. The target [[Star]] is [[ControlledBy]] the player
 	2. The rival [[Hero]] is [[Damaged]], it is the target, not a
 	   participant
-	3. The player's own copy of that [[Hero]] is in the player's
-	   [[Factory]] or [[Laboratory]]
+	3. The player's own copy of that [[Hero]] is anywhere in the
+	   player's [[Factory]] or [[Laboratory]] piles, unlike the top
+	   [[Card]] rule of the piles
 5. **Cost**: the rival [[Hero]]'s current [[Level]]
 6. **Outcome**:
 	1. The rival [[Hero]] is [[Destroy]]ed: it goes to its
 	   [[Faction]]'s [[Factory]]
-	2. The own copy goes to the player's [[Discard]]
+	2. The own copy goes to the player's [[Discard]], the other
+	   [[Card]]s of its pile keep their order
 
 #### Notes
 

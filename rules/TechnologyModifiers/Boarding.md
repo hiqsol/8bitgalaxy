@@ -9,9 +9,10 @@ scope: advanced
    winner picks one of them instead:
 	1. The rival [[Ship]] is [[Destroy]]ed: it goes to its
 	   [[Faction]]'s [[Factory]]
-	2. The winner's own copy of that [[Ship]], if it is in the
-	   winner's [[Factory]] or [[Laboratory]], goes to the winner's
-	   [[Discard]], without [[Research]], [[Create]] or [[Price]]
+	2. The winner's own copy of that [[Ship]], if it is anywhere in
+	   the winner's [[Factory]] or [[Laboratory]] piles, goes to the
+	   winner's [[Discard]], without [[Research]], [[Create]] or
+	   [[Price]]; the other [[Card]]s of the pile keep their order
 
 #### Notes
 
