@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: duel
+tags: [tech/modifier, class/culture, on/ship, topic/build]
 ---
 
 1. **Settle** is [[Culture]] [[TechnologyModifier]]

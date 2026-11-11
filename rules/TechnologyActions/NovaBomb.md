@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: events
+tags: [tech/action, class/military, on/ship, planned, galaxy, topic/damage]
 ---
 
 1. **Nova Bomb** is [[Military]] [[TechnologyAction]]

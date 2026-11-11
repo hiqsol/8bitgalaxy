@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: core
+tags: [topic/capture]
 ---
 
 1. **Wild** is a [[Star]] [[State]]

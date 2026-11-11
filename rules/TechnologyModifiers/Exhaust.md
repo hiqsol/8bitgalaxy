@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/science, on/ship, topic/damage]
 ---
 
 1. **Exhaust** is [[Science]] [[TechnologyModifier]]

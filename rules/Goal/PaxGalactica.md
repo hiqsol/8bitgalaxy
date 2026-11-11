@@ -2,6 +2,7 @@
 status: draft
 scope: core
 aliases: [Pax Galactica, Fallen]
+tags: [topic/hero]
 ---
 
 1. **Pax Galactica** is the [[Military]] achievement of [[Goal]]

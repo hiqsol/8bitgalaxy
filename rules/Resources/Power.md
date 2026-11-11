@@ -2,6 +2,7 @@
 status: polish
 scope: core
 aliases: [Resource, Military power, Culture power, Production power, Science power]
+tags: [topic/economy]
 ---
 
 1. **Resource** pays [[Action]] [[Requirements]], see

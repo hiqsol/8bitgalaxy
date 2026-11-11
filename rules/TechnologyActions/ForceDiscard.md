@@ -2,6 +2,7 @@
 status: draft
 scope: duel
 aliases: [Rival Discards]
+tags: [tech/action, class/military, on/hero, on/colony, planned, galaxy, topic/deck]
 ---
 
 1. **Force Discard** is [[Military]] [[TechnologyAction]]

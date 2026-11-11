@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: duel
+tags: [tech/hub, class/culture, on/colony, on/base, topic/build]
 ---
 
 1. **Academy** is [[Culture]] [[Hub]]: the **Social hub**, for

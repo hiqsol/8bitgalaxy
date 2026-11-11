@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: objectives
+tags: [tech/action, class/culture, on/colony, planned, topic/deck]
 ---
 
 1. **Legacy** is [[Culture]] [[TechnologyAction]]

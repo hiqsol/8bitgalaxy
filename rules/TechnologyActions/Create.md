@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: core
+tags: [tech/action, class/culture, class/production, topic/build]
 ---
 
 1. **Create** is [[Culture]] and [[Production]] [[TechnologyAction]]

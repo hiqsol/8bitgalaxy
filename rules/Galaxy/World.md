@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: core
+tags: [topic/capture]
 ---
 
 1. A **World** is a [[Colony]] [[Card]] of no [[Faction]]

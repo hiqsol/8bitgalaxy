@@ -2,6 +2,7 @@
 status: polish
 scope: duel
 aliases: [Recon, Survey]
+tags: [tech/action, class/military, class/science, on/ship, on/hero, on/colony, topic/hidden]
 ---
 
 1. **Explore** is [[Military]] and [[Science]] [[TechnologyAction]]

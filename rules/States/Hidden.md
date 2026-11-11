@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/hidden]
 ---
 
 1. **Hidden** is a [[Card]] [[State]]

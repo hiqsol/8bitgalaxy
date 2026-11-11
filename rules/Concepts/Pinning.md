@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/combat, topic/movement]
 ---
 
 1. **Pinning** stops a moving [[Group]] in a [[Star]] with rival

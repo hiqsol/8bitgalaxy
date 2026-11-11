@@ -2,6 +2,7 @@
 status: polish
 scope: advanced
 aliases: [Supernova event]
+tags: [topic/movement]
 ---
 
 1. **Supernova** is a [[Space]] type

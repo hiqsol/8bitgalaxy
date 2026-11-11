@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/science, on/hero, topic/build]
 ---
 
 1. **Invent** is [[Science]] [[TechnologyAction]]

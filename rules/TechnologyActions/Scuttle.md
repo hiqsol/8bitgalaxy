@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/military, on/base, planned, topic/damage]
 ---
 
 1. **Scuttle** is [[Military]] [[TechnologyAction]]

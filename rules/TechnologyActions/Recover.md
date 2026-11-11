@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: duel
+tags: [tech/action, class/culture, class/production, on/hero, topic/damage]
 ---
 
 1. **Recover** is [[Culture]] and [[Production]] [[TechnologyAction]]

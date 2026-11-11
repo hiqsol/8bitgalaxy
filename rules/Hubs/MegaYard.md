@@ -1,6 +1,7 @@
 ---
 status: stable
 scope: duel
+tags: [tech/hub, class/production, on/colony, topic/build, topic/damage]
 ---
 
 1. **MegaYard** is [[Production]] [[Hub]]: a full **Industrial hub**,

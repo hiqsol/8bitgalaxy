@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/build]
 ---
 
 1. **Laboratory** is a row of 5 piles in [[Home]]

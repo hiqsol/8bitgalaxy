@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: core
+tags: [topic/build]
 ---
 
 1. **Prerequisites** is [[Explicit]] [[Card]] [[Property]]

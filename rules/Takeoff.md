@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/deck]
 ---
 
 1. **Takeoff** plays **ONE** [[Unit]] [[Card]] from [[Hand]] into a

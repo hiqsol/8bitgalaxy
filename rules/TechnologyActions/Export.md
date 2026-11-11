@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/culture, on/colony, topic/economy]
 ---
 
 1. **Export** is [[Culture]] [[TechnologyAction]]

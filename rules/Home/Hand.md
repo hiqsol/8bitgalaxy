@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/deck]
 ---
 
 1. **Hand** is a pile in [[Home]]: the [[Card]]s a player holds

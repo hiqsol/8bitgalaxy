@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/culture, on/ship, planned, topic/economy]
 ---
 
 1. **Sell** is [[Culture]] [[TechnologyAction]]

@@ -2,6 +2,7 @@
 status: draft
 scope: advanced
 aliases: [Black hole]
+tags: [topic/movement]
 ---
 
 1. **Black hole** is a [[Space]] type

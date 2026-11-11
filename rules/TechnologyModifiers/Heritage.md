@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/culture, on/hyperstructure, topic/damage]
 ---
 
 1. **Heritage** is [[Culture]] [[TechnologyModifier]]

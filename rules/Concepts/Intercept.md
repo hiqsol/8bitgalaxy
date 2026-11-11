@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/combat, topic/movement]
 ---
 
 1. **Intercept** is a [[Combat]] the controller of a [[Star]] starts

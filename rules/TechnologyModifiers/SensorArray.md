@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/science, on/hero, planned, topic/hidden]
 ---
 
 1. **Sensor Array** is [[Science]] [[TechnologyModifier]]

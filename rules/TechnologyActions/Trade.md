@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: advanced
+tags: [tech/action, class/culture, on/ship, on/base, topic/economy]
 ---
 
 1. **Trade** is [[Culture]] [[TechnologyAction]]

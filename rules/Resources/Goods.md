@@ -2,6 +2,7 @@
 status: issues
 scope: core
 aliases: [Star Capacity]
+tags: [topic/economy]
 ---
 
 1. **Goods** is stockable [[Resource]]

@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: events
+tags: [topic/hidden]
 ---
 
 1. **Relic** is a [[Space]] type

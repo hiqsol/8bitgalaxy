@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/deck]
 ---
 
 1. Player's **home** consists of:

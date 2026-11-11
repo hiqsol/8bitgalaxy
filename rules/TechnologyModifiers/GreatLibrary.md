@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/science, on/hyperstructure, topic/build]
 ---
 
 1. **Great Library** is [[Science]] [[TechnologyModifier]]

@@ -2,6 +2,7 @@
 status: draft
 scope: advanced
 aliases: [Hyper pass]
+tags: [topic/movement]
 ---
 
 1. **Hyper pass** is a [[Space]] type

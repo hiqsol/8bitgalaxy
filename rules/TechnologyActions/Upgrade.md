@@ -2,6 +2,7 @@
 status: draft
 scope: duel
 aliases: [Grow, Enhance, Paid End]
+tags: [tech/action, class/culture, class/production, on/hero, on/ship, topic/build]
 ---
 
 1. **Upgrade** is [[Culture]] and [[Production]] [[TechnologyAction]]

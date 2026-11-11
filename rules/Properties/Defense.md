@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: core
+tags: [topic/combat]
 ---
 
 1. **Defense** is [[Implicit]] [[Card]] [[Property]] derived from

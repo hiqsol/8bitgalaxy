@@ -2,6 +2,7 @@
 status: stable
 scope: core
 aliases: [Draw, Shuffle]
+tags: [topic/deck]
 ---
 
 1. **Deck building**: [[Unit]] [[Card]]s cycle from [[Discard]] by

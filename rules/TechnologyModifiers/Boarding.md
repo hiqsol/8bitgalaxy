@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/production, on/ship, topic/combat, topic/capture]
 ---
 
 1. **Boarding** is [[Production]] [[TechnologyModifier]]

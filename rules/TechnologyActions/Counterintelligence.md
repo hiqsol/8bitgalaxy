@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/military, on/hero]
 ---
 
 1. **Counterintelligence** is [[Military]] [[TechnologyAction]]

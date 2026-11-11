@@ -1,6 +1,7 @@
 ---
 status: stable
 scope: core
+tags: [tech/modifier]
 ---
 
 1. **Technology modifier** is a kind of [[Technology]] that changes

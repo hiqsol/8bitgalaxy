@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/science, on/tool, planned]
 ---
 
 1. **Espionage** is [[Science]] [[TechnologyModifier]]

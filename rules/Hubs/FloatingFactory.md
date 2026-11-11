@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/hub, class/production, on/ship, planned, topic/build]
 ---
 
 1. **Floating Factory** is [[Production]] [[Hub]]: a mobile

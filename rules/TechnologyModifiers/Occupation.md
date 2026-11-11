@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/military, on/ship, planned, topic/capture]
 ---
 
 1. **Occupation** is [[Military]] [[TechnologyModifier]]

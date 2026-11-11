@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: advanced
+tags: [tech/action, class/culture, on/tool, planned, topic/deck]
 ---
 
 1. **Recall** is [[Culture]] [[TechnologyAction]]

@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/culture, on/hero, topic/movement]
 ---
 
 1. **Envoy** is [[Culture]] [[TechnologyModifier]]

@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/production, on/hyperstructure, topic/build]
 ---
 
 1. **Stellar Forge** is [[Production]] [[TechnologyModifier]]

@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: core
+tags: [topic/movement]
 ---
 
 1. **Void** is a [[Space]] type

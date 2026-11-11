@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/movement]
 ---
 
 1. **Distance** of a route is the sum of all its [[Tile]]s but the

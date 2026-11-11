@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: advanced
+tags: [topic/economy]
 ---
 
 1. **Asteroids** is a [[Space]] type

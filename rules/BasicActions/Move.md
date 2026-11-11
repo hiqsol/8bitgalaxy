@@ -2,6 +2,7 @@
 status: polish
 scope: core
 aliases: [Cargo]
+tags: [topic/movement]
 ---
 
 1. **Move** is [[BasicAction]]

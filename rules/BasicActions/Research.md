@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/build]
 ---
 
 1. **Research** is [[Science]] [[BasicAction]]

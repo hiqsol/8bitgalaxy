@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: advanced
+tags: [tech/modifier, class/culture, on/colony, planned]
 ---
 
 1. **Minus Deplete** is [[Culture]] [[TechnologyModifier]]

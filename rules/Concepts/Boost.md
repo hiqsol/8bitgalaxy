@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/economy]
 ---
 
 1. **Boost** is adding more [[Power]] to [[Action]] by spending

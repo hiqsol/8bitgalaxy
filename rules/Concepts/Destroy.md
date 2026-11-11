@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: core
+tags: [topic/damage]
 ---
 
 1. **Destroy** moves a [[Card]] from anywhere back to its supply:

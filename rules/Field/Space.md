@@ -2,6 +2,7 @@
 status: polish
 scope: core
 aliases: [InterStellar Space, Length, Space bag]
+tags: [topic/movement]
 ---
 
 1. **Space** is a [[Field]] [[Tile]], see [[Component]]

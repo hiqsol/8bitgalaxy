@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/build]
 ---
 
 1. **Factory** is a row of 4 piles in [[Home]]

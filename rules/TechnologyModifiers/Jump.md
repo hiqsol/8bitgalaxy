@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: advanced
+tags: [tech/modifier, class/science, on/ship, topic/movement, topic/hidden]
 ---
 
 1. **Jump** is [[Science]] [[TechnologyModifier]]

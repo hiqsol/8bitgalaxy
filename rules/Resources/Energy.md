@@ -1,6 +1,7 @@
 ---
 status: issues
 scope: core
+tags: [topic/economy]
 ---
 
 1. **Energy** is stockable [[Resource]]

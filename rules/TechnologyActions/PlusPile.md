@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/production, class/science, on/base, planned, topic/build, topic/deck]
 ---
 
 1. **Plus Pile** is [[Production]] and [[Science]]

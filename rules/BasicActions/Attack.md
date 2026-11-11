@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/combat]
 ---
 
 1. **Attack** is [[Military]] [[BasicAction]]

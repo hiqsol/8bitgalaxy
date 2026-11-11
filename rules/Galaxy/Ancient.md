@@ -2,6 +2,7 @@
 status: polish
 scope: core
 aliases: [Ancient deck, Ancient discard]
+tags: [topic/combat]
 ---
 
 1. **Ancient** is a hostile [[Card]] of no [[Faction]]: it defends a

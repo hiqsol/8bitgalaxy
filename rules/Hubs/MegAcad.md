@@ -1,6 +1,7 @@
 ---
 status: stable
 scope: duel
+tags: [tech/hub, class/culture, on/base, planned, topic/build, topic/damage]
 ---
 
 1. **MegAcad** is [[Culture]] [[Hub]]: a full **Social hub**, for

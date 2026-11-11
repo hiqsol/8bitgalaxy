@@ -2,6 +2,7 @@
 status: draft
 scope: core
 aliases: [Combat Round, Attacker, Defender, Advantage, Combat power]
+tags: [topic/combat, topic/damage]
 ---
 
 1. **Combat** is a fight in a [[Star]], an **Attacker** against a

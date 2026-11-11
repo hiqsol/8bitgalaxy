@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/military, on/ship, topic/combat]
 ---
 
 1. **Siege** is [[Military]] [[TechnologyAction]]

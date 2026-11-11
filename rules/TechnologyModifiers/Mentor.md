@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/culture, on/hero, planned, topic/build, topic/hero]
 ---
 
 1. **Mentor** is [[Culture]] [[TechnologyModifier]]

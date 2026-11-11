@@ -2,6 +2,7 @@
 status: polish
 scope: core
 aliases: [Control]
+tags: [topic/capture]
 ---
 
 1. **Controlled by** is a [[Star]] and [[Card]] [[State]] relative to

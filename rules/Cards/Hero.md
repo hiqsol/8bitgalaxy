@@ -2,6 +2,7 @@
 status: polish
 scope: core
 aliases: [Leader, Hero limit, Active Heroes]
+tags: [topic/hero]
 ---
 
 1. **Hero** is a [[Card]] [[Type]]

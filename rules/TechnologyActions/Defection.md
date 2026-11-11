@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/military, on/hero, topic/capture, topic/hero]
 ---
 
 1. **Defection** is [[Military]] [[TechnologyAction]]

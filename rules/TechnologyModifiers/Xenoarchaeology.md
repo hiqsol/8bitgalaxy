@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/science, on/colony, planned, galaxy, topic/capture]
 ---
 
 1. **Xenoarchaeology** is [[Science]] [[TechnologyModifier]]

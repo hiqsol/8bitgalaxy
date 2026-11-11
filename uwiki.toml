@@ -14,10 +14,16 @@ orphans = true
 mentions = true
 mentions-every = true
 
-# status and scope values are documented in meta/Docs.md and rules/index.md,
+# status, scope and tags values are documented in meta/Docs.md and rules/index.md,
 # bin/checkdocs keeps them the same
 [schema]
 _required = ["scope", "status"]
 scope = ["core", "duel", "advanced", "events", "objectives", "politics", "meta", "playtest", "idea", "lore"]
 status = ["stub", "draft", "issues", "polish", "stable", "living"]
 aliases = "list"
+tags = ["tech/action", "tech/modifier", "tech/hub",
+    "class/military", "class/culture", "class/production", "class/science",
+    "on/ship", "on/hero", "on/base", "on/colony", "on/hyperstructure", "on/tool",
+    "planned", "galaxy",
+    "topic/combat", "topic/hidden", "topic/movement", "topic/deck", "topic/economy",
+    "topic/build", "topic/damage", "topic/capture", "topic/hero"]

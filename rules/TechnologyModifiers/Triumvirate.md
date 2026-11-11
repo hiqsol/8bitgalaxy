@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/culture, on/hyperstructure, topic/hero]
 ---
 
 1. **Triumvirate** is [[Culture]] [[TechnologyModifier]]

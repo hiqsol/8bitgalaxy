@@ -2,6 +2,7 @@
 status: draft
 scope: core
 aliases: [Disabled, Exhausted]
+tags: [topic/damage]
 ---
 
 1. **Damaged** is a [[Card]] [[State]]

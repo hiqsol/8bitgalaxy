@@ -2,6 +2,7 @@
 status: polish
 scope: core
 aliases: [Social hub, Industrial hub, Research hub]
+tags: [tech/hub, topic/build]
 ---
 
 1. **Hub** is a kind of [[Technology]], the list is in [[Technology]]:

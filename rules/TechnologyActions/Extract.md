@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: advanced
+tags: [tech/action, class/production, on/ship, on/colony, topic/economy]
 ---
 
 1. **Extract** is [[Production]] [[TechnologyAction]]

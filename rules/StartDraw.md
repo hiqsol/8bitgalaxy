@@ -1,6 +1,7 @@
 ---
 status: stable
 scope: duel
+tags: [topic/deck]
 ---
 
 1. [[Reserve]]: 14 [[Unit]] [[Card]]s, shuffled

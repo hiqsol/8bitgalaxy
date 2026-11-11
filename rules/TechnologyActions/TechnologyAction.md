@@ -1,6 +1,7 @@
 ---
 status: stable
 scope: core
+tags: [tech/action]
 ---
 
 1. **Technology action** is an [[Action]] that requires a

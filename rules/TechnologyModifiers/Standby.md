@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/science, on/base, planned, topic/deck]
 ---
 
 1. **Standby** is [[Science]] [[TechnologyModifier]]

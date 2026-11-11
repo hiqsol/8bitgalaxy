@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/military, on/ship, planned, topic/combat, topic/hero]
 ---
 
 1. **Tactics** is [[Military]] [[TechnologyModifier]]

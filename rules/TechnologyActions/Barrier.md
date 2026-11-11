@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/science, on/ship, topic/hidden, topic/movement]
 ---
 
 1. **Barrier** is [[Science]] [[TechnologyAction]]

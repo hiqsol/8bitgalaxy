@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/production, on/hero, topic/damage]
 ---
 
 1. **Field Repair** is [[Production]] [[TechnologyModifier]]

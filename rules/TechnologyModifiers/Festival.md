@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/culture, on/hyperstructure, planned]
 ---
 
 1. **Festival** is [[Culture]] [[TechnologyModifier]]

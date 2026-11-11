@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: duel
+tags: [tech/modifier, class/culture, on/hero, planned, topic/build, topic/deck]
 ---
 
 1. **Express** is [[Culture]] [[TechnologyModifier]]

@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/production, on/ship, planned, topic/combat, topic/economy]
 ---
 
 1. **Salvage** is [[Production]] [[TechnologyModifier]]

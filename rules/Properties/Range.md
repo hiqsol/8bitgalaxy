@@ -1,6 +1,7 @@
 ---
 status: issues
 scope: core
+tags: [topic/movement]
 ---
 
 1. **Range** is [[Implicit]] [[Card]] [[Property]] derived from

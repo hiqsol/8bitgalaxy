@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: duel
+tags: [tech/action, class/military, on/hero, on/base, topic/hidden]
 ---
 
 1. **Stealth** is [[Military]] [[TechnologyAction]]

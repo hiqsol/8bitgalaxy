@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/production, class/science, on/hero, on/base, topic/economy]
 ---
 
 1. **Recycle** is [[Production]] and [[Science]] [[TechnologyAction]]

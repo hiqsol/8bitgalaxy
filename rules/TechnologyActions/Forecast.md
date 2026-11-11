@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/science, on/tool, planned, topic/deck]
 ---
 
 1. **Forecast** is [[Science]] [[TechnologyAction]]

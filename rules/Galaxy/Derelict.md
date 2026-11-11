@@ -1,6 +1,7 @@
 ---
 status: issues
 scope: events
+tags: [topic/economy]
 ---
 
 1. **Derelict** is a neutral [[Card]] lying in a [[Star]]

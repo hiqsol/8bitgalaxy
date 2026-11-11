@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/production, on/base, planned, topic/movement]
 ---
 
 1. **Guard** is [[Production]] [[TechnologyModifier]]

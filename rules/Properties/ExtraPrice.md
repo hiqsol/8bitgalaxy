@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/build]
 ---
 
 1. **Extra price** is [[Explicit]] [[Component]] [[Property]], of a

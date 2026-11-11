@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: duel
+tags: [tech/action, class/military, on/ship, topic/combat]
 ---
 
 1. **Retreat** is [[Military]] [[TechnologyAction]]

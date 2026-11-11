@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/action, class/military, on/ship, topic/combat, topic/hero]
 ---
 
 1. **Decapitation** is [[Military]] [[TechnologyAction]]

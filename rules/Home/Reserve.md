@@ -1,6 +1,7 @@
 ---
 status: polish
 scope: core
+tags: [topic/deck]
 ---
 
 1. **Reserve** is a pile in [[Home]]

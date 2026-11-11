@@ -4,7 +4,8 @@
 # dependencies = ["markdown"]
 # ///
 """Check the docs wiki rules uwiki does not know: numbered rules, technology catalog, page templates,
-that the uwiki.toml schema allows the status and scope values meta/Docs.md and rules/index.md document,
+that the uwiki.toml schema allows the status, scope and tags values meta/Docs.md and rules/index.md document,
+that a technology has the tags of its kind, class and catalog entry,
 that the folder of every page allows its scope, and that no open Backlog or Guidance item cites a stable page and no issue cites a polish page.
 
 Usage: bin/checkdocs  (exits 1 on problems, uv installs dependencies), make check runs uwiki check first
@@ -25,6 +26,9 @@ FILES = sorted(f for p in PATHS for f in (ROOT / p).glob('**/*.md'))
 # folder: allowed scopes, rules/ takes every scope the others don't, '' is the repo root
 FOLDER_SCOPES = {'meta': {'meta', 'playtest'}, 'games': {'playtest'}, 'ideas': {'idea'}, 'lore': {'lore'},
                  '': {'meta', 'playtest'}}
+FOLDER_TECH_TAGS = {'TechnologyActions': 'tech/action', 'TechnologyModifiers': 'tech/modifier', 'Hubs': 'tech/hub'}
+# tags derived from the technology catalog, the topic ones are set by hand
+DERIVED_TAG = re.compile(r'(?:tech|class|on)/|planned$|galaxy$')
 FRONTMATTER = re.compile(r'---\n(.*?)\n---\n', re.S)
 # an open Backlog item: from "- [ ] **I1" to the next line that is not indented
 OPEN_ITEM = re.compile(r'^- \[ \] \*\*[IPS]\d.*(?:\n[ \t]+.*)*', re.M)
@@ -77,6 +81,7 @@ class Page:
         html = md.convert(WIKILINK.sub(lambda m: f'<a href="{m[1]}">{m[3] or m[1] + (m[2] or "")}</a>', self.text))
         self.tree = ET.fromstring(f'<div>{html}</div>')
         self.meta = {k: ' '.join(v) for k, v in md.Meta.items()}
+        self.tags = listed(self.meta.get('tags', ''))
 
     def table(self):
         """Rows of the first table as lists of cells, without header."""
@@ -92,6 +97,11 @@ class Page:
         """Values of the list under a heading: the code each item, nested ones too, starts with."""
         found = (li.find('code') for top in self.items(heading) for li in top.iter('li'))
         return {c.text for c in found if c is not None}
+
+
+def listed(value):
+    """Items of a frontmatter flow list like [a, b]."""
+    return [item.strip() for item in value.strip('[]').split(',') if item.strip()]
 
 
 def text(element):
@@ -133,7 +143,8 @@ def check_schema(docs, index):
     """uwiki.toml schema allows exactly the status values Docs and the scopes Docs and the rules index document."""
     schema = tomllib.loads((ROOT / 'uwiki.toml').read_text())['schema']
     for key, documented in (('status', docs.section('Status')),
-                            ('scope', docs.section('Scopes') | index.section('Modules'))):
+                            ('scope', docs.section('Scopes') | index.section('Modules')),
+                            ('tags', docs.section('Tags'))):
         allowed = set(schema[key])
         if allowed != documented:
             diff = ', '.join(sorted(allowed ^ documented))
@@ -144,8 +155,9 @@ def frontmatter(path):
     """Frontmatter keys of a page, lists like aliases as lists."""
     match = FRONTMATTER.match(path.read_text())
     meta = dict(re.findall(r'^(\w+):\s*(.*)$', match[1], re.M)) if match else {}
-    if 'aliases' in meta:
-        meta['aliases'] = [a.strip() for a in meta['aliases'].strip('[]').split(',')]
+    for key in ('aliases', 'tags'):
+        if key in meta:
+            meta[key] = listed(meta[key])
     return meta
 
 
@@ -222,6 +234,43 @@ def card_types(pages):
             and 'Type' in links(next(iter(top_rules(p)), ET.Element('li')))}
 
 
+def catalog_entries(pages):
+    """Catalog items as (item, technology, line, match), match None when the item is malformed."""
+    for item in pages['Technology'].items('List'):
+        line = ' '.join(text(item).split())
+        yield item, next(iter(links(item)), None), line, TECH_ITEM.match(line)
+
+
+def derived_tags(pages):
+    """Tags of every technology page: kind by folder, class by first rule, carrying types, planned and galaxy by catalog."""
+    carried = set(deck_assignments(pages['Deck'], pages))
+    result = {}
+    for page in pages.values():
+        folder = page.path.parent.name
+        if folder in FOLDER_TECH_TAGS:
+            first = top_rules(page)[:1]
+            classes = [c for c in CLASSES.values() if first and c in links(first[0])]
+            result[page.path.stem] = [FOLDER_TECH_TAGS[folder]] + [f'class/{c.lower()}' for c in classes]
+    for _, tech, _, match in catalog_entries(pages):
+        if not (tech in result and match):
+            continue
+        result[tech] += [f'on/{t.lower()}' for t in match['types'].split(', ')]
+        result[tech] += ['planned'] * (tech not in carried) + ['galaxy'] * ('Galaxy' in match['factions'])
+    return result
+
+
+def check_tags(pages):
+    """A page has the derived tags, in their order, before its topic tags, a topic tag at most once."""
+    derived = derived_tags(pages)
+    for page in pages.values():
+        want = derived.get(page.path.stem, [])
+        have = [t for t in page.tags if DERIVED_TAG.match(t)]
+        if have != want:
+            report(page.path, f'tags must start with: {", ".join(want) or "no derived tag"}')
+        if page.tags[:len(have)] != have or len(set(page.tags)) != len(page.tags):
+            report(page.path, 'tags: derived ones first, each once')
+
+
 def check_technologies(pages):
     catalog, deck = pages['Technology'], pages['Deck']
     assigned = deck_assignments(deck, pages)
@@ -229,9 +278,7 @@ def check_technologies(pages):
     # Hub actions (Create) are technologies via the hub
     cataloged = set(links(pages['Hub'].tree))
 
-    for item in catalog.items('List'):
-        tech, line = next(iter(links(item)), None), ' '.join(text(item).split())
-        match = TECH_ITEM.match(line)
+    for item, tech, line, match in catalog_entries(pages):
         if not tech or not match:
             report(catalog.path, f'not "Name: LevelClasses - Kind - Types - Factions - Scope": {line[:40]}')
             continue
@@ -290,6 +337,7 @@ def main():
     for page in pages.values():
         check_page(page)
     check_technologies(pages)
+    check_tags(pages)
     check_templates(pages)
 
     for line in problems:

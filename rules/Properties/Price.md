@@ -2,6 +2,7 @@
 status: polish
 scope: core
 aliases: [Cost]
+tags: [topic/build]
 ---
 
 1. **Price** is [[Implicit]] [[Component]] [[Property]]: its

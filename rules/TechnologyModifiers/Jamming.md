@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/military, on/ship, on/hyperstructure, topic/movement]
 ---
 
 1. **Jamming** is [[Military]] [[TechnologyModifier]]

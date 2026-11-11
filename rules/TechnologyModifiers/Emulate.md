@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: advanced
+tags: [tech/modifier, class/culture, on/hero, planned]
 ---
 
 1. **Emulate** is [[Culture]] [[TechnologyModifier]]
