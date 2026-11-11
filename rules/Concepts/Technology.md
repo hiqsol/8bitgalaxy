@@ -151,7 +151,8 @@ scope: core
 46. [[Logistics]]: 4p - Modifier - [[Base]] - Player - advanced An
     [[Action]] spends [[Goods]] of the [[Star]]s of all its [[Group]]s
 47. [[PlusPile]]: 4ps - [[Action]] - [[Base]] - Player - advanced
-    +Pile: adds a [[Factory]] or a [[Laboratory]] pile
+    +Pile: its [[Card]] goes [[Home]] [[Back]] up as a new [[Factory]]
+    or [[Laboratory]] pile
 48. [[Salvage]]: 4p - Modifier - [[Ship]] - Player - advanced
     +[[Goods]]: 1 for each rival [[Card]] [[Damaged]] in the
     [[Combat]], winner or loser

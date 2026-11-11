@@ -152,8 +152,8 @@ Reopen one only with evidence from a played game, not from a review.
 - [ ] **P58. Traits instead of new Types**: `Unique`, `Consumable`,
   `Immovable`; new [[State]]s come from position, not markers.
 - [ ] **P59. Stubs**: c) [[PlusHero]] goes, [[Create]] covers it.
-- [ ] **I94. Underdescribed**: c) [[PlusPile]]'s [[Cost]], limit and
-  new pile.
+- [ ] **I94. Underdescribed**: c) [[PlusPile]]'s [[Cost]]; its
+  [[Card]] becomes the new pile [[Back]] up, see [[PlusPile#2]].
 
 ## Simplifications
 
