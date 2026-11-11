@@ -10,7 +10,7 @@ scope: advanced
    [[Colony]]
 4. **Requirements**:
 	1. The target [[Star]] is [[ControlledBy]] the player
-	2. The rival [[Colony]] is [[Enabled]], it is the target, not a
+	2. The rival [[Colony]] is face up, it is the target, not a
 	   participant
 	3. An own [[Colony]] with an [[End]] of the rival [[Colony]]'s
 	   current [[Level]] is available at the [[Factory]]

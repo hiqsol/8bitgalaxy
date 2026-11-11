@@ -6,12 +6,6 @@ scope: duel
 1. **Tool** is a [[Card]] [[Type]]
 2. **Tool** represents a device, the weakest [[Card]], almost like a
    [[Ship]]
-3. [[Role]] = [[Unit]], not an [[Actor]]
-4. [[Origin]] = [[Industrial]]
-5. [[Range]] = 0, can't [[Move]]
-6. [[Size]] = current [[Level]] + [[ExtraPrice]]
-7. [[Capacity]] = 0, can't carry [[Cargo]] or [[Boost]]
-8. Carried as [[Cargo]] of a [[Move]] by any [[Ship]]
 
 #### Notes
 

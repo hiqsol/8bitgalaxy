@@ -7,8 +7,8 @@ scope: advanced
 2. A player whose [[Card]] uses **Salvage** in a [[Combat]] may take 1
    [[Goods]] for each rival [[Card]] that becomes [[Damaged]] in it,
    whoever wins
-3. **Requirements**: after the [[Combat]] the player has an
-   [[Enabled]] [[Card]] in the target [[Star]]
+3. **Requirements**: after the [[Combat]] the player has a
+   face-up [[Card]] in the target [[Star]]
 4. The [[Goods]] go into the target [[Star]]
 
 #### Notes

@@ -18,7 +18,7 @@ more of these, every effect deterministic:
 6. **Sensor shadow**: a [[Group]] that passed a **Nebula** this
    [[Action]] can't be [[Intercept]]ed at its [[Destination]]
 7. **Stellar nursery**: an [[Action]] started in a [[Star]] bordering
-   a **Nebula** gets +1 [[ProductionPower]]
+   a **Nebula** gets +1 [[Production power]]
 8. **Gas harvest**: [[Extract]] works in a **Nebula** too, it yields
    [[Energy]] instead of [[Goods]]
 
@@ -26,7 +26,7 @@ more of these, every effect deterministic:
 
 1. Like the other types, a **Nebula** counts its printed [[Length]]
 2. Stellar nursery follows the pattern of
-   [[BlackHole|Black hole]], +1 [[SciencePower]] beside it, and
+   [[BlackHole|Black hole]], +1 [[Science power]] beside it, and
    [[Supernova]], +1 [[Power]] of any [[Class]]: no new mechanic
 3. Drag, a [[Group]] passing it [[Deplete]]s one [[Card]], was
    dropped: it is a [[BlackHole|Black hole]] by another name

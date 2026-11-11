@@ -4,7 +4,7 @@ scope: duel
 ---
 
 1. **Recover** is [[Culture]] and [[Production]] [[TechnologyAction]]
-2. **Recover** [[Flip]]s a [[Damaged]] [[Card]] to [[Enabled]], its
+2. **Recover** [[Flip]]s a [[Damaged]] [[Card]] face up, its
    [[Weak]] [[End]] up, or its [[Strong]] [[End]] up for 1 [[Power]]
    more
 3. **Direction**: from the [[Card]] that provides **Recover** to the

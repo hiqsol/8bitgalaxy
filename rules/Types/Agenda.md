@@ -1,6 +1,6 @@
 ---
 status: polish
-scope: core
+scope: events
 ---
 
 1. **Agenda** is a [[Card]] [[Role]]

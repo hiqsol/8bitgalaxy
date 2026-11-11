@@ -32,7 +32,7 @@ aliases: [Combat Round, Attacker, Defender, Advantage, Combat power]
 7. **Combat** resolves when every party passes in one **Combat Round**
 8. Then reveal [[Hidden]] [[Card]]s, count each side's **Combat
    power** and determine winner:
-	1. An attacking [[Card]] adds its [[MilitaryPower]]
+	1. An attacking [[Card]] adds its [[Military power]]
 	2. A defending [[Card]] adds its [[Defense]]
 	3. A tie goes to the **Defender**
 	4. **Advantage** = winner's **Combat power** − loser's **Combat
@@ -53,7 +53,7 @@ aliases: [Combat Round, Attacker, Defender, Advantage, Combat power]
     [[Participants|Participant]]: [[Damaged]] or [[Destroy]]ed
 11. A [[Damaged]] [[Card]] stays in its place:
 	1. A [[Direct participant]] in its [[Star]]
-	2. A [[Supporter]] from another [[IPS]] in its own [[Star]]
+	2. A [[Supporter]] from another [[Star]] in its own [[Star]]
 	3. A [[Supporter]] from [[Hand]] goes [[Damaged]] into the target
 	   [[Star]]
 12. Without a free [[Slot]] in the target [[Star]] the winner
@@ -70,7 +70,7 @@ aliases: [Combat Round, Attacker, Defender, Advantage, Combat power]
 2. [[Direct participant]]s hold ground like chess pieces: survivors
    stay or move in
 3. Both sides can add any [[Card]]s, but a non-[[Military]] [[Card]]
-   has no [[MilitaryPower]]: it attacks with 0 and can't [[Boost]],
+   has no [[Military power]]: it attacks with 0 and can't [[Boost]],
    and defends with 1 in a [[Star]], with 0 from [[Hand]], see
    [[Defense]]. It joins an [[Attack]] for its
    [[Technology|Technologies]], [[Range]] and [[Capacity]], or to

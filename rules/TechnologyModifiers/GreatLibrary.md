@@ -5,7 +5,7 @@ scope: advanced
 
 1. **Great Library** is [[Science]] [[TechnologyModifier]]
 2. With **Great Library** a [[Research]] ignores the [[Prerequisites]]
-   of a [[Card]] when a rival [[Card]] of the same name is [[Enabled]]
+   of a [[Card]] when a rival [[Card]] of the same name is face up
    on the [[Field]]
 
 #### Notes

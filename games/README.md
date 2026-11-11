@@ -57,8 +57,8 @@ The games follow the playtest digest `RULES.md`, not today's docs:
    [World](../rules/Galaxy/World.md) [[Card]] gives a [[Star]] its
    kind.
 2. [[Star]] kinds: [[Defense]] (+1 [[Defense]]), [[Military]] (+1
-   [[MilitaryPower|Military power]]), [[Science]] (+1
-   [[SciencePower|Science power]]), [[Shipyard]] (a [[Hub]]),
+   [[Military power]]), [[Science]] (+1
+   [[Science power]]), [[Shipyard]] (a [[Hub]]),
    [[Energy]] (+1 [[Energy]]). [[Home]] [[Star]]s have 4+4 [[Slot]]s.
 3. Every [[Space]] [[Tile]] is Normal, [[Length]] 1, [[Price]] 2:
    `S00o3 => Space+1r`. A [[Tile]] is named by the o'clock bearing of

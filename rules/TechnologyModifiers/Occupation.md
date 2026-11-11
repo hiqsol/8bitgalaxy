@@ -4,7 +4,7 @@ scope: advanced
 ---
 
 1. **Occupation** is [[Military]] [[TechnologyModifier]]
-2. An own [[Enabled]] [[Military]] [[Actor]] with **Occupation** gives
+2. An own face-up [[Military]] [[Actor]] with **Occupation** gives
    its [[Faction]] a [[Control]] level above **Unit** in its
    [[Star]]: **Occupation**
 

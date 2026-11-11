@@ -10,15 +10,13 @@ aliases: [Public objective, Secret objective]
 	1. [[Control]] 3 [[Star]]s
 	2. Have 4 [[Technology]]s
 	3. Hold a rival's home [[Star]]
-3. [[Role]] = [[Agenda]]
-4. [[Origin]] = none
-5. **Public objectives**: 3 [[Card]]s face up, available to all
+3. **Public objectives**: 3 [[Card]]s face up, available to all
    players
-6. **Secret objectives**: 1 [[Hidden]] [[Card]] for each player
-7. **Objectives** are scored at **Check** phase of own [[Turn]]:
+4. **Secret objectives**: 1 [[Hidden]] [[Card]] for each player
+5. **Objectives** are scored at **Check** phase of own [[Turn]]:
 	1. **Public objective** is replaced with a new one
 	2. **Secret objective** is revealed
-8. A scored **Objective** adds its points to the [[Faction]]'s
+6. A scored **Objective** adds its points to the [[Faction]]'s
    [[VictoryPoints]]
 
 #### Notes

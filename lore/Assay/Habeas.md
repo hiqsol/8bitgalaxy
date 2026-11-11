@@ -460,7 +460,7 @@ I have marked the page.
 
 | Scene | Rule |
 |---|---|
-| The Record is public, a struck warrant can be read | [[LoreRequirements#3]], [[Damaged#6]] |
+| The Record is public, a struck warrant can be read | [[LoreRequirements#3]], [[Damaged#5]] |
 | Iver is struck, the margin shields only the victor | [[Combat#9]], on hold |
 | The winner's warship moves in, standing its ground | [[Combat#9.3]], [[Deplete#Notes#1]] |
 | The holder holds the struck | [[ControlledBy#4]] |

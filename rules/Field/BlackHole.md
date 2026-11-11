@@ -8,7 +8,7 @@ aliases: [Black hole]
 2. A [[Group]] passing a revealed **Black hole** [[Deplete]]s one of
    its [[Card]]s, its player chooses which
 3. A [[Science]] [[Action]] started in a [[Star]] bordering a revealed
-   **Black hole** gets +1 [[SciencePower]]
+   **Black hole** gets +1 [[Science power]]
 
 #### Notes
 

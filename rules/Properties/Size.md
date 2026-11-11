@@ -7,4 +7,4 @@ scope: core
    [[Level]], [[ExtraPrice]] and [[Type]]
 2. **Size** is the weight of a [[Card]] as [[Cargo]] of a [[Move]],
    see [[Capacity]]
-3. Default value = current [[Level]] + [[ExtraPrice]]
+3. Value by [[Type]], see [[Card]]

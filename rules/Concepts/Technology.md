@@ -45,7 +45,7 @@ scope: core
 5. [[Academy]]: 2c 4c - [[Social Hub]] - [[Colony]],
    [[Base]] - Player - duel Building facility for [[Social]] [[Card]]s
 6. [[Recover]]: 2cp 4cp - [[Action]] - [[Hero]] - Player - duel
-   -[[Damaged]]: [[Flip]]s a [[Damaged]] [[Card]] back to [[Enabled]]
+   -[[Damaged]]: [[Flip]]s a [[Damaged]] [[Card]] face up
 7. [[Upgrade]]: 2cp 4cp - [[Action]] - [[Hero]], [[Ship]] - Player -
    duel +[[Level]]: replaces a [[Card]] on the [[Field]] with a higher
    [[Card]] of its [[Type]]
@@ -54,7 +54,7 @@ scope: core
 9. [[Express]]: 6c - Modifier - [[Hero]] - Player - duel
    [[Create]] puts new [[Actor]]s on top of the [[Reserve]]
 10. [[Starter]]: 6c - Modifier - [[Hero]] - Player - duel
-    A [[Field]] [[Card]] starts an [[Action]] from its own [[IPS]]
+    A [[Field]] [[Card]] starts an [[Action]] from its own [[Star]]
 11. [[Settle]]: 6c - Modifier - [[Ship]] - Player - duel A [[Ship]]
     turns itself into a [[Colony]] where it is
 12. [[Shipyard]]: 2p - [[Industrial Hub]] - [[Base]] -
@@ -163,7 +163,7 @@ scope: core
     [[Structure]]s in its [[Star]]
 51. [[FieldRepair]]: 6p - Modifier - [[Hero]] - Player - advanced
     -[[Damaged]]: a [[Restore]] can [[Flip]] a [[Damaged]]
-    [[Industrial]] [[Card]] back to [[Enabled]]
+    [[Industrial]] [[Card]] face up
 52. [[FloatingFactory]]: 6p - [[Industrial Hub]] -
     [[Ship]] - Player - advanced A [[Shipyard]] on a [[Ship]], it
     moves with the [[Ship]]
@@ -190,7 +190,7 @@ scope: core
     [[WorldDeck|World deck]]
 61. [[Espionage]]: 6s - Modifier - [[Tool]] - Player - advanced Use a
     rival's **Technology** in the same [[Star]], paying its [[Cost]]
-    in [[SciencePower|Science power]]
+    in [[Science power]]
 62. [[GreatLibrary]]: 6s - Modifier - [[Hyperstructure]] - Player -
     advanced -[[Prerequisites]]: [[Research]] ignores them for a
     [[Card]] a rival has on the [[Field]]

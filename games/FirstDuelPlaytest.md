@@ -290,7 +290,7 @@ Made before play where the docs were silent, in `RULES.md` section 11:
 - PR-16 [[Recover]] costs the [[Level]] of the [[Damaged]] [[End]]:
   [[Recover#4]], S41.
 - PR-17 a [[Defender]]'s [[Damaged]] [[Card]]s fight with [[Defense]]
-  0 and are Destroyed: [[Damaged#7]], with [[Defense]] 1.
+  0 and are Destroyed: [[Damaged#6]], with [[Defense]] 1.
 - PR-18 cap at 40 [[Turn]]s: playtest only.
 
 Also used: [[Guidance]] G1–G9 as then drafted.

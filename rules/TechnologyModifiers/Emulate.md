@@ -8,7 +8,7 @@ scope: advanced
    either [[End]] of the top [[Card]] of a rival's [[Discard]], as if
    a participant provided it
 3. A [[TechnologyAction]] used so pays its [[Cost]] in
-   [[CulturePower]]
+   [[Culture power]]
 
 #### Notes
 

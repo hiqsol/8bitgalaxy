@@ -51,7 +51,7 @@ KINDS = {
     'Types': {'Class', 'Origin', 'Role'},
     'Home': {'Home'},
 }
-KIND_PAGES = {'BasicAction', 'TechnologyAction', 'TechnologyModifier', 'Hub', 'Card', 'Deck', 'Property', 'Resource', 'State', 'Home'}
+KIND_PAGES = {'BasicAction', 'TechnologyAction', 'TechnologyModifier', 'Hub', 'Card', 'Deck', 'Property', 'Power', 'State', 'Home'}
 CLASS_TECH = re.compile(r'\[\[(%s)\]\] (?:technolog|\[\[Technology\]\])|(?:technology|\[\[Technology\]\]) \[?\[?Level'
                         % '|'.join(CLASSES.values()))
 # [[Page|text]], [[Page#3]], escaped [[Page\|text]] in tables: the markdown wikilinks extension takes only [[Page]]
@@ -122,14 +122,11 @@ def check_templates(pages):
         rules = top_rules(page)
         if not rules or not KINDS[folder] & set(links(rules[0])):
             report(page.path, f'first rule must link {" or ".join(sorted(KINDS[folder]))}')
-        if folder == 'Cards':
-            role = next((r for r in rules if text(r).startswith('Role =')), None)
-            need = ['Role =', 'Origin =']
-            if role is not None and {'Unit', 'Actor', 'Structure'} & set(links(role)):
-                need += ['Range =', 'Size =', 'Capacity =']
-            for prefix in need:
-                if not any(text(r).startswith(prefix) for r in rules):
-                    report(page.path, f'card type needs a rule "{prefix} ..."')
+
+    # every card Type has its row in the Card table, its first cell links the Type
+    rows = {next(iter(links(row[0])), None) for row in pages['Card'].table()}
+    for name in sorted(card_types(pages) - rows):
+        report(pages['Card'].path, f'card type {name} has no row in the table')
 
 
 def check_schema(docs, index):
@@ -155,7 +152,7 @@ def frontmatter(path):
 def all_pages():
     """Frontmatter of every markdown page of the repo by path."""
     out = subprocess.run(['git', 'ls-files', '*.md'], cwd=ROOT, capture_output=True, text=True, check=True).stdout
-    return {ROOT / f: frontmatter(ROOT / f) for f in out.split()}
+    return {ROOT / f: frontmatter(ROOT / f) for f in out.split() if (ROOT / f).exists()}
 
 
 def check_scopes(metas):
@@ -221,7 +218,7 @@ def deck_assignments(deck, pages):
 
 def card_types(pages):
     """Card Types: the Cards pages whose first rule links Type."""
-    return {p.path.stem for p in pages.values() if p.path.parent.name == 'Cards'
+    return {p.path.stem for p in pages.values() if p.path.parent.name == 'Cards' and p.path.stem not in KIND_PAGES
             and 'Type' in links(next(iter(top_rules(p)), ET.Element('li')))}
 
 

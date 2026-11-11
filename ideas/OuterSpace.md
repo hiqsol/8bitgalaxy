@@ -5,7 +5,7 @@ scope: idea
 
 1. **Outer space** is intermediate part of [[Star]] which is:
 	1. Inside of the star system
-	2. Outside of [[IPS]]
+	2. Outside of its [[Slot]]s
 	3. Can hold unlimited number of [[Card]]s
 2. **Outer space** is represented as a pile inside of every [[Star]]
 3. [[Card]]s in **outer space** can only [[Move]] not

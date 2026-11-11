@@ -12,8 +12,7 @@ scope: advanced
 	2. The rival [[Hero]] is [[Damaged]], it is the target, not a
 	   participant
 5. **Cost**: the rival [[Hero]]'s current [[Level]]
-6. **Outcome**: the [[Hero]] goes to the player's [[Discard]],
-   [[Enabled]]
+6. **Outcome**: the [[Hero]] goes to the player's [[Discard]]
 
 #### Notes
 

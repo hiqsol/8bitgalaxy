@@ -6,7 +6,7 @@ scope: advanced
 1. **Stellar Forge** is [[Production]] [[TechnologyModifier]]
 2. With **Stellar Forge** the [[Social]] [[Create]] of a
    [[Hyperstructure]] can go from an **Industrial hub**, paid in
-   [[ProductionPower]], see [[Hub]]
+   [[Production power]], see [[Hub]]
 
 #### Notes
 

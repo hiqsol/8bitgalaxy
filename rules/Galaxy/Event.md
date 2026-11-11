@@ -6,23 +6,21 @@ aliases: [Ancient Outbreak, Ancient Invasion, Ancient production, Peace Treaty]
 
 1. **Event** is a [[Card]] [[Type]]
 2. **Event** represents something that happens in the galaxy
-3. [[Role]] = [[Agenda]]
-4. [[Origin]] = none
-5. **Event** [[Card]]s come from the [[GalaxyDeck]] and are played out
+3. **Event** [[Card]]s come from the [[GalaxyDeck]] and are played out
    in two steps:
 	1. Preparation - a [[GalaxyMove]] puts the **event** [[Card]] to
 	   [[FutureEvents]] pile
 	2. Evaluation - **event** [[Card]] is revealed then its text is
 	   implemented
-6. The player resolving **event** has control over anything not
+4. The player resolving **event** has control over anything not
    explicitly stated in the **Event** description.
-7. **Event** classes:
+5. **Event** classes:
 	1. [[Military]] - hostile for players from [[Ancient]]s - they
 	   breed, spread and attack
 	2. [[Culture]] - positive for players, related to growth
 	3. [[Production]] - positive for all, related to development
 	4. [[Science]] - negative for all, global disasters
-8. An **event** that treats [[Faction]]s by strength names its own
+6. An **event** that treats [[Faction]]s by strength names its own
    measure, e.g. **Peace Treaty**
 
 #### Notes

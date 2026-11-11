@@ -7,8 +7,8 @@ aliases: [Develop, Expand]
 1. During **Galaxy move** player takes the top [[Card]] of the
    [[GalaxyDeck]] and plays it by its kind:
 	1. [[Event]]: to [[FutureEvents]]
-	2. [[Ancient]]: [[Ancient]]s breed and spread, [[Hidden]] to an
-	   [[IPS]] in one of the ways:
+	2. [[Ancient]]: [[Ancient]]s breed and spread, [[Hidden]] to a
+	   [[Star]] in one of the ways:
 		1. **Develop**: any [[Card]] to a [[Star]] that already has
 		   active [[Ancient]]s
 		2. **Expand**: a [[Unit]] [[Card]] to a [[Star]] adjacent to a

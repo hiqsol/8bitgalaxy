@@ -4,7 +4,7 @@ scope: core
 ---
 
 1. **Pinning** stops a moving [[Group]] in a [[Star]] with rival
-   [[Enabled]] [[Military]] [[Actor]]s:
+   face-up [[Military]] [[Actor]]s:
 	1. The [[Group]] can't pass through such a [[Star]], it can finish
 	   there
 	2. The rival can allow the [[Group]] to pass

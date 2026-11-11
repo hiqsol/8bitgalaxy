@@ -49,10 +49,10 @@ aliases: [Pax Galactica, Fallen]
 7. In a [[Duel]] the first fall ends the game. With more rivals a
    **Fallen** [[Faction]] can come back: no move costs a
    [[Turn]], a lost [[Star]] comes back when its remaining [[Card]]s
-   regain one, a lost leader when its [[Hero]] is [[Enabled]] again
+   regain one, a lost leader when its [[Hero]] is face up again
 8. A **Fallen** [[Faction]] can't bring back its own leaders: it skips
    **Play**. A rival does, to keep a third [[Faction]] from
    **Pax Galactica**, or an ally in a cooperative game
-9. A [[Hero]] [[Enabled]] again returns to its [[Faction]]: an
-   [[Enabled]] [[Actor]] is controlled by its own [[Faction]], see
+9. A [[Hero]] face up again returns to its [[Faction]]: a
+   face-up [[Actor]] is controlled by its own [[Faction]], see
    [[ControlledBy]]

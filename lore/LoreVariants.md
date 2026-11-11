@@ -104,7 +104,7 @@ not in the [[Backlog]] yet:
 6. **Hand count**: is the number of [[Card]]s in a rival's [[Hand]]
    public? [[TheHeldChord]] assumes it is.
 7. **Damaged keeps its Slot**: a [[Damaged]] [[Card]] blocks a
-   [[Slot]] until it is Destroyed or [[Enabled]]. The ending of
+   [[Slot]] until it is Destroyed or face up. The ending of
    [[TheHeldChord]] depends on that. Is it intended?
 8. **Twilight and the Hand**: [[Singularity]] counts [[Hand]]
    [[Card]]s at [[Check]], but the final comparison of [[Twilight]]

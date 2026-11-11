@@ -25,13 +25,13 @@ scope: idea
 	2. Pay [[Power]] of one [[Class]] with another
 	3. Count a [[Class]] one [[Level]] higher for [[Prerequisites]]
 	   and [[Singularity]]
-	4. [[Turn]] [[CulturePower|Culture power]] into [[VictoryPoints]]
+	4. [[Turn]] [[Culture power]] into [[VictoryPoints]]
 	5. Peek at the next [[Event]]
 	6. Build a [[Structure]] outside the allowed place
 	7. [[Move]] the [[Homeworld]] to another own [[Star]]
 3. **Combat brainstorm**, [[Combat]] is on hold:
 	1. **Siege**: at the end of own [[Turn]], if own
-	   [[MilitaryPower|Military power]] in a [[Star]] exceeds the
+	   [[Military power]] in a [[Star]] exceeds the
 	   total [[Defense]] of all rival [[Card]]s there, they are
 	   captured without a [[Combat]]
 	2. **Prisoner**: a [[Hero]] left in a [[Star]] without own
@@ -141,7 +141,7 @@ scope: idea
 1. **Own setting**: each player sees own art set, the rules stay
 2. **Replay**: an animated replay and the full log, a story of the
    game written from the log, undo against the AI
-3. **Statistics**: total and average [[MilitaryPower|Military power]],
+3. **Statistics**: total and average [[Military power]],
    population, [[Star]]s, [[Energy]], research depth
 4. **Arena**: online play with a chess-like rating, team games
 5. **Custom cards**: players send a [[Card]], its [[Level]] is

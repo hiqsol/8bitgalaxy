@@ -12,8 +12,3 @@ scope: core
 	6. [[History]] pile
 2. A [[Card]] in **home** has no [[Side]] or [[End]] [[State]]: its
    pile sets whether it lies face up or face down
-3. [[Galaxy]] **home** consists of:
-	1. [[FutureEvents]] pile
-	2. [[CurrentEvents]] pile
-	3. [[GalaxyDeck]] pile
-	4. [[GalaxyScrap]] pile

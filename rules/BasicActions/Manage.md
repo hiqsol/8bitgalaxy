@@ -8,7 +8,7 @@ aliases: [Rotate, Shift]
 2. **Manage** changes [[Card]]s:
 	1. **Rotate**: to the other [[End]]
 	2. **Shift**:
-		1. A [[Structure]] to another [[Slot]] of its [[IPS]]
+		1. A [[Structure]] to another [[Slot]] of its [[Star]]
 		2. A [[Card]] to another pile of its [[Laboratory]] or
 		   [[Factory]] row, directed to a [[Hub]] that takes it
 3. **Direction**: any [[Star]] to the [[Card]]'s [[Star]], or to a

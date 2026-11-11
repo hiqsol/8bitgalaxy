@@ -178,16 +178,16 @@ full text is in git. RG, PR and F numbers are of
 - [ ] **S68. Hidden in one rule, in `duel`**: a [[Hidden]] [[Card]]
   counts as a [[Level]] 1 [[Card]] of its [[Role]].
 - [ ] **S72. Two Turn phases**: **Play**, then **End**.
-- [ ] **S73. Fewer pages and terms**: one table for [[Card]]
-  properties, one for [[State]]s; [[IPS]], [[Enabled]], [[Direction]],
-  [[Action]] and the [[Power]] pages fold in.
+- [ ] **S73 h.** The LevelClasses and [[Type]]s of the [[Technology]]
+  catalog go, the [[Deck]] holds the assignments, checkdocs drops the
+  cross-check; the catalog format of 2026-10-27 may supersede it.
 - [ ] **I96. [[Archive]] is a working name** for the [[Research]]
   [[Hub]] of the [[Homeworld]].
 - [ ] **S23. Separate usable cards from scoring cards**: [[ActiveFor]]
   becomes "counts for goals".
 - [ ] **S24. One timing rule for passive abilities**: an [[Action]]
   [[Ability]] when its [[Card]] participates, a passive one while it
-  is [[Enabled]], a timed one at its step.
+  is face up, a timed one at its step.
 - [ ] **S32. One meaning of starter**: rename the [[Starter]]
   [[Technology]].
 - [ ] **S35. One build direction**: from the [[Hub]]'s [[Star]] to the

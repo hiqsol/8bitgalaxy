@@ -5,8 +5,8 @@ scope: advanced
 
 1. **Festival** is [[Culture]] [[TechnologyModifier]]
 2. At the **Restore** phase of own [[Turn]] every [[Structure]]
-   [[ControlledBy]] the player becomes [[Ready]] in the [[Star]] of an
-   [[Enabled]] [[Card]] with **Festival** that the player controls,
+   [[ControlledBy]] the player becomes [[Ready]] in the [[Star]] of a
+   face-up [[Card]] with **Festival** that the player controls,
    beyond the 3 [[Restore]]s
 
 #### Notes

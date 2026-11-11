@@ -15,14 +15,16 @@ aliases: [Campaign, Dangerous, Resourceful, Citadel, Senate, Dyson Sphere, Warp 
 	5. [[Objective]]s
 	6. More [[Technology]]s
 	7. [[Hyperstructure]]s
-4. The [[Scenario]] composes the [[GalaxyDeck]], for example:
+4. **Galaxy** [[Home]] consists of the piles [[FutureEvents]],
+   [[CurrentEvents]], [[GalaxyDeck]] and [[GalaxyScrap]]
+5. The [[Scenario]] composes the [[GalaxyDeck]], for example:
 	1. **Dangerous**: hostile [[Ancient]]s and disasters, for a
 	   cooperative or solo game against the **Galaxy**
 	2. **Resourceful**: helpful [[Derelict]]s, [[Tool]]s and positive
 	   [[Event]]s, for quick duels
 	3. **Campaign**: a series of [[GalaxyDeck|Galaxy decks]], one per
 	   game
-5. [[Hyperstructure]] examples, one per [[Class]]:
+6. [[Hyperstructure]] examples, one per [[Class]]:
 	1. **Citadel** - [[Military]]: +3 [[Defense]] to the controller's
 	   [[Card]]s in its [[Star]]
 	2. **Senate** - [[Culture]]: [[Hand]] size +1

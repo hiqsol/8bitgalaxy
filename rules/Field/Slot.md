@@ -5,7 +5,7 @@ aliases: [Pocket, Warp Orbit]
 ---
 
 1. **Slot** aka **pocket** is a **Warp orbit**, a place for one
-   [[Card]] in [[IPS]]
+   [[Card]] in a [[Star]]
 2. [[Card]] in a **slot** shows only the [[End]] that is up, the other
    [[End]] is inside the **Pocket**
 3. **Slots** are shared by all players

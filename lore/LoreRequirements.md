@@ -35,7 +35,7 @@ their Laws tables by number.
 
 ## Required
 
-1. **The tear: few places in a Star**. [[Star#3]], [[IPS#2]],
+1. **The tear: few places in a Star**. [[Star#3]],
    [[Slot#6]]. A whole star system holds only a few [[Card]]s, and a
    [[Card]] can't come in without a free [[Slot]]. Author's idea: a
    [[Slot]] is a [[Warp orbit]], not a gravitational one: ships are
@@ -50,13 +50,13 @@ their Laws tables by number.
 	   upper [[Card]] loses its
 	   [[SecondaryAbility|Secondary Ability]], [[Slot#5]]
 	4. Follows: a wreck keeps its [[Slot]] until it is Destroyed or
-	   [[Enabled]], [[Damaged#5]]
+	   face up, [[Damaged#4]]
 2. **No stop in Space**. [[Space#5]]. [[Card]]s can't stop between
    [[Star]]s, they only pass through.
 	1. Follows: every [[Star]] passed on the way counts in the
 	   [[Distance]]
 3. **Everything is seen**. [[Lore#3]], [[Discard#2]], [[Energy#6]],
-   [[Damaged#6]]. Every [[Action]], every [[Card]] on the [[Field]],
+   [[Damaged#5]]. Every [[Action]], every [[Card]] on the [[Field]],
    the [[Discard]] and the [[Token]]s are open to everyone.
 	1. Follows: hiding takes a [[Technology]], today [[Stealth]]
 	2. Follows: a [[Hidden]] [[Card]] moves as a minimal [[Ship]],
@@ -82,11 +82,11 @@ their Laws tables by number.
    [[Structure]]s and [[Damaged]] [[Card]]s in a [[Star]] belong to
    whoever controls the [[Star]], a front captures nothing.
 	1. Follows: every captured [[Structure]] serves its captor, a
-	   [[Hub]] like any other, [[Hub]] note 1, [[Hyperstructure#11]],
+	   [[Hub]] like any other, [[Hub]] note 1, [[Hyperstructure#6]],
 	   and a captured [[Social]] [[Structure]] scores for it,
 	   [[VictoryPoints#1]]
 	2. Follows: a [[Damaged]] [[Hero]] in a rival's [[Star]] is a
-	   captive, and once it is [[Enabled]] again it is its own
+	   captive, and once it is face up again it is its own
 	   [[Faction]]'s, [[ControlledBy#4]]
 8. **Alive and made**. [[Origin]], [[Hub]], [[Create#3]]. [[Social]]
    [[Card]]s are [[Alive]] and [[Industrial]] [[Card]]s are made, and
@@ -105,7 +105,7 @@ their Laws tables by number.
    reaches and acts like one. Author's idea: [[Hero]]es are living
    beings upgraded with Warp. A [[Faction]] without a living leader
    falls, but it stands again when one of its [[Hero]]es is
-   [[Enabled]] again, by a rival too: [[Recover#Notes#2]].
+   face up again, by a rival too: [[Recover#Notes#2]].
 	1. Follows: the dead are counted, not the living: [[Damaged]], not
 	   yet built, not yet researched, [[PaxGalactica#Notes#3]]
 10. **Home is not everything**. [[PaxGalactica#Notes#4]],
@@ -164,7 +164,7 @@ and must not build on it:
    5 [[Laboratory]] piles. These are core numbers, and any [[Faction]]
    or [[Card]] can change them, see [[Hand#3]], [[Turn#6]]
 2. **The same Deck for Human and Alien**: [[Symmetric]] [[Faction]]s,
-   [[Asymmetric]] ones come later, see [[Faction#5]]
+   [[Asymmetric]] ones come later, see [[Faction#4]]
 3. **Levels 1 to 8 and the crowns**: the top [[Level]] comes from the
    [[Faction]] deck, see [[Singularity#Notes#1]], [[Deck]]
 4. **The Deck's End pairs** 2/1, 4/3, 6/5, 8/7 and the [[Class]] of

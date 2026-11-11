@@ -67,7 +67,7 @@ see [[Deck]]; what to watch is I19 in [[Backlog]].
 
 1. **A wonder changing hands is the best story**: a
    [[Hyperstructure]] works for whoever possesses it, see
-   [[Hyperstructure#11]]
+   [[Hyperstructure#6]]
 2. **The wonder snowball** decides too many games: each
    [[Hyperstructure]]'s Secondary of +5 to +8 [[Power]] pays for the
    next, [[StellarForge]] pays both halves; [[KardashevAscension]] in

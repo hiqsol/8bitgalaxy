@@ -12,7 +12,7 @@ scope: duel
 	   [[Participants]]
 	2. Own [[Participants]] are neither [[Damaged]] nor Destroyed,
 	   they only [[Deplete]]
-	3. A retreating [[Defender]]'s [[Enabled]] [[Unit]]s in the
+	3. A retreating [[Defender]]'s face-up [[Unit]]s in the
 	   target [[Star]] go to its [[Discard]]
 
 #### Notes

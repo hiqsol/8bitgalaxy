@@ -7,7 +7,7 @@ scope: advanced
 2. When a [[Combat]] with a [[Card]] using **Boarding** among the
    winner's [[Participants]] makes rival [[Ship]]s [[Damaged]], the
    winner takes one of them instead: it goes to the winner's
-   [[Discard]], [[Enabled]]
+   [[Discard]]
 
 #### Notes
 

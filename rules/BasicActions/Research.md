@@ -12,4 +12,4 @@ scope: core
 4. **Requirements**: to [[Factory]], the [[Participants]] provide the
    [[Card]]'s [[Prerequisites]]
 5. **Cost**: to [[Factory]], the [[Card]]'s [[Price]] of
-   [[SciencePower]]
+   [[Science power]]

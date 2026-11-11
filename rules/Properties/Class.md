@@ -5,10 +5,10 @@ scope: core
 
 1. **Class** is [[Explicit]] [[Card]] [[Property]]
 2. Each **class** corresponds to the [[Power]] and color:
-	1. 🔴 [[Military]] - [[MilitaryPower]]
-	2. 🟢 [[Culture]] - [[CulturePower]]
-	3. 🟡 [[Production]] - [[ProductionPower]]
-	4. 🔵 [[Science]] - [[SciencePower]]
+	1. 🔴 [[Military]] - [[Military power]]
+	2. 🟢 [[Culture]] - [[Culture power]]
+	3. 🟡 [[Production]] - [[Production power]]
+	4. 🔵 [[Science]] - [[Science power]]
 3. **Class** is independent of [[Origin]] ([[Social]] /
    [[Industrial]])
 4. An [[Actor]] [[Card]] can have a different **class** at each

@@ -7,4 +7,4 @@ scope: core
    [[Level]]
 2. **Capacity** is the total [[Size]] that [[Card]] can carry as
    [[Cargo]] of a [[Move]] or [[Boost]]
-3. Default value = current [[Level]]
+3. Value by [[Type]], see [[Card]]

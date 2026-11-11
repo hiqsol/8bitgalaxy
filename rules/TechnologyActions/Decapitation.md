@@ -4,7 +4,7 @@ scope: advanced
 ---
 
 1. **Decapitation** is [[Military]] [[TechnologyAction]]
-2. **Decapitation** is an [[Attack]] on one rival [[Enabled]]
+2. **Decapitation** is an [[Attack]] on one rival face-up
    [[Hero]] in the target [[Star]]
 3. The [[Attacker]] selects that [[Hero]] as the only defending direct
    participant, see [[Combat]]

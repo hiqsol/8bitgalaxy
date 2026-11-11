@@ -7,7 +7,7 @@ aliases: [Cargo]
 1. **Move** is [[BasicAction]]
 2. **Move** lets [[Card]]s that move on their own, [[Range]] above 0,
    change place:
-	1. Within one [[Star]] system: from one [[IPS]] [[Slot]] to other
+	1. Within one [[Star]]: from one [[Slot]] to another
 	2. From one [[Star]] to another
 3. **Requirements**: [[Range]] only, no [[Power]]
 4. Several [[Card]]s can move together in a [[Group]], see [[Range]]

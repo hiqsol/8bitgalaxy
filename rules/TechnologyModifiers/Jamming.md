@@ -4,7 +4,7 @@ scope: advanced
 ---
 
 1. **Jamming** is [[Military]] [[TechnologyModifier]]
-2. The [[Star]] of an [[Enabled]] [[Card]] with **Jamming** stops the
+2. The [[Star]] of a face-up [[Card]] with **Jamming** stops the
    routes of the rivals of its controller, see [[Distance]] and
    [[ControlledBy]]:
 	1. They can't pass the [[Star]], they can end there

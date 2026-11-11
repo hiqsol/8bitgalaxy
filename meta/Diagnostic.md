@@ -112,7 +112,7 @@ Deferred until the [[Duel]] is clear.
 	- [ ] d) The notes don't decide.
 - **Q51. Derelict recruit cost** (I45 b). A player recruits a
   [[Derelict]] [[Ship]] 4M, [[Price]] 5, with
-  [[CulturePower|Culture power]]. What does it cost?
+  [[Culture power]]. What does it cost?
 	- [ ] a) 4, its current [[Level]].
 	- [ ] b) 5, its [[Price]].
 	- [ ] c) The notes don't decide.

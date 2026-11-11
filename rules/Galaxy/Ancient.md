@@ -4,8 +4,8 @@ scope: core
 aliases: [Ancient deck, Ancient discard]
 ---
 
-1. **Ancient** is a hostile [[Card]] of the [[Galaxy]] [[Faction]]: it
-   defends a [[Wild]] [[Star]]
+1. **Ancient** is a hostile [[Card]] of no [[Faction]]: it defends a
+   [[Wild]] [[Star]]
 2. **Ancient** [[Card]]s form the **Ancient deck**, face down beside
    the [[Field]], the [[Scenario]] composes it
 3. When an [[Attack]] conquers a [[Wild]] [[Star]], **Ancients** come

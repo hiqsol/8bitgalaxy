@@ -6,7 +6,7 @@ scope: duel
 1. **Starter** is [[Culture]] [[TechnologyModifier]]
 2. **Starter** allows a [[Card]] on [[Field]] to be the **starter** of
    an [[Action]], see [[PerformAction]]:
-	1. Its **source** is its own [[IPS]]
+	1. Its **source** is its own [[Star]]
 	2. It is a [[Direct participant]] there and can use all of its
 	   [[Ability|Abilities]]
 	3. It always [[Deplete]]s after the [[Action]], even when it moved

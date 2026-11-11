@@ -30,7 +30,7 @@ liked one gets its [[Level]], [[Class]], kind and [[Card]]s in
     [[Hand]]
 11. **Dyson Collector**: +1 [[Energy]] at [[Restore]] for each
     [[Ready]] [[Structure]] in its [[Star]]
-12. **War Economy**: [[ProductionPower|Production power]] pays
+12. **War Economy**: [[Production power]] pays
     [[Military]] [[Action]]s started in its [[Star]]
 13. **Outpost**: [[Create]] a [[Structure]] into a [[Wild]] [[Star]]
     without a conquest: it gives [[Control]], the [[Star]] stays
