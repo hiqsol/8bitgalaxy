@@ -62,8 +62,8 @@ situations played twice by subagents. [[Cost]]s are in HC, one
 The TBD [[End]]s of the [[Card]]s 6/5 and 8/7 and the
 [[Hyperstructure]] Primaries, 2026-11-07, full text in 56c470f9: four
 variants in 8 games played by hand, full games and **Act II** games
-from a mirrored mid-game. Not applied, the questions are I19 in
-[[Backlog]].
+from a mirrored mid-game. Applied: Crossroads with the snowball fix,
+see [[Deck]]; what to watch is I19 in [[Backlog]].
 
 1. **A wonder changing hands is the best story**: a
    [[Hyperstructure]] works for whoever possesses it, see
@@ -80,30 +80,19 @@ from a mirrored mid-game. Not applied, the questions are I19 in
    of its [[Class]] and 3 of another; with [[Level]] 4 of its own
    [[Class]] only they do by [[Turn]] 8-11
 6. **[[Military]] [[Level]] 6+ [[Card]]s make the best fights**:
-   Boarding, Sabotage, Siege; the [[Ship]] 8M is the late hammer
+   [[Boarding]], Sabotage, [[Siege]]; the [[Ship]] 8M is the late
+   hammer
 7. **[[Culture]] has no way in** without a wider [[Envoy]]: every
    [[GalacticDiaspora]] stalled at 5 of 7 [[Star]]s
 8. **Cheap 2/1 [[Hero]]es** make "no leader" unreachable,
    [[Decapitation]] is never worth it
-
-The proposal, V4 Crossroads: 4 [[Tool]]s, [[Hyperstructure]]s with
-[[ExtraPrice]] 0 (11 and 15), [[Prerequisites]] of a [[Level]] 6
-[[Card]] only [[Level]] 4 of its own [[Class]], [[UnifiedTheory]] for
-[[Prerequisites]] only, and the **snowball fix**: a
-[[Hyperstructure]]'s Secondary gives [[Energy]], +1 on a 6/5, +2 on an
-8/7, [[Strong]] [[End]] only. Untested.
-
-| [[Card]] | [[Strong]] | [[Weak]] |
-|---|---|---|
-| [[Ship]] 6M | **Siege**: the [[Defender]]s lose their [[Plus]] [[Defense]], [[Depleted]] [[Structure]]s defend 0 | (5S) [[Jump]] |
-| [[Ship]] 6P | **Boarding**: as the winner, one rival [[Ship]] that would be [[Damaged]] joins the own [[Discard]] | (5C) [[Settle]] |
-| [[Ship]] 8M | [[Decapitation]] | (7S) [[Barrier]] |
-| [[Hero]] 6C | [[Envoy]], widened to its moving [[Group]] or what it helps [[Create]] | (5M) **Defection**: a rival [[Damaged]] [[Hero]] in a controlled [[Star]] joins the own [[Discard]] |
-| [[Hero]] 6S | [[Invent]] | (5P) [[FieldRepair]] |
-| [[Hero]] 8S | [[UnifiedTheory]], [[Prerequisites]] only | (7M) [[Counterintelligence]] |
-| [[Hyperstructure]] 6M | [[Jamming]] | [[Jamming]] |
-| [[Hyperstructure]] 6P | **Dyson Collector**: +1 [[Energy]] at own [[Restore]], +1 more with 3+ [[Ready]] own [[Structure]]s in its [[Star]] | +1 [[Energy]] |
-| [[Hyperstructure]] 6C | [[Festival]] | [[Festival]] |
-| [[Hyperstructure]] 6S | [[GreatLibrary]] | [[GreatLibrary]] |
-| [[Hyperstructure]] 8C | [[Heritage]] | [[Heritage]] |
-| [[Hyperstructure]] 8P | [[StellarForge]] | [[StellarForge]] |
+9. **Applied, Crossroads**: 4 [[Tool]]s, [[Hyperstructure]]s with
+   [[ExtraPrice]] 0 (11 and 15), [[Prerequisites]] of a [[Level]] 6
+   [[Card]] only [[Level]] 4 of its own [[Class]], a [[Technology]] on
+   both [[End]]s of a [[Level]] 6+ [[Actor]], [[UnifiedTheory]] for
+   [[Prerequisites]] only, [[Envoy]] widened to its [[Action]], the
+   capped [[DysonCollector]], and the **snowball fix**: a
+   [[Hyperstructure]]'s Secondary gives [[Energy]], +1 on a 6/5, +2 on
+   an 8/7. New: [[Siege]], [[Boarding]], [[Defection]],
+   [[DysonCollector]]; the cost of [[Defection]] is not from the
+   study

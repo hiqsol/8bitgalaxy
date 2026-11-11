@@ -22,9 +22,9 @@ aliases: [Crown, Starting cards]
 	4. `2×` - two copies
 3. [[Card]] name is [[Type]] with [[Strong]] [[End]] [[Level]] and
    [[Class]]
-4. **Deck** holds 56 [[Card]]s, counted by the [[Level]] of the
+4. **Deck** holds 52 [[Card]]s, counted by the [[Level]] of the
    [[Strong]] [[End]]:
-	1. Up to [[Level]] 2: 8 [[Ship]]s, 8 [[Tool]]s and 4 each of
+	1. Up to [[Level]] 2: 8 [[Ship]]s, 4 [[Tool]]s and 4 each of
 	   [[Hero]], [[Base]] and [[Colony]]
 	2. [[Level]] 4: 4 each of [[Ship]], [[Hero]], [[Base]] and
 	   [[Colony]]
@@ -35,7 +35,7 @@ aliases: [Crown, Starting cards]
 5. A [[Card]] has its [[Weak]] [[End]] one [[Level]] below its
    [[Strong]] [[End]]: 1/0, 2/1, 4/3, 6/5, 8/7
 6. Every [[Class]] has as many [[End]]s at each [[Level]] as any other
-   [[Class]]: 3 at [[Level]] 0, 7 at [[Level]] 1, 4 at [[Level]]s 2 to
+   [[Class]]: 2 at [[Level]] 0, 6 at [[Level]] 1, 4 at [[Level]]s 2 to
    4, 2 at 5 and 6, 1 at 7 and 8
 7. Every [[Class]] has one [[Level]] 8 [[Card]], its **crown**:
    [[Ship]] 8M, [[Hero]] 8S, [[Hyperstructure]] 8P and
@@ -44,7 +44,7 @@ aliases: [Crown, Starting cards]
    [[Level]] 1, Primary 1, nothing else; the [[Weak]] [[End]] is
    `0+1`, Primary 0, of the [[Class]] of the [[Weak]] [[End]] of the
    [[Ship]] 2/1: 1M/0S, 1C/0M, 1P/0C, 1S/0P, see [[StartDraw]]
-9. **Tools** are 8 [[Card]]s 1/0, two of each [[Class]], made like the
+9. **Tools** are 4 [[Card]]s 1/0, one of each [[Class]], made like the
    **Starting cards** with both [[End]]s of one [[Class]], see
    [[Tool]]
 
@@ -61,9 +61,9 @@ S4+1m/3+2c:    2m Smuggle            / 2c +1c             << *1c *2m
 S4+1c/3+2m:    2c Upgrade            / 2m +1m             << *1m *2c
 S4+1p/3+2s:    2p Upgrade            / 2s +1s             << *1s *2p
 S4+1s/3+2p:    2s Exhaust            / 2p +1p             << *1p *2s
-S6+1m/5+2s:    3m TBD                / 3s +1s             << *3s *4m
-S6+1p/5+2c:    3p TBD                / 3c +1c             << *3c *4p
-S8+1m/7+2s:    4m TBD                / 4s +1s             << *4c *4s *6m
+S6+1m/5+2s:    3m Siege              / 3s Jump            << *4m
+S6+1p/5+2c:    3p Boarding           / 3c Settle          << *4p
+S8+1m/7+2s:    4m Decapitation       / 4s Barrier         << *4c *4s *6m
 
 H2+1m/1+1c:    2m Explore            / 2c Upgrade
 H2+1c/1+1p:    2c Recover            / 2p Upgrade
@@ -73,9 +73,9 @@ H4+1m/3+1p:    3m Stealth            / 3p Recover+Upgrade << *1p *2m
 H4+1c/3+1s:    3c Recover+Upgrade    / 3s Navigation      << *1s *2c
 H4+1p/3+1m:    3p Upgrade            / 3m Stealth         << *1m *2p
 H4+1s/3+1c:    3s Navigation         / 3c Upgrade         << *1c *2s
-H6+1c/5+1m:    4c TBD                / 4m TBD             << *3m *4c
-H6+1s/5+1p:    4s TBD                / 4p TBD             << *3p *4s
-H8+1s/7+1m:    5s TBD                / 5m TBD             << *4m *4p *6s
+H6+1c/5+1m:    4c Envoy              / 4m Defection       << *4c
+H6+1s/5+1p:    4s Invent             / 4p FieldRepair     << *4s
+H8+1s/7+1m:    5s UnifiedTheory      / 5m Counterintelligence << *4m *4p *6s
 
 B2+1m/1+1m:    Militarization+1d +1m / Militarization
 B2+1c/1+1c:    Trade +1c             / Trade
@@ -95,53 +95,57 @@ C4+1c/3+1c:    Export +4c            / Export             << *2c
 C4+1p/3+1p:    MegaYard +4p          / MegaYard           << *2p
 C4+1s/3+1s:    +3r +4s               / +1r                << *2s
 
-HS6+1m/5+1m:   TBD +6m               / TBD                << *4m
-HS6+1p/5+1p:   TBD +6p               / TBD                << *4p
-HS6+1c/5+1c:   TBD +5c               / TBD                << *4c
-HS6+1s/5+1s:   TBD +5s               / TBD                << *4s
-HS8+1c/7+1c:   TBD +8c               / TBD                << *4m *4p *6c
-HS8+1p/7+1p:   TBD +7p               / TBD                << *4c *4s *6p
+HS6+0m/5+0m:   Jamming +1e           / Jamming            << *4m
+HS6+0p/5+0p:   DysonCollector +1e    / DysonCollector     << *4p
+HS6+0c/5+0c:   Festival +1e          / Festival           << *4c
+HS6+0s/5+0s:   GreatLibrary +1e      / GreatLibrary       << *4s
+HS8+0c/7+0c:   Heritage +2e          / Heritage           << *4m *4p *6c
+HS8+0p/7+0p:   StellarForge +2e      / StellarForge       << *4c *4s *6p
 
-2× T1+0m/0+1m: 1m                    / 0m
-2× T1+0c/0+1c: 1c                    / 0c
-2× T1+0p/0+1p: 1p                    / 0p
-2× T1+0s/0+1s: 1s                    / 0s
+T1+0m/0+1m:    1m                    / 0m
+T1+0c/0+1c:    1c                    / 0c
+T1+0p/0+1p:    1p                    / 0p
+T1+0s/0+1s:    1s                    / 0s
 ```
 
 #### Notes
 
-1. [[Card]]s without TBD are imported from the legacy code
+1. The [[Card]]s up to [[Level]] 4 are imported from the legacy code
    (`legacy/src/legacy/js/Model/Decks/Human.js`), to be reviewed,
-   except the [[Ship]]s 1/0 and the values set by the patterns; TBD is
-   a value still to design, the TBD [[End]]s are for the `+Draw`
-   [[Plus]] and planned [[Technology|Technologies]], see
-   [[Technology]]
+   except the [[Ship]]s 1/0 and the values set by the patterns; the
+   [[Card]]s 6/5 and 8/7 are the Crossroads variant, still unplayed in
+   a full [[Duel]]
 2. Patterns:
 	1. [[Actor]]s: Primary is [[Power]], Secondary is `+1` or
-	   [[Technology]], [[End]]s have different [[Class]]es
+	   [[Technology]], a [[Technology]] on both [[End]]s from
+	   [[Level]] 6, [[End]]s have different [[Class]]es
 	2. [[Structure]]s: Primary is [[Technology]] or a non-[[Power]]
 	   [[Plus]] at both [[End]]s, Secondary is [[Power]] at [[Strong]]
 	   [[End]] only, both [[End]]s have the same [[Class]]: a
 	   [[Depleted]] [[Structure]] keeps the [[Technology]] but gives
-	   no [[Power]]
+	   no [[Power]]; a [[Hyperstructure]]'s Secondary is [[Energy]]
+	   instead, `+1e` on a 6/5, `+2e` on an 8/7
 	3. [[Ship]] [[End]]s have equal [[Level]] + ExtraPrice, so
 	   [[Size]] doesn't change with rotation
 	4. [[Ship]] Primary is half the [[Strong]] [[Level]], [[Hero]]
 	   Primary one more, at both [[End]]s, above 1/0
-	5. [[Prerequisites]] below the **Crowns**: none up to [[Level]] 2,
-	   then the [[Strong]] [[Level]] − 2 of the [[Strong]] [[End]]'s
-	   [[Class]], plus for an [[Actor]] the [[Strong]] [[Level]] − 3
-	   of the [[Weak]] [[End]]'s [[Class]]
+	5. [[Prerequisites]] below the **Crowns**: none up to [[Level]] 2;
+	   for a [[Level]] 4 [[Card]] [[Level]] 2 of the [[Strong]]
+	   [[End]]'s [[Class]], plus for an [[Actor]] [[Level]] 1 of the
+	   [[Weak]] [[End]]'s [[Class]]; for a [[Level]] 6 [[Card]]
+	   [[Level]] 4 of its [[Strong]] [[End]]'s [[Class]] only
 	6. A **Crown** needs [[Level]] 6 of its [[Class]] and [[Level]] 4
 	   of two other [[Class]]es: three [[Participants]]
 	7. [[Price]] of a [[Card]] is its [[Strong]] [[Level]] + 1: 3, 5,
-	   7, 9; a [[Card]] 1/0 costs 1
+	   7, 9; a [[Card]] 1/0 costs 1; a [[Hyperstructure]] has
+	   [[ExtraPrice]] 0, both [[Create]]s cost 11 for a 6/5, 15 for an
+	   8/7
 	8. [[Base]] Secondary is the [[Strong]] [[Level]] − 1 and
 	   [[Colony]] Secondary equals the [[Strong]] [[Level]]
 3. From [[Level]] 4 each [[Strong]] [[Level]] holds half the [[Card]]s
    of the one below, like the Trade Deck of Star Realms above
    cost 2: big [[Card]]s are few, decisive and contested. The
-   [[Card]]s 1/0, 4 [[Ship]]s and 8 [[Tool]]s, are added for the
+   [[Card]]s 1/0, 4 [[Ship]]s and 4 [[Tool]]s, are added for the
    starting deck
 4. [[End]]s balance the [[Class]]es, not [[Strong]] [[End]]s: an
    [[Actor]] gives a [[Level]] of its [[Weak]] [[End]]'s [[Class]]

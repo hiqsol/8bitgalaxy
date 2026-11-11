@@ -293,7 +293,7 @@ Made before play where the docs were silent, in `RULES.md` section 11:
   0 and are Destroyed: [[Damaged#7]], with [[Defense]] 1.
 - PR-18 cap at 40 [[Turn]]s: playtest only.
 
-Also used: Guidance G1–G9 as then drafted.
+Also used: [[Guidance]] G1–G9 as then drafted.
 
 ## 6. Questions for you
 

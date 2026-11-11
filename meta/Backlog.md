@@ -37,8 +37,8 @@ Reopen one only with evidence from a played game, not from a review.
     (P62, S69), see [[Defense]]
 12. **Academy defenders** stay in `duel` (S25 b, I76 c), see
     [[Academy]]
-13. **Technologies without cards** go on the TBD [[End]]s of the 6/5
-    and 8/7 [[Card]]s (P25), see [[Technology]]
+13. **Technologies without cards** go on the 6/5 and 8/7 [[Card]]s
+    (P25), the Crossroads variant of the [[Deck]] study, see [[Deck]]
 14. **`X+Y` power** stays, though no [[Card]] prints `+Y` (S58 a)
 15. **Hubs**: no global [[Hub]], a [[Faction]] without one captures
     one (I19 d), see [[Hub]]
@@ -103,6 +103,19 @@ Reopen one only with evidence from a played game, not from a review.
   [[Militarization]] [[Card]]s was set for [[Defense]] 1, but
   [[Military]] [[Card]]s defend with their [[Level]]: revise the
   values?
+- [ ] **I19. Crossroads deck**, the 6/5 and 8/7 [[Card]]s of the
+  [[Deck]] study, applied untested, see [[Studies]]; play it in Act
+  II, Industrialist against Warlord:
+	- f) The snowball: does a [[Hyperstructure]]'s [[Energy]]
+	  Secondary stop each wonder paying for the next one?
+	- h) [[Envoy]]: is its widened [[Action]] enough for
+	  [[GalacticDiaspora]], or should it need 6 of 7 [[Star]]s?
+	- i) [[Tool]]s: with 4, do a builder's [[Hand]]s repeat by
+	  [[Turn]] 16?
+	- j) [[Siege]]: too much or too little?
+	- k) [[PaxGalactica|Pax]]: cheap 2/1 [[Hero]]es make "no leader"
+	  unreachable; fall by the home [[Star]], or raised [[Hero]]es
+	  cost more?
 - [ ] **P66. Weak Structure ends** have no [[SecondaryAbility]]:
 	- a) One less than the [[Strong]] [[End]]'s: [[Colony]] 2x +1,
 	  [[Base]] 4x +2, [[Colony]] 4x +3.
@@ -111,25 +124,6 @@ Reopen one only with evidence from a played game, not from a review.
 
 ## After the first duel
 
-- [ ] **I19. Deck review.** The 12 [[Card]]s 6/5 and 8/7 are TBD in
-  the [[Deck]], see B4 in [[Guidance]]; the [[Deck]] study and its V4
-  proposal are in [[Studies]]:
-	- e) Apply V4 with the snowball fix, then play it: Act II,
-	  Industrialist against Warlord.
-	- f) The snowball: the Secondary in [[Energy]] (recommended), or a
-	  [[Hyperstructure]]'s [[Power]] can't pay a [[Hyperstructure]],
-	  or [[StellarForge]] needs an own [[Academy]], or
-	  [[KardashevAscension]] counts only [[Ready]] ones.
-	- g) [[Prerequisites]] of a [[Level]] 6 [[Card]]: [[Level]] 4 of
-	  its own [[Class]] only?
-	- h) [[Envoy]]: its whole moving [[Group]], or it can't be
-	  attacked while it gives no [[Control]], or [[GalacticDiaspora]]
-	  needs 6 of 7 [[Star]]s?
-	- i) [[Tool]]s: 4, 6 or 8?
-	- j) Siege: do [[Depleted]] [[Structure]]s defend 0?
-	- k) [[PaxGalactica|Pax]]: cheap 2/1 [[Hero]]es make "no leader"
-	  unreachable; fall by the home [[Star]], or raised [[Hero]]es
-	  cost more?
 - [ ] **I47. Images.** Update `card.png` once the [[Card]] data
   settles.
 - [ ] **P57. Economy roles**, `advanced`: [[Goods]] pay builds at a

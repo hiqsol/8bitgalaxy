@@ -3,12 +3,12 @@ status: stable
 scope: duel
 ---
 
-1. [[Reserve]]: 18 [[Unit]] [[Card]]s, shuffled
+1. [[Reserve]]: 14 [[Unit]] [[Card]]s, shuffled
 	1. 8 [[Ship]]s: [[Ship]] 1M, 1C, 1P, 1S, the [[Starting cards]] of
 	   the [[Deck]], and [[Ship]] 2M, 2C, 2P, 2S
 	2. 2 [[Hero]]es 2/1 of the player's choice, from the four of the
 	   [[Deck]]
-	3. 8 [[Tool]]s 1/0, two of each [[Class]]
+	3. 4 [[Tool]]s 1/0, one of each [[Class]]
 2. [[Hand]]: [[DeckBuilding|Draw]] from [[Reserve]]
 	1. First player, chosen at random: 3 [[Card]]s
 	2. Other players: full [[Hand]]
