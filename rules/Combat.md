@@ -1,5 +1,5 @@
 ---
-status: issues
+status: draft
 scope: core
 aliases: [Combat Round, Attacker, Defender, Advantage, Combat power]
 ---

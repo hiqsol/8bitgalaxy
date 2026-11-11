@@ -49,9 +49,9 @@ situations played twice by subagents. [[Cost]]s are in HC, one
    [[ForceDiscard]] became a blockade, the rival discards a [[Card]]
    that defends with 0
 9. **Applied**: [[Combat#9]]-12, the margin and **Rout** in **Combat
-   power**, the winner of a **Rout** may keep a [[Hero]] as a captive;
-   a retreat loses as by a **Rout**, see [[Retreat]]; no move, not an
-   empty [[Hand]], makes a [[Faction]] [[Fallen]]
+   power**, the winner of a **Rout** may keep a [[Hero]] [[Damaged]],
+   a captive; a retreat loses as by a **Rout**, see [[Retreat]]; no
+   move, not an empty [[Hand]], makes a [[Faction]] [[Fallen]]
 10. **Rejected**: a reserve capped by the garrison, a withdraw for
     every side, a repair yard that [[Recover]]s a whole [[Star]]
 11. **Watch in playtest**: [[Attack]]s per game, the model expects one

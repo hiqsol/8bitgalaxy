@@ -38,7 +38,7 @@ Reopen one only with evidence from a played game, not from a review.
 12. **Academy defenders** stay in `duel` (S25 b, I76 c), see
     [[Academy]]
 13. **Technologies without cards** go on the 6/5 and 8/7 [[Card]]s
-    (P25), the Crossroads variant of the [[Deck]] study, see [[Deck]]
+    (P25): the Crossroads variant, see [[Deck]], [[Studies]]
 14. **`X+Y` power** stays, though no [[Card]] prints `+Y` (S58 a)
 15. **Hubs**: no global [[Hub]], a [[Faction]] without one captures
     one (I19 d), see [[Hub]]
@@ -103,9 +103,9 @@ Reopen one only with evidence from a played game, not from a review.
   [[Militarization]] [[Card]]s was set for [[Defense]] 1, but
   [[Military]] [[Card]]s defend with their [[Level]]: revise the
   values?
-- [ ] **I19. Crossroads deck**, the 6/5 and 8/7 [[Card]]s of the
-  [[Deck]] study, applied untested, see [[Studies]]; play it in Act
-  II, Industrialist against Warlord:
+- [ ] **I19. Crossroads deck**: the 6/5 and 8/7 [[Card]]s of the
+  [[Deck]], applied untested, see [[Studies]]; play it in Act II,
+  Industrialist against Warlord:
 	- f) The snowball: does a [[Hyperstructure]]'s [[Energy]]
 	  Secondary stop each wonder paying for the next one?
 	- h) [[Envoy]]: is its widened [[Action]] enough for
@@ -133,12 +133,12 @@ Reopen one only with evidence from a played game, not from a review.
   define conversion once in [[Goods]].
 - [ ] **I43. Objectives details**: a) the list, c) points of a
   [[Public objective]].
-- [ ] **I44. Politics details**: a) [[StrategyCard]] roles,
-  b) [[PromissoryNote]] gains, c) whether it returns.
-- [ ] **I45. Derelict details**: a) the [[Star]] it enters, b) the
-  recruit [[Cost]].
-- [ ] **I89. Galaxy flow**, see P68: a) when and by whom the
-  [[GalaxyMove]] is made, b) when [[FutureEvents]] are evaluated,
+- [ ] **I44. Politics details**, see [[Politics]]: a) [[StrategyCard]]
+  roles, b) [[PromissoryNote]] gains, c) whether it returns.
+- [ ] **I45. Derelict details**, see [[Derelict]]: a) the [[Star]] it
+  enters, b) the recruit [[Cost]].
+- [ ] **I89. Galaxy flow**, see [[Galaxy]], P68: a) when and by whom
+  the [[GalaxyMove]] is made, b) when [[FutureEvents]] are evaluated,
   c) [[CurrentEvents]] and [[GalaxyScrap]] unused.
 - [ ] **P68. Galaxy events like Through the Ages**: the
   [[GalaxyMove]] opens each [[Turn]]; the player prepares one
@@ -192,8 +192,8 @@ full text is in git. RG, PR and F numbers are of
 - [ ] **S74. Bigger cuts**, speculative: [[Restore]] every
   [[Structure]]; a lost [[Card]] is Destroyed at once; one contact
   rule for [[Pinning]] and [[Intercept]]; no [[Cargo]].
-- [ ] **I96. Archive is a working name** for the [[Research]] [[Hub]]
-  of the [[Homeworld]].
+- [ ] **I96. [[Archive]] is a working name** for the [[Research]]
+  [[Hub]] of the [[Homeworld]].
 - [ ] **S23. Separate usable cards from scoring cards**: [[ActiveFor]]
   becomes "counts for goals".
 - [ ] **S24. One timing rule for passive abilities**: an [[Action]]

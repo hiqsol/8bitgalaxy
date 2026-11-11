@@ -18,9 +18,8 @@ aliases: [Heal, Fix]
 
 #### Notes
 
-1. **Recover** answers the check of [[PaxGalactica|Pax Galactica]]: a
-   player whose last [[Hero]] got [[Damaged]] has one [[Turn]] to
-   **Recover** it
+1. **Recover** answers the check of [[PaxGalactica|Pax Galactica]],
+   see [[PaxGalactica#Notes#2]]
 2. **Recover** takes any [[Damaged]] [[Card]], a rival's too: a
    **Heal** of a captured [[Hero]] of a [[Fallen]] [[Faction]] brings
    that [[Faction]] back
