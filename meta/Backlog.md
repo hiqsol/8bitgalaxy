@@ -84,6 +84,9 @@ Reopen one only with evidence from a played game, not from a review.
 35. **Destroy**: a player [[Card]], a [[Tool]] too, to the top of a
     [[Factory]] pile, any other under its deck (S59 b), see
     [[Destroy]]
+36. **Rejected simplifications**: S61 [[Attack]] as a [[Move]] that
+    must win, S62 [[Move]] within a [[Star]] for every [[Card]], S74
+    the bigger cuts, S47 one [[Home]] pile table
 
 ## Next step
 
@@ -158,11 +161,6 @@ From the 2026-10-25 review of `core`, parked until the first duel; the
 full text is in git. RG, PR and F numbers are of
 [[FirstDuelPlaytest]].
 
-- [ ] **S53. Deplete by Role**: a [[Structure]] participant always
-  [[Deplete]]s, a [[Unit]] [[Direct participant]] holds its [[Slot]],
-  other [[Unit]]s go to [[Discard]]. Recommended.
-- [ ] **S55. Control by Unit**: [[Control]] levels [[Structure]],
-  [[Unit]]; [[Control]] merges into [[ControlledBy]].
 - [ ] **S56. Class handles only Structures as cargo**, any [[Ship]]
   carries the rest. Recommended.
 - [ ] **S57. One weight, one price**: [[Size]] is the current
@@ -170,18 +168,12 @@ full text is in git. RG, PR and F numbers are of
   [[ExtraPrice]] goes.
 - [ ] **S58 c.** [[Create]] makes only [[Card]]s with a [[Level]] 1
   [[End]], higher ones come by [[Upgrade]].
-- [ ] **S61. Attack is a Move that must win**: [[Intercept]] and
-  [[Pinning]]'s finish go.
-- [ ] **S62. Move within a Star for every card**, [[Manage]]
-  [[Shift]] between [[Slot]]s goes.
 - [ ] **S63. One way to move a Laboratory card**: [[Research]]'s pile
   move goes, or no [[Shift]] between piles at all.
 - [ ] **S64. Energy as open wild power**: [[Energy]] lies open, pays
   any [[Power]], [[Boost]] and [[Resource]] go.
 - [ ] **S65. Range and Capacity aren't the one Ability** of a
   [[Supporter]], or a [[Hand]] [[Card]] gives neither.
-- [ ] **S66. Destination cards add Range** to any [[Action]], not only
-  a [[Move]].
 - [ ] **S67. Immediate is a technology**, not an [[Action]].
 - [ ] **S68. Hidden in one rule, in `duel`**: a [[Hidden]] [[Card]]
   counts as a [[Level]] 1 [[Card]] of its [[Role]].
@@ -189,9 +181,6 @@ full text is in git. RG, PR and F numbers are of
 - [ ] **S73. Fewer pages and terms**: one table for [[Card]]
   properties, one for [[State]]s; [[IPS]], [[Enabled]], [[Direction]],
   [[Action]] and the [[Power]] pages fold in.
-- [ ] **S74. Bigger cuts**, speculative: [[Restore]] every
-  [[Structure]]; a lost [[Card]] is Destroyed at once; one contact
-  rule for [[Pinning]] and [[Intercept]]; no [[Cargo]].
 - [ ] **I96. [[Archive]] is a working name** for the [[Research]]
   [[Hub]] of the [[Homeworld]].
 - [ ] **S23. Separate usable cards from scoring cards**: [[ActiveFor]]
@@ -199,20 +188,12 @@ full text is in git. RG, PR and F numbers are of
 - [ ] **S24. One timing rule for passive abilities**: an [[Action]]
   [[Ability]] when its [[Card]] participates, a passive one while it
   is [[Enabled]], a timed one at its step.
-- [ ] **S25. Home cards have no Field state**: in [[Home]] the pile
-  sets visibility.
-- [ ] **S31. One verb for each build action**: [[Create]] and
-  [[Recover]], flavour names in art only.
 - [ ] **S32. One meaning of starter**: rename the [[Starter]]
   [[Technology]].
-- [ ] **S33. Drop worker placement from the genre** in [[index]], as
-  [[ComparisonReview]] says.
 - [ ] **S35. One build direction**: from the [[Hub]]'s [[Star]] to the
   [[Card]]'s, stated once in [[Hub]].
 - [ ] **S41. End of a face-down card** is its [[Weak]] [[End]].
 - [ ] **S42. One list of what a card gives** in [[Ability]].
   Recommended.
-- [ ] **S47. One Home pile table** in [[Home]]: owner, face up or
-  down, who sees it; a [[Card]] put into a pile goes on top.
 - [ ] **S52. Traits in core**: [[Trait]] and [[NoSupport]] to
   `advanced`, or wait for P58.

@@ -54,7 +54,7 @@ C2s on top.
 ### Turns 1 and 2
 
 A has no [[Explore]] in a 3-[[Card]] [[Hand]] and takes off three
-[[Ship]]s. B [[Raise]]s
+[[Ship]]s. B [[Create|Raise]]s
 C2s and uses it at once to [[Research]] C4s.
 
 ```text
@@ -81,7 +81,7 @@ C2s and uses it at once to [[Research]] C4s.
 
 B [[Grow]]s C2s into C4s for 2 [[Culture]]: +3 [[Science]] for every
 later
-[[Research]]. A [[Explore]]s S00o3 and [[Raise]]s C2m.
+[[Research]]. A [[Explore]]s S00o3 and [[Create|Raise]]s C2m.
 
 ```text
 3. A, Energy 2
@@ -111,8 +111,8 @@ later
 
 ### Turns 5 and 6
 
-B [[Research]]es and [[Produce]]s S4m in one [[Turn]]. A [[Explore]]s
-S00o4 and fills its home [[Structure]] row with B2m.
+B [[Research]]es and [[Create|Produce]]s S4m in one [[Turn]]. A
+[[Explore]]s S00o4 and fills its home [[Structure]] row with B2m.
 
 ```text
 5. A, Energy 1
@@ -144,7 +144,7 @@ S00o4 and fills its home [[Structure]] row with B2m.
 ### Turns 7 and 8
 
 A pays 7 to find the [[Shipyard]] [[Star]] at S01, three [[Ancient]]s.
-B [[Produce]]s
+B [[Create|Produce]]s
 B4p: P4 on the [[Field]].
 
 ```text
@@ -208,7 +208,7 @@ takes off: M4 on the [[Field]]. A [[Explore]]s both [[Space]]s to S10.
 ### Turns 11 and 12
 
 A beats the three [[Ancient]]s 9:3 and holds the [[Shipyard]]
-[[Star]]. B [[Produce]]s
+[[Star]]. B [[Create|Produce]]s
 S4c, the last [[Level]]-4 [[Card]], into its [[Discard]].
 
 ```text

@@ -9,4 +9,4 @@ scope: duel
 
 #### Notes
 
-1. An [[Academy]] that also [[Heal]]s
+1. An [[Academy]] that also [[Recover]]s

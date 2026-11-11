@@ -69,7 +69,7 @@ support all three:
    [[Disputed]] front.
 3. **Captured Structures**: every [[Structure]] in a [[Star]] serves
    whoever controls the [[Star]] ([[ControlledBy#3]]). The captor
-   [[Raise]]s its own leaders at your [[Academy]], and your
+   [[Create|Raise]]s its own leaders at your [[Academy]], and your
    [[Colony|Colonies]] score for it ([[VictoryPoints]]).
 4. **Great battles**: [[Combat]] (on hold) already gives rounds,
    bluffs with [[Hidden]] [[Card]]s placed by [[Stealth]], the tie to
@@ -90,8 +90,8 @@ not in the [[Backlog]] yet:
 
 1. **Homeworld Level**: [[Homeworld]] prints no [[Level]] or
    [[Price]], so [[Homefall]] doesn't name the cost of rebuilding it.
-2. **Recover Class**: which [[Class]] pays a [[Heal]] or a [[Fix]],
-   and which [[End]] comes up afterward?
+2. **Recover Class**: which [[Class]] pays a [[Recover|Heal]] or a
+   [[Recover|Fix]], and which [[End]] comes up afterward?
 3. **No exchange**: there is no ransom, prisoner exchange or [[Card]]
    trade between [[Faction]]s. [[EarlyIdeas]] has the Prisoner and
    Convoy seeds.

@@ -43,7 +43,8 @@ aliases: [Participants, Direct participant, Targets, Group, Requirements, Declar
 	   [[Distance]] from its [[IPS]] must be within the **Group**'s
 	   [[Range]], see [[Range]]
 	5. [[Card]]s in the [[Destination]] are **Direct participants**
-	   without a [[Range]] check
+	   without a [[Range]] check, they add their [[Range]] to the
+	   [[Source]] **Group**
 5. Every [[Action]] goes in steps:
 	1. **Declare** the [[Starter]], the [[Action]] and its
 	   **Direction**
@@ -62,8 +63,8 @@ aliases: [Participants, Direct participant, Targets, Group, Requirements, Declar
    [[Ability|Abilities]]; [[Card]]s from [[Hand]], and from other
    [[Star]]s within [[Range]], help with one [[Ability]] each. Their
    [[Ability|Abilities]] must cover the **Requirements**. Then the
-   used [[Card]]s [[Deplete]], except those that moved or fought; the
-   [[Starter]] always does.
+   used [[Card]]s [[Deplete]], except [[Unit]]s that moved or fought;
+   the [[Starter]] always does.
 2. A failed [[Action]] costs all its [[Card]]s: the player usually
    knows the [[Cost]] before starting, e.g. the [[Price]] of a
    [[Card]] to [[Create]], but not of every [[Action]]

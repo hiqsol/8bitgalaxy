@@ -5,7 +5,7 @@ scope: advanced
 
 1. **Occupation** is [[Military]] [[TechnologyModifier]]
 2. An own [[Enabled]] [[Military]] [[Actor]] with **Occupation** gives
-   its [[Faction]] a [[Control]] level above **Actor** in its
+   its [[Faction]] a [[Control]] level above **Unit** in its
    [[Star]]: **Occupation**
 
 #### Notes

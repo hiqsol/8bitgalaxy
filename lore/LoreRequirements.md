@@ -88,7 +88,7 @@ their Laws tables by number.
 	2. Follows: a [[Damaged]] [[Hero]] in a rival's [[Star]] is a
 	   captive, and once it is [[Enabled]] again it is its own
 	   [[Faction]]'s, [[ControlledBy#3]]
-8. **Alive and made**. [[Origin]], [[Hub]], [[Create#4]]. [[Social]]
+8. **Alive and made**. [[Origin]], [[Hub]], [[Create#3]]. [[Social]]
    [[Card]]s are [[Alive]] and [[Industrial]] [[Card]]s are made, and
    each kind needs its own [[Hub]]. The living are created only at the
    first [[Level]].

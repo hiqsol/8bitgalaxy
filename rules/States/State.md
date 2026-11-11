@@ -5,7 +5,8 @@ scope: core
 
 1. **State** is a condition of a [[Card]] or a [[Star]]
 2. [[Card]] **States** shown by [[Side]] and [[End]]: [[Enabled]], for
-   a [[Structure]] [[Ready]] or [[Depleted]], [[Damaged]], [[Hidden]]
+   a [[Structure]] [[Ready]] or [[Depleted]], [[Damaged]], [[Hidden]];
+   only a [[Card]] on the [[Field]] has them
 3. [[Card]] **States** relative to a [[Faction]] or player:
 	1. [[ActiveFor]]
 	2. [[ControlledBy]]

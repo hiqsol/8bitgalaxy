@@ -59,7 +59,7 @@ Both reordered their [[Factory]] [[Colony]] piles.
 
 ### Turns 1 and 2
 
-Both [[Raise]] a C2m at home. B [[Explore]]s S12o7.
+Both [[Create|Raise]] a C2m at home. B [[Explore]]s S12o7.
 
 ```text
 1. A, Energy 1
@@ -87,8 +87,8 @@ Both [[Raise]] a C2m at home. B [[Explore]]s S12o7.
 
 ### Turns 3 and 4
 
-A [[Raise]]s C2s: its home [[Structure]] row is full. B [[Research]]es
-C4c onto its [[Colony]] pile and buries C2p under it.
+A [[Create|Raise]]s C2s: its home [[Structure]] row is full. B
+[[Research]]es C4c onto its [[Colony]] pile and buries C2p under it.
 
 ```text
 3. A, Energy 2
@@ -117,7 +117,7 @@ C4c onto its [[Colony]] pile and buries C2p under it.
 
 A [[Research]]es C4m and [[Grow]]s C2m into it. B [[Grow]]s C2m into
 C4c and
-[[Raise]]s the returned C2m again.
+[[Create|Raise]]s the returned C2m again.
 
 ```text
 5. A, Energy 3
@@ -213,9 +213,8 @@ where nothing overlaps it.
 ### Turns 11 and 12
 
 A finds the [[Military]] [[Star]] S01. B finds the [[Defense]]
-[[Star]] S20, beats its
-[[Ancient]], moves S2m in and [[Raise]]s a C2m there, all in one
-[[Turn]].
+[[Star]] S20, beats its [[Ancient]], moves S2m in and
+[[Create|Raise]]s a C2m there, all in one [[Turn]].
 
 ```text
 11. A, Energy 1
@@ -283,8 +282,9 @@ A beats the two [[Ancient]]s of S01 and holds it with S1m/2c. B
 
 ### Turns 15 and 16
 
-A [[Raise]]s C2s at S01. B finds the [[Science]] [[Star]] S10 at
-[[Distance]] 4, beats its [[Ancient]]s 9:3 and sits next to A's home.
+A [[Create|Raise]]s C2s at S01. B finds the [[Science]] [[Star]] S10
+at [[Distance]] 4, beats its [[Ancient]]s 9:3 and sits next to A's
+home.
 
 ```text
 15. A, Energy 1
@@ -318,7 +318,7 @@ A [[Raise]]s C2s at S01. B finds the [[Science]] [[Star]] S10 at
 ### Turns 17 and 18
 
 A [[Research]]es C4s and [[Grow]]s its S01 [[Colony]] into it. B
-[[Raise]]s two
+[[Create|Raise]]s two
 [[Colony|Colonies]] at S10 from home.
 
 ```text
@@ -420,9 +420,9 @@ C2s into C4m.
 
 ### Turns 23 and 24
 
-A [[Produce]]s S4p into a tiny [[Discard]] and [[Draw]]s it. B has all
-four C4
-[[Colony|Colonies]] on the [[Field]], but used C4s for [[Range]]:
+A [[Create|Produce]]s S4p into a tiny [[Discard]] and [[Draw]]s it. B
+has all four C4 [[Colony|Colonies]] on the [[Field]], but used C4s for
+[[Range]]:
 [[Level]] 3 at the [[Check]].
 
 ```text

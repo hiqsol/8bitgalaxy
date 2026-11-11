@@ -465,13 +465,13 @@ I have marked the page.
 | The winner's warship moves in, standing its ground | [[Combat#9.3]], [[Deplete#Notes#1]] |
 | The holder holds the struck | [[ControlledBy#3]] |
 | Rendering: the rank into goods, the warrant destroyed | [[Recycle]] |
-| A destroyed leader can't be issued again at rank | [[Destroy]], [[Create#4]], [[Upgrade#5.4]] |
+| A destroyed leader can't be issued again at rank | [[Destroy]], [[Create#3]], [[Upgrade#5.4]] |
 | Five seats, dealt at the end, unknown order | [[Hand#3]], [[Turn#5]], [[DeckBuilding]] |
 | The storm: a tie goes to the holder | [[Combat#8.3]], on hold |
 | *Sparrow* would be answered on entering, before any other order | [[Intercept#2]] |
 | No ransom of warrants | none: the rules have no [[Card]] exchange |
 | A remedy is not halted | [[Pinning#2.1]] |
-| A remedy goes to the struck, fee is its full price | [[Recover#3]] to 5 |
+| A remedy goes to the struck, fee is its full price | [[Recover#2]] to 4 |
 | A leader is held by its own candidacy unless struck | [[ControlledBy#3]] |
 | Posting to One-Zero, acting at once | [[Takeoff]] |
 | Noor works with everything, *Sparrow* lends one | [[PerformAction#2]], [[Support#2]] |
@@ -487,6 +487,6 @@ I have marked the page.
 | A contested post can be fought from inside | [[Attack#3]], [[Disputed#Notes#1]] |
 
 **Assumptions the rules don't settle:** [[Recover]] doesn't say which
-[[Class]] pays, so the story pays a [[Heal]] in [[Culture]], like
-[[Grow]]. It doesn't say which [[End]] comes up either. See the
+[[Class]] pays, so the story pays a [[Recover|Heal]] in [[Culture]],
+like [[Grow]]. It doesn't say which [[End]] comes up either. See the
 questions in [[LoreVariants]].

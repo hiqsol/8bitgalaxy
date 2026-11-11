@@ -50,7 +50,7 @@ scope: core
    duel +[[Level]]: replaces a [[Card]] on the [[Field]] with a higher
    [[Card]] of its [[Type]]
 8. [[MegAcad]]: 4c - [[Social Hub]] - [[Base]] - Player -
-   duel An [[Academy]] that also [[Heal]]s
+   duel An [[Academy]] that also [[Recover]]s
 9. [[Express]]: 6c - Modifier - [[Hero]] - Player - duel
    [[Create]] puts new [[Actor]]s on top of the [[Reserve]]
 10. [[Starter]]: 6c - Modifier - [[Hero]] - Player - duel
@@ -87,7 +87,7 @@ scope: core
     around it, for every [[Range]] check
 23. [[Occupation]]: 6m - Modifier - [[Ship]] - Player - advanced
     +[[Control]]: an own [[Military]] [[Actor]] gives a [[Control]]
-    level above [[Actor]]
+    level above [[Unit]]
 24. [[Raid]]: 6m - [[Action]] - [[Ship]] - Player - advanced
     An [[Attack]] whose winners stay home: takes the [[Goods]] or
     [[Deplete]]s the [[Structure]]s

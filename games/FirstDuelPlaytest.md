@@ -202,7 +202,7 @@ of B's home. B can not make a move.
   ([[Upgrade#7.2]]).
 - **F4. No interaction, zero rival Combats in 51 Turns**: [[Star]]s
   are open [[Tile]]s ([[Wild#Notes#1]]), a taken [[Star]] captures the
-  rival [[Structure]]s ([[ControlledBy#3]]), [[Singularity]] is far
+  rival [[Structure]]s ([[ControlledBy#4]]), [[Singularity]] is far
   and answerable (F2); damage in I81, a reward for a [[Space]] in
   [[Relic]].
 - **F5. Home Structure row, overlap and no exit**: [[Recycle]] frees a
@@ -288,7 +288,7 @@ Made before play where the docs were silent, in `RULES.md` section 11:
 - PR-15 an upgraded [[Structure]] comes [[Ready]]:
   [[Upgrade#Notes#2]].
 - PR-16 [[Recover]] costs the [[Level]] of the [[Damaged]] [[End]]:
-  [[Recover#5]], S41.
+  [[Recover#4]], S41.
 - PR-17 a [[Defender]]'s [[Damaged]] [[Card]]s fight with [[Defense]]
   0 and are Destroyed: [[Damaged#7]], with [[Defense]] 1.
 - PR-18 cap at 40 [[Turn]]s: playtest only.

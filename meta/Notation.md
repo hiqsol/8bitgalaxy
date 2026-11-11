@@ -213,8 +213,8 @@ once:
 
 [[Recover]]:
 ```text
-12. Recover with Fix: S1m@S21u1 Damaged => S1m << 1p
-    Hand[H2p:Fix + S1p:1p] = 1p; H2p,S1p->Discard
+12. Recover: S1m@S21u1 Damaged => S1m << 1p
+    Hand[H2p:Recover + S1p:1p] = 1p; H2p,S1p->Discard
 ```
 
 [[Receive]], the [[Homeworld]] pays its [[Energy]]:

@@ -10,6 +10,7 @@ scope: core
 
 #### Notes
 
-1. [[Card]]s that move or fight hold the ground, see [[Move]] and
-   [[Combat]], the [[Starter]] always pays: nobody has to remember
-   which [[Card]]s already moved
+1. A [[Unit]] that moves or fights as a [[Direct participant]] holds
+   its [[Slot]], see [[Move]] and [[Combat]]; a [[Structure]] always
+   pays, the [[Starter]] too: nobody has to remember which [[Card]]s
+   already moved

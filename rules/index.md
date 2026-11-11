@@ -5,10 +5,8 @@ scope: core
 
 ![game](../public/images/game.png)
 
-1. 4X strategy with:
-	1. [[DeckBuilding|Deck building]]
-	2. Worker placement
-	3. Engine building
+1. [[Card]]-driven spatial 4X with [[DeckBuilding|deck building]] and
+   engine building
 2. Main game rule is [[PerformAction]], start with it
 3. These docs are the source of truth for the rules
 4. Game is played by 1+ players with different options, see

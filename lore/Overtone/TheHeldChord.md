@@ -441,7 +441,7 @@ That is why we sing the hold before we sing the chord.
 | Four eighths held at the Listening | [[Singularity#2]], [[Deck#7]] |
 | A struck note falls, the chord is held, not struck | [[Singularity#Notes#4]], [[Depleted]] |
 | The Great Horn bends space: few places per star | [[LoreRequirements#1]] |
-| Ione raised at the first note, grown step by step | [[Create#4]], [[Upgrade#5.4]] |
+| Ione raised at the first note, grown step by step | [[Create#3]], [[Upgrade#5.4]] |
 | Ione's low note is the Low seventh | [[Deck]] [[Hero]] 8S |
 | The Bell sing the same intervals | [[Faction#5.1]] |
 | Silence around the inner stars | [[Void]], [[Navigation]] |

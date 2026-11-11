@@ -11,7 +11,7 @@ scope: core
 5. **World** gives no [[Control]]
 6. In a [[Star]] [[ControlledBy]] a player [[Faction]] the **World**
    is that [[Faction]]'s like its [[Structure]]s, see
-   [[ControlledBy#3]]: its [[Ability]] works for it and it defends
+   [[ControlledBy#4]]: its [[Ability]] works for it and it defends
    the [[Star]]
 7. **Worlds** form the **World deck**, face down beside the [[Field]];
    a conquest draws from it, see [[Wild]]

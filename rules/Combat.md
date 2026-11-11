@@ -46,8 +46,8 @@ aliases: [Combat Round, Attacker, Defender, Advantage, Combat power]
 	3. If the **Attacker** wins, the **Attacker** may move surviving
 	   attacking [[Unit]]s into the [[Destination]] [[Star]], the
 	   others stay in the [[Source]]
-	4. Then [[Deplete]] the not [[Damaged]] [[Participants]], but not
-	   the [[Direct participant]]s
+	4. Then [[Deplete]] the not [[Damaged]] [[Participants]], but a
+	   [[Unit]] [[Direct participant]] holds its [[Slot]]
 10. **Rout**: when the winner's **Combat power** is at least twice the
     loser's, the winner chooses for each loser's
     [[Participants|Participant]]: [[Damaged]] or [[Destroy]]ed

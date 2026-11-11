@@ -12,13 +12,14 @@ aliases: [Cargo]
 3. **Requirements**: [[Range]] only, no [[Power]]
 4. Several [[Card]]s can move together in a [[Group]], see [[Range]]
 	1. [[Direct participant]]s in the [[Destination]] don't move, but
-	   add their [[Range]] and [[Capacity]] to the moving [[Group]]
+	   add their [[Capacity]] to the moving [[Group]]
 5. [[Ship]]s of the [[Group]] carry other [[Card]]s as **cargo**:
 	1. The total [[Size]] of **Cargo** is within the [[Group]]'s total
 	   [[Capacity]]
 	2. Every **Cargo** [[Card]] needs a [[Ship]] in the [[Group]]
 	   whose [[Class]] handles it
-6. The moving [[Card]]s don't [[Deplete]]
+6. Its [[Unit]] [[Direct participant]]s don't [[Deplete]]: they hold
+   their [[Slot]]s, the moving ones in the [[Destination]]
 
 #### Notes
 
