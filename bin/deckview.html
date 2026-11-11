@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deck Gallery</title>
+<style>
+:root {
+  --bg: #f6f5f1; --panel: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #dcdad3; --chip: #ecebe5;
+  --card: #fffdf8; --accent: #3b5bdb; --bad: #d6336c; --good: #2b8a3e;
+  --m: #c8372d; --c: #2e9a4a; --p: #b8860b; --s: #2f62c9; --x: #6b6b70;
+  --tint: 13%;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15161a; --panel: #1e1f24; --ink: #ececef; --muted: #9a9aa3; --line: #34353d; --chip: #2a2b31;
+    --card: #23242a; --accent: #7c9cff; --bad: #ff6b9a; --good: #63d17a;
+    --m: #ff6b5e; --c: #4fcf73; --p: #f0c23a; --s: #6b9bff; --x: #9a9aa3;
+    --tint: 20%; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15161a; --panel: #1e1f24; --ink: #ececef; --muted: #9a9aa3; --line: #34353d; --chip: #2a2b31;
+  --card: #23242a; --accent: #7c9cff; --bad: #ff6b9a; --good: #63d17a;
+  --m: #ff6b5e; --c: #4fcf73; --p: #f0c23a; --s: #6b9bff; --x: #9a9aa3;
+  --tint: 20%; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header, main { padding: 0 16px; max-width: 1500px; margin: 0 auto; }
+header { padding-top: 18px; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
+h1 { font-size: 22px; margin: 0; }
+h2 { font-size: 17px; margin: 28px 0 8px; }
+.sub { color: var(--muted); font-size: 13px; }
+.hint { color: var(--muted); font-size: 12px; margin: -4px 0 8px; }
+code, .mono { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; font-size: 12px; }
+
+/* filter bar */
+.filters { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); margin-top: 12px; padding: 10px 16px; }
+.frow { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; max-width: 1500px; margin: 0 auto; }
+.frow + .frow { margin-top: 6px; }
+.group { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.group > b { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-right: 2px; }
+input[type=search] { font: inherit; padding: 5px 10px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--panel); color: var(--ink); width: 240px; max-width: 100%; }
+.chip { font: inherit; font-size: 12px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--panel); color: var(--ink); cursor: pointer; white-space: nowrap; }
+.chip:hover { border-color: var(--muted); }
+.chip.on { background: var(--k, var(--accent)); border-color: var(--k, var(--accent)); color: #fff; }
+.chip.cls { font-weight: 700; }
+.pill { font-size: 12px; padding: 3px 4px 3px 9px; border-radius: 999px; background: var(--accent); color: #fff; }
+.pill button { border: 0; background: transparent; color: inherit; cursor: pointer; font-size: 13px; }
+label.tog { font-size: 12px; color: var(--muted); display: flex; gap: 4px; align-items: center; cursor: pointer; }
+.count { font-weight: 600; font-variant-numeric: tabular-nums; }
+.reset { margin-left: auto; }
+
+/* cards table */
+.scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+table { border-collapse: collapse; }
+.grid th, .grid td { border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); vertical-align: top; }
+.grid tr:last-child > * { border-bottom: 0; } .grid tr > *:last-child { border-right: 0; }
+.grid thead th { font-size: 13px; padding: 8px; text-align: left; background: var(--chip); }
+.grid tbody th { font-size: 13px; padding: 10px 8px; text-align: left; width: 96px; background: var(--chip); }
+.grid th small { display: block; color: var(--muted); font-weight: 400; }
+.grid td { padding: 6px; }
+.cell { display: flex; flex-wrap: wrap; gap: 6px; width: 254px; }
+.grid td.empty { background: repeating-linear-gradient(45deg, transparent 0 6px, var(--chip) 6px 7px); }
+
+/* card */
+.card { width: 124px; height: 176px; border-radius: 9px; border: 2px solid var(--k, var(--x));
+  background: var(--card); display: flex; flex-direction: column; position: relative; cursor: pointer;
+  transition: opacity .15s, transform .15s, box-shadow .15s; overflow: hidden; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgb(0 0 0 / .18); }
+.card.dim { opacity: .18; }
+.card.hl { box-shadow: 0 0 0 3px var(--accent); }
+.card.sel { box-shadow: 0 0 0 3px var(--ink); }
+.end { flex: 1; padding: 4px 6px; background: color-mix(in srgb, var(--k, var(--x)) var(--tint), var(--card));
+  display: flex; flex-direction: column; gap: 1px; min-height: 0; }
+.end.weak { transform: rotate(180deg); }
+.ehead { display: flex; justify-content: space-between; align-items: center; }
+.lvl { font-weight: 800; font-size: 15px; color: var(--k, var(--x)); line-height: 1; }
+.lvl sup { font-size: 10px; font-weight: 600; margin-left: 1px; }
+.clsb { font-size: 10px; font-weight: 700; color: #fff; background: var(--k, var(--x)); border-radius: 4px; padding: 0 4px; }
+.prim, .sec { font-size: 11px; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; }
+.prim { font-weight: 700; }
+.sec { color: var(--ink); }
+.mid { padding: 3px 6px; display: flex; align-items: center; gap: 4px; border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line); font-size: 10px; }
+.mid .nm { font-weight: 700; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.price { font-weight: 700; border: 1px solid var(--muted); border-radius: 50%; width: 17px; height: 17px;
+  display: inline-grid; place-items: center; font-size: 10px; flex: none; }
+.req { display: flex; gap: 2px; margin-left: auto; margin-right: 4px; }
+.rq { font-size: 9px; font-weight: 700; padding: 0 3px; border-radius: 3px; color: var(--k, var(--x));
+  border: 1px solid var(--k, var(--x)); }
+.copies { position: absolute; right: 3px; top: 50%; transform: translateY(-50%); }
+.v { color: var(--k, inherit); font-weight: 700; white-space: nowrap; }
+.t { border-bottom: 1px dotted currentColor; cursor: help; }
+.t.unknown { color: var(--bad); }
+
+/* balance */
+.bal td, .bal th { padding: 6px 10px; text-align: center; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.bal thead th { background: var(--chip); font-size: 12px; }
+.bal tbody th { text-align: left; color: var(--k, var(--x)); }
+.bal td { cursor: pointer; min-width: 52px; }
+.bal td:hover { background: var(--chip); }
+.bal td .n { font-weight: 700; font-size: 15px; }
+.bal td .sw { display: block; font-size: 10px; color: var(--muted); }
+.bal td.off .n { color: var(--bad); }
+.bal td.off { background: color-mix(in srgb, var(--bad) 10%, transparent); }
+.bal td.on { outline: 2px solid var(--accent); outline-offset: -2px; }
+.bal td.zero .n { color: var(--muted); font-weight: 400; }
+.bal tr.exp td { color: var(--muted); cursor: default; font-size: 12px; }
+.bal tr.exp td:hover { background: none; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+/* graph */
+.graph svg { display: block; min-width: 760px; }
+.graph text { fill: var(--ink); font-size: 11px; }
+.graph .axis { fill: var(--muted); font-size: 11px; }
+.graph .node { cursor: pointer; }
+.graph .node circle { fill: color-mix(in srgb, var(--k) 22%, var(--panel)); stroke: var(--k); stroke-width: 2; }
+.graph .node.on circle { stroke: var(--accent); stroke-width: 4; }
+.graph .node.faded { opacity: .25; }
+.graph .node text { font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+.graph .edge { fill: none; stroke: var(--k); opacity: .55; }
+.graph .edge:hover { opacity: 1; }
+.graph .edge.faded { opacity: .08; }
+
+/* technologies */
+.tech { width: 100%; }
+.tech th, .tech td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tech thead th { background: var(--chip); font-size: 12px; position: sticky; top: 0; }
+.tech tbody tr { cursor: pointer; }
+.tech tbody tr:hover { background: var(--chip); }
+.tech tr.on { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.tech tr.planned td { color: var(--muted); }
+.tech tr.gone { display: none; }
+.tech td.mono .v { margin-right: 4px; }
+.tech td.desc { font-size: 12px; max-width: 460px; }
+.tag { font-size: 11px; padding: 1px 6px; border-radius: 4px; background: var(--chip); white-space: nowrap; }
+.carrier { display: inline-block; font-size: 11px; padding: 1px 6px; margin: 1px 2px 1px 0;
+  border-radius: 4px; border: 1px solid var(--k, var(--x)); color: var(--k, var(--x)); white-space: nowrap; }
+.carrier:hover { background: color-mix(in srgb, var(--k) 15%, transparent); }
+
+/* detail */
+dialog { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink);
+  max-width: min(560px, calc(100vw - 32px)); padding: 18px 20px; }
+dialog::backdrop { background: rgb(0 0 0 / .35); }
+dialog h3 { margin: 0 0 4px; font-size: 18px; }
+dialog .close { position: absolute; top: 10px; right: 12px; border: 0; background: none; color: var(--muted);
+  font-size: 20px; cursor: pointer; }
+dialog .ends { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+dialog .de { border: 1px solid var(--k, var(--x)); border-radius: 8px; padding: 8px 10px;
+  background: color-mix(in srgb, var(--k, var(--x)) var(--tint), var(--panel)); }
+dialog .de h4 { margin: 0 0 4px; font-size: 13px; color: var(--k, var(--x)); }
+dialog dl { margin: 0; font-size: 13px; }
+dialog dt { font-weight: 700; margin-top: 8px; }
+dialog dd { margin: 2px 0 0; color: var(--muted); }
+@media (max-width: 560px) { dialog .ends { grid-template-columns: 1fr; } }
+/* class colors last: they win over the defaults above */
+.m { --k: var(--m); } .c { --k: var(--c); } .p { --k: var(--p); } .s { --k: var(--s); }
+.v.u { color: var(--ink); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Deck Gallery</h1>
+  <span class="sub" id="meta"></span>
+</header>
+<div class="filters">
+  <div class="frow">
+    <input type="search" id="q" placeholder="Search cards, Technologies, text…" autocomplete="off">
+    <div class="group" id="f-cls"><b>Class</b></div>
+    <label class="tog"><input type="checkbox" id="strongOnly"> Strong End only</label>
+    <div class="group" id="f-type"><b>Type</b></div>
+  </div>
+  <div class="frow">
+    <div class="group" id="f-kind"><b>Technology</b></div>
+    <div class="group" id="f-scope"><b>Scope</b></div>
+    <div class="group" id="pills"></div>
+    <label class="tog"><input type="checkbox" id="hide"> Hide unmatched</label>
+    <span class="count" id="count"></span>
+    <button class="chip reset" id="reset">Reset</button>
+  </div>
+</div>
+<main>
+  <h2>Cards</h2>
+  <p class="hint">Rows are Types, columns the Level of the Strong End. The Weak End is upside down at the bottom. Click a card for details; hover a Technology to highlight every card that carries it.</p>
+  <div class="scroll"><table class="grid" id="grid"></table></div>
+
+  <h2>Level × Class balance</h2>
+  <p class="hint">Ends of each Class at each Level, Strong + Weak, against Deck rule 6. Click a cell to filter by that Level and Class.</p>
+  <div class="scroll"><table class="bal" id="bal"></table></div>
+  <div class="legend"><span><b style="color:var(--bad)">red</b> differs from rule 6</span><span>small: Strong / Weak</span><span>with a filter on: matched / all</span></div>
+
+  <h2>Prerequisites</h2>
+  <p class="hint">A node is a Level and Class, sized by its Ends. An arrow runs from a required Level and Class to the Strong End of each card that needs it, thicker when more cards need it. Hover an arrow to see the cards; click a node to filter.</p>
+  <div class="scroll graph" id="graph"></div>
+
+  <h2>Technologies</h2>
+  <p class="hint">The catalog in Technology, filtered with the cards. Grey rows are planned: no card carries them yet. Click a row to filter cards by it.</p>
+  <div class="scroll"><table class="tech" id="tech"></table></div>
+  <div style="height:40px"></div>
+</main>
+<dialog id="detail"></dialog>
+
+<script id="data" type="application/json">/*DATA*/null</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const CLASSES = ['m', 'c', 'p', 's'];
+const CLASS_NAMES = {m: 'Military', c: 'Culture', p: 'Production', s: 'Science'};
+const UNITS = {m: 'Military', c: 'Culture', p: 'Production', s: 'Science', d: 'Defense', r: 'Range',
+  l: 'Load (Capacity)', e: 'Energy', g: 'Goods'};
+const TYPES = ['S', 'H', 'B', 'C', 'HS', 'T'];
+const TYPE_NAMES = {S: 'Ship', H: 'Hero', B: 'Base', C: 'Colony', HS: 'Hyperstructure', T: 'Tool'};
+const KINDS = ['Action', 'Modifier', 'Hub', 'None'];
+const SCOPES = [...new Set(Object.values(D.techs).map(t => t.scope))];
+const LEVELS = [...new Set(D.cards.map(c => c.strong.level))].sort((a, b) => a - b);
+const ALL_LEVELS = Object.keys(D.expected).map(Number);
+const cards = D.cards;
+const byKey = Object.fromEntries(cards.map(c => [c.key, c]));
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, ch => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[ch]));
+
+for (const c of cards) {
+  const techText = c.techs.map(t => t.name + ' ' + (D.techs[t.name]?.desc || '')).join(' ');
+  c.search = [c.name, c.id, c.line, techText].join(' ').toLowerCase();
+  c.kinds = new Set(c.techs.map(t => D.techs[t.name]?.kind).filter(Boolean));
+  if (!c.kinds.size) c.kinds.add('None');
+  c.scopes = new Set(c.techs.map(t => D.techs[t.name]?.scope).filter(Boolean));
+}
+
+const F = {q: '', cls: new Set(), type: new Set(), kind: new Set(), scope: new Set(),
+  tech: null, lc: null, strongOnly: false, hide: false};
+
+function load() {
+  try {
+    const s = JSON.parse(localStorage.getItem('deckview') || '{}');
+    for (const k of ['cls', 'type', 'kind', 'scope']) if (s[k]) F[k] = new Set(s[k]);
+    for (const k of ['q', 'tech', 'lc', 'strongOnly', 'hide']) if (k in s) F[k] = s[k];
+  } catch (e) {}
+}
+function save() {
+  try {
+    localStorage.setItem('deckview', JSON.stringify({...F, cls: [...F.cls], type: [...F.type],
+      kind: [...F.kind], scope: [...F.scope]}));
+  } catch (e) {}
+}
+
+const active = () => F.q.trim() || F.cls.size || F.type.size || F.kind.size || F.scope.size || F.tech || F.lc;
+function ends(c) { return F.strongOnly ? [c.strong] : [c.strong, c.weak]; }
+function matches(c) {
+  if (F.q.trim() && !F.q.trim().toLowerCase().split(/\s+/).every(w => c.search.includes(w))) return false;
+  if (F.cls.size && !ends(c).some(e => F.cls.has(e.cls))) return false;
+  if (F.type.size && !F.type.has(c.type)) return false;
+  if (F.kind.size && ![...c.kinds].some(k => F.kind.has(k))) return false;
+  if (F.scope.size && ![...c.scopes].some(s => F.scope.has(s))) return false;
+  if (F.tech && !c.techs.some(t => t.name === F.tech)) return false;
+  if (F.lc && !ends(c).some(e => e.level === F.lc.level && e.cls === F.lc.cls)) return false;
+  return true;
+}
+function techMatches(t) {
+  if (F.q.trim() && !F.q.trim().toLowerCase().split(/\s+/).every(w => (t.name + ' ' + t.desc + ' ' + t.levels).toLowerCase().includes(w))) return false;
+  if (F.cls.size && !t.classes.some(c => F.cls.has(c))) return false;
+  if (F.type.size && !t.types.some(n => [...F.type].some(k => TYPE_NAMES[k] === n))) return false;
+  if (F.kind.size && !F.kind.has(t.kind)) return false;
+  if (F.scope.size && !F.scope.has(t.scope)) return false;
+  return true;
+}
+
+/* rendering */
+function tok(list) {
+  return list.map(t => {
+    if (t.tech) {
+      const info = D.techs[t.tech];
+      const tip = info ? `${t.tech}: ${info.hub || info.kind}, ${info.scope}. ${info.desc}` : `${t.tech}: not in the Technology catalog`;
+      return `<span class="t${info ? '' : ' unknown'}" data-tech="${esc(t.tech)}" title="${esc(tip)}">${esc(t.label)}</span>`;
+    }
+    if (t.val) return `<span class="v ${CLASSES.includes(t.unit) ? t.unit : 'u'}" title="${esc(UNITS[t.unit] || '')}">${esc(t.val)}</span>`;
+    return '<span class="sep">+</span>';
+  }).join('');
+}
+function endHtml(e, side, req = '') {
+  const extra = e.extra ? `<sup>${e.extra > 0 ? '+' : ''}${e.extra}</sup>` : '<sup>+0</sup>';
+  return `<div class="end ${side} ${e.cls}">
+    <div class="ehead"><span class="lvl">${e.level}${extra}</span>${req}<span class="clsb">${e.cls.toUpperCase()}</span></div>
+    <div class="prim">${tok(e.primary)}</div><div class="sec">${tok(e.secondary)}</div></div>`;
+}
+function cardHtml(c) {
+  const req = c.prereq.map(r => `<span class="rq ${r.cls}" title="needs Level ${r.level} ${CLASS_NAMES[r.cls]}">${r.level}${r.cls.toUpperCase()}</span>`).join('');
+  return `<div class="card ${c.strong.cls}" data-key="${c.key}" title="${esc(c.line)}">
+    ${endHtml(c.strong, 'strong', req ? `<span class="req">${req}</span>` : '')}
+    <div class="mid"><span class="price" title="Price">${c.price}</span><span class="nm">${esc(c.type === 'HS' ? 'Hyper ' + c.id.slice(2) : c.name)}</span>
+    ${c.copies > 1 ? `<span class="tag copies">${c.copies}×</span>` : ''}</div>
+    ${endHtml(c.weak, 'weak')}</div>`;
+}
+
+function renderGrid() {
+  const usedTypes = TYPES.filter(t => cards.some(c => c.type === t));
+  const count = (f) => cards.filter(f).reduce((n, c) => n + c.copies, 0);
+  let h = '<thead><tr><th></th>' + LEVELS.map(l => `<th>Level ${l}<small>${count(c => c.strong.level === l)} cards</small></th>`).join('') + '</tr></thead><tbody>';
+  for (const t of usedTypes) {
+    h += `<tr><th>${TYPE_NAMES[t]}<small>${count(c => c.type === t)} cards</small></th>`;
+    for (const l of LEVELS) {
+      const cs = cards.filter(c => c.type === t && c.strong.level === l)
+        .sort((a, b) => CLASSES.indexOf(a.strong.cls) - CLASSES.indexOf(b.strong.cls));
+      h += cs.length ? `<td><div class="cell">${cs.map(cardHtml).join('')}</div></td>` : '<td class="empty"></td>';
+    }
+    h += '</tr>';
+  }
+  $('grid').innerHTML = h + '</tbody>';
+}
+
+function renderTechTable() {
+  const carriers = {};
+  for (const c of cards) for (const t of c.techs) (carriers[t.name] ||= []).push({c, end: t.end});
+  const list = Object.values(D.techs).sort((a, b) =>
+    CLASSES.indexOf(a.classes[0]) - CLASSES.indexOf(b.classes[0]) || a.minLevel - b.minLevel || a.name.localeCompare(b.name));
+  let h = '<thead><tr><th>Technology</th><th>Levels</th><th>Kind</th><th>Scope</th><th>Carried by</th><th>Description</th></tr></thead><tbody>';
+  for (const t of list) {
+    const cs = carriers[t.name] || [];
+    const chips = cs.map(({c, end}) => {
+      const e = end === 'Strong' ? c.strong : c.weak;
+      return `<span class="carrier ${e.cls}" data-key="${c.key}" title="${end} End: ${esc(e.text)}">${c.id} ${end === 'Strong' ? '▲' : '▼'}</span>`;
+    }).join('') || '<span class="tag">planned</span>';
+    h += `<tr data-tech="${esc(t.name)}" class="${cs.length ? '' : 'planned'}">
+      <td><b>${esc(t.name)}</b></td><td class="mono">${t.levels.replace(/(\d+)([mcps]+)/g, (_, l, k) => [...k].map(x => `<span class="v ${x}">${l}${x}</span>`).join(''))}</td>
+      <td>${esc(t.hub || t.kind)}</td><td><span class="tag">${esc(t.scope)}</span></td><td>${chips}</td><td class="desc">${esc(t.desc)}</td></tr>`;
+  }
+  $('tech').innerHTML = h + '</tbody>';
+}
+
+function balanceCounts(set) {
+  const n = {};
+  for (const c of set) for (const [side, e] of [['s', c.strong], ['w', c.weak]]) {
+    const k = e.level + e.cls;
+    n[k] ||= {s: 0, w: 0};
+    n[k][side] += c.copies;
+  }
+  return n;
+}
+function renderBalance(matched) {
+  const all = balanceCounts(cards), sel = balanceCounts(matched);
+  let h = '<thead><tr><th>Class \\ Level</th>' + ALL_LEVELS.map(l => `<th>${l}</th>`).join('') + '<th>Total</th></tr></thead><tbody>';
+  for (const k of CLASSES) {
+    h += `<tr class="${k}"><th>${CLASS_NAMES[k]}</th>`;
+    let total = 0;
+    for (const l of ALL_LEVELS) {
+      const a = all[l + k] || {s: 0, w: 0}, n = a.s + a.w, m = sel[l + k] ? sel[l + k].s + sel[l + k].w : 0;
+      total += n;
+      const cls = [n !== D.expected[l] ? 'off' : '', n ? '' : 'zero', F.lc && F.lc.level === l && F.lc.cls === k ? 'on' : ''].join(' ');
+      h += `<td class="${cls}" data-level="${l}" data-cls="${k}" title="${CLASS_NAMES[k]} Level ${l}: ${a.s} Strong + ${a.w} Weak, rule 6 wants ${D.expected[l]}">
+        <span class="n">${active() ? `${m}/${n}` : n}</span><span class="sw">${a.s} / ${a.w}</span></td>`;
+    }
+    h += `<td><span class="n">${total}</span></td></tr>`;
+  }
+  h += '<tr class="exp"><th>rule 6</th>' + ALL_LEVELS.map(l => `<td>${D.expected[l]}</td>`).join('') +
+    `<td>${ALL_LEVELS.reduce((s, l) => s + D.expected[l], 0)}</td></tr>`;
+  $('bal').innerHTML = h + '</tbody>';
+}
+
+function renderGraph(matched) {
+  const set = new Set(matched.map(c => c.key));
+  const W = 70, H = 74, X0 = 110, Y0 = 34;
+  const x = l => X0 + l * W * 1.25, y = k => Y0 + CLASSES.indexOf(k) * H;
+  const all = balanceCounts(cards);
+  const r = (l, k) => { const a = all[l + k]; return 8 + 2.2 * (a ? a.s + a.w : 0); };
+  const edges = {};
+  for (const c of cards) for (const q of c.prereq) {
+    const k = `${q.level}${q.cls}>${c.strong.level}${c.strong.cls}`;
+    (edges[k] ||= {from: q, to: {level: c.strong.level, cls: c.strong.cls}, cards: []}).cards.push(c);
+  }
+  const width = x(8) + 60, height = Y0 + 3 * H + 40;
+  let s = `<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="Prerequisites graph">`;
+  s += '<defs>' + CLASSES.map(k => `<marker id="ar-${k}" class="${k}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--${k})"/></marker>`).join('') + '</defs>';
+  for (const l of ALL_LEVELS) s += `<text class="axis" x="${x(l)}" y="14" text-anchor="middle">Level ${l}</text>`;
+  for (const k of CLASSES) s += `<text class="axis" x="8" y="${y(k)}" dominant-baseline="central" style="fill:var(--${k});font-weight:700">${CLASS_NAMES[k]}</text>`;
+  for (const e of Object.values(edges)) {
+    const x1 = x(e.from.level) + r(e.from.level, e.from.cls), y1 = y(e.from.cls);
+    const x2 = x(e.to.level) - r(e.to.level, e.to.cls) - 3, y2 = y(e.to.cls);
+    const mx = (x1 + x2) / 2;
+    const live = !active() || e.cards.some(c => set.has(c.key));
+    s += `<path class="edge ${e.from.cls}${live ? '' : ' faded'}" d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}" stroke-width="${1.2 + e.cards.length * 1.1}" marker-end="url(#ar-${e.from.cls})"><title>${e.from.level}${e.from.cls.toUpperCase()} → ${e.cards.map(c => c.name).join(', ')}</title></path>`;
+  }
+  for (const k of CLASSES) for (const l of ALL_LEVELS) {
+    const a = all[l + k] || {s: 0, w: 0};
+    const live = !active() || matched.some(c => ends(c).some(e => e.level === l && e.cls === k));
+    const on = F.lc && F.lc.level === l && F.lc.cls === k;
+    s += `<g class="node ${k}${on ? ' on' : ''}${live ? '' : ' faded'}" data-level="${l}" data-cls="${k}"><title>${CLASS_NAMES[k]} ${l}: ${a.s} Strong + ${a.w} Weak Ends</title>
+      <circle cx="${x(l)}" cy="${y(k)}" r="${r(l, k)}"/><text x="${x(l)}" y="${y(k)}">${a.s + a.w}</text></g>`;
+  }
+  $('graph').innerHTML = s + '</svg>';
+}
+
+function chipGroup(id, values, set, label = v => v, cls = () => '') {
+  const g = $(id);
+  g.querySelectorAll('.chip').forEach(b => b.remove());
+  for (const v of values) {
+    const b = document.createElement('button');
+    b.className = `chip ${cls(v)}${set.has(v) ? ' on' : ''}`;
+    b.textContent = label(v);
+    b.onclick = () => { set.has(v) ? set.delete(v) : set.add(v); update(); };
+    g.appendChild(b);
+  }
+}
+function renderFilters() {
+  chipGroup('f-cls', CLASSES, F.cls, v => CLASS_NAMES[v], v => `cls ${v}`);
+  chipGroup('f-type', TYPES, F.type, v => TYPE_NAMES[v]);
+  chipGroup('f-kind', KINDS, F.kind);
+  chipGroup('f-scope', SCOPES, F.scope);
+  const pills = [];
+  if (F.tech) pills.push(['tech', `Technology: ${F.tech}`]);
+  if (F.lc) pills.push(['lc', `${CLASS_NAMES[F.lc.cls]} Level ${F.lc.level}`]);
+  $('pills').innerHTML = pills.map(([k, t]) => `<span class="pill">${esc(t)} <button data-clear="${k}" aria-label="clear">×</button></span>`).join('');
+  if (document.activeElement !== $('q')) $('q').value = F.q;
+  $('strongOnly').checked = F.strongOnly;
+  $('hide').checked = F.hide;
+}
+
+function update() {
+  const matched = cards.filter(matches);
+  const keys = new Set(matched.map(c => c.key));
+  document.querySelectorAll('#grid .card').forEach(el => {
+    const on = keys.has(el.dataset.key);
+    el.classList.toggle('dim', !on && !F.hide);
+    el.style.display = !on && F.hide ? 'none' : '';
+  });
+  document.querySelectorAll('#grid td').forEach(td => {
+    const visible = [...td.querySelectorAll('.card')].some(el => el.style.display !== 'none');
+    td.style.opacity = F.hide && td.querySelector('.card') && !visible ? '.4' : '';
+  });
+  document.querySelectorAll('#tech tbody tr').forEach(tr => {
+    const t = D.techs[tr.dataset.tech];
+    tr.classList.toggle('gone', !techMatches(t) && !(F.tech === t.name));
+    tr.classList.toggle('on', F.tech === t.name);
+  });
+  const n = matched.reduce((s, c) => s + c.copies, 0), total = cards.reduce((s, c) => s + c.copies, 0);
+  $('count').textContent = `${n} / ${total} cards`;
+  renderBalance(matched);
+  renderGraph(matched);
+  renderFilters();
+  save();
+}
+
+function showDetail(c) {
+  const techs = [...new Map(c.techs.map(t => [t.name, t])).values()];
+  const endBlock = (e, side) => `<div class="de ${e.cls}"><h4>${side} End · Level ${e.level}${e.extra >= 0 ? '+' : ''}${e.extra} ${CLASS_NAMES[e.cls]}</h4>
+    <div>Primary: ${tok(e.primary) || '—'}</div><div>Secondary: ${tok(e.secondary) || '—'}</div><div class="sub">Price ${e.level + e.extra}</div></div>`;
+  $('detail').innerHTML = `<button class="close" aria-label="close">×</button>
+    <h3>${esc(c.name)}${c.copies > 1 ? ` <span class="tag">${c.copies}×</span>` : ''}</h3>
+    <div class="sub">${esc(c.typeName)} · Price ${c.price}${c.prereq.length ? ' · needs ' + c.prereq.map(r => `<span class="v ${r.cls}">${r.level}${r.cls.toUpperCase()}</span>`).join(' ') : ' · no Prerequisites'}</div>
+    <div class="ends">${endBlock(c.strong, 'Strong')}${endBlock(c.weak, 'Weak')}</div>
+    <code>${esc(c.line)}</code>
+    ${techs.length ? '<dl>' + techs.map(t => { const i = D.techs[t.name];
+      return `<dt>${esc(t.name)} <span class="tag">${i ? esc(i.hub || i.kind) + ' · ' + esc(i.scope) : 'not in catalog'}</span></dt><dd>${esc(i ? i.desc : '')}</dd>`; }).join('') + '</dl>' : ''}`;
+  $('detail').showModal();
+}
+
+/* events */
+document.addEventListener('click', e => {
+  const clear = e.target.closest('[data-clear]');
+  if (clear) { F[clear.dataset.clear] = null; return update(); }
+  if (e.target.closest('dialog .close')) return $('detail').close();
+  if (e.target === $('detail')) return $('detail').close();
+  const tech = e.target.closest('dialog [data-tech]');
+  if (tech) { F.tech = tech.dataset.tech; $('detail').close(); return update(); }
+  const card = e.target.closest('.card, .carrier');
+  if (card) { e.stopPropagation(); return showDetail(byKey[card.dataset.key]); }
+  const row = e.target.closest('#tech tbody tr');
+  if (row) { F.tech = F.tech === row.dataset.tech ? null : row.dataset.tech; return update(); }
+  const cell = e.target.closest('#bal td[data-level], #graph .node');
+  if (cell) {
+    const lc = {level: +cell.dataset.level, cls: cell.dataset.cls};
+    F.lc = F.lc && F.lc.level === lc.level && F.lc.cls === lc.cls ? null : lc;
+    return update();
+  }
+});
+document.addEventListener('mouseover', e => {
+  const t = e.target.closest('#grid [data-tech]');
+  document.querySelectorAll('#grid .card.hl').forEach(el => el.classList.remove('hl'));
+  if (!t) return;
+  for (const c of cards) if (c.techs.some(x => x.name === t.dataset.tech))
+    document.querySelector(`#grid .card[data-key="${c.key}"]`)?.classList.add('hl');
+});
+$('q').addEventListener('input', e => { F.q = e.target.value; update(); });
+$('strongOnly').addEventListener('change', e => { F.strongOnly = e.target.checked; update(); });
+$('hide').addEventListener('change', e => { F.hide = e.target.checked; update(); });
+$('reset').addEventListener('click', () => {
+  Object.assign(F, {q: '', tech: null, lc: null, strongOnly: false});
+  for (const k of ['cls', 'type', 'kind', 'scope']) F[k].clear();
+  update();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && document.activeElement !== $('q') && !$('detail').open) { e.preventDefault(); $('q').focus(); }
+});
+
+$('meta').textContent = `${D.source} · ${cards.reduce((s, c) => s + c.copies, 0)} cards · ${Object.keys(D.techs).length} Technologies · built ${D.generated}`;
+load();
+renderGrid();
+renderTechTable();
+update();
+</script>
+</body>
+</html>

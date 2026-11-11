@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Build the Deck gallery: one self-contained HTML page from rules/Cards/Deck.md and the Technology catalog.
+
+Cards table (rows Types, columns Levels), Level x Class balance, Prerequisites graph and Technology table,
+all filtered together: search, Class, Type, Technology kind and scope, a Technology or a LevelClass by click.
+
+Usage: bin/deckview [-o build/deck.html]  (make deck builds it, make deckview opens it, the site serves dist/deck.html)
+"""
+
+import argparse
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+# the wiki folder: rules/, docs/ before the rename
+WIKI = next((ROOT / d for d in ('rules', 'docs') if (ROOT / d / 'Cards/Deck.md').exists()), ROOT / 'rules')
+DECK = WIKI / 'Cards/Deck.md'
+CATALOG = WIKI / 'Concepts/Technology.md'
+TEMPLATE = Path(__file__).resolve().with_name('deckview.html')
+
+CARD_TYPES = {'S': 'Ship', 'H': 'Hero', 'B': 'Base', 'C': 'Colony', 'HS': 'Hyperstructure', 'T': 'Tool'}
+# Deck card line: [2× ]S4+1m/3+2c: 2m Smuggle / 2c +1c << *1c *2m, see Deck#2
+DECK_LINE = re.compile(r'(?:(?P<copies>\d+)× )?(?P<type>HS|[SHBCT])(?P<level>\d+)(?P<extra>[+-]\d+)(?P<cls>[mcps])'
+                       r'/(?P<wlevel>\d+)(?P<wextra>[+-]\d+)(?P<wcls>[mcps]): +(?P<strong>.*?) +/ +(?P<weak>.*?)'
+                       r'(?: +<< +(?P<prereq>.*))?\s*$')
+TOKEN = re.compile(r'(?P<tech>[A-Z][A-Za-z]+)|(?P<val>[+-]?\d+[a-z])|(?P<sep>\+)')
+PREREQ = re.compile(r'\*(\d+)([mcps])')
+# catalog item: Name: LevelClasses - Kind - Types - Factions - Scope, then a description, see Technology#3
+TECH_ITEM = re.compile(r'(?P<name>[^:]+): (?P<levels>.+?) - (?P<kind>.+?) - (?P<types>.+?)'
+                       r' - (?P<factions>.+?) - (?P<scope>\S+)(?: (?P<desc>.*))?$')
+WIKILINK = re.compile(r'\[\[([^\]|#]*)(?:#[^\]|]*)?(?:\\?\|([^\]]*))?\]\]')
+# Ends per Level of every Class, see Deck#6
+EXPECTED_ENDS = {0: 2, 1: 6, 2: 4, 3: 4, 4: 4, 5: 2, 6: 2, 7: 1, 8: 1}
+
+
+def tokens(text, cls):
+    """Ability text as tokens: a Technology, a value like 2m or +1d, a + joining a combined Ability."""
+    out = []
+    for m in TOKEN.finditer(text):
+        if m['tech']:
+            # Explore on a Military End is printed as Recon, see Deck#Notes#10
+            out.append({'tech': m['tech'], 'label': 'Recon' if m['tech'] == 'Explore' and cls == 'm' else m['tech']})
+        elif m['val']:
+            out.append({'val': m['val'], 'unit': m['val'][-1]})
+        else:
+            out.append({'sep': '+'})
+    return out
+
+
+def end(level, extra, cls, gives):
+    primary, _, secondary = gives.strip().partition(' ')
+    return {'level': int(level), 'extra': int(extra), 'cls': cls, 'text': gives.strip(),
+            'primary': tokens(primary, cls), 'secondary': tokens(secondary.strip(), cls)}
+
+
+def parse_deck():
+    cards = []
+    for line in DECK.read_text().splitlines():
+        m = DECK_LINE.match(line)
+        if not m:
+            continue
+        strong = end(m['level'], m['extra'], m['cls'], m['strong'])
+        weak = end(m['wlevel'], m['wextra'], m['wcls'], m['weak'])
+        techs = [{'name': t['tech'], 'end': side} for side, e in (('Strong', strong), ('Weak', weak))
+                 for t in e['primary'] + e['secondary'] if 'tech' in t]
+        cards.append({
+            'id': f'{m["type"]}{m["level"]}{m["cls"].upper()}', 'type': m['type'], 'typeName': CARD_TYPES[m['type']],
+            'name': f'{CARD_TYPES[m["type"]]} {m["level"]}{m["cls"].upper()}', 'copies': int(m['copies'] or 1),
+            'strong': strong, 'weak': weak, 'price': strong['level'] + strong['extra'], 'techs': techs,
+            'prereq': [{'level': int(lv), 'cls': c} for lv, c in PREREQ.findall(m['prereq'] or '')],
+            'line': ' '.join(line.split()),
+        })
+    seen = {}
+    for card in cards:
+        n = seen[card['id']] = seen.get(card['id'], 0) + 1
+        card['key'] = card['id'] + (f'.{n}' if n > 1 else '')
+    return cards
+
+
+def plain(text):
+    text = WIKILINK.sub(lambda m: m[2] or m[1], text)
+    return text.replace('**', '')
+
+
+def parse_catalog():
+    items, current, inside = [], None, False
+    for line in CATALOG.read_text().splitlines():
+        if line.startswith('#'):
+            inside = line.strip() == '#### List'
+            continue
+        if not inside:
+            continue
+        if m := re.match(r'\d+\. (.*)', line):
+            current = [m[1]]
+            items.append(current)
+        elif current and line[:1] in ' \t' and line.strip():
+            current.append(line.strip())
+    techs = {}
+    for item in items:
+        name = WIKILINK.match(item[0])
+        m = TECH_ITEM.match(plain(' '.join(item)))
+        if not (name and m):
+            continue
+        kind = m['kind']
+        techs[name[1]] = {
+            'name': name[1], 'levels': m['levels'], 'kind': 'Hub' if kind.endswith('Hub') else kind,
+            'hub': kind if kind.endswith('Hub') else '', 'types': m['types'].split(', '),
+            'factions': m['factions'].split(', '), 'scope': m['scope'], 'desc': (m['desc'] or '').strip(),
+            'classes': sorted(set(''.join(re.findall(r'\d+([mcps]+)', m['levels']))), key='mcps'.index),
+            'minLevel': min((int(x) for x in re.findall(r'(\d+)[mcps]', m['levels'])), default=99),
+        }
+    return techs
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument('-o', '--output', default=ROOT / 'build/deck.html', type=Path)
+    args = parser.parse_args()
+    data = {'cards': parse_deck(), 'techs': parse_catalog(), 'expected': EXPECTED_ENDS,
+            'source': str(DECK.relative_to(ROOT)), 'generated': datetime.now().strftime('%Y-%m-%d %H:%M')}
+    payload = json.dumps(data, ensure_ascii=False).replace('</', '<\\/')
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(TEMPLATE.read_text().replace('/*DATA*/null', payload))
+    print(f'{args.output}: {len(data["cards"])} cards, {len(data["techs"])} technologies')
+
+
+if __name__ == '__main__':
+    main()

@@ -1,4 +1,4 @@
-.PHONY: docs view serve site html check stats lint wrap link links hooks
+.PHONY: docs view serve site html check stats lint wrap link links hooks deck deckview
 
 # uwiki.toml holds uwiki defaults: excluded build/, checks, schema
 MDLINT ?= npx --yes markdownlint-cli2@0.23.3
@@ -10,20 +10,25 @@ docs:
 	uwiki build . -o $(BUILD)/
 view: docs
 	$(OPEN) $(BUILD)/8bitgalaxy.html
+deck:
+	bin/deckview -o $(BUILD)/deck.html
+deckview: deck
+	$(OPEN) $(BUILD)/deck.html
 serve:
 	uwiki serve . --open
 # the site in dist/: the game at /, in the pixel perfect legacy look at
-# /pp/, the legacy prototype at /legacy/, the rules at /docs.html,
-# online play through /colyseus
+# /pp/, the legacy prototype at /legacy/, the rules at /docs.html, the
+# Deck gallery at /deck.html, online play through /colyseus
 site:
 	rm -rf dist
 	VITE_SERVER_URL=/colyseus npm run build -w @8bitgalaxy/client -- --outDir ../../dist
 	VITE_SERVER_URL=/colyseus VITE_LOOK=pp npm run build -w @8bitgalaxy/client -- --outDir ../../dist/pp --base /pp/
 	cd legacy && npx vite build --outDir ../dist/legacy --emptyOutDir
 	$(MAKE) html
-# the rules as one page: dist/docs.html
+# the rules as one page and the Deck gallery: dist/docs.html, dist/deck.html
 html:
 	uwiki build . -o dist/docs.html
+	bin/deckview -o dist/deck.html
 check:
 	uwiki check .
 	bin/checkdocs
