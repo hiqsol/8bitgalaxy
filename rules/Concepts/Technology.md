@@ -80,8 +80,8 @@ scope: core
     [[Group]] is pinned only by two or more rival [[Military]]
     [[Actor]]s
 21. [[Defection]]: 6m - [[Action]] - [[Hero]] - Player - advanced
-    [[Turn]]s a rival [[Damaged]] [[Hero]] in a controlled [[Star]]
-    into an own one
+    Replaces a rival [[Damaged]] [[Hero]] in a controlled [[Star]]
+    with the own copy of it
 22. [[Jamming]]: 6m - Modifier - [[Ship]], [[Hyperstructure]] -
     Player - advanced No rival route passes its [[Star]] or goes
     around it, for every [[Range]] check
@@ -156,8 +156,8 @@ scope: core
     +[[Goods]]: 1 for each rival [[Card]] [[Damaged]] in the
     [[Combat]], winner or loser
 49. [[Boarding]]: 6p - Modifier - [[Ship]] - Player - advanced
-    The [[Combat]] winner takes one rival [[Ship]] that would be
-    [[Damaged]] into its [[Discard]]
+    The [[Combat]] winner [[Destroy]]s one rival [[Ship]] that would
+    be [[Damaged]] and takes the own copy of it into its [[Discard]]
 50. [[DysonCollector]]: 6p - Modifier - [[Hyperstructure]] - Player -
     advanced +[[Energy]]: 1 at own [[Restore]], 2 with 3 [[Ready]] own
     [[Structure]]s in its [[Star]]

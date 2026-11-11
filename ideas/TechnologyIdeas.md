@@ -54,8 +54,8 @@ liked one gets its [[Level]], [[Class]], kind and [[Card]]s in
     out no rival [[Energy]] or [[Goods]]
 22. **Bombardment**: an [[Attack]] Damages one defending [[Structure]]
     before the first round
-23. **Boarding**: the winner of a [[Combat]] takes one defeated
-    [[Ship]] into its [[Discard]] instead of Damaging it
+23. **Boarding**: the winner of a [[Combat]] [[Destroy]]s one defeated
+    [[Ship]] and takes its own copy of it into its [[Discard]]
 24. **Escort**: a moving [[Group]] with a [[Military]] [[Actor]] can't
     be Intercepted
 25. **Siege**: [[Defender]]s in the target [[Star]] lose their
@@ -67,7 +67,8 @@ liked one gets its [[Level]], [[Class]], kind and [[Card]]s in
 28. **Conscription**: a [[Tool]] fights as a [[Military]] [[Card]] of
     [[Level]] 2
 29. **Defection**: a rival [[Damaged]] [[Hero]] in a [[Star]] the
-    player controls joins the player's [[Discard]]
+    player controls is Destroyed, the player's own copy of it joins
+    the player's [[Discard]]
 30. **Refugees**: when a rival loses a [[Star]], its [[Damaged]]
     [[Colony|Colonies]] there may move into own free [[Slot]]s
 31. **Tolls**: a rival [[Action]] passing its [[Star]] pays its
