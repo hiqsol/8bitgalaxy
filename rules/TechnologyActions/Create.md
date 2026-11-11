@@ -17,6 +17,8 @@ scope: core
 	2. A [[Structure]] is created only into a [[Star]] [[ActiveFor]]
 	   the player: [[ControlledBy]] the player or [[Disputed]] with
 	   them
+	3. A [[Hero]] is created only below the [[Hero limit]], see
+	   [[Hero#5]]
 7. **Cost**: [[Card]]'s [[Price]]
 8. **Outcome**:
 	1. [[Actor]] - goes to [[Discard]]

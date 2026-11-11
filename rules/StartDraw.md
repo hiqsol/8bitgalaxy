@@ -29,5 +29,6 @@ scope: duel
    player starts with smaller [[Hand]]
 2. The [[Tool]]s fill the deck with junk: a good [[Card]] comes to
    [[Hand]] rarely until the player thins the deck, see [[Tool]]
-3. The choice of [[Hero]]es sets the opening, the other two can be
-   [[Create]]d at the [[Academy]]
+3. The choice of [[Hero]]es sets the opening: the two start at the
+   [[Hero limit]], the other two are [[Create]]d at the [[Academy]] to
+   replace a lost one or with [[Triumvirate]], see [[Hero]]

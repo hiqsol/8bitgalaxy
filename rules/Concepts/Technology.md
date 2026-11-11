@@ -115,29 +115,29 @@ scope: core
     [[Goods]] carried to a rival [[Colony]] turn into [[Energy]]
 33. [[MinusDeplete]]: 4c - Modifier - [[Colony]] - Player - advanced
     -[[Deplete]]: one participant doesn't [[Deplete]]
-34. [[PlusHero]]: 4c - [[Action]] - [[Colony]] - Player - advanced
-    +[[Hero]]: creates a new [[Level]] 1 [[Hero]]
-35. [[Sell]]: 4c - [[Action]] - [[Ship]] - Player - advanced A
+34. [[Sell]]: 4c - [[Action]] - [[Ship]] - Player - advanced A
     [[Trade]] over a [[Card]]: its [[Price]] turns into [[Goods]], the
     [[Card]] is Destroyed
-36. [[Assimilate]]: 6c - [[Action]] - [[Hero]] - Player - advanced
+35. [[Assimilate]]: 6c - [[Action]] - [[Hero]] - Player - advanced
     Replaces a rival [[Colony]] in a [[Star]] the player controls with
     an own one
-37. [[Contact]]: 6c - [[Action]] - [[Hero]] - Player - advanced
+36. [[Contact]]: 6c - [[Action]] - [[Hero]] - Player - advanced
     Conquers a [[Wild]] [[Star]] without [[Ancient]]s, for twice the
     [[World]]'s [[Price]]
-38. [[Emulate]]: 6c - Modifier - [[Hero]] - Player - advanced Uses a
+37. [[Emulate]]: 6c - Modifier - [[Hero]] - Player - advanced Uses a
     **Technology** printed on the top [[Card]] of a rival's
     [[Discard]]
-39. [[Envoy]]: 6c - Modifier - [[Hero]] - Player - advanced
+38. [[Envoy]]: 6c - Modifier - [[Hero]] - Player - advanced
     Gives no [[Control]], doesn't pin and can't be Intercepted, the
     other [[Card]]s of its [[Action]] don't pin and can't be
     Intercepted
-40. [[Festival]]: 6c - Modifier - [[Hyperstructure]] - Player -
+39. [[Festival]]: 6c - Modifier - [[Hyperstructure]] - Player -
     advanced +[[Restore]]: [[Restore]]s every own [[Structure]] in its
     [[Star]] at each [[Restore]] phase
-41. [[Mentor]]: 6c - Modifier - [[Hero]] - Player - advanced
+40. [[Mentor]]: 6c - Modifier - [[Hero]] - Player - advanced
     -[[Hub]]: a [[Grow]] in its [[Star]] needs no [[Hub]]
+41. [[Triumvirate]]: 6c - Modifier - [[Hyperstructure]] - Player -
+    advanced +[[Hero]]: the [[Hero limit]] is 3
 42. [[Heritage]]: 8c - Modifier - [[Hyperstructure]] - Player -
     advanced Own [[Damaged]] [[Card]]s count for
     [[GalacticDiaspora|Galactic Diaspora]]

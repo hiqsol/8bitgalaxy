@@ -97,7 +97,7 @@ C4+1s/3+1s:    +3r +4s               / +1r                << *2s
 
 HS6+0m/5+0m:   Jamming +1e           / Jamming            << *4m
 HS6+0p/5+0p:   DysonCollector +1e    / DysonCollector     << *4p
-HS6+0c/5+0c:   Festival +1e          / Festival           << *4c
+HS6+0c/5+0c:   Triumvirate +1e       / Triumvirate        << *4c
 HS6+0s/5+0s:   GreatLibrary +1e      / GreatLibrary       << *4s
 HS8+0c/7+0c:   Heritage +2e          / Heritage           << *4m *4p *6c
 HS8+0p/7+0p:   StellarForge +2e      / StellarForge       << *4c *4s *6p

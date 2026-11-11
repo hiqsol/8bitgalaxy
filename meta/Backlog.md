@@ -118,7 +118,9 @@ Reopen one only with evidence from a played game, not from a review.
 	- j) [[Siege]]: too much or too little?
 	- k) [[PaxGalactica|Pax]]: cheap 2/1 [[Hero]]es make "no leader"
 	  unreachable; fall by the home [[Star]], or raised [[Hero]]es
-	  cost more?
+	  cost more? Now the [[Hero limit]] lets a [[Damaged]] [[Hero]]
+	  block a new one, see [[Hero#Notes#4]]: does "no leader" come too
+	  easily?
 - [ ] **P66. Weak Structure ends** have no [[SecondaryAbility]]:
 	- a) One less than the [[Strong]] [[End]]'s: [[Colony]] 2x +1,
 	  [[Base]] 4x +2, [[Colony]] 4x +3.
@@ -151,7 +153,8 @@ Reopen one only with evidence from a played game, not from a review.
   stays as a [[Tile]].
 - [ ] **P58. Traits instead of new Types**: `Unique`, `Consumable`,
   `Immovable`; new [[State]]s come from position, not markers.
-- [ ] **P59. Stubs**: c) [[PlusHero]] goes, [[Create]] covers it.
+- [ ] **P59. Stubs**: c) closed: `PlusHero` went, the
+  [[Triumvirate]] [[Hyperstructure]] raises the [[Hero limit]].
 - [ ] **I94. Underdescribed**: c) [[PlusPile]]'s [[Cost]]; its
   [[Card]] becomes the new pile [[Back]] up, see [[PlusPile#2]].
 

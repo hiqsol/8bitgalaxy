@@ -15,6 +15,7 @@ scope: advanced
 	3. The player's own copy of that [[Hero]] is anywhere in the
 	   player's [[Factory]] or [[Laboratory]] piles, unlike the top
 	   [[Card]] rule of the piles
+	4. The player is below its [[Hero limit]], see [[Hero#5]]
 5. **Cost**: the rival [[Hero]]'s current [[Level]]
 6. **Outcome**:
 	1. The rival [[Hero]] is [[Destroy]]ed: it goes to its
