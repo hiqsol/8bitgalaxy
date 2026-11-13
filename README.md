@@ -86,7 +86,7 @@ top right when needed.
 ## Credits
 
 Images of card types are from [game-icons.net](https://game-icons.net)
-by Lord Berandas, Delapouite and Lorc, licensed under
+by Delapouite and Lorc, licensed under
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), see
 `public/images/types/README.md` for each icon.
 

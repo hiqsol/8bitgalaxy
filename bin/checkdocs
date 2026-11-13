@@ -213,8 +213,11 @@ def check_page(page):
 
 
 def deck_assignments(deck, pages):
-    """Map technology -> {(card, end): class} from the Deck card lines, other names in them are no technologies."""
+    """Map technology -> {(card, end): class} from the Deck card lines, other names in them are no technologies;
+    an alias of a technology page, like Fix of Recover, is that technology."""
     result = {}
+    alias = {a: p.path.stem for p in pages.values() if p.path.parent.name in TECH_DIRS
+             for a in listed(p.meta.get('aliases', ''))}
     for line in deck.text.splitlines():
         spec = DECK_LINE.match(line)
         if not spec:
@@ -222,6 +225,7 @@ def deck_assignments(deck, pages):
         card = f'{CARD_TYPES[spec["type"]]} {spec["level"]}{spec["cls"].upper()}'
         for end, cls, gives in (('Strong', spec['cls'], spec['strong']), ('Weak', spec['wcls'], spec['weak'])):
             for tech in re.findall(r'[A-Z][A-Za-z]+', gives):
+                tech = alias.get(tech, tech)
                 if tech == 'TBD' or tech in pages and pages[tech].path.parent.name not in TECH_DIRS:
                     continue
                 result.setdefault(tech, {})[(card, end)] = cls.upper()

@@ -41,6 +41,17 @@ TECH_ITEM = re.compile(r'(?P<name>[^:]+): (?P<levels>.+?) - (?P<kind>.+?) - (?P<
 WIKILINK = re.compile(r'\[\[([^\]|#]*)(?:#[^\]|]*)?(?:\\?\|([^\]]*))?\]\]')
 # Ends per Level of every Class, see Deck#6
 EXPECTED_ENDS = {0: 2, 1: 6, 2: 4, 3: 4, 4: 4, 5: 2, 6: 2, 7: 1, 8: 1}
+# an alias of a technology page, like Fix of Recover, is that technology
+TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')
+ALIASES = re.compile(r'\A---\n(?:.*\n)*?aliases: \[(.*)\]\n')
+
+
+def tech_aliases():
+    return {alias.strip(): page.stem for d in TECH_DIRS for page in (WIKI / d).glob('*.md')
+            if (m := ALIASES.match(page.read_text())) for alias in m[1].split(',') if alias.strip()}
+
+
+TECH_ALIASES = tech_aliases()
 
 
 def tokens(text, cls):
@@ -49,7 +60,8 @@ def tokens(text, cls):
     for m in TOKEN.finditer(text):
         if m['tech']:
             # Explore on a Military End is printed as Recon, see Deck#Notes#10
-            out.append({'tech': m['tech'], 'label': 'Recon' if m['tech'] == 'Explore' and cls == 'm' else m['tech']})
+            tech = TECH_ALIASES.get(m['tech'], m['tech'])
+            out.append({'tech': tech, 'label': 'Recon' if tech == 'Explore' and cls == 'm' else m['tech']})
         elif m['val']:
             out.append({'val': m['val'], 'unit': m['val'][-1]})
         else:

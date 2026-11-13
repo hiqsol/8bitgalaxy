@@ -6,7 +6,7 @@ background is removed and the glyph is filled with `currentColor`.
 
 | Type | File | Icon | Author |
 |---|---|---|---|
-| Ship | `heavy-fighter.svg` | [heavy-fighter](https://game-icons.net/1x1/lord-berandas/heavy-fighter.html) | Lord Berandas |
+| Ship | `jet-fighter.svg` | [jet-fighter](https://game-icons.net/1x1/delapouite/jet-fighter.html) | Delapouite |
 | Hero | `astronaut-helmet.svg` | [astronaut-helmet](https://game-icons.net/1x1/delapouite/astronaut-helmet.html) | Delapouite |
 | Base | `defense-satellite.svg` | [defense-satellite](https://game-icons.net/1x1/delapouite/defense-satellite.html) | Delapouite |
 | Colony | `moon-orbit.svg` | [moon-orbit](https://game-icons.net/1x1/delapouite/moon-orbit.html) | Delapouite |
