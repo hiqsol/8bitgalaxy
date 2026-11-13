@@ -93,22 +93,11 @@ table { border-collapse: collapse; }
 .Alien .Spec:is(.Require1, .Require2, .Require3) .Value.Colonization { background-color: rgba(40, 200, 70, 0.35); }
 .Alien .Spec:is(.Require1, .Require2, .Require3) .Value.Production { background-color: rgba(230, 150, 0, 0.45); }
 .Alien .Spec:is(.Require1, .Require2, .Require3) .Value.Science { background-color: rgba(60, 110, 255, 0.45); }
-/* Type images in the pale color of the Class: Industrial as Production, Social as Colonization */
-.Card.Industrial .Image .lni { color: rgba(255, 235, 0, 0.6); }
-.Card.Social .Image .lni { color: rgba(0, 255, 0, 0.35); }
+/* Type images in the pale color of the Class, the Human ones are legacy's */
 .Card.Alien.Industrial .Image .lni { color: rgba(230, 150, 0, 0.45); }
 .Card.Alien.Social .Image .lni { color: rgba(40, 200, 70, 0.45); }
-/* a Hyperstructure violet, a Tool grey */
-.Card.Hyperstructure .Image .lni { color: rgba(140, 50, 255, 0.4); }
-.Card.Tool .Image .lni { color: rgba(100, 100, 100, 0.45); }
 .Card.Alien.Hyperstructure .Image .lni { color: rgba(190, 110, 255, 0.5); }
 .Card.Alien.Tool .Image .lni { color: rgba(200, 200, 200, 0.4); }
-/* a Tool is a Unit, the legacy version has no Tool */
-.Tool .Image .Klass { left: 11px; top: 9px; }
-/* game-icons.net images at the place of the legacy ones */
-.Card .Image .lni.gi { width: 156px; height: 156px; }
-/* Type images, legacy and game-icons, 30px right and down from the legacy place */
-.Card .Image .Klass { translate: 30px 30px; }
 .images { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .images figure { margin: 0; display: flex; gap: 6px; align-items: center; }
 .images svg { width: 28px; height: 28px; fill: var(--ink); }
@@ -117,7 +106,6 @@ table { border-collapse: collapse; }
 .cell .Card:hover { box-shadow: 0 0 20px var(--accent); }
 .cell .Card.dim { opacity: .18; }
 .cell .Card.hl { box-shadow: 0 0 0 6px var(--accent); }
-.Card .Image .lni { width: 156px; height: 156px; fill: currentColor; }
 /* a third Prerequisite: the legacy card has places for two */
 .Spec.Require3 .Value { position: absolute; width: 40px; height: 40px; font-size: 25px; line-height: 45px;
   font-weight: 100; color: #000 !important; }
@@ -367,9 +355,9 @@ function specsHtml(e, specs, unit, prereq = []) {
 }
 function imageHtml(c) {
   const image = D.images[c.typeName];
-  if (F.images === 'icons' && image) return `<svg class="Klass lni gi" viewBox="0 0 512 512"><path d="${image.d}"/></svg>`;
+  if (F.images === 'icons' && image) return `<div class="Klass lni"><svg viewBox="0 0 512 512"><path d="${image.d}"/></svg></div>`;
   const icon = D.icons[c.typeName];
-  return icon ? `<svg class="Klass lni" viewBox="0 0 144 144"><path transform="translate(0 128) scale(1 -1)" d="${icon}"/></svg>` : '';
+  return icon ? `<div class="Klass lni"><svg viewBox="0 0 144 144"><path transform="translate(0 128) scale(1 -1)" d="${icon}"/></svg></div>` : '';
 }
 function cardHtml(c) {
   const unit = UNIT_TYPES.has(c.type);

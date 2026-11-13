@@ -2,6 +2,12 @@ import Params from "./Params.js";
 import aDrawer from './aDrawer.js';
 import TurnCard from '../Model/History/TurnCard.js';
 import AlterCard from '../Model/History/AlterCard.js';
+import heroImage from '$images/types/astronaut-helmet.svg?raw';
+import shipImage from '$images/types/jet-fighter.svg?raw';
+import baseImage from '$images/types/defense-satellite.svg?raw';
+import colonyImage from '$images/types/moon-orbit.svg?raw';
+import eventImage from '$images/types/spiky-explosion.svg?raw';
+import toolImage from '$images/types/spanner.svg?raw';
 
 class CardDrawer extends aDrawer {
   constructor(drawer) {
@@ -83,9 +89,10 @@ class CardDrawer extends aDrawer {
 
   drawImage(e, specs) {
     let i = e.querySelector(".Image .Klass.lni");
-    if (i) {
-      i.classList.add("lni-" + this.type2image(specs.Type));
-    }
+    if (!i) return;
+    const svg = TypeSvgs[specs.Type.toLowerCase()];
+    if (svg) i.innerHTML = svg;
+    else i.classList.add("lni-" + this.type2image(specs.Type));
   }
 
   type2image(type) {
@@ -105,6 +112,16 @@ const TypeImages = Object.freeze({
   event: "bolt-alt",
   tool: "wrench",
   tech: "react",
+});
+
+// game-icons.net images, a LineIcons glyph for a Type without one
+const TypeSvgs = Object.freeze({
+  hero: heroImage,
+  ship: shipImage,
+  base: baseImage,
+  colony: colonyImage,
+  event: eventImage,
+  tool: toolImage,
 });
 
 const RaceImages = Object.freeze({

@@ -23,16 +23,33 @@
 
 .Image .lni {
     position: absolute;
-    font-size: 130px;
+    font-size: 156px;
     font-weight: 100;
 }
 
+/* Type images from game-icons.net, see public/images/types */
+.Image .Klass svg {
+    display: block;
+    width: 156px;
+    height: 156px;
+    fill: currentColor;
+}
+
+/* the pale color of the Class: Industrial as Production, Social as Colonization */
 .Industrial .Image .lni {
-    color: rgba(180, 180, 70, 0.9);
+    color: rgba(255, 235, 0, 0.6);
 }
 
 .Social .Image .lni {
-    color: rgba(50, 180, 50, 0.7);
+    color: rgba(0, 255, 0, 0.35);
+}
+
+.Hyperstructure .Image .lni {
+    color: rgba(140, 50, 255, 0.4);
+}
+
+.Tool .Image .lni {
+    color: rgba(100, 100, 100, 0.45);
 }
 
 .Spec .Value {
@@ -212,14 +229,20 @@
     text-align: right;
 }
 
+/* the place of the Type image, each Type its own */
 .Ship .Image .Klass {
-    left: 11px;
-    top: 9px;
+    left: 40px;
+    top: 60px;
+}
+
+.Tool .Image .Klass {
+    left: 41px;
+    top: 39px;
 }
 
 .Hero .Image .Klass {
-    left: 20px;
-    top: 0px;
+    left: 50px;
+    top: 30px;
 }
 
 .Structure .Spec.Level .Value {
@@ -227,9 +250,24 @@
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-.Structure .Image .Klass {
-    left: 20px;
-    top: 10px;
+.Base .Image .Klass {
+    left: 70px;
+    top: 40px;
+}
+
+/* the defense-satellite is narrow, 20% wider */
+.Base .Image .Klass svg {
+    transform: scaleX(1.4);
+}
+
+.Colony .Image .Klass {
+    left: 50px;
+    top: 40px;
+}
+
+.Hyperstructure .Image .Klass {
+    left: 50px;
+    top: 40px;
 }
 .Structure .Spec.Require1 .Value {
     top: 70px;
@@ -260,8 +298,8 @@
 }
 
 .Tech .Image .Klass {
-    left: 60px;
-    top: 100px;
+    left: 90px;
+    top: 130px;
 }
 
 .Tech .Spec.Attack {
@@ -292,8 +330,8 @@
 
 .Event .Image .Klass {
     color: rgba(100, 100, 100, 0.5);
-    left: 5px;
-    top: 15px;
+    left: 35px;
+    top: 45px;
 }
 .Structure .Spec.Text .Value {
     top: 10px;
