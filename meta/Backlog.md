@@ -29,27 +29,27 @@ Reopen one only with evidence from a played game, not from a review.
    with [[Starter]], `duel`
 8. **Failed action** costs all its [[Participants]]; a take-back
    (P:34) and a visible [[Explore]] [[Price]] (S:20) rejected
-9. **World deck**: every [[World]] [[Card]] (P:36 i), see
+9. **World deck**: every [[World]] [[Card]] (P:36i), see
    [[WorldDeck]]
 10. **Combat order**: the [[Attacker]] selects the first
     [[Defender]]s, then rounds of any number of [[Card]]s; P:28 and
     S:70 rejected, see [[Combat]]
 11. **Defense**: a [[Military]] [[Card]] defends with its [[Level]]
     (P:62, S:69), see [[Defense]]
-12. **Academy defenders** stay in `duel` (S:25 b, I:76 c), see
+12. **Academy defenders** stay in `duel` (S:25b, I:76c), see
     [[Academy]]
 13. **Technologies without cards** go on the 6/5 and 8/7 [[Card]]s
     (P:25): the Crossroads variant, see [[Deck]], [[Studies]]
-14. **`X+Y` power** stays, though no [[Card]] prints `+Y` (S:58 a)
+14. **`X+Y` power** stays, though no [[Card]] prints `+Y` (S:58a)
 15. **Hubs**: no global [[Hub]], a [[Faction]] without one captures
-    one (I:19 d), see [[Hub]]
-16. **Trade between factions** works in a [[Duel]] (P:57 e)
+    one (I:19d), see [[Hub]]
+16. **Trade between factions** works in a [[Duel]] (P:57e)
 17. **Game finish**: [[PaxGalactica|Pax Galactica]] wins at once, the
     other achievements trigger [[Twilight]], the most achievements
-    win, [[VictoryPoints]] break a tie (I:77, I:78, I:95 a)
+    win, [[VictoryPoints]] break a tie (I:77, I:78, I:95a)
 18. **Victory points**: the current [[Level]]s of controlled
     non-[[Damaged]] [[Social]] [[Card]]s; no win by [[Objective]]
-    points (I:43 b)
+    points (I:43b)
 19. **Space length**: the printed [[Length]] whatever the [[Type]];
     P:24 [[BlackHole|Black hole]] a, b and [[Void]] b rejected, see
     [[Distance]]
@@ -57,10 +57,10 @@ Reopen one only with evidence from a played game, not from a review.
     c), see [[Void]]
 21. **Asteroids**: only [[Extract]] (P:24 [[Asteroids]] b-d)
 22. **Duel Space tiles**: every revealed position takes a [[Tile]]
-    (P:35 a), see [[Duel]]
+    (P:35a), see [[Duel]]
 23. **Symmetric Human and Alien** decks, asymmetry is for later
     [[Faction]]s, see [[Faction]]
-24. **Piles**: their order is a subgame (P:27 e), see [[Laboratory]]
+24. **Piles**: their order is a subgame (P:27e), see [[Laboratory]]
 25. **Black hole**: passable both ways (P:24 [[BlackHole|Black hole]]
     c), see [[BlackHole]]
 26. **Routes**: [[Tile]]s connect at an edge or a corner, a route may
@@ -68,7 +68,7 @@ Reopen one only with evidence from a played game, not from a review.
 27. **Distance**: all [[Tile]]s but the first, a [[Star]] by its
     [[Level]], see [[Distance]]
 28. **Space Length** up to 8, the [[Scenario]] sets the [[Space bag]]
-    (P:67 a, b)
+    (P:67a, P:67b)
 29. **Space Price**: [[Length]] plus the printed [[ExtraPrice]] (P:24
     Normal b), see [[Price]]
 30. **No Space Class**: a [[Star]] takes its [[World]]'s, see
@@ -78,12 +78,12 @@ Reopen one only with evidence from a played game, not from a review.
 32. **Space types**: [[HyperPass|Hyper pass]] a wormhole pair, a
     [[Relic]] draws an [[Event]], a [[Supernova]] +1 [[Power]] beside
     it (P:24 HyperPass a, c, [[Relic]] a, b)
-33. **Duel Space bag**: halved by [[Type]] and [[Length]] (P:35 b, c),
-    see [[Duel]]
+33. **Duel Space bag**: halved by [[Type]] and [[Length]]
+    (P:35b, P:35c), see [[Duel]]
 34. **Conquest**: the [[Ancient deck]], as many [[Ancient]]s as the
     [[World]]'s [[Price]] (S:60), see [[Ancient]]
 35. **Destroy**: a player [[Card]], a [[Tool]] too, to the top of a
-    [[Factory]] pile, any other under its deck (S:59 b), see
+    [[Factory]] pile, any other under its deck (S:59b), see
     [[Destroy]]
 36. **Rejected simplifications**: S:61 [[Attack]] as a [[Move]] that
     must win, S:62 [[Move]] within a [[Star]] for every [[Card]], S:74
@@ -99,11 +99,11 @@ Reopen one only with evidence from a played game, not from a review.
 - [ ] **I:46. Deck thinning by Takeoff.** Taking off weak [[Card]]s to
   cycle strong ones, limited by [[Slot]]s; seen in game 3 of
   [[FirstDuelPlaytest]].
-- [ ] **I:79 b. Legacy thins the deck** like I46: keep [[Legacy]] in
+- [ ] **I:79b. Legacy thins the deck** like I46: keep [[Legacy]] in
   `objectives` or drop it?
-- [ ] **I:75 a. Actions per Turn.** [[GameBalance]] expects about 5
+- [ ] **I:75a. Actions per Turn.** [[GameBalance]] expects about 5
   [[Action]]s per [[Turn]], 2-3 is likelier.
-- [ ] **I:75 f. Militarization Defense.** The [[Plus]] [[Defense]] of
+- [ ] **I:75f. Militarization Defense.** The [[Plus]] [[Defense]] of
   [[Militarization]] [[Card]]s was set for [[Defense]] 1, but
   [[Military]] [[Card]]s defend with their [[Level]]: revise the
   values?
@@ -171,7 +171,7 @@ full text is in git. RG, PR and F numbers are of
 - [ ] **S:57. One weight, one price**: [[Size]] is the current
   [[Level]], or each [[End]] prints its [[Price]]; negative
   [[ExtraPrice]] goes.
-- [ ] **S:58 c.** [[Create]] makes only [[Card]]s with a [[Level]] 1
+- [ ] **S:58c.** [[Create]] makes only [[Card]]s with a [[Level]] 1
   [[End]], higher ones come by [[Upgrade]].
 - [ ] **S:63. One way to move a Laboratory card**: [[Research]]'s pile
   move goes, or no [[Shift]] between piles at all.
@@ -183,7 +183,7 @@ full text is in git. RG, PR and F numbers are of
 - [ ] **S:68. Hidden in one rule, in `duel`**: a [[Hidden]] [[Card]]
   counts as a [[Level]] 1 [[Card]] of its [[Role]].
 - [ ] **S:72. Two Turn phases**: **Play**, then **End**.
-- [ ] **S:73 h.** The LevelClasses and [[Type]]s of the [[Technology]]
+- [ ] **S:73h.** The LevelClasses and [[Type]]s of the [[Technology]]
   catalog go, the [[Deck]] holds the assignments, checkdocs drops the
   cross-check; the catalog format of 2026-10-27 may supersede it.
 - [ ] **I:96. [[Archive]] is a working name** for the [[Research]]

@@ -17,7 +17,7 @@ How the wiki is kept.
 2. Review items live in [[Backlog]]: issues `I:<n>`, proposals `P:<n>`
    and simplifications `S:<n>`, blockers `B:<n>` in [[Guidance]]
 	1. An item keeps its number when it moves
-	2. Its points are lettered bullets `- a) ...`, cited as `P:24 a`
+	2. Its points are lettered bullets `- a) ...`, cited as `P:24a`
 	3. It cites the rule it is about by item link, `[[Upgrade#7.2]]`
 	   or `[[Upgrade#Notes#2]]`
 3. The open items about a page set its `status`

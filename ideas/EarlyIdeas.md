@@ -10,7 +10,7 @@ scope: idea
 
 ## For open items
 
-1. **Objectives** for the list of [[Objective]]s, [[Backlog]] I:43 a,
+1. **Objectives** for the list of [[Objective]]s, [[Backlog]] I:43a,
    all checked on the current table:
 	1. Every [[Slot]] of a [[Star]] filled, or of the biggest [[Star]]
 	2. A [[Star]] whose [[Card]]s all share one [[Class]]

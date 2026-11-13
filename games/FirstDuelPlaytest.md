@@ -193,7 +193,7 @@ of B's home. B can not make a move.
   gets one [[Turn]] ([[Goal#5]], [[Twilight#3]]), it takes the four
   [[Level]] 8 [[Crown]]s ([[Deck]] 7), [[Culture]] is
   [[GalacticDiaspora|Galactic Diaspora]]; the pile order stays a
-  subgame (Settled 24), S:58 c, S:63 b.
+  subgame (Settled 24), S:58c, S:63b.
 - **F:3. The Colony engine loop** (RG1-1/3/6, RG2-2/4/5, RG3-1/2):
   fixed, [[Grow]] goes one [[Level]] up and lands [[Depleted]] on the
   [[Weak]] [[End]] of a 4/3, no free [[Restore]] ([[Upgrade#5.4]],
@@ -208,7 +208,7 @@ of B's home. B can not make a move.
 - **F:5. Home Structure row, overlap and no exit**: [[Recycle]] frees
   a [[Slot]]; [[Manage]] swap in S:62, [[Weak]] [[End]] Secondary in
   P:66; the overlap stays, every player liked it.
-- **Actions per Turn 1.3–2.0**, far below 5: I:75 a.
+- **Actions per Turn 1.3–2.0**, far below 5: I:75a.
 - **The 10-card deck too thin**, a [[Shuffle]] every 1–2 [[Turn]]s:
   [[Reserve]] of 18 with 8 [[Tool]]s ([[StartDraw#1]]).
 - **Free unlimited Takeoff banks the Hand**, Turtle shrank its
@@ -228,7 +228,7 @@ All are stated in the rules now or open in the [[Backlog]].
 |---|---|---|
 | RG1-1 | an upgraded [[Depleted]] [[Structure]] comes [[Ready]] | [[Upgrade#Notes#2]] |
 | RG1-2, RG3-4 | [[Ancient]]s get no [[Star]] bonus; the winner picks whom to save | [[Ancient#4]], [[Combat#9.1]] |
-| RG1-3, RG2-5, RG3-1 | [[Research]] onto any [[Factory]] pile | Settled 24, S:47 e |
+| RG1-3, RG2-5, RG3-1 | [[Research]] onto any [[Factory]] pile | Settled 24, S:47e |
 | RG1-4 | [[Ancient]]s pin | obsolete: [[Ancient]]s come only in an [[Attack]], [[Ancient#3]] |
 | RG1-5 | a [[Move]] into the rival's only [[Star]]: it can not make a move | F:1 |
 | RG1-6, RG2-4, RG3-2 | the old [[Card]] of an [[Upgrade]] goes on top of a [[Factory]] pile | [[Upgrade#7.2]] |
@@ -268,22 +268,22 @@ Made before play where the docs were silent, in `RULES.md` section 11:
   others 4: home [[Star]]s and S11 have 5+5, S10 and S12 5 [[Unit]] +
   3 [[Structure]], S01 and S20 3 [[Unit]] + 5 [[Structure]]
   ([[Duel#4]]).
-- PR-5 [[Factory]] and [[Laboratory]] open: S:47 a.
+- PR-5 [[Factory]] and [[Laboratory]] open: S:47a.
 - PR-6 [[Energy]] income at the start of own [[Turn]]: the
   [[Homeworld]] pays +1e when it joins a [[Science]] [[Action]],
   [[Receive]] is the [[Action]] for it ([[Duel#7]], [[Receive]]).
 - PR-7 [[Militarization]]'s `+N Defense` kept: [[Militarization]] is
-  defined, the values in I:75 f.
+  defined, the values in I:75f.
 - PR-8 starting [[Ship]]s 1/1: [[Ship]]s 1/0, the [[Weak]] [[End]]
   [[Level]] 0 of another [[Class]] ([[Deck]] 8).
 - PR-9 [[Slot]] k is overlapped when [[Slot]] k+1 holds a [[Card]]:
   [[Slot#5]].
 - PR-10 a [[Supporter]]'s [[Level]] and [[Class]] as its one
-  [[Ability]] for a Prerequisite: S:42 c.
+  [[Ability]] for a Prerequisite: S:42c.
 - PR-11 Boosting doesn't use the one [[Ability]]: S:65.
 - PR-12 an [[Action]] from [[Hand]] still needs [[Range]] from its
   [[Source]]: [[PerformAction#4.2]].
-- PR-13 [[Research]] onto any [[Factory]] pile: Settled 24, S:47 e.
+- PR-13 [[Research]] onto any [[Factory]] pile: Settled 24, S:47e.
 - PR-14 [[Explore]] [[Range]] to the target [[Tile]]: [[Explore#5]].
 - PR-15 an upgraded [[Structure]] comes [[Ready]]:
   [[Upgrade#Notes#2]].
