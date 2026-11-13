@@ -14,6 +14,15 @@ orphans = true
 mentions = true
 mentions-every = true
 
+# review items, see meta/Docs.md: I:46 links where **I:46.** starts an item, of meta/Backlog.md,
+# meta/Diagnostic.md, meta/Guidance.md or a playtest
+[refs."I:"]                               # issues
+[refs."P:"]                               # proposals
+[refs."S:"]                               # simplifications
+[refs."B:"]                               # blockers
+[refs."Q:"]                               # diagnostic questions
+[refs."F:"]                               # playtest findings
+
 # status, scope and tags values are documented in meta/Docs.md and rules/index.md,
 # bin/checkdocs keeps them the same
 [schema]

@@ -10,7 +10,7 @@ scope: idea
 
 ## For open items
 
-1. **Objectives** for the list of [[Objective]]s, [[Backlog]] I43 a,
+1. **Objectives** for the list of [[Objective]]s, [[Backlog]] I:43 a,
    all checked on the current table:
 	1. Every [[Slot]] of a [[Star]] filled, or of the biggest [[Star]]
 	2. A [[Star]] whose [[Card]]s all share one [[Class]]
@@ -187,7 +187,7 @@ scope: idea
 	   the balance
 2. **Only cards**: no [[Token]]s, nothing stored between [[Turn]]s,
    all that plays is visible; [[Energy]] and [[Goods]] break it, see
-   [[Backlog]] S64
+   [[Backlog]] S:64
 3. **Questions the game answers**: what matters more, military or
    science, expansion or economy, people or machines, growth or
    aggression; which [[Faction]] is stronger and why

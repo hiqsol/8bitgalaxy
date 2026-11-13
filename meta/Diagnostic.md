@@ -17,7 +17,7 @@ Deferred until the [[Duel]] is clear.
    game from its record
 2. The **designer** answers with the intended rule
 3. Pick one option per question: tick its box, or name it, e.g.
-   "Q20 b"; if none fits, add a few words
+   "Q:20 b"; if none fits, add a few words
 4. An issue is **closed** when every reader picks the designer's
    option, else it stays open; "the notes don't decide" always means
    open
@@ -25,24 +25,24 @@ Deferred until the [[Duel]] is clear.
 
 ## Watch in playtest
 
-- **Q17. Deck thinning by Takeoff** (I46). In a played game, did using
-  [[Takeoff]] to leave weak [[Card]]s on the [[Field]] materially
-  improve that player's later [[Draw]]s?
+- **Q:17. Deck thinning by Takeoff** (I:46). In a played game, did
+  using [[Takeoff]] to leave weak [[Card]]s on the [[Field]]
+  materially improve that player's later [[Draw]]s?
 	- [ ] a) Yes.
 	- [ ] b) No.
 	- [ ] c) No player tried it.
 	- [ ] d) The record doesn't show.
-- **Q19. Actions per Turn** (I75 a). In a played game, how many
+- **Q:19. Actions per Turn** (I:75 a). In a played game, how many
   [[Action]]s, [[Takeoff]]s not counted, did a typical [[Turn]] hold?
 	- [ ] a) 1.
 	- [ ] b) 2 or 3.
 	- [ ] c) 4 to 6.
 	- [ ] d) 7 or more.
 	- [ ] e) The record doesn't show.
-- **Q20. Militarization Defense** (I75 f). A [[Ready]] [[Colony]] 4M,
-  not overlapped, shows its [[Strong]] [[End]]: [[Militarization]], +3
-  [[Defense]], Secondary +4. It defends alone. What is its
-  [[Defense]]?
+- **Q:20. Militarization Defense** (I:75 f). A [[Ready]] [[Colony]]
+  4M, not overlapped, shows its [[Strong]] [[End]]:
+  [[Militarization]], +3 [[Defense]], Secondary +4. It defends alone.
+  What is its [[Defense]]?
 	- [ ] a) 3: the printed [[Defense]].
 	- [ ] b) 4: the +3 raises [[Defense]] 1 to its [[Level]].
 	- [ ] c) 7: its [[Level]] 4 plus 3.
@@ -52,7 +52,7 @@ Deferred until the [[Duel]] is clear.
 
 ### Legacy
 
-- **Q18. Deck thinning by Legacy** (I79 b). In a played game with
+- **Q:18. Deck thinning by Legacy** (I:79 b). In a played game with
   `objectives`, did moving weak [[Card]]s to [[History]] with
   [[Legacy]] materially improve that player's later [[Draw]]s?
 	- [ ] a) Yes.
@@ -62,12 +62,12 @@ Deferred until the [[Duel]] is clear.
 
 ### Objectives
 
-- **Q78. Objective list** (I43 a). Do the notes define every
+- **Q:78. Objective list** (I:43 a). Do the notes define every
   [[Objective]] [[Card]] used by the `objectives` extension?
 	- [ ] a) Yes, they give a complete list.
 	- [ ] b) No, they give only examples.
 	- [ ] c) The notes don't decide which list is complete.
-- **Q48. Points of a public objective** (I43 c). A player scores a
+- **Q:48. Points of a public objective** (I:43 c). A player scores a
   [[Public Objective]]. How many
   [[VictoryPoints|Victory points]] does it give?
 	- [ ] a) 1, like a secret one.
@@ -77,25 +77,25 @@ Deferred until the [[Duel]] is clear.
 
 ### Politics
 
-- **Q79. Strategy-card list** (I44 a). Do the notes define every
+- **Q:79. Strategy-card list** (I:44 a). Do the notes define every
   [[StrategyCard]] available in a game with `politics`?
 	- [ ] a) Yes, they give a complete list.
 	- [ ] b) No, the list is TBD.
 	- [ ] c) The notes don't decide which list is complete.
-- **Q80. Promissory-note owner benefit** (I44 b). Does each
+- **Q:80. Promissory-note owner benefit** (I:44 b). Does each
   [[PromissoryNote]] define what its owner gains when a rival plays
   it?
 	- [ ] a) Yes.
 	- [ ] b) No.
 	- [ ] c) The notes don't decide.
-- **Q81. Promissory-note holder benefit** (I44 b). Does each
+- **Q:81. Promissory-note holder benefit** (I:44 b). Does each
   [[PromissoryNote|Promissory Note]] define what the rival playing it
   gains?
 	- [ ] a) Yes.
 	- [ ] b) No.
 	- [ ] c) The notes don't decide.
-- **Q49. A played Promissory note** (I44 c). A rival plays a player's
-  [[PromissoryNote]]. Where does the [[Card]] go then?
+- **Q:49. A played Promissory note** (I:44 c). A rival plays a
+  player's [[PromissoryNote]]. Where does the [[Card]] go then?
 	- [ ] a) To the rival's [[Discard]]: it keeps cycling in the
 	  rival's deck.
 	- [ ] b) [[Back]] to its owner's [[Discard]].
@@ -104,31 +104,31 @@ Deferred until the [[Duel]] is clear.
 
 ### Galaxy
 
-- **Q85. Derelict destination** (I45 a). Which [[Star]] may receive a
-  newly placed [[Derelict]]?
+- **Q:85. Derelict destination** (I:45 a). Which [[Star]] may receive
+  a newly placed [[Derelict]]?
 	- [ ] a) Any [[Star]] chosen by the player placing it.
 	- [ ] b) Any [[Wild]] [[Star]] chosen by the player placing it.
 	- [ ] c) A [[Star]] specified by the [[Derelict]] [[Card]].
 	- [ ] d) The notes don't decide.
-- **Q51. Derelict recruit cost** (I45 b). A player recruits a
+- **Q:51. Derelict recruit cost** (I:45 b). A player recruits a
   [[Derelict]] [[Ship]] 4M, [[Price]] 5, with
   [[Culture power]]. What does it cost?
 	- [ ] a) 4, its current [[Level]].
 	- [ ] b) 5, its [[Price]].
 	- [ ] c) The notes don't decide.
-- **Q52. When the Galaxy moves** (I89 a). In a game with the
+- **Q:52. When the Galaxy moves** (I:89 a). In a game with the
   [[Galaxy]], when is the [[GalaxyMove|Galaxy move]] made?
 	- [ ] a) At the start of each player's [[Turn]], before **Play**.
 	- [ ] b) At the end of each player's [[Turn]], after **Restore**.
 	- [ ] c) Once per round, after every player had a [[Turn]].
 	- [ ] d) The notes don't decide.
-- **Q53. Who makes the Galaxy move** (I89 a). In a game with the
+- **Q:53. Who makes the Galaxy move** (I:89 a). In a game with the
   [[Galaxy]], who takes the top [[Card]] of the [[GalaxyDeck]] and
   plays it?
 	- [ ] a) The next player.
 	- [ ] b) The player whose [[Turn]] it is.
 	- [ ] c) The notes don't decide.
-- **Q54. When a future Event resolves** (I89 b). A
+- **Q:54. When a future Event resolves** (I:89 b). A
   [[GalaxyMove|Galaxy move]] puts an [[Event]] into [[FutureEvents]].
   When is it evaluated?
 	- [ ] a) After every player had one [[Turn]].
@@ -137,13 +137,13 @@ Deferred until the [[Duel]] is clear.
 	- [ ] c) When FutureEvents holds a set number of [[Card]]s, the
 	  oldest first.
 	- [ ] d) The notes don't decide.
-- **Q55. A current Event** (I89 c). While an evaluated [[Event]] has
+- **Q:55. A current Event** (I:89 c). While an evaluated [[Event]] has
   a continuing effect, where is its [[Card]]?
 	- [ ] a) In [[GalaxyScrap]].
 	- [ ] b) In [[CurrentEvents]], face down.
 	- [ ] c) In CurrentEvents, face up.
 	- [ ] d) The notes don't decide.
-- **Q86. A finished Event** (I89 c). An evaluated [[Event]]'s
+- **Q:86. A finished Event** (I:89 c). An evaluated [[Event]]'s
   continuing effect ends. Where does its [[Card]] go?
 	- [ ] a) It stays in CurrentEvents.
 	- [ ] b) It goes to GalaxyScrap.
@@ -152,8 +152,8 @@ Deferred until the [[Duel]] is clear.
 
 ### Advanced technology
 
-- **Q82. Plus Pile Cost** (I94 c). Do the rules give a [[Cost]] for a
-  [[PlusPile]] [[Action]]?
+- **Q:82. Plus Pile Cost** (I:94 c). Do the rules give a [[Cost]] for
+  a [[PlusPile]] [[Action]]?
 	- [ ] a) Yes.
 	- [ ] b) No.
 	- [ ] c) The notes don't decide.

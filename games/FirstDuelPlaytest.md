@@ -183,41 +183,41 @@ of B's home. B can not make a move.
 
 ### 4.3 Fixed or in Backlog
 
-- **F1. One Move into the rival's only Star wins** (game 1, RG1-5):
+- **F:1. One Move into the rival's only Star wins** (game 1, RG1-5):
   fixed, a [[Disputed]] [[Star]] stays active, the owner takes off and
   acts there ([[ActiveFor#3]], [[PaxGalactica#Notes#5]]), and
-  [[Intercept]] answers a [[Move]] in; S61 tests an [[Attack]]
+  [[Intercept]] answers a [[Move]] in; S:61 tests an [[Attack]]
   instead.
-- **F2. Singularity wins uncontested and swallows the Culture path**
+- **F:2. Singularity wins uncontested and swallows the Culture path**
   (RG2-6/10, RG3-6/8/9): fixed, it triggers [[Twilight]], the rival
   gets one [[Turn]] ([[Goal#5]], [[Twilight#3]]), it takes the four
   [[Level]] 8 [[Crown]]s ([[Deck]] 7), [[Culture]] is
   [[GalacticDiaspora|Galactic Diaspora]]; the pile order stays a
-  subgame (Settled 24), S58 c, S63 b.
-- **F3. The Colony engine loop** (RG1-1/3/6, RG2-2/4/5, RG3-1/2):
+  subgame (Settled 24), S:58 c, S:63 b.
+- **F:3. The Colony engine loop** (RG1-1/3/6, RG2-2/4/5, RG3-1/2):
   fixed, [[Grow]] goes one [[Level]] up and lands [[Depleted]] on the
   [[Weak]] [[End]] of a 4/3, no free [[Restore]] ([[Upgrade#5.4]],
   [[Upgrade#Notes#2]]); typed [[Factory]] piles rejected (Settled 24);
   the old [[Card]] still goes back to a [[Factory]] pile
   ([[Upgrade#7.2]]).
-- **F4. No interaction, zero rival Combats in 51 Turns**: [[Star]]s
+- **F:4. No interaction, zero rival Combats in 51 Turns**: [[Star]]s
   are open [[Tile]]s ([[Wild#Notes#1]]), a taken [[Star]] captures the
   rival [[Structure]]s ([[ControlledBy#4]]), [[Singularity]] is far
-  and answerable (F2); damage in I81, a reward for a [[Space]] in
+  and answerable (F:2); damage in I:81, a reward for a [[Space]] in
   [[Relic]].
-- **F5. Home Structure row, overlap and no exit**: [[Recycle]] frees a
-  [[Slot]]; [[Manage]] swap in S62, [[Weak]] [[End]] Secondary in P66;
-  the overlap stays, every player liked it.
-- **Actions per Turn 1.3–2.0**, far below 5: I75 a.
+- **F:5. Home Structure row, overlap and no exit**: [[Recycle]] frees
+  a [[Slot]]; [[Manage]] swap in S:62, [[Weak]] [[End]] Secondary in
+  P:66; the overlap stays, every player liked it.
+- **Actions per Turn 1.3–2.0**, far below 5: I:75 a.
 - **The 10-card deck too thin**, a [[Shuffle]] every 1–2 [[Turn]]s:
   [[Reserve]] of 18 with 8 [[Tool]]s ([[StartDraw#1]]).
 - **Free unlimited Takeoff banks the Hand**, Turtle shrank its
-  [[Discard]] to [[Draw]] S4p: I46.
-- **A Structure that fights never depletes** (RG2-7, RG3-5): S53.
+  [[Discard]] to [[Draw]] S4p: I:46.
+- **A Structure that fights never depletes** (RG2-7, RG3-5): S:53.
 - **Ancients are weak**, 6 of 6 [[Combat]]s won by the [[Attacker]]:
-  S60; [[Star]] [[Price]]s dropped, [[Ancient]]s come by the
+  S:60; [[Star]] [[Price]]s dropped, [[Ancient]]s come by the
   [[World]]'s [[Price]] ([[Ancient#3]]).
-- **Energy is marginal**, the cap 5 never reached: S64, [[Energy]]
+- **Energy is marginal**, the cap 5 never reached: S:64, [[Energy]]
   [[World]]s in WorldDeck.
 
 ### 4.4 Rule gaps the referees decided
@@ -228,21 +228,21 @@ All are stated in the rules now or open in the [[Backlog]].
 |---|---|---|
 | RG1-1 | an upgraded [[Depleted]] [[Structure]] comes [[Ready]] | [[Upgrade#Notes#2]] |
 | RG1-2, RG3-4 | [[Ancient]]s get no [[Star]] bonus; the winner picks whom to save | [[Ancient#4]], [[Combat#9.1]] |
-| RG1-3, RG2-5, RG3-1 | [[Research]] onto any [[Factory]] pile | Settled 24, S47 e |
+| RG1-3, RG2-5, RG3-1 | [[Research]] onto any [[Factory]] pile | Settled 24, S:47 e |
 | RG1-4 | [[Ancient]]s pin | obsolete: [[Ancient]]s come only in an [[Attack]], [[Ancient#3]] |
-| RG1-5 | a [[Move]] into the rival's only [[Star]]: it can not make a move | F1 |
+| RG1-5 | a [[Move]] into the rival's only [[Star]]: it can not make a move | F:1 |
 | RG1-6, RG2-4, RG3-2 | the old [[Card]] of an [[Upgrade]] goes on top of a [[Factory]] pile | [[Upgrade#7.2]] |
 | RG1-7, RG2-2 | a [[Card]] that fought, a [[Structure]] just created, acts again | nothing tracks [[Card]]s per [[Turn]]: [[Deplete#Notes#1]], [[Takeoff#3]] |
-| RG1-8 | reaching uses no one [[Ability]] | [[Support#1.2]], S65 |
+| RG1-8 | reaching uses no one [[Ability]] | [[Support#1.2]], S:65 |
 | RG1-9 | a [[Star]]'s [[Power]] bonus counts for any own [[Action]] | a [[World]]'s +1 is a [[Plus]] of a participant, WorldDeck |
 | RG1-10 | the [[Source]] must be own | [[PerformAction#1.3.1]] |
 | RG2-1 | the [[Hub]] of [[Research]] is the [[Destination]], not a participant | [[Research#3]], [[Hub]] 3 |
 | RG2-3 | an Explored [[Space]] reveals nothing | [[Duel#6]], [[Relic]] |
 | RG2-6, RG3-6 | a [[Hub]] can't be the [[Hub]] of its own [[Upgrade]] | [[Upgrade#5.2]] |
-| RG2-7, RG3-5 | a fighting [[Structure]] never [[Deplete]]s | S53 |
+| RG2-7, RG3-5 | a fighting [[Structure]] never [[Deplete]]s | S:53 |
 | RG2-8 | the [[Attacker]] picks the survivors that move in | [[Combat#9.3]], [[Slot#6]] |
-| RG3-3 | a [[Manage]] swap is 2 operations | S62 |
-| RG3-7 | a [[Laboratory]] pile [[Shift]] needs no [[Hub]] [[Card]] | [[Hub]] 3, [[Laboratory]] 4, S63 |
+| RG3-3 | a [[Manage]] swap is 2 operations | S:62 |
+| RG3-7 | a [[Laboratory]] pile [[Shift]] needs no [[Hub]] [[Card]] | [[Hub]] 3, [[Laboratory]] 4, S:63 |
 | RG3-8 | a [[Level]] 4 [[Ship]] in [[Hand]] counts for [[Singularity]] | [[Singularity#Notes#3]] |
 | RG3-9 | [[Check]] before [[Restore]] | [[Singularity#Notes#4]] |
 
@@ -268,27 +268,27 @@ Made before play where the docs were silent, in `RULES.md` section 11:
   others 4: home [[Star]]s and S11 have 5+5, S10 and S12 5 [[Unit]] +
   3 [[Structure]], S01 and S20 3 [[Unit]] + 5 [[Structure]]
   ([[Duel#4]]).
-- PR-5 [[Factory]] and [[Laboratory]] open: S47 a.
+- PR-5 [[Factory]] and [[Laboratory]] open: S:47 a.
 - PR-6 [[Energy]] income at the start of own [[Turn]]: the
   [[Homeworld]] pays +1e when it joins a [[Science]] [[Action]],
   [[Receive]] is the [[Action]] for it ([[Duel#7]], [[Receive]]).
 - PR-7 [[Militarization]]'s `+N Defense` kept: [[Militarization]] is
-  defined, the values in I75 f.
+  defined, the values in I:75 f.
 - PR-8 starting [[Ship]]s 1/1: [[Ship]]s 1/0, the [[Weak]] [[End]]
   [[Level]] 0 of another [[Class]] ([[Deck]] 8).
 - PR-9 [[Slot]] k is overlapped when [[Slot]] k+1 holds a [[Card]]:
   [[Slot#5]].
 - PR-10 a [[Supporter]]'s [[Level]] and [[Class]] as its one
-  [[Ability]] for a Prerequisite: S42 c.
-- PR-11 Boosting doesn't use the one [[Ability]]: S65.
+  [[Ability]] for a Prerequisite: S:42 c.
+- PR-11 Boosting doesn't use the one [[Ability]]: S:65.
 - PR-12 an [[Action]] from [[Hand]] still needs [[Range]] from its
   [[Source]]: [[PerformAction#4.2]].
-- PR-13 [[Research]] onto any [[Factory]] pile: Settled 24, S47 e.
+- PR-13 [[Research]] onto any [[Factory]] pile: Settled 24, S:47 e.
 - PR-14 [[Explore]] [[Range]] to the target [[Tile]]: [[Explore#5]].
 - PR-15 an upgraded [[Structure]] comes [[Ready]]:
   [[Upgrade#Notes#2]].
 - PR-16 [[Recover]] costs the [[Level]] of the [[Damaged]] [[End]]:
-  [[Recover#4]], S41.
+  [[Recover#4]], S:41.
 - PR-17 a [[Defender]]'s [[Damaged]] [[Card]]s fight with [[Defense]]
   0 and are Destroyed: [[Damaged#6]], with [[Defense]] 1.
 - PR-18 cap at 40 [[Turn]]s: playtest only.
@@ -299,11 +299,19 @@ Also used: [[Guidance]] G1–G9 as then drafted.
 
 Open:
 
-- **Q11.** Run a second round of 3 games on the current rules?
+- **Q:11.** Run a second round of 3 games on the current rules?
 
-Answered: Q1–Q3 by F1–F3; Q4, [[Star]]s open and [[Space]]s [[Hidden]]
-([[Space#4]]);
-Q5 by PR-4; Q6 by PR-8; Q7 by PR-17; Q8, [[Takeoff]] stays free, I46
-watches it; Q9 by PR-6; Q10, [[Notation]] is in `../meta/`, the
-[[Backlog]] cites
-RG, PR and F.
+Answered:
+
+- [x] **Q:1. The snowball**: by F:1–F:3.
+- [x] **Q:2. Prerequisites**: by F:1–F:3.
+- [x] **Q:3. Envoy**: by F:1–F:3.
+- [x] **Q:4. Tools**: [[Star]]s open and [[Space]]s [[Hidden]]
+  ([[Space#4]]).
+- [x] **Q:5. Siege**: by PR-4.
+- [x] **Q:6. Pax**: by PR-8.
+- [x] **Q:7.** By PR-17.
+- [x] **Q:8.** [[Takeoff]] stays free, I:46 watches it.
+- [x] **Q:9.** By PR-6.
+- [x] **Q:10.** [[Notation]] is in `../meta/`, the [[Backlog]] cites
+  RG, PR and F.

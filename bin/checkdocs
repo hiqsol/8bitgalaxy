@@ -30,8 +30,8 @@ FOLDER_TECH_TAGS = {'TechnologyActions': 'tech/action', 'TechnologyModifiers': '
 # tags derived from the technology catalog, the topic ones are set by hand
 DERIVED_TAG = re.compile(r'(?:tech|class|on)/|planned$|galaxy$')
 FRONTMATTER = re.compile(r'---\n(.*?)\n---\n', re.S)
-# an open Backlog item: from "- [ ] **I1" to the next line that is not indented
-OPEN_ITEM = re.compile(r'^- \[ \] \*\*[IPS]\d.*(?:\n[ \t]+.*)*', re.M)
+# an open Backlog item: from "- [ ] **I:1" to the next line that is not indented
+OPEN_ITEM = re.compile(r'^- \[ \] \*\*[IPS]:\d.*(?:\n[ \t]+.*)*', re.M)
 CLASSES = {'M': 'Military', 'C': 'Culture', 'P': 'Production', 'S': 'Science'}
 TECH_DIRS = ('TechnologyActions', 'TechnologyModifiers', 'Hubs')
 TECH_BASES = {'TechnologyAction', 'TechnologyModifier', 'Hub'}

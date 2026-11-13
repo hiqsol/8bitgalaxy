@@ -19,56 +19,57 @@ Reopen one only with evidence from a played game, not from a review.
 2. **Range**: a [[Group]]'s [[Range]] is the sum of its [[Card]]s',
    checked only outside the [[Destination]], see [[PerformAction]]
 3. **Hidden**: only by [[Stealth]], revealed at the [[Combat]] reveal;
-   [[Hand]] commitments face down rejected (S26), see [[Hidden]]
+   [[Hand]] commitments face down rejected (S:26), see [[Hidden]]
 4. **Control**: strictly the highest controls, a tie is [[Disputed]],
-   see [[ControlledBy]], [[ActiveFor]]; dead ground rejected (S54)
+   see [[ControlledBy]], [[ActiveFor]]; dead ground rejected (S:54)
 5. **Explore**: one [[Technology]] with flavour names, see [[Explore]]
 6. **Build**: [[Create]], [[Upgrade]] at a [[Hub]]; [[Recover]] from
    the [[Card]] that provides it
 7. **Field start**: a [[Field]] [[Card]] starts an [[Action]] only
    with [[Starter]], `duel`
-8. **Failed action** costs all its [[Participants]]; a take-back (P34)
-   and a visible [[Explore]] [[Price]] (S20) rejected
-9. **World deck**: every [[World]] [[Card]] (P36 i), see [[WorldDeck]]
+8. **Failed action** costs all its [[Participants]]; a take-back
+   (P:34) and a visible [[Explore]] [[Price]] (S:20) rejected
+9. **World deck**: every [[World]] [[Card]] (P:36 i), see
+   [[WorldDeck]]
 10. **Combat order**: the [[Attacker]] selects the first
-    [[Defender]]s, then rounds of any number of [[Card]]s; P28 and
-    S70 rejected, see [[Combat]]
+    [[Defender]]s, then rounds of any number of [[Card]]s; P:28 and
+    S:70 rejected, see [[Combat]]
 11. **Defense**: a [[Military]] [[Card]] defends with its [[Level]]
-    (P62, S69), see [[Defense]]
-12. **Academy defenders** stay in `duel` (S25 b, I76 c), see
+    (P:62, S:69), see [[Defense]]
+12. **Academy defenders** stay in `duel` (S:25 b, I:76 c), see
     [[Academy]]
 13. **Technologies without cards** go on the 6/5 and 8/7 [[Card]]s
-    (P25): the Crossroads variant, see [[Deck]], [[Studies]]
-14. **`X+Y` power** stays, though no [[Card]] prints `+Y` (S58 a)
+    (P:25): the Crossroads variant, see [[Deck]], [[Studies]]
+14. **`X+Y` power** stays, though no [[Card]] prints `+Y` (S:58 a)
 15. **Hubs**: no global [[Hub]], a [[Faction]] without one captures
-    one (I19 d), see [[Hub]]
-16. **Trade between factions** works in a [[Duel]] (P57 e)
+    one (I:19 d), see [[Hub]]
+16. **Trade between factions** works in a [[Duel]] (P:57 e)
 17. **Game finish**: [[PaxGalactica|Pax Galactica]] wins at once, the
     other achievements trigger [[Twilight]], the most achievements
-    win, [[VictoryPoints]] break a tie (I77, I78, I95 a)
+    win, [[VictoryPoints]] break a tie (I:77, I:78, I:95 a)
 18. **Victory points**: the current [[Level]]s of controlled
     non-[[Damaged]] [[Social]] [[Card]]s; no win by [[Objective]]
-    points (I43 b)
+    points (I:43 b)
 19. **Space length**: the printed [[Length]] whatever the [[Type]];
-    P24 [[BlackHole|Black hole]] a, b and [[Void]] b rejected, see
+    P:24 [[BlackHole|Black hole]] a, b and [[Void]] b rejected, see
     [[Distance]]
-20. **Void**: a route can't pass it, [[Navigation]] can (P24 [[Void]]
+20. **Void**: a route can't pass it, [[Navigation]] can (P:24 [[Void]]
     c), see [[Void]]
-21. **Asteroids**: only [[Extract]] (P24 [[Asteroids]] b-d)
+21. **Asteroids**: only [[Extract]] (P:24 [[Asteroids]] b-d)
 22. **Duel Space tiles**: every revealed position takes a [[Tile]]
-    (P35 a), see [[Duel]]
+    (P:35 a), see [[Duel]]
 23. **Symmetric Human and Alien** decks, asymmetry is for later
     [[Faction]]s, see [[Faction]]
-24. **Piles**: their order is a subgame (P27 e), see [[Laboratory]]
-25. **Black hole**: passable both ways (P24 [[BlackHole|Black hole]]
+24. **Piles**: their order is a subgame (P:27 e), see [[Laboratory]]
+25. **Black hole**: passable both ways (P:24 [[BlackHole|Black hole]]
     c), see [[BlackHole]]
 26. **Routes**: [[Tile]]s connect at an edge or a corner, a route may
-    go around a [[Star]] (S71), see [[Space]]
+    go around a [[Star]] (S:71), see [[Space]]
 27. **Distance**: all [[Tile]]s but the first, a [[Star]] by its
     [[Level]], see [[Distance]]
 28. **Space Length** up to 8, the [[Scenario]] sets the [[Space bag]]
-    (P67 a, b)
-29. **Space Price**: [[Length]] plus the printed [[ExtraPrice]] (P24
+    (P:67 a, b)
+29. **Space Price**: [[Length]] plus the printed [[ExtraPrice]] (P:24
     Normal b), see [[Price]]
 30. **No Space Class**: a [[Star]] takes its [[World]]'s, see
     [[Space]]
@@ -76,17 +77,17 @@ Reopen one only with evidence from a played game, not from a review.
     its [[Star]], see [[Jamming]]
 32. **Space types**: [[HyperPass|Hyper pass]] a wormhole pair, a
     [[Relic]] draws an [[Event]], a [[Supernova]] +1 [[Power]] beside
-    it (P24 HyperPass a, c, [[Relic]] a, b)
-33. **Duel Space bag**: halved by [[Type]] and [[Length]] (P35 b, c),
+    it (P:24 HyperPass a, c, [[Relic]] a, b)
+33. **Duel Space bag**: halved by [[Type]] and [[Length]] (P:35 b, c),
     see [[Duel]]
 34. **Conquest**: the [[Ancient deck]], as many [[Ancient]]s as the
-    [[World]]'s [[Price]] (S60), see [[Ancient]]
+    [[World]]'s [[Price]] (S:60), see [[Ancient]]
 35. **Destroy**: a player [[Card]], a [[Tool]] too, to the top of a
-    [[Factory]] pile, any other under its deck (S59 b), see
+    [[Factory]] pile, any other under its deck (S:59 b), see
     [[Destroy]]
-36. **Rejected simplifications**: S61 [[Attack]] as a [[Move]] that
-    must win, S62 [[Move]] within a [[Star]] for every [[Card]], S74
-    the bigger cuts, S47 one [[Home]] pile table
+36. **Rejected simplifications**: S:61 [[Attack]] as a [[Move]] that
+    must win, S:62 [[Move]] within a [[Star]] for every [[Card]], S:74
+    the bigger cuts, S:47 one [[Home]] pile table
 
 ## Next step
 
@@ -95,18 +96,18 @@ Reopen one only with evidence from a played game, not from a review.
 
 ## Watch in playtest
 
-- [ ] **I46. Deck thinning by Takeoff.** Taking off weak [[Card]]s to
+- [ ] **I:46. Deck thinning by Takeoff.** Taking off weak [[Card]]s to
   cycle strong ones, limited by [[Slot]]s; seen in game 3 of
   [[FirstDuelPlaytest]].
-- [ ] **I79 b. Legacy thins the deck** like I46: keep [[Legacy]] in
+- [ ] **I:79 b. Legacy thins the deck** like I46: keep [[Legacy]] in
   `objectives` or drop it?
-- [ ] **I75 a. Actions per Turn.** [[GameBalance]] expects about 5
+- [ ] **I:75 a. Actions per Turn.** [[GameBalance]] expects about 5
   [[Action]]s per [[Turn]], 2-3 is likelier.
-- [ ] **I75 f. Militarization Defense.** The [[Plus]] [[Defense]] of
+- [ ] **I:75 f. Militarization Defense.** The [[Plus]] [[Defense]] of
   [[Militarization]] [[Card]]s was set for [[Defense]] 1, but
   [[Military]] [[Card]]s defend with their [[Level]]: revise the
   values?
-- [ ] **I19. Crossroads deck**: the 6/5 and 8/7 [[Card]]s of the
+- [ ] **I:19. Crossroads deck**: the 6/5 and 8/7 [[Card]]s of the
   [[Deck]], applied untested, see [[Studies]]; play it in Act II,
   Industrialist against Warlord:
 	- f) The snowball: does a [[Hyperstructure]]'s [[Energy]]
@@ -121,7 +122,7 @@ Reopen one only with evidence from a played game, not from a review.
 	  cost more? Now the [[Hero limit]] lets a [[Damaged]] [[Hero]]
 	  block a new one, see [[Hero#Notes#4]]: does "no leader" come too
 	  easily?
-- [ ] **P66. Weak Structure ends** have no [[SecondaryAbility]]:
+- [ ] **P:66. Weak Structure ends** have no [[SecondaryAbility]]:
 	- a) One less than the [[Strong]] [[End]]'s: [[Colony]] 2x +1,
 	  [[Base]] 4x +2, [[Colony]] 4x +3.
 	- b) Or +1 on 4x [[Weak]] [[End]]s only, so [[Restore]] still
@@ -129,33 +130,34 @@ Reopen one only with evidence from a played game, not from a review.
 
 ## After the first duel
 
-- [ ] **I47. Images.** Update `card.png` once the [[Card]] data
+- [ ] **I:47. Images.** Update `card.png` once the [[Card]] data
   settles.
-- [ ] **P57. Economy roles**, `advanced`: [[Goods]] pay builds at a
+- [ ] **P:57. Economy roles**, `advanced`: [[Goods]] pay builds at a
   [[Hub]] where they are, [[Energy]] [[Boost]]s, [[Trade]] turns
   [[Power]] into [[Energy]].
-- [ ] **S39. One conversion outcome**: [[Extract]] and [[Trade]]
+- [ ] **S:39. One conversion outcome**: [[Extract]] and [[Trade]]
   define conversion once in [[Goods]].
-- [ ] **I43. Objectives details**: a) the list, c) points of a
+- [ ] **I:43. Objectives details**: a) the list, c) points of a
   [[Public objective]].
-- [ ] **I44. Politics details**, see [[Politics]]: a) [[StrategyCard]]
-  roles, b) [[PromissoryNote]] gains, c) whether it returns.
-- [ ] **I45. Derelict details**, see [[Derelict]]: a) the [[Star]] it
+- [ ] **I:44. Politics details**, see [[Politics]]: a)
+  [[StrategyCard]] roles, b) [[PromissoryNote]] gains, c) whether it
+  returns.
+- [ ] **I:45. Derelict details**, see [[Derelict]]: a) the [[Star]] it
   enters, b) the recruit [[Cost]].
-- [ ] **I89. Galaxy flow**, see [[Galaxy]], P68: a) when and by whom
+- [ ] **I:89. Galaxy flow**, see [[Galaxy]], P68: a) when and by whom
   the [[GalaxyMove]] is made, b) when [[FutureEvents]] are evaluated,
   c) [[CurrentEvents]] and [[GalaxyScrap]] unused.
-- [ ] **P68. Galaxy events like Through the Ages**: the
+- [ ] **P:68. Galaxy events like Through the Ages**: the
   [[GalaxyMove]] opens each [[Turn]]; the player prepares one
   [[Event]] face down on [[FutureEvents]] and resolves the top one of
   [[CurrentEvents]]; an empty CurrentEvents takes the shuffled
   FutureEvents; resolved ones go to [[GalaxyScrap]], a lasting effect
   stays as a [[Tile]].
-- [ ] **P58. Traits instead of new Types**: `Unique`, `Consumable`,
+- [ ] **P:58. Traits instead of new Types**: `Unique`, `Consumable`,
   `Immovable`; new [[State]]s come from position, not markers.
-- [ ] **P59. Stubs**: c) closed: `PlusHero` went, the
+- [ ] **P:59. Stubs**: c) closed: `PlusHero` went, the
   [[Triumvirate]] [[Hyperstructure]] raises the [[Hero limit]].
-- [ ] **I94. Underdescribed**: c) [[PlusPile]]'s [[Cost]]; its
+- [ ] **I:94. Underdescribed**: c) [[PlusPile]]'s [[Cost]]; its
   [[Card]] becomes the new pile [[Back]] up, see [[PlusPile#2]].
 
 ## Simplifications
@@ -164,39 +166,73 @@ From the 2026-10-25 review of `core`, parked until the first duel; the
 full text is in git. RG, PR and F numbers are of
 [[FirstDuelPlaytest]].
 
-- [ ] **S56. Class handles only Structures as cargo**, any [[Ship]]
+- [ ] **S:56. Class handles only Structures as cargo**, any [[Ship]]
   carries the rest. Recommended.
-- [ ] **S57. One weight, one price**: [[Size]] is the current
+- [ ] **S:57. One weight, one price**: [[Size]] is the current
   [[Level]], or each [[End]] prints its [[Price]]; negative
   [[ExtraPrice]] goes.
-- [ ] **S58 c.** [[Create]] makes only [[Card]]s with a [[Level]] 1
+- [ ] **S:58 c.** [[Create]] makes only [[Card]]s with a [[Level]] 1
   [[End]], higher ones come by [[Upgrade]].
-- [ ] **S63. One way to move a Laboratory card**: [[Research]]'s pile
+- [ ] **S:63. One way to move a Laboratory card**: [[Research]]'s pile
   move goes, or no [[Shift]] between piles at all.
-- [ ] **S64. Energy as open wild power**: [[Energy]] lies open, pays
+- [ ] **S:64. Energy as open wild power**: [[Energy]] lies open, pays
   any [[Power]], [[Boost]] and [[Resource]] go.
-- [ ] **S65. Range and Capacity aren't the one Ability** of a
+- [ ] **S:65. Range and Capacity aren't the one Ability** of a
   [[Supporter]], or a [[Hand]] [[Card]] gives neither.
-- [ ] **S67. Immediate is a technology**, not an [[Action]].
-- [ ] **S68. Hidden in one rule, in `duel`**: a [[Hidden]] [[Card]]
+- [ ] **S:67. Immediate is a technology**, not an [[Action]].
+- [ ] **S:68. Hidden in one rule, in `duel`**: a [[Hidden]] [[Card]]
   counts as a [[Level]] 1 [[Card]] of its [[Role]].
-- [ ] **S72. Two Turn phases**: **Play**, then **End**.
-- [ ] **S73 h.** The LevelClasses and [[Type]]s of the [[Technology]]
+- [ ] **S:72. Two Turn phases**: **Play**, then **End**.
+- [ ] **S:73 h.** The LevelClasses and [[Type]]s of the [[Technology]]
   catalog go, the [[Deck]] holds the assignments, checkdocs drops the
   cross-check; the catalog format of 2026-10-27 may supersede it.
-- [ ] **I96. [[Archive]] is a working name** for the [[Research]]
+- [ ] **I:96. [[Archive]] is a working name** for the [[Research]]
   [[Hub]] of the [[Homeworld]].
-- [ ] **S23. Separate usable cards from scoring cards**: [[ActiveFor]]
-  becomes "counts for goals".
-- [ ] **S24. One timing rule for passive abilities**: an [[Action]]
+- [ ] **S:23. Separate usable cards from scoring cards**:
+  [[ActiveFor]] becomes "counts for goals".
+- [ ] **S:24. One timing rule for passive abilities**: an [[Action]]
   [[Ability]] when its [[Card]] participates, a passive one while it
   is face up, a timed one at its step.
-- [ ] **S32. One meaning of starter**: rename the [[Starter]]
+- [ ] **S:32. One meaning of starter**: rename the [[Starter]]
   [[Technology]].
-- [ ] **S35. One build direction**: from the [[Hub]]'s [[Star]] to the
-  [[Card]]'s, stated once in [[Hub]].
-- [ ] **S41. End of a face-down card** is its [[Weak]] [[End]].
-- [ ] **S42. One list of what a card gives** in [[Ability]].
+- [ ] **S:35. One build direction**: from the [[Hub]]'s [[Star]] to
+  the [[Card]]'s, stated once in [[Hub]].
+- [ ] **S:41. End of a face-down card** is its [[Weak]] [[End]].
+- [ ] **S:42. One list of what a card gives** in [[Ability]].
   Recommended.
-- [ ] **S52. Traits in core**: [[Trait]] and [[NoSupport]] to
-  `advanced`, or wait for P58.
+- [ ] **S:52. Traits in core**: [[Trait]] and [[NoSupport]] to
+  `advanced`, or wait for P:58.
+
+## Closed
+
+Items settled, rejected or done that pages still cite, kept here
+by their numbers so the refs to them resolve.
+
+- [x] **I:76. Academy attack details.**
+- [x] **I:77. Hyperstructure count and build.**
+- [x] **I:78. Production path.**
+- [x] **I:81. Combat damage, to brainstorm.**
+- [x] **I:95. Culture finish.**
+- [x] **P:24. Space type behaviors.**
+- [x] **P:25. Core technologies on cards.**
+- [x] **P:27. First duel setup.**
+- [x] **P:28. Combat sequence.**
+- [x] **P:34. Action template.**
+- [x] **P:35. First duel Space set.**
+- [x] **P:36. World Abilities.**
+- [x] **P:62. Defense.**
+- [x] **P:67. Longer Space for high Range.**
+- [x] **S:20. Visible Explore cost.**
+- [x] **S:25. Home cards have no Field state.**
+- [x] **S:26. All Combat cards from Hand are face down.**
+- [x] **S:47. One Home pile table.**
+- [x] **S:53. Deplete by Role.**
+- [x] **S:54. Act from an active Star.**
+- [x] **S:59. Destroy returns a card to its supply.**
+- [x] **S:60. Conquest without loops.**
+- [x] **S:61. Attack is a Move that must win.**
+- [x] **S:62. Move within a Star for every card.**
+- [x] **S:69. Derived Defense.**
+- [x] **S:70. One sealed Combat round.**
+- [x] **S:71. Distance counts Spaces only.**
+- [x] **S:74. Bigger cuts.**

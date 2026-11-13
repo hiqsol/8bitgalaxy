@@ -20,7 +20,7 @@ situations played twice by subagents. [[Cost]]s are in HC, one
 
 1. **The old rules were exploitable**: 28% of [[Attack]]s were lost
    and still paid, a narrow [[Defender]] win [[Damaged]] its own
-   garrison (I81)
+   garrison (I:81)
 2. **Margin and rout won**: the loser is [[Damaged]], the winner pays
    the loser's total − **Advantage**, a crushing win [[Destroy]]s.
    Profitable losses fell from 28% to 8%, the [[Attacker]] won 61%
@@ -63,7 +63,7 @@ The TBD [[End]]s of the [[Card]]s 6/5 and 8/7 and the
 [[Hyperstructure]] Primaries, 2026-11-07, full text in 56c470f9: four
 variants in 8 games played by hand, full games and **Act II** games
 from a mirrored mid-game. Applied: Crossroads with the snowball fix,
-see [[Deck]]; what to watch is I19 in [[Backlog]].
+see [[Deck]]; what to watch is I:19 in [[Backlog]].
 
 1. **A wonder changing hands is the best story**: a
    [[Hyperstructure]] works for whoever possesses it, see
