@@ -83,6 +83,13 @@ top right when needed.
   its own deps: `cd legacy && npm ci && npx vite`, served at
   `/legacy/`, its pages are listed there
 
+## Credits
+
+Images of card types are from [game-icons.net](https://game-icons.net)
+by Lord Berandas, Delapouite and Lorc, licensed under
+[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), see
+`public/images/types/README.md` for each icon.
+
 ## License
 
 This project is released under the terms of the **CC BY-NC-ND**

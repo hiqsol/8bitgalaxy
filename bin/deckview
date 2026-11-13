@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build the Deck gallery: one self-contained HTML page from rules/Cards/Deck.md and the Technology catalog.
 
-Cards table (rows Types, columns Levels), Level x Class balance, Prerequisites graph and Technology table,
+Cards table (rows Types, columns Levels) with cards drawn as the legacy version draws them,
+Level x Class balance, Prerequisites graph and Technology table,
 all filtered together: search, Class, Type, Technology kind and scope, a Technology or a LevelClass by click.
 
 Usage: bin/deckview [-o build/deck.html]  (make deck builds it, make deckview opens it, the site serves dist/deck.html)
@@ -19,6 +20,13 @@ WIKI = next((ROOT / d for d in ('rules', 'docs') if (ROOT / d / 'Cards/Deck.md')
 DECK = WIKI / 'Cards/Deck.md'
 CATALOG = WIKI / 'Concepts/Technology.md'
 TEMPLATE = Path(__file__).resolve().with_name('deckview.html')
+# cards are drawn as the legacy version draws them: its DOM, its CSS as is, the type images of the client
+LEGACY_STYLES = ROOT / 'legacy/src/legacy/styles'
+LEGACY_CSS = ('cards.css', 'specs.css', '8bitfont.css')
+ICONS = ROOT / 'packages/client/src/icons.ts'
+# the new Type images: game-icons.net glyphs, listed with their credits in the README there
+IMAGES = ROOT / 'public/images/types'
+IMAGE_ROW = re.compile(r'^\| (\w+) \| `([\w-]+\.svg)` \| \[[^\]]+\]\(([^)]+)\) \| ([^|]+?) \|$', re.M)
 
 CARD_TYPES = {'S': 'Ship', 'H': 'Hero', 'B': 'Base', 'C': 'Colony', 'HS': 'Hyperstructure', 'T': 'Tool'}
 # Deck card line: [2× ]S4+1m/3+2c: 2m Smuggle / 2c +1c << *1c *2m, see Deck#2
@@ -114,15 +122,36 @@ def parse_catalog():
     return techs
 
 
+def legacy_css():
+    """The legacy card styles in the order the legacy app loads them, the font set on the Card, not the page"""
+    css = '\n'.join((LEGACY_STYLES / name).read_text() for name in LEGACY_CSS)
+    css = re.sub(r'^@import .*$', '', css, flags=re.M)
+    return css.replace('body {', '.Card {')
+
+
+def icons():
+    """Type images: LineIcons glyph paths of the client, see packages/client/src/icons.ts"""
+    return dict(re.findall(r"^\s+(\w+): '([^']+)'", ICONS.read_text(), re.M))
+
+
+def images():
+    """Type images by Type: the glyph path of each SVG, the icon page and its author for the credits"""
+    out = {}
+    for kind, file, url, author in IMAGE_ROW.findall((IMAGES / 'README.md').read_text()):
+        d = re.search(r' d="([^"]+)"', (IMAGES / file).read_text())[1]
+        out[kind] = {'d': d, 'name': file[:-4], 'url': url, 'author': author}
+    return out
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('-o', '--output', default=ROOT / 'build/deck.html', type=Path)
     args = parser.parse_args()
-    data = {'cards': parse_deck(), 'techs': parse_catalog(), 'expected': EXPECTED_ENDS,
+    data = {'cards': parse_deck(), 'techs': parse_catalog(), 'expected': EXPECTED_ENDS, 'icons': icons(), 'images': images(),
             'source': str(DECK.relative_to(ROOT)), 'generated': datetime.now().strftime('%Y-%m-%d %H:%M')}
     payload = json.dumps(data, ensure_ascii=False).replace('</', '<\\/')
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(TEMPLATE.read_text().replace('/*DATA*/null', payload))
+    args.output.write_text(TEMPLATE.read_text().replace('/*LEGACY_CSS*/', legacy_css()).replace('/*DATA*/null', payload))
     print(f'{args.output}: {len(data["cards"])} cards, {len(data["techs"])} technologies')
 
 

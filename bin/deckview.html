@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Deck Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<!-- the legacy card styles as is: legacy/src/legacy/styles, inlined by bin/deckview -->
+<style id="legacy">/*LEGACY_CSS*/</style>
 <style>
 :root {
   --bg: #f6f5f1; --panel: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #dcdad3; --chip: #ecebe5;
@@ -29,7 +33,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink);
   font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
-header, main { padding: 0 16px; max-width: 1500px; margin: 0 auto; }
+header, main { padding: 0 16px; max-width: 2000px; margin: 0 auto; }
 header { padding-top: 18px; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
 h1 { font-size: 22px; margin: 0; }
 h2 { font-size: 17px; margin: 28px 0 8px; }
@@ -40,7 +44,7 @@ code, .mono { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; fon
 /* filter bar */
 .filters { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); margin-top: 12px; padding: 10px 16px; }
-.frow { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; max-width: 1500px; margin: 0 auto; }
+.frow { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; max-width: 2000px; margin: 0 auto; }
 .frow + .frow { margin-top: 6px; }
 .group { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
 .group > b { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-right: 2px; }
@@ -66,36 +70,57 @@ table { border-collapse: collapse; }
 .grid tbody th { font-size: 13px; padding: 10px 8px; text-align: left; width: 96px; background: var(--chip); }
 .grid th small { display: block; color: var(--muted); font-weight: 400; }
 .grid td { padding: 6px; }
-.cell { display: flex; flex-wrap: wrap; gap: 6px; width: 254px; }
+.cell { display: grid; grid-template-columns: repeat(2, max-content); gap: 8px; align-items: start; }
 .grid td.empty { background: repeating-linear-gradient(45deg, transparent 0 6px, var(--chip) 6px 7px); }
 
-/* card */
-.card { width: 124px; height: 176px; border-radius: 9px; border: 2px solid var(--k, var(--x));
-  background: var(--card); display: flex; flex-direction: column; position: relative; cursor: pointer;
-  transition: opacity .15s, transform .15s, box-shadow .15s; overflow: hidden; }
-.card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgb(0 0 0 / .18); }
-.card.dim { opacity: .18; }
-.card.hl { box-shadow: 0 0 0 3px var(--accent); }
-.card.sel { box-shadow: 0 0 0 3px var(--ink); }
-.end { flex: 1; padding: 4px 6px; background: color-mix(in srgb, var(--k, var(--x)) var(--tint), var(--card));
-  display: flex; flex-direction: column; gap: 1px; min-height: 0; }
-.end.weak { transform: rotate(180deg); }
-.ehead { display: flex; justify-content: space-between; align-items: center; }
-.lvl { font-weight: 800; font-size: 15px; color: var(--k, var(--x)); line-height: 1; }
-.lvl sup { font-size: 10px; font-weight: 600; margin-left: 1px; }
-.clsb { font-size: 10px; font-weight: 700; color: #fff; background: var(--k, var(--x)); border-radius: 4px; padding: 0 4px; }
-.prim, .sec { font-size: 11px; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; }
-.prim { font-weight: 700; }
-.sec { color: var(--ink); }
-.mid { padding: 3px 6px; display: flex; align-items: center; gap: 4px; border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line); font-size: 10px; }
-.mid .nm { font-weight: 700; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.price { font-weight: 700; border: 1px solid var(--muted); border-radius: 50%; width: 17px; height: 17px;
-  display: inline-grid; place-items: center; font-size: 10px; flex: none; }
-.req { display: flex; gap: 2px; margin-left: auto; margin-right: 4px; }
-.rq { font-size: 9px; font-weight: 700; padding: 0 3px; border-radius: 3px; color: var(--k, var(--x));
-  border: 1px solid var(--k, var(--x)); }
-.copies { position: absolute; right: 3px; top: 50%; transform: translateY(-50%); }
+/* card: the legacy Card at half size as in its Show box; sizes below are in its board pixels */
+/* the two basic decks: Human white, the legacy look on white; Alien black, its colors made for black */
+.Card.Human { background-color: #fff; }
+.Card.Alien { background-color: #000; border-color: #555; }
+.Alien .Attack { color: #ff5a4e; }
+.Alien .Colonization { color: #4be06a; }
+.Alien .Production { color: #ffb52e; }
+.Alien .Science { color: #6fa8ff; }
+.Alien .None { color: rgba(220, 220, 220, 0.8); }
+.Alien .Spec.Extracost .Value { color: #fff; }
+.Alien .Spec.Level .Value { color: #fff; }
+.Alien .Spec.Level .Value.Attack { background-color: rgba(255, 50, 40, 0.6); }
+.Alien .Spec.Level .Value.Colonization { background-color: rgba(40, 200, 70, 0.6); }
+.Alien .Spec.Level .Value.Production { background-color: rgba(230, 150, 0, 0.7); }
+.Alien .Spec.Level .Value.Science { background-color: rgba(60, 110, 255, 0.7); }
+.Card.Alien .Spec:is(.Require1, .Require2, .Require3) .Value { color: #fff !important; }
+.Alien .Spec:is(.Require1, .Require2, .Require3) .Value.Attack { background-color: rgba(255, 50, 40, 0.35); }
+.Alien .Spec:is(.Require1, .Require2, .Require3) .Value.Colonization { background-color: rgba(40, 200, 70, 0.35); }
+.Alien .Spec:is(.Require1, .Require2, .Require3) .Value.Production { background-color: rgba(230, 150, 0, 0.45); }
+.Alien .Spec:is(.Require1, .Require2, .Require3) .Value.Science { background-color: rgba(60, 110, 255, 0.45); }
+.Alien.Industrial .Image .lni { color: rgba(80, 200, 230, 0.6); }
+.Alien.Social .Image .lni { color: rgba(200, 120, 255, 0.6); }
+/* a Tool is a Unit, the legacy version has no Tool */
+.Tool .Image .Klass { left: 11px; top: 9px; }
+/* game-icons.net images at the place of the legacy ones */
+.Card .Image .lni.gi { width: 130px; height: 130px; }
+.images { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
+.images figure { margin: 0; display: flex; gap: 6px; align-items: center; }
+.images svg { width: 28px; height: 28px; fill: var(--ink); }
+.images a { color: inherit; }
+.cell .Card { position: relative; zoom: .5; cursor: pointer; transition: opacity .15s, box-shadow .15s; }
+.cell .Card:hover { box-shadow: 0 0 20px var(--accent); }
+.cell .Card.dim { opacity: .18; }
+.cell .Card.hl { box-shadow: 0 0 0 6px var(--accent); }
+.Card .Image .lni { width: 130px; height: 130px; fill: currentColor; }
+/* a third Prerequisite: the legacy card has places for two */
+.Spec.Require3 .Value { position: absolute; width: 40px; height: 40px; font-size: 25px; line-height: 45px;
+  font-weight: 100; color: #000 !important; }
+.Spec.Require3 .Value.Attack { background-color: rgba(255, 0, 0, 0.2); }
+.Spec.Require3 .Value.Colonization { background-color: rgba(0, 255, 0, 0.2); }
+.Spec.Require3 .Value.Science { background-color: rgba(0, 0, 255, 0.2); }
+.Spec.Require3 .Value.Production { background-color: rgba(255, 235, 0, 0.7); }
+.Unit .Spec.Require3 .Value { top: 180px; border-bottom-right-radius: 12px; }
+.Structure .Spec.Require3 .Value { left: 310px; top: 150px; border-bottom-right-radius: 12px; }
+.Card .copies { position: absolute; right: 12px; bottom: 50%; transform: translateY(50%); z-index: 1;
+  font: 20px/1 system-ui, sans-serif; font-weight: 700; padding: 2px 8px; border-radius: 8px;
+  background: #000; color: #fff; }
+.Card .t { border-bottom: 0; }
 .v { color: var(--k, inherit); font-weight: 700; white-space: nowrap; }
 .t { border-bottom: 1px dotted currentColor; cursor: help; }
 .t.unknown { color: var(--bad); }
@@ -176,6 +201,8 @@ dialog dd { margin: 2px 0 0; color: var(--muted); }
     <div class="group" id="f-cls"><b>Class</b></div>
     <label class="tog"><input type="checkbox" id="strongOnly"> Strong End only</label>
     <div class="group" id="f-type"><b>Type</b></div>
+    <div class="group" id="f-faction"><b>Deck</b></div>
+    <div class="group" id="f-images"><b>Images</b></div>
   </div>
   <div class="frow">
     <div class="group" id="f-kind"><b>Technology</b></div>
@@ -188,7 +215,8 @@ dialog dd { margin: 2px 0 0; color: var(--muted); }
 </div>
 <main>
   <h2>Cards</h2>
-  <p class="hint">Rows are Types, columns the Level of the Strong End. The Weak End is upside down at the bottom. Click a card for details; hover a Technology to highlight every card that carries it.</p>
+  <p class="hint">Rows are Types, columns the Level of the Strong End. Cards are drawn as in the legacy version, Human on white, Alien on black: Level, ExtraPrice and Prerequisites at the top left, Primary and Secondary at the right, the Weak End upside down. Click a card for details; hover a Technology to highlight every card that carries it.</p>
+  <div class="images" id="images"></div>
   <div class="scroll"><table class="grid" id="grid"></table></div>
 
   <h2>Level × Class balance</h2>
@@ -234,13 +262,14 @@ for (const c of cards) {
 }
 
 const F = {q: '', cls: new Set(), type: new Set(), kind: new Set(), scope: new Set(),
-  tech: null, lc: null, strongOnly: false, hide: false};
+  tech: null, lc: null, strongOnly: false, hide: false, faction: 'Human', images: 'icons'};
 
 function load() {
   try {
     const s = JSON.parse(localStorage.getItem('deckview') || '{}');
     for (const k of ['cls', 'type', 'kind', 'scope']) if (s[k]) F[k] = new Set(s[k]);
-    for (const k of ['q', 'tech', 'lc', 'strongOnly', 'hide']) if (k in s) F[k] = s[k];
+    for (const k of ['q', 'tech', 'lc', 'strongOnly', 'hide', 'faction', 'images']) if (k in s) F[k] = s[k];
+    if (!['legacy', 'icons'].includes(F.images)) F.images = 'icons';
   } catch (e) {}
 }
 function save() {
@@ -283,19 +312,61 @@ function tok(list) {
     return '<span class="sep">+</span>';
   }).join('');
 }
-function endHtml(e, side, req = '') {
-  const extra = e.extra ? `<sup>${e.extra > 0 ? '+' : ''}${e.extra}</sup>` : '<sup>+0</sup>';
-  return `<div class="end ${side} ${e.cls}">
-    <div class="ehead"><span class="lvl">${e.level}${extra}</span>${req}<span class="clsb">${e.cls.toUpperCase()}</span></div>
-    <div class="prim">${tok(e.primary)}</div><div class="sec">${tok(e.secondary)}</div></div>`;
+/* the legacy card: CardDrawer, SpecsDrawer and SpecDrawer as packages/client/src/pp/PPCard.vue ports them */
+const KLASS = {m: 'Attack', c: 'Colonization', p: 'Production', s: 'Science'};
+/* a Tool parks in a Unit Slot, see Tool#Notes#2 */
+const UNIT_TYPES = new Set(['S', 'H', 'T']);
+const SOCIAL_TYPES = new Set(['H', 'C', 'HS']);
+/* card face words of the legacy version: lowercase, at most 7 letters, see packages/client/src/format.ts */
+const TECH_WORDS = {Shipyard: 'shpyrd', Militarization: 'mobilz', Navigation: 'navi', ForceDiscard: 'fdiscrd',
+  DoNotDeplete: 'nodeplt', PlusFactory: '+fctry', PlusLaboratory: '+lab', EfficientUpgrade: 'effupgr',
+  MinusRequirement: '-req', PlusHero: '+hero'};
+const PLUS_WORDS = {d: 'def', r: 'rng', l: 'cap', e: 'ene'};
+/* SpecDrawer.decorate: a one letter plusable value gets a plus */
+const plus = v => v.length === 1 ? '+' + v : v;
+function word(t) {
+  if (t.tech) {
+    const info = D.techs[t.tech];
+    const tip = info ? `${t.label}: ${info.hub || info.kind}, ${info.scope}. ${info.desc}` : `${t.tech}: not in the Technology catalog`;
+    const w = TECH_WORDS[t.label] ?? t.label.toLowerCase().slice(0, 7);
+    return {text: w, html: `<span class="t${info ? '' : ' unknown'}" data-tech="${esc(t.tech)}" title="${esc(tip)}">${esc(w)}</span>`};
+  }
+  if (t.val) {
+    const [, sign, n] = t.val.match(/^([+-]?)(\d+)/);
+    const w = !sign ? n : CLASSES.includes(t.unit) ? sign + n : sign + n + (PLUS_WORDS[t.unit] || t.unit);
+    return {text: w, html: `<span title="${esc(t.val + ' ' + (UNITS[t.unit] || ''))}">${esc(w)}</span>`};
+  }
+  return null;
+}
+function words(list, decorate = false) {
+  const ws = list.map(word).filter(Boolean);
+  const pre = decorate && ws.length === 1 && ws[0].text.length === 1 ? '+' : '';
+  return {text: pre + ws.map(w => w.text).join(' '), html: pre + ws.map(w => w.html).join(' ')};
+}
+const spec = (name, cls, html, style = '') => `<div class="Spec ${name}"><div class="Value ${cls}"${style}>${html}</div></div>`;
+/* legacy words are short; a combined Ability is smaller to stay on the card: the font is 1em a letter */
+const fit = (w, width, size) => w.text.length * size > width ? ` style="font-size:${Math.floor(width / w.text.length)}px"` : '';
+function specsHtml(e, specs, unit, prereq = []) {
+  const width = unit ? 245 : 345, p = words(e.primary), s = words(e.secondary, true);
+  return `<div class="Specs ${specs}">
+    ${spec('Level', KLASS[e.cls], e.level)}
+    ${e.extra ? spec('Extracost', 'None', e.extra > 0 ? plus(String(e.extra)) : e.extra) : ''}
+    ${p.text ? spec('Power', KLASS[e.cls], p.html, fit(p, width, unit ? 30 : 33)) : ''}
+    ${s.text ? spec('Cooperation', KLASS[e.cls], s.html, fit(s, width, 30)) : ''}
+    ${prereq.map((r, i) => spec(`Require${i + 1}`, KLASS[r.cls], r.level)).join('')}</div>`;
+}
+function imageHtml(c) {
+  const image = D.images[c.typeName];
+  if (F.images === 'icons' && image) return `<svg class="Klass lni gi" viewBox="0 0 512 512"><path d="${image.d}"/></svg>`;
+  const icon = D.icons[c.typeName];
+  return icon ? `<svg class="Klass lni" viewBox="0 0 144 144"><path transform="translate(0 128) scale(1 -1)" d="${icon}"/></svg>` : '';
 }
 function cardHtml(c) {
-  const req = c.prereq.map(r => `<span class="rq ${r.cls}" title="needs Level ${r.level} ${CLASS_NAMES[r.cls]}">${r.level}${r.cls.toUpperCase()}</span>`).join('');
-  return `<div class="card ${c.strong.cls}" data-key="${c.key}" title="${esc(c.line)}">
-    ${endHtml(c.strong, 'strong', req ? `<span class="req">${req}</span>` : '')}
-    <div class="mid"><span class="price" title="Price">${c.price}</span><span class="nm">${esc(c.type === 'HS' ? 'Hyper ' + c.id.slice(2) : c.name)}</span>
-    ${c.copies > 1 ? `<span class="tag copies">${c.copies}×</span>` : ''}</div>
-    ${endHtml(c.weak, 'weak')}</div>`;
+  const unit = UNIT_TYPES.has(c.type);
+  return `<div class="Card ${F.faction} ${unit ? 'Unit' : 'Structure'} ${c.typeName} ${SOCIAL_TYPES.has(c.type) ? 'Social' : 'Industrial'}" data-key="${c.key}" title="${esc(c.name + ': ' + c.line)}">
+    <div class="Image">${imageHtml(c)}</div>
+    ${specsHtml(c.strong, 'Normal', unit, c.prereq)}${specsHtml(c.weak, 'Alternative', unit)}
+    ${c.copies > 1 ? `<span class="copies">${c.copies}×</span>` : ''}</div>`;
 }
 
 function renderGrid() {
@@ -406,7 +477,21 @@ function chipGroup(id, values, set, label = v => v, cls = () => '') {
     g.appendChild(b);
   }
 }
+/* a choice of one, it redraws the cards */
+function switchGroup(id, values, key) {
+  const g = $(id);
+  g.querySelectorAll('.chip').forEach(b => b.remove());
+  for (const [v, label] of values) {
+    const b = document.createElement('button');
+    b.className = `chip${F[key] === v ? ' on' : ''}`;
+    b.textContent = label;
+    b.onclick = () => { F[key] = v; renderGrid(); update(); };
+    g.appendChild(b);
+  }
+}
 function renderFilters() {
+  switchGroup('f-faction', [['Human', 'Human'], ['Alien', 'Alien']], 'faction');
+  switchGroup('f-images', [['legacy', 'Legacy'], ['icons', 'game-icons']], 'images');
   chipGroup('f-cls', CLASSES, F.cls, v => CLASS_NAMES[v], v => `cls ${v}`);
   chipGroup('f-type', TYPES, F.type, v => TYPE_NAMES[v]);
   chipGroup('f-kind', KINDS, F.kind);
@@ -423,14 +508,14 @@ function renderFilters() {
 function update() {
   const matched = cards.filter(matches);
   const keys = new Set(matched.map(c => c.key));
-  document.querySelectorAll('#grid .card').forEach(el => {
+  document.querySelectorAll('#grid .Card').forEach(el => {
     const on = keys.has(el.dataset.key);
     el.classList.toggle('dim', !on && !F.hide);
     el.style.display = !on && F.hide ? 'none' : '';
   });
   document.querySelectorAll('#grid td').forEach(td => {
-    const visible = [...td.querySelectorAll('.card')].some(el => el.style.display !== 'none');
-    td.style.opacity = F.hide && td.querySelector('.card') && !visible ? '.4' : '';
+    const visible = [...td.querySelectorAll('.Card')].some(el => el.style.display !== 'none');
+    td.style.opacity = F.hide && td.querySelector('.Card') && !visible ? '.4' : '';
   });
   document.querySelectorAll('#tech tbody tr').forEach(tr => {
     const t = D.techs[tr.dataset.tech];
@@ -467,7 +552,7 @@ document.addEventListener('click', e => {
   if (e.target === $('detail')) return $('detail').close();
   const tech = e.target.closest('dialog [data-tech]');
   if (tech) { F.tech = tech.dataset.tech; $('detail').close(); return update(); }
-  const card = e.target.closest('.card, .carrier');
+  const card = e.target.closest('#grid .Card, .carrier');
   if (card) { e.stopPropagation(); return showDetail(byKey[card.dataset.key]); }
   const row = e.target.closest('#tech tbody tr');
   if (row) { F.tech = F.tech === row.dataset.tech ? null : row.dataset.tech; return update(); }
@@ -480,10 +565,10 @@ document.addEventListener('click', e => {
 });
 document.addEventListener('mouseover', e => {
   const t = e.target.closest('#grid [data-tech]');
-  document.querySelectorAll('#grid .card.hl').forEach(el => el.classList.remove('hl'));
+  document.querySelectorAll('#grid .Card.hl').forEach(el => el.classList.remove('hl'));
   if (!t) return;
   for (const c of cards) if (c.techs.some(x => x.name === t.dataset.tech))
-    document.querySelector(`#grid .card[data-key="${c.key}"]`)?.classList.add('hl');
+    document.querySelector(`#grid .Card[data-key="${c.key}"]`)?.classList.add('hl');
 });
 $('q').addEventListener('input', e => { F.q = e.target.value; update(); });
 $('strongOnly').addEventListener('change', e => { F.strongOnly = e.target.checked; update(); });
@@ -498,6 +583,9 @@ document.addEventListener('keydown', e => {
 });
 
 $('meta').textContent = `${D.source} · ${cards.reduce((s, c) => s + c.copies, 0)} cards · ${Object.keys(D.techs).length} Technologies · built ${D.generated}`;
+$('images').innerHTML = Object.entries(D.images).map(([type, i]) =>
+  `<figure title="${esc(i.name)}"><svg viewBox="0 0 512 512"><path d="${i.d}"/></svg><figcaption>${esc(type)}</figcaption></figure>`).join('') +
+  `<span>Images: <a href="https://game-icons.net">game-icons.net</a> by ${[...new Set(Object.values(D.images).map(i => i.author))].join(', ')}, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></span>`;
 load();
 renderGrid();
 renderTechTable();

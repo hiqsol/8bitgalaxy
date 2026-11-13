@@ -1,5 +1,5 @@
 # uwiki defaults: top level ones for every command taking them, make link and check alike
-exclude = ["build"]
+exclude = ["build", "public"]
 # a page's own terms are bold, not linked
 mentions-self-bold = true
 # names that contain terms: game titles, ranks in lore
