@@ -50,7 +50,6 @@ const TECH_WORDS: Record<string, string> = {
   Shipyard: 'shpyrd',
   Militarization: 'mobilz',
   Navigation: 'navi',
-  ForceDiscard: 'fdiscrd',
   DoNotDeplete: 'nodeplt',
   PlusFactory: '+fctry',
   PlusLaboratory: '+lab',

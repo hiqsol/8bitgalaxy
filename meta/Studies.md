@@ -46,7 +46,7 @@ situations played twice by subagents. [[Cost]]s are in HC, one
 8. **Technologies**: a retreating [[Defender]] left the [[Attacker]]
    0-3% wins; [[Ambush]] cut [[Attack]]s from 61% to 51%; [[Salvage]]
    for a side standing in the [[Star]] doesn't feed the exploit;
-   [[ForceDiscard]] became a blockade, the rival discards a [[Card]]
+   [[Disrupt]] became a blockade, the rival discards a [[Card]]
    that defends with 0
 9. **Applied**: [[Combat#9]]-12, the margin and **Rout** in **Combat
    power**, the winner of a **Rout** may keep a [[Hero]] [[Damaged]],

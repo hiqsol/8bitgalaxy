@@ -14,5 +14,5 @@ tags: [tech/action, class/military, on/hero]
 #### Notes
 
 1. Like Sabotage of Twilight Imperium: an answer to
-   [[ForceDiscard]], [[Retreat]], [[Stealth]] and [[Forecast]]
+   [[Disrupt]], [[Retreat]], [[Stealth]] and [[Forecast]]
 2. A **Counterintelligence** can be cancelled by another one

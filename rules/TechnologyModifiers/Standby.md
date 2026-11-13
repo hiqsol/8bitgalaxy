@@ -17,6 +17,6 @@ tags: [tech/modifier, class/science, on/base, planned, topic/deck]
 
 1. Not a [[Card]] more: the [[Hand]] stays at its size. **Standby**
    saves a good [[Card]] from a deck full of [[Tool]]s
-2. A kept [[Card]] can be lost to [[ForceDiscard]] or as a
+2. A kept [[Card]] can be lost to [[Disrupt]] or as a
    [[Defender]] in [[Combat]], it counts for [[Singularity]] like any
    [[Card]] in [[Hand]]

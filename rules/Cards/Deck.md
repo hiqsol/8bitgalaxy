@@ -57,7 +57,7 @@ S2+1m/1+2s:    1m Retreat            / 1s +1s
 S2+1c/1+2m:    1c Trade              / 1m +1m
 S2+1p/1+2c:    1p Extract            / 1c +1c
 S2+1s/1+2p:    1s Explore            / 1p +1p
-S4+1m/3+2c:    2m Smuggle            / 2c +1c             << *1c *2m
+S4+1m/3+2c:    2m Disrupt            / 2c +1c             << *1c *2m
 S4+1c/3+2m:    2c Upgrade            / 2m +1m             << *1m *2c
 S4+1p/3+2s:    2p Upgrade            / 2s +1s             << *1s *2p
 S4+1s/3+2p:    2s Exhaust            / 2p +1p             << *1p *2s

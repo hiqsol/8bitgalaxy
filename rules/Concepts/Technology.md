@@ -39,9 +39,9 @@ scope: core
 3. [[Stealth]]: 4m - [[Action]] - [[Hero]], [[Base]] - Player - duel
    +[[Hidden]], Immediate: makes another own [[Card]] on the [[Field]]
    [[Hidden]]
-4. [[ForceDiscard]]: 6m - [[Action]] - [[Hero]], [[Colony]] - Player,
-   [[Galaxy]] - duel -[[Card]], Immediate: a rival discards a [[Card]]
-   of its choice from [[Hand]]
+4. [[Disrupt]]: 4m 6m - [[Action]] - [[Ship]], [[Hero]], [[Colony]] -
+   Player, [[Galaxy]] - duel -[[Card]], Immediate: a rival discards a
+   [[Card]] of its choice from [[Hand]]
 5. [[Academy]]: 2c 4c - [[Social Hub]] - [[Colony]],
    [[Base]] - Player - duel Building facility for [[Social]] [[Card]]s
 6. [[Recover]]: 2cp 4cp - [[Action]] - [[Hero]] - Player - duel

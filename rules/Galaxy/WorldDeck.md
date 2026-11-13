@@ -36,7 +36,7 @@ scope: duel
 2× W4+1p/3+1p: +2l          / +2l << *2p
 2× W4+1s/3+1s: +2r          / +2r << *2s
 
-W6+1m/5+1m:    ForceDiscard / -   << *4m
+W6+1m/5+1m:    Disrupt / -   << *4m
 W6+1c/5+1c:    +1Draw       / -   << *4c
 W6+1p/5+1p:    TBD          / -   << *4p
 W6+1s/5+1s:    +1e          / -   << *4s

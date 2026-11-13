@@ -1,7 +1,7 @@
 ---
 status: draft
 scope: advanced
-tags: [tech/action, class/military, on/ship, topic/economy]
+tags: [tech/action, class/military, on/ship, planned, topic/economy]
 ---
 
 1. **Smuggle** is [[Military]] [[TechnologyAction]]
