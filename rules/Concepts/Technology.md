@@ -49,8 +49,8 @@ scope: core
 7. [[Upgrade]]: 2cp 4cp - [[Action]] - [[Hero]], [[Ship]] - Player -
    duel +[[Level]]: replaces a [[Card]] on the [[Field]] with a higher
    [[Card]] of its [[Type]]
-8. [[MegAcad]]: 4c - [[Social Hub]] - [[Base]] - Player -
-   duel An [[Academy]] that also [[Recover]]s
+8. [[Megacademy]]: 4c - [[Social Hub]] - [[Base]] - Player - duel
+   An [[Academy]] that also [[Recover]]s and [[Upgrade]]s
 9. [[Express]]: 6c - Modifier - [[Hero]] - Player - duel
    [[Create]] puts new [[Actor]]s on top of the [[Reserve]]
 10. [[Starter]]: 6c - Modifier - [[Hero]] - Player - duel

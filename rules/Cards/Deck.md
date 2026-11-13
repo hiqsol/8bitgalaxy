@@ -49,9 +49,9 @@ aliases: [Crown, Starting cards]
    [[Tool]]
 
 ```text
-S1+0m/0+1s:    1m                    / 0s
+S1+0m/0+1c:    1m                    / 0c
 S1+0c/0+1m:    1c                    / 0m
-S1+0p/0+1c:    1p                    / 0c
+S1+0p/0+1s:    1p                    / 0s
 S1+0s/0+1p:    1s                    / 0p
 S2+1m/1+2s:    1m Retreat            / 1s +1s
 S2+1c/1+2m:    1c Trade              / 1m +1m
@@ -61,20 +61,20 @@ S4+1m/3+2c:    2m Smuggle            / 2c +1c             << *1c *2m
 S4+1c/3+2m:    2c Upgrade            / 2m +1m             << *1m *2c
 S4+1p/3+2s:    2p Upgrade            / 2s +1s             << *1s *2p
 S4+1s/3+2p:    2s Exhaust            / 2p +1p             << *1p *2s
-S6+1m/5+2s:    3m Siege              / 3s Jump            << *4m
-S6+1p/5+2c:    3p Boarding           / 3c Settle          << *4p
+S6+1m/5+2s:    3m Siege              / 3s Jump            << *4m *3s
+S6+1p/5+2c:    3p Boarding           / 3c Settle          << *4p *3c
 S8+1m/7+2s:    4m Decapitation       / 4s Barrier         << *4c *4s *6m
 
 H2+1m/1+1c:    2m Explore            / 2c Upgrade
-H2+1c/1+1p:    2c Recover            / 2p Upgrade
-H2+1p/1+1s:    2p Recover            / 2s Recycle
+H2+1c/1+1p:    2c Fix                / 2p Upgrade
+H2+1p/1+1s:    2p Fix                / 2s Recycle
 H2+1s/1+1m:    2s Recycle            / 2m Explore
-H4+1m/3+1p:    3m Stealth            / 3p Recover+Upgrade << *1p *2m
-H4+1c/3+1s:    3c Recover+Upgrade    / 3s Navigation      << *1s *2c
-H4+1p/3+1m:    3p Upgrade            / 3m Stealth         << *1m *2p
-H4+1s/3+1c:    3s Navigation         / 3c Upgrade         << *1c *2s
-H6+1c/5+1m:    4c Envoy              / 4m Defection       << *4c
-H6+1s/5+1p:    4s Invent             / 4p FieldRepair     << *4s
+H4+1m/3+1p:    3m Stealth            / 3p Fix+Upgrade     << *1p *2m
+H4+1c/3+1s:    3c Fix+Upgrade        / 3s Navigation      << *1s *2c
+H4+1p/3+1m:    3p Fix+Upgrade        / 3m Stealth         << *1m *2p
+H4+1s/3+1c:    3s Navigation         / 3c Fix+Upgrade     << *1c *2s
+H6+1c/5+1m:    4c Envoy              / 4m Defection       << *4c *3m
+H6+1s/5+1p:    4s Invent             / 4p FieldRepair     << *4s *3p
 H8+1s/7+1m:    5s UnifiedTheory      / 5m Counterintelligence << *4m *4p *6s
 
 B2+1m/1+1m:    Militarization+1d +1m / Militarization
@@ -82,7 +82,7 @@ B2+1c/1+1c:    Trade +1c             / Trade
 B2+1p/1+1p:    Shipyard +1p          / Shipyard
 B2+1s/1+1s:    Recycle +1s           / Recycle
 B4+1m/3+1m:    Stealth +3m           / Stealth            << *2m
-B4+1c/3+1c:    Academy +3c           / Academy            << *2c
+B4+1c/3+1c:    Megacademy +3c        / Megacademy         << *2c
 B4+1p/3+1p:    +3l +3p               / +1l                << *2p
 B4+1s/3+1s:    Navigation +3s        / Navigation         << *2s
 

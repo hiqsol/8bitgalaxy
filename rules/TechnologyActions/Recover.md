@@ -1,6 +1,7 @@
 ---
 status: draft
 scope: duel
+aliases: [Fix]
 tags: [tech/action, class/culture, class/production, on/hero, topic/damage]
 ---
 

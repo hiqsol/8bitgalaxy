@@ -78,10 +78,10 @@ export function isPlayable(ability: Ability): boolean {
   return scope === 'core' || scope === 'duel';
 }
 
-/** A full [[Hub]] that also provides other technologies: [[MegaYard]], [[MegAcad]] */
+/** A full [[Hub]] that also provides other technologies: [[MegaYard]], [[Megacademy]] */
 const PROVIDES: Record<string, string[]> = {
   MegaYard: ['Shipyard', 'Recover'],
-  MegAcad: ['Academy', 'Recover'],
+  Megacademy: ['Academy', 'Recover', 'Upgrade'],
 };
 
 /** Playable technologies of the abilities, with what they provide */
