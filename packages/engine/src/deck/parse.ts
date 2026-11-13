@@ -12,7 +12,7 @@ const TYPES: Record<string, CardType> = {
   T: 'Tool',
 };
 /** [[Plus]] letters besides a Class letter: power of that Class */
-const PLUS_KINDS: Record<string, PlusKind> = { d: 'defense', r: 'range', l: 'capacity' };
+const PLUS_KINDS: Record<string, PlusKind> = { d: 'defense', r: 'range', l: 'capacity', e: 'energy' };
 const SCOPES: TechScope[] = ['core', 'duel', 'advanced', 'events', 'objectives', 'politics'];
 /** a value still to design, prints nothing yet */
 const TBD = 'TBD';
@@ -30,7 +30,7 @@ function deckLines(md: string): string[] {
 }
 
 /** One printed item: `2m` Power, `+1m` Plus, `+1d` Defense, a Technology; `A+B` combines them */
-export function parseAbility(token: string, klass: Klass): Ability[] {
+export function parseAbility(token: string, klass: Klass, aliases: Aliases = {}): Ability[] {
   if (token === TBD) return [];
   const power = token.match(/^(\d+)([mcps])$/);
   if (power) {
@@ -46,23 +46,39 @@ export function parseAbility(token: string, klass: Klass): Ability[] {
   }
   // a combined print is one Ability: `Recover+Upgrade`, `Militarization+1d`
   const parts = token.split(/\+(?=[A-Z\d])/);
-  if (parts.length > 1) return parts.flatMap((p, i) => parseAbility(i ? (/^\d/.test(p) ? `+${p}` : p) : p, klass));
-  if (/^[A-Z][A-Za-z]+$/.test(token)) return [{ kind: 'tech', tech: token }];
+  if (parts.length > 1) return parts.flatMap((p, i) => parseAbility(i ? (/^\d/.test(p) ? `+${p}` : p) : p, klass, aliases));
+  if (/^[A-Z][A-Za-z]+$/.test(token)) return [{ kind: 'tech', tech: aliases[token] ?? token }];
   throw new Error(`can't parse ability ${token}`);
 }
 
 /** What an End gives: the first item is the Primary, the rest the Secondary */
-function parseGives(text: string, head: { level: number; extraCost: number; klass: Klass }): EndDef {
+function parseGives(text: string, head: { level: number; extraCost: number; klass: Klass }, aliases: Aliases): EndDef {
   const [primary = '', ...secondary] = text.trim().split(/\s+/).filter(Boolean);
   return {
     ...head,
-    primary: primary ? parseAbility(primary, head.klass) : [],
-    secondary: secondary.flatMap((t) => parseAbility(t, head.klass)),
+    primary: primary ? parseAbility(primary, head.klass, aliases) : [],
+    secondary: secondary.flatMap((t) => parseAbility(t, head.klass, aliases)),
   };
 }
 
+/** A printed alias to its Technology: `Fix` to Recover */
+export type Aliases = Record<string, string>;
+
+/** [[Technology]] folders of rules/, their pages name the aliases a card may print */
+export const TECH_FOLDERS = ['TechnologyActions', 'TechnologyModifiers', 'Hubs'];
+
+/** Aliases from the frontmatter of Technology pages, given as page name to Markdown */
+export function parseAliases(pages: Record<string, string>): Aliases {
+  const aliases: Aliases = {};
+  for (const [name, md] of Object.entries(pages)) {
+    const m = md.match(/^---\n[\s\S]*?^aliases: \[(.*)\]$/m);
+    for (const alias of m ? m[1].split(',').map((a) => a.trim()) : []) aliases[alias] = name;
+  }
+  return aliases;
+}
+
 /** Card definitions from rules/Cards/Deck.md, a line per card in [[Notation]] */
-export function parseDeck(md: string): CardDef[] {
+export function parseDeck(md: string, aliases: Aliases = {}): CardDef[] {
   return deckLines(md).map((line) => {
     const m = line.match(/^(?:(\d+)× )?([A-Z]+)(\d+)([+-]\d+)([mcps])\/(\d+)([+-]\d+)([mcps]):\s+(.*?)\s*\/\s*(.*?)\s*(?:<<\s*(.*))?$/);
     if (!m) throw new Error(`can't parse card ${line}`);
@@ -74,8 +90,8 @@ export function parseDeck(md: string): CardDef[] {
     const def: CardDef = {
       id: `${type} ${strong.level}${strong.klass}`,
       type,
-      strong: parseGives(sGives, strong),
-      weak: parseGives(wGives, weak),
+      strong: parseGives(sGives, strong, aliases),
+      weak: parseGives(wGives, weak, aliases),
       prerequisites: parsePrerequisites(prereqs ?? ''),
       culturePoints: 0,
     };

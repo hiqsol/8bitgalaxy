@@ -1,13 +1,20 @@
 // Generates src/data/deck.json from the rules docs: npm run cards
-import { readFileSync, writeFileSync } from 'node:fs';
-import { parseDeck, parseTechScopes } from '../src/deck/parse.ts';
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { parseAliases, parseDeck, parseTechScopes, TECH_FOLDERS } from '../src/deck/parse.ts';
 
 const docs = new URL('../../../rules/', import.meta.url);
 const read = (path: string) => readFileSync(new URL(path, docs), 'utf8');
+const techPages = Object.fromEntries(
+  TECH_FOLDERS.flatMap((dir) =>
+    readdirSync(new URL(`${dir}/`, docs))
+      .filter((f) => f.endsWith('.md'))
+      .map((f) => [f.slice(0, -3), read(`${dir}/${f}`)]),
+  ),
+);
 
 const data = {
-  source: 'rules/Cards/Deck.md, rules/Concepts/Technology.md',
-  cards: parseDeck(read('Cards/Deck.md')),
+  source: 'rules/Cards/Deck.md, rules/Concepts/Technology.md, aliases of Technology pages',
+  cards: parseDeck(read('Cards/Deck.md'), parseAliases(techPages)),
   techScopes: parseTechScopes(read('Concepts/Technology.md')),
 };
 // One card per line, for readable diffs

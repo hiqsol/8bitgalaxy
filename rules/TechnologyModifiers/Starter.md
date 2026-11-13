@@ -1,7 +1,7 @@
 ---
 status: polish
 scope: duel
-tags: [tech/modifier, class/culture, on/hero, planned]
+tags: [tech/modifier, class/culture, on/base]
 ---
 
 1. **Starter** is [[Culture]] [[TechnologyModifier]]

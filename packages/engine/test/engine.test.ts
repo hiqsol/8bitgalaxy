@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import {
   apply,
@@ -11,12 +11,22 @@ import {
   type State,
 } from '../src';
 import deck from '../src/data/deck.json';
-import { parseDeck, parseTechScopes } from '../src/deck/parse';
+import { parseAliases, parseDeck as parseDeckMd, parseTechScopes, TECH_FOLDERS } from '../src/deck/parse';
 import { spaceAt } from '../src/field';
 import { STAR_DECK } from '../src/scenario';
 import { action, clearHands, err, game, ok, put, revealBetween, toHand, toSlot, uid } from './helpers';
 
 const docs = (path: string) => readFileSync(new URL(`../../../rules/${path}`, import.meta.url), 'utf8');
+const aliases = parseAliases(
+  Object.fromEntries(
+    TECH_FOLDERS.flatMap((dir) =>
+      readdirSync(new URL(`../../../rules/${dir}/`, import.meta.url))
+        .filter((f) => f.endsWith('.md'))
+        .map((f) => [f.slice(0, -3), docs(`${dir}/${f}`)]),
+    ),
+  ),
+);
+const parseDeck = (md: string) => parseDeckMd(md, aliases);
 
 describe('cards', () => {
   it('deck.json is in sync with docs, run `npm run cards` after editing them', () => {
@@ -37,19 +47,19 @@ describe('cards', () => {
     ]);
   });
 
-  it('parses Plus letters, combined prints, TBD and copies', () => {
+  it('parses Plus letters, combined prints and aliases', () => {
     const cards = parseDeck(docs('Cards/Deck.md'));
     const card = (id: string) => cards.find((c) => c.id === id)!;
-    expect(card('Base 2M').strong.primary).toEqual([
-      { kind: 'tech', tech: 'Militarization' },
-      { kind: 'plus', what: 'defense', n: 1 },
-    ]);
+    expect(card('Base 2M').strong.primary).toEqual([{ kind: 'tech', tech: 'Militarization' }]);
+    expect(card('Base 2M').strong.secondary).toEqual([{ kind: 'plus', what: 'power', n: 1 }]);
+    expect(card('Hero 2C').strong.secondary).toEqual([{ kind: 'tech', tech: 'Recover' }]);
+    expect(card('Hyperstructure 6M').strong.secondary).toEqual([{ kind: 'plus', what: 'energy', n: 1 }]);
     expect(card('Base 4P').strong.primary).toEqual([{ kind: 'plus', what: 'capacity', n: 3 }]);
     expect(card('Base 4P').strong.secondary).toEqual([{ kind: 'plus', what: 'power', n: 3 }]);
-    expect(card('Ship 1M').weak).toMatchObject({ level: 0, extraCost: 1, klass: 'S' });
-    expect(card('Hyperstructure 8C').strong.primary).toEqual([]);
-    expect(card('Tool 1P').copies).toBe(2);
-    expect(cards.reduce((n, c) => n + (c.copies ?? 1), 0)).toBe(56);
+    expect(card('Ship 1M').weak).toMatchObject({ level: 0, extraCost: 1, klass: 'C' });
+    expect(card('Hyperstructure 8C').strong.primary).toEqual([{ kind: 'tech', tech: 'Heritage' }]);
+    expect(card('Hyperstructure 8C').strong.secondary).toEqual([{ kind: 'plus', what: 'energy', n: 2 }]);
+    expect(cards.reduce((n, c) => n + (c.copies ?? 1), 0)).toBe(52);
   });
 });
 

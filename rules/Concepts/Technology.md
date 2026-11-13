@@ -53,9 +53,9 @@ scope: core
    An [[Academy]] that also [[Recover]]s and [[Upgrade]]s
 9. [[Express]]: 6c - Modifier - [[Hero]] - Player - duel
    [[Create]] puts new [[Actor]]s on top of the [[Reserve]]
-10. [[Starter]]: 6c - Modifier - [[Hero]] - Player - duel
+10. [[Starter]]: 2c - Modifier - [[Base]] - Player - duel
     A [[Field]] [[Card]] starts an [[Action]] from its own [[Star]]
-11. [[Settle]]: 6c - Modifier - [[Ship]] - Player - duel A [[Ship]]
+11. [[Settle]]: 2c 6c - Modifier - [[Ship]] - Player - duel A [[Ship]]
     turns itself into a [[Colony]] where it is
 12. [[Shipyard]]: 2p - [[Industrial Hub]] - [[Base]] -
     Player - duel Building facility for [[Industrial]] [[Card]]s
@@ -66,7 +66,7 @@ scope: core
 15. [[Archive]]: 2s - [[Research Hub]] -
     [[Hyperstructure]] - Player - duel [[Research]] facility for
     [[Laboratory]] [[Card]]s
-16. [[Militarization]]: 2m 4m - Modifier - [[Base]], [[Colony]] -
+16. [[Militarization]]: 2m - Modifier - [[Base]] -
     Player - advanced [[Manage]] [[Rotate]]s or shifts rival [[Card]]s
 17. [[Scuttle]]: 4m - [[Action]] - [[Base]] - Player - advanced
     Immediate: [[Destroy]]s a [[Structure]] of own [[Faction]], a
@@ -88,7 +88,7 @@ scope: core
 23. [[Occupation]]: 6m - Modifier - [[Ship]] - Player - advanced
     +[[Control]]: an own [[Military]] [[Actor]] gives a [[Control]]
     level above [[Unit]]
-24. [[Raid]]: 6m - [[Action]] - [[Ship]] - Player - advanced
+24. [[Raid]]: 4m - [[Action]] - [[Colony]] - Player - advanced
     An [[Attack]] whose winners stay home: takes the [[Goods]] or
     [[Deplete]]s the [[Structure]]s
 25. [[Siege]]: 6m - [[Action]] - [[Ship]] - Player - advanced
@@ -121,7 +121,7 @@ scope: core
 35. [[Assimilate]]: 6c - [[Action]] - [[Hero]] - Player - advanced
     Replaces a rival [[Colony]] in a [[Star]] the player controls with
     an own one
-36. [[Contact]]: 6c - [[Action]] - [[Hero]] - Player - advanced
+36. [[Contact]]: 4c - [[Action]] - [[Colony]] - Player - advanced
     Conquers a [[Wild]] [[Star]] without [[Ancient]]s, for twice the
     [[World]]'s [[Price]]
 37. [[Emulate]]: 6c - Modifier - [[Hero]] - Player - advanced Uses a

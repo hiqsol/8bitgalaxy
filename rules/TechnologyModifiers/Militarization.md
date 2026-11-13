@@ -1,7 +1,7 @@
 ---
 status: polish
 scope: advanced
-tags: [tech/modifier, class/military, on/base, on/colony]
+tags: [tech/modifier, class/military, on/base]
 ---
 
 1. **Militarization** is [[Military]] [[TechnologyModifier]]

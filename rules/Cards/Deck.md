@@ -54,7 +54,7 @@ S1+0c/0+1m:    1c                    / 0m
 S1+0p/0+1s:    1p                    / 0s
 S1+0s/0+1p:    1s                    / 0p
 S2+1m/1+2s:    1m Retreat            / 1s +1s
-S2+1c/1+2m:    1c Trade              / 1m +1m
+S2+1c/1+2m:    1c Settle             / 1m +1m
 S2+1p/1+2c:    1p Extract            / 1c +1c
 S2+1s/1+2p:    1s Explore            / 1p +1p
 S4+1m/3+2c:    2m Disrupt            / 2c +1c             << *1c *2m
@@ -77,8 +77,8 @@ H6+1c/5+1m:    4c Envoy              / 4m Defection       << *4c *3m
 H6+1s/5+1p:    4s Invent             / 4p FieldRepair     << *4s *3p
 H8+1s/7+1m:    5s UnifiedTheory      / 5m Counterintelligence << *4m *4p *6s
 
-B2+1m/1+1m:    Militarization+1d +1m / Militarization
-B2+1c/1+1c:    Trade +1c             / Trade
+B2+1m/1+1m:    Militarization +1m    / Militarization
+B2+1c/1+1c:    Starter +1c           / Starter
 B2+1p/1+1p:    Shipyard +1p          / Shipyard
 B2+1s/1+1s:    Recycle +1s           / Recycle
 B4+1m/3+1m:    Stealth +3m           / Stealth            << *2m
@@ -90,8 +90,8 @@ C2+1m/1+1m:    Explore +2m           / Explore
 C2+1c/1+1c:    Academy +2c           / Academy
 C2+1p/1+1p:    Extract +2p           / Extract
 C2+1s/1+1s:    Explore +2s           / Explore
-C4+1m/3+1m:    Militarization+3d +4m / Militarization+2d  << *2m
-C4+1c/3+1c:    Export +4c            / Export             << *2c
+C4+1m/3+1m:    Raid +4m              / Raid               << *2m
+C4+1c/3+1c:    Contact +4c           / Contact            << *2c
 C4+1p/3+1p:    MegaYard +4p          / MegaYard           << *2p
 C4+1s/3+1s:    +3r +4s               / +1r                << *2s
 
@@ -173,9 +173,8 @@ T1+0s/0+1s:    1s                    / 0s
     [[Technology]] of the **Deck** serves both. Later [[Faction]]s
     will be [[Asymmetric]], with decks and [[Technology|Technologies]]
     of their own
-12. A combined print is one [[Ability]]: `Recover+Upgrade` of
-    [[Hero]] 4M [[Weak]] and [[Hero]] 4C [[Strong]],
-    `Militarization+1d` of [[Base]] 2M
+12. A combined print is one [[Ability]]: `Fix+Upgrade` of [[Hero]]
+    4C [[Strong]]
 13. The [[Weak]] [[End]] `0+1` of a [[Card]] 1/0 tells its
     [[Strong]] [[End]]: one [[Level]] more, and for a [[Ship]] the
     same [[Size]] 1, see the patterns. [[Level]] 0 meets no

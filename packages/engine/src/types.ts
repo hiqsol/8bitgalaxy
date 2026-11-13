@@ -8,7 +8,7 @@ export type CardType = 'Ship' | 'Hero' | 'Base' | 'Colony' | 'Hyperstructure' | 
 /** Types of the first duel, a [[Factory]] and a [[Laboratory]] pile each */
 export const CARD_TYPES: CardType[] = ['Ship', 'Hero', 'Base', 'Colony'];
 
-export type PlusKind = 'power' | 'defense' | 'capacity' | 'range' | 'draw' | 'restore';
+export type PlusKind = 'power' | 'defense' | 'capacity' | 'range' | 'energy' | 'draw' | 'restore';
 
 /** [[Ability]]: a printed [[Power]], a [[Plus]] or a [[Technology]] */
 export type Ability =

@@ -1,7 +1,7 @@
 ---
 status: draft
 scope: advanced
-tags: [tech/action, class/military, on/ship, planned, topic/combat, topic/economy]
+tags: [tech/action, class/military, on/colony, topic/combat, topic/economy]
 ---
 
 1. **Raid** is [[Military]] [[TechnologyAction]]

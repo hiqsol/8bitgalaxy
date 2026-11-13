@@ -105,9 +105,24 @@ marker: a token, a rotated or flipped [[Card]], or its own [[Card]].
     [[Card]]s are [[Damaged]] after the [[Action]]
 42. **Precognition**: look at the top [[Card]]s of the [[World]] or
     [[Ancient]] deck, put them back in any order
+43. **Withdraw**: at its move in a [[Combat Round]], instead of adding
+    [[Card]]s, the player pulls own [[Participants]] out of the
+    [[Combat]], the [[Combat]] goes on:
+	1. A withdrawn [[Card]] is revealed if [[Hidden]], [[Deplete]]s
+	   and no longer counts, the outcome doesn't touch it
+	2. A [[Supporter]] from [[Hand]] goes to [[Discard]]
+	3. At least one own [[Participants|Participant]] stays: the side
+	   still fights and takes the outcome
+	4. Unlike [[Retreat]], which ends the whole [[Combat]], it saves a
+	   part, e.g. a [[Hero]], and leaves the rest fighting
 
 ## Notes
 
 1. Dropped as not working on the table: Refugees and Tech Exchange
    bring a rival [[Card]] to own side, Reverse Engineering needs a
    memory of defeated [[Card]]s and [[GreatLibrary]] covers it
+2. **Withdraw** is not the withdraw of [[Studies#Combat#10]], which
+   ended the [[Combat]] for any side and let a leading side escape for
+   free: the withdrawing side never wins by it, the stayers take the
+   outcome, and the reveal stops a [[Hidden]] bluff pulled back for
+   free

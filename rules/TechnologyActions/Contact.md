@@ -1,7 +1,7 @@
 ---
 status: draft
 scope: advanced
-tags: [tech/action, class/culture, on/hero, planned, topic/capture]
+tags: [tech/action, class/culture, on/colony, topic/capture]
 ---
 
 1. **Contact** is [[Culture]] [[TechnologyAction]]
