@@ -23,6 +23,9 @@ scope: core
 3. **Chess**: even contest, no luck in [[Combat]], see
    [[GameBalance]]; losing all [[Hero]]es is checkmate, see
    [[PaxGalactica|Pax Galactica]]
+4. **Through the Ages**: engine building of a civilization:
+   [[Research]] then [[Create]], [[Upgrade]] pays the difference,
+   wonders as [[Hyperstructure]]s, players seed [[FutureEvents]]
 
 #### Modules
 
