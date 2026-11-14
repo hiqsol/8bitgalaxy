@@ -91,8 +91,74 @@ Reopen one only with evidence from a played game, not from a review.
 
 ## Next step
 
-1. [[Play]] the first [[Duel]], see [[Playtest]]
+1. Answer the issues of [[SecondDuelPlaytest]] below in [[Guidance]],
+   apply them, then [[Diagnostic]] with cold readers
 2. Only the rules that stopped play or were read two ways become items
+
+## After the second duel
+
+Rulings and findings of [[SecondDuelPlaytest]], RG numbers of its
+games.
+
+- [ ] **I:97. Overlap direction**: [[Slot#5]] doesn't say which end
+  is lower; all three games: [[Slot]] k is overlapped while [[Slot]]
+  k-1 holds a [[Card]], round 1 the other way (RG4-2, RG5-4, RG6-2).
+- [ ] **I:98. Asteroids ExtraPrice**: the [[Duel]] bag's "1 on 7, 2 on
+  6" doesn't say which [[Length]]s; three games, three splits (RG4-3,
+  RG5-2, RG6-1).
+- [ ] **I:99. Setup gaps** in [[StartDraw]]: the order and visibility
+  of [[Factory]] and [[Laboratory]] piles, the [[Slot]]s of the
+  starting [[Structure]]s, the starting [[Energy]] (RG4-1, RG5-3,
+  RG5-5, RG6-3, RG6-4).
+- [ ] **I:100. Starting Ships**: [[Deck#8]] gives 1M/0S, 1C/0M, 1P/0C,
+  1S/0P, the list prints `S1+0m/0+1c` and its like (RG5-1).
+- [ ] **I:101. Explore Range to a bordering Hidden Space**, read two
+  ways: none (RG4-7), or the laid [[Tile]]'s [[Length]] (RG6-6), see
+  [[Explore#5]].
+- [ ] **I:102. Class of the Starter**: [[Deck]] note 13 reads as if a
+  [[Starter]] matched its [[Action]]'s [[Class]]; ruled any [[Actor]]
+  starts any [[Action]], only [[Manage]] and [[Receive]] take its
+  [[Class]] (RG4-6, RG5-10).
+- [ ] **I:103. Research details**: the target [[Factory]] pile
+  (RG4-4), the [[Hub]] a participant or only the [[Destination]]
+  (RG4-11), several [[Card]]s between [[Laboratory]] piles in one
+  [[Action]] (RG5-9), not with a move to the [[Factory]] (RG5-11).
+- [ ] **I:104. Recycle**: no [[Cost]] is named, ruled free (RG4-5), so
+  B recycled 9 [[Card]]s to a fixed [[Hand]]; only a [[Field]]
+  [[Card]] (RG4-10).
+- [ ] **I:105. Takeoffs per Turn**: [[Takeoff#1]] "plays ONE [[Unit]]
+  [[Card]]", ruled one [[Card]] each, any number (RG5-6).
+- [ ] **I:106. Energy over the Hand limit** inside an [[Action]]:
+  ruled the limit counts what stays in [[Hand]] (RG4-9, RG6-5).
+- [ ] **I:107. Upgrade from a Production End** only [[Enhance]]s, from
+  a [[Culture]] [[End]] only [[Grow]]s (RG5-7).
+- [ ] **I:108. A Supporter's Level** for one [[Prerequisites]] pair as
+  its one [[Ability]] (RG5-8).
+- [ ] **I:109. A full home can't pass**: an empty [[Receive]] made
+  legal (RG6-7); does "can't pass" stay once no [[Takeoff]] is
+  possible?
+- [ ] **I:110. Social Create of a Hyperstructure**: [[Create#3]]
+  allows only a [[Weak]] [[End]] of [[Level]] 1, ruled
+  [[Hyperstructure#4.1]] overrides it (RG4-8).
+- [ ] **I:111. Combat details**: the [[Defender]] [[Boost]]s a
+  [[Card]] the [[Attacker]] selects at the selection (RG4-12); a
+  remote [[Group]]'s surviving [[Unit]]s [[Deplete]] (RG4-13).
+- [ ] **I:112. Academy defenders**: [[Academy#2]] names no number,
+  ruled any, so one [[Attack]] took a whole [[Hand]] and the game
+  (RG4-14, F:10).
+- [ ] **I:113. Attack on a Wild Star a rival controls**: still a
+  conquest, the [[Ancient]]s defend beside the rival (RG4-15).
+- [ ] **I:114. The homes never meet** (F:6): [[Void]]s around S11, all
+  [[Space]]s [[Hidden]], an exploring [[Unit]] leaves its [[Star]];
+  one rival [[Combat]] in 119 [[Turn]]s.
+- [ ] **I:115. A full home stalls** (F:8): 10 home [[Slot]]s full by
+  T15, overlap leaves [[Power]] only in s1, [[Hyperstructure]]s
+  compete for the same [[Slot]]s.
+- [ ] **I:116. No achievement in 40 Turns** (F:9): [[Singularity]] 3
+  of 4 [[Crown]]s, [[KardashevAscension|Kardashev Ascension]] 4 of 7.
+- [ ] **I:117. Free loops** (F:11): free [[Recycle]], a [[Manage]]
+  [[Rotate]] for a second [[Homeworld]] +1e, [[Energy]] stocked as
+  [[Goods]], a [[Unit]] discarded by a useless participation.
 
 ## Watch in playtest
 

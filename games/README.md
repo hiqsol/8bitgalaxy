@@ -5,19 +5,27 @@ scope: playtest
 
 # Played games
 
-The three first duel playtest games of 2026-10-22/23, rewritten in the
-[[Notation]] of [meta/Notation.md](../meta/Notation.md).
+The duel playtest games in the [[Notation]] of
+[meta/Notation.md](../meta/Notation.md): round 1 of 2026-10-22/23,
+games 1-3, rewritten, and round 2 of 2026-11-13/14 on `duel-v2`, games
+4-6.
 
 | Game | A, home S00 | B, home S21 | Result | [[Turn]]s |
 |---|---|---|---|---|
 | [1](game1.md) | Warlord (Opus) | Architect (Opus) | 1-0 by [[Military]] | 10 |
 | [2](game2.md) | Brute (Haiku) | Scholar (Opus) | 0-1 by [[Singularity]] | 16 |
 | [3](game3.md) | Turtle (Sonnet) | Gambler (Sonnet) | 1-0 by [[Singularity]] | 25 |
+| [4](game4.md) | Warlord (Opus) | Industrialist (Opus) | 1-0 by [[Military]] | 39 |
+| [5](game5.md) | Scholar (Opus) | Gambler (Sonnet) | 27:20 on [[VictoryPoints\|Victory points]], capped | 40 |
+| [6](game6.md) | Turtle (Sonnet) | Brute (Haiku) | 10:12 on [[VictoryPoints\|Victory points]], capped | 40 |
 
 - The report [FirstDuelPlaytest.md](FirstDuelPlaytest.md) sums the
   games up and lists the rulings `RG<game>-<n>` that the comments
   name. The old records stay in the playtest folder named at its top:
   `RULES.md`, `NOTATION.md` and the 8BGN logs.
+- The report [SecondDuelPlaytest.md](SecondDuelPlaytest.md) sums up
+  games 4-6, played on today's docs, and merges their rulings into
+  [[Backlog]] issues.
 
 ## How to read
 

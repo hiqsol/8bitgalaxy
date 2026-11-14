@@ -36,7 +36,8 @@ games plays a frozen version and counts the rulings it needs.
 	1. A comment `# RG<game>-<n>: ...` at the play it decides
 	2. A list of the game's rulings: the gap, the ruling, the pages it
 	   touches
-6. **Cap**: about 40 [[Turn]]s, a capped game ends as at [[Twilight]]
+6. **Cap**: about 40 [[Turn]]s, a capped game ends as at [[Twilight]],
+   the players know it from the start
 7. **Records**: one file per game in `games/`, games are numbered on
    across rounds, e.g. `game4.md` holds RG4-1
 8. **Report**: one per round in `games/`, like [[FirstDuelPlaytest]]:
@@ -55,3 +56,7 @@ games plays a frozen version and counts the rulings it needs.
 1. The measure is new rulings per game: round 1 needed about 40
 2. A model plays more carefully than its persona: the Haiku Brute of
    round 1 made no invalid play and declined a risky [[Attack]]
+3. Round 2 needed 33 rulings, 22 distinct gaps: the repeats mark the
+   pages to fix first
+4. The referee keeps a resumable state after every play, round 2
+   resumed all three games after a usage limit

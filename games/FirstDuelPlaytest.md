@@ -297,11 +297,9 @@ Also used: [[Guidance]] G1–G9 as then drafted.
 
 ## 6. Questions for you
 
-Open:
-
-- **Q:11.** Run a second round of 3 games on the current rules?
-
 Answered:
+
+- [x] **Q:11.** Played: [[SecondDuelPlaytest]].
 
 - [x] **Q:1. The snowball**: by F:1–F:3.
 - [x] **Q:2. Prerequisites**: by F:1–F:3.

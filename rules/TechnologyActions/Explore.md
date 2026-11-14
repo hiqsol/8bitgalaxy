@@ -1,5 +1,5 @@
 ---
-status: polish
+status: issues
 scope: duel
 aliases: [Recon, Survey]
 tags: [tech/action, class/military, class/science, on/ship, on/hero, on/colony, topic/hidden]
