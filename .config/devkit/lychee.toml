@@ -1,0 +1,14 @@
+# Managed by devkit (github.com/hiqdev/devkit). lychee for external links only: uwiki check covers links
+# between pages, offline. `mise run links` runs it on demand or on a schedule, never as a gate:
+# a dead link is someone else's server, not this change.
+scheme = ["https", "http"]
+
+# patient with slow or rate limited hosts before calling a link dead
+max_retries = 3
+retry_wait_time = 5
+timeout = 20
+
+# a login redirect proves the host and the URL exist, the anonymous check just has no session
+accept = [200, 401, 403]
+
+no_progress = true

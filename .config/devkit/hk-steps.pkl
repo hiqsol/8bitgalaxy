@@ -1,0 +1,88 @@
+// Managed by devkit (github.com/hiqdev/devkit): `uvx copier update --trust` rewrites it, change the template instead.
+// Lint steps and hooks hk.pkl takes. Page steps take the pages uwiki reads: `uwiki ls --only` drops the ones
+// uwiki.toml excludes, so markdownlint, typos, Vale and lychee check the pages uwiki check and its HTML page do.
+// Hygiene, shellcheck and secrets steps take every file, they are about the repo, not the vault.
+import "package://github.com/jdx/hk/releases/download/v2.12.0/hk@2.12.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.12.0/hk@2.12.0#/Builtins.pkl"
+
+local pages = List("**/*.md")
+
+// cmd over the given pages the vault reads, nothing when it reads none of them
+local function overPages(cmd: String): String = "uwiki ls -z . --only {{files}} | xargs -0 -r \(cmd)"
+
+steps: Mapping<String, Config.Step> = new {
+  // pages
+  // links, front matter schema, orphans, mentions, refs: the whole vault, a link breaks from either end
+  ["uwiki"] {
+    glob = List("**/*.md", "**/uwiki.toml", "**/pyproject.toml")
+    check = "uwiki check ."
+  }
+  // structure: heading order, list style, fences; rules in .markdownlint.yaml on top of devkit's
+  ["markdownlint"] {
+    glob = pages
+    check = overPages("markdownlint-cli2")
+    fix = overPages("markdownlint-cli2 --fix")
+  }
+  // misspellings typos knows for sure; jargon allowed in _typos.toml
+  ["typos"] {
+    glob = pages
+    check = overPages("typos")
+    fix = overPages("typos --write-changes")
+  }
+  // prose: rules in .vale.ini, words in .vale/styles/config/vocabularies/Wiki; packages fetched once by vale sync
+  ["vale"] {
+    glob = pages + List(".vale.ini")
+    check = "{ [ -d .vale/styles/proselint ] || vale sync >/dev/null; } && " + overPages("vale --no-wrap")
+  }
+
+  // hygiene, every file
+  ["trailing-whitespace"] = Builtins.trailing_whitespace
+  ["newlines"] = Builtins.newlines
+  ["mixed-line-ending"] = Builtins.mixed_line_ending
+  ["byte-order-marker"] = Builtins.byte_order_marker
+  ["merge-conflict"] = Builtins.check_merge_conflict
+  ["case-conflict"] = Builtins.check_case_conflict    // Page.md and page.md are one file on macOS and Windows
+  ["symlinks"] = Builtins.check_symlinks
+  ["shellcheck"] = Builtins.shellcheck
+
+  // secrets in the working tree, untracked files too; rules and allowlist in .gitleaks.toml when needed
+  ["gitleaks"] {
+    glob = List("**/*")
+    check = "gitleaks dir --redact --no-banner ."
+  }
+}
+
+// check, fix and pre-commit run all steps; links and secrets need the network or take long, on demand
+function hooks(all: Mapping<String, Config.Step>): Mapping<String, Config.Hook> = new {
+  ["check"] { steps = all }
+  ["fix"] {
+    fix = true
+    steps = all
+  }
+  // checks staged files, never rewrites them: `mise run fix` does
+  ["pre-commit"] {
+    steps = (all) {
+      ["gitleaks"] { check = "gitleaks git --pre-commit --staged --redact --no-banner" }
+      // files added over 500 kB; here only, as files committed earlier were meant to be
+      ["large-files"] = Builtins.check_added_large_files
+    }
+  }
+  // external links alive: other people's servers, so on demand or on a schedule, never a gate
+  ["links"] {
+    steps {
+      ["lychee"] {
+        glob = pages
+        check = overPages("lychee --config .config/devkit/lychee.toml")
+      }
+    }
+  }
+  // secrets anywhere in git history, a leak stays there after its fix
+  ["secrets"] {
+    steps {
+      ["gitleaks-history"] {
+        glob = List("**/*")
+        check = "gitleaks git --redact --no-banner"
+      }
+    }
+  }
+}

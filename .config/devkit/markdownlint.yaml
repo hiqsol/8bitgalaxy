@@ -1,0 +1,5 @@
+# Managed by devkit (github.com/hiqdev/devkit): markdownlint rules of every project, .markdownlint.yaml extends it.
+MD013: false                              # line length: prose wraps where a project wants, uwiki wrap checks it
+MD022: false                              # blank lines around headings
+MD032: false                              # blank lines around lists
+MD041: false                              # front matter title is the page title in uwiki, no H1 needed
