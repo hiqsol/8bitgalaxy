@@ -446,4 +446,3 @@ function manageOne(
   moveCard(state, uid, { zone, player, pile: op.to });
   log(state, `shifts ${card(state, uid).def} in the ${zone === 'factory' ? 'Factory' : 'Laboratory'}`, player);
 }
-

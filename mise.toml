@@ -1,0 +1,51 @@
+# 8bitgalaxy's own tasks; tools, lint and links come from devkit (.config/mise/conf.d/devkit.toml),
+# mise merges both: `mise tasks` lists them all. After editing pages: mise run link, then mise run lint.
+
+[vars]
+open = "$(command -v local-open || command -v xdg-open || echo open)"
+
+[tasks.docs]
+description = "the rules as one page: build/8bitgalaxy.html"
+run = "uwiki build . -o build/"
+
+[tasks.view]
+description = "build and open the rules page"
+depends = ["docs"]
+run = '{{vars.open}} build/8bitgalaxy.html'
+
+[tasks.deck]
+description = "the Deck gallery: build/deck.html"
+run = "bin/deckview -o build/deck.html"
+
+[tasks.deckview]
+description = "build and open the Deck gallery"
+depends = ["deck"]
+run = '{{vars.open}} build/deck.html'
+
+[tasks.serve]
+description = "the rules page, rebuilt on every change and reloaded in the browser"
+run = "uwiki serve . --open"
+
+# the game at /, in the pixel perfect legacy look at /pp/, the legacy prototype at /legacy/,
+# the rules at /docs.html, the Deck gallery at /deck.html, online play through /colyseus
+[tasks.site]
+description = "the site in dist/: game, pp/, legacy/, docs.html, deck.html"
+run = [
+  "rm -rf dist",
+  "VITE_SERVER_URL=/colyseus npm run build -w @8bitgalaxy/client -- --outDir ../../dist",
+  "VITE_SERVER_URL=/colyseus VITE_LOOK=pp npm run build -w @8bitgalaxy/client -- --outDir ../../dist/pp --base /pp/",
+  "cd legacy && npx vite build --outDir ../dist/legacy --emptyOutDir",
+  "mise run html",
+]
+
+[tasks.html]
+description = "the rules as one page and the Deck gallery: dist/docs.html, dist/deck.html"
+run = ["uwiki build . -o dist/docs.html", "bin/deckview -o dist/deck.html"]
+
+[tasks.stats]
+description = "pages, words and links by folder, status and scope"
+run = ["uwiki stats .", "uwiki stats . --by status --top 0", "uwiki stats . --by scope --top 0"]
+
+[tasks.link]
+description = "link the plain mentions of page names check warns about"
+run = "uwiki link ."

@@ -272,4 +272,3 @@ export function destroyLonelyWrecks(state: State): void {
     }
   }
 }
-

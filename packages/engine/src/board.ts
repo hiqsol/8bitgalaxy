@@ -185,4 +185,3 @@ export function publicName(state: State, uid: string): string {
   const c = card(state, uid);
   return c.face === 'hidden' ? 'a hidden card' : c.def;
 }
-

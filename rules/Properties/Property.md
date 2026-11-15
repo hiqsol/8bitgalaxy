@@ -11,7 +11,7 @@ aliases: [Physical, Explicit, Implicit]
 Level+EP─►│ 2+1║    1 │ ◄── Primary   │           │
 Class ───►╞══╩═╝   +1 │ ◄── Secondary │           │
           │   ship    │               │  faction  │
-Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - - 
+Type ────►│- -image- -│- - - - - - - -│- -image- -│- - - - - -
           │    here   │ Weak End      │/// here //│ Damaged End
           │ T+   ╔═╦══╡ ◄── Class     │///////////│ (dashed)
           │ T    ║ᘔ +T│ ◄── Level+EP  │///////////│

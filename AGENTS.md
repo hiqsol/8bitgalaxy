@@ -27,8 +27,8 @@ defines the `scope` and `status` values.
    `TechnologyModifiers/Ambush`, `Cards/Ship`, `Properties/Range`,
    `States/Damaged`, `Resources/MilitaryPower`, `Types/Social`,
    `Home/Hand`, `Field/Asteroids`
-8. After editing run `make link check lint`, `uwiki wrap` the files
-   you edited; move or rename a page with `uwiki mv`
+8. After editing run `mise run link`, then `mise run lint`;
+   `mise run fix` wraps pages; move or rename a page with `uwiki mv`
 
 ## Code
 

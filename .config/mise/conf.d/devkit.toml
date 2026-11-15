@@ -1,0 +1,37 @@
+# Managed by devkit (github.com/hiqdev/devkit): `uvx copier update --trust` rewrites it, change the template instead.
+# mise merges it with mise.toml, which holds the project's own tools and tasks; `mise tasks` lists both.
+
+[tools]
+uv = "0.13.8"
+hk = "2.12.0"
+node = "24"                               # for markdownlint-cli2
+"npm:markdownlint-cli2" = "0.24.1"
+typos = "1.52.2"
+lychee = "0.24.2"
+vale = "3.27.0"
+gitleaks = "8.30.1"
+shellcheck = "0.11.0"
+"pipx:hiqsol/uwiki" = "0.30.1"
+
+[env]
+HK_MISE = "1"                             # git hooks run hk through mise, with the tools above
+
+[tasks.lint]
+description = "pages: uwiki check, markdownlint, typos, Vale; repo: hygiene, shellcheck, gitleaks"
+run = "hk check --all"
+
+[tasks.fix]
+description = "fix what markdownlint, typos and the hygiene steps can"
+run = "hk fix --all"
+
+[tasks.links]
+description = "external links alive, lychee over the pages uwiki reads; network, not a gate"
+run = "hk run links --all"
+
+[tasks.secrets]
+description = "gitleaks over the whole git history, a leak stays there after its fix"
+run = "hk run secrets --all"
+
+[tasks.hooks]
+description = "install the git pre-commit hook: checks staged files, rewrites nothing"
+run = "hk install --mise"

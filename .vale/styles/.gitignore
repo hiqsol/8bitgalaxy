@@ -1,0 +1,4 @@
+# Managed by devkit: vale sync fetches style packages here, config/ holds the vocabulary
+/*
+!/.gitignore
+!/config/

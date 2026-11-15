@@ -33,7 +33,7 @@ npm install
 npm run dev      # client at http://localhost:5173
 npm run server   # game server at ws://localhost:2567, for online play
 npm test         # engine tests
-make site        # the site in dist/: game, pp/, legacy/, docs.html
+mise run site    # the site in dist/: game, pp/, legacy/, docs.html
 ```
 
 - **Hot seat**: two players at one screen, the screen is covered

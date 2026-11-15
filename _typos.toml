@@ -1,0 +1,4 @@
+# Words typos takes for misspellings that are right here
+[default.extend-words]
+Hask = "Hask"                             # a name in lore/Overtone
+ND = "ND"                                 # CC BY-NC-ND, the license
