@@ -4,18 +4,10 @@ import ".config/devkit/hk-steps.pkl" as devkit
 
 fail_fast = false                         // report what every step finds, not the first one only
 
-local pages = List("**/*.md")
-
 hooks = devkit.hooks((devkit.steps) {
   // status, scope and tags lists of uwiki.toml the same as meta/Docs.md and rules/index.md document them
   ["checkdocs"] {
     glob = List("**/*.md", "uwiki.toml")
     check = "bin/checkdocs"
-  }
-  // paragraphs and list items wrap at 70, as uwiki.toml sets
-  ["wrap"] {
-    glob = pages
-    check = "uwiki ls -z . --only {{files}} | xargs -0 -r uwiki wrap --check"
-    fix = "uwiki ls -z . --only {{files}} | xargs -0 -r uwiki wrap"
   }
 })

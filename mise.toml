@@ -1,6 +1,9 @@
 # 8bitgalaxy's own tasks; tools, lint and links come from devkit (.config/mise/conf.d/devkit.toml),
 # mise merges both: `mise tasks` lists them all. After editing pages: mise run link, then mise run lint.
 
+[tools]
+"pipx:hiqsol/uwiki" = "0.31.0"       # the wiki tool lint runs; bump: mise use pipx:hiqsol/uwiki@X
+
 [vars]
 open = "$(command -v local-open || command -v xdg-open || echo open)"
 

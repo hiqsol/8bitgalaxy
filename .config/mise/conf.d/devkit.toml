@@ -1,8 +1,10 @@
-# Managed by devkit (github.com/hiqdev/devkit): `uvx copier update --trust` rewrites it, change the template instead.
-# mise merges it with mise.toml, which holds the project's own tools and tasks; `mise tasks` lists both.
+# Managed by devkit (github.com/hiqdev/devkit): `devkit update` rewrites it, change the template instead.
+# mise merges it with mise.toml, which holds the project's own tools and tasks, uwiki among them; a task
+# there overrides devkit's of the same name. `mise tasks` lists both, `mise tasks --hidden` the devkit:*
+# helpers in .config/mise/tasks/devkit, which these tasks run. Nothing here needs the devkit command.
 
 [tools]
-uv = "0.13.8"
+uv = "0.13.8"                             # runs the devkit:* Python helpers
 hk = "2.12.0"
 node = "24"                               # for markdownlint-cli2
 "npm:markdownlint-cli2" = "0.24.1"
@@ -11,22 +13,38 @@ lychee = "0.24.2"
 vale = "3.27.0"
 gitleaks = "8.30.1"
 shellcheck = "0.11.0"
-"pipx:hiqsol/uwiki" = "0.30.1"
+
+[settings]
+# uwiki is ours: lint takes its release the day it is out, without mise's 24h minimum_release_age
+minimum_release_age_excludes = ["pipx:hiqsol/uwiki"]
 
 [env]
 HK_MISE = "1"                             # git hooks run hk through mise, with the tools above
+# the answers the devkit:* scripts take: the folder uwiki reads pages from, which devkit:files lists
+DEVKIT_VAULT = "."
 
+# check gates: CI, patch and release run it. test is the project's: mise.toml defines it, devkit's below
+# only says there is none
+[tasks.check]
+description = "every check: lint and the project's tests, as CI runs them"
+depends = ["lint", "test"]
+
+[tasks.test]
+description = "the project's tests: mise.toml defines them, this one only warns there are none"
+run = "echo 'warning: No tests, mise.toml defines the test task' >&2"
+
+# lint and fix take what git sees and the pages uwiki reads, gitignored ones too: devkit:files lists them
 [tasks.lint]
 description = "pages: uwiki check, markdownlint, typos, Vale; repo: hygiene, shellcheck, gitleaks"
-run = "hk check --all"
+run = "mise run -q devkit:files | hk check --files0-from -"
 
 [tasks.fix]
-description = "fix what markdownlint, typos and the hygiene steps can"
-run = "hk fix --all"
+description = "fix what markdownlint, the hygiene steps and the project's fixable steps can; typos only reports"
+run = "mise run -q devkit:files | hk fix --files0-from -"
 
 [tasks.links]
 description = "external links alive, lychee over the pages uwiki reads; network, not a gate"
-run = "hk run links --all"
+run = "mise run -q devkit:files | hk run links --files0-from -"
 
 [tasks.secrets]
 description = "gitleaks over the whole git history, a leak stays there after its fix"
