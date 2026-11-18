@@ -28,7 +28,8 @@ defines the `scope` and `status` values.
    `States/Damaged`, `Resources/MilitaryPower`, `Types/Social`,
    `Home/Hand`, `Field/Asteroids`
 8. After editing run `mise run link`, then `mise run lint`;
-   `mise run fix` wraps pages; move or rename a page with `uwiki mv`
+   `mise run fix` wraps pages; move or rename a page with `uwiki mv`;
+   lint, hooks and their files: `.config/devkit/AGENTS.md`
 
 ## Code
 

@@ -7,8 +7,6 @@ MD013:                                    # lines wrap at 70, as uwiki wrap does
   line_length: 70
   tables: false
   code_blocks: false
-MD029: false                              # ordered list numbers
 MD030: false                              # spaces after list markers
 MD031: false                              # blank lines around fences
 MD040: false                              # fence language
-MD060: false                              # table column style

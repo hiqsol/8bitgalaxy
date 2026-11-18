@@ -1,11 +1,13 @@
-// Managed by devkit (github.com/hiqdev/devkit): `uvx copier update --trust` rewrites it, change the template instead.
+// Managed by devkit (github.com/hiqdev/devkit): `devkit update` rewrites it, change the template instead.
 // Lint steps and hooks hk.pkl takes. Page steps take the pages uwiki reads: `uwiki ls --only` drops the ones
 // uwiki.toml excludes, so markdownlint, typos, Vale and lychee check the pages uwiki check and its HTML page do.
+// `mise run lint` gives hk what git sees and the pages uwiki reads (devkit:files), gitignored private pages too.
 // Hygiene, shellcheck and secrets steps take every file, they are about the repo, not the vault.
 import "package://github.com/jdx/hk/releases/download/v2.12.0/hk@2.12.0#/Config.pkl"
 import "package://github.com/jdx/hk/releases/download/v2.12.0/hk@2.12.0#/Builtins.pkl"
 
 local pages = List("**/*.md")
+local devkitScripts = List(".config/mise/tasks/devkit/**")
 
 // cmd over the given pages the vault reads, nothing when it reads none of them
 local function overPages(cmd: String): String = "uwiki ls -z . --only {{files}} | xargs -0 -r \(cmd)"
@@ -23,16 +25,22 @@ steps: Mapping<String, Config.Step> = new {
     check = overPages("markdownlint-cli2")
     fix = overPages("markdownlint-cli2 --fix")
   }
-  // misspellings typos knows for sure; jargon allowed in _typos.toml
+  // misspellings typos knows for sure; jargon allowed in _typos.toml. No fix: a "correction" in a code
+  // span or a table renames an identifier (is_payed), so a person makes it
   ["typos"] {
     glob = pages
     check = overPages("typos")
-    fix = overPages("typos --write-changes")
   }
   // prose: rules in .vale.ini, words in .vale/styles/config/vocabularies/Wiki; packages fetched once by vale sync
   ["vale"] {
     glob = pages + List(".vale.ini")
     check = "{ [ -d .vale/styles/proselint ] || vale sync >/dev/null; } && " + overPages("vale --no-wrap")
+  }
+  // paragraphs and list items wrapped at the width uwiki sets
+  ["wrap"] {
+    glob = pages
+    check = overPages("uwiki wrap --check")
+    fix = overPages("uwiki wrap")
   }
 
   // hygiene, every file
@@ -45,10 +53,11 @@ steps: Mapping<String, Config.Step> = new {
   ["symlinks"] = Builtins.check_symlinks
   ["shellcheck"] = Builtins.shellcheck
 
-  // secrets in the working tree, untracked files too; rules and allowlist in .gitleaks.toml when needed
+  // secrets in the working tree as git sees it, untracked files too, gitignored ones (.env) left out;
+  // rules and allowlist in .gitleaks.toml when needed
   ["gitleaks"] {
     glob = List("**/*")
-    check = "gitleaks dir --redact --no-banner ."
+    check = "mise run -q devkit:leaks"
   }
 }
 

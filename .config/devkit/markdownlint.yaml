@@ -3,3 +3,5 @@ MD013: false                              # line length: prose wraps where a pro
 MD022: false                              # blank lines around headings
 MD032: false                              # blank lines around lists
 MD041: false                              # front matter title is the page title in uwiki, no H1 needed
+MD029: false                              # ordered list numbers: uwiki check checks them, numbering on across sections
+MD060: false                              # table column style: aligned pipes are taste, and churn on every edit
