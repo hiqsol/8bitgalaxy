@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v0.3.2
+_commit: v0.3.3
 _src_path: gh:hiqdev/devkit
 ci: none
 python: false
