@@ -1,7 +1,7 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v0.3.3
+_commit: v0.3.4
 _src_path: gh:hiqdev/devkit
-ci: none
+ci: github
 python: false
 releases: none
 uwiki: 0.31.0

@@ -2,7 +2,7 @@
 # mise merges both: `mise tasks` lists them all. After editing pages: mise run link, then mise run lint.
 
 [tools]
-"pipx:hiqsol/uwiki" = "0.31.0"       # the wiki tool lint runs; bump: mise use pipx:hiqsol/uwiki@X
+"pipx:hiqsol/uwiki" = "v0.31.1"       # the wiki tool lint runs; bump: mise use pipx:hiqsol/uwiki@vX
 
 [vars]
 open = "$(command -v local-open || command -v xdg-open || echo open)"
